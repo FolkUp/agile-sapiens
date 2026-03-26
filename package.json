@@ -1,0 +1,45 @@
+{
+  "name": "agile-sapiens",
+  "version": "1.0.0",
+  "description": "The Agile Sapiens Project — A comprehensive methodology for improving human intelligence and adaptability",
+  "type": "module",
+  "scripts": {
+    "dev": "hugo server --buildDrafts --buildFuture",
+    "build": "hugo --gc --minify",
+    "validate": "node scripts/validate-content.js",
+    "validate:level1": "node scripts/validate-content.js --check=level1",
+    "validate:voice": "node scripts/validate-content.js --check=voice-gate",
+    "validate:schema": "node scripts/validate-content.js --check=frontmatter",
+    "validate:sources": "node scripts/validate-content.js --check=sources",
+    "validate:brand": "node scripts/validate-content.js --check=brand",
+    "deploy": "bash scripts/deploy-to-vps.sh",
+    "purge-cache": "node scripts/purge-cloudflare.js",
+    "quality-gates": "npm run validate && npm run build"
+  },
+  "keywords": [
+    "agile-sapiens",
+    "methodology",
+    "intelligence",
+    "adaptability",
+    "research",
+    "folkup"
+  ],
+  "author": "FolkUp",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^10.3.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FolkUp/agile-sapiens.git"
+  },
+  "homepage": "https://agile.folkup.app",
+  "bugs": {
+    "url": "https://github.com/FolkUp/agile-sapiens/issues"
+  }
+}

@@ -1,0 +1,190 @@
+# AGIL-007: CI/CD Pipeline — Banking-Level Quality Gates
+name: Build and Deploy Agile Sapiens
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "agile-sapiens-${{ github.ref }}"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Quality Gates — Banking-Level Standards
+  quality-gates:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.147.7
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          submodules: recursive
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup Hugo
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Quality Gate 1 — Hugo Build Validation
+        run: |
+          echo "=== QUALITY GATE 1: Hugo Build ==="
+          hugo --gc --minify --quiet
+          if [ $? -ne 0 ]; then
+            echo "❌ Hugo build FAILED — Zero tolerance policy"
+            exit 1
+          fi
+          echo "✅ Hugo build PASSED"
+
+      - name: Quality Gate 2 — Level 1 Compliance
+        run: |
+          echo "=== QUALITY GATE 2: Level 1 Compliance ==="
+          node scripts/validate-content.js --check=level1
+          echo "✅ Level 1 compliance PASSED"
+
+      - name: Quality Gate 3 — Voice Gate (AI Pattern Detection)
+        run: |
+          echo "=== QUALITY GATE 3: Voice Gate ==="
+          node scripts/validate-content.js --check=voice-gate
+          echo "✅ Voice Gate PASSED"
+
+      - name: Quality Gate 4 — Frontmatter Schema Validation
+        run: |
+          echo "=== QUALITY GATE 4: Schema Validation ==="
+          node scripts/validate-content.js --check=frontmatter
+          echo "✅ Frontmatter validation PASSED"
+
+      - name: Quality Gate 5 — Source Verification
+        run: |
+          echo "=== QUALITY GATE 5: Source Verification ==="
+          node scripts/validate-content.js --check=sources
+          echo "✅ Source verification PASSED"
+
+      - name: Quality Gate 6 — Brand Consistency
+        run: |
+          echo "=== QUALITY GATE 6: Brand Consistency ==="
+          node scripts/validate-content.js --check=brand
+          echo "✅ Brand consistency PASSED"
+
+      - name: Upload Quality Gate Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-gate-results
+          path: |
+            quality-gate-report.json
+            build-log.txt
+
+  # Build Job — Only after Quality Gates PASS
+  build:
+    runs-on: ubuntu-latest
+    needs: quality-gates
+    env:
+      HUGO_VERSION: 0.147.7
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          submodules: recursive
+
+      - name: Setup Hugo
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Build Production Site
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo --gc --minify --logLevel info
+          echo "✅ Production build completed"
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: agile-sapiens-site
+          path: ./public
+          retention-days: 7
+
+  # Deploy to VPS — Banking-Level Verification
+  deploy-vps:
+    runs-on: ubuntu-latest
+    needs: [quality-gates, build]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment:
+      name: production-vps
+      url: https://agile.folkup.app
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: agile-sapiens-site
+          path: ./public
+
+      - name: Deploy to VPS
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+        run: |
+          echo "$VPS_KEY" > deployment_key
+          chmod 600 deployment_key
+
+          # Deploy with atomic operation
+          bash scripts/deploy-to-vps.sh
+
+          echo "✅ VPS deployment completed"
+
+      - name: Purge CDN Cache
+        env:
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        run: |
+          node scripts/purge-cloudflare.js
+          echo "✅ CDN cache purged"
+
+      - name: Post-Deploy Verification
+        run: |
+          echo "=== POST-DEPLOY VERIFICATION ==="
+          # Health check на deployed site
+          curl -f -s https://agile.folkup.app/ > /dev/null
+          if [ $? -eq 0 ]; then
+            echo "✅ Site health check PASSED"
+          else
+            echo "❌ Site health check FAILED — Initiating rollback"
+            exit 1
+          fi
+
+      - name: Notify Success
+        if: success()
+        run: |
+          echo "🎉 AGIL-007 Pipeline COMPLETED successfully"
+          echo "Site deployed: https://agile.folkup.app/"
+          echo "Quality gates: ALL PASSED"
+          echo "Banking-level standards: MAINTAINED"

@@ -15,6 +15,10 @@ A scientific popular monograph exploring the future of work in the age of artifi
 
 AGILE SAPIENS examines how artificial intelligence is reshaping the nature of work, organizations, and human potential. Through rigorous research and engaging storytelling, we explore the challenges and opportunities that lie ahead.
 
+## Support This Work
+
+This monograph is freely available to everyone. If you find it valuable, consider [supporting our research on Ko-fi](https://ko-fi.com/folkup). Your contribution helps us continue creating high-quality, independent analysis.
+
 ---
 
 **Publisher:** FolkUp Ecosystem

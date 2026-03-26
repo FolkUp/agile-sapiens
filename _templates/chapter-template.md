@@ -14,6 +14,8 @@ tags: ["AI", "Future of Work", "Automation"]  # Relevant topic tags
 category: "analysis"         # analysis | case-study | methodology | conclusion
 related: []                  # Links to related chapters
 toc: true
+images:                      # OG image for social sharing (optional, PNG recommended)
+  - "/assets/og-image-default.png"
 ---
 
 # Chapter Title

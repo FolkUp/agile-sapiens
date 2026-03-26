@@ -1,0 +1,121 @@
+{{- /* JSON-LD Structured Data for SEO */ -}}
+{{- /* Organization Schema */ -}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AGILE SAPIENS",
+  "url": "https://sapiens.folkup.life",
+  "logo": "https://sapiens.folkup.life/assets/folkup-logo.svg",
+  "description": "A scientific popular monograph on the future of work in the AI age",
+  "author": {
+    "@type": "Organization",
+    "name": "FolkUp Ecosystem"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FolkUp Ecosystem",
+    "logo": "https://sapiens.folkup.life/assets/folkup-logo.svg"
+  },
+  "sameAs": [
+    "https://ko-fi.com/folkup"
+  ]
+}
+</script>
+{{- end }}
+
+{{- /* Article Schema for Chapters */ -}}
+{{- if eq .Type "chapters" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Params.description | jsonify }},
+  "image": [
+    {{- if .Params.images }}
+      {{- range .Params.images }}
+    "{{ . | absURL }}"{{ if not (eq . (last 1 .Params.images)) }},{{ end }}
+      {{- end }}
+    {{- else }}
+    "https://sapiens.folkup.life/assets/og-image-default.png"
+    {{- end }}
+  ],
+  "datePublished": {{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "author": {
+    "@type": "Organization",
+    "name": "FolkUp Ecosystem",
+    "url": "https://sapiens.folkup.life"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FolkUp Ecosystem",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sapiens.folkup.life/assets/folkup-logo.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+  {{- if .Params.tags }},
+  "keywords": {{ .Params.tags | jsonify }}
+  {{- end }}
+}
+</script>
+{{- end }}
+
+{{- /* BreadcrumbList Schema */ -}}
+{{- if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sapiens.folkup.life"
+    }
+    {{- if eq .Type "chapters" }}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chapters",
+      "item": "https://sapiens.folkup.life/chapters/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+    {{- else if .Parent }}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Parent.Title | jsonify }},
+      "item": {{ .Parent.Permalink | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+    {{- else }}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}

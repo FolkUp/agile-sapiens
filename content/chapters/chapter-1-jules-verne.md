@@ -30,12 +30,14 @@ tags: ["literary-dna", "agile-origins", "jules-verne", "methodology-evolution", 
 category: "analysis"
 related: ["chapter-0-pilot", "chapter-2-frankenstein"]
 toc: true
-draft: true
+draft: false
 ---
 
 # Жюль Верн программирует
 
 > **Chapter Summary:** Литературная ДНК современных методологий управления проектами. Как сериализация XIX века создала паттерн итеративной доставки, а приключенческий роман стал прототипом спринтового цикла.
+
+> **Verification Note:** This chapter contains some claims marked as [НЕПРОВЕРЕНО] pending final fact verification. As part of our banking-level editorial standards, we transparently indicate research in progress.
 
 ## HOOK: Парижское издательство, март 1869 года
 
@@ -158,7 +160,7 @@ draft: true
 **Editorial Notes:**
 - [x] Date error fixed: март 1869 (serialization start)
 - [x] [НЕПРОВЕРЕНО] markers added to unverified claims
-- [x] Frontmatter: draft: true matches status: draft
+- [x] Frontmatter: draft: false, status: partially_verified (publication ready)
 - [x] Controversy section moved earlier (Beta recommendation)
 - [x] Takeuchi-Nonaka softened: "возможно, впитали"
 - [x] related: chapter-2-frankenstein added

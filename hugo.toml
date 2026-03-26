@@ -84,3 +84,22 @@ displayToggle = true
 [markup.tableOfContents]
 startLevel = 2
 endLevel = 3
+
+# SEO Configuration
+[outputs]
+home = ["HTML", "RSS", "SITEMAP"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+
+# Sitemap configuration
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = -1
+
+# SEO headers and canonical URLs
+[params.seo]
+enableRobots = true
+enableSitemap = true
+canonicalURLs = true
+enableSchemaOrg = true

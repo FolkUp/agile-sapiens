@@ -1,0 +1,53 @@
+baseURL = "https://sapiens.folkup.life"
+languageCode = "en-us"
+title = "AGILE SAPIENS"
+theme = "hextra"
+
+[params]
+description = "A scientific popular monograph on the future of work in the AI age"
+[params.author]
+name = "FolkUp Ecosystem"
+email = "info@folkup.app"
+
+# FolkUp branding
+logo = "/assets/folkup-logo.svg"
+favicon = "/assets/favicon.ico"
+
+# Primary colors (FolkUp palette subset)
+[params.colors]
+primary = "#2563eb"
+secondary = "#64748b"
+
+# Navigation structure
+[[params.navbar.menu]]
+name = "Home"
+url = "/"
+
+[[params.navbar.menu]]
+name = "Chapters"
+url = "/chapters/"
+
+[[params.navbar.menu]]
+name = "Archive"
+url = "/archive/"
+
+[[params.navbar.menu]]
+name = "Legal"
+url = "/legal/"
+
+[params.footer]
+copyright = "© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0."
+
+# SEO and metadata
+[params.page]
+width = "normal"
+
+# Theme features
+[params.theme]
+default = "auto"
+displayToggle = true
+
+# Table of contents
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3

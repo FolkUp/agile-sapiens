@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Legal and policy pages
+Allow: /legal/
+Allow: /legal/privacy/
+Allow: /legal/cookies/
+Allow: /legal/terms/
+Allow: /legal/ai-transparency/
+
+# Main content
+Allow: /chapters/
+Allow: /about/
+Allow: /archive/
+
+# Sitemaps
+Sitemap: https://sapiens.folkup.life/sitemap.xml
+
+# Block admin/dev paths (if any exist)
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /deploy/
+Disallow: /infrastructure/
+
+# SEO optimization
+Crawl-delay: 1

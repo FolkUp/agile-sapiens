@@ -2,9 +2,11 @@ baseURL = "https://sapiens.folkup.life"
 languageCode = "en-us"
 title = "AGILE SAPIENS"
 theme = "hextra"
+defaultContentLanguage = "en"
 
 [params]
 description = "A scientific popular monograph on the future of work in the AI age"
+images = ["/assets/og-image-default.png"]
 [params.author]
 name = "FolkUp Ecosystem"
 email = "info@folkup.app"
@@ -32,11 +34,29 @@ name = "Archive"
 url = "/archive/"
 
 [[params.navbar.menu]]
+name = "About"
+url = "/about/"
+
+[[params.navbar.menu]]
 name = "Legal"
 url = "/legal/"
 
+# GDPR compliance settings
+[params.gdpr]
+enabled = true
+cookie_consent = true
+privacy_policy = "/legal/privacy/"
+cookie_policy = "/legal/cookies/"
+terms_url = "/legal/terms/"
+
 [params.footer]
 copyright = "© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0."
+
+# Ko-fi support integration (FolkUp standard)
+[params.kofi]
+enabled = true
+username = "folkup"
+url = "https://ko-fi.com/folkup"
 
 # SEO and metadata
 [params.page]
@@ -46,6 +66,19 @@ width = "normal"
 [params.theme]
 default = "auto"
 displayToggle = true
+
+# Languages configuration with Ko-fi sidebar
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "AGILE SAPIENS"
+    [languages.en.menu]
+      [[languages.en.menu.sidebar]]
+        identifier = "kofi"
+        name = "☕ Support on Ko-fi"
+        url = "https://ko-fi.com/folkup"
+        weight = 1
 
 # Table of contents
 [markup.tableOfContents]

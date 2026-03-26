@@ -1,0 +1,12 @@
+{{ if .Site.Params.kofi.enabled }}
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
+  <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #374151;">Support Independent Research</h3>
+  <p style="margin: 0 0 1rem; color: #6b7280; font-size: 0.9rem;">
+    This content is freely available. If you found it valuable, consider supporting our work.
+  </p>
+  <a href="{{ .Site.Params.kofi.url }}" target="_blank" rel="noopener"
+     style="display: inline-block; padding: 0.75rem 1.5rem; background: #FF5E5B; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: background 0.2s;">
+    ☕ Support on Ko-fi
+  </a>
+</div>
+{{ end }}

@@ -85,7 +85,25 @@ To exercise these rights, contact: privacy@folkup.app
 
 ## 7. Cookies and Tracking
 
-Currently, this site does not use cookies or tracking technologies. If this changes, we will update this policy and obtain your consent where required by law.
+This site uses cookies and similar technologies as described in our [Cookie Policy](/legal/cookies/).
+
+### 7.1 Essential Cookies
+- **Cookie consent preferences** (1 year retention)
+- **Theme preferences** (dark/light mode, 1 year retention)
+
+**Legal Basis:** Legitimate interests (GDPR Art. 6(1)(f)) for website functionality.
+
+### 7.2 Optional Third-Party Services
+- **Ko-fi donation widget:** Only loads with your consent
+- **Analytics:** Not currently implemented; would require explicit consent if added
+
+### 7.3 Your Cookie Rights
+You can:
+- Manage cookie preferences via our consent banner
+- Withdraw consent at any time using the cookie settings button
+- Block cookies through your browser settings
+
+See our [Cookie Policy](/legal/cookies/) for detailed information.
 
 ## 8. Security
 

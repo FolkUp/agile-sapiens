@@ -1,0 +1,165 @@
+{{/* Ko-fi widget with GDPR consent protection */}}
+{{- if .Site.Params.kofi.enabled -}}
+<div id="kofi-widget-container" class="kofi-consent-wrapper">
+  {{/* Default blocked state */}}
+  <div id="kofi-blocked" class="kofi-blocked">
+    <div class="kofi-consent-notice">
+      <p>🍪 <strong>Ko-fi Support Widget</strong></p>
+      <p>This donation widget requires cookies for functionality.</p>
+      <button id="enable-kofi" class="kofi-enable-btn">Enable Ko-fi Widget</button>
+    </div>
+  </div>
+
+  {{/* Ko-fi widget (hidden by default) */}}
+  <div id="kofi-widget" style="display: none;">
+    <a href="{{ .Site.Params.kofi.url }}" target="_blank" rel="noopener" class="kofi-button">
+      <span class="kofi-emoji">☕</span>
+      <span class="kofi-text">Support on Ko-fi</span>
+    </a>
+  </div>
+</div>
+
+<style>
+.kofi-consent-wrapper {
+  margin: 1rem 0;
+}
+
+.kofi-blocked {
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+  border-radius: 8px;
+  text-align: center;
+  color: #6c757d;
+}
+
+.kofi-blocked p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.kofi-blocked p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.kofi-enable-btn {
+  background: #FF5E5B;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.kofi-enable-btn:hover {
+  background: #e54b47;
+  transform: translateY(-1px);
+}
+
+.kofi-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #FF5E5B;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(255, 94, 91, 0.2);
+}
+
+.kofi-button:hover {
+  background: #e54b47;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(255, 94, 91, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.kofi-emoji {
+  font-size: 1.1em;
+}
+
+/* Dark mode */
+[data-theme="dark"] .kofi-blocked {
+  background: #1e293b;
+  border-color: #475569;
+  color: #94a3b8;
+}
+</style>
+
+<script>
+(function() {
+  'use strict';
+
+  const KofiConsent = {
+    init: function() {
+      // Check initial consent status
+      this.updateKofiVisibility();
+
+      // Listen for consent changes
+      window.addEventListener('cookieConsentGiven', (e) => {
+        this.updateKofiVisibility();
+      });
+
+      // Handle manual enable button
+      const enableBtn = document.getElementById('enable-kofi');
+      if (enableBtn) {
+        enableBtn.addEventListener('click', () => {
+          // Give consent specifically for Ko-fi
+          if (window.CookieConsent) {
+            window.CookieConsent.giveConsent('all');
+          } else {
+            // Fallback if consent system isn't loaded yet
+            this.showKofi();
+          }
+        });
+      }
+    },
+
+    updateKofiVisibility: function() {
+      if (!window.CookieConsent) {
+        // If consent system isn't ready yet, show blocked version
+        this.showBlocked();
+        return;
+      }
+
+      const consentLevel = window.CookieConsent.getConsentLevel();
+      if (consentLevel === 'all' || consentLevel === 'essential-kofi') {
+        this.showKofi();
+      } else {
+        this.showBlocked();
+      }
+    },
+
+    showKofi: function() {
+      const blocked = document.getElementById('kofi-blocked');
+      const widget = document.getElementById('kofi-widget');
+
+      if (blocked) blocked.style.display = 'none';
+      if (widget) widget.style.display = 'block';
+    },
+
+    showBlocked: function() {
+      const blocked = document.getElementById('kofi-blocked');
+      const widget = document.getElementById('kofi-widget');
+
+      if (blocked) blocked.style.display = 'block';
+      if (widget) widget.style.display = 'none';
+    }
+  };
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => KofiConsent.init());
+  } else {
+    KofiConsent.init();
+  }
+})();
+</script>
+{{- end -}}

@@ -20,26 +20,41 @@ favicon = "/assets/favicon.ico"
 primary = "#2563eb"
 secondary = "#64748b"
 
-# Navigation structure
-[[params.navbar.menu]]
+# Main navigation - will be inherited by languages
+[[menu.main]]
 name = "Home"
-url = "/"
+pageRef = "/"
+weight = 10
 
-[[params.navbar.menu]]
+[[menu.main]]
 name = "Chapters"
-url = "/chapters/"
+pageRef = "/chapters"
+weight = 20
 
-[[params.navbar.menu]]
+[[menu.main]]
 name = "Archive"
-url = "/archive/"
+pageRef = "/archive"
+weight = 30
 
-[[params.navbar.menu]]
+[[menu.main]]
 name = "About"
-url = "/about/"
+pageRef = "/about"
+weight = 40
 
-[[params.navbar.menu]]
+[[menu.main]]
 name = "Legal"
-url = "/legal/"
+pageRef = "/legal"
+weight = 50
+
+# Language switcher
+[[menu.main]]
+identifier = "language-switch"
+name = "Language Switcher"
+weight = 60
+[menu.main.params]
+type = "language-switch"
+icon = "globe-alt"
+label = true
 
 # GDPR compliance settings
 [params.gdpr]
@@ -73,10 +88,31 @@ displayToggle = true
     languageName = "English"
     weight = 1
     title = "AGILE SAPIENS"
+    contentDir = "content"
+
+    [languages.en.params]
+    description = "A scientific popular monograph on the future of work in the AI age"
+
     [languages.en.menu]
       [[languages.en.menu.sidebar]]
         identifier = "kofi"
         name = "☕ Support on Ko-fi"
+        url = "https://ko-fi.com/folkup"
+        weight = 1
+
+  [languages.ru]
+    languageName = "Русский"
+    weight = 2
+    title = "AGILE SAPIENS"
+    contentDir = "content"
+
+    [languages.ru.params]
+    description = "Научно-популярная монография о будущем работы в эпоху ИИ"
+
+    [languages.ru.menu]
+      [[languages.ru.menu.sidebar]]
+        identifier = "kofi"
+        name = "☕ Поддержать на Ko-fi"
         url = "https://ko-fi.com/folkup"
         weight = 1
 

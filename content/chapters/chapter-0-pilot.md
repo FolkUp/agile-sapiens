@@ -5,8 +5,8 @@ date: 2026-03-26
 date_created: "2026-03-25"
 date_updated: "2026-03-26"
 weight: 10
-status: verified
-confidence: high
+status: partially_verified
+confidence: medium
 reviewed_by: "Editorial Panel"
 review_date: "2026-03-25"
 sources:

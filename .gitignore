@@ -14,3 +14,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Private session context files
+.claude/SESSION_CONTEXT.md

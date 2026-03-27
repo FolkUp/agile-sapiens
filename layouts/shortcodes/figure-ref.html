@@ -1,0 +1,60 @@
+<!-- Figure Reference Shortcode - Academic Cross-Reference System -->
+{{ $fignum := .Get 0 }}
+{{ $text := .Get 1 | default (printf "рис. %s" $fignum) }}
+
+<a href="#figure-{{ $fignum }}"
+   class="figure-ref"
+   role="link"
+   aria-label="Ссылка на {{ $text }}">
+  см. {{ $text }}
+</a>
+
+<style>
+.figure-ref {
+  font-family: var(--font-heading);
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-accent-light);
+  transition: all 0.2s ease;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+}
+
+.figure-ref:hover,
+.figure-ref:focus {
+  color: var(--color-accent-light);
+  border-bottom-style: solid;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  background-color: rgba(139, 69, 19, 0.05);
+}
+
+.figure-ref:focus-visible {
+  outline: 2px solid var(--color-accent);
+  border-radius: 2px;
+  background-color: rgba(139, 69, 19, 0.1);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .figure-ref:hover,
+[data-theme="dark"] .figure-ref:focus {
+  background-color: rgba(205, 133, 63, 0.1);
+}
+
+[data-theme="dark"] .figure-ref:focus-visible {
+  background-color: rgba(205, 133, 63, 0.15);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .figure-ref {
+    transition: none;
+  }
+}
+</style>

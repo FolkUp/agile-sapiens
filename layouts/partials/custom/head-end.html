@@ -5,11 +5,15 @@ default-src 'self';
 script-src 'self' 'unsafe-inline' https://ko-fi.com https://cdn.ko-fi.com;
 style-src 'self' 'unsafe-inline';
 img-src 'self' data: https://ko-fi.com https://cdn.ko-fi.com https://uploads-ssl.webflow.com;
-font-src 'self' data:;
+font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com;
 connect-src 'self' https://ko-fi.com;
 frame-src https://ko-fi.com;
 object-src 'none';
 base-uri 'self';">
+
+{{/* AGILE SAPIENS Typography System - Traditional Book Design */}}
+{{ $typographyCSS := resources.Get "css/typography-classical.css" | minify }}
+<link rel="stylesheet" href="{{ $typographyCSS.Permalink }}">
 
 {{/* Include JSON-LD structured data for SEO */}}
 {{- partial "custom/schema-jsonld.html" . }}

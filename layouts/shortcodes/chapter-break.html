@@ -1,0 +1,35 @@
+<!-- Chapter Break Shortcode - Traditional Book Design -->
+<div class="chapter-break" role="separator" aria-hidden="true">
+  <div class="chapter-break__ornament">
+    <svg width="120" height="24" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 12L24 0L36 12L24 24L12 12Z" fill="currentColor" opacity="0.6"/>
+      <path d="M48 12L60 0L72 12L60 24L48 12Z" fill="currentColor" opacity="0.8"/>
+      <path d="M84 12L96 0L108 12L96 24L84 12Z" fill="currentColor" opacity="0.6"/>
+    </svg>
+  </div>
+</div>
+
+<style>
+.chapter-break {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: calc(var(--space-section) * 1.5) 0;
+  padding: var(--space-paragraph) 0;
+}
+
+.chapter-break__ornament {
+  color: var(--color-accent);
+  opacity: 0.7;
+}
+
+.chapter-break svg {
+  width: auto;
+  height: 1.5rem;
+}
+
+/* Dark mode adjustment */
+[data-theme="dark"] .chapter-break__ornament {
+  color: var(--color-accent-light);
+}
+</style>

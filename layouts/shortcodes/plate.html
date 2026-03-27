@@ -1,0 +1,113 @@
+<!-- Plate Shortcode - Academic Illustration System -->
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $caption := .Get "caption" }}
+{{ $num := .Get "num" }}
+
+<figure class="plate" id="figure-{{ $num }}" role="img" aria-labelledby="plate-caption-{{ $num }}">
+  <div class="plate__container">
+    <img src="{{ $src }}"
+         alt="{{ $alt }}"
+         class="plate__image"
+         loading="lazy"
+         decoding="async">
+  </div>
+  {{ if $caption }}
+  <figcaption class="plate__caption" id="plate-caption-{{ $num }}">
+    <span class="plate__number">Рис. {{ $num }}.</span>
+    <span class="plate__text">{{ $caption | markdownify }}</span>
+  </figcaption>
+  {{ end }}
+</figure>
+
+<style>
+.plate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--space-chapter) auto;
+  max-width: 100%;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.plate__container {
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  justify-content: center;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .plate__container {
+  background: #2a2a2a;
+  border-color: #404040;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.plate__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+.plate__caption {
+  margin-top: 1.5rem;
+  max-width: var(--line-length-optimal);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.plate__number {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-right: 0.5em;
+}
+
+.plate__text {
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plate__container {
+    max-width: 95vw;
+    padding: 1rem;
+  }
+
+  .plate__caption {
+    font-size: var(--text-xs);
+    margin-top: 1rem;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .plate__container {
+    border: 2px solid var(--color-text-primary);
+    background: transparent;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .plate__container {
+    transition: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="dark"] .plate__container {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+</style>

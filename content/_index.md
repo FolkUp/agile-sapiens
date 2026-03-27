@@ -1,5 +1,6 @@
 ---
 title: "AGILE SAPIENS"
+description: "A scientific popular monograph exploring the future of work in the age of artificial intelligence. Rigorous research meets engaging storytelling to examine how AI reshapes organizations and human potential."
 layout: "hextra-home"
 ---
 

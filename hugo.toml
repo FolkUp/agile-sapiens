@@ -87,15 +87,17 @@ endLevel = 3
 
 # SEO Configuration
 [outputs]
-home = ["HTML", "RSS", "SITEMAP"]
+home = ["HTML", "RSS"]
 section = ["HTML", "RSS"]
+page = ["HTML"]
 taxonomy = ["HTML", "RSS"]
+term = ["HTML"]
 
 # Sitemap configuration
 [sitemap]
 changefreq = "weekly"
 filename = "sitemap.xml"
-priority = -1
+priority = 0.8
 
 # SEO headers and canonical URLs
 [params.seo]

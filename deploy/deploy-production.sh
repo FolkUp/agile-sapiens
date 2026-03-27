@@ -31,28 +31,38 @@ echo "Step 3: Creating backup in $BACKUP_DIR..."
 mkdir -p "$BACKUP_DIR"
 
 # Step 4: Deployment target configuration
-# FolkUp VPS credentials from vault/memory/infra.md
-PRODUCTION_USER="deploy"
-PRODUCTION_HOST="46.225.107.2"
-PRODUCTION_PATH="/var/www/sapiens.folkup.life"
+# Production credentials loaded from environment variables or vault
+# Set these before running: PRODUCTION_USER, PRODUCTION_HOST, PRODUCTION_PATH
+PRODUCTION_USER="${PRODUCTION_USER:-[SET_PRODUCTION_USER]}"
+PRODUCTION_HOST="${PRODUCTION_HOST:-[SET_PRODUCTION_HOST]}"
+PRODUCTION_PATH="${PRODUCTION_PATH:-/var/www/sapiens.folkup.life}"
 
 echo "Step 4: Deployment configuration"
 echo "Target: $PRODUCTION_USER@$PRODUCTION_HOST:$PRODUCTION_PATH"
+
+# Verify credentials are configured
+if [[ "$PRODUCTION_USER" == *"SET_"* ]] || [[ "$PRODUCTION_HOST" == *"SET_"* ]]; then
+    echo "❌ Production credentials not configured!"
+    echo "Set environment variables: PRODUCTION_USER, PRODUCTION_HOST"
+    echo "Or source from vault: source ~/.claude/vault/deploy-env"
+    exit 1
+fi
+
 echo ""
 echo "⚠️  MANUAL STEPS REQUIRED:"
-echo "1. ✅ Production credentials configured (FolkUp VPS)"
-echo "2. Ensure SSH key ~/.ssh/id_ed25519 has access to deploy@46.225.107.2"
-echo "3. Create nginx configuration for sapiens.folkup.life domain"
-echo "4. Add DNS A record: sapiens.folkup.life → 46.225.107.2 (Cloudflare)"
+echo "1. ✅ Production credentials configured via environment"
+echo "2. Ensure SSH key access to production server"
+echo "3. Verify server nginx configuration"
+echo "4. Confirm DNS records are propagated"
 echo ""
 echo "Ready to deploy with configured credentials:"
 echo "rsync -avz --delete public/ $PRODUCTION_USER@$PRODUCTION_HOST:$PRODUCTION_PATH/"
 echo ""
-echo "📋 FolkUp Infrastructure Notes:"
-echo "• Server: Hetzner CX33 (Ubuntu 24.04)"
-echo "• SSH: Standard port 22, fail2ban active"
-echo "• User 'deploy' has docker group + restricted sudoers"
-echo "• Nginx reverse proxy via nginx-proxy container"
+echo "📋 Infrastructure Notes:"
+echo "• Production server configured via environment variables"
+echo "• SSH key authentication required"
+echo "• Automated SSL certificate management"
+echo "• Containerized reverse proxy setup"
 
 # Step 5: Post-deployment verification
 echo ""

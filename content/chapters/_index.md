@@ -5,20 +5,20 @@ weight: 10
 
 # AGILE SAPIENS — Chapters
 
-The main content of the monograph, organized in 10 chapters across 3 acts.
+The main content of the monograph, organized in chapters across 3 acts.
 
 ## Structure
 
-**Act I: The Current Moment** (Chapters 1-3)
-- Where we are today
-- Current state of AI and work
+**Act I: Origins** (Chapters 0-3)
+- Chapter 0: Филеас Фогг — интуитивный Agile (pilot)
+- Chapter 1: Жюль Верн — сериализация и итерации
+- Chapter 2: Франкенштейн — создание и бегство
+- Chapter 3: Шерлок Холмс — дедуктивная диагностика
 
 **Act II: The Transformation** (Chapters 4-7)
-- How change is happening
-- Forces reshaping work
+- How change happens — forces reshaping work
 
 **Act III: The Future** (Chapters 8-10)
-- Where we're heading
-- New models of work and organization
+- Where we're heading — new models of work and organization
 
-Each chapter follows rigorous editorial standards with full source verification and expert review.
+Each chapter follows rigorous editorial standards with full source verification and expert review. Literary DNA meets corporate reality.

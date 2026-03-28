@@ -3,7 +3,7 @@ title: "Глава 2: Франкенштейн управляет проекто
 description: "Как роман восемнадцатилетней Мэри Шелли стал точнейшим post-mortem корпоративных провалов — от FBI Sentinel до Healthcare.gov"
 date: 2026-03-27
 date_created: "2026-03-27"
-date_updated: "2026-03-27"
+date_updated: "2026-03-28"
 weight: 30
 chapter: 2
 act: "I: Origins"
@@ -29,7 +29,7 @@ sources:
   - "Vuori, T.O. & Huy, Q.N. 'Distributed Attention and Shared Emotions in the Innovation Process: How Nokia Lost the Smartphone Battle.' Administrative Science Quarterly, 61(1), 2016, pp. 9-51"
 tags: ["frankenstein", "corporate-monsters", "agile-failures", "creator-abandonment", "digital-transformation", "technical-debt", "gothic-horror"]
 category: "analysis"
-related: ["chapter-0-pilot", "chapter-1-jules-verne", "chapter-3-synthesis"]
+related: ["chapter-0-pilot", "chapter-1-jules-verne", "chapter-03"]
 toc: true
 draft: true
 ---

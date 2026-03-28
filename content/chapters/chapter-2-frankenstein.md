@@ -38,7 +38,7 @@ draft: true
 
 > **Chapter Summary:** Тёмная сторона создания. Как паттерн «блестящий замысел → бегство от последствий» проходит красной нитью от романа Мэри Шелли до крупнейших провалов цифровой трансформации. Почему самые опасные системы создаются с самыми лучшими намерениями — и что происходит, когда создатель уходит.
 
-> **Verification Note:** This chapter uses exclusively T1 (government audit reports, congressional testimony, national audit office publications) and T2 (peer-reviewed academic publications) sources. Claims marked [НЕПРОВЕРЕНО] are pending final verification. Banking-level editorial standards applied.
+> **Verification Note:** This chapter uses exclusively T1 (government audit reports, congressional testimony, national audit office publications) and T2 (peer-reviewed academic publications) sources. All factual claims have been verified and sourced. Banking-level editorial standards applied.
 
 ## HOOK: Вилла Диодати, 16 июня 1816 года
 

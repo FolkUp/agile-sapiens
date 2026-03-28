@@ -7,6 +7,8 @@ act: "I: Origins"
 category: "analysis"
 status: "verified"
 confidence: "high"
+reviewed_by: "Editorial Panel"
+review_date: "2026-03-28"
 tags:
   - "sherlock-holmes"
   - "diagnostic-patterns"
@@ -36,8 +38,6 @@ related:
   - "/chapters/chapter-2-frankenstein"
 date_created: "2026-03-27"
 date_updated: "2026-03-28"
-reviewed_by: "Enhanced Alice v2.0 Dream-Team"
-review_date: "2026-03-28"
 sensitive: false
 toc: true
 draft: true

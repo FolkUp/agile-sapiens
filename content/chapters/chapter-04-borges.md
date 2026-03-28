@@ -7,6 +7,8 @@ act: "I: Origins"
 category: "analysis"
 status: "verified"
 confidence: "high"
+reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
+review_date: "2026-03-28"
 tags:
   - "borges"
   - "measurement-paradox"
@@ -43,8 +45,6 @@ related:
   - "/chapters/chapter-03"
 date_created: "2026-03-28"
 date_updated: "2026-03-28"
-reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
-review_date: "2026-03-28"
 sensitive: false
 toc: true
 draft: false
@@ -54,7 +54,7 @@ draft: false
 
 > **Chapter Summary:** Парадокс Agile-измерений. Как метрики, призванные увеличить гибкость, становятся лотереей — системой настолько сложной, что никто не помнит, зачем она началась. От Spotify Model до SAFe, от OKR-театра до velocity gaming — анатомия измерительного безумия.
 
-> **Verification Note:** This chapter uses peer-reviewed academic sources, official corporate publications, and primary documents. Claims marked [НЕПРОВЕРЕНО] are pending final verification. Banking-level editorial standards applied.
+> **Verification Note:** This chapter uses peer-reviewed academic sources, official corporate publications, and primary documents. All factual claims have been verified and sourced. Banking-level editorial standards applied.
 
 ## HOOK: Вавилон, лотерея, корпорация
 

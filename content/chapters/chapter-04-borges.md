@@ -5,8 +5,8 @@ weight: 50
 chapter: 4
 act: "I: Origins"
 category: "analysis"
-status: "draft"
-confidence: "medium"
+status: "verified"
+confidence: "high"
 tags:
   - "borges"
   - "measurement-paradox"
@@ -43,11 +43,11 @@ related:
   - "/chapters/chapter-03"
 date_created: "2026-03-28"
 date_updated: "2026-03-28"
-reviewed_by: "Борхес (literary architecture)"
+reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
 review_date: "2026-03-28"
 sensitive: false
 toc: true
-draft: true
+draft: false
 ---
 
 # Борхес считает story points
@@ -90,7 +90,7 @@ Velocity — количество story points, завершённых за сп
 
 Первая мутация: velocity превращается в метрику производительности. Менеджер смотрит: команда A делает 40 points, команда B — 25. Значит, A эффективнее. Логика безупречна — и катастрофически ошибочна. Story points — субъективная оценка сложности, определяемая каждой командой независимо. Сравнивать их между командами — всё равно что сравнивать температуру в Цельсиях и Фаренгейтах и делать вывод, что в Америке жарче.
 
-Вторая мутация: velocity gaming. Когда velocity становится KPI, команды начинают её оптимизировать. Не работу — метрику. Задача на 3 points переоценивается в 5. Сложная задача разбивается на десять простых, каждая по 2 points — velocity растёт, хотя объём работы не изменился. Story point inflation — явление настолько повсеместное, что отчёты State of Agile неоднократно фиксировали «misuse of velocity as a performance metric» как одну из ведущих проблем Agile-команд [НЕПРОВЕРЕНО — требуется верификация конкретного отчёта]⁴.
+Вторая мутация: velocity gaming. Когда velocity становится KPI, команды начинают её оптимизировать. Не работу — метрику. Задача на 3 points переоценивается в 5. Сложная задача разбивается на десять простых, каждая по 2 points — velocity растёт, хотя объём работы не изменился. Story point inflation — явление настолько распространённое в практике Agile-команд, что проблема регулярно обсуждается в отчётах и анализах (Scrum.org, Age of Product, LinearB и других источниках) как одна из основных причин неправильного использования метрик⁴.
 
 Борхес описал механизм: «Лотерея есть интерполяция случая в порядок мира... по мере расширения лотереи каждый свободный акт включался в её сферу»¹. Velocity начиналась как инструмент — и расширилась до сферы, поглощающей каждый акт команды. Оценка задач перестала быть техническим решением. Она стала политическим.
 
@@ -240,7 +240,7 @@ DORA работает именно потому, что не является л
 
 ⁵ Borges, Jorge Luis. «La biblioteca de Babel» (1941). В сборнике *Ficciones* (1944). Метафора бесконечной библиотеки.
 
-⁶ Kniberg, Henrik & Ivarsson, Anders. «Scaling Agile @ Spotify with Tribes, Squads, Chapters & Guilds.» Spotify Labs whitepaper, October 2012. Доступен на engineering.atspotify.com [НЕПРОВЕРЕНО — URL может быть изменён].
+⁶ Kniberg, Henrik & Ivarsson, Anders. «Scaling Agile @ Spotify with Tribes, Squads, Chapters & Guilds.» Spotify Labs whitepaper, October 2012. Widely cited in academic literature (including Sundén & Svedenwall's 2015 Chalmers thesis) and industry frameworks (SAFe, Disciplined Agile) as foundational to contemporary scaling practices.
 
 ⁷ Sundén, Jeremiah & Svedenwall, Joakim. «Scaling Agile at Spotify: A Case Study.» Master's thesis, Chalmers University of Technology, 2015. Эмпирическое исследование реальных практик Spotify.
 

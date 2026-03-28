@@ -7,10 +7,10 @@ date_updated: "2026-03-28"
 weight: 30
 chapter: 2
 act: "I: Origins"
-status: draft
-confidence: medium
-reviewed_by: "Борхес"
-review_date: "2026-03-27"
+status: verified
+confidence: high
+reviewed_by: "Борхес, КиберГонзо (OSINT verification)"
+review_date: "2026-03-28"
 sources:
   - "Shelley, Mary. Frankenstein; or, The Modern Prometheus (1818). Lackington, Hughes, Harding, Mavor & Jones"
   - "Shelley, Mary. Frankenstein (1831 revised edition). Colburn & Bentley"

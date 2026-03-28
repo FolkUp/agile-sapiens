@@ -1,0 +1,352 @@
+<!-- Concept Illustration Shortcode - In-text Diagrams -->
+{{/* Extract parameters with defaults */}}
+{{ $image := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $caption := .Get "caption" | default "" }}
+{{ $figureNum := .Get "figure" | default "" }}
+{{ $size := .Get "size" | default "medium" }}
+{{ $align := .Get "align" | default "center" }}
+{{ $float := .Get "float" | default "" }}
+{{ $lazy := .Get "lazy" | default "true" }}
+
+{{/* Validate required parameters */}}
+{{ if not $image }}
+  {{ errorf "concept-illustration shortcode requires 'src' parameter at %s" .Position }}
+{{ end }}
+
+{{/* Generate unique ID for figure reference */}}
+{{ $figureId := printf "concept-illustration-%d" (now.Unix) }}
+
+<figure class="concept-illustration concept-illustration--{{ $size }} concept-illustration--{{ $align }} {{ if $float }}concept-illustration--{{ $float }}{{ end }}"
+        id="{{ $figureId }}" role="img" {{ with $alt }}aria-label="{{ . }}"{{ end }}>
+
+  <div class="concept-illustration__container">
+
+    <div class="concept-illustration__image-wrapper">
+      <picture>
+        <!-- WebP version for modern browsers -->
+        {{ $webpSrc := replace $image ".jpg" ".webp" | replace $image ".png" ".webp" }}
+        <source srcset="{{ $webpSrc }}" type="image/webp">
+
+        <!-- Fallback image -->
+        <img
+          src="{{ $image }}"
+          alt="{{ $alt }}"
+          {{ if eq $lazy "true" }}loading="lazy"{{ end }}
+          class="concept-illustration__image"
+          decoding="async"
+        >
+      </picture>
+
+      <!-- Loading placeholder -->
+      <div class="concept-illustration__placeholder" aria-hidden="true"></div>
+    </div>
+
+    {{ if $caption }}
+    <figcaption class="concept-illustration__caption">
+      {{ if $figureNum }}
+        <span class="concept-illustration__label">Fig. {{ $figureNum }}</span>
+      {{ end }}
+      <span class="concept-illustration__text">{{ $caption | markdownify }}</span>
+    </figcaption>
+    {{ end }}
+
+  </div>
+</figure>
+
+<style>
+/* Concept Illustration Component - Academic In-text Diagrams */
+.concept-illustration {
+  margin: var(--space-xl) 0;
+  clear: both;
+}
+
+/* Size variants */
+.concept-illustration--small {
+  max-width: 300px;
+}
+
+.concept-illustration--medium {
+  max-width: 500px;
+}
+
+.concept-illustration--large {
+  max-width: 700px;
+}
+
+.concept-illustration--full {
+  max-width: 100%;
+}
+
+/* Alignment variants */
+.concept-illustration--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.concept-illustration--left {
+  margin-right: auto;
+  margin-left: 0;
+  text-align: left;
+}
+
+.concept-illustration--right {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+/* Float variants for text wrapping */
+.concept-illustration--float-left {
+  float: left;
+  margin: 0 var(--space-xl) var(--space-lg) 0;
+  max-width: 40%;
+}
+
+.concept-illustration--float-right {
+  float: right;
+  margin: 0 0 var(--space-lg) var(--space-xl);
+  max-width: 40%;
+}
+
+.concept-illustration__container {
+  position: relative;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: 3px;
+  padding: var(--space-sm);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.concept-illustration__container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.concept-illustration__image-wrapper {
+  position: relative;
+  background-color: var(--color-bg-secondary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.concept-illustration__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.concept-illustration__image:not([src]) {
+  opacity: 0;
+}
+
+.concept-illustration__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  background: linear-gradient(
+    45deg,
+    var(--color-bg-muted) 25%,
+    var(--color-bg-secondary) 25%,
+    var(--color-bg-secondary) 50%,
+    var(--color-bg-muted) 50%,
+    var(--color-bg-muted) 75%,
+    var(--color-bg-secondary) 75%
+  );
+  background-size: 20px 20px;
+  animation: loading-pattern 2s linear infinite;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept-illustration__placeholder::after {
+  content: "Loading diagram...";
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.concept-illustration__image[src] ~ .concept-illustration__placeholder {
+  display: none;
+}
+
+@keyframes loading-pattern {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+.concept-illustration__caption {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+  padding: 0 var(--space-sm);
+  text-align: center;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-sm);
+}
+
+.concept-illustration__label {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-right: var(--space-xs);
+}
+
+.concept-illustration__text {
+  font-style: italic;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .concept-illustration__container {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .concept-illustration__container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .concept-illustration__image-wrapper {
+  background-color: var(--color-bg-muted);
+}
+
+[data-theme="dark"] .concept-illustration__placeholder {
+  background: linear-gradient(
+    45deg,
+    var(--color-bg-secondary) 25%,
+    var(--color-bg-muted) 25%,
+    var(--color-bg-muted) 50%,
+    var(--color-bg-secondary) 50%,
+    var(--color-bg-secondary) 75%,
+    var(--color-bg-muted) 75%
+  );
+}
+
+[data-theme="dark"] .concept-illustration__caption {
+  border-color: var(--color-border);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .concept-illustration--float-left,
+  .concept-illustration--float-right {
+    float: none;
+    margin: var(--space-lg) 0;
+    max-width: 100%;
+  }
+
+  .concept-illustration--small,
+  .concept-illustration--medium,
+  .concept-illustration--large {
+    max-width: 100%;
+  }
+
+  .concept-illustration__caption {
+    font-size: var(--text-xs);
+    padding: 0 var(--space-xs);
+  }
+
+  .concept-illustration__placeholder {
+    min-height: 100px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .concept-illustration {
+    break-inside: avoid;
+    margin: 0.5cm 0;
+  }
+
+  .concept-illustration--float-left,
+  .concept-illustration--float-right {
+    float: none;
+    margin: 0.5cm 0;
+    max-width: 8cm;
+  }
+
+  .concept-illustration__container {
+    border: 1px solid #000000;
+    box-shadow: none;
+    background: #ffffff;
+  }
+
+  .concept-illustration__caption {
+    font-size: 8pt;
+    color: #000000;
+    border-color: #000000;
+  }
+
+  .concept-illustration__placeholder {
+    display: none;
+  }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .concept-illustration__container,
+  .concept-illustration__image {
+    transition: none;
+  }
+
+  .concept-illustration__placeholder {
+    animation: none;
+    background: var(--color-bg-muted);
+  }
+
+  .concept-illustration__placeholder::after {
+    content: "Diagram";
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .concept-illustration__container {
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .concept-illustration__caption {
+    color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
+  }
+
+  .concept-illustration__label {
+    color: var(--color-text-primary);
+  }
+}
+
+/* Focus management */
+.concept-illustration:focus-within .concept-illustration__container {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Clear floats after concept illustrations */
+.concept-illustration--float-left + *,
+.concept-illustration--float-right + * {
+  clear: both;
+}
+
+/* Ensure minimum touch targets for mobile */
+@media (max-width: 768px) {
+  .concept-illustration {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+</style>

@@ -1,0 +1,261 @@
+<!-- Chapter Visual Shortcode - Academic Book Design -->
+{{/* Extract parameters with defaults */}}
+{{ $image := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $caption := .Get "caption" | default "" }}
+{{ $chapterNum := .Get "chapter" | default "" }}
+{{ $position := .Get "position" | default "center" }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $lazy := .Get "lazy" | default "true" }}
+
+{{/* Validate required parameters */}}
+{{ if not $image }}
+  {{ errorf "chapter-visual shortcode requires 'src' parameter at %s" .Position }}
+{{ end }}
+
+{{/* Generate unique ID for figure reference */}}
+{{ $figureId := printf "chapter-visual-%d" (now.Unix) }}
+
+<figure class="chapter-visual chapter-visual--{{ $position }}" id="{{ $figureId }}" role="img"
+        {{ with $alt }}aria-label="{{ . }}"{{ end }}>
+
+  <div class="chapter-visual__container" style="max-width: {{ $width }}">
+
+    <div class="chapter-visual__image-wrapper">
+      <picture>
+        <!-- WebP version for modern browsers -->
+        {{ $webpSrc := replace $image ".jpg" ".webp" | replace $image ".png" ".webp" }}
+        <source srcset="{{ $webpSrc }}" type="image/webp">
+
+        <!-- Fallback image -->
+        <img
+          src="{{ $image }}"
+          alt="{{ $alt }}"
+          {{ if eq $lazy "true" }}loading="lazy"{{ end }}
+          class="chapter-visual__image"
+          decoding="async"
+        >
+      </picture>
+
+      <!-- Loading placeholder for accessibility -->
+      <div class="chapter-visual__placeholder" aria-hidden="true"></div>
+    </div>
+
+    {{ if $caption }}
+    <figcaption class="chapter-visual__caption">
+      {{ if $chapterNum }}
+        <span class="chapter-visual__label">Figure {{ $chapterNum }}</span>
+      {{ end }}
+      <span class="chapter-visual__text">{{ $caption | markdownify }}</span>
+    </figcaption>
+    {{ end }}
+
+  </div>
+</figure>
+
+<style>
+/* Chapter Visual Component - Classical Academic Styling */
+.chapter-visual {
+  margin: var(--space-section) auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.chapter-visual--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chapter-visual--left {
+  margin-right: auto;
+  margin-left: 0;
+  text-align: left;
+}
+
+.chapter-visual--right {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+.chapter-visual__container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.chapter-visual__image-wrapper {
+  position: relative;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.chapter-visual__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.chapter-visual__image:not([src]) {
+  opacity: 0;
+}
+
+.chapter-visual__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    var(--color-bg-secondary) 50%,
+    var(--color-bg-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  pointer-events: none;
+}
+
+.chapter-visual__image[src] ~ .chapter-visual__placeholder {
+  display: none;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.chapter-visual__caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-md);
+  padding: 0 var(--space-lg);
+  text-align: center;
+  max-width: var(--line-length-optimal);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chapter-visual__label {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.chapter-visual__text {
+  display: block;
+  font-style: italic;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .chapter-visual__image-wrapper {
+  background-color: var(--color-bg-muted);
+  border-color: var(--color-border-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .chapter-visual__placeholder {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-secondary) 25%,
+    var(--color-bg-muted) 50%,
+    var(--color-bg-secondary) 75%
+  );
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chapter-visual {
+    margin: var(--space-xl) auto;
+  }
+
+  .chapter-visual__caption {
+    font-size: var(--text-xs);
+    padding: 0 var(--space-sm);
+  }
+
+  .chapter-visual__image-wrapper {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Print styles */
+@media print {
+  .chapter-visual {
+    break-inside: avoid;
+    margin: 1cm auto;
+    max-width: 15cm;
+  }
+
+  .chapter-visual__image-wrapper {
+    border: 1px solid #000000;
+    box-shadow: none;
+  }
+
+  .chapter-visual__caption {
+    font-size: 9pt;
+    color: #000000;
+  }
+
+  .chapter-visual__placeholder {
+    display: none;
+  }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .chapter-visual__image,
+  .chapter-visual__image-wrapper {
+    transition: none;
+  }
+
+  .chapter-visual__placeholder {
+    animation: none;
+    background: var(--color-bg-muted);
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .chapter-visual__image-wrapper {
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .chapter-visual__caption {
+    color: var(--color-text-primary);
+  }
+
+  .chapter-visual__label {
+    color: var(--color-text-primary);
+  }
+}
+
+/* Focus management for keyboard navigation */
+.chapter-visual:focus-within .chapter-visual__image-wrapper {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Touch targets for mobile */
+@media (max-width: 768px) {
+  .chapter-visual {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+</style>

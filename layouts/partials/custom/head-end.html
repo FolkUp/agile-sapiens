@@ -15,6 +15,10 @@ base-uri 'self';">
 {{ $typographyCSS := resources.Get "css/typography-classical.css" | minify }}
 <link rel="stylesheet" href="{{ $typographyCSS.Permalink }}">
 
+{{/* AGILE SAPIENS Visual Framework - Academic Book Illustrations */}}
+{{ $visualsCSS := resources.Get "css/visuals-framework.css" | minify }}
+<link rel="stylesheet" href="{{ $visualsCSS.Permalink }}">
+
 {{/* Include JSON-LD structured data for SEO */}}
 {{- partial "custom/schema-jsonld.html" . }}
 

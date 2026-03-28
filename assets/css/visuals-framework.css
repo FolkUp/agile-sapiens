@@ -1,0 +1,516 @@
+/* AGILE SAPIENS Visual Framework - Academic Book Illustrations
+ * Classical academic styling for figures, diagrams, and visual elements
+ * Extends typography-classical.css with visual hierarchy support
+ * WCAG 2.1 AA compliant with focus states and reduced motion support
+ */
+
+/* =============================================================================
+   VISUAL HIERARCHY FOUNDATIONS
+   ============================================================================= */
+
+/* Academic Figure Container Base */
+.academic-figure {
+  margin: var(--space-section) auto;
+  max-width: 100%;
+  clear: both;
+  position: relative;
+}
+
+/* Figure Numbering System - Classical Academic Style */
+.academic-figure[data-chapter][data-number] {
+  counter-increment: figure;
+}
+
+.academic-figure[data-chapter][data-number]::before {
+  content: "Figure " attr(data-chapter) "." attr(data-number);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  display: block;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+/* =============================================================================
+   IMAGE GALLERY SYSTEM
+   ============================================================================= */
+
+/* Responsive Image Gallery */
+.image-gallery {
+  display: grid;
+  gap: var(--space-lg);
+  margin: var(--space-section) 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.image-gallery--two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-gallery--three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.image-gallery--four-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Gallery Item */
+.image-gallery__item {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: 4px;
+  padding: var(--space-md);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.image-gallery__item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Gallery Caption */
+.image-gallery__caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+  text-align: center;
+  font-style: italic;
+  line-height: var(--leading-normal);
+}
+
+/* =============================================================================
+   FIGURE CAPTION SYSTEM
+   ============================================================================= */
+
+/* Enhanced Figure Captions - Academic Style */
+.figure-caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-md);
+  text-align: center;
+  max-width: var(--line-length-optimal);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-lg);
+}
+
+.figure-caption--left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.figure-caption--right {
+  text-align: right;
+  margin-right: 0;
+}
+
+/* Caption Components */
+.figure-caption__number {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.figure-caption__title {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.figure-caption__description {
+  font-style: italic;
+  display: block;
+}
+
+.figure-caption__source {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+  display: block;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-xs);
+}
+
+/* =============================================================================
+   TRADITIONAL BOOK PROPORTIONS
+   ============================================================================= */
+
+/* Classical Academic Ratios */
+.figure--portrait {
+  aspect-ratio: 3/4; /* Traditional portrait */
+}
+
+.figure--landscape {
+  aspect-ratio: 4/3; /* Traditional landscape */
+}
+
+.figure--golden {
+  aspect-ratio: 1.618/1; /* Golden ratio */
+}
+
+.figure--square {
+  aspect-ratio: 1/1; /* Perfect square */
+}
+
+.figure--wide {
+  aspect-ratio: 16/9; /* Modern wide format */
+}
+
+/* Image Containment */
+.figure--contain img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.figure--cover img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* =============================================================================
+   ACADEMIC HIERARCHY SYSTEM
+   ============================================================================= */
+
+/* Chapter-level Visual Hierarchy */
+.chapter-visual-hierarchy h1 + .academic-figure,
+.chapter-visual-hierarchy h2 + .academic-figure,
+.chapter-visual-hierarchy h3 + .academic-figure {
+  margin-top: var(--space-xl);
+}
+
+/* Section Breaks with Visuals */
+.section-break {
+  margin: var(--space-chapter) 0;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-section);
+  text-align: center;
+}
+
+.section-break .academic-figure {
+  margin-top: var(--space-xl);
+}
+
+/* Visual Emphasis Levels */
+.figure--primary {
+  margin: calc(var(--space-section) * 1.5) auto;
+  border: 2px solid var(--color-accent-light);
+  padding: var(--space-lg);
+  background-color: var(--color-bg-secondary);
+  border-radius: 6px;
+}
+
+.figure--secondary {
+  margin: var(--space-xl) auto;
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+  border-radius: 4px;
+}
+
+.figure--tertiary {
+  margin: var(--space-lg) auto;
+  padding: var(--space-sm);
+}
+
+/* =============================================================================
+   DARK MODE ADAPTATIONS
+   ============================================================================= */
+
+[data-theme="dark"] .image-gallery__item {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .image-gallery__item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .figure-caption__source {
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .figure--primary {
+  background-color: var(--color-bg-muted);
+  border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .figure--secondary {
+  border-color: var(--color-border-dark);
+}
+
+/* =============================================================================
+   RESPONSIVE DESIGN - MOBILE OPTIMIZATION
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  /* Stack gallery columns on mobile */
+  .image-gallery,
+  .image-gallery--two-column,
+  .image-gallery--three-column,
+  .image-gallery--four-column {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Reduce spacing on mobile */
+  .academic-figure {
+    margin: var(--space-xl) auto;
+  }
+
+  .figure-caption {
+    font-size: var(--text-xs);
+    padding: 0 var(--space-md);
+  }
+
+  .figure--primary,
+  .figure--secondary {
+    padding: var(--space-sm);
+    margin: var(--space-lg) auto;
+  }
+
+  /* Ensure readable aspect ratios on mobile */
+  .figure--landscape {
+    aspect-ratio: 4/3;
+  }
+
+  .figure--wide {
+    aspect-ratio: 16/10; /* Slightly taller for mobile readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .figure-caption__number {
+    font-size: var(--text-xs);
+  }
+
+  .academic-figure[data-chapter][data-number]::before {
+    font-size: var(--text-xs);
+  }
+}
+
+/* =============================================================================
+   PRINT STYLES - TRADITIONAL BOOK LAYOUT
+   ============================================================================= */
+
+@media print {
+  /* Ensure figures break properly in print */
+  .academic-figure {
+    break-inside: avoid;
+    margin: 0.8cm auto;
+    max-width: 15cm;
+  }
+
+  .image-gallery {
+    break-inside: avoid;
+    margin: 0.5cm 0;
+  }
+
+  .image-gallery__item {
+    break-inside: avoid;
+    border: 1px solid #000000;
+    box-shadow: none;
+    background: #ffffff;
+  }
+
+  /* Print-optimized captions */
+  .figure-caption {
+    font-size: 9pt;
+    color: #000000;
+    margin-top: 0.3cm;
+  }
+
+  .figure-caption__number {
+    font-size: 8pt;
+    color: #000000;
+  }
+
+  .figure-caption__source {
+    font-size: 7pt;
+    border-color: #000000;
+  }
+
+  /* Remove interactive elements in print */
+  .figure--primary,
+  .figure--secondary {
+    border: 1px solid #000000;
+    background: #ffffff;
+    box-shadow: none;
+  }
+
+  /* Optimize aspect ratios for print */
+  .figure--landscape {
+    aspect-ratio: 3/2; /* Better for print pages */
+  }
+
+  .figure--portrait {
+    aspect-ratio: 2/3;
+  }
+}
+
+/* =============================================================================
+   ACCESSIBILITY ENHANCEMENTS - WCAG 2.1 AA COMPLIANCE
+   ============================================================================= */
+
+/* Focus Management */
+.academic-figure:focus-within {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.image-gallery__item:focus-within {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .image-gallery__item,
+  .figure--primary,
+  .figure--secondary {
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .figure-caption,
+  .figure-caption__number,
+  .figure-caption__title {
+    color: var(--color-text-primary);
+  }
+
+  .figure-caption__source {
+    color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .image-gallery__item,
+  .academic-figure,
+  .figure--primary,
+  .figure--secondary {
+    transition: none;
+  }
+
+  /* Remove hover effects for reduced motion */
+  .image-gallery__item:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  [data-theme="dark"] .image-gallery__item:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Screen Reader Optimizations */
+.figure-caption__source::before {
+  content: "Source: ";
+  font-weight: var(--font-weight-medium);
+}
+
+.academic-figure[aria-label] .figure-caption__description {
+  clip-path: inset(50%);
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+}
+
+/* =============================================================================
+   TOUCH TARGETS - MOBILE ACCESSIBILITY
+   ============================================================================= */
+
+/* Ensure minimum 44x44px touch targets */
+.academic-figure,
+.image-gallery__item {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Interactive elements within figures */
+.academic-figure button,
+.academic-figure a,
+.image-gallery__item button,
+.image-gallery__item a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================================================= */
+
+/* GPU acceleration for smooth interactions */
+.image-gallery__item,
+.academic-figure {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Lazy loading placeholder styling */
+.academic-figure img[loading="lazy"],
+.image-gallery__item img[loading="lazy"] {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    var(--color-bg-secondary) 50%,
+    var(--color-bg-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+.academic-figure img[loading="lazy"][src],
+.image-gallery__item img[loading="lazy"][src] {
+  animation: none;
+  background: none;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* =============================================================================
+   UTILITY CLASSES
+   ============================================================================= */
+
+/* Spacing Utilities */
+.figure-spacing--tight { margin: var(--space-lg) auto; }
+.figure-spacing--normal { margin: var(--space-xl) auto; }
+.figure-spacing--loose { margin: var(--space-section) auto; }
+
+/* Width Utilities */
+.figure-width--narrow { max-width: 60%; }
+.figure-width--normal { max-width: 80%; }
+.figure-width--wide { max-width: 100%; }
+
+/* Alignment Utilities */
+.figure-align--left { margin-left: 0; margin-right: auto; }
+.figure-align--center { margin-left: auto; margin-right: auto; }
+.figure-align--right { margin-left: auto; margin-right: 0; }

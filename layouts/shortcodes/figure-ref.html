@@ -1,60 +1,287 @@
-<!-- Figure Reference Shortcode - Academic Cross-Reference System -->
-{{ $fignum := .Get 0 }}
-{{ $text := .Get 1 | default (printf "рис. %s" $fignum) }}
+<!-- Figure Reference Shortcode - Academic Figure Citations -->
+{{/* Extract parameters with defaults */}}
+{{ $id := .Get "id" }}
+{{ $number := .Get "number" }}
+{{ $text := .Get "text" | default "" }}
+{{ $type := .Get "type" | default "figure" }}
+{{ $chapter := .Get "chapter" | default "" }}
+{{ $page := .Get "page" | default "" }}
 
-<a href="#figure-{{ $fignum }}"
-   class="figure-ref"
-   role="link"
-   aria-label="Ссылка на {{ $text }}">
-  см. {{ $text }}
+{{/* Support legacy single parameter format */}}
+{{ if not $id }}
+  {{ $fignum := .Get 0 }}
+  {{ if $fignum }}
+    {{ $id = printf "figure-%s" $fignum }}
+    {{ $number = $fignum }}
+    {{ $text = .Get 1 | default (printf "рис. %s" $fignum) }}
+  {{ else }}
+    {{ errorf "figure-ref shortcode requires either 'id' parameter or figure number at %s" .Position }}
+  {{ end }}
+{{ end }}
+
+{{/* Build reference text */}}
+{{ $refText := "" }}
+{{ if $text }}
+  {{ $refText = $text }}
+{{ else if and $chapter $number }}
+  {{ $refText = printf "%s %s.%s" (title $type) $chapter $number }}
+{{ else if $number }}
+  {{ $refText = printf "%s %s" (title $type) $number }}
+{{ else }}
+  {{ $refText = title $type }}
+{{ end }}
+
+{{/* Build aria-label for accessibility */}}
+{{ $ariaLabel := printf "Reference to %s" $refText }}
+{{ if $page }}
+  {{ $ariaLabel = printf "%s on page %s" $ariaLabel $page }}
+{{ end }}
+
+<a href="#{{ $id }}"
+   class="figure-ref figure-ref--{{ $type }}"
+   role="doc-biblioref"
+   aria-label="{{ $ariaLabel }}"
+   data-ref-id="{{ $id }}"
+   data-ref-type="{{ $type }}"
+   {{ if $number }}data-ref-number="{{ $number }}"{{ end }}
+   {{ if $chapter }}data-ref-chapter="{{ $chapter }}"{{ end }}>
+  <span class="figure-ref__text">{{ if not $text }}см. {{ end }}{{ $refText }}</span>
+  {{ if $page }}
+    <span class="figure-ref__page">(с. {{ $page }})</span>
+  {{ end }}
 </a>
 
 <style>
+/* Figure Reference Component - Academic Citation Style */
 .figure-ref {
-  font-family: var(--font-heading);
-  font-size: 0.95em;
-  font-weight: 500;
   color: var(--color-accent);
   text-decoration: none;
-  border-bottom: 1px dotted var(--color-accent-light);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.95em;
+  padding: 0.1em 0.2em;
+  border-radius: 2px;
   transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+  line-height: 1.2;
   min-height: 44px;
   min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.5rem;
-  border-radius: 2px;
+  border-bottom: 1px dotted var(--color-accent-light);
 }
 
-.figure-ref:hover,
-.figure-ref:focus {
-  color: var(--color-accent-light);
-  border-bottom-style: solid;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.figure-ref:hover {
+  color: var(--color-accent-dark);
   background-color: rgba(139, 69, 19, 0.05);
+  border-bottom-style: solid;
+  text-decoration: none;
 }
 
 .figure-ref:focus-visible {
-  outline: 2px solid var(--color-accent);
-  border-radius: 2px;
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+  color: var(--color-accent-dark);
   background-color: rgba(139, 69, 19, 0.1);
 }
 
+.figure-ref:active {
+  transform: translateY(1px);
+}
+
+/* Type-specific styling */
+.figure-ref--figure {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+.figure-ref--table {
+  font-style: italic;
+}
+
+.figure-ref--chart,
+.figure-ref--diagram {
+  font-weight: var(--font-weight-semibold);
+}
+
+.figure-ref--equation {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Text components */
+.figure-ref__text {
+  display: inline;
+}
+
+.figure-ref__page {
+  font-size: 0.85em;
+  color: var(--color-text-secondary);
+  margin-left: 0.3em;
+  font-weight: var(--font-weight-normal);
+  font-style: italic;
+}
+
+/* Hover state for page reference */
+.figure-ref:hover .figure-ref__page {
+  color: var(--color-text-primary);
+}
+
+/* Focus state enhancement */
+.figure-ref:focus-visible .figure-ref__page {
+  color: var(--color-text-primary);
+}
+
 /* Dark mode adjustments */
-[data-theme="dark"] .figure-ref:hover,
-[data-theme="dark"] .figure-ref:focus {
+[data-theme="dark"] .figure-ref {
+  color: var(--color-accent-light);
+}
+
+[data-theme="dark"] .figure-ref:hover {
+  color: var(--color-accent);
   background-color: rgba(205, 133, 63, 0.1);
 }
 
 [data-theme="dark"] .figure-ref:focus-visible {
+  color: var(--color-accent);
   background-color: rgba(205, 133, 63, 0.15);
 }
 
-/* Reduced motion support */
+[data-theme="dark"] .figure-ref__page {
+  color: var(--color-text-muted);
+}
+
+[data-theme="dark"] .figure-ref:hover .figure-ref__page,
+[data-theme="dark"] .figure-ref:focus-visible .figure-ref__page {
+  color: var(--color-text-secondary);
+}
+
+/* Accessibility enhancements */
 @media (prefers-reduced-motion: reduce) {
   .figure-ref {
     transition: none;
   }
+
+  .figure-ref:active {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .figure-ref {
+    color: var(--color-text-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .figure-ref:hover,
+  .figure-ref:focus-visible {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+  }
+
+  .figure-ref__page {
+    color: var(--color-text-primary);
+  }
+}
+
+/* Print styles */
+@media print {
+  .figure-ref {
+    color: #000000;
+    text-decoration: none;
+    background: none;
+    font-size: 0.9em;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .figure-ref:after {
+    content: "";
+  }
+
+  .figure-ref__page {
+    color: #000000;
+    font-style: normal;
+  }
+
+  /* Show full reference in print */
+  .figure-ref[data-ref-chapter][data-ref-number]:before {
+    content: "(см. ";
+  }
+
+  .figure-ref[data-ref-chapter][data-ref-number]:after {
+    content: ")";
+  }
+}
+
+/* Touch targets for mobile accessibility */
+@media (max-width: 768px) {
+  .figure-ref {
+    padding: 0.3em 0.4em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Smooth scrolling when clicking references */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Disable smooth scrolling for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Target highlighting when referenced figure is reached */
+:target {
+  scroll-margin-top: var(--space-xl);
+  animation: target-highlight 2s ease-in-out;
+}
+
+@keyframes target-highlight {
+  0% {
+    background-color: var(--color-accent-light);
+    background-opacity: 0.2;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :target {
+    animation: none;
+    background-color: var(--color-accent-light);
+    background-opacity: 0.1;
+  }
+}
+
+/* Ensure proper line height integration */
+.figure-ref {
+  vertical-align: baseline;
+  line-height: inherit;
+}
+
+/* Screen reader optimization */
+.figure-ref[aria-label]:before {
+  content: "";
+  speak: never;
+}
+
+/* Back-reference functionality (optional enhancement) */
+.figure-ref:visited {
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .figure-ref:visited {
+  color: var(--color-accent-light);
+  opacity: 0.9;
 }
 </style>

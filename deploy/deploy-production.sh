@@ -44,7 +44,7 @@ echo "Target: $PRODUCTION_USER@$PRODUCTION_HOST:$PRODUCTION_PATH"
 if [[ "$PRODUCTION_USER" == *"SET_"* ]] || [[ "$PRODUCTION_HOST" == *"SET_"* ]]; then
     echo "❌ Production credentials not configured!"
     echo "Set environment variables: PRODUCTION_USER, PRODUCTION_HOST"
-    echo "Or source from vault: source ~/.claude/vault/deploy-env"
+    echo "Or source from vault: source ~/vault/deploy-env"
     exit 1
 fi
 

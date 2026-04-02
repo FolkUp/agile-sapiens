@@ -15,5 +15,8 @@ Thumbs.db
 *.tmp
 *.temp
 
-# Private session context files
-.claude/SESSION_CONTEXT.md
+# Private session context and operational files
+.claude/
+
+# Node.js dependencies
+node_modules/

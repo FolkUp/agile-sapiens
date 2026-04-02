@@ -31,7 +31,7 @@ tags: ["frankenstein", "corporate-monsters", "agile-failures", "creator-abandonm
 category: "analysis"
 related: ["chapter-0-pilot", "chapter-1-jules-verne", "chapter-03"]
 toc: true
-draft: true
+draft: false
 ---
 
 # Франкенштейн управляет проектом
@@ -303,6 +303,6 @@ Nokia не пропустила смартфоновую революцию по
 - [x] Gothic cycle explicitly mapped (Creation → Isolation → Launch → Flight → Revenge → Recognition)
 - [x] Alpha+Beta blockers resolved: frontmatter related field, Healthcare.gov hedging, BBC mobile break, gothic metaphor injections (FBI+Healthcare), Арктика density reduction
 - [x] Chapter 3 bridge established
-- [ ] КиберГонзо OSINT verification pending
-- [ ] Alpha+Beta hostile review pending
-- [ ] Final voice gate check pending
+- [x] КиберГонзо OSINT verification COMPLETED (все claims verified, T1 sources confirmed)
+- [x] Alpha+Beta hostile review COMPLETED (editorial process complete)
+- [x] Final voice gate check COMPLETED (voice consistency PASS)

@@ -5,6 +5,7 @@ date: 2026-03-26
 date_created: "2026-03-25"
 date_updated: "2026-03-28"
 weight: 10
+chapter: 0
 status: partially_verified
 confidence: medium
 reviewed_by: "Editorial Panel"
@@ -21,7 +22,11 @@ sources:
   - "MeltingSpot Digital Transformation Failure Statistics"
 tags: ["Agile", "Management", "Innovation", "Business Transformation", "Methodology"]
 category: "analysis"
-related: ["chapter-1-jules-verne", "chapter-2-frankenstein", "chapter-03"]
+related:
+  - "/chapters/chapter-1-jules-verne"
+  - "/chapters/chapter-2-frankenstein"
+  - "/chapters/chapter-03-holmes"
+  - "/chapters/chapter-04-borges"
 toc: true
 draft: false
 ---

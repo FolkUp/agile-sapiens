@@ -34,8 +34,10 @@ sources:
   - "Conway, Melvin. 'How Do Committees Invent?' Datamation, April 1968"
   - "Accelerate: State of DevOps Report (DORA). Google Cloud, 2023"
 related:
+  - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"
   - "/chapters/chapter-2-frankenstein"
+  - "/chapters/chapter-04-borges"
 date_created: "2026-03-27"
 date_updated: "2026-03-28"
 sensitive: false

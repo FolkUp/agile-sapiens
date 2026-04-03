@@ -42,7 +42,7 @@ related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"
   - "/chapters/chapter-2-frankenstein"
-  - "/chapters/chapter-03"
+  - "/chapters/chapter-03-holmes"
 date_created: "2026-03-28"
 date_updated: "2026-03-28"
 sensitive: false

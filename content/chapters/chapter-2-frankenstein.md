@@ -29,7 +29,11 @@ sources:
   - "Vuori, T.O. & Huy, Q.N. 'Distributed Attention and Shared Emotions in the Innovation Process: How Nokia Lost the Smartphone Battle.' Administrative Science Quarterly, 61(1), 2016, pp. 9-51"
 tags: ["frankenstein", "corporate-monsters", "agile-failures", "creator-abandonment", "digital-transformation", "technical-debt", "gothic-horror"]
 category: "analysis"
-related: ["chapter-0-pilot", "chapter-1-jules-verne", "chapter-03"]
+related:
+  - "/chapters/chapter-0-pilot"
+  - "/chapters/chapter-1-jules-verne"
+  - "/chapters/chapter-03-holmes"
+  - "/chapters/chapter-04-borges"
 toc: true
 draft: false
 ---

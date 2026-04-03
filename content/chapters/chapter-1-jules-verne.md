@@ -28,7 +28,11 @@ sources:
   - "Lake, S. The Submarine in War and Peace (1918)"
 tags: ["literary-dna", "agile-origins", "jules-verne", "methodology-evolution", "serialization", "iterative-development"]
 category: "analysis"
-related: ["chapter-0-pilot", "chapter-2-frankenstein", "chapter-03"]
+related:
+  - "/chapters/chapter-0-pilot"
+  - "/chapters/chapter-2-frankenstein"
+  - "/chapters/chapter-03-holmes"
+  - "/chapters/chapter-04-borges"
 toc: true
 draft: false
 ---

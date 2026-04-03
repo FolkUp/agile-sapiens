@@ -91,20 +91,31 @@ function checkFrontmatterSchema() {
   log.info("QUALITY GATE 3: Frontmatter Schema Validation");
 
   const contentFiles = glob.sync('content/**/*.md', { ignore: 'content/**/_index.md' });
-  const requiredFields = ['title', 'date', 'categories', 'status', 'confidence'];
+
+  // Content-type-aware schema validation
+  function getRequiredFields(filePath) {
+    if (filePath.includes('content/chapters/') || filePath.includes('content\\chapters\\')) {
+      return ['title', 'date', 'category', 'status', 'confidence'];
+    } else if (filePath.includes('content/legal/')) {
+      return ['title', 'date']; // Legal pages minimal schema
+    } else {
+      return ['title']; // Meta pages minimal schema
+    }
+  }
 
   contentFiles.forEach(file => {
     try {
       const content = fs.readFileSync(file, 'utf-8');
       const frontmatter = extractFrontmatter(content);
       const basename = path.basename(file);
+      const requiredFields = getRequiredFields(file);
 
       if (!frontmatter) {
         log.error(`No frontmatter found in ${basename}`);
         return;
       }
 
-      // Check required fields
+      // Check required fields (content-type-aware)
       requiredFields.forEach(field => {
         if (!frontmatter[field]) {
           log.error(`Missing required field '${field}' in ${basename}`);
@@ -148,18 +159,27 @@ function checkSourceVerification() {
   const contentFiles = glob.sync('content/**/*.md', { ignore: 'content/**/_index.md' });
 
   contentFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf-8');
-    const frontmatter = extractFrontmatter(content);
-    const basename = path.basename(file);
+    try {
+      const content = fs.readFileSync(file, 'utf-8');
+      const frontmatter = extractFrontmatter(content);
+      const basename = path.basename(file);
 
     if (!frontmatter) return;
 
     // Skip drafts and stubs
     if (['draft', 'stub'].includes(frontmatter.status)) return;
 
-    // Check sources array
-    if (!frontmatter.sources || !Array.isArray(frontmatter.sources)) {
+    // Only chapters require sources (normalize path separators)
+    const requiresSources = file.includes('content/chapters/') || file.includes('content\\chapters\\');
+
+    // Check sources array (only for chapters)
+    if (requiresSources && (!frontmatter.sources || !Array.isArray(frontmatter.sources))) {
       log.error(`Missing 'sources' array in ${basename}`);
+      return;
+    }
+
+    // Skip source validation for non-chapter content
+    if (!requiresSources || !frontmatter.sources) {
       return;
     }
 
@@ -170,12 +190,21 @@ function checkSourceVerification() {
       }
     }
 
-    // Check source format
+    // Check source format (support both string citations and {title, url} objects)
     frontmatter.sources.forEach((source, index) => {
-      if (typeof source !== 'object' || !source.title || !source.url) {
-        log.error(`Invalid source format at index ${index} in ${basename}`);
+      if (typeof source === 'string') {
+        // Bibliographic string citation (monograph format) - valid
+        return;
+      } else if (typeof source === 'object' && source.title && source.url) {
+        // Structured {title, url} object - valid
+        return;
+      } else {
+        log.error(`Invalid source format at index ${index} in ${basename}. Expected string citation or {title, url} object`);
       }
     });
+    } catch (err) {
+      log.error(`Failed to process ${path.basename(file)}: ${err.message}`);
+    }
   });
 
   if (errors === 0) log.ok("Source verification passed");

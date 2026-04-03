@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-04-03T11:32:17.045Z",
+  "errors": 0,
+  "warnings": 1,
+  "status": "PASSED",
+  "gates": {
+    "level1": "completed",
+    "voiceGate": "completed",
+    "frontmatter": "completed",
+    "sources": "completed",
+    "brand": "completed"
+  }
+}

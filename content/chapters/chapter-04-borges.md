@@ -1,6 +1,7 @@
 ---
 title: "Глава 4: Борхес считает story points"
 description: "Как измерения, призванные сделать команды гибче, превращаются в лотерею — от Spotify Model до OKR-театра, от velocity gaming до ретроспективного ритуала"
+date: 2026-03-28
 weight: 50
 chapter: 4
 act: "I: Origins"

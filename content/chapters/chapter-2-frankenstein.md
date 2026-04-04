@@ -7,8 +7,15 @@ date_updated: "2026-03-28"
 weight: 30
 chapter: 2
 act: "I: Origins"
+category: analysis
 status: verified
 confidence: high
+tags:
+  - mary-shelley
+  - frankenstein
+  - project-failure
+  - corporate-prometheus
+  - technology-hubris
 reviewed_by: "Борхес, КиберГонзо (OSINT verification)"
 review_date: "2026-03-28"
 sources:
@@ -27,13 +34,11 @@ sources:
   - "Brooks, Frederick. The Mythical Man-Month (1975). Addison-Wesley"
   - "Nokia Corporation. Annual Reports 2007-2013. Nokia.com/investors"
   - "Vuori, T.O. & Huy, Q.N. 'Distributed Attention and Shared Emotions in the Innovation Process: How Nokia Lost the Smartphone Battle.' Administrative Science Quarterly, 61(1), 2016, pp. 9-51"
-tags: ["frankenstein", "corporate-monsters", "agile-failures", "creator-abandonment", "digital-transformation", "technical-debt", "gothic-horror"]
-category: "analysis"
 related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"
-  - "/chapters/chapter-03-holmes"
-  - "/chapters/chapter-04-borges"
+  - "/chapters/chapter-3-holmes"
+  - "/chapters/chapter-4-borges"
 toc: true
 draft: false
 ---

@@ -6,8 +6,15 @@ date_created: "2026-03-25"
 date_updated: "2026-03-28"
 weight: 10
 chapter: 0
+act: "I: Origins"
+category: analysis
 status: partially_verified
 confidence: medium
+tags:
+  - agile-foundation
+  - phileas-fogg
+  - project-methodology
+  - corporate-transformation
 reviewed_by: "Editorial Panel"
 review_date: "2026-03-25"
 sources:
@@ -20,13 +27,11 @@ sources:
   - "Allied Market Research Enterprise Agile Transformation Services Market"
   - "Integrate.io Global Leadership Development Market Analysis"
   - "MeltingSpot Digital Transformation Failure Statistics"
-tags: ["Agile", "Management", "Innovation", "Business Transformation", "Methodology"]
-category: "analysis"
 related:
   - "/chapters/chapter-1-jules-verne"
   - "/chapters/chapter-2-frankenstein"
-  - "/chapters/chapter-03-holmes"
-  - "/chapters/chapter-04-borges"
+  - "/chapters/chapter-3-holmes"
+  - "/chapters/chapter-4-borges"
 toc: true
 draft: false
 ---

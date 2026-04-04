@@ -2,12 +2,14 @@
 title: "Глава 4: Борхес считает story points"
 description: "Как измерения, призванные сделать команды гибче, превращаются в лотерею — от Spotify Model до OKR-театра, от velocity gaming до ретроспективного ритуала"
 date: 2026-03-28
+date_created: "2026-03-28"
+date_updated: "2026-03-28"
 weight: 50
 chapter: 4
 act: "I: Origins"
 category: "analysis"
-status: "verified"
-confidence: "high"
+status: verified
+confidence: high
 reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
 review_date: "2026-03-28"
 tags:
@@ -43,9 +45,7 @@ related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"
   - "/chapters/chapter-2-frankenstein"
-  - "/chapters/chapter-03-holmes"
-date_created: "2026-03-28"
-date_updated: "2026-03-28"
+  - "/chapters/chapter-3-holmes"
 sensitive: false
 toc: true
 draft: false

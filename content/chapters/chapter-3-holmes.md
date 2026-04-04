@@ -2,12 +2,14 @@
 title: "Глава 3: Шерлок Холмс ставит диагноз"
 description: "Дедуктивный метод распознавания корпоративных патологий: семь признаков того, что ваш проект умирает — от Knight Capital до Target Canada"
 date: 2026-03-28
+date_created: "2026-03-28"
+date_updated: "2026-03-28"
 weight: 40
 chapter: 3
 act: "I: Origins"
 category: "analysis"
-status: "verified"
-confidence: "high"
+status: verified
+confidence: high
 reviewed_by: "Editorial Panel"
 review_date: "2026-03-28"
 tags:
@@ -38,9 +40,7 @@ related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"
   - "/chapters/chapter-2-frankenstein"
-  - "/chapters/chapter-04-borges"
-date_created: "2026-03-27"
-date_updated: "2026-03-28"
+  - "/chapters/chapter-4-borges"
 sensitive: false
 toc: true
 draft: false

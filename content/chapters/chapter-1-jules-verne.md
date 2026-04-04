@@ -7,6 +7,7 @@ date_updated: "2026-03-28"
 weight: 20
 chapter: 1
 act: "I: Origins"
+category: "analysis"
 status: partially_verified
 confidence: high
 reviewed_by: "КиберГонзо (OSINT), Alpha+Beta (hostile verification)"
@@ -27,12 +28,11 @@ sources:
   - "Ries, E. The Lean Startup (2011). Crown Business"
   - "Lake, S. The Submarine in War and Peace (1918)"
 tags: ["literary-dna", "agile-origins", "jules-verne", "methodology-evolution", "serialization", "iterative-development"]
-category: "analysis"
 related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-2-frankenstein"
-  - "/chapters/chapter-03-holmes"
-  - "/chapters/chapter-04-borges"
+  - "/chapters/chapter-3-holmes"
+  - "/chapters/chapter-4-borges"
 toc: true
 draft: false
 ---

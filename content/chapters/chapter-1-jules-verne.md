@@ -29,7 +29,13 @@ sources:
   - "Dumas, O. Correspondance inédite de Jules Verne et de Pierre-Jules Hetzel (1999-2002). Slatkine"
   - "Ries, E. The Lean Startup (2011). Crown Business"
   - "Lake, S. The Submarine in War and Peace (1918)"
-tags: ["literary-dna", "agile-origins", "jules-verne", "methodology-evolution", "serialization", "iterative-development"]
+tags:
+  - literary-dna
+  - agile-origins
+  - jules-verne
+  - methodology-evolution
+  - serialization
+  - iterative-development
 related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-2-frankenstein"

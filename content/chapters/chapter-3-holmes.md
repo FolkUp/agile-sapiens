@@ -7,20 +7,22 @@ date_updated: "2026-03-28"
 weight: 40
 chapter: 3
 act: "I: Origins"
-category: "analysis"
+category: analysis
 status: verified
 confidence: high
+authors: ["Андрей"]
+reading_time: "20 min"
+tags:
+  - sherlock-holmes
+  - diagnostic-patterns
+  - organizational-pathology
+  - project-failure
+  - recognition-patterns
+  - knight-capital
+  - target-canada
+  - agile-degeneration
 reviewed_by: "Editorial Panel"
 review_date: "2026-03-28"
-tags:
-  - "sherlock-holmes"
-  - "diagnostic-patterns"
-  - "organizational-pathology"
-  - "project-failure"
-  - "recognition-patterns"
-  - "knight-capital"
-  - "target-canada"
-  - "agile-degeneration"
 sources:
   - "Doyle, Arthur Conan. A Study in Scarlet (1887). Ward, Lock & Co"
   - "Doyle, Arthur Conan. The Sign of the Four (1890). Spencer Blackett"

@@ -10,6 +10,8 @@ act: "I: Origins"
 category: analysis
 status: partially_verified
 confidence: medium
+authors: ["Андрей"]
+reading_time: "15 min"
 tags:
   - agile-foundation
   - phileas-fogg
@@ -32,6 +34,7 @@ related:
   - "/chapters/chapter-2-frankenstein"
   - "/chapters/chapter-3-holmes"
   - "/chapters/chapter-4-borges"
+sensitive: false
 toc: true
 draft: false
 ---

@@ -10,6 +10,8 @@ act: "I: Origins"
 category: analysis
 status: verified
 confidence: high
+authors: ["Андрей"]
+reading_time: "25 min"
 tags:
   - mary-shelley
   - frankenstein
@@ -39,6 +41,7 @@ related:
   - "/chapters/chapter-1-jules-verne"
   - "/chapters/chapter-3-holmes"
   - "/chapters/chapter-4-borges"
+sensitive: false
 toc: true
 draft: false
 ---

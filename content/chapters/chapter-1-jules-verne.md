@@ -7,9 +7,11 @@ date_updated: "2026-03-28"
 weight: 20
 chapter: 1
 act: "I: Origins"
-category: "analysis"
+category: analysis
 status: partially_verified
 confidence: high
+authors: ["Андрей"]
+reading_time: "22 min"
 reviewed_by: "КиберГонзо (OSINT), Alpha+Beta (hostile verification)"
 review_date: "2026-03-26"
 sources:
@@ -33,6 +35,7 @@ related:
   - "/chapters/chapter-2-frankenstein"
   - "/chapters/chapter-3-holmes"
   - "/chapters/chapter-4-borges"
+sensitive: false
 toc: true
 draft: false
 ---

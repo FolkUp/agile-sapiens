@@ -47,6 +47,8 @@ related:
   - "/chapters/chapter-2-frankenstein"
   - "/chapters/chapter-3-holmes"
   - "/chapters/chapter-4-borges"
+  - "/chapters/chapter-6-jekyll-hyde"
+  - "/chapters/chapter-7-don-quixote"
 toc: true
 draft: false
 ---

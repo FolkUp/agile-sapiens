@@ -26,6 +26,9 @@ sources:
   - "Stevenson, Robert Louis. Strange Case of Dr Jekyll and Mr Hyde (1886). Longmans, Green & Co, London"
   - "McKinsey Global Institute. The Age of AI: Artificial Intelligence and the Future of Work (2023). McKinsey & Company"
   - "LinkedIn Global Talent Intelligence. Workplace Learning Report (2023). Skills visibility and automation impact"
+  - "Amershi, Saleema et al. Guidelines for Human-AI Interaction. Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems. ACM, 2019. DOI: 10.1145/3290605.3300233"
+  - "Burton, Jonathan et al. A Systematic Review of Algorithm Aversion in Augmented Decision Making. Journal of Behavioral Decision Making, vol. 33, no. 2, 2020, pp. 220-239. DOI: 10.1002/bdm.2155"
+  - "Orlikowski, Wanda J. The Duality of Technology: Rethinking the Concept of Technology in Organizations. Organization Science, vol. 3, no. 3, 1992, pp. 398-427"
 related:
   - "/chapters/chapter-2-frankenstein"
   - "/chapters/chapter-4-borges"

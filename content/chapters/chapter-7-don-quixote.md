@@ -24,8 +24,11 @@ tags:
   - "skills-revolution"
 sources:
   - "Cervantes, Miguel de. Don Quixote de La Mancha (1605/1615). Juan de la Cuesta, Madrid"
-  - "Harvard Business Review. The Skills Revolution: Digitization and Why Skills Are the New Currency (2023)"
-  - "Goleman, Daniel. Emotional Intelligence 2.0: Why It Matters More Than IQ in the Age of AI (2023). Bantam Books"
+  - "World Economic Forum. The Future of Jobs Report 2023: Shifting Skills and Workforce Transformation. WEF, Geneva"
+  - "Goleman, Daniel. Emotional Intelligence: Why It Matters More Than IQ (1995). Bantam Books"
+  - "Bradberry, Travis & Greaves, Jean. Emotional Intelligence 2.0 (2009). TalentSmart"
+  - "World Economic Forum. The Future of Jobs Report 2025: Work and Workforce in the Age of AI. WEF, Geneva"
+  - "Gerhardt, Katharina et al. Emotional Intelligence and Leader Outcomes: A Comprehensive Review and Roadmap for Future Inquiry. Journal of Leadership Studies, 2026. DOI: 10.1177/15344843251342689"
 related:
   - "/chapters/chapter-4-borges"
   - "/chapters/chapter-5-nemo"

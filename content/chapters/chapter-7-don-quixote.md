@@ -8,8 +8,8 @@ weight: 80
 chapter: 7
 act: "II: Archetypes"
 category: "analysis"
-status: "draft"
-confidence: "medium"
+status: "partially_verified"
+confidence: "high"
 authors: ["Андрей"]
 reading_time: "22 min"
 reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"

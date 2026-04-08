@@ -4,7 +4,7 @@ description: "Горизонты AI transformation: как Wells научит н
 date: 2026-04-08
 date_created: "2026-04-08"
 date_updated: "2026-04-08"
-weight: 80
+weight: 85
 chapter: 8
 act: "III: Future"
 category: "scenarios"

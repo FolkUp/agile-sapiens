@@ -62,9 +62,9 @@ related:
 
 # Глава 9: Архитектура выбора: Vinge учит принимать решения в точке сингулярности
 
-> «Проблема не в том, что мы не знаем, что произойдёт. Проблема в том, что мы должны принимать решения до того, как узнаем результат.»
+> "The problem is not that the Singularity represents simply the passing of humankind from center stage, but that it contradicts some of our most deeply held notions of being."
 >
-> — Vernor Vinge, "The Coming Technological Singularity" (1993), в переводе автора
+> — Vernor Vinge, "The Coming Technological Singularity" (1993) (перевод автора: «Проблема не в том, что Сингулярность означает просто уход человечества с центральной сцены, а в том, что она противоречит некоторым из наших самых глубоких представлений о бытии.»)
 
 ## Пролог: The Decision Paradox
 
@@ -438,7 +438,7 @@ Wells Time Machine was exploration tool. Vinge Singularity is decision framework
 ---
 
 **Status Notes:**
-- **Word count:** ~4,100 (target: 3,000-4,000) ✅ ACHIEVED
+- **Word count:** 3,021 (target: 3,000-4,000) ✅ ACHIEVED
 - **Content uniqueness:** ✅ ACHIEVED — decision framework builds on Chapter 8, не repeat
 - **Voice calibration:** ✅ ENHANCED — "Harari meets Dilbert" workplace cynicism throughout
 - **Vinge integration:** ✅ ACHIEVED — Four Paths framework woven throughout chapter

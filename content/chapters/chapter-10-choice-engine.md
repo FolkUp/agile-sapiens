@@ -42,14 +42,13 @@ sources:
     type: "academic"
     confidence: "high"
     notes: "Decision fatigue framework для information overload scenarios"
-  - title: "Future of Work in a Post-AI World"
+  - title: "Want AI-Driven Productivity? Redesign Work"
     author: "MIT Sloan Management Review"
-    year: 2025
-    month: "September"
+    year: 2024
     type: "research"
-    confidence: "high"
-    notes: "Post-implementation case studies — 24 months после AI strategy deployment"
-    url: "https://sloanreview.mit.edu/article/future-of-work-post-ai-implementation/"
+    confidence: "verified"
+    notes: "AI integration methodology — verified source"
+    url: "https://sloanreview.mit.edu/article/want-ai-driven-productivity-redesign-work/"
 related:
   - chapter-8-time-machine
   - chapter-9-three-scenarios
@@ -347,7 +346,7 @@ Journey continues. Choose wisely. Navigate carefully. Adapt quickly.
 ---
 
 **Status Notes:**
-- **Word count:** ~3,200 (target: 3,000-4,000) ✅ ACHIEVED
+- **Word count:** 3,414 (target: 3,000-4,000) ✅ ACHIEVED
 - **Gibson DNA integration:** ✅ COMPLETED — cyberspace metaphors, Case/Molly archetypes, jacking in texture
 - **Experiential synthesis:** ✅ COMPLETED — immersive simulation через character experiences
 - **Wells callbacks:** ✅ COMPLETED — three scenarios через office colleagues

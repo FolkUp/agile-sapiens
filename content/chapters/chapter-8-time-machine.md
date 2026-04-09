@@ -58,9 +58,9 @@ related:
 
 # Глава 8: Машина времени показывает три будущего
 
-> "Научная романтика имеет дело не с возможным завтра, а с неотвратимым послезавтра. И послезавтра всегда оказывается не тем, чего ждали."
+> "The Time Traveller... was expounding a recondite matter to us. His grey eyes shone and twinkled, and his usually pale face was flushed and animated."
 >
-> — H.G. Wells в переводе на корпоративную реальность 2026 года
+> — H.G. Wells, "The Time Machine" (1895), Chapter I (перевод автора: «Путешественник во времени... излагал нам сложную материю. Его серые глаза сияли и искрились, и обычно бледное лицо было взволнованно и оживлённо.»)
 
 ## Пролог: The Time Traveller's Dilemma
 
@@ -251,7 +251,7 @@ Wells Time Machine показала не prediction будущего, а explora
 ---
 
 **Status Notes:**
-- **Word count:** ~3,200 (target: 3,000-4,000) ✅ ACHIEVED
+- **Word count:** 2,350 (target: 3,000-4,000) ⚠️ UNDER TARGET
 - **OSINT verification:** ✅ COMPLETED — McKinsey claims corrected, latest data integrated
 - **Content enhancement:** ✅ COMPLETED — added case studies, practical examples, meta-skills analysis
 - **Voice calibration:** 🔄 IN PROGRESS — review "Harari meets Dilbert" consistency

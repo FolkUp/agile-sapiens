@@ -261,10 +261,10 @@ Before major AI implementation decisions, ask:
 **Vinge Path Choice:** Hybrid approach — AI augments radiologists while developing new hybrid diagnostic roles.
 
 **Implementation:**
-- AI prescreens imaging studies, flags potential anomalies
-- Radiologists focus on complex cases requiring clinical judgment
-- New role: "AI-assisted diagnosticians" — specialists trained specifically в human-AI collaboration
-- Result: 30% faster diagnosis times, 15% higher accuracy, maintained human oversight
+- AI prescreens routine imaging studies, flags potential anomalies
+- Radiologists focus on complex cases requiring expert clinical judgment
+- Enhanced workflow: Human-AI collaboration maintains diagnostic authority
+- Result: Improved efficiency while preserving radiologist expertise and patient safety
 
 **Vinge Test Application:**
 - ✅ **Reversibility:** Can operate without AI если necessary

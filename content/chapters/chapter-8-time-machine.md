@@ -148,13 +148,13 @@ McKinsey July 2023 проецировал: 29.5% рабочих часов по�
 
 **Practical applications с real-world examples:**
 
-**Writing Symbiosis:** Bloomberg reporters используют AI для generating earnings report drafts из financial data. AI продуцирует factual framework за 3 минуты, human journalists добавляют market context, industry insights, и читательский perspective. Result: 40% faster publication, higher analytical depth. Key: AI handles data processing, humans handle interpretation.
+**Writing Symbiosis:** Bloomberg leverages AI для automated earnings report generation из structured financial data. AI processes quarterly data into standardized framework, while human journalists provide market context, industry analysis, и editorial perspective. Key insight: AI excels at data transformation, humans provide interpretive value и strategic insights.
 
 **Analysis Arbitrage:** JPMorgan's LOXM algorithm обрабатывает massive transaction datasets для pattern detection, но human traders делают final execution decisions на основе market sentiment и geopolitical context. AI identifies statistical opportunities, humans evaluate risk-reward в context of broader strategy.
 
-**Customer Interaction Hybrid:** American Express testing "Emotion AI" — chatbot handles routine inquiries (90% resolved), но complex disputes automatically escalate к human agents со complete conversation context. Human agents focus на high-value problem-solving instead of information gathering. Customer satisfaction increased 23%, operational costs decreased 31%.
+**Customer Interaction Hybrid:** Financial services deploy AI chatbots для routine customer inquiries while complex issues escalate to human specialists with full context. This creates capability gradient — AI handles pattern-matching tasks while humans focus on complex problem-solving и relationship management. Key principle: seamless handoffs preserve customer experience quality.
 
-**Legal Research Transformation:** BigLaw firms используют AI для case law research и document review, но human attorneys craft legal arguments и client strategy. Latham & Watkins reports: junior associate hours decreased 40% на routine research, но increased 60% на strategic analysis. Net effect: higher-value work, better case outcomes.
+**Legal Research Transformation:** Major law firms integrate AI для case law research и document review while human attorneys focus on legal strategy и client counseling. This creates value arbitrage — AI processes information volume, humans provide legal reasoning и strategic judgment. Net effect: enhanced analytical capability across the practice pyramid.
 
 ### Framework 2: The Meta-Skill Investment
 

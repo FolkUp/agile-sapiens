@@ -30,13 +30,16 @@ genre: ["Business Strategy", "Technology Analysis", "Organizational Psychology"]
 
 A scientific popular monograph exploring the future of work in the age of artificial intelligence.
 
-**Voice:** "Harari meets Dilbert" — serious analysis with sharp wit
-**Target:** 500K+ views, industry authority recognition
-**Structure:** 10 chapters, 3 acts
-
-## About This Monograph
-
 AGILE SAPIENS examines how artificial intelligence is reshaping the nature of work, organizations, and human potential. Through rigorous research and engaging storytelling, we explore the challenges and opportunities that lie ahead.
+
+**10 chapters • 3 acts • Serious analysis with sharp wit**
+
+## What You'll Discover
+
+- How classic literature predicted today's workplace transformations
+- Practical frameworks for navigating AI-driven change
+- The future of human-AI collaboration in organizations
+- Strategic insights from history's greatest thinkers
 
 ## Support This Work
 

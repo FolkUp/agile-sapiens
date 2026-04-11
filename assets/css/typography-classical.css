@@ -24,6 +24,16 @@
   --text-3xl: 1.875rem;    /* 30px - chapter titles */
   --text-4xl: 2.25rem;     /* 36px - book title */
 
+  /* Level 1: Perfect Fourth Typography Scale Enhancement */
+  --text-ratio: 1.333;
+  --text-base-fluid: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-sm-fluid: calc(var(--text-base-fluid) / var(--text-ratio));
+  --text-lg-fluid: calc(var(--text-base-fluid) * var(--text-ratio));
+  --text-xl-fluid: calc(var(--text-lg-fluid) * var(--text-ratio));
+  --text-2xl-fluid: calc(var(--text-xl-fluid) * var(--text-ratio));
+  --text-3xl-fluid: calc(var(--text-2xl-fluid) * var(--text-ratio));
+  --text-4xl-fluid: calc(var(--text-3xl-fluid) * var(--text-ratio));
+
   /* Line Heights - Classical Typography */
   --leading-tight: 1.25;
   --leading-snug: 1.375;
@@ -71,71 +81,75 @@
   --text-h5: 1.25rem;        /* Minor headings */
   --text-h6: 1.125rem;       /* Minimal distinction */
 
-  /* Color System - Classical Academic */
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #4a4a4a;
-  --color-text-muted: #6b7280;
-  --color-accent: #8b4513;           /* Saddle Brown - classical book color */
-  --color-accent-light: #cd853f;     /* Peru - lighter accent */
-  --color-accent-dark: #5d2f0a;      /* Darker brown */
+  /* Color System - Enhanced Alice Palette (FolkUp Palette D) */
+  --color-text-primary: #2A2725;     /* Мягкий уголь - теплее для читаемости */
+  --color-text-secondary: #4A453F;   /* Производный от мягкого угля */
+  --color-text-muted: #6B6560;       /* Тёплый серый - Palette D */
+  --color-accent: #7D4450;           /* Мягкий бордо - основательность и знания */
+  --color-accent-light: #E8AD4A;     /* Тёплый янтарь - свет фонаря */
+  --color-accent-dark: #5E333C;      /* Производный бордо темнее */
 
-  /* Background Colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f9fafb;
-  --color-bg-muted: #f3f4f6;
+  /* Background Colors - Enhanced Alice */
+  --color-bg-primary: #FEFCF6;       /* Слоновая кость - теплее белого */
+  --color-bg-secondary: #F5F2EC;     /* Производный surface светлее */
+  --color-bg-muted: #F0EDE8;         /* Тёплый серый surface */
 
-  /* Border and Dividers */
-  --color-border: #e5e7eb;
-  --color-border-light: #f3f4f6;
-  --color-border-dark: #d1d5db;
+  /* Border and Dividers - Enhanced Alice */
+  --color-border: #E0DCD4;           /* Тёплый border производный */
+  --color-border-light: #F0EDE8;     /* Surface level */
+  --color-border-dark: #C9C3B9;      /* Темнее border теплее */
 
   /* Focus States - WCAG Compliant */
   --color-focus: #2563eb;
   --color-focus-ring: rgba(37, 99, 235, 0.2);
 }
 
-/* Dark Mode Variables */
+/* Dark Mode Variables - Enhanced Alice Palette */
 [data-theme="dark"] {
-  /* Text Colors - Dark Mode */
-  --color-text-primary: #f9fafb;
-  --color-text-secondary: #d1d5db;
-  --color-text-muted: #9ca3af;
-  --color-accent: #cd853f;           /* Peru - readable on dark */
-  --color-accent-light: #deb887;     /* Burlywood */
-  --color-accent-dark: #8b4513;      /* Saddle brown */
+  /* Text Colors - Dark Mode Enhanced Alice */
+  --color-text-primary: rgba(240, 236, 232, 1);     /* Titles level light 14.8:1 */
+  --color-text-secondary: rgba(225, 220, 215, 1);   /* Text level light 12.5:1 */
+  --color-text-muted: #A3B898;                      /* Sage темный 5.5:1 */
+  --color-accent: rgba(200, 140, 130, 1);           /* Осветленный бордо 7:1 */
+  --color-accent-light: rgba(160, 190, 145, 1);     /* Осветленный шалфей 7.5:1 */
+  --color-accent-dark: rgba(220, 160, 150, 1);      /* Lighter бордо для dark */
 
-  /* Background Colors - Dark Mode */
-  --color-bg-primary: #111827;
-  --color-bg-secondary: #1f2937;
-  --color-bg-muted: #374151;
+  /* Background Colors - Dark Mode Enhanced Alice */
+  --color-bg-primary: #1A1816;       /* Тёплый charcoal */
+  --color-bg-secondary: #242220;     /* Surface углубление */
+  --color-bg-muted: #2F2C29;         /* Производный между surface и border */
 
-  /* Border Colors - Dark Mode */
-  --color-border: #374151;
-  --color-border-light: #4b5563;
-  --color-border-dark: #6b7280;
+  /* Border Colors - Dark Mode Enhanced Alice */
+  --color-border: #3A3634;           /* Тёплый графит */
+  --color-border-light: #4A4642;     /* Производный lighter */
+  --color-border-dark: #5A5652;      /* Производный darker */
 }
 
-/* Base Typography Styles */
+/* Base Typography Styles - Level 1 Enhanced */
 body {
   font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: var(--leading-body);
+  font-size: var(--text-base-fluid);         /* Enhanced: fluid typography */
+  line-height: 1.7;                          /* Enhanced: better reading experience */
   color: var(--color-text-primary);
   font-weight: var(--font-weight-normal);
-  font-feature-settings: "liga" 1, "kern" 1, "onum" 1;
+  letter-spacing: -0.003em;                  /* Enhanced: subtle tightening */
+  word-spacing: 0.01em;                      /* Enhanced: improved readability */
+  font-feature-settings: "liga" 1, "kern" 1, "onum" 1, "dlig" 1, "calt" 1; /* Enhanced: full OpenType */
+  hanging-punctuation: first last;           /* Enhanced: sophisticated typography */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Heading Hierarchy - Classical Book Design */
+/* Heading Hierarchy - Level 1 Enhanced */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--color-text-primary);
   font-weight: var(--font-weight-semibold);
   line-height: var(--leading-tight);
   margin-bottom: var(--space-lg);
-  font-feature-settings: "liga" 1, "kern" 1, "lnum" 1;
+  font-feature-settings: "liga" 1, "kern" 1, "lnum" 1, "ss01" 1; /* Enhanced: stylistic sets */
+  letter-spacing: -0.02em;                    /* Enhanced: improved optical spacing */
 }
 
 h1 {
@@ -272,7 +286,7 @@ blockquote::before {
 }
 
 .prose p + p {
-  text-indent: 1.5rem;
+  text-indent: 1.2em;                         /* Enhanced: proportional classical indentation */
   margin-top: -0.5rem;
 }
 
@@ -590,8 +604,8 @@ a:focus-visible {
   }
 
   body {
-    font-size: var(--text-base);
-    line-height: var(--leading-relaxed);
+    font-size: var(--text-base-fluid);        /* Enhanced: fluid mobile typography */
+    line-height: 1.6;                        /* Enhanced: optimal mobile reading */
   }
 
   blockquote {
@@ -611,10 +625,10 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-/* Selection Styling */
+/* Selection Styling - Enhanced Alice */
 ::selection {
-  background-color: var(--color-accent-light);
-  color: var(--color-bg-primary);
+  background-color: rgba(232, 173, 74, 0.4);  /* Enhanced: янтарь с alpha для контраста */
+  color: var(--color-text-primary);
 }
 
 /* Ensure minimum touch targets for accessibility */
@@ -633,13 +647,15 @@ a, button, input, select, textarea {
   opacity: 0.7;
 }
 
-/* Drop Cap - Classical Book Opening */
+/* Drop Cap - Level 1 Enhanced (свет фонаря) */
 .drop-cap::first-letter {
   float: left;
   font-family: var(--font-heading);
   font-size: 4em;
   line-height: 0.8;
   margin: 0.1em 0.1em 0 0;
-  color: var(--color-accent);
+  color: var(--color-accent-light);             /* Enhanced: янтарь (свет фонаря) */
   font-weight: var(--font-weight-bold);
+  initial-letter: 3;                           /* Enhanced: Level 1 feature */
+  font-feature-settings: "ss01" 1;             /* Enhanced: stylistic alternates */
 }

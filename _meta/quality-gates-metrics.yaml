@@ -1,0 +1,103 @@
+# AGILE SAPIENS Quality Gates - ADR-03-05 Metrics Definition
+# Generated: 2026-04-11 Phase 0 Kickoff
+# Baseline: 6.8s build, 118 pages, Hugo v0.155.2
+
+performance:
+  # Lighthouse Performance Score (0-100)
+  lighthouse_min: 90          # Realistic target for typography-heavy content
+  lighthouse_target: 95       # Banking-level goal
+
+  # Core Web Vitals
+  lcp_threshold: 2.5          # Largest Contentful Paint (seconds)
+  cls_threshold: 0.1          # Cumulative Layout Shift
+  fid_threshold: 100          # First Input Delay (ms)
+
+  # Build Performance
+  build_time_baseline: 6.8    # Current measured baseline (seconds)
+  build_time_max: 10.0        # 50% tolerance for wow-enhancements
+  build_time_target: 8.0      # 20% increase acceptable
+
+  # Page Size Limits
+  html_size_max: "500KB"      # Per page HTML+CSS
+  total_size_max: "1MB"       # Including assets per page
+
+accessibility:
+  # WCAG 2.1 AA Compliance
+  wcag_level: "AA"            # Minimum compliance level
+  axe_violations: 0           # Zero tolerance for violations
+
+  # Contrast Ratios
+  contrast_normal: 4.5        # Normal text (AA standard)
+  contrast_large: 3.0         # Large text (18pt+, AA standard)
+  contrast_target: 7.0        # Banking-level (AAA aspirational)
+
+  # Manual Testing Requirements
+  keyboard_nav: "required"     # Full keyboard accessibility
+  screen_reader: "nvda_test"   # NVDA verification required
+
+typography:
+  # Reading Experience
+  mobile_breakpoint: "768px"   # Mobile-first responsive
+  reading_measure_min: "45ch"  # Mobile minimum
+  reading_measure_max: "75ch"  # Desktop maximum
+  reading_measure_target: "60ch" # Optimal reading width
+
+  # Typography Scale
+  line_height_min: 1.4         # Minimum line spacing
+  line_height_target: 1.6      # Optimal for long-form
+  scale_ratio: 1.25            # Modular scale (major third)
+
+  # Font Performance
+  font_loading_max: "3s"       # FOIT timeout
+  font_fallback: "required"    # System font fallbacks mandatory
+
+mobile:
+  # Mobile-Specific Requirements
+  touch_target_min: "44px"     # WCAG AA touch target size
+  viewport_meta: "required"    # Responsive viewport required
+  mobile_score_min: 85         # Lighthouse mobile score
+
+  # Mobile Core Web Vitals (more strict)
+  mobile_lcp: 3.0             # Mobile LCP threshold
+  mobile_cls: 0.1             # Same as desktop
+  mobile_fid: 150             # Mobile FID threshold
+
+tooling:
+  # Automated Testing Tools
+  lighthouse_cli: "npm i -g lighthouse"
+  axe_core: "npm i -g @axe-core/cli"
+  playwright: "npm i -g playwright"
+
+  # Test Execution
+  test_url_local: "http://localhost:1315"
+  test_url_staging: "TBD"      # Staging URL when available
+  test_frequency: "per_level"  # Test after each enhancement level
+
+  # CI Integration
+  ci_platform: "local_scripts" # PowerShell scripts for Windows
+  ci_failure_action: "block"   # Block deployment on failure
+  ci_reports_path: "_meta/quality-reports/"
+
+enhancement_levels:
+  # Level-Specific Thresholds
+  level_1_min:
+    performance: 90
+    accessibility: 0           # Zero violations
+    build_time: 8.0           # 20% increase from baseline
+
+  level_2_min:
+    performance: 92
+    accessibility: 0
+    build_time: 9.0           # 35% increase acceptable
+
+  level_3_min:
+    performance: 88           # Wow-factor may trade performance
+    accessibility: 0          # Never compromise accessibility
+    build_time: 10.0          # Maximum acceptable
+
+verification:
+  # Per-Level Testing Protocol
+  automated_tests: ["lighthouse", "axe-core"]
+  manual_tests: ["keyboard_nav", "screen_reader", "mobile_device"]
+  sign_off_required: ["Johnny", "Фонарщик"] # Expert approval per level
+  rollback_criteria: "any_threshold_fail"   # Immediate rollback trigger

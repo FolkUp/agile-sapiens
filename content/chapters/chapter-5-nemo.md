@@ -19,7 +19,7 @@ tags:
   - skunk-works
   - team-building
   - engineering-leadership
-reviewed_by: "Editorial Panel"
+reviewed_by: "Наборщик, КиберГонзо (OSINT verification)"
 review_date: "2026-04-04"
 sources:
   - "Verne, Jules. The Mysterious Island (1875). Hetzel, Paris"

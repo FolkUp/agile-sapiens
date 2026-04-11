@@ -129,7 +129,7 @@ page = ["HTML"]
 taxonomy = ["HTML", "RSS"]
 term = ["HTML"]
 
-# Sitemap configuration
+# Enhanced sitemap configuration
 [sitemap]
 changefreq = "weekly"
 filename = "sitemap.xml"
@@ -141,3 +141,30 @@ enableRobots = true
 enableSitemap = true
 canonicalURLs = true
 enableSchemaOrg = true
+
+# Publisher SEO metadata
+[params.publisher]
+name = "FolkUp Ecosystem"
+url = "https://folkup.app"
+logo = "https://sapiens.folkup.life/assets/folkup-logo.svg"
+same_as = [
+  "https://ko-fi.com/folkup",
+  "https://github.com/folkup-ecosystem"
+]
+
+# Enhanced OpenGraph and Twitter Cards
+[params.social]
+twitter_creator = "@folkupeco"
+twitter_site = "@folkupeco"
+og_image = "/assets/og-image-default.png"
+og_image_width = 1200
+og_image_height = 630
+
+# Schema.org Book metadata for monograph
+[params.book]
+isbn = ""  # To be assigned
+publisher = "FolkUp Ecosystem"
+genre = ["Business", "Technology", "Future of Work", "Artificial Intelligence"]
+target_audience = ["Business Leaders", "Technology Professionals", "Researchers"]
+inLanguage = ["en", "ru"]
+pages_estimate = 300

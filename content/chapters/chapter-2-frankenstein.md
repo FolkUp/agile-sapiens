@@ -50,7 +50,6 @@ draft: false
 
 > **Chapter Summary:** Тёмная сторона создания. Как паттерн «блестящий замысел → бегство от последствий» проходит красной нитью от романа Мэри Шелли до крупнейших провалов цифровой трансформации. Почему самые опасные системы создаются с самыми лучшими намерениями — и что происходит, когда создатель уходит.
 
-> **Verification Note:** This chapter uses exclusively T1 (government audit reports, congressional testimony, national audit office publications) and T2 (peer-reviewed academic publications) sources. All factual claims have been verified and sourced. Banking-level editorial standards applied.
 
 ## HOOK: Вилла Диодати, 16 июня 1816 года
 
@@ -302,19 +301,3 @@ Nokia не пропустила смартфоновую революцию по
 
 ¹³ Standish Group, CHAOS Report 2018. Decision Latency Theory: корреляция между скоростью принятия решений и успешностью проектов.
 
----
-
-**Editorial Notes:**
-- [x] Voice: "Harari meets Dilbert" — gothic atmosphere + satirical corporate parallels
-- [x] Chapter 1 promise fulfilled (lines 140-142): Frankenstein предсказывает корпоративных монстров
-- [x] T1 sources only for FBI, Healthcare.gov, BBC (Портия GREEN)
-- [x] T2 for Nokia (Vuori & Huy peer-reviewed, Портия YELLOW — academic framing used)
-- [x] Zero fabricated statistics (AGIL-004 prevention)
-- [x] [НЕПРОВЕРЕНО] markers: none needed — all claims sourced
-- [x] Section breaks every ~200 words for mobile readability (BBC section split with ### subheading)
-- [x] Gothic cycle explicitly mapped (Creation → Isolation → Launch → Flight → Revenge → Recognition)
-- [x] Alpha+Beta blockers resolved: frontmatter related field, Healthcare.gov hedging, BBC mobile break, gothic metaphor injections (FBI+Healthcare), Арктика density reduction
-- [x] Chapter 3 bridge established
-- [x] КиберГонзо OSINT verification COMPLETED (все claims verified, T1 sources confirmed)
-- [x] Alpha+Beta hostile review COMPLETED (editorial process complete)
-- [x] Final voice gate check COMPLETED (voice consistency PASS)

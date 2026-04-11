@@ -54,6 +54,19 @@ related:
   - chapter-9-three-scenarios
   - chapter-0-pilot
   - _act-iii-architecture
+
+# Cross-chapter navigation
+prev_chapter: "/chapters/chapter-9-three-scenarios"
+next_chapter: ""
+act_overview: "Act III: Future - Where we're heading"
+act_prev: "/chapters/chapter-7-don-quixote"
+act_conclusion: true
+
+# SEO Enhancement
+keywords: ["william gibson", "cyberpunk", "choice engine", "neuromancer", "AI integration", "corporate cyberspace", "future of work", "2030 scenarios"]
+og_title: "Chapter 10: Gibson Choice Engine - Jacking Into the AI Future"
+og_description: "Final Act III chapter: Cyberpunk simulation of AI integration. How to live and work in Gibson's cyberspace made real through corporate transformation."
+twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cyberpunk DNA meets corporate reality in 2030 scenarios."
 ---
 
 # Глава 10: Jacking In: День из будущего, которое мы выбираем

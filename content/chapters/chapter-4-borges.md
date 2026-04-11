@@ -267,21 +267,3 @@ DORA работает именно потому, что не является л
 ¹⁶ Accelerate: State of DevOps Report. Google Cloud / DORA, 2023. Четыре ключевых метрики: deployment frequency, lead time for changes, time to restore service, change failure rate.
 
 ---
-
-**Editorial Notes:**
-- [x] Voice: "Harari meets Dilbert" — literary analysis + satirical corporate parallels
-- [x] Unique literary anchor: Borges (no overlap with Ch01 Verne, Ch02 Shelley, Ch03 Holmes)
-- [x] Unique case studies: Spotify Model, SAFe, OKR cargo cult (no overlap with previous chapters)
-- [x] Nokia reference minimal — one paragraph contextualizing Ch02 analysis, new source (Laanti et al.)
-- [x] T1 sources: State of Agile Report, DORA, HBR
-- [x] T2 sources: Goodhart (1975), Strathern (1997), Campbell (1979), Muller (2018), Laanti et al. (2011)
-- [x] Zero fabricated statistics — all claims sourced or marked [НЕПРОВЕРЕНО]
-- [x] Borges copyright respected — short excerpts with attribution (перевод автора)
-- [x] Cross-references: Ch01 (Верн/Этцель), Ch02 (Nokia/Shelley), Ch03 (Холмс/Конвей/Вайнберг/DORA/Брукс)
-- [x] CONTROVERSY section challenges metrics industry itself
-- [x] Chapter 0→1→2→3→4 arc: Creation → Abandonment → Diagnosis → Measurement Paradox
-- [x] Bridge to Act II established (from failures to working practices)
-- [ ] КиберГонзо OSINT verification pending
-- [ ] Alpha+Beta hostile review pending
-- [ ] Final voice gate check pending
-- [ ] Borges copyright fair use verification pending (copyrighted — short excerpts only)

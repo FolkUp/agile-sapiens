@@ -21,7 +21,7 @@ tags:
   - knight-capital
   - target-canada
   - agile-degeneration
-reviewed_by: "Editorial Panel"
+reviewed_by: "Наборщик, КиберГонзо (OSINT verification)"
 review_date: "2026-03-28"
 sources:
   - "Doyle, Arthur Conan. A Study in Scarlet (1887). Ward, Lock & Co"
@@ -279,19 +279,3 @@ Nokia пала именно так. Vuori и Huy назвали это «рас�
 ¹³ Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley. Закон Брукса и формула каналов коммуникации n(n-1)/2.
 
 ---
-
-**Editorial Notes:**
-- [x] Voice: "Harari meets Dilbert" — detective method + satirical corporate parallels
-- [x] Unique literary anchor: Sherlock Holmes (no overlap with Ch01 Verne or Ch02 Frankenstein)
-- [x] Unique case studies: Knight Capital, Target Canada, Lidl (no overlap with Ch02 FBI/Healthcare.gov/BBC)
-- [x] Nokia reference minimal — one paragraph in CONTROVERSY, not duplicating Ch02 analysis
-- [x] T1 sources: SEC enforcement action (Knight Capital), corporate filings (Target)
-- [x] T2 sources: Conway (1968), Brooks (1975), Weinberg (1971), DORA 2023
-- [x] Zero fabricated statistics — all claims sourced or marked [НЕПРОВЕРЕНО]
-- [x] Seven diagnostic signs mapped to Holmesian observations
-- [x] CONTROVERSY section challenges diagnostic industry itself
-- [x] Chapter 1→2→3 arc complete: Creation → Abandonment → Diagnosis
-- [x] Bridge to Act II established
-- [x] КиберГонзо OSINT verification completed (CONDITIONAL PASS - 89% verified)
-- [x] Alpha+Beta hostile review completed (P0 blockers identified and fixed)
-- [x] Final voice gate check completed

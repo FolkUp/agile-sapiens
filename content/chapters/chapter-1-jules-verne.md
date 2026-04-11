@@ -174,15 +174,3 @@ draft: false
 
 ⁵ Переписка Верн — Этцель: Dumas, Olivier. *Correspondance inédite de Jules Verne et de Pierre-Jules Hetzel* (1999-2002), 3 тома, Slatkine.
 
----
-
-**Editorial Notes:**
-- [x] Date error fixed: март 1869 (serialization start)
-- [x] [НЕПРОВЕРЕНО] markers added to unverified claims
-- [x] Frontmatter: draft: false, status: partially_verified (publication ready)
-- [x] Controversy section moved earlier (Beta recommendation)
-- [x] Takeuchi-Nonaka softened: "возможно, впитали"
-- [x] related: chapter-2-frankenstein added
-- [ ] Voice consistency maintained ("Harari meets Dilbert")
-- [ ] Cross-references verified
-- [ ] Ready for editorial review

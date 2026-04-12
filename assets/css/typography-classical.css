@@ -7,6 +7,9 @@
 /* Font Face Declarations - Google Fonts CDN */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
+/* CSS Layer Ordering - Enhanced Alice v2.0 Level 3 Architecture */
+@layer base, level2-visual-polish, utilities;
+
 /* CSS Custom Properties - Root Variables */
 :root {
   /* Typography Families */
@@ -86,8 +89,12 @@
   --color-text-secondary: #4A453F;   /* Производный от мягкого угля */
   --color-text-muted: #6B6560;       /* Тёплый серый - Palette D */
   --color-accent: #7D4450;           /* Мягкий бордо - основательность и знания */
-  --color-accent-light: #E8AD4A;     /* Тёплый янтарь - свет фонаря */
   --color-accent-dark: #5E333C;      /* Производный бордо темнее */
+
+  /* Semantic Token Separation - WCAG Compliance */
+  --color-accent-light: #E8AD4A;         /* Legacy янтарь - DEPRECATED for text, use decorative */
+  --color-accent-decorative: #E8AD4A;    /* Янтарь - decorative only (borders, gradients) */
+  --color-accent-text: #7D4450;          /* Бордо - text content (≥4.5:1 compliant) */
 
   /* Background Colors - Enhanced Alice */
   --color-bg-primary: #FEFCF6;       /* Слоновая кость - теплее белого */
@@ -111,8 +118,12 @@
   --color-text-secondary: rgba(225, 220, 215, 1);   /* Text level light 12.5:1 */
   --color-text-muted: #A3B898;                      /* Sage темный 5.5:1 */
   --color-accent: rgba(200, 140, 130, 1);           /* Осветленный бордо 7:1 */
-  --color-accent-light: rgba(160, 190, 145, 1);     /* Осветленный шалфей 7.5:1 */
   --color-accent-dark: rgba(220, 160, 150, 1);      /* Lighter бордо для dark */
+
+  /* Semantic Token Separation - WCAG Compliance (Dark) */
+  --color-accent-light: rgba(160, 190, 145, 1);         /* Legacy шалфей - DEPRECATED for text */
+  --color-accent-decorative: rgba(160, 190, 145, 1);    /* Шалфей - decorative only */
+  --color-accent-text: rgba(200, 140, 130, 1);          /* Осветленный бордо - text (≥7:1) */
 
   /* Background Colors - Dark Mode Enhanced Alice */
   --color-bg-primary: #1A1816;       /* Тёплый charcoal */
@@ -219,7 +230,7 @@ strong {
 a {
   color: var(--color-accent);
   text-decoration: underline;
-  text-decoration-color: var(--color-accent-light);
+  text-decoration-color: var(--color-accent-text);
   text-underline-offset: 0.125em;
   transition: all 0.2s ease;
 }
@@ -251,7 +262,7 @@ blockquote::before {
   content: "\201C";
   font-family: var(--font-heading);
   font-size: 3em;
-  color: var(--color-accent-light);
+  color: var(--color-accent-text);
   position: absolute;
   left: -0.5rem;
   top: -0.5rem;
@@ -436,7 +447,7 @@ hr::after {
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-bg-primary);
-  color: var(--color-accent-light);
+  color: var(--color-accent-text);
   padding: 0 var(--space-md);
   font-size: var(--text-lg);
 }
@@ -640,7 +651,7 @@ a, button, input, select, textarea {
 /* Classical academic ornament character support */
 .ornament {
   font-family: var(--font-heading);
-  color: var(--color-accent-light);
+  color: var(--color-accent-text);
   font-size: var(--text-lg);
   text-align: center;
   margin: var(--space-xl) 0;
@@ -790,7 +801,7 @@ a, button, input, select, textarea {
     content: "◊";
     position: relative;
     background: var(--color-bg-primary);
-    color: var(--color-accent-light);
+    color: var(--color-accent-text);
     padding: 0 var(--space-lg);
     font-size: var(--text-xl-fluid);
     z-index: 1;
@@ -930,7 +941,7 @@ a, button, input, select, textarea {
     top: -0.2em;
     left: -0.1em;
     font-size: 4rem;
-    color: var(--color-accent-light);
+    color: var(--color-accent-text);
     opacity: 0.3;
     font-family: var(--font-heading);
     line-height: 1;
@@ -1070,7 +1081,7 @@ a, button, input, select, textarea {
     content: counter(section) ".";
     position: absolute;
     left: -2em;
-    color: var(--color-accent-light);
+    color: var(--color-accent-text);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-heading);
   }
@@ -1084,7 +1095,7 @@ a, button, input, select, textarea {
     content: counter(section) "." counter(subsection) ".";
     position: absolute;
     left: -3em;
-    color: var(--color-accent-light);
+    color: var(--color-accent-text);
     font-weight: var(--font-weight-semibold);
     font-family: var(--font-heading);
     font-size: 0.9em;
@@ -1098,8 +1109,114 @@ a, button, input, select, textarea {
   font-size: 4em;
   line-height: 0.8;
   margin: 0.1em 0.1em 0 0;
-  color: var(--color-accent-light);             /* Enhanced: янтарь (свет фонаря) */
+  color: var(--color-accent-text);              /* Enhanced: бордо (WCAG AA compliant) */
   font-weight: var(--font-weight-bold);
   initial-letter: 3;                           /* Enhanced: Level 1 feature */
   font-feature-settings: "ss01" 1;             /* Enhanced: stylistic alternates */
+}
+
+/* =================================================================== */
+/* LEVEL 3 TYPOGRAPHY ACTIVATION: Template Integration Classes        */
+/* Phase 2 Addition - Hugo Layout Integration                          */
+/* =================================================================== */
+
+/* Chapter Structure Semantic Classes */
+.chapter-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border-light);
+  position: relative;
+}
+
+.chapter-title {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  text-wrap: balance;  /* Modern typography enhancement */
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.chapter-description {
+  font-family: var(--font-body);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;  /* Modern typography enhancement */
+  font-size: var(--text-xl);
+  line-height: 1.6;
+  margin-top: var(--space-md);
+}
+
+.chapter-conclusion {
+  margin-top: var(--space-xxl);
+  padding-top: var(--space-lg);
+  position: relative;
+}
+
+/* Enhanced Content Wrapper */
+.content-enhanced {
+  /* Typography rhythm and spacing */
+  font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+
+  /* Enhanced reading flow */
+  orphans: 2;
+  widows: 2;
+
+  /* Golden ratio spacing between elements */
+  --content-rhythm: var(--golden-ratio);
+}
+
+.content-enhanced > * + * {
+  margin-top: calc(var(--content-rhythm) * 1em);
+}
+
+/* Classical Typography Base Class */
+.classical-typography {
+  /* Academic typography foundation */
+  hyphens: auto;
+  text-align: justify;
+  text-justify: inter-word;
+
+  /* Enhanced paragraph treatment */
+  text-indent: 1.5em;
+
+  /* Sophisticated quote treatment */
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.classical-typography p:first-child,
+.classical-typography h1 + p,
+.classical-typography h2 + p,
+.classical-typography h3 + p,
+.classical-typography h4 + p,
+.classical-typography h5 + p,
+.classical-typography h6 + p {
+  text-indent: 0; /* No indent after headings */
+}
+
+/* Ornamental Separator */
+.ornamental-separator {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-accent-decorative) 25%,
+    var(--color-accent-decorative) 75%,
+    transparent 100%
+  );
+  margin: var(--space-xl) auto;
+  position: relative;
+}
+
+.ornamental-separator::after {
+  content: "❦";
+  position: absolute;
+  top: -0.75em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-bg-primary);
+  color: var(--color-accent-text);
+  padding: 0 var(--space-sm);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
 }

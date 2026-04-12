@@ -1,0 +1,168 @@
+# Hugo English Domain Configuration
+# Inherits from hugo.toml with English-specific overrides
+# Domain: en.agile.folkup.work
+
+baseURL = "https://en.agile.folkup.work"
+languageCode = "en-us"
+title = "AGILE SAPIENS"
+theme = "hextra"
+defaultContentLanguage = "en"
+
+# English-only deployment configuration
+disableKinds = ["robotsTXT"]  # Generate robots.txt separately for domain
+
+[params]
+description = "A scientific popular monograph on the future of work in the AI age"
+images = ["/assets/og-image-default.png"]
+
+[params.author]
+name = "FolkUp Ecosystem"
+email = "info@folkup.app"
+
+# FolkUp branding
+logo = "/assets/folkup-logo.svg"
+favicon = "/assets/favicon.ico"
+
+# Primary colors (FolkUp palette subset)
+[params.colors]
+primary = "#2563eb"
+secondary = "#64748b"
+
+# English-specific navigation
+[[menu.main]]
+name = "Home"
+pageRef = "/"
+weight = 10
+
+[[menu.main]]
+name = "Chapters"
+pageRef = "/chapters"
+weight = 20
+
+[[menu.main]]
+name = "Archive"
+pageRef = "/archive"
+weight = 30
+
+[[menu.main]]
+name = "About"
+pageRef = "/about"
+weight = 40
+
+[[menu.main]]
+name = "Legal"
+pageRef = "/legal"
+weight = 50
+
+# Language switcher for English domain
+[[menu.main]]
+identifier = "language-switch"
+name = "Русский"
+url = "https://ru.agile.folkup.work/"
+weight = 60
+[menu.main.params]
+icon = "globe-alt"
+external = true
+
+# GDPR compliance settings
+[params.gdpr]
+enabled = true
+cookie_consent = true
+privacy_policy = "/legal/privacy/"
+cookie_policy = "/legal/cookies/"
+terms_url = "/legal/terms/"
+
+[params.footer]
+copyright = "© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0."
+
+# Ko-fi support integration (FolkUp standard)
+[params.kofi]
+enabled = true
+username = "folkup"
+url = "https://ko-fi.com/folkup"
+
+# SEO and metadata
+[params.page]
+width = "normal"
+
+# Theme features
+[params.theme]
+default = "auto"
+displayToggle = true
+
+# English-only language configuration
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "AGILE SAPIENS"
+    contentDir = "content"
+
+    [languages.en.params]
+    description = "A scientific popular monograph on the future of work in the AI age"
+
+    [languages.en.menu]
+      [[languages.en.menu.sidebar]]
+        identifier = "kofi"
+        name = "☕ Support on Ko-fi"
+        url = "https://ko-fi.com/folkup"
+        weight = 1
+
+# Table of contents
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+
+# SEO Configuration
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+page = ["HTML"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML"]
+
+# Enhanced sitemap configuration
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.8
+
+# SEO headers and canonical URLs
+[params.seo]
+enableRobots = true
+enableSitemap = true
+canonicalURLs = true
+enableSchemaOrg = true
+
+# Publisher SEO metadata for English domain
+[params.publisher]
+name = "FolkUp Ecosystem"
+url = "https://folkup.app"
+logo = "https://en.agile.folkup.work/assets/folkup-logo.svg"
+same_as = [
+  "https://ko-fi.com/folkup",
+  "https://github.com/folkup-ecosystem"
+]
+
+# Enhanced OpenGraph and Twitter Cards
+[params.social]
+twitter_creator = "@folkupeco"
+twitter_site = "@folkupeco"
+og_image = "/assets/og-image-default.png"
+og_image_width = 1200
+og_image_height = 630
+
+# Schema.org Book metadata for monograph
+[params.book]
+isbn = ""  # To be assigned
+publisher = "FolkUp Ecosystem"
+genre = ["Business", "Technology", "Future of Work", "Artificial Intelligence"]
+target_audience = ["Business Leaders", "Technology Professionals", "Researchers"]
+inLanguage = ["en"]
+pages_estimate = 300
+
+# Domain-specific canonical URL settings
+[params.domain]
+primary = "en.agile.folkup.work"
+alternate = "ru.agile.folkup.work"
+original = "sapiens.folkup.life"  # For rollback reference

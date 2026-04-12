@@ -1,0 +1,175 @@
+# Hugo Russian Domain Configuration
+# Inherits from hugo.toml with Russian-specific overrides
+# Domain: ru.agile.folkup.work
+# Status: Infrastructure ready, content pending
+
+baseURL = "https://ru.agile.folkup.work"
+languageCode = "ru-ru"
+title = "AGILE SAPIENS"
+theme = "hextra"
+defaultContentLanguage = "ru"
+
+# Russian-only deployment configuration
+disableKinds = ["robotsTXT"]  # Generate robots.txt separately for domain
+
+[params]
+description = "Научно-популярная монография о будущем работы в эпоху ИИ"
+images = ["/assets/og-image-default.png"]
+
+[params.author]
+name = "FolkUp Ecosystem"
+email = "info@folkup.app"
+
+# FolkUp branding
+logo = "/assets/folkup-logo.svg"
+favicon = "/assets/favicon.ico"
+
+# Primary colors (FolkUp palette subset)
+[params.colors]
+primary = "#2563eb"
+secondary = "#64748b"
+
+# Russian-specific navigation
+[[menu.main]]
+name = "Главная"
+pageRef = "/"
+weight = 10
+
+[[menu.main]]
+name = "Главы"
+pageRef = "/chapters"
+weight = 20
+
+[[menu.main]]
+name = "Архив"
+pageRef = "/archive"
+weight = 30
+
+[[menu.main]]
+name = "О книге"
+pageRef = "/about"
+weight = 40
+
+[[menu.main]]
+name = "Юридическое"
+pageRef = "/legal"
+weight = 50
+
+# Language switcher for Russian domain
+[[menu.main]]
+identifier = "language-switch"
+name = "English"
+url = "https://en.agile.folkup.work/"
+weight = 60
+[menu.main.params]
+icon = "globe-alt"
+external = true
+
+# GDPR compliance settings
+[params.gdpr]
+enabled = true
+cookie_consent = true
+privacy_policy = "/legal/privacy/"
+cookie_policy = "/legal/cookies/"
+terms_url = "/legal/terms/"
+
+[params.footer]
+copyright = "© 2026 FolkUp Ecosystem. Контент лицензирован под CC BY 4.0."
+
+# Ko-fi support integration (FolkUp standard)
+[params.kofi]
+enabled = true
+username = "folkup"
+url = "https://ko-fi.com/folkup"
+
+# SEO and metadata
+[params.page]
+width = "normal"
+
+# Theme features
+[params.theme]
+default = "auto"
+displayToggle = true
+
+# Russian-only language configuration
+[languages]
+  [languages.ru]
+    languageName = "Русский"
+    weight = 1
+    title = "AGILE SAPIENS"
+    contentDir = "content"
+
+    [languages.ru.params]
+    description = "Научно-популярная монография о будущем работы в эпоху ИИ"
+
+    [languages.ru.menu]
+      [[languages.ru.menu.sidebar]]
+        identifier = "kofi"
+        name = "☕ Поддержать на Ko-fi"
+        url = "https://ko-fi.com/folkup"
+        weight = 1
+
+# Table of contents
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+
+# SEO Configuration
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+page = ["HTML"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML"]
+
+# Enhanced sitemap configuration
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.8
+
+# SEO headers and canonical URLs
+[params.seo]
+enableRobots = true
+enableSitemap = true
+canonicalURLs = true
+enableSchemaOrg = true
+
+# Publisher SEO metadata for Russian domain
+[params.publisher]
+name = "FolkUp Ecosystem"
+url = "https://folkup.app"
+logo = "https://ru.agile.folkup.work/assets/folkup-logo.svg"
+same_as = [
+  "https://ko-fi.com/folkup",
+  "https://github.com/folkup-ecosystem"
+]
+
+# Enhanced OpenGraph and Twitter Cards
+[params.social]
+twitter_creator = "@folkupeco"
+twitter_site = "@folkupeco"
+og_image = "/assets/og-image-default.png"
+og_image_width = 1200
+og_image_height = 630
+
+# Schema.org Book metadata for monograph
+[params.book]
+isbn = ""  # To be assigned
+publisher = "FolkUp Ecosystem"
+genre = ["Бизнес", "Технологии", "Будущее работы", "Искусственный интеллект"]
+target_audience = ["Лидеры бизнеса", "IT-специалисты", "Исследователи"]
+inLanguage = ["ru"]
+pages_estimate = 300
+
+# Domain-specific canonical URL settings
+[params.domain]
+primary = "ru.agile.folkup.work"
+alternate = "en.agile.folkup.work"
+original = "sapiens.folkup.life"  # For rollback reference
+
+# Russian-specific coming soon notice (until content ready)
+[params.coming_soon]
+enabled = true
+message = "Русская версия находится в разработке. Скоро здесь появится полный перевод монографии."
+redirect_to = "https://en.agile.folkup.work/"

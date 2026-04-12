@@ -1,0 +1,10 @@
+AGILE SAPIENS English Build Summary
+===================================
+Build Date: Sun Apr 12 08:58:21 WEDT 2026
+Domain: en.agile.folkup.work
+Configuration: hugo.en.toml
+Output Directory: public-en
+Build Duration: 4s
+Total Files: 135
+Total Size: 5.9M
+Build Status: SUCCESS

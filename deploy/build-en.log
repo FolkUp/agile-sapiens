@@ -2,16 +2,16 @@ Start building sites …
 hugo v0.155.2-d8c0dfccf72ab43db2b2bca1483a61c8660021d9+extended windows/amd64 BuildDate=2026-02-02T10:04:51Z VendorInfo=gohugoio
 
 INFO  static: removing all files from destination that don't exist in static dirs
-INFO  static: syncing static files to \ duration 105.718ms
-INFO  build:  step process substep collect files 25 files_total 25 pagesources_total 25 resourcesources_total 0 duration 4.9238ms
-INFO  build:  step process duration 5.4423ms
-INFO  build:  step assemble duration 194.2091ms
-INFO  build:  step render substep pages site en outputFormat html duration 1.8696733s
-INFO  build:  step render substep pages site en outputFormat rss duration 84.4221ms
-INFO  build:  step render pages 110 content 105 duration 1.9548259s
+INFO  static: syncing static files to \ duration 100.6447ms
+INFO  build:  step process substep collect files 25 files_total 25 pagesources_total 25 resourcesources_total 0 duration 1.6066ms
+INFO  build:  step process duration 1.6066ms
+INFO  build:  step assemble duration 169.2435ms
+INFO  build:  step render substep pages site en outputFormat html duration 1.717436s
+INFO  build:  step render substep pages site en outputFormat rss duration 134.2358ms
+INFO  build:  step render pages 110 content 105 duration 1.8516718s
 INFO  build:  step render deferred count 0 duration 0s
 INFO  build:  step postProcess duration 0s
-INFO  build:  duration 2.1561825s
+INFO  build:  duration 2.0230451s
 
                   │ EN  
 ──────────────────┼─────
@@ -21,6 +21,6 @@ INFO  build:  duration 2.1561825s
  Static files     │  17 
  Processed images │   0 
  Aliases          │   0 
- Cleaned          │   1 
+ Cleaned          │   0 
 
-Total in 4100 ms
+Total in 3699 ms

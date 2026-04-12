@@ -34,12 +34,20 @@ AGILE SAPIENS examines how artificial intelligence is reshaping the nature of wo
 
 **10 chapters • 3 acts • Serious analysis with sharp wit**
 
+{{< hextra/hero-button text="📖 START READING" link="/chapters/" >}}
+
 ## What You'll Discover
 
 - How classic literature predicted today's workplace transformations
 - Practical frameworks for navigating AI-driven change
 - The future of human-AI collaboration in organizations
 - Strategic insights from history's greatest thinkers
+
+---
+
+{{< callout type="info" >}}
+**Ready to start?** Begin with [Chapter 0: Пилот](/chapters/chapter-0-pilot/) or [browse all chapters](/chapters/) to choose your entry point.
+{{< /callout >}}
 
 ## Support This Work
 

@@ -79,11 +79,11 @@ twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cy
 
 **07:45, понедельник, март 2030. Москва-Сити, 47-й этаж.**
 
-Анна подключается к рабочему интерфейсу — движение руки в воздухе, и её монитор превращается в трёхмерное пространство данных. За окном — город будущего, внутри кубикла — киберпространство Гибсона, ставшее банальной рутиной. Она financial analyst, но компьютер уже три года не нуждается в её analysis — он нуждается в её intuition, в способности почувствовать то, что алгоритм не может измерить.
+Анна подключается к рабочему интерфейсу — движение руки в воздухе, и её монитор превращается в трёхмерное пространство данных. За окном — город будущего, внутри кубикла — киберпространство Гибсона, ставшее банальной рутиной. Она финансовый аналитик, но компьютер уже три года не нуждается в её анализе — он нуждается в её интуиции, в способности почувствовать то, что алгоритм не может измерить.
 
-В соседнем кубикле Михаил решает ту же задачу без AI. Excel, ручные расчёты, кофе и nicotine stress. Та же компания, тот же департамент, но они живут в parallel realities. Анна в 2030, Михаил в 2025. Пять лет разницы в одном офисе.
+В соседнем кубикле Михаил решает ту же задачу без ИИ. Excel, ручные расчёты, кофе и никотиновый стресс. Та же компания, тот же департамент, но они живут в параллельных реальностях. Анна в 2030, Михаил в 2025. Пять лет разницы в одном офисе.
 
-В углу open space Дмитрий вообще не работает в традиционном смысле. Он AI trainer, profession которая не существовала в 2025. Его задача — учить алгоритм понимать российский financial context, культурные паттерны принятия решений, тонкости корпоративной иерархии. Он переводчик между human common sense и machine logic.
+В углу открытого пространства Дмитрий вообще не работает в традиционном смысле. Он тренер ИИ, профессия которая не существовала в 2025. Его задача — учить алгоритм понимать российский финансовый контекст, культурные паттерны принятия решений, тонкости корпоративной иерархии. Он переводчик между человеческим здравым смыслом и машинной логикой.
 
 Три человека, три сценария из Wells Machine времени, в одном офисе. HR классифицирует их как "равные карьерные возможности", но равными их делает только общий кофе и Wi-Fi пароль.
 
@@ -284,7 +284,7 @@ Choice Engine не схема для choosing. Choice Engine — the experience 
 
 **The 2030 parallel:** AGILE SAPIENS journey began с attempt для algorithm оптимизации human potential. Act I показал origins — Verne's science optimism, Frankenstein's responsibility, Holmes's deduction, Borges's measurement impossible reality.
 
-Act II revealed transformation в progress — Jekyll's identity crisis, Orwell's control mechanisms, Carroll's logic paradoxes, Cervantes's reality-fantasy confusion.
+Act II revealed transformation в progress — Borges's measurement paradoxes, Nemo's systematic construction, Jekyll's identity crisis, Don Quixote's reality-fantasy confusion.
 
 Act III explored choice архитектура — Wells's time horizons, Vinge's singularity navigation, Gibson's cyberspace включение.
 
@@ -312,9 +312,9 @@ Act III explored choice архитектура — Wells's time horizons, Vinge'
 
 **Jekyll/Hyde lesson:** technological enhancement changes identity. Включение с AI tools не just эффективность gain — psychological adaptation. Who you become depends на how you adapt.
 
-**Orwell's lesson:** эффективность tools become control mechanisms. Оптимизация схемы shape behavior more subtly но более effectively чем direct commands. Culture emerges from practice.
+**Nemo's lesson:** systematic approach enables impossible achievements. Methodical construction превращает chaos в functioning civilization. Structure serves human goals, не vice versa.
 
-**Carroll's lesson:** logic systems break down на edge cases. AI decision схемы fail когда reality doesn't match training data assumptions.
+**Borges's lesson:** measurement systems shape what we see. How we categorize AI capabilities determines how we utilize them. Maps not territory, metrics не goals.
 
 **Cervantes's lesson:** reality и fantasy intersect в AI workplace. Enhanced продуктивность feels like magic until it becomes routine. Expectations adapt faster чем capabilities.
 

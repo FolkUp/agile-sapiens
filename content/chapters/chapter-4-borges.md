@@ -248,7 +248,7 @@ DORA работает именно потому, что не является л
 
 ⁷ Sundén, Jeremiah & Svedenwall, Joakim. «Scaling Agile at Spotify: A Case Study.» Master's thesis, Chalmers University of Technology, 2015. Эмпирическое исследование реальных практик Spotify.
 
-⁸ Manns, Marcin [sic — Jeremiah Lee]. «Failed #SquadGoals — Spotify doesn't use 'the Spotify model' and neither should you.» jeremiahlee.com, April 2020. Критический анализ от бывшего сотрудника Spotify. Автор — Jeremiah Lee, не Marcin Manns; исправление: статья подписана Jeremiah Lee.
+⁸ Lee, Jeremiah. «Failed #SquadGoals — Spotify doesn't use 'the Spotify model' and neither should you.» jeremiahlee.com, April 2020. Критический анализ от бывшего сотрудника Spotify.
 
 ⁹ Scaled Agile, Inc. SAFe 6.0 Framework. scaledagileframework.com. Коммерческий фреймворк; число ролей и церемоний подсчитано по официальной «Big Picture» диаграмме.
 

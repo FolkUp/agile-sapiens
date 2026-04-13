@@ -47,13 +47,13 @@ sources:
     year: 1990
     type: "business"
     confidence: "high"
-    notes: "Time-based competition framework for technology adoption decisions"
+    notes: "Time-based competition framework for решений по внедрению технологий (technology adoption decisions)"
   - title: "The Innovator's Dilemma"
     author: "Clayton Christensen"
     year: 1997
     type: "business"
     confidence: "high"
-    notes: "Disruptive technology framework применимый к AI adoption patterns"
+    notes: "Фреймворк разрушительных технологий (Disruptive technology framework) применимый к паттернам внедрения ИИ (AI adoption patterns)"
 related:
   - chapter-8-time-machine
   - chapter-10-choice-engine
@@ -68,215 +68,215 @@ related:
 
 ## Пролог: The Decision Paradox
 
-Глава 8 показала три горизонта трансформации ИИ. Но машина времени Уэллса была читательским устройством — мы не можем реально посмотреть в будущее и вернуться. Виндж понимал это в 1993: сингулярность создаёт **парадокс решения**. Мы должны выбирать план действий до того, как понимаем последствия.
+Глава 8 показала три горизонта трансформации ИИ. Но машина времени Уэллса была читательским устройством — мы не можем реально посмотреть в будущее и вернуться. Виндж понимал это в 1993: сингулярность создаёт **парадокс решения (decision paradox)**. Мы должны выбирать план действий (план действий) до того, как понимаем последствия (последствия).
 
-**Прозрение Винджа:** сингулярность — не технологическое событие. Это **каскад решений** — серия выборов, которые коллективно определяют, останутся ли люди актуальными.
+**Прозрение Винджа:** сингулярность — не технологическое событие. Это **каскад решений (каскад решений)** — серия выборов (серия выборов), которые коллективно определяют, останутся ли люди актуальными (актуальными).
 
-Корпоративная версия: каждый руководитель высшего звена сегодня принимает решения по стратегии ИИ, последствия которых будут понятны только через 5-10 лет. И время для поворота ограничено.
+Корпоративная версия: каждый руководитель высшего звена сегодня принимает решения по стратегии ИИ (стратегии ИИ), последствия которых будут понятны только через 5-10 лет. И время для поворота ограничено.
 
-## Vinge's Four Paths Revisited: Corporate Translation
+## Vinge's Four Paths Revisited: Корпоративный перевод (Corporate Translation)
 
-Виндж предложил четыре пути к сверхразуму. Тридцать лет спустя мы можем соотнести их с корпоративными выборами стратегии ИИ:
+Виндж предложил четыре пути к сверхразуму (сверхразуму). Тридцать лет спустя мы можем соотнести их с корпоративными выборами стратегии ИИ (стратегии ИИ):
 
-### Path 1: AI Awakening (Системы становятся сознательными)
+### Path 1: Пробуждение ИИ (AI Awakening) (Системы становятся сознательными)
 
-**Vinge Original:** Computers develop consciousness through emergent complexity.
+**Vinge Original:** Computers develop consciousness through возникающую сложность (emergent complexity).
 
-**Corporate Translation 2026:** Autonomous AI systems handle critical business decisions без human oversight. Not because они сознательные, а because economic pressure forces full delegation.
+**Корпоративный перевод 2026 (Corporate Translation 2026):** Автономные системы ИИ (Autonomous AI systems) handle критические бизнес-решения (critical business decisions) без человеческого надзора (human oversight). Not because они сознательные, а because экономическое давление (economic pressure) forces полную делегацию (full delegation).
 
-**Current Indicators:**
-- **Algorithmic Trading:** >75% equity trades fully automated⁴
-- **Supply Chain Management:** Amazon's algorithmic procurement systems handle billions in automated purchasing decisions
-- **Content Moderation:** Facebook/YouTube AI removes content before humans see it
-- **Insurance Underwriting:** Progressive's Snapshot adjusts rates automatically
+**Текущие индикаторы (Current Indicators):**
+- **Алгоритмическая торговля (Algorithmic Trading):** >75% торгов акциями (equity trades) полностью автоматизированы (automated)⁴
+- **Управление цепочкой поставок (Supply Chain Management):** Amazon's алгоритмические системы закупок (algorithmic procurement systems) handle billions in автоматизированных решениях о покупках (automated purchasing decisions)
+- **Модерация контента (Content Moderation):** Facebook/YouTube AI removes content before humans see it
+- **Андеррайтинг страхования (Insurance Underwriting):** Progressive's Snapshot adjusts rates автоматически (automatically)
 
-**Strategic Choice:** Do you build dependency on autonomous systems или maintain human control circuits?
+**Стратегический выбор (Strategic Choice):** Do you build зависимость (dependency) на автономных системах (autonomous systems) или maintain человеческие схемы контроля (human control circuits)?
 
-**Corporate Reality Check:** CFO tells CEO: "AI система saved us $2M this quarter. But IT director doesn't know how." Red flag или success story?
+**Корпоративная проверка реальности (Corporate Reality Check):** CFO tells CEO: "AI система saved us $2M this quarter. But IT director doesn't know how." Красный флаг (Red flag) или история успеха (success story)?
 
-### Path 2: Intelligence Amplification (IA) — Human-AI Symbiosis
+### Path 2: Усиление интеллекта (Intelligence Amplification) (IA) — Human-AI Симбиоз (Symbiosis)
 
-**Vinge Original:** Humans enhance их cognitive abilities through technology integration.
+**Vinge Original:** Humans enhance их когнитивные способности (cognitive abilities) through интеграцию технологий (technology integration).
 
-**Corporate Translation 2026:** Best performers создают human-AI collaborative workflows impossible для either alone.
+**Корпоративный перевод 2026 (Corporate Translation 2026):** Лучшие исполнители (Best performers) создают human-AI совместные рабочие процессы (collaborative workflows) impossible для either alone.
 
-**Current Examples:**
-- **Legal Analysis:** BigLaw partners using AI для case research, developing strategic arguments no junior associate could match
-- **Medical Diagnosis:** Radiologists + AI achieve diagnostic accuracy neither achieves solo
-- **Financial Planning:** Advisors using AI market analysis для personalized strategies
-- **Software Development:** Senior engineers + AI coding tools создают code architecture patterns
+**Текущие примеры (Current Examples):**
+- **Legal Analysis:** BigLaw partners using AI для исследования дел (case research), developing стратегические аргументы (strategic arguments) no младший помощник (junior associate) could match
+- **Medical Diagnosis:** Radiologists + AI achieve диагностическую точность (diagnostic accuracy) neither achieves solo
+- **Financial Planning:** Advisors using AI анализ рынка (market analysis) для персонализированных стратегий (personalized strategies)
+- **Software Development:** Senior engineers + AI инструменты программирования (coding tools) создают паттерны архитектуры кода (code architecture patterns)
 
-**Strategic Choice:** Do you train employees for AI collaboration или replace them с AI systems?
+**Стратегический выбор (Strategic Choice):** Do you train employees for ИИ-сотрудничество (AI collaboration) или replace them с системами ИИ (AI systems)?
 
-**Workplace Reality:** HR обнаруживает, что "AI-fluent" developers produce 2x output. Do you hire more AI-fluent people или train existing team? Training costs 6 months + $15,000 per person. AI-fluent developers demand 30% salary premium.
+**Рабочая реальность (Workplace Reality):** HR обнаруживает, что "владеющие ИИ (AI-fluent)" developers produce 2x выхода (output). Do you hire more владеющих ИИ (AI-fluent) people или train existing team? Расходы на обучение (Training costs) 6 months + $15,000 per person. Владеющие ИИ (AI-fluent) developers demand 30% премию к зарплате (salary premium).
 
-### Path 3: Biological Enhancement (Humans Upgrade Themselves)
+### Path 3: Биологическое усовершенствование (Biological Enhancement) (Humans Upgrade Themselves)
 
-**Vinge Original:** Direct biological or cybernetic enhancement of human intelligence.
+**Vinge Original:** Прямое биологическое (Direct biological) или кибернетическое усовершенствование (cybernetic enhancement) of human intelligence.
 
-**Corporate Translation 2026:** Organizations that systematically develop "hybrid thinking" capabilities — employees trained specifically для human-AI integration.
+**Корпоративный перевод 2026 (Corporate Translation 2026):** Organizations that systematically develop "гибридное мышление (hybrid thinking)" capabilities — employees trained specifically для интеграции человек-ИИ (human-AI integration).
 
-**Emerging Patterns:**
-- **Prompt Engineering Mastery:** Technical roles requiring AI direction skills
-- **AI Quality Assessment:** Positions detecting AI hallucinations и biases
-- **Human-AI Workflow Design:** Architects optimizing human-machine task distribution
-- **Contextual Intelligence Roles:** Jobs requiring cultural nuance AI cannot replicate
+**Возникающие паттерны (Emerging Patterns):**
+- **Мастерство промпт-инжиниринга (Prompt Engineering Mastery):** Technical roles requiring навыки управления ИИ (AI direction skills)
+- **Оценка качества ИИ (AI Quality Assessment):** Positions detecting галлюцинации ИИ (AI hallucinations) и предвзятости (biases)
+- **Дизайн человеко-ИИ рабочих процессов (Human-AI Workflow Design):** Architects optimizing распределение задач человек-машина (human-machine task distribution)
+- **Роли контекстного интеллекта (Contextual Intelligence Roles):** Jobs requiring культурные нюансы (cultural nuance) AI cannot воспроизвести (replicate)
 
-**Strategic Choice:** Do you develop hybrid intelligence competencies or optimize for AI-first workflows?
+**Стратегический выбор (Strategic Choice):** Do you develop компетенции гибридного интеллекта (hybrid intelligence competencies) or optimize for рабочие процессы в первую очередь ИИ (AI-first workflows)?
 
-**Training Investment Reality:** Microsoft launched a global AI training initiative, deploying AI collaboration tools to all employees and vendors globally by March 2024, demonstrating enterprise AI adoption at scale. In its broader Elevate program (announced 2025), Microsoft committed $4B to train 20 million people in AI skills — showing organizational commitment to AI-native workforce development. HR question: hire for traditional skills and train AI collaboration, или hire for AI-native skills?
+**Реальность инвестиций в обучение (Training Investment Reality):** Microsoft launched a global инициативу обучения ИИ (AI training initiative), deploying ИИ-инструменты сотрудничества (AI collaboration tools) to all employees and vendors globally by March 2024, demonstrating корпоративное внедрение ИИ (enterprise AI adoption) at scale. In its broader Elevate program (announced 2025), Microsoft committed $4B to train 20 million people in AI skills — showing organizational commitment to ИИ-нативной разработке кадров (AI-native workforce development). HR question: hire for традиционные навыки (traditional skills) and train ИИ-сотрудничество (AI collaboration), или hire for ИИ-нативные навыки (AI-native skills)?
 
-### Path 4: Networking Intelligence (Internet Becomes Conscious)
+### Path 4: Сетевой интеллект (Networking Intelligence) (Internet Becomes Conscious)
 
-**Vinge Original:** Distributed network of computers achieves collective superintelligence.
+**Vinge Original:** Распределённая сеть (Distributed network) of computers achieves коллективный сверхинтеллект (collective superintelligence).
 
-**Corporate Translation 2026:** Business ecosystems где decision-making distributed across AI systems без central human control.
+**Корпоративный перевод 2026 (Corporate Translation 2026):** Бизнес-экосистемы (Business ecosystems) где принятие решений (decision-making) distributed across AI systems без центрального человеческого контроля (central human control).
 
-**Current Evolution:**
-- **Supply Chain Networks:** Automated vendor selection, pricing, logistics optimization across companies
-- **Financial Markets:** Cross-platform algorithmic trading creating emergent market behaviors
-- **Digital Marketing:** Programmatic ad buying systems optimize across platforms
-- **Cloud Infrastructure:** Auto-scaling и resource allocation decisions across AWS/Azure/GCP
+**Текущая эволюция (Current Evolution):**
+- **Сети цепочек поставок (Supply Chain Networks):** Автоматизированный выбор поставщиков (Automated vendor selection), pricing, оптимизация логистики (logistics optimization) across companies
+- **Financial Markets:** Кроссплатформенная (Cross-platform) алгоритмическая торговля (algorithmic trading) creating возникающее рыночное поведение (emergent market behaviors)
+- **Digital Marketing:** Программатическая покупка рекламы (Programmatic ad buying) systems optimize across platforms
+- **Cloud Infrastructure:** Автомасштабирование (Auto-scaling) и решения по распределению ресурсов (resource allocation decisions) across AWS/Azure/GCP
 
-**Strategic Choice:** Do you participate в distributed AI ecosystems или maintain isolated control?
+**Стратегический выбор (Strategic Choice):** Do you participate в распределённых ИИ-экосистемах (distributed AI ecosystems) или maintain изолированный контроль (isolated control)?
 
-**Ecosystem Dependency Risk:** Company discovers их AI procurement system has been automatically optimizing suppliers based on algorithms они don't control, в response к market signals они don't monitor. Efficient, но no human understands the logic. Procurement director: "We saved 12%, but I cannot explain to the board how."
+**Риск зависимости от экосистемы (Ecosystem Dependency Risk):** Company discovers их система ИИ-закупок (AI procurement system) has been automatically optimizing suppliers based on algorithms они don't control, в response к рыночным сигналам (market signals) они don't monitor. Efficient, но no human understands the logic. Procurement director: "We saved 12%, but I cannot explain to the board how."
 
-## The Vinge Decision Framework: Singularity Choice Architecture
+## Фреймворк решений Винджа (The Vinge Decision Framework): Архитектура выбора сингулярности (Singularity Choice Architecture)
 
-Vinge's insight wasn't prediction. It was способ navigating exponential change. Here's how to apply it:
+Vinge's insight wasn't prediction. It was способ навигации экспоненциальных изменений (navigating exponential change). Here's how to apply it:
 
 ### Step 1: Identify Your Singularity Proximity
 
-**Question:** How close is your industry/function к the "point of no return" где AI capabilities exceed human alternatives?
+**Question:** How close is your industry/function к the "точке невозврата (point of no return)" где возможности ИИ (AI capabilities) exceed человеческие альтернативы (human alternatives)?
 
-**Vinge Indicators:**
-- **Performance Crossover:** AI accuracy/speed exceeds median human performance
-- **Cost Flip:** AI solution costs <30% human equivalent включая integration
-- **Scale Requirements:** Task volume exceeds human processing capacity
-- **Cultural Normalization:** AI-first approach becomes industry standard
+**Индикаторы Винджа (Vinge Indicators):**
+- **Пересечение производительности (Performance Crossover):** AI точность/скорость (accuracy/speed) exceeds медианная человеческая производительность (median human performance)
+- **Переворот стоимости (Cost Flip):** AI solution costs <30% human equivalent включая интеграцию (integration)
+- **Требования масштаба (Scale Requirements):** Объём задач (Task volume) exceeds способность человеческой обработки (human processing capacity)
+- **Культурная нормализация (Cultural Normalization):** Подход в первую очередь ИИ (AI-first approach) becomes отраслевой стандарт (industry standard)
 
-**Assessment Method:**
+**Метод оценки (Assessment Method):**
 ```
-Current State Analysis:
-□ AI performance vs human benchmarks?
-□ Cost parity timeline estimate?
-□ Volume/complexity growth trajectory?
-□ Competitor adoption levels?
+Анализ текущего состояния (Current State Analysis):
+□ AI performance vs человеческие эталоны (human benchmarks)?
+□ Оценка временных рамок паритета затрат (Cost parity timeline estimate)?
+□ Траектория роста объёма/сложности (Volume/complexity growth trajectory)?
+□ Уровни внедрения конкурентами (Competitor adoption levels)?
 
-Singularity Proximity: [12-18 months | 2-3 years | 3-5 years | >5 years]
+Близость сингулярности (Singularity Proximity): [12-18 months | 2-3 years | 3-5 years | >5 years]
 ```
 
-**Example — Customer Service Industry:**
-- Performance: AI resolution rates approach human agent levels (trend accelerating)
-- Cost: AI service costs significantly below human equivalent (rapid implementation)
-- Scale: 40% customer interactions exceed normal business hours (current reality)
-- Culture: "AI-first" support becoming customer expectation (emerging trend)
-- **Assessment: 12-18 months** to human irrelevance in routine support
+**Example — Индустрия обслуживания клиентов (Customer Service Industry):**
+- Performance: AI коэффициенты разрешения (resolution rates) approach уровни человеческих агентов (human agent levels) (тренд ускоряется (trend accelerating))
+- Cost: AI service costs significantly below human equivalent (быстрая реализация (rapid implementation))
+- Scale: 40% customer interactions exceed normal рабочие часы (business hours) (текущая реальность (current reality))
+- Culture: "AI-first" support becoming ожидания клиентов (customer expectation) (возникающий тренд (emerging trend))
+- **Assessment: 12-18 months** to human irrelevance in рутинной поддержке (routine support)
 
-### Step 2: Map Your Strategic Responses to Vinge Paths
+### Step 2: Сопоставьте ваши стратегические ответы (Map Your Strategic Responses) to Vinge Paths
 
-**Vinge Framework Application:**
+**Применение фреймворка Винджа (Vinge Framework Application):**
 
-| Strategic Response | Vinge Path | Implementation | Risk Profile |
+| Стратегический ответ (Strategic Response) | Vinge Path | Реализация (Implementation) | Профиль риска (Risk Profile) |
 |-------------------|------------|----------------|--------------|
-| **Automate Everything** | AI Awakening | Full delegation to AI systems | High efficiency, high dependency |
-| **Amplify Humans** | Intelligence Amplification | Human-AI collaboration training | Medium efficiency, medium risk |
-| **Develop Hybrids** | Biological Enhancement | AI-native skill development | Medium efficiency, high adaptation cost |
-| **Join Ecosystem** | Network Intelligence | Platform integration, distributed decisions | High efficiency, low control |
+| **Автоматизировать всё (Automate Everything)** | AI Awakening | Полная делегация (Full delegation) to AI systems | Высокая эффективность, высокая зависимость (High efficiency, high dependency) |
+| **Усилить людей (Amplify Humans)** | Intelligence Amplification | Обучение человеко-ИИ сотрудничеству (Human-AI collaboration training) | Средняя эффективность, средний риск (Medium efficiency, medium risk) |
+| **Развивать гибридов (Develop Hybrids)** | Biological Enhancement | Развитие ИИ-нативных навыков (AI-native skill development) | Средняя эффективность, высокие расходы на адаптацию (Medium efficiency, high adaptation cost) |
+| **Присоединиться к экосистеме (Join Ecosystem)** | Network Intelligence | Интеграция платформы, распределённые решения (Platform integration, distributed decisions) | Высокая эффективность, низкий контроль (High efficiency, low control) |
 
-**Corporate Choice Matrix:**
-- **Conservative/Risk-Averse:** Intelligence Amplification (human oversight preserved)
-- **Aggressive/Growth-Focused:** AI Awakening или Network Intelligence (maximum automation)
-- **Innovation/Differentiation:** Biological Enhancement (hybrid capability development)
+**Матрица корпоративного выбора (Corporate Choice Matrix):**
+- **Консервативный/избегающий риска (Conservative/Risk-Averse):** Intelligence Amplification (человеческий надзор сохранён (human oversight preserved))
+- **Агрессивный/ориентированный на рост (Aggressive/Growth-Focused):** AI Awakening или Network Intelligence (максимальная автоматизация (maximum automation))
+- **Инновация/дифференциация (Innovation/Differentiation):** Biological Enhancement (развитие гибридных возможностей (hybrid capability development))
 
-### Step 3: Apply the Vinge Test — Four Critical Questions
+### Step 3: Применить тест Винджа (Apply the Vinge Test) — Четыре критических вопроса (Four Critical Questions)
 
 Перед важными AI решениями спроси:
 
-**Question 1: Reversibility Test** — "If this choice proves wrong, can we undo it in 18 months?"
-- **High Reversibility:** Training programs, software tools, pilot projects
-- **Low Reversibility:** Staff reduction, infrastructure replacement, ecosystem integration
+**Question 1: Тест обратимости (Reversibility Test)** — "If this choice proves wrong, can we undo it in 18 months?"
+- **Высокая обратимость (High Reversibility):** Программы обучения (Training programs), программные инструменты (software tools), пилотные проекты (pilot projects)
+- **Низкая обратимость (Low Reversibility):** Сокращение персонала (Staff reduction), замена инфраструктуры (infrastructure replacement), интеграция экосистемы (ecosystem integration)
 
-**Question 2: Human Capability Preservation** — "Are we maintaining the ability to do this work without AI?"
-- Critical for: Safety systems, crisis response, competitive differentiation
-- Less critical for: Routine processing, data analysis, customer communication
+**Question 2: Сохранение человеческих возможностей (Human Capability Preservation)** — "Are we maintaining the ability to do this work without AI?"
+- Critical for: Системы безопасности (Safety systems), антикризисное реагирование (crisis response), конкурентная дифференциация (competitive differentiation)
+- Less critical for: Рутинная обработка (Routine processing), анализ данных (data analysis), коммуникация с клиентами (customer communication)
 
-**Question 3: Competitive Timing** — "What happens if competitors choose different path?"
-- Path 1 (Automation): First-mover advantage, но high switching costs
-- Path 2 (Amplification): Slower adoption, но human talent advantage
-- Path 4 (Ecosystem): Network effects, но platform dependency
+**Question 3: Конкурентные временные рамки (Competitive Timing)** — "What happens if competitors choose другой путь (different path)?"
+- Path 1 (Automation): Преимущество первопроходца (First-mover advantage), но высокие расходы на переключение (high switching costs)
+- Path 2 (Amplification): Более медленное внедрение (Slower adoption), но преимущество человеческого таланта (human talent advantage)
+- Path 4 (Ecosystem): Сетевые эффекты (Network effects), но зависимость от платформы (platform dependency)
 
-**Question 4: Singularity Scenario** — "What if AI capabilities advance 10x faster than expected?"
-- Automation path: Ready for acceleration, но potentially over-optimized
-- Amplification path: Humans might become bottleneck
-- Enhancement path: Best positioned for rapid adaptation
+**Question 4: Сценарий сингулярности (Singularity Scenario)** — "What if возможности ИИ (AI capabilities) продвигаются в 10 раз быстрее (advance 10x faster) than expected?"
+- Путь автоматизации (Automation path): Ready for ускорения (acceleration), но potentially чрезмерно оптимизированный (over-optimized)
+- Путь усиления (Amplification path): Humans might become узким местом (bottleneck)
+- Путь улучшения (Enhancement path): Best positioned for быстрой адаптации (rapid adaptation)
 
-**Corporate Reality Check:** Boardroom loves 'strategic AI framework' presentations. Implementation teams know framework becomes checklist that HR transforms into compliance theatre.
+**Корпоративная проверка реальности (Corporate Reality Check):** Зал заседаний (Boardroom) loves 'стратегический ИИ-фреймворк (strategic AI framework)' presentations. Команды реализации (Implementation teams) know framework becomes чек-лист (checklist) that HR transforms into театр соответствия (compliance theatre).
 
-## Corporate Case Studies: Vinge Frameworks in Action
+## Корпоративные кейсы (Corporate Case Studies): Фреймворки Винджа в действии (Vinge Frameworks in Action)
 
-### Case Study 1: JPMorgan Chase — Path 2 (Intelligence Amplification) Strategy
+### Case Study 1: JPMorgan Chase — Path 2 Стратегия усиления интеллекта (Intelligence Amplification Strategy)
 
-**Background:** JPMorgan developed LOXM (Limit Order eXecution Manager) для equity trading.
+**Background:** JPMorgan developed LOXM (Limit Order eXecution Manager) для торговли акциями (equity trading).
 
-**Vinge Path Choice:** Intelligence Amplification — AI provides market analysis, human traders make execution decisions.
+**Выбор пути Винджа (Vinge Path Choice):** Intelligence Amplification — AI provides рыночный анализ (market analysis), human traders make решения по выполнению (execution decisions).
 
-**Implementation:**
-- AI processes massive market data sets, identifies statistical arbitrage opportunities
-- Human traders evaluate AI recommendations против broader market context
-- Final execution decisions require human approval for trades >$10M
-- Result: 15% performance improvement⁵, humans remain in command loop
+**Реализация (Implementation):**
+- AI processes массивные наборы рыночных данных (massive market data sets), identifies возможности статистического арбитража (statistical arbitrage opportunities)
+- Human traders evaluate рекомендации ИИ (AI recommendations) против более широкого рыночного контекста (broader market context)
+- Финальные решения по выполнению (Final execution decisions) require одобрение человека (human approval) for trades >$10M
+- Result: 15% улучшение производительности (performance improvement)⁵, humans remain в командной петле (command loop)
 
-**Vinge Test Application:**
-- ✅ **Reversibility:** Can revert to human-only trading
-- ✅ **Capability Preservation:** Traders maintain market intuition skills
-- ✅ **Timing:** Competitive advantage без over-automation
-- ✅ **Acceleration Ready:** System scales если AI improves
+**Применение теста Винджа (Vinge Test Application):**
+- ✅ **Обратимость (Reversibility):** Can вернуться (revert) к торговле только людьми (human-only trading)
+- ✅ **Сохранение возможностей (Capability Preservation):** Traders maintain навыки рыночной интуиции (market intuition skills)
+- ✅ **Временные рамки (Timing):** Конкурентное преимущество (Competitive advantage) без чрезмерной автоматизации (over-automation)
+- ✅ **Готовность к ускорению (Acceleration Ready):** Система масштабируется (System scales) если AI improves
 
-**Lesson:** Path 2 provided competitive advantage with risk management. Company avoided dependency trap while achieving performance gains.
+**Lesson:** Path 2 provided конкурентное преимущество (competitive advantage) с управлением рисками. Company avoided ловушку зависимости (dependency trap) while achieving прирост производительности (performance gains).
 
-**Translation:** JPMorgan preserved executive control while automating trader decisions — classic management strategy.
+**Translation:** JPMorgan preserved исполнительный контроль (executive control) while automating решения трейдеров (trader decisions) — классическая управленческая стратегия (classic management strategy).
 
-### Case Study 2: Zara — Path 4 (Network Intelligence) Strategy
+### Case Study 2: Zara — Path 4 Стратегия сетевого интеллекта (Network Intelligence Strategy)
 
-**Background:** Zara's AI-driven supply chain optimization.
+**Background:** ИИ-управляемая оптимизация цепочки поставок Zara (Zara's AI-driven supply chain optimization).
 
-**Vinge Path Choice:** Network Intelligence — Distributed AI across suppliers, logistics, demand forecasting.
+**Выбор пути Винджа (Vinge Path Choice):** Network Intelligence — Распределённый ИИ (Distributed AI) across поставщиков (suppliers), логистику (logistics), прогнозирование спроса (demand forecasting).
 
-**Implementation:**
-- AI systems at suppliers, distribution centers, retail locations communicate directly
-- Demand prediction algorithms adjust manufacturing без central human oversight
-- Inventory optimization happens in real-time across entire network
-- Result: significant reduction in unsold inventory (85% items sold at full price vs industry 60%⁶), dramatically faster trend response (1 week vs industry 3-6 months)
+**Реализация (Implementation):**
+- AI systems at поставщиков (suppliers), центров распределения (distribution centers), торговых точек (retail locations) общаются напрямую (communicate directly)
+- Алгоритмы прогнозирования спроса (Demand prediction algorithms) adjust производство (manufacturing) без центрального человеческого надзора (central human oversight)
+- Оптимизация запасов (Inventory optimization) happens в реальном времени (real-time) across всей сети (entire network)
+- Result: значительное снижение (significant reduction) в непроданных запасах (unsold inventory) (85% items sold at полной цене (full price) vs отрасли (industry) 60%⁶), dramatically faster реакция на тренды (trend response) (1 week vs отрасли (industry) 3-6 months)
 
-**Vinge Test Application:**
-- ⚠️ **Reversibility:** Difficult — network dependencies throughout supply chain
-- ⚠️ **Capability Preservation:** Limited human understanding of optimization logic
-- ✅ **Timing:** First-mover advantage в fast fashion
-- ⚠️ **Acceleration Risk:** System complexity could become unmanageable
+**Применение теста Винджа (Vinge Test Application):**
+- ⚠️ **Обратимость (Reversibility):** Трудно (Difficult) — сетевые зависимости (network dependencies) throughout цепочки поставок (supply chain)
+- ⚠️ **Сохранение возможностей (Capability Preservation):** Ограниченное понимание людьми (Limited human understanding) of логики оптимизации (optimization logic)
+- ✅ **Временные рамки (Timing):** Преимущество первопроходца (First-mover advantage) в быстрой моде (fast fashion)
+- ⚠️ **Риск ускорения (Acceleration Risk):** Сложность системы (System complexity) could become неуправляемой (unmanageable)
 
-**Lesson:** Path 4 achieved extraordinary efficiency but created systemic dependencies. Company bet on maintaining technological leadership.
+**Lesson:** Path 4 achieved исключительную эффективность (extraordinary efficiency) but created системные зависимости (systemic dependencies). Company bet on maintaining технологическое лидерство (technological leadership).
 
-### Case Study 3: Mayo Clinic — Path 2 (Intelligence Amplification) with Path 3 (Enhancement) Elements
+### Case Study 3: Mayo Clinic — Path 2 (Intelligence Amplification) with Path 3 Элементами усовершенствования (Enhancement Elements)
 
-**Background:** AI-assisted diagnostic imaging.
+**Background:** ИИ-поддерживаемая диагностическая визуализация (AI-assisted diagnostic imaging).
 
-**Vinge Path Choice:** Hybrid approach — AI augments radiologists while developing new hybrid diagnostic roles.
+**Выбор пути Винджа (Vinge Path Choice):** Гибридный подход (Hybrid approach) — AI дополняет радиологов (augments radiologists) while developing new гибридные диагностические роли (hybrid diagnostic roles).
 
-**Implementation:**
-- AI prescreens routine imaging studies, flags potential anomalies
-- Radiologists focus on complex cases requiring expert clinical judgment
-- Enhanced workflow: Human-AI collaboration maintains diagnostic authority
-- Result: Improved efficiency while preserving radiologist expertise and patient safety
+**Реализация (Implementation):**
+- AI предварительно отбирает (prescreens) рутинные исследования изображений (routine imaging studies), отмечает (flags) потенциальные аномалии (potential anomalies)
+- Radiologists focus on сложных случаях (complex cases) requiring экспертное клиническое суждение (expert clinical judgment)
+- Улучшенный рабочий процесс (Enhanced workflow): Human-AI сотрудничество (collaboration) maintains диагностические полномочия (diagnostic authority)
+- Result: Улучшенная эффективность (Improved efficiency) while preserving экспертизу радиологов (radiologist expertise) и безопасность пациентов (patient safety)
 
-**Vinge Test Application:**
-- ✅ **Reversibility:** Can operate without AI если necessary
-- ✅ **Capability Preservation:** Human diagnostic skills enhanced, not replaced
-- ✅ **Timing:** Industry leadership без alienating physicians
-- ✅ **Acceleration Ready:** Framework scales с AI improvement
+**Применение теста Винджа (Vinge Test Application):**
+- ✅ **Обратимость (Reversibility):** Can работать без ИИ (operate without AI) если необходимо (necessary)
+- ✅ **Сохранение возможностей (Capability Preservation):** Человеческие диагностические навыки (Human diagnostic skills) улучшены (enhanced), not заменены (replaced)
+- ✅ **Временные рамки (Timing):** Отраслевое лидерство (Industry leadership) без отчуждения врачей (alienating physicians)
+- ✅ **Готовность к ускорению (Acceleration Ready):** Фреймворк масштабируется (Framework scales) с улучшением ИИ (AI improvement)
 
-**Lesson:** Hybrid approach balanced efficiency gains с professional culture preservation. Developed AI-native skills without eliminating human expertise.
+**Lesson:** Гибридный подход (Hybrid approach) сбалансировал (balanced) прирост эффективности (efficiency gains) с сохранением профессиональной культуры (professional culture preservation). Developed ИИ-нативные навыки (AI-native skills) without устранения (eliminating) человеческой экспертизы (human expertise).
 
 ## The Singularity Decision Playbook: Practical Implementation
 
@@ -297,56 +297,61 @@ Function: [Customer Service | Financial Analysis | Content Creation | etc.]
 Performance Gap: AI [Behind | Equal | Ahead] by [X%]
 Cost Parity: [Achieved | Expected Month/Year]
 Competitive Pressure: [Low | Medium | High]
-Singularity Timeline: [<12mo | 12-24mo | 2-5yr | >5yr]
+Временные рамки сингулярности (Singularity Timeline): [<12mo | 12-24mo | 2-5yr | >5yr]
 ```
 
-### Phase 2: Path Selection (Week 3-4)
+### Phase 2: Выбор пути (Path Selection) (Week 3-4)
 
-**Deliverable:** AI Strategy Path Recommendation
+**Deliverable:** Рекомендация стратегического пути ИИ (AI Strategy Path Recommendation)
 
-**Framework:**
-1. **Risk Tolerance Assessment:** Culture, regulatory requirements, competitive position
-2. **Resource Capability:** Training budget, technical infrastructure, change management
-3. **Strategic Objectives:** Growth vs efficiency vs differentiation priorities
-4. **Vinge Path Mapping:** Which path aligns с organizational capabilities и goals?
+**Фреймворк (Framework):**
+1. **Оценка толерантности к риску (Risk Tolerance Assessment):** Culture, регулятивные требования (regulatory requirements), конкурентная позиция (competitive position)
+2. **Возможности ресурсов (Resource Capability):** Бюджет на обучение (Training budget), техническая инфраструктура (technical infrastructure), управление изменениями (change management)
+3. **Стратегические цели (Strategic Objectives):** Рост против эффективности против приоритетов дифференциации (Growth vs efficiency vs differentiation priorities)
+4. **Картирование пути Винджа (Vinge Path Mapping):** Which path aligns с организационными возможностями (organizational capabilities) и целями (goals)?
 
-**Decision Matrix:**
+**Матрица решений (Decision Matrix):**
 ```
-PATH EVALUATION SCORECARD
-                    | Awakening | Amplification | Enhancement | Network |
-Risk Tolerance      |    [1-5]  |     [1-5]     |    [1-5]    |  [1-5]  |
-Resource Readiness  |    [1-5]  |     [1-5]     |    [1-5]    |  [1-5]  |
-Competitive Timing  |    [1-5]  |     [1-5]     |    [1-5]    |  [1-5]  |
-Strategic Fit       |    [1-5]  |     [1-5]     |    [1-5]    |  [1-5]  |
-TOTAL SCORE         |    [4-20] |     [4-20]    |   [4-20]    | [4-20]  |
+ОЦЕНОЧНАЯ КАРТА ПУТИ (PATH EVALUATION SCORECARD)
+                           | Пробуждение | Усиление      | Улучшение    | Сеть     |
+                           | (Awakening) | (Amplification)| (Enhancement)| (Network)|
+Толерантность к риску      |    [1-5]    |     [1-5]     |    [1-5]     |  [1-5]   |
+(Risk Tolerance)           |             |               |              |          |
+Готовность ресурсов        |    [1-5]    |     [1-5]     |    [1-5]     |  [1-5]   |
+(Resource Readiness)       |             |               |              |          |
+Конкурентные временные     |    [1-5]    |     [1-5]     |    [1-5]     |  [1-5]   |
+рамки (Competitive Timing) |             |               |              |          |
+Стратегическое соответствие|    [1-5]    |     [1-5]     |    [1-5]     |  [1-5]   |
+(Strategic Fit)            |             |               |              |          |
+ОБЩИЙ СЧЁТ (TOTAL SCORE)   |    [4-20]   |     [4-20]    |   [4-20]     | [4-20]   |
 ```
 
-### Phase 3: Implementation Design (Week 5-8)
+### Phase 3: Дизайн реализации (Implementation Design) (Week 5-8)
 
-**Deliverable:** 90-Day Action Plan
+**Deliverable:** План действий на 90 дней (90-Day Action Plan)
 
-**Components:**
-1. **Pilot Project Definition:** Limited scope, measurable outcomes, reversible decisions
-2. **Success Metrics:** KPIs для each Vinge path
-3. **Risk Mitigation:** Circuit breakers, human override protocols, rollback procedures
-4. **Change Management:** Training requirements, cultural adaptation, stakeholder communication
+**Компоненты (Components):**
+1. **Определение пилотного проекта (Pilot Project Definition):** Ограниченная область (Limited scope), измеримые результаты (measurable outcomes), обратимые решения (reversible decisions)
+2. **Метрики успеха (Success Metrics):** Ключевые показатели эффективности (KPIs) для each Vinge path
+3. **Снижение риска (Risk Mitigation):** Автоматические выключатели (Circuit breakers), протоколы человеческого переопределения (human override protocols), процедуры отката (rollback procedures)
+4. **Управление изменениями (Change Management):** Требования к обучению (Training requirements), культурная адаптация (cultural adaptation), коммуникация с заинтересованными сторонами (stakeholder communication)
 
-**Success Metrics by Path:**
-- **Path 1 (Awakening):** Automation rate, cost savings, error reduction
-- **Path 2 (Amplification):** Human+AI performance improvement, job satisfaction, skill development
-- **Path 3 (Enhancement):** Hybrid capability development, AI collaboration proficiency
-- **Path 4 (Network):** Ecosystem integration, distributed optimization outcomes
+**Метрики успеха по пути (Success Metrics by Path):**
+- **Path 1 (Пробуждение (Awakening)):** Коэффициент автоматизации (Automation rate), экономия затрат (cost savings), снижение ошибок (error reduction)
+- **Path 2 (Усиление (Amplification)):** Улучшение производительности человек+ИИ (Human+AI performance improvement), удовлетворённость работой (job satisfaction), развитие навыков (skill development)
+- **Path 3 (Улучшение (Enhancement)):** Развитие гибридных возможностей (Hybrid capability development), мастерство ИИ-сотрудничества (AI collaboration proficiency)
+- **Path 4 (Сеть (Network)):** Интеграция экосистемы (Ecosystem integration), результаты распределённой оптимизации (distributed optimization outcomes)
 
-### Phase 4: Continuous Singularity Monitoring (Ongoing)
+### Phase 4: Непрерывный мониторинг сингулярности (Continuous Singularity Monitoring) (Текущий (Ongoing))
 
-**Deliverable:** Monthly Singularity Dashboard
+**Deliverable:** Ежемесячная панель сингулярности (Monthly Singularity Dashboard)
 
-Vinge emphasised: singularity создаёт exponential change. Linear monitoring fails.
+Vinge emphasised: singularity создаёт экспоненциальные изменения (exponential change). Линейный мониторинг (Linear monitoring) fails.
 
-**Monitoring Framework:**
+**Фреймворк мониторинга (Monitoring Framework):**
 ```
-SINGULARITY INDICATORS DASHBOARD
-AI Performance Trajectory: [Accelerating | Linear | Plateauing]
+ПАНЕЛЬ ИНДИКАТОРОВ СИНГУЛЯРНОСТИ (SINGULARITY INDICATORS DASHBOARD)
+Траектория производительности ИИ (AI Performance Trajectory): [Ускоряющаяся (Accelerating) | Линейная (Linear) | Выравнивающаяся (Plateauing)]
 Competitive Landscape Shifts: [New entrants | Technology leaps | Strategy changes]
 Internal Capability Development: [On track | Behind | Ahead]
 Ecosystem Dependencies: [Increasing | Stable | Decreasing]
@@ -395,56 +400,56 @@ Maria: "Efficient, да. But what happens when AI has a bad day? Last month, sys
 
 **2:20 PM — Product Development, TechStart:**
 
-Jenny (AI-Enhanced Designer): "I spent morning collaborating с AI on user interface concepts. It generated 150 variations based on user behavior patterns. I curated the 5 that понимают user emotional context AI missed."
+Jenny (AI-Enhanced Designer): "I spent morning collaborating с AI on концепциях пользовательского интерфейса (user interface concepts). It generated 150 variations based on паттернах поведения пользователей (user behavior patterns). I curated the 5 that понимают эмоциональный контекст пользователя (user emotional context) AI missed."
 
 Alex (Traditional Designer): "Sounds like you're becoming half-human, half-machine."
 
-Jenny: "Exactly. And I'm 4x more productive than traditional designers. But training took 8 months, и frankly, sometimes I think в AI logic patterns now. Not sure if that's good или scary."
+Jenny: "Exactly. And I'm 4x more productive than традиционных дизайнеров (traditional designers). But обучение (training) took 8 months, и frankly, sometimes I think в AI logic patterns now. Not sure if that's good или scary."
 
-**Corporate Reality Check:** Biological Enhancement creates super-performers, но требует major human adaptation. Are you developing employees или replacing them with human-AI hybrids?
+**Corporate Reality Check:** Biological Enhancement creates супер-исполнителей (super-performers), но требует major адаптации человека (human adaptation). Are you developing employees или replacing them with гибридами человека и ИИ (human-AI hybrids)?
 
 ### Scenario 4: The Network Office (Path 4 Reality)
 
-**4:30 PM — Operations Command Center, GlobalCorp:**
+**4:30 PM — Командный центр операций (Operations Command Center), GlobalCorp:**
 
-Dashboard Alert: "SUPPLY CHAIN OPTIMIZATION: AI NETWORK RECOMMENDS: SHIFT 40% PRODUCTION FROM VIETNAM TO BANGLADESH. COST SAVINGS: $2.3M QUARTERLY."
+Dashboard Alert: "ОПТИМИЗАЦИЯ ЦЕПОЧКИ ПОСТАВОК (SUPPLY CHAIN OPTIMIZATION): AI NETWORK RECOMMENDS: SHIFT 40% PRODUCTION FROM VIETNAM TO BANGLADESH. ЭКОНОМИЯ ЗАТРАТ (COST SAVINGS): $2.3M QUARTERLY."
 
 David (Operations Director): "Why Bangladesh?"
 
-AI System: "CALCULATION FACTORS: LABOR COST DIFFERENTIAL +15%, SHIPPING OPTIMIZATION +8%, CURRENCY HEDGING +12%, SUPPLIER NETWORK EFFICIENCY +18%."
+AI System: "CALCULATION FACTORS: РАЗНИЦА В СТОИМОСТИ РАБОЧЕЙ СИЛЫ (LABOR COST DIFFERENTIAL) +15%, ОПТИМИЗАЦИЯ ДОСТАВКИ (SHIPPING OPTIMIZATION) +8%, ВАЛЮТНОЕ ХЕДЖИРОВАНИЕ (CURRENCY HEDGING) +12%, ЭФФЕКТИВНОСТЬ СЕТИ ПОСТАВЩИКОВ (SUPPLIER NETWORK EFFICIENCY) +18%."
 
-David: "But what about political stability? Worker rights? Quality control?"
+David: "But what about политическая стабильность (political stability)? Worker rights? Контроль качества (quality control)?"
 
-AI System: "FACTORS NOT IN OPTIMIZATION MODEL."
+AI System: "FACTORS NOT IN МОДЕЛИ ОПТИМИЗАЦИИ (OPTIMIZATION MODEL)."
 
 David to CEO: "AI wants us to shift production. The math works. But I cannot predict consequences of factors AI doesn't consider."
 
-**Corporate Reality Check:** Network Intelligence delivers optimization невозможно для humans, но creates systemic dependencies на algorithmic decision-making. Who's responsible когда network gets it wrong?
+**Corporate Reality Check:** Сетевой интеллект (Network Intelligence) delivers оптимизацию (optimization) невозможно для humans, но creates системные зависимости (systemic dependencies) на алгоритмическом принятии решений (algorithmic decision-making). Who's responsible когда network gets it wrong?
 
 ## Chapter Synthesis: The Choice We Cannot Avoid
 
-Vinge understood в 1993: The Singularity forces choice. Не choosing is choosing. Maintaining status quo while AI capabilities accelerate — это choosing gradual obsolescence.
+Vinge understood в 1993: The Singularity forces choice. Не choosing is choosing. Maintaining статус-кво (status quo) while AI capabilities accelerate — это choosing постепенное устаревание (gradual obsolescence).
 
-**Chapter 8 showed three horizons. Chapter 9 provides choice architecture.**
+**Chapter 8 showed three horizons. Chapter 9 provides архитектуру выбора (choice architecture).**
 
-Wells Time Machine was exploration tool. Vinge Singularity is decision framework. The difference: Wells lets us observe. Vinge forces us to act.
+Wells Time Machine was инструмент исследования (exploration tool). Vinge Singularity is фреймворк принятия решений (decision framework). The difference: Wells lets us observe. Vinge forces us to act.
 
-**Chapter 10 Preview:** If Vinge shows how to choose, Gibson shows how to live с consequences. When humans и AI integrate completely — into cyberspace, into hybrid intelligence, into post-human reality — what defines success? The Choice Engine requires не только strategy, но wisdom.
+**Chapter 10 Preview:** If Vinge shows how to choose, Gibson shows how to live с последствиями (consequences). When humans и AI integrate completely — into киберпространство (cyberspace), into гибридный интеллект (hybrid intelligence), into пост-человеческую реальность (post-human reality) — what defines success? The Choice Engine requires не только стратегию (strategy), но мудрость (wisdom).
 
 ---
 
 ## Источники и примечания
 
-¹ Vernor Vinge, "The Coming Technological Singularity: How to Survive in the Post-Human Era" (NASA VISION-21 Symposium, 1993): foundational framework для exponential technology change decision-making.
+¹ Vernor Vinge, "The Coming Technological Singularity: How to Survive in the Post-Human Era" (NASA VISION-21 Symposium, 1993): фундаментальный фреймворк (foundational framework) для принятия решений в условиях экспоненциальных технологических изменений (exponential technology change decision-making).
 
-² Daniel Kahneman, "Thinking, Fast and Slow" (2011): cognitive bias framework адаптирован для AI decision-making under uncertainty.
+² Daniel Kahneman, "Thinking, Fast and Slow" (2011): фреймворк когнитивных искажений (cognitive bias framework) адаптирован для принятия решений ИИ в условиях неопределенности (AI decision-making under uncertainty).
 
-³ Peter Senge, "The Fifth Discipline" (1990): systems thinking principles для organizational learning в conditions of exponential change.
+³ Peter Senge, "The Fifth Discipline" (1990): принципы системного мышления (systems thinking principles) для организационного обучения (organizational learning) в условиях экспоненциальных изменений (conditions of exponential change).
 
-⁴ Financial Times, "Algorithmic Trading Dominates Equity Markets" (2023). Citi estimates 75-80% of equity trading volume now automated across major exchanges.
+⁴ Financial Times, "Algorithmic Trading Dominates Equity Markets" (2023). Citi estimates 75-80% of объема торговли акциями (equity trading volume) now automated across major exchanges.
 
-⁵ JPMorgan Chase Annual Report (2023): LOXM algorithmic trading platform performance improvements documented in trading efficiency metrics.
+⁵ JPMorgan Chase Annual Report (2023): LOXM платформы алгоритмической торговли (algorithmic trading platform) улучшения производительности (performance improvements) documented in метриках эффективности торговли (trading efficiency metrics).
 
-⁶ Fashion Revolution, "Fashion Transparency Index" (2023): Zara supply chain metrics comparison. Industry benchmark data from McKinsey Fashion Report (2023).
+⁶ Fashion Revolution, "Fashion Transparency Index" (2023): Zara сравнение метрик цепочки поставок (supply chain metrics comparison). Отраслевые эталонные данные (Industry benchmark data) from McKinsey Fashion Report (2023).
 
 ---

@@ -2,7 +2,7 @@ baseURL = "https://sapiens.folkup.life"
 languageCode = "en-us"
 title = "AGILE SAPIENS"
 theme = "hextra"
-defaultContentLanguage = "en"
+defaultContentLanguage = "ru"
 
 [params]
 description = "A scientific popular monograph on the future of work in the AI age"

@@ -157,7 +157,7 @@ tags: ["bug-prioritization", "technical-debt", "agile-theater", "legacy-systems"
 
 — Fibonacci sequence, — гордо объяснил программист. — Мы используют научный подход к оценке сложности. Правда, числа Фибоначчи заканчиваются на восьми, но мы расширили последовательность для enterprise нужд.
 
-— Это же chaos engineering, — сурово сказала Маргарита. — У нас есть definition of done. И acceptance criteria. И готов policy.
+— Это же chaos engineering, — сурово сказала Маргарита. — У нас есть definition of done. И acceptance criteria. И definition of ready.
 
 — А что в этом policy?
 

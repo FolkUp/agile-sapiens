@@ -1,15 +1,3 @@
----
-title: "ИНТЕРМЕДИЯ I — Консультационные апартаменты"
-weight: 1
-category: intermezzo
-status: verified
-confidence: high
-tags: ["intermezzo", "stylistic"]
-sources: []
-related: []
-date_created: "2026-04-17"
-date_updated: "2026-04-17"
----
 
 # ИНТЕРМЕДИЯ I — Консультационные апартаменты
 

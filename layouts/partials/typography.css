@@ -1,0 +1,491 @@
+/* AGILE SAPIENS Brand Guide v2.5 Typography System
+ * Enhanced Alice v2.0 Level 3 Typography Architecture
+ * GDPR-compliant self-hosted fonts + 1.25 Major Third scale
+ * Production-ready cross-platform publishing pipeline
+ */
+
+/* =============================================================================
+   LAYER ARCHITECTURE - Enhanced Alice v2.0 Level 3
+   ========================================================================== */
+@layer brand-guide-v2-5, classical-foundation, utilities;
+
+/* =============================================================================
+   FONT FACE DECLARATIONS - GDPR COMPLIANT SELF-HOSTING
+   ========================================================================== */
+
+@layer brand-guide-v2-5 {
+
+  /* Pacifico - Brand/Logo Font (Warm Hand-lettered Script) */
+  @font-face {
+    font-family: 'Pacifico';
+    src: url('/fonts/pacifico/pacifico-regular.woff2') format('woff2'),
+         url('/fonts/pacifico/pacifico-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+  }
+
+  /* Playfair Display - Headings (Classical Serif) */
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('/fonts/playfair-display/playfair-display-regular.woff2') format('woff2'),
+         url('/fonts/playfair-display/playfair-display-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+  }
+
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('/fonts/playfair-display/playfair-display-bold.woff2') format('woff2'),
+         url('/fonts/playfair-display/playfair-display-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+  }
+
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('/fonts/playfair-display/playfair-display-italic.woff2') format('woff2'),
+         url('/fonts/playfair-display/playfair-display-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+  }
+
+  /* Source Sans 3 - Body Text (Clean Modern Sans-serif) */
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('/fonts/source-sans-3/source-sans-3-regular.woff2') format('woff2'),
+         url('/fonts/source-sans-3/source-sans-3-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('/fonts/source-sans-3/source-sans-3-bold.woff2') format('woff2'),
+         url('/fonts/source-sans-3/source-sans-3-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('/fonts/source-sans-3/source-sans-3-italic.woff2') format('woff2'),
+         url('/fonts/source-sans-3/source-sans-3-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+  }
+
+/* =============================================================================
+   BRAND GUIDE v2.5 CSS CUSTOM PROPERTIES
+   ========================================================================== */
+
+  :root {
+    /* Typography Families - Brand Guide v2.5 Standard */
+    --font-brand: 'Pacifico', cursive;                    /* Logo, warm hand-lettered */
+    --font-heading: 'Playfair Display', 'Times New Roman', serif;  /* Headings, classical */
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; /* Body text, clean modern */
+    --font-mono: 'Courier New', 'Monaco', 'Menlo', monospace;  /* Code blocks */
+
+    /* Brand Guide v2.5 Color Palette D: "Библиотека во дворе" */
+    --color-primary: #7D4450;        /* Мягкий бордо - заголовки, кнопки, header */
+    --color-secondary: #839E75;      /* Приглушённый шалфей - sidebar, теги, бейджи */
+    --color-accent: #E8AD4A;         /* Тёплый янтарь - свет фонаря, CTA, hover */
+    --color-neutral-dark: #2A2317;   /* Тёмный шоколад - основной текст */
+    --color-neutral-medium: #8B7866; /* Капучино - вторичный текст */
+    --color-neutral-light: #F5F1EA;  /* Кремовый - фон карточек */
+    --color-background: #FEFCF6;     /* Слоновая кость - основной фон */
+
+    /* Brand Guide v2.5 Type Scale - 1.25 Major Third */
+    --type-ratio: 1.25;
+    --type-base-size: 1rem;          /* 16px baseline */
+
+    /* Responsive Base Size with Fluid Scaling */
+    --type-base-fluid: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+
+    /* Type Scale Calculations - 1.25 Major Third Progression */
+    --type-xs: calc(var(--type-base-fluid) / var(--type-ratio) / var(--type-ratio));    /* ~0.64rem */
+    --type-sm: calc(var(--type-base-fluid) / var(--type-ratio));                         /* ~0.8rem */
+    --type-base: var(--type-base-fluid);                                                /* 1rem */
+    --type-lg: calc(var(--type-base-fluid) * var(--type-ratio));                        /* ~1.25rem */
+    --type-xl: calc(var(--type-lg) * var(--type-ratio));                               /* ~1.563rem */
+    --type-2xl: calc(var(--type-xl) * var(--type-ratio));                              /* ~1.953rem */
+    --type-3xl: calc(var(--type-2xl) * var(--type-ratio));                             /* ~2.441rem */
+    --type-4xl: calc(var(--type-3xl) * var(--type-ratio));                             /* ~3.052rem */
+    --type-5xl: calc(var(--type-4xl) * var(--type-ratio));                             /* ~3.815rem */
+
+    /* Line Heights - Optimized for Readability */
+    --line-height-tight: 1.25;       /* Headings, display text */
+    --line-height-snug: 1.375;       /* Subheadings */
+    --line-height-normal: 1.5;       /* Default */
+    --line-height-relaxed: 1.625;    /* Body text, optimal reading */
+    --line-height-loose: 1.75;       /* Large text, accessibility */
+
+    /* Spacing System - Based on Type Scale */
+    --space-xs: 0.25rem;    /* 4px */
+    --space-sm: 0.5rem;     /* 8px */
+    --space-base: 1rem;     /* 16px */
+    --space-lg: 1.5rem;     /* 24px */
+    --space-xl: 2rem;       /* 32px */
+    --space-2xl: 3rem;      /* 48px */
+    --space-3xl: 4rem;      /* 64px */
+    --space-4xl: 6rem;      /* 96px */
+
+    /* Reading Optimization */
+    --line-length-optimal: 65ch;     /* Optimal reading measure */
+    --line-length-compact: 45ch;     /* Narrow columns */
+    --line-length-wide: 85ch;        /* Wide content */
+  }
+
+/* =============================================================================
+   BASE TYPOGRAPHY SYSTEM
+   ========================================================================== */
+
+  /* Reset and Foundation */
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: var(--type-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-neutral-dark);
+    background-color: var(--color-background);
+    font-feature-settings: "liga" 1, "kern" 1, "onum" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Brand Typography */
+  .brand-text {
+    font-family: var(--font-brand);
+    color: var(--color-primary);
+    font-weight: 400;
+  }
+
+  /* Heading Hierarchy - Playfair Display */
+  h1, h2, h3, h4, h5, h6,
+  .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    color: var(--color-primary);
+    margin: 0 0 var(--space-lg) 0;
+    font-feature-settings: "liga" 1, "kern" 1, "lnum" 1;
+  }
+
+  h1, .heading-1 {
+    font-size: var(--type-4xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  h2, .heading-2 {
+    font-size: var(--type-3xl);
+    margin-top: var(--space-2xl);
+  }
+
+  h3, .heading-3 {
+    font-size: var(--type-2xl);
+    margin-top: var(--space-xl);
+  }
+
+  h4, .heading-4 {
+    font-size: var(--type-xl);
+    margin-top: var(--space-lg);
+  }
+
+  h5, .heading-5 {
+    font-size: var(--type-lg);
+    margin-top: var(--space-lg);
+  }
+
+  h6, .heading-6 {
+    font-size: var(--type-base);
+    margin-top: var(--space-base);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Body Text - Source Sans 3 */
+  p {
+    margin: 0 0 var(--space-lg) 0;
+    max-width: var(--line-length-optimal);
+  }
+
+  .lead {
+    font-size: var(--type-lg);
+    line-height: var(--line-height-normal);
+    color: var(--color-neutral-dark);
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Text Emphasis */
+  strong, b {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  em, i {
+    font-style: italic;
+    color: var(--color-neutral-dark);
+  }
+
+  small {
+    font-size: var(--type-sm);
+    color: var(--color-neutral-medium);
+  }
+
+  /* Links */
+  a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.125em;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+  }
+
+  a:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Lists */
+  ul, ol {
+    margin: 0 0 var(--space-lg) 0;
+    padding-left: var(--space-xl);
+    max-width: var(--line-length-optimal);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    margin: var(--space-xl) 0;
+    padding: var(--space-lg) var(--space-xl);
+    border-left: 4px solid var(--color-accent);
+    background-color: var(--color-neutral-light);
+    font-style: italic;
+    color: var(--color-neutral-medium);
+  }
+
+  blockquote p {
+    margin-bottom: var(--space-base);
+  }
+
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Code */
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background-color: var(--color-neutral-light);
+    padding: 0.125em 0.25em;
+    border-radius: 3px;
+    color: var(--color-neutral-dark);
+  }
+
+  pre {
+    font-family: var(--font-mono);
+    font-size: var(--type-sm);
+    background-color: var(--color-neutral-light);
+    padding: var(--space-lg);
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: var(--space-lg) 0;
+    line-height: var(--line-height-normal);
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-xl) 0;
+    font-feature-settings: "lnum" 1, "tnum" 1;
+  }
+
+  th, td {
+    padding: var(--space-base) var(--space-lg);
+    text-align: left;
+    border-bottom: 1px solid var(--color-neutral-light);
+  }
+
+  th {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--color-neutral-light);
+  }
+
+/* =============================================================================
+   CROSS-PLATFORM PUBLISHING UTILITIES
+   ========================================================================== */
+
+  /* Print Optimization */
+  @media print {
+    :root {
+      --type-base: 12pt;
+      --color-primary: #000;
+      --color-neutral-dark: #000;
+      --color-background: #fff;
+    }
+
+    body {
+      font-size: 12pt;
+      line-height: 1.4;
+      color: #000;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #000;
+      page-break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+  }
+
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    :root {
+      --color-primary: #000;
+      --color-neutral-dark: #000;
+      --color-neutral-medium: #666;
+      --color-background: #fff;
+    }
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-primary: #E8AD4A;        /* Accent becomes primary in dark */
+      --color-secondary: #839E75;
+      --color-accent: #7D4450;         /* Primary becomes accent in dark */
+      --color-neutral-dark: #F5F1EA;   /* Light becomes dark */
+      --color-neutral-medium: #C4B8A5;
+      --color-neutral-light: #2A2317;  /* Dark becomes light */
+      --color-background: #1A1612;     /* Deep brown background */
+    }
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 768px) {
+    :root {
+      --type-base-fluid: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
+      --space-base: 0.875rem;
+      --line-length-optimal: 100%;
+    }
+
+    h1, .heading-1 {
+      font-size: var(--type-3xl);
+    }
+
+    h2, .heading-2 {
+      font-size: var(--type-2xl);
+    }
+  }
+
+/* =============================================================================
+   AGILE SAPIENS SPECIFIC ENHANCEMENTS
+   ========================================================================== */
+
+  /* Chapter Titles */
+  .chapter-title {
+    font-family: var(--font-heading);
+    font-size: var(--type-4xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: var(--space-4xl) 0 var(--space-2xl) 0;
+    text-align: center;
+  }
+
+  /* Book Metadata */
+  .book-meta {
+    font-family: var(--font-heading);
+    font-size: var(--type-sm);
+    color: var(--color-neutral-medium);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: var(--space-3xl);
+  }
+
+  /* Academic Citations */
+  .citation {
+    font-size: var(--type-sm);
+    color: var(--color-neutral-medium);
+    font-style: italic;
+  }
+
+  /* Ornamental Separators */
+  .section-break {
+    text-align: center;
+    font-family: var(--font-brand);
+    font-size: var(--type-lg);
+    color: var(--color-accent);
+    margin: var(--space-3xl) 0;
+  }
+
+  /* Drop Caps */
+  .drop-cap::first-letter {
+    font-family: var(--font-heading);
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 0.8;
+    float: left;
+    margin: 0.1em 0.1em 0 0;
+    color: var(--color-primary);
+  }
+
+} /* End @layer brand-guide-v2-5 */

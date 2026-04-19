@@ -1,5 +1,6 @@
 # Hugo build outputs
 public/
+public-en/
 resources/
 .hugo_build.lock
 
@@ -29,3 +30,6 @@ node_modules/
 # Build artifacts
 temp-build/
 temp-build-en/
+# Root level build outputs
+*.html
+!layouts/**/*.html

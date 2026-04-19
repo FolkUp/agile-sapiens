@@ -12,16 +12,16 @@ We examine how artificial intelligence is reshaping the nature of work, organiza
 
 ## Vision
 
-**Voice:** "Harari meets Dilbert" — serious analysis with sharp wit
+**Voice:** "Harari meets Dilbert": serious analysis with sharp wit
 **Target:** 500K+ views, industry authority recognition
 **Structure:** 10 chapters, 3 acts
 
 ## Principles
 
-- **Evidence-based** — every claim backed by sources
-- **Independent analysis** — no vendor bias or corporate agenda
-- **Accessible language** — complex ideas explained clearly
-- **Open content** — free, forever
+- **Evidence-based** : every claim backed by sources
+- **Independent analysis** : no vendor bias or corporate agenda
+- **Accessible language** : complex ideas explained clearly
+- **Open content** : free, forever
 
 ## FolkUp Project
 

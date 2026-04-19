@@ -29,13 +29,13 @@ sources:
     year: 1984
     type: "literary"
     confidence: "primary"
-    notes: "Cyberpunk DNA для AI integration texture — jacking in metaphor, Case/Molly archetype"
+    notes: "Cyberpunk DNA для AI integration texture: jacking in metaphor, Case/Molly archetype"
   - title: "Burning Chrome"
     author: "William Gibson"
     year: 1982
     type: "literary"
     confidence: "high"
-    notes: "Origin of cyberspace concept — первое использование термина в литературе"
+    notes: "Origin of cyberspace concept: первое использование термина в литературе"
   - title: "The Paradox of Choice"
     author: "Barry Schwartz"
     year: 2004
@@ -47,7 +47,7 @@ sources:
     year: 2024
     type: "research"
     confidence: "verified"
-    notes: "AI integration methodology — verified source"
+    notes: "AI integration methodology: verified source"
     url: "https://sloanreview.mit.edu/article/want-ai-driven-productivity-redesign-work/"
 related:
   - chapter-8-time-machine
@@ -73,7 +73,7 @@ twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cy
 
 > «The sky above the port was the color of television, tuned to a dead channel.»
 >
-> — William Gibson, "Neuromancer" (1984), но в 2030 мы понимаем: dead channel — это не помехи, а тишина отключённого человеческого интерфейса.
+> — William Gibson, "Neuromancer" (1984), но в 2030 мы понимаем: dead channel: это не помехи, а тишина отключённого человеческого интерфейса.
 
 ## Prologue: The Console Cowboy в корпоративном кубикле
 

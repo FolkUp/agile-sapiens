@@ -21,18 +21,18 @@ Navigate the complete monograph: **10 chapters across 3 acts** exploring how AI 
 *Foundation: How we got here*
 
 {{< cards >}}
-{{< card link="/chapters/chapter-0-pilot" title="Chapter 0: Пилот" icon="play" subtitle="Филеас Фогг и интуитивный Agile — как XIX век изобрёл методологию будущего" >}}
-{{< card link="/chapters/chapter-1-jules-verne" title="Chapter 1: Жюль Верн" icon="book-open" subtitle="Сериализация и итерации — от романа-фельетона до современного спринта" >}}
-{{< card link="/chapters/chapter-2-frankenstein" title="Chapter 2: Франкенштейн" icon="beaker" subtitle="Создание и бегство — почему каждая инновация порождает своего монстра" >}}
-{{< card link="/chapters/chapter-3-holmes" title="Chapter 3: Шерлок Холмс" icon="search" subtitle="Дедуктивная диагностика — как детектив стал прообразом data scientist" >}}
-{{< card link="/chapters/chapter-4-borges" title="Chapter 4: Борхес" icon="map" subtitle="Парадокс измерений — почему точные метрики искажают реальность (Act I завершение)" >}}
+{{< card link="/chapters/chapter-0-pilot" title="Chapter 0: Пилот" icon="play" subtitle="Филеас Фогг и интуитивный Agile: как XIX век изобрёл методологию будущего" >}}
+{{< card link="/chapters/chapter-1-jules-verne" title="Chapter 1: Жюль Верн" icon="book-open" subtitle="Сериализация и итерации: от романа-фельетона до современного спринта" >}}
+{{< card link="/chapters/chapter-2-frankenstein" title="Chapter 2: Франкенштейн" icon="beaker" subtitle="Создание и бегство: почему каждая инновация порождает своего монстра" >}}
+{{< card link="/chapters/chapter-3-holmes" title="Chapter 3: Шерлок Холмс" icon="search" subtitle="Дедуктивная диагностика: как детектив стал прообразом data scientist" >}}
+{{< card link="/chapters/chapter-4-borges" title="Chapter 4: Борхес" icon="map" subtitle="Парадокс измерений: почему точные метрики искажают реальность (Act I завершение)" >}}
 {{< /cards >}}
 
 ## Act II: Transformation (Chapters 5-7)
 *Process: How change happens*
 
 {{< cards >}}
-{{< card link="/chapters/chapter-5-nemo" title="Chapter 5: Капитан Немо" icon="star" subtitle="Sabotage vs Enhancement — выбор между саботажем и симбиозом с технологиями" >}}
+{{< card link="/chapters/chapter-5-nemo" title="Chapter 5: Капитан Немо" icon="star" subtitle="Sabotage vs Enhancement: выбор между саботажем и симбиозом с технологиями" >}}
 {{< card link="/chapters/chapter-6-jekyll-hyde" title="Chapter 6: Доктор Джекил" icon="beaker" subtitle="Intelligence amplification — как инструменты усиления превращают создателей в создания" >}}
 {{< card link="/chapters/chapter-7-don-quixote" title="Chapter 7: Дон Кихот" icon="star" subtitle="Архетип и алгоритм — что происходит когда ИИ видит гигантов вместо ветряных мельниц" >}}
 {{< /cards >}}

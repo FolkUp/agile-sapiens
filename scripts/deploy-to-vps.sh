@@ -85,10 +85,19 @@ ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
 
   echo '[REMOTE] Atomic switch completed'
 
-  # Update nginx configuration if needed
-  if [ -f /etc/nginx/sites-available/${SITE_NAME} ]; then
-    sudo nginx -t && sudo systemctl reload nginx
-    echo '[REMOTE] Nginx configuration reloaded'
+  # Docker bind mount follows symlink target at container start — restarting
+  # forces re-resolve после атомарного свича. Без этого контейнер держит
+  # stale inode старого релиза, который cleanup потом удаляет → 403/404.
+  # AGIL-106 root cause fix.
+  if docker ps --format '{{.Names}}' | grep -q '^${SITE_NAME}\$'; then
+    docker compose -f /home/deploy/${SITE_NAME}/docker-compose.yml restart ${SITE_NAME}
+    echo '[REMOTE] Container restarted to re-resolve bind mount'
+  else
+    # Legacy fallback: classic nginx site-config reload if not containerized
+    if [ -f /etc/nginx/sites-available/${SITE_NAME} ]; then
+      sudo nginx -t && sudo systemctl reload nginx
+      echo '[REMOTE] Nginx configuration reloaded'
+    fi
   fi
 
   # Log deployment

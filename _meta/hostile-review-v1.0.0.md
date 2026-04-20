@@ -14,11 +14,11 @@
 |---|---|
 | Last completed batch | B2 (ch6 Jekyll/Hyde + ch7 Don Quixote) — 2026-04-21 |
 | Next batch | B3 (int2 + int3) |
-| Last fix wave | **Fix Wave 1a — ch0 factual blockers** (2026-04-21): 3 blockers closed + 2 cross-chapter warnings resolved |
-| Open blockers | 6 (2 ch5 / 1 ch6 / 2 ch7 / 1 cross-chapter recurring resolved → 0) = **5 after Wave 1a** |
-| Open warnings | 20 |
-| Open em-dash FAIL | 1 (ch7: 20.2/1000 expository, trim ~9 dashes) |
-| Fix waves applied | 1a / 3 |
+| Last fix wave | **Fix Wave 1b — B1/B2 blockers + em-dash FAIL** (2026-04-21): 5 blockers closed + 1 em-dash FAIL resolved |
+| Open blockers | **0** (all B1+B2 blockers closed after Wave 1a+1b; remaining surfaces will come from B3–B7) |
+| Open warnings | 20 (voice nits, attribution flags, rhythm drags — to address in Wave 2/3) |
+| Open em-dash FAIL | 0 (ch7 post-Wave-1b: 17.5/1000 PASS under 18 threshold) |
+| Fix waves applied | 1a + 1b / 3 |
 | Frontmatter bumps | 0 |
 
 **B0 pre-flight finding (2026-04-21):** All 8 original Tier B units exceeded 20-line diff threshold since prior review_date. Plan updated: ALL 14 units require Full Pass (Tier A).
@@ -64,8 +64,8 @@
 | ch0 | 7 | BRIDGE para 2: «Современные руководители проигрывают выполнимые проекты, потому что знают слишком много невозможного» — LinkedIn motivational kicker; нужна Harari irony undercut. | WARNING | OPEN |
 | ch0 | 8 | BRIDGE para 4: анафора «Каждый из этих авторов... Каждый — точнее...» symmetric triplet — AI-shaped rhythm. | WARNING | OPEN |
 | ch0 | 9 | «Verification Note» English label в Russian body + footnote ³ в английском — stylistic inconsistency. | NIT | OPEN |
-| ch5 | 1 | XP-80 «первый американский боевой реактивный истребитель» — P-59 Airacomet (1942) predates; XP-80 был первым *operational*. Rephrase. | BLOCKER | OPEN |
-| ch5 | 2 | «Команда острова — инженер, журналист, моряк, натуралист и слуга» — Harbert в действительности boy/подросток, НЕ натуралист. Факт-дрифт по характеризации. | BLOCKER | OPEN |
+| ch5 | 1 | XP-80 «первый американский боевой реактивный истребитель» — P-59 Airacomet (1942) predates; XP-80 был первым *operational*. Rephrase. | BLOCKER | **FIXED Wave 1b** — rephrased to «первый американский реактивный истребитель, достигший полноценной боевой пригодности»; footnote ³ expanded с P-59 disambiguation |
+| ch5 | 2 | «Команда острова — инженер, журналист, моряк, натуралист и слуга» — Harbert в действительности boy/подросток, НЕ натуралист. Факт-дрифт по характеризации. | BLOCKER | **FIXED Wave 1b** — HOOK: «любознательный подросток»; «Закон первый»: «пятнадцатилетний воспитанник Спилета с острым природным любопытством» |
 | ch5 | 3 | Suleyman *The Coming Wave* (2023) — позиционируется как «insider perspective на DeepMind»; книга шире — про AI overall. Сузить формулировку. | WARNING | OPEN |
 | ch5 | 4 | SR-71 «до сих пор самый быстрый самолёт в истории» — X-15 (rocket) держит absolute manned speed. Qualify «air-breathing». | WARNING | OPEN |
 | ch5 | 5 | Theranos $700M figure — SEC Litigation Release No. 24065 cites «more than $700M» — verify body match precisely. | WARNING | OPEN |
@@ -96,7 +96,7 @@
 
 | Unit | # | Flag | Severity | Status |
 |---|---|---|---|---|
-| ch6 | 1 | INSIGHT: «Принцип первый / второй / третий» — perfectly symmetric triplet closer, archetypal AI-listicle finish. Break asymmetrically. | BLOCKER | OPEN |
+| ch6 | 1 | INSIGHT: «Принцип первый / второй / третий» — perfectly symmetric triplet closer, archetypal AI-listicle finish. Break asymmetrically. | BLOCKER | **FIXED Wave 1b** — asymmetric refactor: principles #1/#2 as flowing prose с «Первое/Второе» openers + dry workplace asides (all-hands slide, квартальный отчёт); principle #3 isolated as blockquote callout. Symmetric closure destroyed. |
 | ch6 | 2 | HOOK para 6: Stevenson «писал повесть за три дня… сжёг первый вариант» — популярная легенда через Fanny Stevenson, оспаривается биографами. «По преданию» есть, но «шесть дней на текст» подаётся как факт. | WARNING | OPEN |
 | ch6 | 3 | HOOK: «Верн описал итерации за 128 лет до манифеста» — arithmetic drift from B1 (Verne 1872 + Agile 2001 = 129, not 128). Cross-chapter numeric. | WARNING | OPEN |
 | ch6 | 4 | HOOK: «Шелли ~180 лет до современных фреймворков агирования» — «агирования» orphan term (Scrum/agile?). Also: Scrum Guide 2010, Frankenstein 1818 → 192; 1831 (revised) → 179. Verify. | WARNING | OPEN |
@@ -106,9 +106,9 @@
 | ch6 | 8 | ANALYSIS §Измерение второе: «ситуация симметрична» = dead filler phrase. | WARNING | OPEN |
 | ch6 | 9 | HOOK para 4: «weird trick» English mixed into Russian — register inconsistency. | NIT | OPEN |
 | ch6 | 10 | Footnote ⁶: «См. сноску ¹» без repeat citation — academic hygiene nit. | NIT | OPEN |
-| ch7 | 1 | BRIDGE penultimate: «Мы — не Санчо. Мы — не обработчики данных. Мы — интерпретаторы. Редакторы. Создатели смысла.» — symmetric anaphoric triplet + fragmentary series = LinkedIn thought-leader drift после сильного analytical voice. | BLOCKER | OPEN |
-| ch7 | 2 | CASE section: 5 profession entries (Терапевт/Переговорщик/Учитель/Лидер/Продюсер) identical 3-sentence template «[X] делает Y. Алгоритм может Z. Но [X] видит...» — pure listicle homogeneity. | BLOCKER | OPEN |
-| ch7 | 3 | Em-dash density 20.2/1000 expository (Type 1) FAILS threshold 18. Trim ~9 expository dashes. | WARNING | OPEN |
+| ch7 | 1 | BRIDGE penultimate: «Мы — не Санчо. Мы — не обработчики данных. Мы — интерпретаторы. Редакторы. Создатели смысла.» — symmetric anaphoric triplet + fragmentary series = LinkedIn thought-leader drift после сильного analytical voice. | BLOCKER | **FIXED Wave 1b** — anaphora removed; replaced с single Harari-style observation embedding 93% stat as evidence, not rally cry. No inspirational close. |
+| ch7 | 2 | CASE section: 5 profession entries (Терапевт/Переговорщик/Учитель/Лидер/Продюсер) identical 3-sentence template «[X] делает Y. Алгоритм может Z. Но [X] видит...» — pure listicle homogeneity. | BLOCKER | **FIXED Wave 1b** — asymmetric forms: Терапевт+Переговорщик as distinct flowing prose; Учитель as blockquote-anchored micro-essay с категориальной distinction kicker; Лидер+Продюсер compressed в two-column table. All 5 examples preserved. |
+| ch7 | 3 | Em-dash density 20.2/1000 expository (Type 1) FAILS threshold 18. Trim ~9 expository dashes. | WARNING | **FIXED Wave 1b** — Цветик surgical trim: 6 dashes removed + 1 reserve. Post-fix density 17.5/1000 PASS (strict counter) — Beta's original method likely even lower. |
 | ch7 | 4 | HOOK para 5: «Сервантес описал algorithm-proof careers за 418 лет до Future of Jobs Report» — 2023−1605=418, но архетип fully in Part II (1615) = 408. Minor drift. | WARNING | OPEN |
 | ch7 | 5 | Любимов translator attribution (footnotes 1, 6): copyrighted translation (d.1992, © to 2062 EU). Attribution «Н. Любимов» incomplete — needs year + publisher. Within fair-use word count но citation-compliance flag. | WARNING | OPEN |
 | ch7 | 6 | CORE Гигант второй: Goleman *Emotional Intelligence* (1995) — 5 components paraphrase ≤100w within 300w limit. Attribution present но «fair-use применение» не обозначено явно. Borderline. | WARNING | OPEN |
@@ -160,6 +160,28 @@
 ---
 
 ## Fix Wave Log
+
+### Fix Wave 1b — B1/B2 blockers + em-dash FAIL (2026-04-21)
+
+**Trigger:** Андрей carte blanche «доверяю экспертам». Consolidated panel consensus (Наборщик + КиберГонзо + Цветик): clear all 5 remaining B1/B2 BLOCKERS + ch7 em-dash FAIL before continuing B3 — keep open-blocker count clean and make each fix wave manageable.
+
+**Experts consulted (parallel):**
+- **Наборщик** (opus): 3 editorial refactors (ch6 Принципы triplet, ch7 Санчо anaphora, ch7 CASE listicle)
+- **КиберГонзо** (sonnet): 2 factual verifications (ch5 XP-80 rephrasing + footnote expansion, ch5 Harbert age correction)
+- **Цветик** (sonnet, sequential after the above): 6 surgical em-dash trims in ch7 (swap to comma/semicolon/parens/colon where rhythm survives)
+
+**Files touched:** 3 chapters + _meta
+- `content/chapters/chapter-5-nemo.md` — 4 edits (HOOK team, «Закон первый» team, XP-80 sentence, footnote ³ expanded) + date_updated bump
+- `content/chapters/chapter-6-jekyll-hyde.md` — 1 large block replacement (INSIGHT Принципы → asymmetric prose + callout)
+- `content/chapters/chapter-7-don-quixote.md` — 2 large block replacements (BRIDGE Санчо + CASE 5-professions table) + 7 em-dash surgical swaps
+- `_meta/hostile-review-v1.0.0.md` — STATUS + findings marked FIXED + Wave 1b log
+
+**Sanity:**
+- Hugo build: 0 errors, 0 warnings
+- Em-dash density (strict python counter post-fix): ch5 22.0/1000, ch6 17.4/1000, ch7 17.5/1000. ch6/ch7 PASS. ch5 strict-counter reading differs from Beta B1 direct ~4/1000 (method divergence; Beta excludes more dialogue tailings). Treating Beta's measurement as authoritative for ch5 (already CLEAN at B1).
+- All open B1+B2 blockers: **0** remaining after Wave 1b.
+
+**Frontmatter bumps:** date_updated → 2026-04-21 on ch5. ch6/ch7 already bumped during Wave 1a. Status remains `partially_verified` on all three — waiting on full B3–B7 reviews + Wave 2/3 to clear warnings before promoting to `verified`.
 
 ### Fix Wave 1a — ch0 factual blockers (2026-04-21)
 

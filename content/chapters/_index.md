@@ -1,14 +1,12 @@
 ---
-title: "Chapters"
-description: "Navigate the complete AGILE SAPIENS monograph — 11 chapters + 3 intermezzo across 3 acts exploring AI's impact on work and organizations"
+title: "Главы"
+description: "Навигация по монографии AGILE SAPIENS — 11 глав + 3 интермедии в трёх актах. Как ИИ меняет труд и организации."
 weight: 10
 
-keywords: ["chapters", "table of contents", "AI future work", "organizational transformation", "literary analysis"]
-og_title: "AGILE SAPIENS Chapters — Complete Navigation"
-og_description: "Browse all 11 chapters + 3 intermezzo. Literary DNA meets corporate reality through rigorous analysis."
+keywords: ["главы", "оглавление", "AGILE SAPIENS", "ИИ и труд", "будущее работы"]
+og_title: "AGILE SAPIENS — Главы"
+og_description: "11 глав + 3 интермедии. Литературная ДНК встречает корпоративную реальность."
 ---
-
-# AGILE SAPIENS — Оглавление
 
 Навигация по монографии: **11 глав + 3 интермедии в 3 актах** — как ИИ меняет труд и организации.
 

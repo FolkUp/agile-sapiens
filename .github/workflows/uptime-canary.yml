@@ -103,15 +103,11 @@ jobs:
           HTTP="${{ steps.http.outputs.status }} (HTTP ${{ steps.http.outputs.http_code }} expected ${{ steps.http.outputs.expected }})"
           RESP="${{ steps.http.outputs.resp_time }}s"
           CERT="${{ steps.tls.outputs.cert_status }} (${{ steps.tls.outputs.cert_days }}d, expires ${{ steps.tls.outputs.cert_end }})"
-          ICON="⚠️"
-          if [ "${{ steps.http.outputs.status }}" != "PASS" ]; then ICON="❌"; fi
-          MSG="${ICON} *AGILE SAPIENS — uptime canary alert*
-
-*HTTP:* ${HTTP}
-*Response time:* ${RESP}
-*TLS cert:* ${CERT}
-
-[GH Actions run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+          ICON="WARN"
+          if [ "${{ steps.http.outputs.status }}" != "PASS" ]; then ICON="FAIL"; fi
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          MSG=$(printf '%s *AGILE SAPIENS uptime canary*\n\n*HTTP:* %s\n*Response time:* %s\n*TLS cert:* %s\n\n[GH Actions run](%s)' \
+            "${ICON}" "${HTTP}" "${RESP}" "${CERT}" "${RUN_URL}")
           curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
             -d "chat_id=${TG_CHAT_ID}" \
             -d "message_thread_id=${TG_TOPIC}" \

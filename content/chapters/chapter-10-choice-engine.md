@@ -4,7 +4,7 @@ description: "Cyberpunk Simulation 2030: как Gibson's Neuromancer показ�
 date: 2026-04-08
 date_created: "2026-04-08"
 date_updated: "2026-04-10"
-weight: 100
+weight: 110
 chapter: 10
 act: "III: Future"
 category: "экспериентный-синтез (experiential-synthesis)"

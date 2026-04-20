@@ -1,6 +1,6 @@
 ---
 title: "ИНТЕРМЕДИЯ III — Трансформационный лифт"
-weight: 3
+weight: 120
 category: intermezzo
 status: draft
 confidence: medium

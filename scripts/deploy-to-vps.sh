@@ -76,12 +76,12 @@ ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
 # Atomic switch — Banking-Level Transaction
 log "🔄 Performing atomic switch..."
 ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
-  # Remove old symlink and create new one atomically
-  rm -f ${VPS_PATH}/current_new
-  ln -sf ${VPS_PATH}/releases/${TIMESTAMP} ${VPS_PATH}/current_new
-
-  # Atomic move (guaranteed on most filesystems)
-  mv ${VPS_PATH}/current_new ${VPS_PATH}/current
+  # Atomic symlink replace: ln -sfn (force + no-dereference) replaces an
+  # existing symlink to a directory in place, instead of moving inside it.
+  # Previous rm+ln+mv pattern was broken because mv treats a symlink
+  # pointing to a directory as the directory itself and moves the source
+  # INSIDE it, leaving the original symlink untouched.
+  ln -sfn ${VPS_PATH}/releases/${TIMESTAMP} ${VPS_PATH}/current
 
   echo '[REMOTE] Atomic switch completed'
 

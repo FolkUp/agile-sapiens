@@ -10,8 +10,8 @@ const CLOUDFLARE_TOKEN = process.env.CLOUDFLARE_TOKEN;
 const CLOUDFLARE_ZONE = process.env.CLOUDFLARE_ZONE;
 
 if (!CLOUDFLARE_TOKEN || !CLOUDFLARE_ZONE) {
-  console.error('❌ Missing required environment variables: CLOUDFLARE_TOKEN, CLOUDFLARE_ZONE');
-  process.exit(1);
+  console.log('ℹ️  CLOUDFLARE_TOKEN/ZONE not configured — skipping CDN purge (non-critical for soft launch)');
+  process.exit(0);
 }
 
 console.log('🌐 Cloudflare CDN Cache Purge — agile-sapiens');

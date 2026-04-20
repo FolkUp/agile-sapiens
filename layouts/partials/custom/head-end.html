@@ -1,8 +1,6 @@
 {{/* Hextra head-end override for GDPR compliance + SEO */}}
-{{/* Soft launch: noindex during hidden 4-week window */}}
-{{ if site.Params.launch.softLaunch -}}
-<meta name="robots" content="noindex, nofollow">
-{{- end }}
+{{/* Note: noindex during softLaunch is now handled in layouts/_partials/head.html
+     (single source of truth — avoids duplicate meta robots tags). */}}
 {{/* Content Security Policy: served via nginx header (folkup-infra/docker/nginx-sapiens.conf), not meta */}}
 
 {{/* AGILE SAPIENS Typography System - Brand Guide v2.5 */}}

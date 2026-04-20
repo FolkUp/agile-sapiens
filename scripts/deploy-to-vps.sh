@@ -6,8 +6,8 @@ set -euo pipefail
 
 # Configuration
 SITE_NAME="agile-sapiens"
-VPS_PATH="/home/folkup/sites/${SITE_NAME}"
-BACKUP_DIR="/home/folkup/backups/${SITE_NAME}"
+VPS_PATH="/home/deploy/sites/${SITE_NAME}"
+BACKUP_DIR="/home/deploy/backups/${SITE_NAME}"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 
 log() { echo "$(date '+%Y-%m-%d %H:%M:%S') [DEPLOY] $1"; }
@@ -38,7 +38,7 @@ log "🏗️  Preparing atomic deployment..."
 ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
   mkdir -p ${VPS_PATH}/releases/${TIMESTAMP}
   mkdir -p ${BACKUP_DIR}
-  mkdir -p /home/folkup/logs/${SITE_NAME}
+  mkdir -p /home/deploy/logs/${SITE_NAME}
 "
 
 # Upload new version to staging area
@@ -92,7 +92,7 @@ ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
   fi
 
   # Log deployment
-  echo '${TIMESTAMP} deployed by CI/CD' >> /home/folkup/logs/${SITE_NAME}/deploy.log
+  echo '${TIMESTAMP} deployed by CI/CD' >> /home/deploy/logs/${SITE_NAME}/deploy.log
 "
 
 # Post-deployment verification

@@ -139,7 +139,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     environment:
       name: production-vps
-      url: https://agile.folkup.app
+      url: https://sapiens.folkup.life
     steps:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
@@ -173,7 +173,7 @@ jobs:
         run: |
           echo "=== POST-DEPLOY VERIFICATION ==="
           # Health check на deployed site
-          curl -f -s https://agile.folkup.app/ > /dev/null
+          curl -f -s https://sapiens.folkup.life/ > /dev/null
           if [ $? -eq 0 ]; then
             echo "✅ Site health check PASSED"
           else
@@ -185,6 +185,6 @@ jobs:
         if: success()
         run: |
           echo "🎉 AGIL-007 Pipeline COMPLETED successfully"
-          echo "Site deployed: https://agile.folkup.app/"
+          echo "Site deployed: https://sapiens.folkup.life/"
           echo "Quality gates: ALL PASSED"
           echo "Banking-level standards: MAINTAINED"

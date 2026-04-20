@@ -4,6 +4,24 @@ title = "AGILE SAPIENS"
 theme = "hextra"
 defaultContentLanguage = "ru"
 
+# Soft launch flag — set to false to remove noindex/Disallow and enable sitemap indexing
+[params.launch]
+softLaunch = true
+
+# Exclude non-article files from build (AGIL soft launch cleanup)
+ignoreFiles = [
+  "\\.backup$",
+  "^content/chapters/\\.claude/",
+  "^content/chapters/extracted/",
+  "^content/chapters/_act-",
+  "^content/chapters/baseline-",
+  "^content/chapters/documentation-consistency-",
+  "^content/chapters/anglicism-",
+  "^content/chapters/sentence-",
+  "^content/chapters/validation-",
+  "^content/chapters/extract-"
+]
+
 [params]
 description = "A scientific popular monograph on the future of work in the AI age"
 images = ["/assets/og-image-default.png"]

@@ -1,0 +1,7 @@
+User-agent: *
+{{ if site.Params.launch.softLaunch -}}
+Disallow: /
+{{- else -}}
+Allow: /
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- end }}

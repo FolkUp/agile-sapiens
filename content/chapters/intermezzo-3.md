@@ -2,8 +2,8 @@
 title: "ИНТЕРМЕДИЯ III — Трансформационный лифт"
 weight: 3
 category: intermezzo
-status: verified
-confidence: high
+status: draft
+confidence: medium
 tags: ["intermezzo", "stylistic"]
 sources: []
 related: []

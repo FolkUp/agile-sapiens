@@ -2,8 +2,8 @@
 title: "ИНТЕРМЕДИЯ II: Продакшенское подземелье"
 weight: 2
 category: intermezzo
-status: verified
-confidence: high
+status: draft
+confidence: medium
 tags: ["intermezzo", "stylistic"]
 sources: []
 related: []

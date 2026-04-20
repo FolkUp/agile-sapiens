@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-04-20T02:37:03.062Z",
+  "timestamp": "2026-04-20T02:41:11.129Z",
   "errors": 0,
-  "warnings": 0,
+  "warnings": 1,
   "status": "PASSED",
   "gates": {
     "level1": "completed",

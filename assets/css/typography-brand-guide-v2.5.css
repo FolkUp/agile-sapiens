@@ -407,16 +407,26 @@
     }
   }
 
-  /* Dark Mode Support */
+  /* Dark Mode Support — Hextra uses [data-theme="dark"] attribute on <html>.
+     Previous @media-only approach broke when OS=dark but Hextra=light. */
+  :root[data-theme="dark"] {
+    --color-primary: #E8AD4A;
+    --color-secondary: #839E75;
+    --color-accent: #7D4450;
+    --color-neutral-dark: #F5F1EA;
+    --color-neutral-medium: #C4B8A5;
+    --color-neutral-light: #2A2317;
+    --color-background: #1A1612;
+  }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --color-primary: #E8AD4A;        /* Accent becomes primary in dark */
+    :root:not([data-theme="light"]) {
+      --color-primary: #E8AD4A;
       --color-secondary: #839E75;
-      --color-accent: #7D4450;         /* Primary becomes accent in dark */
-      --color-neutral-dark: #F5F1EA;   /* Light becomes dark */
+      --color-accent: #7D4450;
+      --color-neutral-dark: #F5F1EA;
       --color-neutral-medium: #C4B8A5;
-      --color-neutral-light: #2A2317;  /* Dark becomes light */
-      --color-background: #1A1612;     /* Deep brown background */
+      --color-neutral-light: #2A2317;
+      --color-background: #1A1612;
     }
   }
 

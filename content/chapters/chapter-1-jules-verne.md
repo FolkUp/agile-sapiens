@@ -45,9 +45,6 @@ sensitive: false
 toc: true
 draft: false
 ---
-
-# Жюль Верн программирует
-
 > **Chapter Summary:** Литературная ДНК современных методологий управления проектами. Как сериализация XIX века создала паттерн итеративной доставки, а приключенческий роман стал прототипом спринтового цикла.
 
 > **Verification Note:** This chapter has undergone comprehensive fact verification with T1 and T2 sources. As part of our banking-level editorial standards, all factual claims have been verified and sourced.

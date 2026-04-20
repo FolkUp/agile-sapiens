@@ -54,9 +54,6 @@ related:
   - chapter-9-three-scenarios
   - _act-iii-architecture
 ---
-
-# Глава 8: Машина времени показывает три будущего
-
 > "The Time Traveller... was expounding a recondite matter to us. His grey eyes shone and twinkled, and his usually pale face was flushed and animated."
 >
 > — H.G. Wells, "The Time Machine" (1895), Chapter I (перевод автора: «Путешественник во времени... излагал нам сложную материю. Его серые глаза сияли и искрились, и обычно бледное лицо было взволнованно и оживлённо.»)

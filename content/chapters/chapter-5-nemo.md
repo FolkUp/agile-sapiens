@@ -53,9 +53,6 @@ related:
 toc: true
 draft: false
 ---
-
-# Сайрус Смит строит цивилизацию
-
 > **Chapter Summary:** Bootstrap leadership как оружие против корпоративной бюрократии. Как инженерная команда «Таинственного острова» стала прототипом каждой успешной тигровой команды: от Skunk Works до первых команд Macintosh, и почему компании, которые строят «остров», обходят тех, кто строит «круизный лайнер».
 
 > **Verification Note:** This chapter uses T1 sources (government audit reports, congressional testimony) for military/aerospace cases and T2 sources (peer-reviewed publications, verified biographies) for organizational analysis. Banking-level editorial standards applied.

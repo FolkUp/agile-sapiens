@@ -63,9 +63,6 @@ twitter_description: "Как Филеас Фогг изобрёл Agile за 130
 toc: true
 draft: false
 ---
-
-# Филеас Фогг изобрёл то, что уничтожает современные корпорации
-
 > **Chapter Summary:** Провокативный анализ того, как вымышленный персонаж XIX века интуитивно применил принципы, которые современная Agile-индустрия коммерциализировала и исказила. Как здравый смысл одного литературного джентльмена обнажает безумие индустрии стоимостью в десятки миллиардов долларов.
 
 > **Verification Note:** This chapter uses primary literary sources (public domain), peer-reviewed academic research, official corporate publications, and government investigation reports. Banking-level editorial standards applied.

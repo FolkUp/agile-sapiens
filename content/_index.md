@@ -1,21 +1,20 @@
 ---
 title: "AGILE SAPIENS"
-description: "A scientific popular monograph exploring the future of work in the age of artificial intelligence. Rigorous research meets engaging storytelling to examine how AI reshapes organizations and human potential."
-layout: "hextra-home"
+description: "Научно-популярная монография о будущем работы в эпоху искусственного интеллекта. Строгие исследования и увлекательное изложение — как ИИ меняет организации и человеческий потенциал."
 
 # SEO Enhancement
-keywords: ["artificial intelligence", "future of work", "organizational transformation", "AI strategy", "workplace automation", "human-AI collaboration"]
+keywords: ["искусственный интеллект", "будущее работы", "трансформация организаций", "AI strategy", "автоматизация", "сотрудничество человека и ИИ"]
 
 # OpenGraph metadata
-og_title: "AGILE SAPIENS - The Future of Work in the AI Age"
-og_description: "A scientific popular monograph examining how AI reshapes organizations and human potential. 'Harari meets Dilbert' - serious analysis with sharp wit."
+og_title: "AGILE SAPIENS — Будущее работы в эпоху ИИ"
+og_description: "Научно-популярная монография о том, как ИИ меняет организации и человеческий потенциал. «Харари встречает Дилберта» — серьёзный анализ с острой иронией."
 og_image: "/assets/og-image-default.png"
 og_type: "book"
 
 # Twitter Cards
 twitter_card: "summary_large_image"
-twitter_title: "AGILE SAPIENS - The Future of Work in the AI Age"
-twitter_description: "Scientific monograph on AI's impact on work. Rigorous research meets engaging storytelling."
+twitter_title: "AGILE SAPIENS — Будущее работы в эпоху ИИ"
+twitter_description: "Научная монография о влиянии ИИ на труд. Строгие исследования, живое изложение."
 
 # Schema.org Book
 schema_type: "Book"
@@ -28,32 +27,41 @@ genre: ["Business Strategy", "Technology Analysis", "Organizational Psychology"]
 
 # AGILE SAPIENS
 
-A scientific popular monograph exploring the future of work in the age of artificial intelligence.
+**Научно-популярная монография о будущем работы в эпоху искусственного интеллекта.**
 
-AGILE SAPIENS examines how artificial intelligence is reshaping the nature of work, organizations, and human potential. Through rigorous research and engaging storytelling, we explore the challenges and opportunities that lie ahead.
+AGILE SAPIENS исследует, как ИИ меняет природу труда, организаций и человеческий потенциал. Строгие исследования и живое изложение — чтобы разобраться с вызовами и возможностями, которые уже здесь.
 
-**10 chapters • 3 acts • Serious analysis with sharp wit**
+**10 глав · 3 акта · серьёзный анализ с острой иронией**
 
-{{< hextra/hero-button text="📖 START READING" link="/chapters/" >}}
-
-## What You'll Discover
-
-- How classic literature predicted today's workplace transformations
-- Practical frameworks for navigating AI-driven change
-- The future of human-AI collaboration in organizations
-- Strategic insights from history's greatest thinkers
+[📖 Читать монографию →](/chapters/)
 
 ---
 
-{{< callout type="info" >}}
-**Ready to start?** Begin with [Chapter 0: Пилот](/chapters/chapter-0-pilot/) or [browse all chapters](/chapters/) to choose your entry point.
-{{< /callout >}}
+## Структура
 
-## Support This Work
+**Акт I — Истоки** (Главы 0–4) · **Акт II — Трансформация** (Главы 5–7) · **Акт III — Горизонты** (Главы 8–10)
 
-This monograph is freely available to everyone. If you find it valuable, consider [supporting our research on Ko-fi](https://ko-fi.com/folkup). Your contribution helps us continue creating high-quality, independent analysis.
+Каждая глава — литературный ключ к современной теме: от «Вокруг света за 80 дней» Верна и «Франкенштейна» Шелли до «Машины времени» Уэллса.
+
+## Что внутри
+
+- Как классическая литература предсказала сегодняшние трансформации труда
+- Практические фреймворки для работы в эпоху ИИ
+- Будущее человеко-машинного взаимодействия в организациях
+- Стратегические инсайты от великих мыслителей прошлого
+
+## Быстрый старт
+
+- Начать с начала → [Глава 0: Пилот](/chapters/chapter-0-pilot/)
+- Посмотреть оглавление → [Все 14 материалов](/chapters/)
+- Об авторе и методе → [О проекте](/about/)
 
 ---
 
-**Publisher:** FolkUp Ecosystem
-**License:** Content under CC BY 4.0, freely shareable with attribution
+## Поддержать проект
+
+Монография распространяется свободно. Если она оказалась полезной — [поддержите работу на Ko-fi](https://ko-fi.com/folkup). Это помогает сохранять независимость анализа.
+
+---
+
+**Издатель:** FolkUp Ecosystem · **Лицензия контента:** CC BY 4.0 · **Статус:** soft launch (до 2026-05-18)

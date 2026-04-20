@@ -169,17 +169,16 @@ jobs:
           node scripts/purge-cloudflare.js
           echo "✅ CDN cache purged"
 
-      - name: Post-Deploy Verification
+      - name: Post-Deploy Sanity Check
         run: |
-          echo "=== POST-DEPLOY VERIFICATION ==="
-          # Health check на deployed site
-          curl -f -s https://sapiens.folkup.life/ > /dev/null
-          if [ $? -eq 0 ]; then
-            echo "✅ Site health check PASSED"
-          else
-            echo "❌ Site health check FAILED — Initiating rollback"
+          echo "=== POST-DEPLOY SANITY CHECK ==="
+          # Tolerant check: any HTTP response (incl. 401 behind Basic Auth) = infra up
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://sapiens.folkup.life/ || echo "000")
+          if [ "$STATUS" = "000" ]; then
+            echo "❌ No HTTP response — likely DNS/container issue"
             exit 1
           fi
+          echo "✅ HTTP response: $STATUS (401=Basic Auth active, 200=open)"
 
       - name: Notify Success
         if: success()
@@ -187,4 +186,36 @@ jobs:
           echo "🎉 AGIL-007 Pipeline COMPLETED successfully"
           echo "Site deployed: https://sapiens.folkup.life/"
           echo "Quality gates: ALL PASSED"
+
+  # Smoke test — authenticated check behind Basic Auth (soft launch)
+  # Separate job so deploy success isn't blocked on credential availability.
+  smoke-test:
+    runs-on: ubuntu-latest
+    needs: [deploy-vps]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Authenticated health check
+        env:
+          PREVIEW_USER: ${{ secrets.PREVIEW_USER }}
+          PREVIEW_PASS: ${{ secrets.PREVIEW_PASS }}
+        run: |
+          if [ -z "$PREVIEW_USER" ] || [ -z "$PREVIEW_PASS" ]; then
+            echo "⚠️  PREVIEW_USER/PREVIEW_PASS secrets not set — skipping authenticated probe"
+            echo "Fallback: verify nginx vhost responds with HSTS header"
+            if curl -sI https://sapiens.folkup.life/ | grep -qi "Strict-Transport-Security"; then
+              echo "✅ HSTS header present — nginx-sapiens vhost is serving"
+            else
+              echo "❌ HSTS header missing — wrong vhost or default 503"
+              exit 1
+            fi
+          else
+            echo "=== Authenticated health check ==="
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" -u "$PREVIEW_USER:$PREVIEW_PASS" https://sapiens.folkup.life/)
+            if [ "$STATUS" = "200" ]; then
+              echo "✅ Authenticated 200 OK"
+            else
+              echo "❌ Expected 200, got $STATUS"
+              exit 1
+            fi
+          fi
           echo "Banking-level standards: MAINTAINED"

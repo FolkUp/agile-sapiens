@@ -30,9 +30,19 @@ images = ["/assets/og-image-default.png"]
 name = "FolkUp Ecosystem"
 email = "info@folkup.app"
 
-# FolkUp branding
+# FolkUp branding (legacy params — retained for backward compat)
 logo = "/assets/folkup-logo.svg"
 favicon = "/assets/favicon.ico"
+
+# Hextra navbar logo (actual render target)
+[params.navbar]
+displayTitle = false
+[params.navbar.logo]
+path = "/images/folkup-wordmark.svg"
+dark = "/images/folkup-wordmark-dark.svg"
+width = 120
+height = 28
+link = "/"
 
 # Primary colors (FolkUp palette subset)
 [params.colors]

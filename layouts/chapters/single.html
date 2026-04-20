@@ -1,18 +1,18 @@
 {{ define "main" }}
-<div class="hx-mx-auto hx-flex hx-justify-center">
-  <article class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-1 hx-md:px-6">
-    <main class="hx-w-full hx-min-w-0 hx-max-w-4xl hx-mx-auto hx-relative">
+<div class="hx:mx-auto hx:flex hx:justify-center">
+  <article class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-1 hx:md:px-6">
+    <main class="hx:w-full hx:min-w-0 hx:max-w-4xl hx:mx-auto hx:relative">
 
       {{ partial "breadcrumb.html" (dict "page" . "enable" true) }}
 
       <!-- Level 3 Typography Activation: Chapter Header с академическим стилем -->
-      <header class="chapter-header hx-mt-1.5 hx-mb-8">
-        <h1 class="chapter-title hx-mt-2 hx-mb-4 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">
+      <header class="chapter-header hx:mt-1.5 hx:mb-8">
+        <h1 class="chapter-title hx:mt-2 hx:mb-4 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 dark:hx:text-slate-100">
           {{ .Title }}
         </h1>
 
         {{ if .Params.description }}
-        <p class="chapter-description hx-mt-6 hx-text-xl hx-text-slate-700 dark:hx-text-slate-400">
+        <p class="chapter-description hx:mt-6 hx:text-xl hx:text-slate-700 dark:hx:text-slate-400">
           {{ .Params.description }}
         </p>
         {{ end }}
@@ -22,7 +22,7 @@
       </header>
 
       <!-- Level 3 Typography Activation: Enhanced content wrapper с полной типографской системой -->
-      <div class="content-enhanced classical-typography content-hierarchy drop-cap hx-content">
+      <div class="content-enhanced classical-typography content-hierarchy drop-cap hx:content">
         {{ .Content }}
       </div>
 
@@ -35,7 +35,7 @@
         <hr class="ornamental-separator" />
       </div>
 
-      <div class="hx-mt-16">
+      <div class="hx:mt-16">
         {{ partial "components/pager.html" . }}
       </div>
 

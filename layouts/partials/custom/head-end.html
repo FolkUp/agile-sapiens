@@ -7,6 +7,11 @@
 {{ $typographyCSS := resources.Get "css/typography-brand-guide-v2.5.css" | minify }}
 <link rel="stylesheet" href="{{ $typographyCSS.Permalink }}">
 
+{{/* AGILE SAPIENS Classical Typography — provides --color-text-primary, --color-bg-primary
+     and other tokens consumed by visuals-framework.css. Must load BEFORE visuals. */}}
+{{ $classicalCSS := resources.Get "css/typography-classical.css" | minify }}
+<link rel="stylesheet" href="{{ $classicalCSS.Permalink }}">
+
 {{/* AGILE SAPIENS Visual Framework - Academic Book Illustrations */}}
 {{ $visualsCSS := resources.Get "css/visuals-framework.css" | minify }}
 <link rel="stylesheet" href="{{ $visualsCSS.Permalink }}">

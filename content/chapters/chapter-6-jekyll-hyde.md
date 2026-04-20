@@ -39,9 +39,6 @@ sensitive: false
 toc: true
 draft: false
 ---
-
-# Доктор Джекил увеличивает производительность
-
 > **Chapter Summary:** Парадокс intelligence amplification. Как корпоративное внедрение инструментов «усиления интеллекта» повторяет сюжет Стивенсона: добровольная трансформация → зависимость → потеря контроля. Почему автоматизация больше половины рабочих часов — не техническая проблема, а кризис идентичности. И что такое algorithm aversion — последний рубеж обороны человека.
 
 > **Verification Note:** This chapter uses only OSINT-verified sources from КиберГонзо. All statistics traceable to primary publications. Banking-level editorial standards applied.

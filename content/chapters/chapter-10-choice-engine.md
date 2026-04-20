@@ -68,9 +68,6 @@ og_title: "Chapter 10: Gibson Choice Engine - Jacking Into the AI Future"
 og_description: "Final Act III chapter: Cyberpunk simulation of AI integration. How to live and work in Gibson's cyberspace made real through corporate transformation."
 twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cyberpunk DNA meets corporate reality in 2030 scenarios."
 ---
-
-# Глава 10: Jacking In: День из будущего, которое мы выбираем
-
 > «The sky above the port was the color of television, tuned to a dead channel.»
 >
 > — William Gibson, "Neuromancer" (1984), но в 2030 мы понимаем: dead channel: это не помехи, а тишина отключённого человеческого интерфейса.

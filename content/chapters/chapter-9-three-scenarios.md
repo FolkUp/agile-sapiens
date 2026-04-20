@@ -59,9 +59,6 @@ related:
   - chapter-10-choice-engine
   - _act-iii-architecture
 ---
-
-# Глава 9: Архитектура выбора: Vinge учит принимать решения в точке сингулярности
-
 > "The problem is not that the Singularity represents simply the passing of humankind from center stage, but that it contradicts some of our most deeply held notions of being."
 >
 > — Vernor Vinge, "The Coming Technological Singularity" (1993) (перевод автора: «Проблема не в том, что Сингулярность означает просто уход человечества с центральной сцены, а в том, что она противоречит некоторым из наших самых глубоких представлений о бытии.»)

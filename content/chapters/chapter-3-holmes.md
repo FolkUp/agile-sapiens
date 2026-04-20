@@ -52,9 +52,6 @@ sensitive: false
 toc: true
 draft: false
 ---
-
-# Шерлок Холмс ставит диагноз
-
 > **Chapter Summary:** Дедуктивный метод в управлении проектами. Как научиться видеть невидимое: семь диагностических признаков умирающего проекта, каждый проверенный на реальных катастрофах, которые можно было предотвратить.
 
 > **Verification Note:** This chapter uses exclusively T1 (SEC enforcement actions, corporate filings, government audit reports) and T2 (national media investigations, peer-reviewed academic sources, market analysis) sources. All major claims have been verified against primary sources. Banking-level editorial standards applied. Status: fully_verified pending final editorial review.

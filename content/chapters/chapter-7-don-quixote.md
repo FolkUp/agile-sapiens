@@ -39,9 +39,6 @@ sensitive: false
 toc: true
 draft: false
 ---
-
-# Дон Кихот видит гигантов
-
 > **Chapter Summary:** Финал второго акта. Если Джекил показал опасность инструментального усиления, то Дон Кихот показывает, что именно делает человека незаменимым: способность видеть в данных то, чего в данных нет. Narrative thinking, эмоциональный интеллект и создание смысла: не soft skills, а единственные навыки, которые алгоритм не может воспроизвести. Там, где системы видят корреляции, человек видит истории. И истории побеждают.
 
 > **Verification Note:** This chapter uses only OSINT-verified sources from КиберГонзо. All statistics traceable to primary publications. Banking-level editorial standards applied.

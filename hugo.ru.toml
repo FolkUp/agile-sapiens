@@ -8,6 +8,7 @@ languageCode = "ru-ru"
 title = "AGILE SAPIENS"
 theme = "hextra"
 defaultContentLanguage = "ru"
+enableRobotsTXT = true
 
 # Soft launch flag (shared with hugo.toml convention)
 [params.launch]

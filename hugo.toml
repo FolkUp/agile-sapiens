@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "AGILE SAPIENS"
 theme = "hextra"
 defaultContentLanguage = "ru"
+enableRobotsTXT = true
 
 # Soft launch flag — set to false to remove noindex/Disallow and enable sitemap indexing
 [params.launch]

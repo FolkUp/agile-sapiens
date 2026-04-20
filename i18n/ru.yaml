@@ -13,3 +13,17 @@
   translation: "Переключатель языка"
 - id: "changeLanguage"
   translation: "Изменить язык"
+
+# Cookie consent
+- id: "cookie_title"
+  translation: "Cookies"
+- id: "cookie_message"
+  translation: "Мы используем только необходимые cookies для работы сайта и опциональные — для донатов Ko-fi."
+- id: "cookie_learn_more"
+  translation: "Подробнее"
+- id: "cookie_accept_all"
+  translation: "Принять все"
+- id: "cookie_essential_only"
+  translation: "Только необходимые"
+- id: "cookie_settings"
+  translation: "Настройки cookies"

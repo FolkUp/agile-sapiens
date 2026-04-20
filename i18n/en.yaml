@@ -13,3 +13,17 @@
   translation: "Language Switcher"
 - id: "changeLanguage"
   translation: "Change language"
+
+# Cookie consent
+- id: "cookie_title"
+  translation: "Cookies"
+- id: "cookie_message"
+  translation: "We use essential cookies for site functionality and optional cookies for Ko-fi donations."
+- id: "cookie_learn_more"
+  translation: "Learn more"
+- id: "cookie_accept_all"
+  translation: "Accept all"
+- id: "cookie_essential_only"
+  translation: "Essential only"
+- id: "cookie_settings"
+  translation: "Cookie settings"

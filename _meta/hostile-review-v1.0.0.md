@@ -12,14 +12,14 @@
 
 | Field | Value |
 |---|---|
-| Last completed batch | B2 (ch6 Jekyll/Hyde + ch7 Don Quixote) — 2026-04-21 |
-| Next batch | B3 (int2 + int3) |
-| Last fix wave | **Fix Wave 1b — B1/B2 blockers + em-dash FAIL** (2026-04-21): 5 blockers closed + 1 em-dash FAIL resolved |
-| Open blockers | **0** (all B1+B2 blockers closed after Wave 1a+1b; remaining surfaces will come from B3–B7) |
-| Open warnings | 20 (voice nits, attribution flags, rhythm drags — to address in Wave 2/3) |
-| Open em-dash FAIL | 0 (ch7 post-Wave-1b: 17.5/1000 PASS under 18 threshold) |
-| Fix waves applied | 1a + 1b / 3 |
-| Frontmatter bumps | 0 |
+| Last completed batch | B3 (intermezzo-2 + intermezzo-3) — 2026-04-21 |
+| Next batch | B4 (ch1 Verne + ch2 Frankenstein — promoted from Tier B per B0) |
+| Last fix wave | **Fix Wave 1c — int3 warnings** (2026-04-21): 4 warnings closed в int3 |
+| Open blockers | **0** (B1-B3 all clear after Waves 1a-1c) |
+| Open warnings | 20 (voice nits + attribution flags from B1/B2, to address in Wave 2/3 after broader review completes) |
+| Open em-dash FAIL | 0 |
+| Fix waves applied | 1a + 1b + 1c / 3 |
+| Frontmatter bumps | 0 (int2/int3 draft→partially_verified POLICY QUESTION pending Андрей: Alpha/Beta disagreed. Alpha: NO without sources[]. Beta: YES since satire doesn't bear factual claims. Needs Oracle/Андрей call.) |
 
 **B0 pre-flight finding (2026-04-21):** All 8 original Tier B units exceeded 20-line diff threshold since prior review_date. Plan updated: ALL 14 units require Full Pass (Tier A).
 
@@ -134,7 +134,35 @@
 
 ### B3 — int2 + int3
 
-*Status:* pending
+*Status:* reviewed 2026-04-21
+*Alpha verdict:* PASS / CONDITIONAL_PASS
+*Beta verdict:* PASS / CONDITIONAL_PASS
+*Em-dash density:* int2 ~1.6/1000 (Type 2), int3 ~4.1/1000 (Type 2) — both CLEAN by huge margin. Type 2 (dialogue-heavy ≤120) confirmed applicable; recalibration framework v2.0 holds. int3 AGIL-069 crisis (129.35/1000) NOT replicated.
+*Level 1:* CLEAN both
+*Citation compliance:* CLEAN (Bulgakov / Carroll PD in EU)
+
+| Unit | # | Flag | Severity | Status |
+|---|---|---|---|---|
+| int2 | 1 | Line 117 «Без оценки? / Без планирования? / Без процесса согласования?» — three-beat approaches symmetric triplet, still reads as satire | NIT | OPEN (Wave 2/3 candidate) |
+| int2 | 2 | Line 119 «хаос-инженерия» — risks being read as genuine Agile vocabulary vs satirical; deliberate but borderline | NIT | OPEN |
+| int2 | 3 | Planning Poker parody: «берут максимальную карточку» inverts real consensus practice — satirical twist intended, no action | NIT | OK (satire acknowledged) |
+| int3 | 1 | Line 85: «Гибкий Коуч Воланд» merges job title with character name; inconsistent with how other characters introduced | WARNING | **FIXED Wave 1c** — «Меня зовут Воланд, я здесь гибкий коуч» (character name + role via apposition) |
+| int3 | 2 | Line 107 «заинтересованных картографирование» — grammatical error (Gen. vs Nom.) disrupts readability without satirical payoff | WARNING | **FIXED Wave 1c** — «картографирование заинтересованных сторон» (correct agreement) |
+| int3 | 3 | Lines 163-167: English buzzword block («outcomes not outputs», «Sustainable transportation experience») slides briefly into genuine thought-leader cadence without satirical frame | WARNING | **FIXED Wave 1c** — added Alice naivety micro-beat: «Алиса попробовала слово на вкус, будто леденец с названием пирожного» — re-anchors satire |
+| int3 | 4 | Line 95 «через сорок два года» arithmetic: 127 этажей / current rate ≠ 42 года. Adams 42 allusion? | WARNING | **FIXED Wave 1c** — «сорок два года, плюс-минус вечность» — explicit wink to Adams / absurdist indeterminacy |
+| int3 | 5 | Line 95 «скорострель» used twice within few exchanges (lines 89, 95) — first lands, second redundant | NIT | OPEN (low-priority; deferred) |
+| cross | 1 | Intermezzi don't make factual claims about archetypes — no contradictions with Acts II/III | CONFIRM | OK |
+
+**Policy tension flagged for Андрей:**
+- draft → partially_verified bump for int2/int3 disputed by experts.
+- Alpha (strict rule): NO — sources[] empty, rule requires ≥1 source
+- Beta (spirit of rule): YES — reviewed_by/review_date populated; satire doesn't bear testable factual claims, so sources[] rule doesn't apply
+- Per carte blanche «если нет консенсуса — Oracle или жди» — NOT forcing bump. Waiting for Андрей's call.
+- If Андрей rules "bump OK for satire" — one-line change, no review redo needed.
+
+**Frontmatter bumps Wave 1c:**
+- int2: date_updated 2026-04-17 → 2026-04-21 (no status change)
+- int3: date_updated 2026-04-17 → 2026-04-21 (no status change)
 
 ### B4 — ch1 Verne + ch2 Frankenstein (promoted)
 
@@ -160,6 +188,31 @@
 ---
 
 ## Fix Wave Log
+
+### Fix Wave 1c — int3 warnings (2026-04-21)
+
+**Trigger:** B3 closed с 0 blockers + 4 warnings on int3 (0 warnings of concern on int2). Per Level 3 carte blanche + plan («Fix Wave 1 = accumulated B1-B3 fixes»), applied uncontroversial surgical fixes inline. Policy question about draft→partially_verified deliberately deferred to Андрей — not forcing against Alpha/Beta disagreement.
+
+**Files touched:** 2 intermezzi + _meta
+- `content/chapters/intermezzo-2.md` — date_updated bump only (no content changes; Alpha/Beta concerns были NITs, deferred to Wave 2/3)
+- `content/chapters/intermezzo-3.md` — 4 surgical edits + date_updated bump
+- `_meta/hostile-review-v1.0.0.md` — B3 findings table + Wave 1c log
+
+**int3 edits:**
+1. Line 85: «Гибкий Коуч Воланд» → «Меня зовут Воланд, я здесь гибкий коуч» (character name separated from role)
+2. Line 95: «сорок два года» → «сорок два года, плюс-минус вечность» (explicit absurdist wink)
+3. Line 107: «заинтересованных картографирование» → «картографирование заинтересованных сторон» (grammar)
+4. Lines 163-167: added «Алиса попробовала слово на вкус, будто леденец с названием пирожного» (Alice naivety micro-beat to re-anchor satire before English buzzword block)
+
+**Sanity:**
+- Hugo build: 0 errors, 0 warnings
+- Em-dash density unchanged (Wave 1c edits added ~6 words only, all in prose — no new em-dashes)
+- Voice preserved: Bulgakov trinity (Воланд/Коровьев/Бегемот) + Carroll Alice archetype both intact
+
+**Pending policy decision (Андрей):**
+- int2/int3 draft→partially_verified bump: Alpha NO (sources[] empty) vs Beta YES (satire doesn't bear factual claims). Oracle/wait trigger invoked — not forcing.
+
+---
 
 ### Fix Wave 1b — B1/B2 blockers + em-dash FAIL (2026-04-21)
 

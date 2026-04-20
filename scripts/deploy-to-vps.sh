@@ -63,13 +63,13 @@ ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
     CURRENT_VERSION=\$(basename \$CURRENT_TARGET)
 
     if [ -d \"\$CURRENT_TARGET\" ]; then
-      log 'Backing up version: '\$CURRENT_VERSION
+      echo '[REMOTE] Backing up version: '\$CURRENT_VERSION
       tar -czf ${BACKUP_DIR}/backup_\$CURRENT_VERSION.tar.gz -C \$CURRENT_TARGET .
       echo \$CURRENT_VERSION > ${BACKUP_DIR}/last_version.txt
-      log 'Backup completed: backup_'\$CURRENT_VERSION'.tar.gz'
+      echo '[REMOTE] Backup completed: backup_'\$CURRENT_VERSION'.tar.gz'
     fi
   else
-    log 'No previous version to backup'
+    echo '[REMOTE] No previous version to backup'
   fi
 "
 
@@ -83,12 +83,12 @@ ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
   # Atomic move (guaranteed on most filesystems)
   mv ${VPS_PATH}/current_new ${VPS_PATH}/current
 
-  log 'Atomic switch completed'
+  echo '[REMOTE] Atomic switch completed'
 
   # Update nginx configuration if needed
   if [ -f /etc/nginx/sites-available/${SITE_NAME} ]; then
     sudo nginx -t && sudo systemctl reload nginx
-    log 'Nginx configuration reloaded'
+    echo '[REMOTE] Nginx configuration reloaded'
   fi
 
   # Log deployment
@@ -100,31 +100,31 @@ log "🔍 Post-deployment verification..."
 ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
   # Verify symlink
   if [ ! -L ${VPS_PATH}/current ]; then
-    error 'Symlink not created'
+    echo '[REMOTE ERROR] Symlink not created' >&2
     exit 1
   fi
 
   TARGET=\$(readlink ${VPS_PATH}/current)
   if [ \"\$TARGET\" != \"${VPS_PATH}/releases/${TIMESTAMP}\" ]; then
-    error 'Symlink points to wrong target'
+    echo '[REMOTE ERROR] Symlink points to wrong target' >&2
     exit 1
   fi
 
   # Verify file existence
   if [ ! -f ${VPS_PATH}/current/index.html ]; then
-    error 'index.html not found in deployed version'
+    echo '[REMOTE ERROR] index.html not found in deployed version' >&2
     exit 1
   fi
 
-  log 'Deployment verification: PASSED'
+  echo '[REMOTE] Deployment verification: PASSED'
 "
 
 # Cleanup old releases (keep last 5)
 log "🧹 Cleaning up old releases..."
 ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
   cd ${VPS_PATH}/releases
-  ls -1t | tail -n +6 | xargs rm -rf --
-  log 'Old releases cleaned up (keeping last 5)'
+  ls -1t | tail -n +6 | xargs -r rm -rf --
+  echo '[REMOTE] Old releases cleaned up (keeping last 5)'
 "
 
 # Performance and Security Verification
@@ -136,11 +136,11 @@ ssh -i deployment_key "${VPS_USER}@${VPS_HOST}" "
 
   # Verify no sensitive files exposed
   if find ${VPS_PATH}/current -name '*.env' -o -name '*.key' -o -name '*.pem' | grep -q .; then
-    error 'Sensitive files detected in deployed content'
+    echo '[REMOTE ERROR] Sensitive files detected in deployed content' >&2
     exit 1
   fi
 
-  log 'Security check: PASSED'
+  echo '[REMOTE] Security check: PASSED'
 "
 
 log "🎉 Deployment completed successfully!"

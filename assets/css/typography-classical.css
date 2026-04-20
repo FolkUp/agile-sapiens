@@ -490,11 +490,11 @@ figcaption {
 
 /* Accessibility enhancements - WCAG 2.1 AA Compliance */
 
-/* Focus management for all interactive elements */
+/* Focus management for all interactive elements — a11y-safe blue per WCAG convention */
 .figure-ref:focus-visible,
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   border-radius: 3px;
 }
@@ -1038,9 +1038,9 @@ a, button, input, select, textarea {
     }
   }
 
-  /* Enhanced Focus Management - Academic Accessibility */
+  /* Enhanced Focus Management - Academic Accessibility (a11y blue, not brand accent) */
   .academic-layout *:focus-visible {
-    outline: 3px solid var(--color-accent);
+    outline: 3px solid var(--color-focus);
     outline-offset: 3px;
     border-radius: var(--radius-subtle);
     box-shadow: var(--shadow-focus);

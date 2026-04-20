@@ -268,7 +268,7 @@
   }
 
   a:focus {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-focus, #2563eb);
     outline-offset: 2px;
     border-radius: 2px;
   }

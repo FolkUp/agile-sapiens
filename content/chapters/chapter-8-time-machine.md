@@ -7,6 +7,11 @@ date_updated: "2026-04-08"
 weight: 90
 chapter: 8
 act: "III: Future"
+act_opener: true
+act_label: "III"
+act_accent: "sage"
+act_plate: "agil-act-opener-III.webp"
+act_title: "Горизонты"
 category: "scenarios"
 status: partially_verified
 confidence: "medium"

@@ -7,6 +7,11 @@ date_updated: "2026-04-08"
 weight: 10
 chapter: 0
 act: "I: Origins"
+act_opener: true
+act_label: "I"
+act_accent: "bordo"
+act_plate: "agil-act-opener-I.webp"
+act_title: "Истоки"
 category: analysis
 status: partially_verified
 confidence: medium

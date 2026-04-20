@@ -16,6 +16,10 @@
 {{ $visualsCSS := resources.Get "css/visuals-framework.css" | minify }}
 <link rel="stylesheet" href="{{ $visualsCSS.Permalink }}">
 
+{{/* AGILE SAPIENS Act Opener — engraved plate + act label component */}}
+{{ $actOpenerCSS := resources.Get "css/act-opener.css" | minify }}
+<link rel="stylesheet" href="{{ $actOpenerCSS.Permalink }}">
+
 {{/* Include JSON-LD structured data for SEO */}}
 {{- partial "custom/schema-jsonld.html" . }}
 

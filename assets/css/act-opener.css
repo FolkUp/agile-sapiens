@@ -1,0 +1,211 @@
+/* AGILE SAPIENS — Act Opener Component
+ * Renders engraved plate + act label at top of act-opener chapters.
+ * Brand Guide v2.5 Palette D: бордо #7D4450 · янтарь #E8AD4A · шалфей #839E75
+ * слоновая кость #FEFCF6 · шоколад #2A2317
+ * WCAG 2.1 AA — decorative elements aria-hidden, text contrast ≥4.5:1
+ */
+
+/* =============================================================================
+   CONTAINER
+   ============================================================================= */
+
+.act-opener {
+  /* Break out of hextra content column to reach full article width */
+  width: 100%;
+  margin: 0 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =============================================================================
+   PLATE — 2:3 vertical engraved image
+   ============================================================================= */
+
+.act-opener__plate {
+  /* Reset figure browser defaults */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 480px; /* 2:3 portrait plate — centred on wide screens */
+  position: relative;
+  display: block;
+}
+
+.act-opener__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+/* Placeholder shown while plates are pending from Frida */
+.act-opener__image--placeholder {
+  aspect-ratio: 2 / 3;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, #2A2317 90%, #FEFCF6 10%) 0%,
+    color-mix(in srgb, #2A2317 70%, #FEFCF6 30%) 100%
+  );
+  border: 1px solid rgba(254, 252, 246, 0.08);
+}
+
+/* Accent band — decorative 4px strip below plate image */
+.act-opener__accent-band {
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin-top: 0; /* flush below image */
+}
+
+/* Accent colour per act */
+.act-opener--bordo .act-opener__accent-band  { background: #7D4450; }
+.act-opener--amber  .act-opener__accent-band  { background: #E8AD4A; }
+.act-opener--sage   .act-opener__accent-band  { background: #839E75; }
+
+/* =============================================================================
+   LABEL — act numeral + title
+   ============================================================================= */
+
+.act-opener__label {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+.act-opener__act-numeral {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  /* Бордо for numeral across all acts — brand accent */
+  color: #7D4450;
+}
+
+/* Dark mode: numeral lightens slightly for contrast against dark bg */
+@media (prefers-color-scheme: dark) {
+  .act-opener__act-numeral {
+    /* Lighten бордо enough for 4.5:1 on dark surface (#1a1a1a) */
+    color: #c47a87;
+  }
+}
+
+/* Hextra dark-mode class override */
+.dark .act-opener__act-numeral {
+  color: #c47a87;
+}
+
+.act-opener__act-title {
+  font-size: clamp(1rem, 2.5vw, 1.375rem);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  /* Шоколад for title */
+  color: #2A2317;
+}
+
+@media (prefers-color-scheme: dark) {
+  .act-opener__act-title {
+    /* слоновая кость toned down for dark backgrounds */
+    color: #e8e4d9;
+  }
+}
+
+.dark .act-opener__act-title {
+  color: #e8e4d9;
+}
+
+/* =============================================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================================= */
+
+/* Mobile-first baseline: styles above target ≥320px.
+   At ≤600px: plate goes full viewport width, label stacks vertically. */
+@media (max-width: 600px) {
+  .act-opener__plate {
+    max-width: 100%;
+  }
+
+  .act-opener__label {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    max-width: 100%;
+    padding-top: 0.75rem;
+  }
+
+  .act-opener__act-numeral {
+    font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+  }
+
+  .act-opener__act-title {
+    font-size: clamp(1rem, 4vw, 1.125rem);
+  }
+}
+
+/* Wider screens: constrain plate width for typographic harmony */
+@media (min-width: 900px) {
+  .act-opener__plate {
+    max-width: 420px;
+  }
+}
+
+/* =============================================================================
+   REDUCED MOTION — no transitions present, declaration for future safety
+   ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .act-opener,
+  .act-opener__plate,
+  .act-opener__image,
+  .act-opener__accent-band,
+  .act-opener__label,
+  .act-opener__act-numeral,
+  .act-opener__act-title {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* =============================================================================
+   CHAPTER PLATE — inline illustration for non-act-opener chapters + intermezzi
+   ============================================================================= */
+
+.chapter-plate {
+  margin: 1.5rem auto 2.5rem;
+  padding: 0;
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.chapter-plate__image {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  border: 1px solid #F5F1EA;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .chapter-plate {
+    margin: 1rem 0 2rem;
+    max-width: 100%;
+  }
+  .chapter-plate__image {
+    max-width: 100%;
+  }
+}
+

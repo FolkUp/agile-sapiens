@@ -5,6 +5,12 @@
 
       {{ partial "breadcrumb.html" (dict "page" . "enable" true) }}
 
+      {{/* Act Opener: engraved plate + act label rendered above chapter header */}}
+      {{ partial "custom/act-opener.html" . }}
+
+      {{/* Chapter Plate: inline engraving for non-act-opener chapters and intermezzi */}}
+      {{ partial "custom/chapter-plate.html" . }}
+
       <!-- Level 3 Typography Activation: Chapter Header с академическим стилем -->
       <header class="chapter-header hx:mt-1.5 hx:mb-8">
         <h1 class="chapter-title hx:mt-2 hx:mb-4 hx:text-4xl hx:font-bold hx:tracking-tight">

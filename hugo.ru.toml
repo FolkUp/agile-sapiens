@@ -175,9 +175,12 @@ same_as = [
 [params.social]
 twitter_creator = "@folkupeco"
 twitter_site = "@folkupeco"
-og_image = "/assets/og-image-default.png"
+og_image = "/images/cover-og.jpg"
 og_image_width = 1200
 og_image_height = 630
+cover_image = "/images/cover.webp"
+cover_image_width = 1200
+cover_image_height = 1800
 
 # Schema.org Book metadata for monograph
 [params.book]

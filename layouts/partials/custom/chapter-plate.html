@@ -1,0 +1,30 @@
+{{/* Chapter Plate Partial — auto-renders engraved illustration for non-act-opener chapters and intermezzi.
+     Derives filename from frontmatter + slug:
+       chapter: N (non-act-opener) → /images/chapters/agil-chapter-N-plate.webp
+       intermezzo slug (intermezzo-N) → /images/chapters/agil-intermezzo-N-plate.webp
+     Renders nothing if act_opener is true (act-opener handles own rendering). */}}
+
+{{ if not .Params.act_opener }}
+  {{ $plate := "" }}
+  {{ $alt := "" }}
+
+  {{/* Intermezzo detection via filename */}}
+  {{ if hasPrefix .File.LogicalName "intermezzo-" }}
+    {{ $num := replaceRE "^intermezzo-(\\d+).*$" "$1" .File.LogicalName }}
+    {{ $plate = printf "agil-intermezzo-%s-plate.webp" $num }}
+    {{ $alt = printf "Сатирическая гравюра к интермедии %s: %s" $num .Title }}
+  {{ else if ge (int .Params.chapter) 1 }}
+    {{ $plate = printf "agil-chapter-%d-plate.webp" (int .Params.chapter) }}
+    {{ $alt = printf "Гравюра к главе %d: %s" (int .Params.chapter) .Title }}
+  {{ end }}
+
+  {{ if $plate }}
+    <figure class="chapter-plate">
+      <img
+        src="/images/chapters/{{ $plate }}"
+        alt="{{ $alt }}"
+        loading="eager"
+        class="chapter-plate__image" />
+    </figure>
+  {{ end }}
+{{ end }}

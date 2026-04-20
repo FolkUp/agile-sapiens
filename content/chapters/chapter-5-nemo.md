@@ -7,6 +7,11 @@ date_updated: "2026-04-08"
 weight: 60
 chapter: 5
 act: "II: Archetypes"
+act_opener: true
+act_label: "II"
+act_accent: "amber"
+act_plate: "agil-act-opener-II.webp"
+act_title: "Трансформация"
 category: analysis
 status: partially_verified
 confidence: medium

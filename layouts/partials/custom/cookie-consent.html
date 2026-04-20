@@ -1,11 +1,11 @@
 {{/* Cookie Consent Banner - GDPR Compliant */}}
-<div id="cookie-banner" class="cookie-banner" style="display: none;">
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" style="display: none;">
   <div class="cookie-content">
     <div class="cookie-text">
-      <h4>🍪 Cookie Notice</h4>
-      <p>
+      <p id="cookie-banner-title" class="cookie-title"><strong>🍪 Cookie Notice</strong></p>
+      <p id="cookie-banner-desc">
         We use essential cookies for site functionality and optional cookies for Ko-fi donations.
-        <a href="/legal/cookies/" target="_blank" style="color: #2563eb;">Learn more</a>
+        <a href="/legal/cookies/" target="_blank">Learn more</a>
       </p>
     </div>
     <div class="cookie-buttons">
@@ -28,13 +28,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.95);
-  color: white;
+  background: rgba(42, 35, 23, 0.97);
+  color: #FEFCF6;
   z-index: 9999;
   padding: 1rem;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(8px);
-  border-top: 2px solid #2563eb;
+  border-top: 2px solid #7D4450;
 }
 
 .cookie-content {
@@ -52,7 +52,7 @@
   min-width: 300px;
 }
 
-.cookie-text h4 {
+.cookie-text .cookie-title {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -67,6 +67,7 @@
 .cookie-text a {
   text-decoration: underline;
   font-weight: 500;
+  color: #E8AD4A;
 }
 
 .cookie-buttons {
@@ -87,22 +88,22 @@
 }
 
 .cookie-btn-primary {
-  background: #2563eb;
-  color: white;
+  background: #7D4450;
+  color: #FEFCF6;
 }
 
 .cookie-btn-primary:hover {
-  background: #1d4ed8;
+  background: #5a2f38;
   transform: translateY(-1px);
 }
 
 .cookie-btn-secondary {
-  background: #64748b;
-  color: white;
+  background: #475569;
+  color: #FEFCF6;
 }
 
 .cookie-btn-secondary:hover {
-  background: #475569;
+  background: #334155;
   transform: translateY(-1px);
 }
 
@@ -118,23 +119,23 @@
   height: 50px;
   border-radius: 50%;
   border: none;
-  background: #2563eb;
-  color: white;
+  background: #7D4450;
+  color: #FEFCF6;
   font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(125, 68, 80, 0.3);
   transition: all 0.2s ease;
 }
 
 .cookie-settings-btn:hover {
-  background: #1d4ed8;
+  background: #5a2f38;
   transform: scale(1.1);
 }
 
-/* Dark mode adjustments */
+/* Dark mode — same bordeaux palette, slightly deeper bg */
 [data-theme="dark"] .cookie-banner {
-  background: rgba(15, 23, 42, 0.95);
-  border-top-color: #3b82f6;
+  background: rgba(20, 17, 11, 0.97);
+  border-top-color: #7D4450;
 }
 
 /* Mobile responsiveness */

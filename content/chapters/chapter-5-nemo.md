@@ -3,10 +3,10 @@ title: "Глава 5: Сайрус Смит строит цивилизацию"
 description: "Bootstrap leadership: как малая автономная команда превосходит корпоративную бюрократию. Инженеры «Таинственного острова» как прототип каждой успешной тигровой команды"
 date: 2026-04-04
 date_created: "2026-04-04"
-date_updated: "2026-04-08"
+date_updated: "2026-04-20"
 weight: 60
 chapter: 5
-act: "II: Archetypes"
+act: "II"
 act_opener: true
 act_label: "II"
 act_accent: "amber"

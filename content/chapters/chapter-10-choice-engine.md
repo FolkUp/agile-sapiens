@@ -72,6 +72,10 @@ twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cy
 >
 > — William Gibson, "Neuromancer" (1984), но в 2030 мы понимаем: dead channel: это не помехи, а тишина отключённого человеческого интерфейса.
 
+> **Chapter Summary:** Cyberpunk Simulation 2030 — три Wells-сценария через прожитый опыт интеграции ИИ. Анна augmented, Михаил replaced, Дмитрий — AI Tamer (профессия, которой не существовало в 2025). Три человека, три параллельные реальности в одном московском офисе. HR классифицирует их как «равные карьерные возможности», но равными их делает только общий Wi-Fi. Интеграция ИИ не как технологическое событие, а как текстура повседневности — «jacking in» стало корпоративной рутиной.
+
+> **Verification Note:** This chapter uses Gibson's Neuromancer (1984) и Burning Chrome (1982) as literary DNA для AI integration texture. Scenarios illustrative — составные персонажи based on corporate AI adoption trends (MIT Sloan 2024) и Schwartz's Paradox of Choice framework (2004). Banking-level editorial standards applied.
+
 ## Prologue: The Console Cowboy в корпоративном кубикле
 
 **07:45, понедельник, март 2030. Москва-Сити, 47-й этаж.**

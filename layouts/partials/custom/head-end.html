@@ -1,15 +1,9 @@
 {{/* Hextra head-end override for GDPR compliance + SEO */}}
-{{/* Content Security Policy for enhanced security */}}
-<meta http-equiv="Content-Security-Policy" content="
-default-src 'self';
-script-src 'self' 'unsafe-inline' https://ko-fi.com https://cdn.ko-fi.com;
-style-src 'self' 'unsafe-inline';
-img-src 'self' data: https://ko-fi.com https://cdn.ko-fi.com https://uploads-ssl.webflow.com;
-font-src 'self' data:;
-connect-src 'self' https://ko-fi.com;
-frame-src https://ko-fi.com;
-object-src 'none';
-base-uri 'self';">
+{{/* Soft launch: noindex during hidden 4-week window */}}
+{{ if site.Params.launch.softLaunch -}}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+{{/* Content Security Policy: served via nginx header (folkup-infra/docker/nginx-sapiens.conf), not meta */}}
 
 {{/* AGILE SAPIENS Typography System - Brand Guide v2.5 */}}
 {{ $typographyCSS := resources.Get "css/typography-brand-guide-v2.5.css" | minify }}

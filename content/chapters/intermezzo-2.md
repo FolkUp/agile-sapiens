@@ -2,13 +2,16 @@
 title: "ИНТЕРМЕДИЯ II: Продакшенское подземелье"
 weight: 2
 category: intermezzo
-status: verified
-confidence: high
+status: draft
+confidence: medium
 tags: ["intermezzo", "stylistic"]
 sources: []
 related: []
+date: "2026-04-17"
 date_created: "2026-04-17"
 date_updated: "2026-04-17"
+reviewed_by: "AGIL-069 Phase C verification panel"
+review_date: "2026-04-19"
 ---
 
 # ИНТЕРМЕДИЯ II: Продакшенское подземелье

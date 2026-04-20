@@ -4,7 +4,7 @@ description: "Mad Tea Party как agile dysfunction: измеряют метр�
 date: 2026-04-15
 date_created: "2026-04-15"
 date_updated: "2026-04-19"
-weight: 35
+weight: 55
 chapter: "intermezzo-1"
 act: "Intermezzi"
 category: satire

@@ -141,6 +141,9 @@ jobs:
       name: production-vps
       url: https://sapiens.folkup.life
     steps:
+      - name: Checkout (need scripts/deploy-to-vps.sh + scripts/purge-cloudflare.js)
+        uses: actions/checkout@v4
+
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
         with:

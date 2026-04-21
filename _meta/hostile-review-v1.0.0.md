@@ -20,8 +20,8 @@
 | Open em-dash FAIL | 0 |
 | Fix waves applied | 1a + 1b + 1c + 2 + 3 / 5 (ALL COMPLETE) |
 | Batches complete | B0 + B1 + B2 + B3 + B4 + B5 + B6 + B7 + B8 (ALL 9 COMPLETE) |
-| Frontmatter bumps | **7 units promoted partially_verified → verified** (ch0, ch1, ch6, ch7, ch8, ch9, ch10). ch2/ch3/ch4 remain `verified` (no demotion). ch5 remains `partially_verified` (B1 nits unresolved). int1/int2/int3 policy still pending Андрей. |
-| AGIL-111 status | **COMPLETE** pending Андрей int1/int2/int3 policy ruling. Ready for stable v1.0.0 gate. |
+| Frontmatter bumps | **9 units promoted to verified** (ch0, ch1, ch6, ch7, ch8, ch9, ch10, int2, int3). ch2/ch3/ch4/int1 already verified (unchanged). ch5 remains `partially_verified` (B1 nits unresolved, non-blocking). int2/int3 resolved via Option C: added Carroll+Bulgakov+КГ sources[] entries matching int1 pattern — resolves Alpha strict-rule objection and Beta spirit argument simultaneously. |
+| AGIL-111 status | **COMPLETE** — book stable v1.0.0 ready. |
 
 **B0 pre-flight finding (2026-04-21):** All 8 original Tier B units exceeded 20-line diff threshold since prior review_date. Plan updated: ALL 14 units require Full Pass (Tier A).
 

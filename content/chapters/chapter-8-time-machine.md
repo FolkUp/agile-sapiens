@@ -13,12 +13,12 @@ act_accent: "sage"
 act_plate: "agil-act-opener-III.webp"
 act_title: "Горизонты"
 category: "scenarios"
-status: partially_verified
+status: verified
 confidence: "medium"
 authors: ["Андрей"]
 reading_time: "22 min"
 reviewed_by: "Alpha+Beta (hostile verification), КиберГонзо (OSINT verification)"
-review_date: "2026-04-10"
+review_date: "2026-04-21"
 tags:
   - h-g-wells
   - time-machine

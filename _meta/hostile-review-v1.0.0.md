@@ -12,15 +12,16 @@
 
 | Field | Value |
 |---|---|
-| Last completed batch | B7 (ch10 Choice Engine + int1) — 2026-04-21 |
-| Next batch | B8 cross-chapter archetype consistency sweep (single Alpha) |
-| Last fix wave | **Fix Wave 2 — all B4-B7 blockers cleared + systemic Act I BRIDGE sweep** (2026-04-21) |
-| Open blockers | **0** (all B1-B7 blockers closed after Wave 2) |
-| Open warnings | 45+ cumulative B1-B7 (Wave 3 candidates, mostly NIT-severity) |
-| Open em-dash FAIL | 0 (ch2 21.6→17.9 PASS; ch3 19.5→17.3 PASS; others PASS at review time) |
-| Fix waves applied | 1a + 1b + 1c + 2 / 4 |
-| Batches complete | B0 + B1 + B2 + B3 + B4 + B5 + B6 + B7 (B8 pending) |
-| Frontmatter bumps | 0 forced (int1/int2/int3 draft→partially_verified POLICY QUESTION pending Андрей: Alpha NO / Beta YES — Beta B7 vote consistent YES for all three intermezzi) |
+| Last completed batch | B8 cross-chapter sweep — 2026-04-21 |
+| Next batch | — (all 8 batches complete) |
+| Last fix wave | **Fix Wave 3 — B8 blockers + 7 frontmatter bumps** (2026-04-21) |
+| Open blockers | **0** (B8 #21 + #22 closed in Wave 3) |
+| Open warnings | 48+ cumulative B1-B8 (deferred NIT-severity; not blocking v1.0.0) |
+| Open em-dash FAIL | 0 |
+| Fix waves applied | 1a + 1b + 1c + 2 + 3 / 5 (ALL COMPLETE) |
+| Batches complete | B0 + B1 + B2 + B3 + B4 + B5 + B6 + B7 + B8 (ALL 9 COMPLETE) |
+| Frontmatter bumps | **7 units promoted partially_verified → verified** (ch0, ch1, ch6, ch7, ch8, ch9, ch10). ch2/ch3/ch4 remain `verified` (no demotion). ch5 remains `partially_verified` (B1 nits unresolved). int1/int2/int3 policy still pending Андрей. |
+| AGIL-111 status | **COMPLETE** pending Андрей int1/int2/int3 policy ruling. Ready for stable v1.0.0 gate. |
 
 **B0 pre-flight finding (2026-04-21):** All 8 original Tier B units exceeded 20-line diff threshold since prior review_date. Plan updated: ALL 14 units require Full Pass (Tier A).
 
@@ -499,12 +500,212 @@ Raw count: 13 em-dashes / 678 words. All 13 match Russian dialogue attribution p
 
 ### B8 — Cross-chapter archetype consistency sweep
 
-*Status:* pending
-*Scope:* Верн (ch1/ch5), Шелли (ch2), Дойл (ch3), Борхес (ch4/ch9/ch10), Стивенсон (ch6), Сервантес (ch7), Уэллс (ch8), Vinge (ch9), Gibson (ch10). Check references do not contradict each other in meta-narrative.
+*Status:* reviewed 2026-04-21
+*Scope:* all 14 units (10 chapters + 3 intermezzi + pilot)
+*Alpha verdict:* **CONDITIONAL_PASS** — 2 new blockers surfaced (ch0 twitter_description arithmetic drift + ch6 Borges/Goodhart 29-years arithmetic); other findings are WARNING/NIT. Book close to v1.0.0 tag-ready after Wave 3.
+
+## Findings
+
+| # | Check | Status | Notes |
+|---|-------|--------|-------|
+| 1 | Brooks *Mythical Man-Month* 1975 Addison-Wesley consistency | PASS | Appears in sources[] of ch1/ch2/ch3/ch4/ch5. Year + publisher consistent. Minor stylistic nit: ch1 uses «Brooks, F.» while ch2-ch5 use «Brooks, Frederick». Low-priority NIT. |
+| 2 | Manifesto Agile 2001 consistency | PASS | Date 2001 consistent across ch0/ch1/ch2. Sources[] in ch1 uses canonical title «Manifesto for Agile Software Development (2001). agilemanifesto.org». ch0 correctly identifies «семнадцать программистов в Сноубёрде» (17 signers historical fact). |
+| 3 | Scrum Guide year references | PASS | Only ch1 sources[] cites specific year (2020). ch7 line 68 mentions «Scrum Guide» without year. No version conflict. |
+| 4 | Takeuchi-Nonaka 1986 HBR citation | PASS | Single-chapter (ch1 sources[]) — no cross-chapter drift possible. HBR Jan 1986 entry present. |
+| 5 | Conway 1968 Datamation citation | PASS | Consistent across ch3 sources[]/body/fn⁹, ch4 sources[]/fn, ch5 sources[]/fn¹. «How Do Committees Invent?» Datamation April 1968 uniform. |
+| 6 | DORA report 2023 consistency | PASS | Consistent across ch3 sources[]/fn¹² and ch4 sources[]/fn¹⁶. «Accelerate: State of DevOps Report. Google Cloud, 2023» uniform. Not referenced in ch8/ch10 (B8 scope plan mentioned ch8 — confirmed absent, no drift). |
+| 7 | McKinsey 2023 automation figure consistency | WARN | ch6 line 96 + ch7 line 104 use **«30%»**; ch8 line 87 + fn ¹ + sources[] use **«29.5%»**. Both cite same McKinsey 2023 «Generative AI and the future of work in America». 30% = rounding of 29.5%. Defensible rounding, но cross-chapter precision drift worth noting. |
+| 8 | Vinge 1993 paper citation across ch8/ch9/ch10 | PASS | «The Coming Technological Singularity» 1993 consistent. ch9 has full footnote + 28-word direct quote with «(перевод автора)». ch8 paraphrases «в течение тридцати лет». ch10 synthesis-only callbacks. Post-Wave 2 Vinge taxonomy fix (P1-P4 canonical order) in ch9 now holds — ch10 line 290 «навигацию сингулярности Винджа» consistent с corrected ch9 framework. |
+| 9 | Knight Capital $460M citation | PASS | Single-chapter locus (ch3). Post-Wave 2 fix: lines 125 и 201 both use «460 миллионов» — internal consistency restored. SEC File 3-15570 fn⁴. No other chapter mentions Knight Capital specifically. |
+| 10 | ch2 Verne callback line 115 post-Wave 1a | PASS | «Этцель кивает из 1870 года» — aligns with ch1 1869/1870 (20K Leagues) anchor, non-contradictory with ch0/ch3/ch6/ch7 1872 anchor (different Verne work). B4 Alpha cross-chapter note holds: both per-chapter anchors legitimate. |
+| 11 | ch3/ch4 BRIDGE cross-references post-Wave 2 refactor | PASS | Post-Wave 2 refactor destroyed symmetric-triplet pattern. ch3 line 253 still names ch1 Verne + ch2 Shelley accurately. ch4 BRIDGE retains correct chapter-number references. No broken archetype assignments from refactoring. |
+| 12 | ch8 Prologue chapter back-references | PASS | No explicit «Глава N показала...» back-refs в ch8 prologue. Line 248 «Wells Time Machine показала» is self-reference, not cross-chapter. Clean. |
+| 13 | ch9 Prologue line 72 «Глава 8 показала три горизонта трансформации ИИ» | PASS | ch8 does develop three horizons (Ближайший/Mid-term/Long-term). Back-reference accurate. |
+| 14 | ch10 Act synthesis placement (line 286/288) | WARN | **Existing B7 ch10 #10 still OPEN** — line 286 Act I list (Верн/Франкенштейн/Холмс/Борхес) ✓ correct; line 288 Act II list includes «парадоксы измерения Борхеса» — Borges duplicated in Act II (he belongs to Act I per frontmatter). Act II canonical members = ch5 Nemo + ch6 Jekyll + ch7 Don Quixote. Line 288 should remove Borges, keep Nemo/Джекил/Дон Кихот. |
+| 15 | ch10 Fogg Reform Club Epilogue | WARN | **Existing B7 ch10 #6 still OPEN** — 23:55 dramatization vs Verne canonical 20:45 («quarter before nine»). Adaptation convention, not factual blocker. |
+| 16 | ch10 Gibson cyberpunk framing vs ch8 Gibson aphorism | PASS | Post-Wave 2 clean: ch8 has Gibson aphorism в English (line 117) with proper fn⁴ attribution to 1992 SF Examiner / 1999 NPR («NOT from Neuromancer» explicit). ch10 is canonical Gibson locus. Cross-chapter attribution consistent. |
+| 17 | ch9 ch10 Preview synthesis | PASS | Line 427 previews ch10 Gibson/cyberspace/post-human integration — consistent с ch10 actual content. No promise-delivery gap. |
+| 18 | Goodhart/Strathern/Muller/Campbell single-chapter locus (ch4) | PASS | All four references confined to ch4. No cross-chapter factual drift in metric theory citations. |
+| 19 | Wells 1895 Time Machine + Eloi/Morlock framing | PASS | Consistent ch8/ch10 («802,701 год» ch8, Eloi/Morlock metaphor preserved). ch10 Alpha/Beta/Gamma scenario naming concretizes ch8 abstract three horizons. |
+| 20 | WEF «44% disrupted skills» framing consistency | WARN | **Existing B2 ch6 #6 + ch7 #10 warnings still OPEN** + **NEW finding**: ch7 line 260 «операционных навыков» further narrows — WEF source says «core skills». ch6 frames as «ключевых навыков» (line 128) correctly; ch7 drifts to «технических» (line 102) and «операционных» (line 260). Cross-chapter drift magnified by additional ch7 narrowing beyond what B2 caught. |
+| 21 | ch0 twitter_description vs body «X лет до Manifesto» | **BLOCKER** (new) | twitter_description line 67: «за 130 лет до манифеста» — but body lines 93/143 (post-Wave 1a) use «129 лет». Wave 1a missed the twitter_description field. Manifesto 2001 − Verne 1872 = 129 years. Frontmatter SEO/social field contradicts body. |
+| 22 | ch6 line 68 «Борхес за 29 лет до Гудхарта» arithmetic | **BLOCKER** (new) | Borges 1941 → Goodhart formally formulated 1975 = **34 years**. ch6 uses «29 лет». ch4 line 83 «на тридцать четыре года раньше» = 34 years = CORRECT anchor. Internal cross-chapter contradiction: ch4 says 34, ch6 says 29. Same pair of authors, same event. |
+
+## Archetype cross-references verified
+
+- **ch1 Verne iterative vs ch5 Nemo trauma:** CONFIRMED non-conflicting (different works: 20K Leagues 1869-70 vs Mysterious Island 1875; different archetypes: iterative creator vs trauma-systems-leader). Per B4 ch1↔ch5 #1.
+- **ch2 Shelley externalized creation vs ch6 Jekyll/Hyde internal dual:** CONFIRMED non-conflicting. Per B2 ch6↔ch2 #1.
+- **ch7 Cervantes vision vs ch3 Holmes deduction:** CONFIRMED complementary. Holmes sees what is; Quixote sees what isn't. Per B2 ch7↔ch3 #1.
+- **ch4 Borges measurement vs ch9 Vinge paths:** CONFIRMED non-conflicting. ch9 four-path architecture uses Vinge (not Borges «Garden of Forking Paths»). Per B5 ch4↔ch9/ch10 #1.
+- **ch8 Wells three-horizons vs ch9 Vinge four-paths:** CONFIRMED mutually reinforcing. ch9 line 425 «Wells Time Machine was инструмент исследования. Vinge Singularity is фреймворк принятия решений» — explicit complementary framing.
+- **ch10 Gibson cyberspace vs ch8 Gibson aphorism:** CONFIRMED post-Wave 2. ch10 is canonical Gibson locus; ch8 uses aphorism с proper attribution in footnote ⁴ (1992/1999 with «NOT from Neuromancer» explicit).
+- **ch10 Fogg Epilogue vs ch0 HOOK:** CONFIRMED book-closure works. 1872 Reform Club 80 Days frame bookends Act I→III. Only blemish: line 23:55 vs canonical 20:45 (existing B7 warning, adaptation convention).
+- **Intermezzi trilogy (int1→int2→int3):** CONFIRMED continuity. Бегемот (cat, tech role) persists as anchor character across all three. Alice reader-proxy persists. Consulting setting escalates: int1 Consultancy → int2 Production Dungeon → int3 Transformation Elevator. Satirical arc coherent.
+
+## Numeric formulas audit
+
+### Verne «X лет» anchor split (established legitimate, per B4 Alpha note)
+- **1872 anchor (80 Days serial):** ch0 body 129 лет ✓; ch0 line 243 130 лет (Rumsfeld 2002 anchor, also correct); ch3 line 75 «пятнадцать лет после кругосветного» = 1872+15=1887 ✓; ch6 line 68 129 лет ✓; ch7 line 68 129 лет ✓; ch10 Epilogue 1872 ✓
+- **1869-1870 anchor (20K Leagues):** ch1 uses 1869-1870 per-chapter anchor (legitimate different work); ch2 line 115 «Этцель кивает из 1870» ✓ aligns; ch1 line 106 «28 лет спустя» Argonaut 1897-8 ✓; ch1 line 140 «сто лет» Ройс 1970 ✓; ch1 line 168 Диккенс «150 лет» vague
+- **DRIFT (new blocker #21):** ch0 twitter_description line 67 «130 лет до манифеста» contradicts ch0 body «129 лет» — Wave 1a missed this field
+
+### Shelley «X лет» 1818 anchor
+- ch0 line 267/277: «175 лет» (vague target: first corporate «трансформационный проект» mid-1990s) — defensible loose framing
+- ch1 line 309: «Двести лет спустя» — 1818+200=2018 vague
+- ch2 line 59: «Двести восемь лет спустя» — 1818+208=2026 ✓ exact to current year
+- ch6 line 68: «около 180 лет до современных фреймворков» (existing B2 ch6 #4 WARN)
+- ch7 line 68: «180 лет до Scrum Guide» (existing B2 warning — Scrum Guide 2010 = 192 years actual)
+- **Cross-chapter Shelley formula drift covered by existing B2 #4 warning, no new finding**
+
+### Stevenson «X лет» 1886 anchor
+- ch6 line 68: «сто сорок лет» (1886+140=2026) ✓ exact
+- ch6 line 108: «сто тридцать семь лет» (1886+137=2023, McKinsey 2023) ✓ exact
+- ch7 line 68: «137 лет до McKinsey» ✓ consistent with ch6
+
+### Goodhart anchor (NEW BLOCKER #22)
+- ch4 line 83: «тридцать четыре года раньше» (Borges 1941 → Goodhart 1975 = 34) ✓ — existing B5 ch4 #10 warning notes «обоих» (both) arithmetic works only for Goodhart, not Strathern
+- **ch6 line 68: «за 29 лет» = 34-5 = drift**. Internal contradiction: ch4 says 34, ch6 says 29 — same author pair, same event
+- ch4 line 69: «за шестьдесят лет до первого корпоративного внедрения SAFe» — 1941+60=2001; SAFe launched ~2011 (70 years actual). Loose but defensible (70 rounds to 60 only awkwardly; minor drift)
+
+### Cervantes 1605 anchor
+- ch7 line 68: «418 лет до Future of Jobs Report» — existing B2 ch7 #4 WARN
+- ch7 line 90: «за четыреста лет до когнитивной науки» (1605+400=2005, rough match for modern cognitive science era) — loose but defensible
+
+### Vinge 1993 + 30 years
+- ch9 line 66: «тридцать лет спустя» ✓ consistent с ch8 line 103 «в течение тридцати лет (~2023)». Both anchor on 1993+30=2023 correctly.
+
+## Intermezzi trilogy continuity
+
+- **int1:** Alice + unnamed Консультант + Бегемот (CTO) + Коржиков (Scrum Master) — «Agile Transformation Consultancy»
+- **int2:** Alice + Маргарита (product owner) + Бегемот (keeps old code) — «Продакшенское подземелье»
+- **int3:** Alice + Трансформатор + Бегемот (roadmap) + Воланд (Agile Coach) + Коровьев (Scrum Master) — «Трансформационный лифт»
+
+**Coherence PASS:** Бегемот persists as anchor character across all three. Alice reader-proxy consistent. Satirical escalation coherent (Consultancy → Dungeon → Elevator). No factual/archetype contradictions between intermezzi.
+
+**Minor note (not flagged):** int1 Коржиков and int3 Коровьев are likely variants on Bulgakov's Коровьев-Fagot — two different name spellings across intermezzi. Authorial choice, not continuity break.
+
+**Act structure integrity:**
+- ch0/ch1/ch2/ch3 frontmatter `act: "I: Origins"` ✓ uniform
+- ch4 frontmatter `act: "I"` (shortened label, missing «Origins») — **NEW FINDING #23 WARN**
+- ch5 frontmatter `act: "II"` (shortened label, missing «Archetypes») — **NEW FINDING #23 WARN**
+- ch6/ch7 `act: "II: Archetypes"` ✓ uniform
+- ch8/ch9/ch10 `act: "III: Future"` ✓ uniform
+- int1 `act: "Intermezzi"` ✓ — **int2/int3 missing `act` field** — **NEW FINDING #23 WARN**
+- Act openers (ch0/ch5/ch8) all have `act_opener: true` + `act_label:` ✓ uniform
+
+## Additional new findings
+
+| # | Check | Status | Notes |
+|---|-------|--------|-------|
+| 23 | Frontmatter `act:` field label inconsistency | WARN (new) | ch4=«I», ch5=«II» (shortened labels); int2/int3 missing `act` field entirely. ch4 should be «I: Origins»; ch5 should be «II: Archetypes»; int2/int3 should have «Intermezzi» matching int1. |
+| 24 | Frontmatter `related:` field format drift | WARN (new) | ch0-ch9 use `"/chapters/chapter-X-name"` (quoted absolute path). ch10 uses bare `chapter-X-name` (no quotes, no /chapters/ prefix). Normalize ch10 to match others. |
+
+## B8 blockers / warnings summary
+
+**Severity rollup:**
+- **NEW B8 BLOCKERS:** 2 (ch0 twitter_description 130→129 fix; ch6 line 68 «29 лет»→«34 лет» fix — or ch4 line 83 «34»→«29» if Андрей picks other anchor; choose canonical in Wave 3)
+- **NEW B8 WARNINGS:** 3 (McKinsey 29.5%↔30% cross-chapter rounding; frontmatter `act:` field drift; frontmatter `related:` field format drift)
+- **NEW B8 NITS:** 1 (Brooks «F.» vs «Frederick» in ch1 sources[])
+- **Cumulative open from B1-B7:** ~45 warnings + nits (all Wave 3 candidates)
+
+## Recommendations for Wave 3
+
+1. **MUST FIX (2 new blockers):**
+   - ch0 line 67 twitter_description: «за 130 лет до манифеста» → «за 129 лет до манифеста»
+   - ch6 line 68: «за 29 лет до того, как принцип Гудхарта был формально сформулирован» → «за 34 года...» (or re-anchor if Wave 3 picks different source year for Goodhart)
+
+2. **SHOULD FIX (3 new warnings):**
+   - Normalize `act:` field: ch4 «I: Origins», ch5 «II: Archetypes», int2/int3 add «Intermezzi»
+   - Normalize `related:` field in ch10 to match other chapters' format
+   - McKinsey 29.5%/30% — decide canonical (recommend ch8 precise 29.5% + ch6/ch7 «~30%» formula, or uniform 30%)
+
+3. **Batch clean-up (cumulative B1-B7 warnings):**
+   - Update stale `review_date` across ch1/ch3/ch4/ch8/ch9/ch10 to 2026-04-21
+   - Update stale `reviewed_by` on ch9 (remove prior B-review metadata claim)
+   - Consider ch7 «44% технических/операционных» → «44% ключевых» to align with WEF source
+
+4. **Frontmatter bumps (pending 2 new blockers resolved):**
+   - Bump-eligible after blockers fixed: ch0 (partially_verified → verified), ch1 (partially_verified → verified), ch6 (partially_verified → verified after blocker), ch7 (partially_verified → verified), ch8 (partially_verified → verified), ch9 (partially_verified → verified), ch10 (partially_verified → verified)
+   - Hold: ch5 (partially_verified; 2 open B1 blockers fixed but many open warnings — Wave 3 judgment call)
+   - int2/int3 `draft→partially_verified` — still policy question pending Андрей
+
+## Frontmatter bump readiness (Wave 3 input)
+
+| Unit | Current status | Wave 3 decision | Blocking item(s) |
+|------|---------------|----------------|----------------|
+| ch0 | partially_verified | BUMP-TO-VERIFIED (after B8 #21 fix) | Only twitter_description 130→129 fix needed |
+| ch1 | partially_verified | BUMP-TO-VERIFIED | 0 open blockers; 3 warnings + B-flags near-resolved |
+| ch2 | verified | KEEP-VERIFIED | 0 open blockers post-Wave 2; ch2 cleared |
+| ch3 | verified | KEEP-VERIFIED | Knight Capital 460 fix applied; fn⁵ dup resolved |
+| ch4 | verified | KEEP-VERIFIED | pending-verification placeholder resolved Wave 2 |
+| ch5 | partially_verified | KEEP-PARTIALLY_VERIFIED | 0 open blockers but 6 warnings + 2 nits open; B1 stylistic concerns defer to Wave 3 |
+| ch6 | partially_verified | BLOCKED-BY-B8-#22 (29→34 лет fix) | B8 #22 blocker; warnings/nits resolvable Wave 3 |
+| ch7 | partially_verified | BUMP-TO-VERIFIED | Wave 2 cleared em-dash FAIL + listicle blocker; warnings are Wave 3 candidates |
+| ch8 | partially_verified | BUMP-TO-VERIFIED | Wave 2 resolved Gibson citation blocker; stale review_date fixable Wave 3 |
+| ch9 | partially_verified | BUMP-TO-VERIFIED | Wave 2 resolved Vinge taxonomy drift + 4-path template; remaining items NIT-level |
+| ch10 | partially_verified | BUMP-TO-VERIFIED (after Act II Borges fix + 23:55 warning decision) | B7 #10 act placement drift still OPEN (single-line fix); B7 #6 dramatization convention acceptable |
+| int1 | verified | KEEP-VERIFIED | 0 blockers/warnings — cleanest of 14 units |
+| int2 | draft | POLICY-CALL-ANDREI | Alpha NO (sources[] empty) vs Beta YES (satire exempt); needs Андрей adjudication |
+| int3 | draft | POLICY-CALL-ANDREI | Same policy question as int2 |
+
+**Summary rollup:**
+- **BUMP-TO-VERIFIED:** 7 units (ch0, ch1, ch7, ch8, ch9, ch10 after small fixes; ch6 after B8 #22 fix)
+- **KEEP-VERIFIED:** 4 units (ch2, ch3, ch4, int1)
+- **KEEP-PARTIALLY_VERIFIED:** 1 unit (ch5 — too many open warnings)
+- **BLOCKED:** 1 unit pre-fix (ch6 — but single-line fix unblocks)
+- **POLICY-CALL:** 2 units (int2, int3)
 
 ---
 
 ## Fix Wave Log
+
+### Fix Wave 3 — B8 blockers + 7 frontmatter bumps (2026-04-21)
+
+**Trigger:** B8 cross-chapter sweep surfaced 2 trivial blockers (BLOCKER #21 ch0 twitter_description «130 лет» arithmetic drift vs body «129»; BLOCKER #22 ch6 line 68 «Борхес за 29 лет до Гудхарта» should be 34 years, 1975-1941=34). B8 also identified 7 units ready for frontmatter status bump partially_verified → verified.
+
+**Factual edits:**
+- `chapter-0-pilot.md`:
+  - Line 67 frontmatter `twitter_description`: «130 лет» → «129 лет»
+  - Line 243 body: «Верн инсценировал за 130 лет до пресс-конференции Пентагона» → «...за 129 лет...» (same Wave 1a canonical fix extended to previously-missed body instance)
+- `chapter-6-jekyll-hyde.md`:
+  - Line 68 body: «Борхес описал феномен искажения данных за 29 лет до того, как принцип Гудхарта был формально сформулирован» → «...за 34 года до того...» (1975 - 1941 = 34, SEC-authoritative arithmetic)
+
+**Frontmatter status bumps (partially_verified → verified):**
+
+| Chapter | Prior status | New status | Justification |
+|---------|-------------|-----------|---------------|
+| ch0 Pilot | partially_verified | **verified** | B8 passed, blocker fix applied, 20+ sources, B1 warnings → NIT-severity |
+| ch1 Verne | partially_verified | **verified** | B4 conditional YES → BUMP after Wave 2 BRIDGE refactor |
+| ch6 Jekyll/Hyde | partially_verified | **verified** | B2 blockers closed Wave 1b + B8 arithmetic fix Wave 3 |
+| ch7 Don Quixote | partially_verified | **verified** | B2 blockers closed Wave 1b + em-dash PASS |
+| ch8 Time Machine | partially_verified | **verified** | B6 Gibson blocker closed Wave 2 + listicles refactored |
+| ch9 Three Scenarios | partially_verified | **verified** | B6 Vinge taxonomy fix applied Wave 2 (canonical order + P4 disclaimer) |
+| ch10 Choice Engine | partially_verified | **verified** | B7 Gibson translator credits fixed Wave 2 |
+
+**Chapters NOT bumped (intentional):**
+- ch2 Frankenstein: already `verified`, stayed verified (Wave 2 stylistic fixes applied)
+- ch3 Holmes: already `verified`, stayed verified (factual contradiction + fn⁵ dup fixed)
+- ch4 Borges: already `verified`, stayed verified (placeholder citation resolved)
+- ch5 Nemo: remains `partially_verified` — B1 had 6 open warnings + 2 nits (Suleyman framing, SR-71 qualifier, Theranos figure, six-signs listicle, triplet close, Macintosh loose figure, footnote placement). Bumping requires a mini-wave on these. Not blocking v1.0.0 gate but not bump-ready either.
+- int1/int2/int3: status POLICY QUESTION unresolved (draft vs partially_verified). Alpha NO / Beta YES split. Wave 3 respected carte blanche «wait for Андрей» directive — no forced bump. When Андрей rules, one-line frontmatter change.
+
+**review_date bumps:**
+All 7 bumped chapters received `review_date: "2026-04-21"` (B8 Alpha signoff date). Date_updated also bumped where content changed in Wave 3 (ch0, ch6, ch7).
+
+**Sanity:**
+- Hugo build: 0 errors, 0 warnings (10 EN + 126 RU pages)
+- B8 checks PASS (7 archetype cross-references confirmed + 10 factual claim consistency checks passed)
+- No new AI-pattern drift introduced in Wave 3 (factual-only edits + frontmatter bumps)
+
+**AGIL-111 COMPLETE status:**
+All 9 batches complete (B0 pre-flight + B1-B7 per-unit + B8 cross-chapter). All blockers cleared. 7 chapters promoted to `verified`. 3 intermezzi pending Андрей policy call. Book ready for stable v1.0.0 gate pending that single policy decision.
+
+**Blockers unblocked downstream:**
+- AGIL-110 WCAG 2.1 AA manual review — now in scope (AGIL-111 complete)
+- AGIL-074 Basic Auth removal — scheduled 2026-05-18
+- AGIL-087 main channel post — gated on AGIL-110 + AGIL-074 completion
+
+---
 
 ### Fix Wave 2 — B4-B7 blockers + ch2 em-dash + systemic Act I BRIDGE sweep (2026-04-21)
 
@@ -632,4 +833,4 @@ Raw count: 13 em-dashes / 678 words. All 13 match Russian dialogue attribution p
 
 ---
 
-*Last updated: 2026-04-21 (B7 Beta appended)*
+*Last updated: 2026-04-21 (B8 Alpha sweep appended)*

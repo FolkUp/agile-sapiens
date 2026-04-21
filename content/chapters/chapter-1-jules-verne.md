@@ -8,12 +8,12 @@ weight: 20
 chapter: 1
 act: "I: Origins"
 category: analysis
-status: partially_verified
+status: verified
 confidence: high
 authors: ["Андрей"]
 reading_time: "22 min"
 reviewed_by: "КиберГонзо (OSINT), Alpha+Beta (hostile verification)"
-review_date: "2026-03-26"
+review_date: "2026-04-21"
 sources:
   - "Verne, Jules. Twenty Thousand Leagues Under the Seas (1870). Hetzel, Paris"
   - "Verne, Jules. Around the World in Eighty Days (1872). Le Temps serialization"

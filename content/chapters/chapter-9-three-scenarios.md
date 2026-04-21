@@ -8,12 +8,12 @@ weight: 100
 chapter: 9
 act: "III: Future"
 category: "decision-frameworks"
-status: partially_verified
+status: verified
 confidence: "high"
 authors: ["Андрей"]
 reading_time: "22 min"
 reviewed_by: "Alpha+Beta Hostile Verification (PASS/CONDITIONAL_PASS), КиберГонзо OSINT Verification"
-review_date: "2026-04-10"
+review_date: "2026-04-21"
 tags:
   - vernor-vinge
   - singularity-indicators

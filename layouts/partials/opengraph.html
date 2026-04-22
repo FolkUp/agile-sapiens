@@ -1,0 +1,64 @@
+{{/* AGIL-116 M2: local override of Hextra opengraph.html — Hugo 0.155 has a
+     template-parsing quirk where Hextra's multi-line content="" with {{ with }}
+     blocks eats the <meta + content="" wrappers, causing og:description + og:type
+     to emit as malformed fragments. This override uses flat single-line content
+     expressions and honors .Params.og_description / og_type / og_title overrides
+     from frontmatter (present in _index.md + chapter frontmatter). */}}
+
+{{- $ogTitle := or .Params.og_title .Title -}}
+{{- $ogDescription := or .Params.og_description .Description -}}
+{{- if not $ogDescription -}}
+  {{- if .IsPage -}}
+    {{- $ogDescription = .Summary -}}
+  {{- else -}}
+    {{- $ogDescription = site.Params.description -}}
+  {{- end -}}
+{{- end -}}
+{{- $ogType := or .Params.og_type (cond .IsPage "article" "website") -}}
+
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $ogDescription }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:url" content="{{ .Permalink }}">
+
+{{- with $.Params.images -}}
+  {{- range first 6 . }}
+    {{- with $.Resources.GetMatch . }}
+      <meta property="og:image" content="{{ .Permalink }}">
+    {{- else }}
+      {{- $image := . -}}
+      {{- if hasPrefix $image "/" -}}
+        {{- $image = relURL (strings.TrimPrefix "/" $image) -}}
+      {{- end -}}
+      <meta property="og:image" content="{{ $image | absURL }}">
+    {{- end }}
+  {{- end }}
+{{- else -}}
+  {{- with $.Site.Params.images }}
+    {{- $image := index . 0 -}}
+    {{- if hasPrefix $image "/" -}}
+      {{- $image = relURL (strings.TrimPrefix "/" $image) -}}
+    {{- end -}}
+    <meta property="og:image" content="{{ $image | absURL }}">
+  {{- end }}
+{{- end -}}
+
+{{- if .IsPage }}
+{{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+<meta property="article:section" content="{{ .Section }}">
+{{ with .PublishDate }}
+<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
+{{ end }}
+{{ with .Lastmod }}
+<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
+{{ end }}
+{{- end -}}
+
+{{- with .Params.audio }}<meta property="og:audio" content="{{ . }}">{{ end }}
+{{- with .Params.locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
+{{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}">{{ end }}
+{{- with .Params.videos }}{{- range . }}<meta property="og:video" content="{{ . | absURL }}">{{ end }}{{ end -}}
+
+{{- with site.Params.social.facebook_admin }}
+<meta property="fb:admins" content="{{ . }}">
+{{ end }}

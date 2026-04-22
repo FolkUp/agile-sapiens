@@ -28,12 +28,18 @@
     <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
   {{- end -}}
 
-  {{/* AGIL-112 W2: hreflang alternate for RU/EN language pairs */}}
+  {{/* AGIL-112 W2 + AGIL-116 M3: hreflang alternate for RU/EN + x-default always
+       points to defaultContentLanguage (RU) translation — Google's canonical guidance
+       requires consistent x-default across all language variants of same page.
+       "ru" is hardcoded per hugo.toml:defaultContentLanguage (site.DefaultContentLanguage
+       not exposed to templates in this Hugo version / theme combo). */}}
   {{- if .IsTranslated -}}
     {{- range .AllTranslations -}}
       <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+      {{- if eq .Language.Lang "ru" -}}
+        <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+      {{- end -}}
     {{- end -}}
-    <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
   {{- end -}}
 
   {{- partial "opengraph.html" . -}}

@@ -1,0 +1,29 @@
+diff --git a/.github/workflows/build-deploy.yml b/.github/workflows/build-deploy.yml
+index 375b47c..0c29f7a 100644
+--- a/.github/workflows/build-deploy.yml
++++ b/.github/workflows/build-deploy.yml
+@@ -220,5 +220,23 @@ jobs:
+               echo "❌ Expected 200, got $STATUS"
+               exit 1
+             fi
++
++            echo "=== AGIL-112 Wave 2a regression guards ==="
++            HTML=$(curl -s -u "$PREVIEW_USER:$PREVIEW_PASS" https://sapiens.folkup.life/)
++            if echo "$HTML" | grep -qE 'meta name=["'"'"']?robots["'"'"']? content=["'"'"']?noindex'; then
++              echo "❌ noindex present on homepage — softLaunch regression"
++              exit 1
++            fi
++            echo "✅ noindex absent from homepage"
++            if ! echo "$HTML" | grep -qE 'rel=["'"'"']?alternate["'"'"']? hreflang='; then
++              echo "❌ hreflang alternate tags missing — W2 regression"
++              exit 1
++            fi
++            echo "✅ hreflang alternate tags present"
++            if echo "$HTML" | grep -qE 'meta name=["'"'"']?generator["'"'"']? content=["'"'"']?Hugo'; then
++              echo "❌ Hugo generator version leak — W5 regression"
++              exit 1
++            fi
++            echo "✅ generator meta absent (no version leak)"
+           fi
+           echo "Banking-level standards: MAINTAINED"
+\ No newline at end of file

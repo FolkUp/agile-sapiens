@@ -4,10 +4,11 @@ title = "AGILE SAPIENS"
 theme = "hextra"
 defaultContentLanguage = "ru"
 enableRobotsTXT = true
+disableHugoGeneratorInject = true
 
 # Soft launch flag — set to false to remove noindex/Disallow and enable sitemap indexing
 [params.launch]
-softLaunch = true
+softLaunch = false
 
 # Exclude non-article files from build (AGIL soft launch cleanup)
 ignoreFiles = [

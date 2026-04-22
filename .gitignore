@@ -34,3 +34,7 @@ temp-build-en/
 # Root level build outputs
 *.html
 !layouts/**/*.html
+
+# Scratch curl dumps from audit sessions (recreate on demand; AGIL-112)
+_meta/*.headers
+_meta/main.css

@@ -76,13 +76,20 @@
 
 .cookie-btn {
   flex: 1 1 auto;
-  padding: 0.55rem 1rem;
+  padding: 0.75rem 1.25rem;
+  min-height: 44px;
+  min-width: 44px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cookie-btn:focus-visible {
+  outline: 2px solid #E8AD4A;
+  outline-offset: 2px;
 }
 
 .cookie-btn-primary {
@@ -158,6 +165,8 @@
 
   .cookie-btn {
     min-width: 140px;
+    min-height: 48px;
+    padding: 0.875rem 1.25rem;
   }
 }
 </style>

@@ -1,19 +1,96 @@
 /* AGILE SAPIENS Typography System - Traditional Book Design
- * Classical typography for academic monographs and books
- * Based on EB Garamond and Crimson Pro
+ * Classical typography for academic monographs using FolkUp canonical fonts
+ * (Playfair Display + Source Sans 3 per BRAND-GUIDE.md v2.5 §4)
  * WCAG 2.1 AA compliant with 4.5:1 contrast ratios
  */
 
-/* Font Face Declarations - Local System Fonts Only */
+/* ===== FONT FACE DECLARATIONS — GDPR-COMPLIANT SELF-HOSTED ===== */
+/* Consolidated into classical.css as single source of typography (AGIL-112). */
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/pacifico/pacifico-regular.woff2') format('woff2'),
+       url('/fonts/pacifico/pacifico-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display/playfair-display-regular.woff2') format('woff2'),
+       url('/fonts/playfair-display/playfair-display-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display/playfair-display-bold.woff2') format('woff2'),
+       url('/fonts/playfair-display/playfair-display-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display/playfair-display-italic.woff2') format('woff2'),
+       url('/fonts/playfair-display/playfair-display-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/source-sans-3/source-sans-3-regular.woff2') format('woff2'),
+       url('/fonts/source-sans-3/source-sans-3-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/source-sans-3/source-sans-3-bold.woff2') format('woff2'),
+       url('/fonts/source-sans-3/source-sans-3-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/source-sans-3/source-sans-3-italic.woff2') format('woff2'),
+       url('/fonts/source-sans-3/source-sans-3-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0400-04FF, U+0500-052F;
+}
+
+/* Hextra footer centering fix (AGIL-102 preserved from v2.5 typography file) */
+.hextra-custom-footer {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* CSS Layer Ordering - Enhanced Alice v2.0 Level 3 Architecture */
 @layer base, level2-visual-polish, utilities;
 
 /* CSS Custom Properties - Root Variables */
 :root {
-  /* Typography Families */
-  --font-body: 'EB Garamond', 'Times New Roman', serif;
-  --font-heading: 'Crimson Pro', 'Times New Roman', serif;
+  /* Typography Families — FolkUp canonical per BRAND-GUIDE.md v2.5 */
+  --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-mono: 'Courier New', monospace;
 
   /* Typography Scale - Traditional Book Proportions */

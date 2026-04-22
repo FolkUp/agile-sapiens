@@ -3,12 +3,10 @@
      (single source of truth — avoids duplicate meta robots tags). */}}
 {{/* Content Security Policy: served via nginx header (folkup-infra/docker/nginx-sapiens.conf), not meta */}}
 
-{{/* AGILE SAPIENS Typography System - Brand Guide v2.5 */}}
-{{ $typographyCSS := resources.Get "css/typography-brand-guide-v2.5.css" | minify }}
-<link rel="stylesheet" href="{{ $typographyCSS.Permalink }}">
-
-{{/* AGILE SAPIENS Classical Typography — provides --color-text-primary, --color-bg-primary
-     and other tokens consumed by visuals-framework.css. Must load BEFORE visuals. */}}
+{{/* AGILE SAPIENS Classical Typography — single source of fonts + tokens consumed by
+     visuals-framework.css and act-opener.css. Uses FolkUp canonical fonts (Playfair Display +
+     Source Sans 3). AGIL-112: typography-brand-guide-v2.5.css removed from load path
+     (file retained on disk as reference until AGIL-114 canonical migration). */}}
 {{ $classicalCSS := resources.Get "css/typography-classical.css" | minify }}
 <link rel="stylesheet" href="{{ $classicalCSS.Permalink }}">
 

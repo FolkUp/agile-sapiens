@@ -1,0 +1,143 @@
+{{- $lang := .Site.Language.Lang | default "ru" -}}
+<!doctype html>
+<html lang="{{ $lang }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>{{ if eq $lang "en" }}Page not found · AGILE SAPIENS{{ else }}Страница не найдена · AGILE SAPIENS{{ end }}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        font-display: swap;
+        src: url("/fonts/playfair-display/playfair-display-bold.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Source Sans 3";
+        font-weight: 400;
+        font-display: swap;
+        src: url("/fonts/source-sans-3/source-sans-3-regular.woff2") format("woff2");
+      }
+      :root {
+        --folkup-bordeaux: #7D4450;
+        --folkup-sage: #839E75;
+        --folkup-amber: #E8AD4A;
+        --folkup-ivory: #FEFCF6;
+        --folkup-surface: #F0EDE8;
+        --folkup-charcoal: #2A2725;
+        --folkup-muted: #6B6560;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --folkup-bordeaux: #C88C82;
+          --folkup-sage: #A3B898;
+          --folkup-ivory: #1A1816;
+          --folkup-surface: #242220;
+          --folkup-charcoal: rgba(225, 220, 215, 1);
+          --folkup-muted: rgba(225, 220, 215, 0.7);
+        }
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        background: var(--folkup-ivory);
+        color: var(--folkup-charcoal);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.5rem;
+        line-height: 1.6;
+      }
+      main {
+        max-width: 560px;
+        text-align: center;
+      }
+      .error-code {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: clamp(4rem, 12vw, 7rem);
+        line-height: 1;
+        color: var(--folkup-bordeaux);
+        margin: 0 0 1.5rem;
+        letter-spacing: -0.02em;
+      }
+      h1 {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1.2;
+        margin: 0 0 1rem;
+        color: var(--folkup-charcoal);
+      }
+      p {
+        font-size: 1.05rem;
+        color: var(--folkup-muted);
+        margin: 0 0 2rem;
+      }
+      .actions {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: background 0.2s ease, transform 0.15s ease;
+      }
+      .btn-primary {
+        background: var(--folkup-bordeaux);
+        color: var(--folkup-ivory);
+      }
+      .btn-primary:hover { background: #5a2f38; transform: translateY(-1px); }
+      .btn-secondary {
+        background: transparent;
+        color: var(--folkup-bordeaux);
+        border: 1.5px solid var(--folkup-bordeaux);
+      }
+      .btn-secondary:hover { background: var(--folkup-surface); }
+      .btn:focus-visible {
+        outline: 2px solid var(--folkup-amber);
+        outline-offset: 2px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .btn-primary { color: var(--folkup-ivory); background: var(--folkup-bordeaux); }
+        .btn-secondary { color: var(--folkup-bordeaux); border-color: var(--folkup-bordeaux); }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="error-code" aria-hidden="true">404</div>
+      {{- if eq $lang "en" }}
+      <h1>This page could not be found.</h1>
+      <p>You may have followed an outdated link, or the page has moved. Return to the homepage or browse the table of contents.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/en/">Home</a>
+        <a class="btn btn-secondary" href="/en/chapters/">Chapters</a>
+      </div>
+      {{- else }}
+      <h1>Такой страницы не существует.</h1>
+      <p>Возможно, вы перешли по устаревшей ссылке, или страница переехала. Вернитесь на главную или загляните в оглавление.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/">Главная</a>
+        <a class="btn btn-secondary" href="/chapters/">Оглавление</a>
+      </div>
+      {{- end }}
+    </main>
+  </body>
+</html>

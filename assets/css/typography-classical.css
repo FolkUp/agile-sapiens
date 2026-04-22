@@ -187,8 +187,13 @@
   --color-focus-ring: rgba(37, 99, 235, 0.2);
 }
 
-/* Dark Mode Variables - Enhanced Alice Palette */
-[data-theme="dark"] {
+/* Dark Mode Variables - Enhanced Alice Palette (FolkUp Palette D dark) */
+/* AGIL-115: Hextra uses `.dark` class on <html> (Tailwind dark variant),
+   not [data-theme="dark"] attribute. Apply tokens to both selectors so they
+   fire whichever mechanism Hextra (or system prefers-color-scheme) triggers. */
+[data-theme="dark"],
+html.dark,
+.dark {
   /* Text Colors - Dark Mode Enhanced Alice */
   --color-text-primary: rgba(240, 236, 232, 1);     /* Titles level light 14.8:1 */
   --color-text-secondary: rgba(225, 220, 215, 1);   /* Text level light 12.5:1 */
@@ -210,6 +215,35 @@
   --color-border: #3A3634;           /* Тёплый графит */
   --color-border-light: #4A4642;     /* Производный lighter */
   --color-border-dark: #5A5652;      /* Производный darker */
+}
+
+/* AGIL-115: override Hextra's Tailwind dark bg (#111) + dark text
+   to use canonical Palette D warm charcoal (#1A1816) and light text.
+   Hextra applies bg-dark via Tailwind utility — we override at body
+   and nav-visible containers to restore Palette D WCAG AA contrast. */
+html.dark body,
+.dark body,
+[data-theme="dark"] body {
+  background-color: var(--color-bg-primary) !important;
+  color: var(--color-text-primary);
+}
+
+html.dark main,
+.dark main,
+[data-theme="dark"] main,
+html.dark article,
+.dark article,
+[data-theme="dark"] article {
+  color: var(--color-text-primary);
+}
+
+html.dark p,
+.dark p,
+[data-theme="dark"] p,
+html.dark li,
+.dark li,
+[data-theme="dark"] li {
+  color: var(--color-text-secondary);
 }
 
 /* Base Typography Styles - Level 1 Enhanced */

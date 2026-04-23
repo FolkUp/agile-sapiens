@@ -187,10 +187,41 @@
   --color-focus-ring: rgba(37, 99, 235, 0.2);
 }
 
-/* AGIL-114: Dark mode tokens now provided by canonical palette-d.css `.dark`
-   (loaded FIRST per head-end.html). Previous AGIL-115 compat redefinitions
-   of `--color-*` dark overrides removed — consumer rules migrated to
-   `--folkup-*` canonical tokens directly. */
+/* AGIL-114 A5: Compat `--color-*` tokens bridge layouts/partials/typography.css
+   + 5 layouts/shortcodes (plate, chapter-break, chapter-visual, concept-illustration,
+   figure-ref) inline CSS consumers. Canonical palette-d.css `.dark` redefines
+   `--folkup-*` variants but NOT `--color-*` compat aliases — those need explicit
+   `.dark` re-alias below. Without this, shortcodes render light values on dark
+   canvas (inline `[data-theme="dark"]` rules inside shortcodes stay WCAG-safe).
+   Phase B task: migrate all 6 layouts/* consumers to `--folkup-*` directly, then
+   prune both `:root --color-*` and `.dark --color-*` blocks. */
+.dark {
+  /* Text colors — re-alias to canonical palette-d.css `.dark` folkup variants */
+  --color-text-primary: var(--folkup-charcoal);
+  --color-text-secondary: var(--folkup-text);
+  --color-text-muted: var(--folkup-text-muted);
+
+  /* Accent family (bordeaux + amber) */
+  --color-accent: var(--folkup-bordeaux);
+  --color-accent-dark: var(--folkup-bordeaux-dark);
+  --color-accent-light: var(--folkup-amber);
+  --color-accent-decorative: var(--folkup-amber);
+  --color-accent-text: var(--folkup-bordeaux);
+
+  /* Backgrounds */
+  --color-bg-primary: var(--folkup-ivory);
+  --color-bg-secondary: var(--folkup-surface);
+  --color-bg-muted: var(--folkup-surface);
+
+  /* Borders — border-dark intentionally mapped to text-muted for adequate
+     contrast against dark surface (folkup-border #3A342C alone gives ~1.2:1 on
+     #242018, fails WCAG UI component 3:1). text-muted #A8A19C gives ~4.0:1. */
+  --color-border: var(--folkup-border);
+  --color-border-light: var(--folkup-border-light);
+  --color-border-dark: var(--folkup-text-muted);
+
+  /* Focus (a11y blue #2563eb) — unchanged, non-brand */
+}
 
 /* AGIL-115 mechanism preserved (belt+braces per AGIL-114 plan §3):
    override Hextra's Tailwind dark bg via `!important` on body.

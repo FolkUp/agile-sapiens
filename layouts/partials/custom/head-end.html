@@ -12,9 +12,11 @@
 {{ $paletteDCSS := resources.Get "css/palette-d.css" | minify }}
 <link rel="stylesheet" href="{{ $paletteDCSS.Permalink }}">
 
-{{/* AGILE SAPIENS Classical Typography — consumer CSS. Post-AGIL-114: consumes --folkup-*
-     tokens directly from palette-d.css (no compat layer). Retains AGIL-115 .dark body
-     !important override to beat Hextra Tailwind bg-dark utility. */}}
+{{/* AGILE SAPIENS Classical Typography — consumer CSS. Post-AGIL-114 A4: body rules
+     consume --folkup-* tokens directly from palette-d.css. Retains legacy :root --color-*
+     compat definitions as bridge for visuals-framework.css + act-opener.css (A5 removes
+     once both migrated). Preserves AGIL-115 .dark body !important override to beat
+     Hextra Tailwind bg-dark utility. */}}
 {{ $classicalCSS := resources.Get "css/typography-classical.css" | minify }}
 <link rel="stylesheet" href="{{ $classicalCSS.Permalink }}">
 

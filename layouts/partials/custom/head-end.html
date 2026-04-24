@@ -3,10 +3,20 @@
      (single source of truth — avoids duplicate meta robots tags). */}}
 {{/* Content Security Policy: served via nginx header (folkup-infra/docker/nginx-sapiens.conf), not meta */}}
 
-{{/* AGILE SAPIENS Classical Typography — single source of fonts + tokens consumed by
-     visuals-framework.css and act-opener.css. Uses FolkUp canonical fonts (Playfair Display +
-     Source Sans 3). AGIL-112: typography-brand-guide-v2.5.css removed from load path
-     (file retained on disk as reference until AGIL-114 canonical migration). */}}
+{{/* AGIL-114: FolkUp Brand Guide v2.5 canonical sources — load FIRST so :root --folkup-*
+     tokens are defined before consumer CSS cascades. Paired with per-theme-integration.md
+     guidance (Hextra uses .dark class Tailwind variant). */}}
+{{ $brandFontsCSS := resources.Get "css/brand-fonts.css" | minify }}
+<link rel="stylesheet" href="{{ $brandFontsCSS.Permalink }}">
+
+{{ $paletteDCSS := resources.Get "css/palette-d.css" | minify }}
+<link rel="stylesheet" href="{{ $paletteDCSS.Permalink }}">
+
+{{/* AGILE SAPIENS Classical Typography — consumer CSS. Post-AGIL-114 A4: body rules
+     consume --folkup-* tokens directly from palette-d.css. Retains legacy :root --color-*
+     compat definitions as bridge for visuals-framework.css + act-opener.css (A5 removes
+     once both migrated). Preserves AGIL-115 .dark body !important override to beat
+     Hextra Tailwind bg-dark utility. */}}
 {{ $classicalCSS := resources.Get "css/typography-classical.css" | minify }}
 <link rel="stylesheet" href="{{ $classicalCSS.Permalink }}">
 

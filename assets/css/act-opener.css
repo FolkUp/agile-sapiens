@@ -1,7 +1,7 @@
 /* AGILE SAPIENS — Act Opener Component
  * Renders engraved plate + act label at top of act-opener chapters.
- * Brand Guide v2.5 Palette D: бордо #7D4450 · янтарь #E8AD4A · шалфей #839E75
- * слоновая кость #FEFCF6 · шоколад #2A2317
+ * Brand Guide v2.5 Palette D: бордо var(--folkup-bordeaux) · янтарь var(--folkup-amber) · шалфей var(--folkup-sage)
+ * слоновая кость var(--folkup-ivory) · шоколад var(--folkup-charcoal)
  * WCAG 2.1 AA — decorative elements aria-hidden, text contrast ≥4.5:1
  */
 
@@ -46,10 +46,10 @@
   aspect-ratio: 2 / 3;
   background: linear-gradient(
     160deg,
-    color-mix(in srgb, #2A2317 90%, #FEFCF6 10%) 0%,
-    color-mix(in srgb, #2A2317 70%, #FEFCF6 30%) 100%
+    color-mix(in srgb, var(--folkup-charcoal) 90%, var(--folkup-ivory) 10%) 0%,
+    color-mix(in srgb, var(--folkup-charcoal) 70%, var(--folkup-ivory) 30%) 100%
   );
-  border: 1px solid rgba(254, 252, 246, 0.08);
+  border: 1px solid rgba(var(--folkup-ivory-rgb), 0.08);
 }
 
 /* Accent band — decorative 4px strip below plate image */
@@ -61,9 +61,9 @@
 }
 
 /* Accent colour per act */
-.act-opener--bordo .act-opener__accent-band  { background: #7D4450; }
-.act-opener--amber  .act-opener__accent-band  { background: #E8AD4A; }
-.act-opener--sage   .act-opener__accent-band  { background: #839E75; }
+.act-opener--bordo .act-opener__accent-band  { background: var(--folkup-bordeaux); }
+.act-opener--amber  .act-opener__accent-band  { background: var(--folkup-amber); }
+.act-opener--sage   .act-opener__accent-band  { background: var(--folkup-sage); }
 
 /* =============================================================================
    LABEL — act numeral + title
@@ -89,21 +89,12 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   /* Бордо for numeral across all acts — brand accent */
-  color: #7D4450;
+  color: var(--folkup-bordeaux);
 }
 
-/* Dark mode: numeral lightens slightly for contrast against dark bg */
-@media (prefers-color-scheme: dark) {
-  .act-opener__act-numeral {
-    /* Lighten бордо enough for 4.5:1 on dark surface (#1a1a1a) */
-    color: #c47a87;
-  }
-}
-
-/* Hextra dark-mode class override */
-.dark .act-opener__act-numeral {
-  color: #c47a87;
-}
+/* AGIL-114 A5: Dark-mode numeral auto-handled via canonical palette-d.css `.dark`
+   redefinition of --folkup-bordeaux to #B8818F (WCAG AA ~5.3:1 on dark ivory).
+   No explicit override needed. */
 
 .act-opener__act-title {
   font-size: clamp(1rem, 2.5vw, 1.375rem);
@@ -111,19 +102,11 @@
   font-style: italic;
   letter-spacing: 0.02em;
   /* Шоколад for title */
-  color: #2A2317;
+  color: var(--folkup-charcoal);
 }
 
-@media (prefers-color-scheme: dark) {
-  .act-opener__act-title {
-    /* слоновая кость toned down for dark backgrounds */
-    color: #e8e4d9;
-  }
-}
-
-.dark .act-opener__act-title {
-  color: #e8e4d9;
-}
+/* AGIL-114 A5: Dark-mode title auto-handled via canonical palette-d.css `.dark`
+   redefinition of --folkup-charcoal to #E5E3DF. No explicit override needed. */
 
 /* =============================================================================
    RESPONSIVE BREAKPOINTS
@@ -195,7 +178,7 @@
   max-width: 720px;
   height: auto;
   display: block;
-  border: 1px solid #F5F1EA;
+  border: 1px solid var(--folkup-border-light);
   border-radius: 3px;
 }
 

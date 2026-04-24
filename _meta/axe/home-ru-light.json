@@ -1,0 +1,1408 @@
+[
+  {
+    "testEngine": {
+      "name": "axe-core",
+      "version": "4.11.2"
+    },
+    "testRunner": {
+      "name": "axe"
+    },
+    "testEnvironment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/147.0.0.0 Safari/537.36",
+      "windowWidth": 764,
+      "windowHeight": 433,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "timestamp": "2026-04-24T10:00:27.240Z",
+    "url": "http://localhost:1313/",
+    "toolOptions": {
+      "runOnly": {
+        "type": "tag",
+        "values": [
+          "wcag2aa"
+        ]
+      },
+      "reporter": "v1"
+    },
+    "inapplicable": [
+      {
+        "id": "valid-lang",
+        "impact": null,
+        "tags": [
+          "cat.language",
+          "wcag2aa",
+          "wcag312",
+          "TTv5",
+          "TT11.b",
+          "EN-301-549",
+          "EN-9.3.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-8.8.1"
+        ],
+        "description": "Ensure lang attributes have valid values",
+        "help": "lang attribute must have a valid value",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/valid-lang?application=webdriverjs",
+        "nodes": []
+      }
+    ],
+    "passes": [
+      {
+        "id": "color-contrast",
+        "impact": null,
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=webdriverjs",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "messageKey": "hidden"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element is hidden"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<input placeholder=\"Поиск...\" aria-label=\"Поиск...\" class=\"hextra-search-input ...\" type=\"search\" autocomplete=\"off\" spellcheck=\"false\">",
+            "target": [
+              "input"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "24.0pt (32px)",
+                  "fontWeight": "bold",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h1 class=\"hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight\">AGILE SAPIENS</h1>",
+            "target": [
+              ".hx\\:text-center"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f1f5f9",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 16.18,
+                  "fontSize": "27.0pt (36px)",
+                  "fontWeight": "bold",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 16.18"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h1>AGILE SAPIENS</h1>",
+            "target": [
+              ".content > h1"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Научно-популярная монография о будущем работы в эпоху искусственного интеллекта.</strong>",
+            "target": [
+              "p:nth-child(2) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>AGILE SAPIENS исследует, как ИИ меняет природу труда, организаций и человеческий потенциал. Строгие исследования и живое изложение — чтобы разобраться с вызовами и возможностями, которые уже здесь.</p>",
+            "target": [
+              "p:nth-child(3)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>10 глав · 3 акта · серьёзный анализ с острой иронией</strong>",
+            "target": [
+              "p:nth-child(4) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#008ae6",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 4.87,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 4.87"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/chapters/\">📖 Читать монографию →</a>",
+            "target": [
+              "p:nth-child(5) > a[href$=\"chapters/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f1f5f9",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 16.18,
+                  "fontSize": "22.5pt (30px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 16.18"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>Структура<span class=\"hx:absolute hx:-mt-20\" id=\"структура\"></span>\n<a href=\"#%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0\" class=\"subheading-anchor\" aria-label=\"Постоянная ссылка на этот раздел\"></a></h2>",
+            "target": [
+              "h2:nth-child(7)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p><strong>Акт I — Истоки</strong> (Главы 0–4) · <strong>Акт II — Трансформация</strong> (Главы 5–7) · <strong>Акт III — Горизонты</strong> (Главы 8–10)</p>",
+            "target": [
+              "p:nth-child(8)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Акт I — Истоки</strong>",
+            "target": [
+              "p:nth-child(8) > strong:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Акт II — Трансформация</strong>",
+            "target": [
+              "p:nth-child(8) > strong:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Акт III — Горизонты</strong>",
+            "target": [
+              "p:nth-child(8) > strong:nth-child(3)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Каждая глава — литературный ключ к современной теме: от «Вокруг света за 80 дней» Верна и «Франкенштейна» Шелли до «Машины времени» Уэллса.</p>",
+            "target": [
+              "p:nth-child(9)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f1f5f9",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 16.18,
+                  "fontSize": "22.5pt (30px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 16.18"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>Что внутри<span class=\"hx:absolute hx:-mt-20\" id=\"что-внутри\"></span>\n<a href=\"#%d1%87%d1%82%d0%be-%d0%b2%d0%bd%d1%83%d1%82%d1%80%d0%b8\" class=\"subheading-anchor\" aria-label=\"Постоянная ссылка на этот раздел\"></a></h2>",
+            "target": [
+              "h2:nth-child(10)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<li>Как классическая литература предсказала сегодняшние трансформации труда</li>",
+            "target": [
+              "ul:nth-child(11) > li:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<li>Практические фреймворки для работы в эпоху ИИ</li>",
+            "target": [
+              "ul:nth-child(11) > li:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<li>Будущее человеко-машинного взаимодействия в организациях</li>",
+            "target": [
+              "ul:nth-child(11) > li:nth-child(3)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<li>Стратегические инсайты от великих мыслителей прошлого</li>",
+            "target": [
+              "ul:nth-child(11) > li:nth-child(4)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f1f5f9",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 16.18,
+                  "fontSize": "22.5pt (30px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 16.18"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>Быстрый старт<span class=\"hx:absolute hx:-mt-20\" id=\"быстрый-старт\"></span>\n<a href=\"#%d0%b1%d1%8b%d1%81%d1%82%d1%80%d1%8b%d0%b9-%d1%81%d1%82%d0%b0%d1%80%d1%82\" class=\"subheading-anchor\" aria-label=\"Постоянная ссылка на этот раздел\"></a></h2>",
+            "target": [
+              "h2:nth-child(12)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<li>Начать с начала → <a href=\"/chapters/chapter-0-pilot/\">Глава 0: Пилот</a></li>",
+            "target": [
+              "ul:nth-child(13) > li:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#008ae6",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 4.87,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 4.87"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/chapters/chapter-0-pilot/\">Глава 0: Пилот</a>",
+            "target": [
+              "a[href$=\"chapter-0-pilot/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<li>Посмотреть оглавление → <a href=\"/chapters/\">Все 14 материалов</a></li>",
+            "target": [
+              "ul:nth-child(13) > li:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#008ae6",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 4.87,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 4.87"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/chapters/\">Все 14 материалов</a>",
+            "target": [
+              "li:nth-child(2) > a[href$=\"chapters/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<li>Об авторе и методе → <a href=\"/about/\">О проекте</a></li>",
+            "target": [
+              "ul:nth-child(13) > li:nth-child(3)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#008ae6",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 4.87,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 4.87"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/about/\">О проекте</a>",
+            "target": [
+              "a[href$=\"about/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f1f5f9",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 16.18,
+                  "fontSize": "22.5pt (30px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 16.18"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>Поддержать проект<span class=\"hx:absolute hx:-mt-20\" id=\"поддержать-проект\"></span>\n<a href=\"#%d0%bf%d0%be%d0%b4%d0%b4%d0%b5%d1%80%d0%b6%d0%b0%d1%82%d1%8c-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82\" class=\"subheading-anchor\" aria-label=\"Постоянная ссылка на этот раздел\"></a></h2>",
+            "target": [
+              "h2:nth-child(15)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Монография распространяется свободно. Если она оказалась полезной — <a href=\"https://ko-fi.com/folkup\" target=\"_blank\" rel=\"noopener\">поддержите работу на Ko-fi</a>. Это помогает сохранять независимость анализа.</p>",
+            "target": [
+              "p:nth-child(16)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#008ae6",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 4.87,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 4.87"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://ko-fi.com/folkup\" target=\"_blank\" rel=\"noopener\">поддержите работу на Ko-fi</a>",
+            "target": [
+              "a[href$=\"folkup\"][rel=\"noopener\"][target=\"_blank\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p><strong>Издатель:</strong> FolkUp Ecosystem · <strong>Лицензия контента:</strong> CC BY 4.0 · <strong>Статус:</strong> soft launch (до 2026-05-18)</p>",
+            "target": [
+              "p:nth-child(18)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Издатель:</strong>",
+            "target": [
+              "p:nth-child(18) > strong:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Лицензия контента:</strong>",
+            "target": [
+              "p:nth-child(18) > strong:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Статус:</strong>",
+            "target": [
+              "p:nth-child(18) > strong:nth-child(3)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#99a1af",
+                  "bgColor": "#171717",
+                  "contrastRatio": 6.89,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 6.89"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<span>Русский</span>",
+            "target": [
+              ".hx\\:py-2.hx\\:px-4.hextra-max-footer-width > .hx\\:justify-items-start:nth-child(1) > .hextra-language-switcher[title=\"Изменить язык\"][data-location=\"\"] > .hx\\:capitalize.hx\\:gap-2.hx\\:items-center > span"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#99a1af",
+                  "bgColor": "#171717",
+                  "contrastRatio": 6.89,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 6.89"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<span class=\"hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden\">Система</span>",
+            "target": [
+              ".hx\\:group-data-\\[theme\\=dark\\]\\:hidden.hx\\:group-data-\\[theme\\=light\\]\\:hidden:nth-child(6)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0 0 .3rem\">Part of <a href=\"https://folkup.app\" style=\"color:inherit;font-weight:600\">FolkUp</a> — knowledge tools for real people</p>",
+            "target": [
+              "nav[aria-label=\"FolkUp ecosystem\"] > p:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://folkup.app\" style=\"color:inherit;font-weight:600\">FolkUp</a>",
+            "target": [
+              "a[href$=\"folkup.app\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0;font-size:.75rem\">",
+            "target": [
+              "nav[aria-label=\"FolkUp ecosystem\"] > p:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://barnes.folkup.city\" style=\"color:inherit\">Barnes</a>",
+            "target": [
+              "a[href$=\"barnes.folkup.city\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://tarot.folkup.life\" style=\"color:inherit\">Tarot</a>",
+            "target": [
+              "a[href$=\"tarot.folkup.life\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://padel.folkup.fit\" style=\"color:inherit\">Padel</a>",
+            "target": [
+              "a[href$=\"padel.folkup.fit\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://cogumelos.folkup.fit\" style=\"color:inherit\">Cogumelos</a>",
+            "target": [
+              "a[href$=\"cogumelos.folkup.fit\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://setubal.folkup.city\" style=\"color:inherit\">Setúbal</a>",
+            "target": [
+              "a[href$=\"setubal.folkup.city\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://dialup.folkup.city\" style=\"color:inherit\">Retro Tech</a>",
+            "target": [
+              "a[href$=\"dialup.folkup.city\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0 0 .3rem\">© 2026 FolkUp contributors · Content: <a href=\"https://creativecommons.org/licenses/by/4.0/\" rel=\"license\">CC BY 4.0</a></p>",
+            "target": [
+              "div:nth-child(5) > p:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#b8818f",
+                  "bgColor": "#171717",
+                  "contrastRatio": 5.61,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 5.61"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://creativecommons.org/licenses/by/4.0/\" rel=\"license\">CC BY 4.0</a>",
+            "target": [
+              "a[rel=\"license\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0 0 .3rem;font-size:.75rem\">",
+            "target": [
+              "nav[aria-label=\"Legal information\"] > p"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/privacy/\" style=\"color:inherit\">Privacy Policy</a>",
+            "target": [
+              "a[href$=\"privacy/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/terms/\" style=\"color:inherit\">Terms</a>",
+            "target": [
+              "a[href$=\"terms/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/cookies/\" style=\"color:inherit\">Cookies</a>",
+            "target": [
+              "nav[aria-label=\"Legal information\"] > p > a[href$=\"cookies/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/ai-transparency/\" style=\"color:inherit\">AI Transparency</a>",
+            "target": [
+              "a[href$=\"ai-transparency/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://ko-fi.com/folkup\" style=\"color:inherit\" rel=\"noopener\">Поддержать на Ko-fi</a>",
+            "target": [
+              "p:nth-child(4) > a[href$=\"folkup\"][rel=\"noopener\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#b8818f",
+                  "bgColor": "#171717",
+                  "contrastRatio": 5.61,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 5.61"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<span>",
+            "target": [
+              ".hx\\:text-current > span"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "meta-viewport",
+        "impact": null,
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144",
+          "EN-301-549",
+          "EN-9.1.4.4",
+          "ACT",
+          "RGAAv4",
+          "RGAA-10.4.2"
+        ],
+        "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application=webdriverjs",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "meta-viewport",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "<meta> tag does not disable zooming on mobile devices"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">",
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      }
+    ],
+    "incomplete": [],
+    "violations": []
+  }
+]

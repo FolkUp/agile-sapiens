@@ -1,0 +1,23 @@
+/* FolkUp Brand Guide v2.5 — Font Tokens & Typography Defaults */
+/* Canonical --font-* token layer for agile-sapiens monograph. */
+/* @font-face declarations live in typography-classical.css (AGIL-112 consolidated single source of truth). */
+
+/* ===== FONT TOKENS ===== */
+:root {
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  --font-accent: 'Pacifico', cursive;
+}
+
+/* ===== TYPOGRAPHY DEFAULTS ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+body, p, li, td {
+  font-family: var(--font-body);
+}
+
+.brand-accent {
+  font-family: var(--font-accent);
+}

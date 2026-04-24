@@ -1,0 +1,4559 @@
+[
+  {
+    "testEngine": {
+      "name": "axe-core",
+      "version": "4.11.2"
+    },
+    "testRunner": {
+      "name": "axe"
+    },
+    "testEnvironment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/147.0.0.0 Safari/537.36",
+      "windowWidth": 764,
+      "windowHeight": 433,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "timestamp": "2026-04-24T10:02:16.428Z",
+    "url": "http://localhost:1313/chapters/chapter-3-holmes/",
+    "toolOptions": {
+      "runOnly": {
+        "type": "tag",
+        "values": [
+          "wcag2aa"
+        ]
+      },
+      "reporter": "v1"
+    },
+    "inapplicable": [
+      {
+        "id": "valid-lang",
+        "impact": null,
+        "tags": [
+          "cat.language",
+          "wcag2aa",
+          "wcag312",
+          "TTv5",
+          "TT11.b",
+          "EN-301-549",
+          "EN-9.3.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-8.8.1"
+        ],
+        "description": "Ensure lang attributes have valid values",
+        "help": "lang attribute must have a valid value",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/valid-lang?application=webdriverjs",
+        "nodes": []
+      }
+    ],
+    "passes": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=webdriverjs",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#b8818f",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 5.54,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 5.54"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/chapters/\" class=\"hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset\">Главы</a>",
+            "target": [
+              "a[href$=\"chapters/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f3f4f6",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 16.1,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 16.1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<div class=\"hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current\">Глава 3: Шерлок Холмс ставит диагноз</div>",
+            "target": [
+              ".hx\\:text-gray-700"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "24.0pt (32px)",
+                  "fontWeight": "bold",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h1 class=\"chapter-title hx:mt-2 hx:mb-4 hx:text-4xl hx:font-bold hx:tracking-tight\">Глава 3: Шерлок Холмс ставит диагноз</h1>",
+            "target": [
+              "h1"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "15.0pt (20px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p class=\"chapter-description hx:mt-6 hx:text-xl hx:text-slate-700 dark:hx:text-slate-400\">Дедуктивный метод распознавания корпоративных патологий: семь признаков того, что ваш проект умирает: от Knight Capital до Target Canada</p>",
+            "target": [
+              ".chapter-description"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "13.5pt (18px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p><strong>Chapter Summary:</strong> Дедуктивный метод в управлении проектами. Как научиться видеть невидимое: семь диагностических признаков умирающего проекта, каждый проверенный на реальных катастрофах, которые можно было предотвратить.</p>",
+            "target": [
+              "blockquote:nth-child(1) > p"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "13.5pt (18px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Chapter Summary:</strong>",
+            "target": [
+              "blockquote:nth-child(1) > p > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "13.5pt (18px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "blockquote:nth-child(2) > p"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "13.5pt (18px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Verification Note:</strong>",
+            "target": [
+              "blockquote:nth-child(2) > p > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(3)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Вы смотрите, но не наблюдаете», — говорит Шерлок Холмс доктору Ватсону в «Скандале в Богемии». «Различие очевидно. Например, вы часто видели ступеньки, ведущие из прихожей в эту комнату?»</p>",
+            "target": [
+              ".content-enhanced > p:nth-child(4)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Часто».</p>",
+            "target": [
+              "p:nth-child(5)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Как часто?»</p>",
+            "target": [
+              "p:nth-child(6)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Сотни раз».</p>",
+            "target": [
+              "p:nth-child(7)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Тогда сколько их?»</p>",
+            "target": [
+              "p:nth-child(8)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Сколько? Не обратил внимания».</p>",
+            "target": [
+              "p:nth-child(9)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Вот именно! Вы не наблюдали. А между тем вы видели. В этом вся разница. Я знаю, что ступенек семнадцать, потому что я и видел, и наблюдал»¹.</p>",
+            "target": [
+              "p:nth-child(10)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(11)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>метод распознавания</strong>",
+            "target": [
+              "p:nth-child(11) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Потому что самая опасная стадия болезни это не агония. Самая опасная стадия наступает, когда все уверены, что пациент здоров.</p>",
+            "target": [
+              "p:nth-child(12)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Предыдущая глава показала, что происходит, когда создатель бросает своё создание. FBI Sentinel, Healthcare.gov, BBC DMI: в каждом случае признаки катастрофы были видны задолго до взрыва. Кто-то их видел. Никто не наблюдал.</p>",
+            "target": [
+              "p:nth-child(14)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Эта глава посвящена наблюдению. О том, как отличить здоровую команду от умирающей, живой процесс от ритуала, адаптацию от имитации. Семь диагностических признаков (семнадцать ступенек Холмса), которые все видят, но никто не считает.</p>",
+            "target": [
+              "p:nth-child(15)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(16)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс не был гением в романтическом смысле. Он был системным наблюдателем. Его метод представляет не вспышку озарения, а дисциплинированную последовательность: собрать данные, отбросить невозможное, принять то, что осталось, каким бы невероятным оно ни было².</p>",
+            "target": [
+              "p:nth-child(17)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>«Я никогда не гадаю», — говорит Холмс в «Знаке четырёх». «Это пагубная привычка, разрушительная для логического мышления»².</p>",
+            "target": [
+              "p:nth-child(18)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Сравните с тем, как принимаются решения в корпоративных проектах. Интуиция менеджера. Консенсус комитета. Экстраполяция из последнего квартала. Мнение самого громкого голоса в комнате. Всё что угодно, кроме систематического наблюдения.</p>",
+            "target": [
+              "p:nth-child(19)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс предлагает альтернативу: не верить ни отчётам, ни метрикам, ни презентациям. Наблюдать за тем, что люди <em>делают</em>, а не за тем, что они <em>говорят</em>. Первый принцип диагностики — данные собираются на месте преступления, а не в кабинете следователя.</p>",
+            "target": [
+              "p:nth-child(20)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>делают</em>",
+            "target": [
+              "p:nth-child(20) > em:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>говорят</em>",
+            "target": [
+              "p:nth-child(20) > em:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Вот семь признаков, которые Холмс заметил бы на первом обходе.</p>",
+            "target": [
+              "p:nth-child(21)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(22)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(23)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Рассмотрим строку: «я дЕлаю рэп, как запрещЁнная оргАнизАция» (Оксимирон, «Город под подошвой»). Это трёхиктный дольник с цезурой — тот же метр, который использовал Блок в «Двенадцати»: «И вОт — вез-ДЕ всё, / как слЕ-ду-ет»¹⁵.</p>",
+            "target": [
+              "p:nth-child(24)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(25)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(26)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>поэтической криптографией</strong>",
+            "target": [
+              "p:nth-child(26) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(27)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(28)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(29)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(31)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>В рассказе «Серебряный» Холмс обращает внимание инспектора на «странный ночной эпизод с собакой». Инспектор возражает: «Собака ничего не делала ночью». Холмс: «Это и есть странный эпизод»³.</p>",
+            "target": [
+              "p:nth-child(32)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Собака не лаяла, потому что знала вора. Самый важный сигнал был не в том, что произошло, а в том, чего <em>не</em> произошло.</p>",
+            "target": [
+              "p:nth-child(33)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>не</em>",
+            "target": [
+              "p:nth-child(33) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(34)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Здоровые команды шумят. Спорят. Ломают спринты. Поднимают красные флаги. Молчание означает одно из двух: либо команда достигла совершенства (вероятность: околонулевая), либо люди перестали верить, что их услышат.</p>",
+            "target": [
+              "p:nth-child(35)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(36)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Knight Capital, 1 августа 2012 года.</strong>",
+            "target": [
+              "p:nth-child(36) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(37)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Собака, которая не лаяла: <strong>никто не спросил, почему мёртвый код семилетней давности до сих пор в продакшене.</strong> Все видели Power Peg в кодовой базе. Никто не наблюдал.</p>",
+            "target": [
+              "p:nth-child(38)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>никто не спросил, почему мёртвый код семилетней давности до сих пор в продакшене.</strong>",
+            "target": [
+              "p:nth-child(38) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(39)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(40)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс никогда не формулирует теорию до сбора фактов. «Непростительная ошибка: строить теории, не имея данных. Незаметно для себя начинаешь подгонять факты к теории, вместо того чтобы строить теорию на фактах»⁵.</p>",
+            "target": [
+              "p:nth-child(41)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>В корпоративной диагностике это выглядит так: панель управления (dashboard) показывает зелёный свет, но пользователи жалуются. Скорость разработки растёт, но время доставки фич увеличивается. Команда сообщает о высоком моральном духе, но лучшие люди уходят.</p>",
+            "target": [
+              "p:nth-child(42)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Когда метрики (metrics) противоречат реальности, Холмс доверяет реальности.</p>",
+            "target": [
+              "p:nth-child(43)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p><strong>Target Canada, 2013–2015.</strong> В марте 2013 года Target Corporation (второй по величине дискаунт-ритейлер в США) вышел на канадский рынок. За несколько месяцев открылось 124 магазина. Инвестиции превысили 7 миллиардов канадских долларов⁶.</p>",
+            "target": [
+              "p:nth-child(44)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Target Canada, 2013–2015.</strong>",
+            "target": [
+              "p:nth-child(44) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>К январю 2015 года Target Canada закрылся. Полностью. Все 124 магазина. 17,600 сотрудников потеряли работу⁷.</p>",
+            "target": [
+              "p:nth-child(45)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(46)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>Canadian Business</em>",
+            "target": [
+              "p:nth-child(46) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(47)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс сказал бы: вы смотрите на дашборд, но не наблюдаете за полкой. Метрика «124 открытых магазина» представляет улику, ведущую в тупик. Настоящая улика: тётя Жанин из Монреаля, которая пришла за полотенцами и ушла ни с чем.</p>",
+            "target": [
+              "p:nth-child(48)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(49)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>система отчётности рассказывала историю, не совпадающую с физической реальностью</em>",
+            "target": [
+              "p:nth-child(49) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(50)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>В 1968 году Мелвин Конвей опубликовал наблюдение, ставшее законом: «Организации, проектирующие системы, вынуждены воспроизводить в этих системах собственную коммуникационную структуру»⁹.</p>",
+            "target": [
+              "p:nth-child(51)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс оценил бы элегантность этой идеи. Если хотите понять, что не так с продуктом: не смотрите на код. Посмотрите на организационную структуру. Код представляет лишь тень организации, отброшенную на экран монитора.</p>",
+            "target": [
+              "p:nth-child(52)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Закон Конвея представляет не теорию. Это улика. Судебная экспертиза, которая безошибочно указывает на преступника.</p>",
+            "target": [
+              "p:nth-child(53)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(54)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Продукт становится зеркалом организации. Разбитое зеркало отражает разбитую организацию.</p>",
+            "target": [
+              "p:nth-child(55)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(56)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(57)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(58)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс всегда начинает с вопроса: <em>кто</em> является жертвой? Не «что пошло не так», а «кто пострадал». Это не сентиментальность, это метод. Жертва указывает на мотив, мотив указывает на преступника.</p>",
+            "target": [
+              "p:nth-child(59)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>кто</em>",
+            "target": [
+              "p:nth-child(59) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>В корпоративной диагностике жертвой становится пользователь. И самый тревожный признак наступает, когда о пользователе перестают говорить.</p>",
+            "target": [
+              "p:nth-child(60)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Послушайте разговоры вашей команды. Если слова «пользователь», «клиент», «покупатель» звучат реже, чем «процесс», «фреймворк», «методология», пациент пропал. Команда лечит саму себя, забыв о больном.</p>",
+            "target": [
+              "p:nth-child(61)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(62)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p><strong>Lidl и SAP: система на 500 миллионов евро для несуществующего пользователя.</strong> В 2018 году немецкий дискаунтер Lidl остановил внедрение SAP-системы управления товарными запасами после семи лет работы и расходов, оцениваемых прессой в 500 миллионов евро¹¹.</p>",
+            "target": [
+              "p:nth-child(63)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Lidl и SAP: система на 500 миллионов евро для несуществующего пользователя.</strong>",
+            "target": [
+              "p:nth-child(63) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>Business Insider</em>",
+            "target": [
+              "p:nth-child(64) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Пропавший пациент: <strong>сотрудник склада Lidl, который каждое утро решает, сколько заказать йогуртов.</strong> Этот человек: конечный пользователь системы стоимостью в полмиллиарда евро. Его не спросили.</p>",
+            "target": [
+              "p:nth-child(65)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>сотрудник склада Lidl, который каждое утро решает, сколько заказать йогуртов.</strong>",
+            "target": [
+              "p:nth-child(65) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(66)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(67)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс фиксирует не только <em>что</em> произошло, но <em>когда</em>. Хронология представляет скелет расследования.</p>",
+            "target": [
+              "p:nth-child(68)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>что</em>",
+            "target": [
+              "p:nth-child(68) > em:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>когда</em>",
+            "target": [
+              "p:nth-child(68) > em:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>В проектной диагностике время говорит больше, чем любой отчёт. Сколько времени проходит от идеи до прототипа? От прототипа до пользователя? От обнаружения бага (bug) до его исправления?</p>",
+            "target": [
+              "p:nth-child(69)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(70)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Разница не в процентах. В порядках.</p>",
+            "target": [
+              "p:nth-child(71)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Но самая показательная метрика — не скорость деплоя, а <strong>время восстановления после сбоя</strong>. Элитные команды восстанавливаются за час. Низкопроизводительные — за неделю и более¹².</p>",
+            "target": [
+              "p:nth-child(72)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>время восстановления после сбоя</strong>",
+            "target": [
+              "p:nth-child(72) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс сказал бы: скорость, с которой организация исправляет ошибки, говорит о ней больше, чем скорость, с которой она создаёт новое. Потому что создание — это амбиция. А исправление — это характер.</p>",
+            "target": [
+              "p:nth-child(73)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Knight Capital восстановилась за 45 минут, но поздно: более 460 миллионов были потеряны безвозвратно. Healthcare.gov восстанавливалась два месяца. BBC DMI не восстановилась никогда. Временная шкала восстановления: безошибочный индикатор организационного здоровья.</p>",
+            "target": [
+              "p:nth-child(74)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Если вашей команде нужна неделя, чтобы исправить критический баг (bug), — это не технический диагноз. Это организационный. Где-то в цепочке между обнаружением и исправлением сидят люди, которые согласовывают, одобряют, планируют, переносят, ожидают — вместо того чтобы чинить.</p>",
+            "target": [
+              "p:nth-child(75)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(76)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Ватсон — не просто рассказчик. Он — зеркало, в котором Холмс видит собственные слепые зоны. Ватсон задаёт «глупые» вопросы, которые оказываются самыми важными. Ватсон замечает человеческое там, где Холмс видит только логику.</p>",
+            "target": [
+              "p:nth-child(77)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Каждой команде нужен Ватсон. Человек, который не стесняется сказать: «Я не понимаю, зачем мы это делаем». Не потому что он некомпетентен — а потому что если он не понимает, вероятно, не понимает никто, но остальные стесняются признаться.</p>",
+            "target": [
+              "p:nth-child(78)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Когда из команды исчезает Ватсон — человек, задающий неудобные вопросы, — остаётся эхо-камера. Все согласны. Все уверены. Никто не проверяет базовые предположения.</p>",
+            "target": [
+              "p:nth-child(79)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(80)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>В маленькой команде Ватсон естественен — любой может спросить: «А почему?» В большой организации «почему» требует совещания, презентации, обоснования и одобрения. К тому моменту, когда вопрос наконец задан, ответ уже неактуален.</p>",
+            "target": [
+              "p:nth-child(81)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Target Canada потерялась в 1225 каналах. Knight Capital — в молчании команды, которая видела мёртвый код и не задала вопрос. Lidl — в семилетнем проекте, где никто не спросил складского работника: «Тебе это удобно?»</p>",
+            "target": [
+              "p:nth-child(82)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(83)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс верит уликам, а не показаниям. Показания субъективны, предвзяты, забывчивы. Улики объективны.</p>",
+            "target": [
+              "p:nth-child(84)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>В программном проекте есть одна улика, которую невозможно подделать: <strong>git log</strong>.</p>",
+            "target": [
+              "p:nth-child(85)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>git log</strong>",
+            "target": [
+              "p:nth-child(85) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(86)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(87)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p><strong>Авторство.</strong> Если 80% коммитов приходятся на одного человека, bus factor (фактор автобуса) равен единице. Уйдёт этот человек — проект встанет. Не потому что остальные некомпетентны: потому что они перестали трогать код, который считают «чужим».</p>",
+            "target": [
+              "p:nth-child(88)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Авторство.</strong>",
+            "target": [
+              "p:nth-child(88) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Комментарии к коммитам.</strong>",
+            "target": [
+              "p:nth-child(89) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс не гадал бы, здоров ли проект. Он открыл бы git log (журнал изменений), и через пять минут знал бы ответ.</p>",
+            "target": [
+              "p:nth-child(90)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(91)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Тезис, который разозлит управленческих консультантов: <strong>большинство диагностических фреймворков (frameworks) — часть болезни, а не лечения.</strong></p>",
+            "target": [
+              "p:nth-child(92)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>большинство диагностических фреймворков (frameworks) — часть болезни, а не лечения.</strong>",
+            "target": [
+              "p:nth-child(92) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Зрелостные модели (CMM, CMMI). Agile-ассессменты (assessments). Скоринговые карты организационной готовности. Все они предлагают: оцените себя по шкале от 1 до 5, определите зоны развития, составьте план улучшения.</p>",
+            "target": [
+              "p:nth-child(93)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс посмеялся бы. Просить больную организацию диагностировать саму себя — всё равно что просить подозреваемого провести собственный допрос.</p>",
+            "target": [
+              "p:nth-child(94)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(95)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Nokia пала именно так. Vuori и Huy назвали это «распределённым вниманием»¹⁴: когда организация настолько велика, что ни один человек не видит полную картину, ответственность растворяется. Каждый отвечает за свой фрагмент, никто — за целое.</p>",
+            "target": [
+              "p:nth-child(96)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Холмс никогда не полагался на самооценку клиента. Он наблюдал. Считал ступеньки. Замечал грязь на ботинках. Обращал внимание на собак, которые не лаяли.</p>",
+            "target": [
+              "p:nth-child(97)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Настоящая диагностика — внешняя. Жёсткая. Основанная на фактах, а не на ощущениях.</p>",
+            "target": [
+              "p:nth-child(98)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "21.0pt (28px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<h2>",
+            "target": [
+              "h2:nth-child(99)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>Три главы накопили три разных инструмента. Верн показал, как строить живые системы — через инкременты, обратную связь, адаптацию. Шелли показала, что с этими системами происходит, когда их бросают. Холмс дал способ распознать болезнь до вскрытия.</p>",
+            "target": [
+              "p:nth-child(100)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(101)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>после</em>",
+            "target": [
+              "p:nth-child(101) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(102)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<strong>Footnotes:</strong>",
+            "target": [
+              "p:nth-child(104) > strong"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>The Strand Magazine</em>",
+            "target": [
+              "p:nth-child(105) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>² Doyle, Arthur Conan. <em>The Sign of the Four</em> (1890). Оригинал: “I never guess. It is a shocking habit — destructive to the logical faculty” (перевод автора).</p>",
+            "target": [
+              "p:nth-child(106)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>The Sign of the Four</em>",
+            "target": [
+              "p:nth-child(106) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>³ Doyle, Arthur Conan. «Silver Blaze» (1892). <em>The Strand Magazine</em>. Оригинал: “The curious incident of the dog in the night-time” (перевод автора).</p>",
+            "target": [
+              "p:nth-child(107)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>The Strand Magazine</em>",
+            "target": [
+              "p:nth-child(107) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>⁴ SEC Administrative Proceeding File No. 3-15570, October 16, 2013. «In the Matter of Knight Capital Americas LLC.» Штраф $12 млн. Детали инцидента с Power Peg и отсутствие процедур контроля развёртывания задокументированы в enforcement action.</p>",
+            "target": [
+              "p:nth-child(108)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>A Study in Scarlet</em>",
+            "target": [
+              "p:nth-child(109) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(110)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>⁷ Canadian Press, January 15, 2015. «Target Canada closing: A timeline of the U.S. retailer’s disastrous Canadian venture.» 17,600 сотрудников — данные из официального заявления Target Corporation.</p>",
+            "target": [
+              "p:nth-child(111)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>Canadian Business</em>",
+            "target": [
+              "p:nth-child(112) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>⁹ Conway, Melvin. «How Do Committees Invent?» <em>Datamation</em>, April 1968. Оригинальная формулировка закона Конвея.</p>",
+            "target": [
+              "p:nth-child(113)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>Datamation</em>",
+            "target": [
+              "p:nth-child(113) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>¹⁰ Weinberg, Gerald. <em>The Psychology of Computer Programming</em> (1971). Van Nostrand Reinhold. Наблюдения о взаимосвязи между разработчиками и пользователями.</p>",
+            "target": [
+              "p:nth-child(114)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>The Psychology of Computer Programming</em>",
+            "target": [
+              "p:nth-child(114) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(115)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>Business Insider</em>",
+            "target": [
+              "p:nth-child(115) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>¹² Accelerate: State of DevOps Report. Google Cloud / DORA, 2023. Классификация команд по четырём уровням: Elite, High, Medium, Low.</p>",
+            "target": [
+              "p:nth-child(116)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>The Mythical Man-Month</em>",
+            "target": [
+              "p:nth-child(117) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(118)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<em>Administrative Science Quarterly</em>",
+            "target": [
+              "p:nth-child(118) > em"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 13.83,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.83"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p>",
+            "target": [
+              "p:nth-child(119)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#b8818f",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 5.54,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 5.54"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/chapters/chapter-2-...\" title=\"Глава 2: Франкенштей...\" class=\"hx:flex hx:max-w-[50...\">",
+            "target": [
+              ".hx\\:ltr\\:pr-4"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#b8818f",
+                  "bgColor": "#1a1814",
+                  "contrastRatio": 5.54,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 5.54"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/chapters/chapter-4-...\" title=\"Глава 4: Борхес счит...\" class=\"hx:flex hx:max-w-[50...\">",
+            "target": [
+              ".hx\\:ltr\\:ml-auto"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0 0 .3rem\">Part of <a href=\"https://folkup.app\" style=\"color:inherit;font-weight:600\">FolkUp</a> — knowledge tools for real people</p>",
+            "target": [
+              "nav[aria-label=\"FolkUp ecosystem\"] > p:nth-child(1)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://folkup.app\" style=\"color:inherit;font-weight:600\">FolkUp</a>",
+            "target": [
+              "a[href$=\"folkup.app\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0;font-size:.75rem\">",
+            "target": [
+              "nav[aria-label=\"FolkUp ecosystem\"] > p:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://barnes.folkup.city\" style=\"color:inherit\">Barnes</a>",
+            "target": [
+              "a[href$=\"barnes.folkup.city\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://tarot.folkup.life\" style=\"color:inherit\">Tarot</a>",
+            "target": [
+              "a[href$=\"tarot.folkup.life\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://padel.folkup.fit\" style=\"color:inherit\">Padel</a>",
+            "target": [
+              "a[href$=\"padel.folkup.fit\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://cogumelos.folkup.fit\" style=\"color:inherit\">Cogumelos</a>",
+            "target": [
+              "a[href$=\"cogumelos.folkup.fit\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://setubal.folkup.city\" style=\"color:inherit\">Setúbal</a>",
+            "target": [
+              "a[href$=\"setubal.folkup.city\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://dialup.folkup.city\" style=\"color:inherit\">Retro Tech</a>",
+            "target": [
+              "a[href$=\"dialup.folkup.city\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0 0 .3rem\">© 2026 FolkUp contributors · Content: <a href=\"https://creativecommons.org/licenses/by/4.0/\" rel=\"license\">CC BY 4.0</a></p>",
+            "target": [
+              "div:nth-child(5) > p:nth-child(2)"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#b8818f",
+                  "bgColor": "#171717",
+                  "contrastRatio": 5.61,
+                  "fontSize": "10.2pt (13.6px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 5.61"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://creativecommons.org/licenses/by/4.0/\" rel=\"license\">CC BY 4.0</a>",
+            "target": [
+              "a[rel=\"license\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<p style=\"margin:0 0 .3rem;font-size:.75rem\">",
+            "target": [
+              "nav[aria-label=\"Legal information\"] > p"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/privacy/\" style=\"color:inherit\">Privacy Policy</a>",
+            "target": [
+              "a[href$=\"privacy/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/terms/\" style=\"color:inherit\">Terms</a>",
+            "target": [
+              "a[href$=\"terms/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/cookies/\" style=\"color:inherit\">Cookies</a>",
+            "target": [
+              "nav[aria-label=\"Legal information\"] > p > a[href$=\"cookies/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"/legal/ai-transparency/\" style=\"color:inherit\">AI Transparency</a>",
+            "target": [
+              "a[href$=\"ai-transparency/\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#e5e3df",
+                  "bgColor": "#171717",
+                  "contrastRatio": 13.98,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 13.98"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<a href=\"https://ko-fi.com/folkup\" style=\"color:inherit\" rel=\"noopener\">Поддержать на Ko-fi</a>",
+            "target": [
+              "a[href$=\"folkup\"]"
+            ]
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#b8818f",
+                  "bgColor": "#171717",
+                  "contrastRatio": 5.61,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 5.61"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<span>",
+            "target": [
+              ".hx\\:text-current > span"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "meta-viewport",
+        "impact": null,
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144",
+          "EN-301-549",
+          "EN-9.1.4.4",
+          "ACT",
+          "RGAAv4",
+          "RGAA-10.4.2"
+        ],
+        "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application=webdriverjs",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "meta-viewport",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "<meta> tag does not disable zooming on mobile devices"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">",
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=webdriverjs",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<body>",
+                    "target": [
+                      "body"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>корпоративная отчётность показывала, что 124 магазина открыты и функционируют.</strong>",
+            "target": [
+              "p:nth-child(47) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<body>",
+                    "target": [
+                      "body"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<p>Причина, по данным <em>Business Insider</em>: Lidl пыталась заставить SAP работать по логике закупок Lidl, а SAP требовала, чтобы Lidl перестроилась под логику SAP. Семь лет компромиссов, которые не устраивали ни систему, ни бизнес¹¹.</p>",
+            "target": [
+              "p:nth-child(64)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<body>",
+                    "target": [
+                      "body"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<p><strong>Комментарии к коммитам.</strong> «WIP», «asdf», «tmp», «please work» — крик о помощи, закодированный в метаданных. «Refactor auth module to support OAuth2 flow» — команда, которая понимает, что делает и зачем.</p>",
+            "target": [
+              "p:nth-child(89)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<body>",
+                    "target": [
+                      "body"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<p>¹ Arthur Conan Doyle. «A Scandal in Bohemia» (1891). <em>The Strand Magazine</em>. Оригинал: “You see, but you do not observe” dialogue (перевод автора). Диалог о ступеньках — один из хрестоматийных примеров метода Холмса.</p>",
+            "target": [
+              "p:nth-child(105)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<body>",
+                    "target": [
+                      "body"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<p>⁵ Doyle, Arthur Conan. <em>A Study in Scarlet</em> (1887). Оригинал: “It is a capital mistake to theorize before you have all the evidence” (перевод автора).</p>",
+            "target": [
+              "p:nth-child(109)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<body>",
+                    "target": [
+                      "body"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<p>⁸ Castaldo, Joe. «The Last Days of Target Canada.» <em>Canadian Business</em>, January 2016. Детальное расследование проблем с данными SAP-системы.</p>",
+            "target": [
+              "p:nth-child(112)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.8pt (17.11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<body>",
+                    "target": [
+                      "body"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<p>¹³ Brooks, Frederick. <em>The Mythical Man-Month</em> (1975). Addison-Wesley. Закон Брукса и формула каналов коммуникации n(n-1)/2.</p>",
+            "target": [
+              "p:nth-child(117)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ],
+    "violations": []
+  }
+]

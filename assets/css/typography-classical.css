@@ -201,6 +201,15 @@
   --color-text-secondary: var(--folkup-text);
   --color-text-muted: var(--folkup-text-muted);
 
+  /* AGIL-114 brand-manager override: sage-tinted muted text preserves
+     "warm library with green courtyard" identity per BRAND-GUIDE.md v2.5 §3.4
+     dark palette line 129 ("Sage (text), осветлённый sage-dark #A3B898, 5.5:1").
+     Canonical --folkup-text-muted (#A8A19C neutral) stays correct for the
+     generic ecosystem palette; monograph overrides this single token in the
+     .dark scope only. Ecosystem-wide BRAND-GUIDE.md v2.5.1 reconciliation
+     tracked separately (not part of AGIL-114). */
+  --folkup-text-muted: #A3B898;
+
   /* Accent family (bordeaux + amber) */
   --color-accent: var(--folkup-bordeaux);
   --color-accent-dark: var(--folkup-bordeaux-dark);

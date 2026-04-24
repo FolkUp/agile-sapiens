@@ -211,6 +211,41 @@ gh pr create --body "...Evidence: _meta/agil-114-verify.md (A7 PASS)..."
 **Live verify (A8) scope:**
 - Deploy to `sapiens.folkup.life` → visual dark-mode spot-check (footnote numbers, chapter meta, figure captions show sage `#A3B898`)
 - DevTools eyedropper confirmation on rendered page vs WCAG math table §4
-- Browser diversity (Chrome + Firefox minimum, Safari advisory)
+- Browser diversity: Chrome + Firefox (Safari macOS/iOS = accepted risk — no device access)
 - Mobile 375px viewport + print preview + system dark preference
 - Focus-visible keyboard tab through chapter page
+
+---
+
+## A8 Hostile Review Remediation (2026-04-24 PR #40)
+
+Full Phase A diff submitted to parallel Alpha (opus) + Beta (sonnet) hostile review via Agent dispatch. Verdicts: Alpha FAIL (3 blockers), Beta CONDITIONAL_PASS (2 blockers). Not unanimous FAIL — Oracle Panel not invoked; remediation proceeded per project-owner directive "Вариант A".
+
+### Real blockers fixed (commit `002bd1e`)
+
+| # | Issue | Source | Resolution |
+|---|-------|--------|------------|
+| B1 | `brand-fonts.css` 18 `@font-face` `src:` paths 404 on disk (`PlayfairDisplay-normal-cyrillic.woff2` subset naming vs disk `playfair-display-regular.woff2` kebab). Site survived because `typography-classical.css` redeclares with correct paths, but 15+ failed network requests shipped to production. | Alpha α1 | Stripped `@font-face` block entirely from `brand-fonts.css`; `typography-classical.css` owns `@font-face` canonical per AGIL-112 consolidation. |
+| B2 | `:root --folkup-*` palette tokens duplicated in `palette-d.css` and `brand-fonts.css`. Same values currently — latent silent clobber risk if future brand-fonts edit diverges. | Alpha α2 + Beta β2 | Stripped `:root --folkup-*` duplicates from `brand-fonts.css`; `palette-d.css` owns canonical palette tokens. |
+| W1 | "Usage: Copy this file to assets/css/" template-stub comments on both `palette-d.css` + `brand-fonts.css` read as accidentally-committed library boilerplate, not deployed assets. | Beta | Updated headers to `Deployed canonical: agile-sapiens production. Modify via AGIL ticket only.` |
+| W2 | Missing trailing newlines on both new files. | Beta | Added `\n` at EOF on both. |
+
+### Remediation verification (post-`002bd1e`)
+
+- **Hugo build:** 0 err / 10 EN + 126 RU / 6.1s (matches A7 baseline)
+- **Level 1 grep:** 0 violations in full diff
+- **WCAG contrast math:** 12/13 PASS — identical to A7 (unchanged; border 1.44:1 non-blocker canonical exempt preserved)
+- **A5+ Фонарщик HYBRID sage override preserved:** `typography-classical.css:211` = `#A3B898`
+- **AGIL-115 load-bearing `body.dark !important` preserved:** `typography-classical.css:241-242`
+
+### Not AGIL-114 regression — separate scope (AGIL-117)
+
+- `visuals-framework.css` lines 239-258 use `[data-theme="dark"]` selectors. Hextra uses `.dark` class-toggle (AGIL-115 pattern). Image gallery + figure dark overrides silently don't fire. **Pre-existing on main @ `7c5125f`** — AGIL-114 did not introduce this. Track as AGIL-117 for separate remediation.
+
+### False positive identified
+
+- Beta reported "shimmer gradient animation killed" — grep on `typography-classical.css` for `shimmer|skeleton|loading` returned 0 matches. No loading skeleton exists in this CSS file; Beta confused subtle decorative gradients (content-margin, chapter-container::before) with an animation. No action.
+
+### A8 final verdict
+
+**PROCEED_TO_MERGE** — all real blockers remediated, hostile review loop closed. Branch head: `002bd1e`.

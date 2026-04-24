@@ -249,3 +249,58 @@ Full Phase A diff submitted to parallel Alpha (opus) + Beta (sonnet) hostile rev
 ### A8 final verdict
 
 **PROCEED_TO_MERGE** — all real blockers remediated, hostile review loop closed. Branch head: `002bd1e`.
+
+---
+
+## A8 Post-merge live-verify (2026-04-24, headless portion)
+
+**Merge commit:** `9a41da4` on main (merge-commit strategy, A1-A8 history preserved).
+**CI deploy:** `Build and Deploy Agile Sapiens` workflow completed/success in 1m5s. VPS deploy + Cloudflare purge + curl sanity all green.
+**Branch cleanup:** `agil-114-canonical-palette-d` deleted local + remote.
+
+### 5-URL matrix live HTTP (sapiens.folkup.life)
+
+| URL | HTTP | Time |
+|-----|------|------|
+| `/` | 200 | 329ms |
+| `/chapters/chapter-1-jules-verne/` | 200 | 336ms |
+| `/chapters/chapter-3-holmes/` | 200 | 479ms |
+| `/en/` | 200 | 350ms |
+| `/legal/privacy/` | 200 | 341ms |
+
+### Canonical CSS on production
+
+Hugo asset pipeline serves at `/css/*.min.css` (not `/assets/css/`):
+
+| File | HTTP | Size |
+|------|------|------|
+| `/css/brand-fonts.min.css` | 200 | **309 bytes** (sanitized — only `--font-*` + typography defaults, zero `@font-face`) |
+| `/css/palette-d.min.css` | 200 | 5398 bytes (canonical palette tokens) |
+| `/css/typography-classical.min.css` | 200 | (consumers) |
+| `/css/visuals-framework.min.css` | 200 | (consumers) |
+| `/css/act-opener.min.css` | 200 | (consumers) |
+
+brand-fonts.css at 309 bytes confirms the remediation deployed: prior broken version was ~7-8 KB with 18 dead `@font-face` declarations. Now clean.
+
+### Security headers intact
+
+- `strict-transport-security: max-age=63072000; includeSubDomains; preload` ✅
+- `x-content-type-options: nosniff` ✅
+- `x-frame-options: SAMEORIGIN` ✅
+- `content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://ko-fi.com...` ✅ (no CSP regression from AGIL-114)
+
+### Human-eye live-verify — deferred to Андрей / browser session
+
+Not headlessly checkable — requires browser manual steps:
+
+- [ ] Dark-mode visual spot-check: footnote numbers, chapter meta, attribution show sage `#A3B898` (trigger via localStorage `theme=dark` or system preference)
+- [ ] DevTools eyedropper on 3 tokens vs WCAG math §4
+- [ ] Focus-visible keyboard tab through `/chapters/chapter-1-jules-verne/`
+- [ ] Mobile 375px viewport (DevTools responsive mode)
+- [ ] Print preview
+- [ ] System dark preference (OS toggle)
+- [ ] Browser diversity: Chrome + Firefox (Safari macOS/iOS = accepted risk — no device)
+
+### A8 final sign-off
+
+**COMPLETE** — AGIL-114 Phase A merged to main, deployed, headless live-verify all gates PASS. Human-eye visual confirmation deferred (non-blocking; A7 mathematical verification + A8 headless deploy-verify provide strong evidence chain).

@@ -132,7 +132,7 @@ Verification must confirm the 3 canonical values still meet WCAG AA (math above 
 Per `_brand-guide-templates/per-theme-integration.md` §Rollback Procedures:
 
 ```bash
-cd /c/JOHNDOE_CLAUDE/agile-sapiens
+# From repo root
 git checkout main                              # Return to v1.0.0 state
 git branch -D agil-114-canonical-palette-d    # Discard branch
 hugo --gc --minify                             # Verify clean build
@@ -159,7 +159,7 @@ Live site stays on v1.0.0 (`865fb2a`) until PR admin-merge. Phase A work is isol
 
 **Next session resume:**
 ```bash
-cd /c/JOHNDOE_CLAUDE/agile-sapiens
+# From repo root
 git checkout agil-114-canonical-palette-d
 # Read _meta/agil-114-plan.md (this file) — full context
 # Start at A4 (typography-classical.css rewrite)
@@ -169,4 +169,4 @@ Task IDs #44-48 remain open and trackable.
 
 ---
 
-*Effort revision: original BACKLOG estimate 2-4h. After Alpha+Beta scope analysis + 2057-line rewrite surface + enhanced verification: revised 4-6h realistic. Quality > speed per CLAUDE.md.*
+*Effort revision: original backlog estimate 2-4h. After hostile-review scope analysis + 2057-line rewrite surface + enhanced verification: revised 4-6h realistic. Quality > speed per global FolkUp standards.*

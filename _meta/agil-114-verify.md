@@ -194,7 +194,7 @@ Source presence verified (§5 table). Live keyboard nav spot-check via DevTools 
 | R6 | Hugo serve PID cleanup | Background Bash ID `bdiumrzgr`; killed in B5. |
 | R7 | Mid-batch /compact | Not required — context held under threshold through 5 batches. |
 | R8 | A7 commit note | Verification-only, inherits A5+ panel authority; no scope change. |
-| R9 | BACKLOG.yaml in commit | Not applicable — BACKLOG is at `~/.claude/BACKLOG.yaml`, not in agile-sapiens repo. |
+| R9 | BACKLOG.yaml in commit | Not applicable — master backlog lives outside this repo (centralized). |
 
 ---
 

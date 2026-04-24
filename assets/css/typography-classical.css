@@ -644,8 +644,9 @@ a:focus-visible {
     --folkup-border: #000000;
   }
 
-  [data-theme="dark"],
-  .dark {
+  html.dark,
+  .dark,
+  [data-theme="dark"] {
     --color-text-primary: #ffffff;
     --color-text-secondary: #ffffff;
     --color-accent: #ffffff;

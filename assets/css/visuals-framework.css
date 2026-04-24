@@ -236,25 +236,35 @@
    DARK MODE ADAPTATIONS
    ============================================================================= */
 
+html.dark .image-gallery__item,
+.dark .image-gallery__item,
 [data-theme="dark"] .image-gallery__item {
   background-color: var(--folkup-surface);
   border-color: var(--folkup-border);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+html.dark .image-gallery__item:hover,
+.dark .image-gallery__item:hover,
 [data-theme="dark"] .image-gallery__item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+html.dark .figure-caption__source,
+.dark .figure-caption__source,
 [data-theme="dark"] .figure-caption__source {
   border-color: var(--folkup-border);
 }
 
+html.dark .figure--primary,
+.dark .figure--primary,
 [data-theme="dark"] .figure--primary {
   background-color: var(--folkup-surface);
   border-color: var(--folkup-bordeaux);
 }
 
+html.dark .figure--secondary,
+.dark .figure--secondary,
 [data-theme="dark"] .figure--secondary {
   border-color: var(--folkup-text-muted);
 }
@@ -418,6 +428,8 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   }
 
+  html.dark .image-gallery__item:hover,
+  .dark .image-gallery__item:hover,
   [data-theme="dark"] .image-gallery__item:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }

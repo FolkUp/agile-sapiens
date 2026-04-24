@@ -1,3 +1,7 @@
+{{/* DEAD CODE — live partial is layouts/partials/custom/cookie-consent.html
+     (called via layouts/_partials/head.html:98 -> layouts/partials/custom/head-end.html:38).
+     This hextra-prefixed variant is not in the active Hugo render chain. Kept for
+     theme-override symmetry only. AGIL-117 hostile review Beta B1 (2026-04-25). */}}
 {{/* Cookie Consent Banner - GDPR Compliant */}}
 <div id="cookie-banner" class="cookie-banner" style="display: none;">
   <div class="cookie-content">
@@ -132,6 +136,8 @@
 }
 
 /* Dark mode adjustments */
+html.dark .cookie-banner,
+.dark .cookie-banner,
 [data-theme="dark"] .cookie-banner {
   background: rgba(15, 23, 42, 0.95);
   border-top-color: #3b82f6;

@@ -133,24 +133,36 @@
 }
 
 /* Dark mode adjustments */
+html.dark .figure-ref,
+.dark .figure-ref,
 [data-theme="dark"] .figure-ref {
   color: var(--color-accent-light);
 }
 
+html.dark .figure-ref:hover,
+.dark .figure-ref:hover,
 [data-theme="dark"] .figure-ref:hover {
   color: var(--color-accent);
   background-color: rgba(205, 133, 63, 0.1);
 }
 
+html.dark .figure-ref:focus-visible,
+.dark .figure-ref:focus-visible,
 [data-theme="dark"] .figure-ref:focus-visible {
   color: var(--color-accent);
   background-color: rgba(205, 133, 63, 0.15);
 }
 
+html.dark .figure-ref__page,
+.dark .figure-ref__page,
 [data-theme="dark"] .figure-ref__page {
   color: var(--color-text-muted);
 }
 
+html.dark .figure-ref:hover .figure-ref__page,
+html.dark .figure-ref:focus-visible .figure-ref__page,
+.dark .figure-ref:hover .figure-ref__page,
+.dark .figure-ref:focus-visible .figure-ref__page,
 [data-theme="dark"] .figure-ref:hover .figure-ref__page,
 [data-theme="dark"] .figure-ref:focus-visible .figure-ref__page {
   color: var(--color-text-secondary);
@@ -280,6 +292,8 @@ html {
   opacity: 0.8;
 }
 
+html.dark .figure-ref:visited,
+.dark .figure-ref:visited,
 [data-theme="dark"] .figure-ref:visited {
   color: var(--color-accent-light);
   opacity: 0.9;

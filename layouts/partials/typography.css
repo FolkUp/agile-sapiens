@@ -1,7 +1,14 @@
 /* AGILE SAPIENS Brand Guide v2.5 Typography System
- * Enhanced Alice v2.0 Level 3 Typography Architecture
  * GDPR-compliant self-hosted fonts + 1.25 Major Third scale
- * Production-ready cross-platform publishing pipeline
+ *
+ * STATUS 2026-04-26: DEPRECATED / NOT ON LOAD PATH.
+ * head-end.html imports `assets/css/typography-classical.css` (canonical).
+ * This partial is a legacy artifact — kept for reference, not deployed.
+ * Body-text max-width constraints inside (e.g., line 231 `p { max-width: ... }`,
+ * line 280 `ul, ol { max-width: ... }`) are intentionally NOT updated to match
+ * AGIL-121 (Андрей 2026-04-26: full content area width). If this file is ever
+ * wired into the load path (resources.Get), apply the AGIL-121 surgical removes
+ * to body-text selectors here too — see typography-classical.css commit history.
  */
 
 /* =============================================================================

@@ -1,7 +1,22 @@
 #!/usr/bin/env node
 /**
  * AGIL-007: Cloudflare CDN Cache Purge Script
- * Purges CDN cache after successful deployment
+ * Purges CDN cache after successful deployment.
+ *
+ * STATUS 2026-04-26: INACTIVE under current architecture.
+ * sapiens.folkup.life (subdomain) → CF proxy OFF (DNS only) per
+ * vault/memory/infra.md DNS table. Let's Encrypt cert constraint forces
+ * Proxy OFF on all subdomains; only apex (folkup.app, folkup.city) are Proxied.
+ * No CDN on request path → cache purge N/A. Browser cache busting via
+ * ETag/Last-Modified headers + Ctrl+F5 is sufficient.
+ *
+ * The script + workflow step (build-deploy.yml: Purge CDN Cache) remain
+ * in the repo as future-proofing: graceful skip when CLOUDFLARE_TOKEN /
+ * CLOUDFLARE_ZONE GH secrets are absent (see early exit below). To activate:
+ * (1) enable CF proxy on subdomain (requires CF Origin Cert pattern for
+ *     Let's Encrypt compatibility),
+ * (2) create scoped Bearer token (Zone.Cache Purge:Edit, folkup.life only),
+ * (3) set CLOUDFLARE_TOKEN + CLOUDFLARE_ZONE GH secrets.
  */
 
 import https from 'https';

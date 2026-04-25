@@ -379,10 +379,11 @@ h6 {
   color: var(--folkup-text);
 }
 
-/* Paragraph and Body Text */
+/* Paragraph and Body Text
+   AGIL-121 (Андрей 2026-04-26): no max-width on body text — full content area width.
+   Hextra content area constraint (hx:max-w-4xl ~56rem) on <main> remains primary boundary. */
 p {
   margin-bottom: var(--space-paragraph);
-  max-width: var(--line-length-optimal);
   orphans: 2;
   widows: 2;
 }
@@ -450,19 +451,18 @@ blockquote::before {
   opacity: 0.5;
 }
 
-/* Override Hextra defaults with classical typography */
+/* Override Hextra defaults with classical typography
+   AGIL-121: no max-width — content area boundary (hx:max-w-4xl on <main>) is sole constraint */
 .prose {
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: var(--line-height-body);
   color: var(--folkup-charcoal);
-  max-width: var(--line-length-optimal);
 }
 
-/* Classical paragraph styling */
+/* Classical paragraph styling — AGIL-121: full content area width */
 .prose p {
   margin-bottom: var(--space-paragraph);
-  max-width: var(--line-length-optimal);
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -549,14 +549,12 @@ blockquote::before {
   margin: var(--space-section) 0;
   font-style: italic;
   color: var(--folkup-text);
-  max-width: calc(var(--line-length-optimal) - 2rem);
 }
 
-/* Lists - Academic Formatting */
+/* Lists - Academic Formatting — AGIL-121: full content area width */
 ul, ol {
   margin-bottom: var(--space-paragraph);
   padding-left: var(--space-xl);
-  max-width: var(--line-length-optimal);
 }
 
 li {

@@ -1,0 +1,79 @@
+/* AGIL-119: 2-state theme toggle pill (light/dark). LangToggle.vue-inspired pattern.
+   Tokens: var(--folkup-*) only — NO Tailwind dark:hx:* utilities (AGIL-118 constraint).
+   Lives in sticky navbar (Hextra hx:sticky hx:top-0).
+
+   Note: palette-d.css inverts tokens in .dark scope (e.g. --folkup-border-light
+   #E8E4DE light → #2E2820 dark; --folkup-ivory #FEFCF6 light → #1A1814 dark).
+   We rely on this auto-inversion for both modes — no separate .dark overrides needed.
+   Diff-review post-merge concern (Beta W1 verified false positive once token
+   inversion accounted for).
+*/
+
+.folkup-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background-color: var(--folkup-border-light);
+  padding: 2px;
+  gap: 2px;
+  font-family: inherit;
+}
+
+.folkup-theme-toggle button {
+  border: 0;
+  background: transparent;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--folkup-text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: inherit;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  line-height: 1;
+}
+
+.folkup-theme-toggle button[aria-checked="true"] {
+  background-color: var(--folkup-bordeaux);
+  color: var(--folkup-ivory);
+}
+
+.folkup-theme-toggle button:hover:not([aria-checked="true"]) {
+  color: var(--folkup-bordeaux);
+}
+
+.folkup-theme-toggle button:focus-visible {
+  outline: 2px solid var(--folkup-amber);
+  outline-offset: 2px;
+}
+
+.folkup-theme-toggle button svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .folkup-theme-toggle button {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* AGIL-119 R3 (Beta diff-review): hide text labels on very narrow screens
+   (<400px) to prevent navbar overflow. Icons retain accessible aria-label. */
+@media (max-width: 399px) {
+  .folkup-theme-toggle button > span {
+    display: none;
+  }
+  .folkup-theme-toggle button {
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+@media print {
+  .folkup-theme-toggle {
+    display: none;
+  }
+}

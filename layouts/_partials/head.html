@@ -73,6 +73,12 @@
 
   {{ partial "components/analytics/analytics.html" . }}
 
+  {{/* AGIL-119: localStorage migration — legacy "system"/"auto" → "dark".
+       Must run BEFORE Hextra's head/theme.js (which is bundled below) to ensure
+       setTheme() reads correct value and aria-checked binds correctly to one of
+       the 2 remaining options (light/dark). One-shot; idempotent. */}}
+  <script>(function(){var t=localStorage.getItem("color-theme");if(t==="system"||t==="auto"){localStorage.setItem("color-theme","dark");}})();</script>
+
   {{- $scriptsHead := slice -}}
   {{- range resources.Match "js/head/*.js" -}}
     {{ $scriptsHead = $scriptsHead | append (resources.ExecuteAsTemplate .Name $ .) }}

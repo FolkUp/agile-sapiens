@@ -87,8 +87,11 @@ width = "normal"
 
 # Theme features
 [params.theme]
-default = "auto"
-displayToggle = true
+# AGIL-119: 2-state toggle (light/dark only). Default "dark" matches monograph
+# "warm library" identity. Custom toggle is hardcoded in navbar override
+# (always-visible sticky position).
+default = "dark"
+displayToggle = false
 
 # English-only language configuration
 [languages]

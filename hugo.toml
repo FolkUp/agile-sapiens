@@ -109,8 +109,13 @@ width = "normal"
 
 # Theme features
 [params.theme]
-default = "auto"
-displayToggle = true
+# AGIL-119: 2-state toggle (light/dark only). Default "dark" matches monograph
+# "warm library" identity (AGIL-118 dark mode optical-thinning fix shipped 2026-04-26).
+default = "dark"
+# displayToggle = false suppresses Hextra's auto-injected toggle in sidebar/footer.
+# Our custom always-visible toggle is hardcoded in layouts/_partials/navbar.html
+# (sticky header position, per Андрей directive «Всегда в непрокручиваемом хедере»).
+displayToggle = false
 
 # Languages configuration with Ko-fi sidebar
 [languages]

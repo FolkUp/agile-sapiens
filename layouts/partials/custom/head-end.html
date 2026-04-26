@@ -28,6 +28,10 @@
 {{ $actOpenerCSS := resources.Get "css/act-opener.css" | minify }}
 <link rel="stylesheet" href="{{ $actOpenerCSS.Permalink }}">
 
+{{/* AGIL-119: 2-state theme toggle pill (light/dark) — LangToggle.vue-inspired component */}}
+{{ $themeToggleCSS := resources.Get "css/theme-toggle.css" | minify }}
+<link rel="stylesheet" href="{{ $themeToggleCSS.Permalink }}">
+
 {{/* Include JSON-LD structured data for SEO */}}
 {{- partial "custom/schema-jsonld.html" . }}
 

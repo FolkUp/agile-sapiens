@@ -32,6 +32,12 @@
 {{ $themeToggleCSS := resources.Get "css/theme-toggle.css" | minify }}
 <link rel="stylesheet" href="{{ $themeToggleCSS.Permalink }}">
 
+{{/* AGIL-123/124/125: Mobile UX Cluster (touch targets, reading padding,
+     blockquote glyph offset). Loaded LAST so @media (max-width: 768px) rules
+     cascade-win over base typography-classical and Hextra defaults. */}}
+{{ $mobileUxCSS := resources.Get "css/mobile-ux.css" | minify }}
+<link rel="stylesheet" href="{{ $mobileUxCSS.Permalink }}">
+
 {{/* Include JSON-LD structured data for SEO */}}
 {{- partial "custom/schema-jsonld.html" . }}
 

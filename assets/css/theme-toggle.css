@@ -1,0 +1,61 @@
+/* AGIL-119: 2-state theme toggle pill (light/dark). LangToggle.vue-inspired pattern.
+   Tokens: var(--folkup-*) only — NO Tailwind dark:hx:* utilities (AGIL-118 constraint).
+   Lives in sticky navbar (Hextra hx:sticky hx:top-0). */
+
+.folkup-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background-color: var(--folkup-border-light, rgba(0, 0, 0, 0.06));
+  padding: 2px;
+  gap: 2px;
+  font-family: inherit;
+}
+
+.dark .folkup-theme-toggle,
+html.dark .folkup-theme-toggle,
+[data-theme="dark"] .folkup-theme-toggle {
+  background-color: var(--folkup-charcoal, rgba(255, 255, 255, 0.08));
+}
+
+.folkup-theme-toggle button {
+  border: 0;
+  background: transparent;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--folkup-text-muted, currentColor);
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: inherit;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  line-height: 1;
+}
+
+.folkup-theme-toggle button[aria-checked="true"] {
+  background-color: var(--folkup-bordeaux, #B8818F);
+  color: var(--folkup-ivory, #EDE8DD);
+}
+
+.folkup-theme-toggle button:hover:not([aria-checked="true"]) {
+  color: var(--folkup-bordeaux, #B8818F);
+}
+
+.folkup-theme-toggle button:focus-visible {
+  outline: 2px solid var(--folkup-amber, #C8A24B);
+  outline-offset: 2px;
+}
+
+.folkup-theme-toggle button svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .folkup-theme-toggle button {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}

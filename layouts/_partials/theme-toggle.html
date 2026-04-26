@@ -1,0 +1,92 @@
+{{/* AGIL-119: 2-state theme toggle override (light/dark only).
+     Андрей directive 2026-04-25: «достаточно светлой и тёмной».
+     Replaces Hextra default 3-state dropdown with always-visible 2-button pill,
+     mirroring folkup-landing LangToggle.vue pattern.
+
+     Architecture:
+     - Custom selectors (.folkup-theme-toggle / [data-folkup-theme]) bypass Hextra's body theme.js
+       click handlers (which target .hextra-theme-toggle / .hextra-theme-toggle-options).
+     - Hextra's pre-paint head/theme.js still runs first and applies html.dark class
+       from localStorage["color-theme"]. Migration script in head.html flips legacy
+       "system"/"auto" → "dark" before head/theme.js executes.
+     - hugo.toml [params.theme] default = "dark" (AGIL-119 R1).
+     - CSS in assets/css/theme-toggle.css uses var(--folkup-*) tokens — NO dark:hx:*
+       utilities (AGIL-118 constraint preserved).
+
+     Inputs (passed by navbar.html via .Params): iconHeight, hideLabel.
+*/}}
+{{- $iconHeight := .iconHeight | default 14 -}}
+{{- $hideLabel := .hideLabel -}}
+{{- $changeTheme := (T "changeTheme") | default "Change theme" -}}
+{{- $light := (T "light") | default "Light" -}}
+{{- $dark := (T "dark") | default "Dark" -}}
+
+<div class="folkup-theme-toggle" role="radiogroup" aria-label="{{ $changeTheme }}">
+  <button
+    type="button"
+    role="radio"
+    data-folkup-theme="light"
+    aria-checked="false"
+    aria-label="{{ $light }}"
+  >
+    {{- partial "utils/icon.html" (dict "name" "sun" "attributes" (printf `height=%d aria-hidden="true"` $iconHeight)) -}}
+    {{- if not $hideLabel }}<span>{{ $light }}</span>{{ end -}}
+  </button>
+  <button
+    type="button"
+    role="radio"
+    data-folkup-theme="dark"
+    aria-checked="false"
+    aria-label="{{ $dark }}"
+  >
+    {{- partial "utils/icon.html" (dict "name" "moon" "attributes" (printf `height=%d aria-hidden="true"` $iconHeight)) -}}
+    {{- if not $hideLabel }}<span>{{ $dark }}</span>{{ end -}}
+  </button>
+</div>
+
+<script>
+(function () {
+  var KEY = "color-theme";
+  var THEMES = ["light", "dark"];
+
+  function apply(theme) {
+    if (THEMES.indexOf(theme) === -1) theme = "dark";
+    try { localStorage.setItem(KEY, theme); } catch (e) {}
+    var html = document.documentElement;
+    html.classList.remove("light", "dark");
+    html.classList.add(theme);
+    html.style.colorScheme = theme;
+    document.querySelectorAll(".folkup-theme-toggle button[data-folkup-theme]").forEach(function (b) {
+      b.setAttribute("aria-checked", b.dataset.folkupTheme === theme ? "true" : "false");
+    });
+  }
+
+  function init() {
+    var saved;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    apply(THEMES.indexOf(saved) !== -1 ? saved : "dark");
+    document.querySelectorAll(".folkup-theme-toggle button[data-folkup-theme]").forEach(function (b) {
+      b.addEventListener("click", function (e) {
+        e.preventDefault();
+        apply(b.dataset.folkupTheme);
+      });
+      b.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+          e.preventDefault();
+          var siblings = Array.from(b.parentElement.querySelectorAll("button[data-folkup-theme]"));
+          var idx = siblings.indexOf(b);
+          var next = siblings[(idx + (e.key === "ArrowRight" ? 1 : -1) + siblings.length) % siblings.length];
+          next.focus();
+          apply(next.dataset.folkupTheme);
+        }
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>

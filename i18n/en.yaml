@@ -22,6 +22,14 @@
 - id: "footer_support"
   translation: "Support on Ko-fi"
 
+# Theme toggle (AGIL-119)
+- id: "changeTheme"
+  translation: "Change theme"
+- id: "light"
+  translation: "Light"
+- id: "dark"
+  translation: "Dark"
+
 # Cookie consent
 - id: "cookie_title"
   translation: "Cookies"

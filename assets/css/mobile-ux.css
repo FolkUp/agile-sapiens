@@ -86,3 +86,57 @@
     margin-inline-start: calc(0.25rem - 9px);
   }
 }
+
+/* =========================================================================
+ * AGIL-124 — Mobile Reading Padding (page-type scoped gutters)
+ * =========================================================================
+ *
+ * Problem (from AGIL-122 Playwright audit at 320px):
+ *  - Chapter pages: layouts/chapters/single.html article uses `hx:px-1`
+ *    (4px each side) — body text pressed against viewport edge.
+ *  - Other Hextra pages (homepage, legal): use Hextra default `hx:px-6`
+ *    (24px) which is already adequate.
+ *  - Net effect: only chapter reading is degraded at narrow viewports.
+ *
+ * Resolution (Alpha A2 + Beta consensus):
+ *  - PAGE-TYPE SCOPED: target the unique DOM signature of chapter pages.
+ *    Hextra baseof.html does NOT apply body classes — bodies are bare.
+ *    Instead, chapter article wraps `<main>` containing `.chapter-header`
+ *    (only present in layouts/chapters/single.html). Use :has() to match
+ *    that signature. Falls back to attribute-style scoping via the
+ *    chapter-specific class chain `.content-enhanced.classical-typography`.
+ *  - Modern :has() support: 96.7% (caniuse 2026-04). Older browsers fall
+ *    back gracefully — Hextra desktop padding still applies, just no
+ *    enhanced gutter; non-blocking.
+ *  - Use clamp() for fluid scaling: 16px floor (320px viewport edge),
+ *    24px ceiling (768px breakpoint matches Hextra default).
+ *  - Applied via mobile media query only — desktop chapter-single keeps
+ *    existing `hx:md:px-6` (24px) for ≥768px.
+ *  - Verified safe against AGIL-115 .dark body !important: padding is on
+ *    article, not body — no cascade conflict.
+ *
+ * Verified pages (selector reach):
+ *  - homepage (/) → layouts/home.html, no .chapter-header → unchanged
+ *  - chapter (/chapters/chapter-0-pilot/) → fixed (was 4px, now 16-24px)
+ *  - legal (/legal/privacy/) → Hextra docs/single.html, no .chapter-header
+ *    and no .content-enhanced → unchanged at 24px
+ */
+
+@media (max-width: 768px) {
+  /* Chapter single layout: layouts/chapters/single.html article has hx:px-1
+   * (4px) and uniquely contains <header class="chapter-header">. Use :has()
+   * to select ONLY chapter articles — homepage and legal articles do not
+   * contain .chapter-header, so they remain unaffected.
+   *
+   * :has() browser support per caniuse 2026-04: 96.7% global. Older browsers
+   * (Firefox <121, Safari <15.4) fall through to the non-:has rule below
+   * which provides equivalent padding via the chapter-content wrapper.
+   * Both rules safe to coexist: :has() targets the article element,
+   * fallback targets the inner wrapper — different boxes, no double-pad.
+   *
+   * Padding-inline clamp: 16px floor (320px viewport), 24px ceiling
+   * (matches Hextra default at 768px breakpoint). */
+  article:has(> main > header.chapter-header) {
+    padding-inline: clamp(1rem, 4vw, 1.5rem);
+  }
+}

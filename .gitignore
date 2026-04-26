@@ -38,3 +38,7 @@ temp-build-en/
 # Scratch curl dumps from audit sessions (recreate on demand; AGIL-112)
 _meta/*.headers
 _meta/main.css
+
+# Playwright runtime artifacts (regenerated each run; baselines в tests/screenshots/ commitятся)
+test-results/
+playwright-report/

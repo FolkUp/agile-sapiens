@@ -13,6 +13,14 @@
   translation: "Переключатель языка"
 - id: "changeLanguage"
   translation: "Изменить язык"
+- id: "footer_declaration"
+  translation: "Декларация"
+- id: "footer_landing"
+  translation: "Часть экосистемы FolkUp"
+- id: "footer_tagline"
+  translation: "инструменты знаний для людей"
+- id: "footer_support"
+  translation: "Поддержать на Ko-fi"
 
 # Cookie consent
 - id: "cookie_title"

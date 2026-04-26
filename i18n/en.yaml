@@ -13,6 +13,14 @@
   translation: "Language Switcher"
 - id: "changeLanguage"
   translation: "Change language"
+- id: "footer_declaration"
+  translation: "Declaration"
+- id: "footer_landing"
+  translation: "Part of FolkUp"
+- id: "footer_tagline"
+  translation: "knowledge tools for real people"
+- id: "footer_support"
+  translation: "Support on Ko-fi"
 
 # Cookie consent
 - id: "cookie_title"

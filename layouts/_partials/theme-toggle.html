@@ -21,13 +21,14 @@
 {{- $light := (T "light") | default "Light" -}}
 {{- $dark := (T "dark") | default "Dark" -}}
 
-<div class="folkup-theme-toggle" role="radiogroup" aria-label="{{ $changeTheme }}">
+<div class="folkup-theme-toggle" role="radiogroup" aria-orientation="horizontal" aria-label="{{ $changeTheme }}">
   <button
     type="button"
     role="radio"
     data-folkup-theme="light"
     aria-checked="false"
     aria-label="{{ $light }}"
+    tabindex="-1"
   >
     {{- partial "utils/icon.html" (dict "name" "sun" "attributes" (printf `height=%d aria-hidden="true"` $iconHeight)) -}}
     {{- if not $hideLabel }}<span>{{ $light }}</span>{{ end -}}
@@ -38,6 +39,7 @@
     data-folkup-theme="dark"
     aria-checked="false"
     aria-label="{{ $dark }}"
+    tabindex="0"
   >
     {{- partial "utils/icon.html" (dict "name" "moon" "attributes" (printf `height=%d aria-hidden="true"` $iconHeight)) -}}
     {{- if not $hideLabel }}<span>{{ $dark }}</span>{{ end -}}
@@ -57,7 +59,9 @@
     html.classList.add(theme);
     html.style.colorScheme = theme;
     document.querySelectorAll(".folkup-theme-toggle button[data-folkup-theme]").forEach(function (b) {
-      b.setAttribute("aria-checked", b.dataset.folkupTheme === theme ? "true" : "false");
+      var active = b.dataset.folkupTheme === theme;
+      b.setAttribute("aria-checked", active ? "true" : "false");
+      b.setAttribute("tabindex", active ? "0" : "-1");
     });
   }
 

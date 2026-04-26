@@ -1,21 +1,22 @@
 /* AGIL-119: 2-state theme toggle pill (light/dark). LangToggle.vue-inspired pattern.
    Tokens: var(--folkup-*) only — NO Tailwind dark:hx:* utilities (AGIL-118 constraint).
-   Lives in sticky navbar (Hextra hx:sticky hx:top-0). */
+   Lives in sticky navbar (Hextra hx:sticky hx:top-0).
+
+   Note: palette-d.css inverts tokens in .dark scope (e.g. --folkup-border-light
+   #E8E4DE light → #2E2820 dark; --folkup-ivory #FEFCF6 light → #1A1814 dark).
+   We rely on this auto-inversion for both modes — no separate .dark overrides needed.
+   Diff-review post-merge concern (Beta W1 verified false positive once token
+   inversion accounted for).
+*/
 
 .folkup-theme-toggle {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  background-color: var(--folkup-border-light, rgba(0, 0, 0, 0.06));
+  background-color: var(--folkup-border-light);
   padding: 2px;
   gap: 2px;
   font-family: inherit;
-}
-
-.dark .folkup-theme-toggle,
-html.dark .folkup-theme-toggle,
-[data-theme="dark"] .folkup-theme-toggle {
-  background-color: var(--folkup-charcoal, rgba(255, 255, 255, 0.08));
 }
 
 .folkup-theme-toggle button {
@@ -24,7 +25,7 @@ html.dark .folkup-theme-toggle,
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
   cursor: pointer;
-  color: var(--folkup-text-muted, currentColor);
+  color: var(--folkup-text-muted);
   font-size: 0.75rem;
   font-weight: 500;
   display: inline-flex;
@@ -36,16 +37,16 @@ html.dark .folkup-theme-toggle,
 }
 
 .folkup-theme-toggle button[aria-checked="true"] {
-  background-color: var(--folkup-bordeaux, #B8818F);
-  color: var(--folkup-ivory, #EDE8DD);
+  background-color: var(--folkup-bordeaux);
+  color: var(--folkup-ivory);
 }
 
 .folkup-theme-toggle button:hover:not([aria-checked="true"]) {
-  color: var(--folkup-bordeaux, #B8818F);
+  color: var(--folkup-bordeaux);
 }
 
 .folkup-theme-toggle button:focus-visible {
-  outline: 2px solid var(--folkup-amber, #C8A24B);
+  outline: 2px solid var(--folkup-amber);
   outline-offset: 2px;
 }
 
@@ -57,5 +58,22 @@ html.dark .folkup-theme-toggle,
   .folkup-theme-toggle button {
     padding: 0.35rem 0.5rem;
     font-size: 0.7rem;
+  }
+}
+
+/* AGIL-119 R3 (Beta diff-review): hide text labels on very narrow screens
+   (<400px) to prevent navbar overflow. Icons retain accessible aria-label. */
+@media (max-width: 399px) {
+  .folkup-theme-toggle button > span {
+    display: none;
+  }
+  .folkup-theme-toggle button {
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+@media print {
+  .folkup-theme-toggle {
+    display: none;
   }
 }

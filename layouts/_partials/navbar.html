@@ -41,8 +41,9 @@
 
         {{- if eq .Params.type "link" -}}
           {{- partial "navbar-link.html" (dict "currentPage" $currentPage "link" $link "external" $external "item" . "icon" .Params.icon) -}}
-        {{- else if eq .Params.type "theme-toggle" -}}
-          {{- partial "theme-toggle.html" (dict "iconHeight" 14 "hideLabel" (not .Params.label)) -}}
+        {{/* AGIL-119 W2 (Beta diff-review): theme-toggle is hardcoded below, NOT
+             driven by menu.main config — to prevent accidental double-render if
+             a theme-toggle menu entry is added in the future. */}}
         {{- else if eq .Params.type "language-switch" -}}
           {{- partial "language-switch" (dict "context" $page "grow" false "hideLabel" (not .Params.label) "iconName" (.Params.icon | default "translate") "iconHeight" $iconHeight "location" "top" "class" "hx:p-2") -}}
         {{- else if .Params.icon -}}

@@ -4,17 +4,9 @@
 <div style="text-align: center; padding: 1rem 0; font-size: 0.85rem;">
   <nav aria-label="FolkUp ecosystem" style="margin: 0.5rem 0;">
     <p style="margin: 0 0 0.3rem;">
-      Part of <a href="https://folkup.app" style="color: inherit; font-weight: 600;">FolkUp</a> — knowledge tools for real people
+      {{ T "footer_landing" | safeHTML }} <a href="https://folkup.app" style="color: inherit; font-weight: 600;">FolkUp</a> · <a href="https://folkup.app/declaration/" style="color: inherit;">{{ T "footer_declaration" }}</a>
     </p>
-    <p style="margin: 0; font-size: 0.75rem;">
-      Also:
-      <a href="https://barnes.folkup.city" style="color: inherit;">Barnes</a> ·
-      <a href="https://tarot.folkup.life" style="color: inherit;">Tarot</a> ·
-      <a href="https://padel.folkup.fit" style="color: inherit;">Padel</a> ·
-      <a href="https://cogumelos.folkup.fit" style="color: inherit;">Cogumelos</a> ·
-      <a href="https://setubal.folkup.city" style="color: inherit;">Setúbal</a> ·
-      <a href="https://dialup.folkup.city" style="color: inherit;">Retro Tech</a>
-    </p>
+    <p style="margin: 0; font-size: 0.75rem;">{{ T "footer_tagline" }}</p>
   </nav>
   <p style="margin: 0 0 0.3rem;">&copy; {{ now.Year }} FolkUp contributors &middot; Content: <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a></p>
   <nav aria-label="Legal information">
@@ -26,7 +18,7 @@
     </p>
   </nav>
   <p style="margin: 0.6rem 0 0; font-size: 0.8rem;">
-    <a href="https://ko-fi.com/folkup" style="color: inherit;" rel="noopener">Поддержать на Ko-fi</a>
+    <a href="https://ko-fi.com/folkup" style="color: inherit;" rel="noopener">{{ T "footer_support" }}</a>
   </p>
 </div>
 {{ end }}

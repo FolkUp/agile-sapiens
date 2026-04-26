@@ -140,3 +140,65 @@
     padding-inline: clamp(1rem, 4vw, 1.5rem);
   }
 }
+
+/* =========================================================================
+ * AGIL-125 — Blockquote Quote Glyph Offset (no overlap with text)
+ * =========================================================================
+ *
+ * Problem (visual on mobile):
+ *  - typography-classical.css line 442-452: blockquote::before renders a
+ *    Playfair Display drop-quote (`"` / U+201C) at 3em font-size, positioned
+ *    at left:-0.5rem top:-0.5rem with opacity:0.5 in bordeaux.
+ *  - typography-classical.css line 822-825: mobile blockquote padding is
+ *    `0 var(--space-lg)` (16px each side).
+ *  - At 320px viewport: 3em glyph (~48px optical width) extends INTO the
+ *    text column because content padding is only 16px and glyph is offset
+ *    only -8px from edge. First line of quoted text overlaps the glyph.
+ *
+ * Resolution (Beta W3 — Approach 2 chosen, Alpha A3 verified):
+ *  - Push glyph FURTHER LEFT into gutter zone (out of text flow) rather
+ *    than padding text away from glyph. Approach 2 preserves the classical
+ *    "drop-quote" aesthetic per BRAND-GUIDE.md §4 — Playfair 3em bordeaux
+ *    quote remains a visual anchor at the start of the quoted passage.
+ *  - Scale glyph 3em → 2.5em on mobile to reduce optical mass proportional
+ *    to narrower column width. Maintains classical book typography ratio.
+ *  - Glyph repositioned to left:-0.25rem (-4px) top:-0.25rem — hangs in
+ *    margin gutter as decorative indicator without intruding on text flow.
+ *  - blockquote padding-left increased to 1.75rem (28px) to clear the
+ *    glyph footprint with visual breathing room.
+ *
+ * Language-agnostic: U+201C English curly quote works for both EN and RU
+ * pages. The classical-typography quotes-property rule
+ * (`quotes: "\201C" "\201D" "\2018" "\2019"` line 1383) sets <q> elements
+ * but blockquote::before content is hardcoded U+201C — no language switch
+ * needed, glyph is universal serif.
+ *
+ * Test pages: any chapter with blockquote, e.g. /chapters/chapter-0-pilot/.
+ */
+
+@media (max-width: 768px) {
+  /* Override mobile blockquote padding from typography-classical.css §808
+   * (currently `padding: 0 var(--space-lg)` = 16px each side). Increase
+   * left padding to clear the negative-positioned ::before glyph; preserve
+   * right padding at var(--space-lg) for column symmetry. Margin-left
+   * adjustment keeps glyph within article column when chapter padding
+   * (AGIL-124) clamps to its 16px floor. */
+  blockquote {
+    padding-left: 1.75rem;
+    padding-right: var(--space-lg);
+    margin-left: 0.25rem;
+  }
+
+  /* Reduce optical mass and reposition the drop-quote glyph.
+   * Original (typography-classical.css line 446-451):
+   *   font-size: 3em; left: -0.5rem; top: -0.5rem.
+   * Mobile override:
+   *   font-size: 2.5em; left: -0.25rem; top: -0.25rem.
+   * Combined with blockquote padding-left: 1.75rem above, text starts
+   * 28px from blockquote edge — clear of glyph footprint, no overlap. */
+  blockquote::before {
+    font-size: 2.5em;
+    left: -0.25rem;
+    top: -0.25rem;
+  }
+}

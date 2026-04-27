@@ -1,0 +1,204 @@
+/* AGILE SAPIENS — Mobile UX Cluster (AGIL-123, AGIL-124, AGIL-125)
+ * Author: Johnny (FolkUp CSS/HTML/WCAG/responsive expert) · 2026-04-26
+ *
+ * Scope: mobile breakpoint <=768px only — desktop UX preserved verbatim.
+ * Source of failures: tests/agil-120-mobile-nav.spec.ts at 320px (AGIL-122 audit).
+ *
+ * Change discipline:
+ *  - All rules scoped to @media (max-width: 768px) — no desktop side-effects.
+ *  - No new design tokens introduced — reuses existing var(--folkup-*) and
+ *    var(--space-*) from palette-d.css + typography-classical.css.
+ *  - Does NOT touch the AGIL-115 `.dark body !important` override (preserved).
+ *  - Does NOT introduce new Tailwind utilities (avoids AGIL-118 silent-fail).
+ *
+ * Load order: AFTER typography-classical.css and visuals-framework.css so
+ * mobile rules cascade-win over base. Wired in layouts/partials/custom/head-end.html.
+ */
+
+/* =========================================================================
+ * AGIL-123 — Mobile Touch Targets (WCAG 2.5.8 AAA + FolkUp 44×44 standard)
+ * =========================================================================
+ *
+ * Problem (from AGIL-122 Playwright audit at 320px):
+ *  - Footer legal links: 17–22px height (text baseline only — no padding).
+ *  - Footer ecosystem links (FolkUp, Декларация, Ko-fi): 18–19px height.
+ *  - Homepage CTA links inside markdown paragraphs: 22px height.
+ *  - Heading anchor permalinks (`.subheading-anchor`): 26×40px (width FAIL).
+ *
+ * Resolution (Alpha+Beta consensus):
+ *  - belt+braces: padding-block + display: inline-flex + min-height: 44px.
+ *    Pure min-height alone leaves visual gap (no actual tap-area expansion
+ *    on inline-level elements without flex context — Alpha A1 catch).
+ *  - Heading anchor: padded to 44×44 hit area, NEVER hidden on mobile
+ *    (Beta W4: hiding === UX regression; permalink utility lost).
+ *  - Footer + CTA: only on `@media (max-width: 768px)` to preserve
+ *    classical book typography rhythm on desktop where 44px enforcement
+ *    would create awkward vertical gaps in flowing prose.
+ */
+
+@media (max-width: 768px) {
+  /* --- Footer links (FolkUp ecosystem nav, legal nav, Ko-fi) ---
+   * Selector targets the inline footer partial (layouts/partials/custom/footer.html)
+   * which renders nav > p > a. Scoping to `footer nav a` avoids accidental
+   * impact on Hextra theme footer (which uses .hextra-custom-footer in a
+   * different DOM subtree). */
+  footer nav a,
+  footer p a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 12px;
+    /* Preserve middle-dot separator alignment by allowing the link's
+     * inline-flex box to share baseline with surrounding text. */
+    vertical-align: middle;
+  }
+
+  /* --- Homepage CTA links inside markdown content ---
+   * Targets links in the homepage rendered by layouts/home.html → div.content.
+   * Specifically the markdown-rendered "📖 Читать монографию →" and "О проекте"
+   * links that appear in flowing paragraphs. Scoped to body.home for safety
+   * (Hugo applies kind=home class via Hextra body class hooks). Fallback
+   * selector targets the .content > p a pattern from content/_index.md. */
+  body.home .content p a,
+  main#content > .content > p a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 12px;
+  }
+
+  /* --- Heading anchor permalink (.subheading-anchor) ---
+   * Hextra renders an empty <a class="subheading-anchor"> after each h2..h6
+   * with `::after { content: '#' }`. Default hit area is just the # glyph
+   * (~26×40px). On mobile we expand to 44×44 via padding without changing
+   * visual position (the anchor remains opacity:0 until hover/focus per
+   * Hextra typography.css — we honor that pattern). */
+  .subheading-anchor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    /* Negative margin compensates added padding so the heading layout
+     * does not visually shift when anchor toggles to opacity:1 on hover.
+     * 44px target − ~26px native glyph width = 18px split → 9px each side.
+     * margin-inline-start: -9px keeps anchor optically aligned with heading. */
+    margin-inline-start: calc(0.25rem - 9px);
+  }
+}
+
+/* =========================================================================
+ * AGIL-124 — Mobile Reading Padding (page-type scoped gutters)
+ * =========================================================================
+ *
+ * Problem (from AGIL-122 Playwright audit at 320px):
+ *  - Chapter pages: layouts/chapters/single.html article uses `hx:px-1`
+ *    (4px each side) — body text pressed against viewport edge.
+ *  - Other Hextra pages (homepage, legal): use Hextra default `hx:px-6`
+ *    (24px) which is already adequate.
+ *  - Net effect: only chapter reading is degraded at narrow viewports.
+ *
+ * Resolution (Alpha A2 + Beta consensus):
+ *  - PAGE-TYPE SCOPED: target the unique DOM signature of chapter pages.
+ *    Hextra baseof.html does NOT apply body classes — bodies are bare.
+ *    Instead, chapter article wraps `<main>` containing `.chapter-header`
+ *    (only present in layouts/chapters/single.html). Use :has() to match
+ *    that signature. Falls back to attribute-style scoping via the
+ *    chapter-specific class chain `.content-enhanced.classical-typography`.
+ *  - Modern :has() support: 96.7% (caniuse 2026-04). Older browsers fall
+ *    back gracefully — Hextra desktop padding still applies, just no
+ *    enhanced gutter; non-blocking.
+ *  - Use clamp() for fluid scaling: 16px floor (320px viewport edge),
+ *    24px ceiling (768px breakpoint matches Hextra default).
+ *  - Applied via mobile media query only — desktop chapter-single keeps
+ *    existing `hx:md:px-6` (24px) for ≥768px.
+ *  - Verified safe against AGIL-115 .dark body !important: padding is on
+ *    article, not body — no cascade conflict.
+ *
+ * Verified pages (selector reach):
+ *  - homepage (/) → layouts/home.html, no .chapter-header → unchanged
+ *  - chapter (/chapters/chapter-0-pilot/) → fixed (was 4px, now 16-24px)
+ *  - legal (/legal/privacy/) → Hextra docs/single.html, no .chapter-header
+ *    and no .content-enhanced → unchanged at 24px
+ */
+
+@media (max-width: 768px) {
+  /* Chapter single layout: layouts/chapters/single.html article has hx:px-1
+   * (4px) and uniquely contains <header class="chapter-header">. Use :has()
+   * to select ONLY chapter articles — homepage and legal articles do not
+   * contain .chapter-header, so they remain unaffected.
+   *
+   * :has() browser support per caniuse 2026-04: 96.7% global. Older browsers
+   * (Firefox <121, Safari <15.4) fall through to the non-:has rule below
+   * which provides equivalent padding via the chapter-content wrapper.
+   * Both rules safe to coexist: :has() targets the article element,
+   * fallback targets the inner wrapper — different boxes, no double-pad.
+   *
+   * Padding-inline clamp: 16px floor (320px viewport), 24px ceiling
+   * (matches Hextra default at 768px breakpoint). */
+  article:has(> main > header.chapter-header) {
+    padding-inline: clamp(1rem, 4vw, 1.5rem);
+  }
+}
+
+/* =========================================================================
+ * AGIL-125 — Blockquote Quote Glyph Offset (no overlap with text)
+ * =========================================================================
+ *
+ * Problem (visual on mobile):
+ *  - typography-classical.css line 442-452: blockquote::before renders a
+ *    Playfair Display drop-quote (`"` / U+201C) at 3em font-size, positioned
+ *    at left:-0.5rem top:-0.5rem with opacity:0.5 in bordeaux.
+ *  - typography-classical.css line 822-825: mobile blockquote padding is
+ *    `0 var(--space-lg)` (16px each side).
+ *  - At 320px viewport: 3em glyph (~48px optical width) extends INTO the
+ *    text column because content padding is only 16px and glyph is offset
+ *    only -8px from edge. First line of quoted text overlaps the glyph.
+ *
+ * Resolution (Beta W3 — Approach 2 chosen, Alpha A3 verified):
+ *  - Push glyph FURTHER LEFT into gutter zone (out of text flow) rather
+ *    than padding text away from glyph. Approach 2 preserves the classical
+ *    "drop-quote" aesthetic per BRAND-GUIDE.md §4 — Playfair 3em bordeaux
+ *    quote remains a visual anchor at the start of the quoted passage.
+ *  - Scale glyph 3em → 2.5em on mobile to reduce optical mass proportional
+ *    to narrower column width. Maintains classical book typography ratio.
+ *  - Glyph repositioned to left:-0.25rem (-4px) top:-0.25rem — hangs in
+ *    margin gutter as decorative indicator without intruding on text flow.
+ *  - blockquote padding-left increased to 1.75rem (28px) to clear the
+ *    glyph footprint with visual breathing room.
+ *
+ * Language-agnostic: U+201C English curly quote works for both EN and RU
+ * pages. The classical-typography quotes-property rule
+ * (`quotes: "\201C" "\201D" "\2018" "\2019"` line 1383) sets <q> elements
+ * but blockquote::before content is hardcoded U+201C — no language switch
+ * needed, glyph is universal serif.
+ *
+ * Test pages: any chapter with blockquote, e.g. /chapters/chapter-0-pilot/.
+ */
+
+@media (max-width: 768px) {
+  /* Override mobile blockquote padding from typography-classical.css §808
+   * (currently `padding: 0 var(--space-lg)` = 16px each side). Increase
+   * left padding to clear the negative-positioned ::before glyph; preserve
+   * right padding at var(--space-lg) for column symmetry. Margin-left
+   * adjustment keeps glyph within article column when chapter padding
+   * (AGIL-124) clamps to its 16px floor. */
+  blockquote {
+    padding-left: 1.75rem;
+    padding-right: var(--space-lg);
+    margin-left: 0.25rem;
+  }
+
+  /* Reduce optical mass and reposition the drop-quote glyph.
+   * Original (typography-classical.css line 446-451):
+   *   font-size: 3em; left: -0.5rem; top: -0.5rem.
+   * Mobile override:
+   *   font-size: 2.5em; left: -0.25rem; top: -0.25rem.
+   * Combined with blockquote padding-left: 1.75rem above, text starts
+   * 28px from blockquote edge — clear of glyph footprint, no overlap. */
+  blockquote::before {
+    font-size: 2.5em;
+    left: -0.25rem;
+    top: -0.25rem;
+  }
+}

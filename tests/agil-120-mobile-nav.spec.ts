@@ -15,7 +15,7 @@ import { test, expect, Page } from '@playwright/test';
 import * as path from 'path';
 import * as fs from 'fs';
 
-const BASE = 'https://sapiens.folkup.life';
+const BASE = process.env.PLAYWRIGHT_BASE_URL || 'https://sapiens.folkup.life';
 
 // Ensure screenshots dir
 const screenshotsDir = path.join('tests', 'screenshots');

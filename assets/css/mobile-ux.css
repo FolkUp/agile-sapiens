@@ -58,9 +58,17 @@
    * Specifically the markdown-rendered "📖 Читать монографию →" and "О проекте"
    * links that appear in flowing paragraphs. Scoped to body.home for safety
    * (Hugo applies kind=home class via Hextra body class hooks). Fallback
-   * selector targets the .content > p a pattern from content/_index.md. */
+   * selector targets the .content > p a pattern from content/_index.md.
+   *
+   * AGIL-128-A extension (2026-04-27): also cover list-CTA pattern. The
+   * "О проекте" page (content/about.ru.md) renders bullet lists where each
+   * item is a single CTA link (`- [Политика](url)` → `<ul><li><a>`). The
+   * `> p a` selector misses these because they're not inside paragraphs.
+   * AGIL-120 Playwright E.1 still failed at 22px on `<ul><li> > a` post
+   * AGIL-123 ship — list-CTA branch added here. */
   body.home .content p a,
-  main#content > .content > p a {
+  main#content > .content > p a,
+  main#content > .content > ul > li > a {
     display: inline-flex;
     align-items: center;
     min-height: 44px;

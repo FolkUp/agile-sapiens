@@ -8,7 +8,7 @@ export default defineConfig({
   reporter: 'line',
 
   use: {
-    baseURL: 'https://sapiens.folkup.life',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'https://sapiens.folkup.life',
     trace: 'off',
     screenshot: 'only-on-failure',
   },

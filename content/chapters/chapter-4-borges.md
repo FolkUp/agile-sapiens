@@ -251,5 +251,3 @@ DORA работает именно потому, что не является л
 ¹⁵ Campbell, Donald T. «Assessing the Impact of Planned Social Change.» *Evaluation and Program Planning*, Vol. 2, No. 1, 1979, pp. 67-90. Оригинальная формулировка «закона Кэмпбелла».
 
 ¹⁶ Accelerate: State of DevOps Report. Google Cloud / DORA, 2023. Четыре ключевых метрики: deployment frequency, lead time for changes, time to restore service, change failure rate.
-
----

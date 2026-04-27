@@ -264,5 +264,3 @@ Wells Time Machine показала не prediction будущего, а explora
 ³ Отраслевой анализ показывает значительный рост в требованиях к ИИ-грамотности на рынках труда глобально за последние годы.
 
 ⁴ William Gibson. Устный афоризм: «The future is already here — it's just not evenly distributed.» Первая печатная атрибуция: Scott Rosenberg, *San Francisco Examiner*, April 19, 1992. Самая ранняя устная цитата с голосом Гибсона: «Talk of the Nation: The Science in Science Fiction,» NPR, November 30, 1999 (~11:55), вступление «As I've said many times…» — подтверждает, что это авторская максима, а не отрывок из «Нейроманта» или другого опубликованного произведения. Источниковедческий анализ: https://quoteinvestigator.com/2012/01/24/future-has-arrived/
-
----

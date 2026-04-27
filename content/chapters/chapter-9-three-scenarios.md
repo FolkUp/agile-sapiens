@@ -441,5 +441,3 @@ Wells Time Machine was инструмент исследования (exploratio
 ⁵ JPMorgan Chase Annual Report (2023): LOXM платформы алгоритмической торговли (algorithmic trading platform) улучшения производительности (performance improvements) documented in метриках эффективности торговли (trading efficiency metrics).
 
 ⁶ Fashion Revolution, "Fashion Transparency Index" (2023): Zara сравнение метрик цепочки поставок (supply chain metrics comparison). Отраслевые эталонные данные (Industry benchmark data) from McKinsey Fashion Report (2023).
-
----

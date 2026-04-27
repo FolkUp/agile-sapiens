@@ -371,5 +371,3 @@ Netflix под руководством Рида Хастингса создал
 ¹⁹ Suleyman, Mustafa. *The Coming Wave* (2023). Bodley Head.
 
 ²⁰ US Securities and Exchange Commission. Litigation Release No. 24065, *SEC v. Elizabeth Holmes and Theranos, Inc.* March 14, 2018. SEC обвинила Холмс и Theranos в привлечении более 700 млн долларов через ложные заявления о технологии анализа крови.
-
----

@@ -13,9 +13,6 @@ act_accent: "bordo"
 act_plate: "agil-act-opener-I.webp"
 act_title: "Истоки"
 category: analysis
-status: verified
-confidence: medium
-authors: ["Андрей"]
 reading_time: "25 min"
 tags:
   - agile-foundation
@@ -25,28 +22,6 @@ tags:
   - jules-verne
   - reform-club
   - agile-industrial-complex
-reviewed_by: "Наборщик"
-review_date: "2026-04-21"
-sources:
-  - "Verne, Jules. Around the World in Eighty Days (1872/1873). Le Temps serialization, then Hetzel edition. Public domain"
-  - "Bank of England Historical Exchange Rates"
-  - "MeasuringWorth.com inflation calculator"
-  - "Scrum Alliance 2025 Annual Report"
-  - "SAFe certification pricing analysis"
-  - "McKinsey & Company. Losing from day one: Why even successful transformations fall short (December 2021)"
-  - "Allied Market Research Enterprise Agile Transformation Services Market"
-  - "Boeing 737 MAX: House Committee on Transportation and Infrastructure Final Report (September 2020)"
-  - "SpaceX Falcon 1 launch history (2006-2008) and NASA Commercial Orbital Transportation Services (COTS) program documentation"
-  - "Nadella, Satya. Hit Refresh: The Quest to Rediscover Microsoft's Soul and Imagine a Better Future for Everyone (2017). Harper Business"
-  - "U.S. Department of Defense. News briefing by Secretary Donald H. Rumsfeld (February 12, 2002). Known unknowns taxonomy"
-  - "Toyota Production System historical documentation"
-  - "Womack, James P., Daniel T. Jones, Daniel Roos. The Machine That Changed the World (1990). MIT IMVP study"
-  - "Ohno, Taiichi. Toyota Production System: Beyond Large-Scale Production (1988). Productivity Press"
-  - "Snowden, David J., Mary E. Boone. A Leader's Framework for Decision Making. Harvard Business Review, November 2007"
-  - "Joint Authorities Technical Review (JATR). Boeing 737 MAX Flight Control System Report (October 2019)"
-  - "Federal Aviation Administration. Summary of the FAA's Review of the Boeing 737 MAX (January 2020)"
-  - "U.S. House Committee on Transportation and Infrastructure. Final Report on Boeing 737 MAX (September 2020)"
-  - "National Transportation Safety Board. Accident Reports: Lion Air 610, Ethiopian Airlines 302 (2019)"
 related:
   - "/chapters/chapter-1-jules-verne"
   - "/chapters/chapter-2-frankenstein"

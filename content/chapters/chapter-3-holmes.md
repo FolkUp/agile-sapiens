@@ -8,9 +8,6 @@ weight: 40
 chapter: 3
 act: "I: Origins"
 category: analysis
-status: verified
-confidence: high
-authors: ["Андрей"]
 reading_time: "20 min"
 tags:
   - sherlock-holmes
@@ -24,25 +21,6 @@ tags:
   - poetic-prosody
   - dolnik-metre
   - cultural-cryptography
-reviewed_by: "Наборщик, КиберГонзо (OSINT verification), Цветик (prosodic analysis)"
-review_date: "2026-03-28"
-sources:
-  - "Doyle, Arthur Conan. A Study in Scarlet (1887). Ward, Lock & Co"
-  - "Doyle, Arthur Conan. The Sign of the Four (1890). Spencer Blackett"
-  - "Doyle, Arthur Conan. 'A Scandal in Bohemia.' The Strand Magazine, July 1891"
-  - "SEC. In the Matter of Knight Capital Americas LLC. Administrative Proceeding File No. 3-15570, October 16, 2013"
-  - "CFTC & SEC Joint Advisory Committee. Findings Regarding the Market Events of May 6, 2010"
-  - "Target Corporation. 2013 Annual Report and 2015 Q1 Earnings Release"
-  - "Canadian Press. 'Target Canada closing: A timeline of the U.S. retailer's disastrous Canadian venture.' January 15, 2015"
-  - "Castaldo, Joe. 'The Last Days of Target Canada.' Canadian Business, January 2016"
-  - "Bort, Julie. 'How a $1.1 billion SAP project failure made Lidl rethink its technology strategy.' Business Insider, July 2018"
-  - "Standish Group. CHAOS Report 2020: Beyond Infinity"
-  - "Brooks, Frederick. The Mythical Man-Month (1975). Addison-Wesley"
-  - "Weinberg, Gerald. The Psychology of Computer Programming (1971). Van Nostrand Reinhold"
-  - "Conway, Melvin. 'How Do Committees Invent?' Datamation, April 1968"
-  - "Accelerate: State of DevOps Report (DORA). Google Cloud, 2023"
-  - "Блок, Александр. 'Двенадцать' (1918). Скифы. СПб, 1918"
-  - "Оксимирон. 'Город под подошвой.' Альбом: Горгород (2015). Vajra Music"
 related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"

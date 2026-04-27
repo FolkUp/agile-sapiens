@@ -8,10 +8,6 @@ weight: 50
 chapter: 4
 act: "I"
 category: "analysis"
-status: verified
-confidence: high
-reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
-review_date: "2026-03-28"
 tags:
   - "borges"
   - "measurement-paradox"
@@ -22,26 +18,6 @@ tags:
   - "velocity-gaming"
   - "goodharts-law"
   - "organizational-theater"
-sources:
-  - "Borges, Jorge Luis. 'The Lottery in Babylon' (1941). In Ficciones (1944). Editorial Sur, Buenos Aires"
-  - "Borges, Jorge Luis. 'The Library of Babel' (1941). In Ficciones (1944). Editorial Sur, Buenos Aires"
-  - "Kniberg, Henrik & Ivarsson, Anders. 'Scaling Agile @ Spotify with Tribes, Squads, Chapters & Guilds.' Spotify Labs whitepaper, October 2012"
-  - "Sundén, Jeremiah & Svedenwall, Joakim. 'Scaling Agile at Spotify: A Case Study.' Master's thesis, Chalmers University of Technology, 2015"
-  - "Lee, Jeremiah. 'Failed #SquadGoals — Spotify doesn't use \"the Spotify model\" and neither should you.' jeremiahlee.com, April 2020"
-  - "Scaled Agile, Inc. SAFe 6.0 Framework. scaledagileframework.com (accessed March 2026)"
-  - "Laanti, Marko; Salo, Outi; Abrahamsson, Pekka. 'Agile Methods Rapidly Replacing Traditional Methods at Nokia: A Survey of Opinions on Agile Transformation.' Information and Software Technology, 53(3), 2011, pp. 276-290"
-  - "Doerr, John. Measure What Matters (2018). Portfolio/Penguin"
-  - "Wodtke, Christina. Radical Focus (2016). Cucina Media"
-  - "Goodhart, Charles A.E. 'Problems of Monetary Management: The U.K. Experience.' Papers in Monetary Economics, Reserve Bank of Australia, 1975"
-  - "Strathern, Marilyn. 'Improving Ratings: Audit in the British University System.' European Review, 5(3), 1997, pp. 305-321"
-  - "Muller, Jerry Z. The Tyranny of Metrics (2018). Princeton University Press"
-  - "Campbell, Donald T. 'Assessing the Impact of Planned Social Change.' Evaluation and Program Planning, 2(1), 1979, pp. 67-90"
-  - "Accelerate: State of DevOps Report (DORA). Google Cloud, 2023"
-  - "Brooks, Frederick. The Mythical Man-Month (1975). Addison-Wesley"
-  - "Conway, Melvin. 'How Do Committees Invent?' Datamation, April 1968"
-  - "Rigby, Darrell; Sutherland, Jeff; Noble, Andy. 'Agile at Scale.' Harvard Business Review, May-June 2018"
-  - "Digital.ai. '17th Annual State of Agile Report.' Digital.ai, 2024. 36% of teams measured by velocity. URL: https://info.digital.ai/rs/981-LQX-968/images/RE-SA-17th-Annual-State-Of-Agile-Report.pdf"
-  - "Levison, Mark. 'Misuse of Velocity in Agile Projects.' AgilePainRelief.com. URL: https://agilepainrelief.com/blog/misuse-of-velocity-in-agile-projects.html"
 related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"

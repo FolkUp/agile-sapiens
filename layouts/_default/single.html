@@ -1,0 +1,114 @@
+{{- define "main" -}}
+<div class="hx-mx-auto hx-flex hx-max-w-full">
+  {{- partial "sidebar.html" (dict "context" . "disableSidebar" .Params.disable_sidebar) -}}
+  <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+
+      {{/* Chapter-specific clean reading layout */}}
+      {{- if eq .Section "chapters" -}}
+
+        {{/* Clean chapter header - no editorial badges */}}
+        <div class="chapter-header hx-mb-8">
+          {{/* Chapter navigation */}}
+          {{- with .Params.chapter -}}
+          <nav class="hx-text-sm hx-text-gray-600 dark:hx-text-gray-400 hx-mb-4">
+            <a href="/chapters/" class="hover:hx-text-primary-600 dark:hover:hx-text-primary-400">← Оглавление</a>
+            {{- with $.Params.act -}}
+            <span class="hx-mx-2">•</span>
+            <span>{{ . }}</span>
+            {{- end -}}
+          </nav>
+          {{- end -}}
+
+          {{/* Clean title */}}
+          <h1 class="hx-text-3xl hx-font-bold hx-text-gray-900 dark:hx-text-gray-100 hx-mb-4">
+            {{ .Title }}
+          </h1>
+
+          {{/* Description without editorial metadata */}}
+          {{- if .Description -}}
+          <p class="hx-text-lg hx-text-gray-600 dark:hx-text-gray-400 hx-mb-6">
+            {{ .Description }}
+          </p>
+          {{- end -}}
+
+          {{/* Reading time only (no status, confidence, etc.) */}}
+          {{- with .Params.reading_time -}}
+          <p class="hx-text-sm hx-text-gray-500 dark:hx-text-gray-500 hx-mb-6">
+            Время чтения: {{ . }}
+          </p>
+          {{- end -}}
+        </div>
+
+        {{/* Clean content - pure reading experience */}}
+        <div class="chapter-content hx-prose hx-prose-gray dark:hx-prose-invert hx-max-w-none
+                    prose-headings:hx-scroll-mt-28 prose-headings:hx-font-semibold
+                    prose-h1:hx-text-2xl prose-h2:hx-text-xl prose-h3:hx-text-lg
+                    prose-pre:hx-overflow-x-auto prose-pre:hx-rounded-md
+                    prose-table:hx-block prose-table:hx-overflow-x-auto
+                    prose-img:hx-rounded-lg prose-img:hx-border prose-img:hx-border-gray-200 dark:prose-img:hx-border-neutral-700
+                    prose-hr:hx-border-gray-300 dark:prose-hr:hx-border-neutral-700">
+          {{ .Content }}
+        </div>
+
+        {{/* Clean chapter footer - apparatus link only */}}
+        <div class="chapter-footer hx-mt-12 hx-pt-8 hx-border-t hx-border-gray-200 dark:hx-border-neutral-800">
+          <div class="hx-flex hx-justify-between hx-items-center hx-text-sm">
+            <div class="hx-flex hx-space-x-4">
+              {{/* Previous/Next chapter navigation */}}
+              {{- with .PrevInSection -}}
+              <a href="{{ .RelPermalink }}"
+                 class="hx-text-gray-600 dark:hx-text-gray-400 hover:hx-text-primary-600 dark:hover:hx-text-primary-400">
+                ← {{ .Title }}
+              </a>
+              {{- end -}}
+              {{- with .NextInSection -}}
+              <a href="{{ .RelPermalink }}"
+                 class="hx-text-gray-600 dark:hx-text-gray-400 hover:hx-text-primary-600 dark:hover:hx-text-primary-400">
+                {{ .Title }} →
+              </a>
+              {{- end -}}
+            </div>
+
+            {{/* Apparatus link */}}
+            <a href="/apparatus/"
+               class="hx-text-gray-600 dark:hx-text-gray-400 hover:hx-text-primary-600 dark:hover:hx-text-primary-400">
+              Аппарат издания
+            </a>
+          </div>
+        </div>
+
+      {{/* Default layout for other sections */}}
+      {{- else -}}
+
+        {{/* Standard header */}}
+        <div class="content-header hx-mb-8">
+          <h1 class="hx-text-3xl hx-font-bold hx-text-gray-900 dark:hx-text-gray-100 hx-mb-4">
+            {{ .Title }}
+          </h1>
+
+          {{- if .Description -}}
+          <p class="hx-text-lg hx-text-gray-600 dark:hx-text-gray-400 hx-mb-6">
+            {{ .Description }}
+          </p>
+          {{- end -}}
+        </div>
+
+        {{/* Standard content */}}
+        <div class="content hx-prose hx-prose-gray dark:hx-prose-invert hx-max-w-none
+                    prose-headings:hx-scroll-mt-28 prose-headings:hx-font-semibold
+                    prose-h1:hx-text-2xl prose-h2:hx-text-xl prose-h3:hx-text-lg
+                    prose-pre:hx-overflow-x-auto prose-pre:hx-rounded-md
+                    prose-table:hx-block prose-table:hx-overflow-x-auto
+                    prose-img:hx-rounded-lg prose-img:hx-border prose-img:hx-border-gray-200 dark:prose-img:hx-border-neutral-700
+                    prose-hr:hx-border-gray-300 dark:prose-hr:hx-border-neutral-700">
+          {{ .Content }}
+        </div>
+
+      {{- end -}}
+
+    </main>
+  </article>
+  {{- partial "toc.html" . -}}
+</div>
+{{- end -}}

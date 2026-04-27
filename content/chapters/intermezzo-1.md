@@ -8,16 +8,7 @@ weight: 55
 chapter: "intermezzo-1"
 act: "Intermezzi"
 category: satire
-status: verified
-confidence: high
-authors: ["Андрей"]
 reading_time: "4 min"
-reviewed_by: "Alpha+Beta (hostile verification)"
-review_date: "2026-04-15"
-sources:
-  - "Carroll, Lewis. Alice's Adventures in Wonderland (1865). Mad Tea Party chapter"
-  - "Bulgakov, Mikhail. The Master and Margarita (1967). Satirical tradition"
-  - "КиберГонзо research: Russian IT terminology standards"
 related:
   - "chapter-2-mary-shelley"
   - "intermezzo-2"
@@ -122,9 +113,3 @@ tags: ["agile-dysfunction", "satirical-realism", "carroll-bulgakov", "corporate-
 «А я пока ещё колбаски нарежу», — добавил кот. «И создам Epic в Jira под названием «Колбасная инициатива» с подзадачами. Нарезка, раскладка, презентация заинтересованным сторонам».
 
 ---
-
-**Editorial Notes:**
-- Применены findings КиберГонзо research (russian-it-slang-research-15042026.md)
-- Carroll-Bulgakov literary fusion preserved
-- Authentic IT-сленг: ретро, метрики скорости, водопадное мышление
-- Ready for AGILE SAPIENS publication Phase B

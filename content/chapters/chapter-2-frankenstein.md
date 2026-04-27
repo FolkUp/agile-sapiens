@@ -8,9 +8,6 @@ weight: 30
 chapter: 2
 act: "I: Origins"
 category: analysis
-status: verified
-confidence: high
-authors: ["Андрей"]
 reading_time: "25 min"
 tags:
   - mary-shelley
@@ -18,24 +15,6 @@ tags:
   - project-failure
   - corporate-prometheus
   - technology-hubris
-reviewed_by: "Борхес, КиберГонзо (OSINT verification)"
-review_date: "2026-03-28"
-sources:
-  - "Shelley, Mary. Frankenstein; or, The Modern Prometheus (1818). Lackington, Hughes, Harding, Mavor & Jones"
-  - "Shelley, Mary. Frankenstein (1831 revised edition). Colburn & Bentley"
-  - "Aldini, Giovanni. An Account of the Late Improvements in Galvanism (1804). Cuthell & Martin"
-  - "US DOJ Office of the Inspector General. The Federal Bureau of Investigation's Sentinel Information Technology Project. Audit Report 12-08, November 2011"
-  - "US DOJ Office of the Inspector General. Status of the FBI's Implementation of the Sentinel Project. Audit Report 10-03, October 2009"
-  - "US Government Accountability Office. FBI Trilogy Project. GAO-05-105, February 2005"
-  - "US Government Accountability Office. Healthcare.gov: CMS Has Taken Steps to Address Problems, but Needs to Further Implement Systems Development Best Practices. GAO-15-238, March 2015"
-  - "Levinson, D.R. CMS Management of the Federal Marketplace. US HHS Office of Inspector General, OEI-06-14-00350, February 2016"
-  - "US House Committee on Energy and Commerce. Behind the Curtain of the Healthcare.gov Rollout. Majority Staff Report, September 2016"
-  - "UK National Audit Office. The BBC's Digital Media Initiative. HC 985, Session 2013-14, January 2014"
-  - "UK National Audit Office. Managing the BBC's Digital Media Initiative. Briefing for the Public Accounts Committee, Session 2013-14"
-  - "Standish Group. CHAOS Report: Decision Latency Theory (2018)"
-  - "Brooks, Frederick. The Mythical Man-Month (1975). Addison-Wesley"
-  - "Nokia Corporation. Annual Reports 2007-2013. Nokia.com/investors"
-  - "Vuori, T.O. & Huy, Q.N. 'Distributed Attention and Shared Emotions in the Innovation Process: How Nokia Lost the Smartphone Battle.' Administrative Science Quarterly, 61(1), 2016, pp. 9-51"
 related:
   - "/chapters/chapter-0-pilot"
   - "/chapters/chapter-1-jules-verne"

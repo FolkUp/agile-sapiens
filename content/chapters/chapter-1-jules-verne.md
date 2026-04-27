@@ -8,27 +8,7 @@ weight: 20
 chapter: 1
 act: "I: Origins"
 category: analysis
-status: verified
-confidence: high
-authors: ["Андрей"]
 reading_time: "22 min"
-reviewed_by: "КиберГонзо (OSINT), Alpha+Beta (hostile verification)"
-review_date: "2026-04-21"
-sources:
-  - "Verne, Jules. Twenty Thousand Leagues Under the Seas (1870). Hetzel, Paris"
-  - "Verne, Jules. Around the World in Eighty Days (1872). Le Temps serialization"
-  - "Verne, Jules. From the Earth to the Moon (1865). Hetzel, Paris"
-  - "Dickens, Charles. The Pickwick Papers (1836-1837). Chapman & Hall serial"
-  - "Takeuchi, H. & Nonaka, I. 'The New New Product Development Game.' Harvard Business Review, Jan 1986"
-  - "Schwaber, K. & Sutherland, J. The Scrum Guide (2020)"
-  - "Manifesto for Agile Software Development (2001). agilemanifesto.org"
-  - "Royce, W. 'Managing the Development of Large Software Systems.' IEEE WESCON, 1970"
-  - "Brooks, F. The Mythical Man-Month (1975). Addison-Wesley"
-  - "Patten, R.L. Charles Dickens and His Publishers (1978). Oxford University Press"
-  - "Zeigarnik, B. On Finished and Unfinished Tasks (1927). Psychologische Forschung"
-  - "Dumas, O. Correspondance inédite de Jules Verne et de Pierre-Jules Hetzel (1999-2002). Slatkine"
-  - "Ries, E. The Lean Startup (2011). Crown Business"
-  - "Lake, S. The Submarine in War and Peace (1918)"
 tags:
   - literary-dna
   - agile-origins
@@ -46,8 +26,6 @@ toc: true
 draft: false
 ---
 > **Chapter Summary:** Литературная ДНК современных методологий управления проектами. Как сериализация XIX века создала паттерн итеративной доставки, а приключенческий роман стал прототипом спринтового цикла.
-
-> **Verification Note:** This chapter has undergone comprehensive fact verification with T1 and T2 sources. As part of our banking-level editorial standards, all factual claims have been verified and sourced.
 
 ## HOOK: Парижское издательство, март 1869 года
 

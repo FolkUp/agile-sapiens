@@ -8,12 +8,7 @@ weight: 110
 chapter: 10
 act: "III: Future"
 category: "экспериентный-синтез (experiential-synthesis)"
-status: verified
-confidence: "high"
-authors: ["Андрей"]
 reading_time: "18 min"
-reviewed_by: "Alpha+Beta (hostile verification), КиберГонзо (OSINT verification)"
-review_date: "2026-04-21"
 tags:
   - william-gibson
   - neuromancer
@@ -23,32 +18,6 @@ tags:
   - последствия-выбора (choice-consequences)
   - трансформация-рабочего-процесса (workflow-transformation)
   - сценарии-2030 (2030-scenarios)
-sources:
-  - title: "Neuromancer"
-    author: "William Gibson"
-    year: 1984
-    type: "literary"
-    confidence: "primary"
-    notes: "Cyberpunk DNA для AI integration texture: jacking in metaphor, Case/Molly archetype"
-  - title: "Burning Chrome"
-    author: "William Gibson"
-    year: 1982
-    type: "literary"
-    confidence: "high"
-    notes: "Origin of cyberspace concept: первое использование термина в литературе"
-  - title: "The Paradox of Choice"
-    author: "Barry Schwartz"
-    year: 2004
-    type: "academic"
-    confidence: "high"
-    notes: "Decision fatigue framework для information overload scenarios"
-  - title: "Want AI-Driven Productivity? Redesign Work"
-    author: "MIT Sloan Management Review"
-    year: 2024
-    type: "research"
-    confidence: "verified"
-    notes: "AI integration methodology: verified source"
-    url: "https://sloanreview.mit.edu/article/want-ai-driven-productivity-redesign-work/"
 related:
   - chapter-8-time-machine
   - chapter-9-three-scenarios
@@ -73,8 +42,6 @@ twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cy
 > — William Gibson, "Neuromancer" (1984), но в 2030 мы понимаем: dead channel: это не помехи, а тишина отключённого человеческого интерфейса.
 
 > **Chapter Summary:** Cyberpunk Simulation 2030 — три Wells-сценария через прожитый опыт интеграции ИИ. Анна augmented, Михаил replaced, Дмитрий — AI Tamer (профессия, которой не существовало в 2025). Три человека, три параллельные реальности в одном московском офисе. HR классифицирует их как «равные карьерные возможности», но равными их делает только общий Wi-Fi. Интеграция ИИ не как технологическое событие, а как текстура повседневности — «jacking in» стало корпоративной рутиной.
-
-> **Verification Note:** This chapter uses Gibson's Neuromancer (1984) и Burning Chrome (1982) as literary DNA для AI integration texture. Scenarios illustrative — составные персонажи based on corporate AI adoption trends (MIT Sloan 2024) и Schwartz's Paradox of Choice framework (2004). Banking-level editorial standards applied.
 
 ## Prologue: The Console Cowboy в корпоративном кубикле
 

@@ -8,12 +8,7 @@ weight: 100
 chapter: 9
 act: "III: Future"
 category: "decision-frameworks"
-status: verified
-confidence: "high"
-authors: ["Андрей"]
 reading_time: "22 min"
-reviewed_by: "Alpha+Beta Hostile Verification (PASS/CONDITIONAL_PASS), КиберГонзо OSINT Verification"
-review_date: "2026-04-21"
 tags:
   - vernor-vinge
   - singularity-indicators
@@ -22,38 +17,6 @@ tags:
   - choice-architecture
   - corporate-transition
   - uncertainty-navigation
-sources:
-  - title: "The Coming Technological Singularity"
-    author: "Vernor Vinge"
-    year: 1993
-    type: "academic"
-    confidence: "primary"
-    notes: "Four paths to superintelligence + decision framework для exponential change"
-    url: "https://edoras.sdsu.edu/~vinge/misc/singularity.html"
-  - title: "Thinking, Fast and Slow"
-    author: "Daniel Kahneman"
-    year: 2011
-    type: "academic"
-    confidence: "high"
-    notes: "Cognitive bias framework for decision-making under uncertainty"
-  - title: "The Fifth Discipline"
-    author: "Peter Senge"
-    year: 1990
-    type: "business"
-    confidence: "high"
-    notes: "Systems thinking для организационного learning в conditions of change"
-  - title: "Competing Against Time"
-    author: "George Stalk Jr., Thomas M. Hout"
-    year: 1990
-    type: "business"
-    confidence: "high"
-    notes: "Time-based competition framework for решений по внедрению технологий (technology adoption decisions)"
-  - title: "The Innovator's Dilemma"
-    author: "Clayton Christensen"
-    year: 1997
-    type: "business"
-    confidence: "high"
-    notes: "Фреймворк разрушительных технологий (Disruptive technology framework) применимый к паттернам внедрения ИИ (AI adoption patterns)"
 related:
   - chapter-8-time-machine
   - chapter-10-choice-engine
@@ -65,7 +28,6 @@ related:
 
 > **Chapter Summary:** Архитектура принятия решений в точке сингулярности. Виндж в 1993 году предложил четыре пути к сверхразуму; тридцать лет спустя они стали корпоративными стратегическими выборами. Decision paradox: каждое AI-решение сегодня определяет релевантность людей через 5-10 лет, но время для поворота ограничено. Алгоритмическая торговля уже handle 75% сделок без человеческого надзора — success story или red flag? Глава даёт фреймворк для навигации в экспоненциальной неопределённости: Awakening, IA Symbiosis, Biological, Digital Gaia — четыре стратегии, за каждой стоит реальная цена.
 
-> **Verification Note:** This chapter combines Vinge's foundational 1993 singularity framework with 2026 corporate AI adoption data from algorithmic trading, supply chain automation, content moderation, and insurance underwriting case studies. All quantitative claims traceable to primary industry publications. Banking-level editorial standards applied.
 
 ## Пролог: The Decision Paradox
 

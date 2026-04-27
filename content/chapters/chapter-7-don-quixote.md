@@ -8,12 +8,7 @@ weight: 80
 chapter: 7
 act: "II: Archetypes"
 category: "analysis"
-status: "verified"
-confidence: "high"
-authors: ["Андрей"]
 reading_time: "22 min"
-reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
-review_date: "2026-04-21"
 tags:
   - "don-quixote"
   - "human-perception"
@@ -25,12 +20,6 @@ tags:
   - "meaning-creation"
   - "skills-disruption"
   - "human-ai-collaboration"
-sources:
-  - "Cervantes, Miguel de. Don Quixote de La Mancha (1605/1615). Juan de la Cuesta, Madrid"
-  - "World Economic Forum. The Future of Jobs Report 2023: Shifting Skills and Workforce Transformation. WEF, Geneva"
-  - "McKinsey Global Institute. Generative AI and the future of work in America (July 2023). McKinsey & Company"
-  - "LinkedIn Economic Graph. Workplace Learning Report 2023: Building the Agile Future. LinkedIn"
-  - "Goleman, Daniel. Emotional Intelligence: Why It Matters More Than IQ (1995). Bantam Books, New York"
 related:
   - "/chapters/chapter-4-borges"
   - "/chapters/chapter-5-nemo"
@@ -40,8 +29,6 @@ toc: true
 draft: false
 ---
 > **Chapter Summary:** Финал второго акта. Если Джекил показал опасность инструментального усиления, то Дон Кихот показывает, что именно делает человека незаменимым: способность видеть в данных то, чего в данных нет. Narrative thinking, эмоциональный интеллект и создание смысла: не soft skills, а единственные навыки, которые алгоритм не может воспроизвести. Там, где системы видят корреляции, человек видит истории. И истории побеждают.
-
-> **Verification Note:** This chapter uses only OSINT-verified sources from КиберГонзо. All statistics traceable to primary publications. Banking-level editorial standards applied.
 
 ## HOOK: Равнина Ла-Манчи, полдень
 

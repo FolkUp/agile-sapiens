@@ -13,12 +13,7 @@ act_accent: "sage"
 act_plate: "agil-act-opener-III.webp"
 act_title: "Горизонты"
 category: "scenarios"
-status: verified
-confidence: "medium"
-authors: ["Андрей"]
 reading_time: "22 min"
-reviewed_by: "Alpha+Beta (hostile verification), КиберГонзо (OSINT verification)"
-review_date: "2026-04-21"
 tags:
   - h-g-wells
   - time-machine
@@ -26,41 +21,6 @@ tags:
   - three-scenarios
   - future-planning
   - augmentation-automation
-sources:
-  - title: "The Time Machine"
-    author: "H.G. Wells"
-    year: 1895
-    type: "literary"
-    confidence: "primary"
-    notes: "Literary DNA framework для temporal analysis"
-  - title: "Generative AI and the Future of Work in America"
-    author: "McKinsey Global Institute"
-    year: 2023
-    month: "July"
-    type: "research"
-    confidence: "high"
-    notes: "29.5% automation potential by 2030 — baseline projection"
-    url: "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america"
-  - title: "Artificial intelligence and the future of work"
-    author: "World Economic Forum"
-    year: 2024
-    type: "research"
-    confidence: "high"
-    notes: "AI transformation patterns в workplace evolution"
-    url: "https://www.weforum.org/publications/artificial-intelligence-and-the-future-of-work/"
-  - title: "The Coming Technological Singularity"
-    author: "Vernor Vinge"
-    year: 1993
-    type: "academic"
-    confidence: "high"
-    notes: "Технологические горизонты prediction methodology"
-  - title: "The future is already here (oral aphorism)"
-    author: "William Gibson"
-    year: 1992
-    type: "aphorism"
-    confidence: "high"
-    notes: "First documented in print: Scott Rosenberg, San Francisco Examiner, April 19, 1992. Earliest oral citation: NPR «Talk of the Nation», November 30, 1999. NOT from Neuromancer."
-    url: "https://quoteinvestigator.com/2012/01/24/future-has-arrived/"
 related:
   - chapter-1-jules-verne
   - chapter-9-three-scenarios
@@ -72,7 +32,6 @@ related:
 
 > **Chapter Summary:** Три горизонта AI-трансформации через Wells. Ближайший (2026-2030) — иллюзия усиления: email, GPS, Google уже научили нас, что каждое «дополнение» эволюционирует в замещение. Среднесрочный (2030-2040) — возникновение гибридных ролей в зоне между полной автоматизацией и чисто человеческими задачами. Дальний (2040+) — Морлоки и Элои в одном open-space. Принцип Уэллса: технология, которая «augments», в конечном счёте «replaces». Не потому что зло, а потому что эффективность.
 
-> **Verification Note:** This chapter uses primary literary sources (Wells — public domain) with quantitative projections from McKinsey Global Institute (2023), World Economic Forum (2024), and Vernor Vinge's foundational singularity analysis (1993). Banking-level editorial standards applied.
 
 ## Пролог: The Time Traveller's Dilemma
 

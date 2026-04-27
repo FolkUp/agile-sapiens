@@ -440,6 +440,84 @@ weight: 30
 
 3. КиберГонзо research: "Russian IT terminology standards" — production debugging, bug prioritization theater, velocity gaming authentication. [Research source]
 
+## Глава 5: Сайрус Смит строит цивилизацию
+
+**PRIMARY LITERARY SOURCES**
+
+1. **Verne, Jules.** *The Mysterious Island* (1875). Hetzel, Paris.  
+   [Primary literary source] Foundational text establishing bootstrap leadership principles through Cyrus Smith's autonomous island team. Core narrative framework for engineering leadership, crisis management, and competency-based organization structures.
+
+2. **Dumas, Alexandre.** *The Three Musketeers* (1844). Baudry, Paris.  
+   [Primary literary source] Mission-driven team dynamics and loyalty structures providing comparative framework for autonomous teams unified by shared purpose rather than hierarchical command.
+
+**ORGANIZATIONAL THEORY & MANAGEMENT FOUNDATIONS**
+
+3. **Rich, Ben R. & Janos, Leo.** *Skunk Works: A Personal Memoir of My Years at Lockheed* (1994). Little, Brown and Company.  
+   [Corporate memoir] Definitive account of autonomous engineering team methodology, establishing practical framework for isolated innovation teams and rapid prototype development under competent leadership.
+
+4. **Johnson, Clarence L.** "Kelly's 14 Rules & Practices." Lockheed Martin Skunk Works, originally formulated 1943.  
+   [Corporate document] Foundational principles of autonomous engineering teams, providing systematic framework for small-team innovation methodology and bureaucracy isolation strategies.
+
+5. **Kidder, Tracy.** *The Soul of a New Machine* (1981). Little, Brown and Company.  
+   [Academic source] Pulitzer Prize-winning analysis of high-performance technical teams demonstrating competency-based leadership and autonomous decision-making in complex engineering projects.
+
+**ORGANIZATIONAL PSYCHOLOGY & TEAM DYNAMICS**
+
+6. **Hastings, Reed & Meyer, Erin.** *No Rules Rules: Netflix and the Culture of Reinvention* (2020). Penguin Press.  
+   [Corporate document] Corporate culture analysis demonstrating scaling challenges of autonomous team principles and implementation of "Keeper Test" methodology for high-performance team maintenance.
+
+7. **McChrystal, Stanley.** *Team of Teams: New Rules of Engagement for a Complex World* (2015). Portfolio/Penguin.  
+   [Military analysis] Military transformation case study applying autonomous team principles to hierarchical organizations facing networked opposition and complex adaptive challenges.
+
+8. **Edmondson, Amy.** *The Fearless Organization* (2019). Wiley.  
+   [Academic source] Research on psychological safety in teams, providing theoretical foundation for team resilience, leader dependency analysis, and sustainable autonomous team cultures.
+
+**SYSTEMS THINKING & COMMUNICATION THEORY**
+
+9. **Pentland, Alex.** *Social Physics: How Social Networks Can Make Us Smarter* (2014). Penguin Press.  
+   [Academic source] MIT research on team communication patterns and productivity correlation, providing empirical foundation for isolated team environments and communication optimization.
+
+10. **Allen, Thomas J.** *Managing the Flow of Technology* (1977). MIT Press.  
+    [Academic source] "Allen Curve" documentation of communication frequency vs. distance relationships, providing theoretical framework for optimal team physical organization and interaction patterns.
+
+11. **Conway, Melvin.** "How Do Committees Invent?" *Datamation*, April 1968.  
+    [Academic source] Conway's Law formulation establishing systematic relationship between organizational structure and system design, providing diagnostic framework for team architecture optimization.
+
+12. **Brooks, Frederick.** *The Mythical Man-Month* (1975). Addison-Wesley.  
+    [Academic source] Foundational analysis of team scaling problems, communication overhead, and the non-linear relationship between team size and productivity in complex technical projects.
+
+**CORPORATE LEADERSHIP & INNOVATION CASES**
+
+13. **Isaacson, Walter.** *Steve Jobs* (2011). Simon & Schuster.  
+    [Biography] Comprehensive analysis of technical leadership methodology, demonstrating competency-based leadership principles and product-focused team organization at Apple.
+
+14. **Young, Jeffrey S. & Simon, William L.** *iCon Steve Jobs: The Greatest Second Act in the History of Business* (2005). Wiley.  
+    [Biography] Additional perspective on Jobs' team leadership methodology, documenting cultural integration of technical competency and mission-driven team organization.
+
+15. **Vance, Ashlee.** *Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future* (2015). Ecco.  
+    [Biography] SpaceX formation and early team culture analysis, demonstrating bootstrap engineering methodology and mission-driven autonomous team principles in aerospace innovation.
+
+16. **Suleyman, Mustafa.** *The Coming Wave* (2023). Bodley Head.  
+    [Insider analysis] DeepMind research culture and team organization principles, providing contemporary case study of mission-driven autonomous teams in AI research.
+
+**GOVERNMENT ANALYSIS & CASE STUDIES**
+
+17. **US Government Accountability Office.** *F-35 Joint Strike Fighter: DOD Needs to Update Testing and Affordability Estimates.* GAO-21-105282, April 2021.  
+    [Government report] Comprehensive analysis of large-scale committee-based project management failure, providing counter-example to autonomous team methodology and documentation of bureaucratic coordination costs.
+
+18. **US Senate Committee on Armed Services.** Problems in the F-35 Joint Strike Fighter Program. Hearings, multiple sessions 2014-2021.  
+    [Government report] Congressional investigation documenting systematic problems in large-scale committee-driven engineering projects, contrasting with small autonomous team success patterns.
+
+**FINANCIAL & REGULATORY CASE STUDIES**
+
+19. **US Securities and Exchange Commission.** Litigation Release No. 24065, SEC v. Elizabeth Holmes and Theranos, Inc. March 14, 2018.  
+    [Government report] Regulatory analysis of autonomous team methodology without competent leadership, demonstrating failure modes when bootstrap principles are applied without genuine technical expertise.
+
+**BUSINESS METHODOLOGY SOURCES**
+
+20. **Amazon Working Backwards methodology documentation.** Various corporate sources.  
+    [Corporate document] "Two pizza rule" and related small team principles, demonstrating systematic approach to team size optimization and autonomous decision-making in large organizations.
+
 ### Интермедия III: Трансформационный лифт
 
 1. Carroll, Lewis. "Alice's Adventures in Wonderland" (1865). Curiouser-and-curiouser logic, infinite-regress dialogue — infinite regression logic для transformation theater satire. [Literary source]

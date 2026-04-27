@@ -2,19 +2,11 @@
 title: "ИНТЕРМЕДИЯ II: Продакшенское подземелье"
 weight: 85
 category: intermezzo
-status: verified
-confidence: high
 tags: ["intermezzo", "stylistic"]
-sources:
-  - "Carroll, Lewis. Alice's Adventures in Wonderland (1865). Narrative absurdism tradition"
-  - "Bulgakov, Mikhail. The Master and Margarita (1967). Satirical trinity (Behemoth / Margarita) and administrative grotesque"
-  - "КиберГонзо research: Russian IT terminology standards (production debugging, bug prioritization, velocity theater)"
 related: []
 date: "2026-04-17"
 date_created: "2026-04-17"
 date_updated: "2026-04-21"
-reviewed_by: "AGIL-069 Phase C verification panel, Alpha+Beta (B3 hostile verification, 2026-04-21)"
-review_date: "2026-04-21"
 ---
 
 > **Intermezzo Summary:** Продакшен-подземелье: 237 багов висят, 189 P0 перекодируются в P1, P1 в P2, P2 в техдолг, техдолг — в воркшоп следующего квартала (который ещё планируют). Гибкая методология как формализованное избегание программирования. Четыре летучки в день для синхронизации команды, которая ничего не производит между летучками. Satire sharper than most post-mortems.
@@ -144,9 +136,3 @@ review_date: "2026-04-21"
 Кот сказал: «А я пока ещё мониторинг настрою», — и вернулся к ноутбуку.
 
 ---
-
-**Editorial Notes:**
-- КиберГонзо research applied: продакшен, ретро, воркшоп, метрики скорости, коллективное принятие решений
-- Bulgakov: Маргарита + Behemoth continuity, satirical enterprise bureaucracy
-- Carroll: absurdist logic escalation, circular reasoning patterns
-- Agile dysfunction: bug prioritization theater, velocity gaming, endless planning cycles

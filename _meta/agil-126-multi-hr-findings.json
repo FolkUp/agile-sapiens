@@ -1,0 +1,50 @@
+[
+  {
+    "file": "content/chapters/chapter-0-pilot.md",
+    "line": 279,
+    "line2": 317,
+    "type": "C",
+    "description": "hr-wrapping-sources-block (opening HR at line 279, closing HR at line 317, sources header \"**Footnotes:**\" at line 281)",
+    "context": "L277: В следующей главе: как Мэри Шелли интуитивно описала динамику брошенных проектов — за 175 лет до первого корпоративного «трансформационного проекта», брошенного на полпути.\nL278: \nL279: ---\nL280: \nL281: **Footnotes:**\nL282: \nL283: ¹ Жюль Верн. «Вокруг света за восемьдесят дней» (1872/1873). Hetzel, Париж. ...\n...\nL315: ¹⁷ SpaceX Falcon 1 launch history ...\nL316: \nL317: ---\nL318: "
+  },
+  {
+    "file": "content/chapters/chapter-3-holmes.md",
+    "line": 259,
+    "line2": 293,
+    "type": "C",
+    "description": "hr-wrapping-sources-block (opening HR at line 259, closing HR at line 293, sources header \"**Footnotes:**\" at line 261)",
+    "context": "L257: Следующий акт задаёт другой вопрос. Не «как мы сюда попали?», а «как отсюда выбраться?». ...\nL258: \nL259: ---\nL260: \nL261: **Footnotes:**\nL262: \nL263: ¹ Arthur Conan Doyle. «A Scandal in Bohemia» (1891) ...\n...\nL291: ¹⁵ Блок, Александр. «Двенадцать» (1918) ...\nL292: \nL293: ---\nL294: "
+  },
+  {
+    "file": "content/chapters/chapter-4-borges.md",
+    "line": 219,
+    "line2": 255,
+    "type": "C",
+    "description": "hr-wrapping-sources-block (opening HR at line 219, closing HR at line 255, sources header \"**Footnotes:**\" at line 221)",
+    "context": "L217: Выход есть. Есть команды, которые измеряют, но не подчиняются измерениям ...\nL218: \nL219: ---\nL220: \nL221: **Footnotes:**\nL222: \nL223: ¹ Borges, Jorge Luis. «La lotería en Babilonia» (1941) ...\n...\nL253: ¹⁶ Accelerate: State of DevOps Report. Google Cloud / DORA, 2023 ...\nL254: \nL255: ---\nL256: "
+  },
+  {
+    "file": "content/chapters/chapter-5-nemo.md",
+    "line": 331,
+    "line2": 375,
+    "type": "C",
+    "description": "hr-wrapping-sources-block (opening HR at line 331, closing HR at line 375, sources header \"**Footnotes:**\" at line 333)",
+    "context": "L329: Глава 6: как корпоративный дуализм — разрыв между декларируемой и реальной культурой ...\nL330: \nL331: ---\nL332: \nL333: **Footnotes:**\nL334: \nL335: ¹ Conway, Melvin. «How Do Committees Invent?» ...\n...\nL373: ²⁰ US Securities and Exchange Commission. Litigation Release No. 24065 ...\nL374: \nL375: ---\nL376: "
+  },
+  {
+    "file": "content/chapters/chapter-8-time-machine.md",
+    "line": 256,
+    "line2": 268,
+    "type": "C",
+    "description": "hr-wrapping-sources-block (opening HR at line 256, closing HR at line 268, sources header \"## Источники и примечания\" at line 258)",
+    "context": "L254: **Reality check:** Конечно, можем влиять. Если ты CEO крупной корпорации ...\nL255: \nL256: ---\nL257: \nL258: ## Источники и примечания\nL259: \nL260: ¹ McKinsey Global Institute ...\n...\nL266: ⁴ William Gibson. Устный афоризм ...\nL267: \nL268: ---\nL269: "
+  },
+  {
+    "file": "content/chapters/chapter-9-three-scenarios.md",
+    "line": 429,
+    "line2": 445,
+    "type": "C",
+    "description": "hr-wrapping-sources-block (opening HR at line 429, closing HR at line 445, sources header \"## Источники и примечания\" at line 431)",
+    "context": "L427: **Chapter 10 Preview:** If Vinge shows how to choose, Gibson shows how to live ...\nL428: \nL429: ---\nL430: \nL431: ## Источники и примечания\nL432: \nL433: ¹ Vernor Vinge, \"The Coming Technological Singularity...\" (NASA VISION-21 Symposium, 1993) ...\n...\nL443: ⁶ Fashion Revolution, \"Fashion Transparency Index\" (2023) ...\nL444: \nL445: ---\nL446: "
+  }
+]

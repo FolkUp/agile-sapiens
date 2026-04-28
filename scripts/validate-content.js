@@ -227,9 +227,15 @@ function checkBrandConsistency() {
 
     // Check color scheme consistency
     if (hugoConfig.includes('theme = "hextra"')) {
-      const customCSS = glob.sync('assets/css/custom.css');
-      if (customCSS.length === 0) {
-        log.warn("No custom CSS found — ensure Brand Guide v2.5 compliance");
+      // Check for custom CSS in project OR theme directories
+      const projectCustomCSS = glob.sync('assets/css/custom.css');
+      const themeCustomCSS = glob.sync('themes/*/assets/css/custom.css');
+
+      if (projectCustomCSS.length === 0 && themeCustomCSS.length === 0) {
+        log.warn("No custom CSS found in project or theme — ensure Brand Guide v2.5 compliance");
+      } else {
+        const cssSource = projectCustomCSS.length > 0 ? 'project' : 'theme';
+        log.info(`Custom CSS found in ${cssSource} directory`);
       }
     }
 

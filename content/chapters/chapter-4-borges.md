@@ -29,6 +29,10 @@ related:
 sensitive: false
 toc: true
 draft: false
+status: verified
+confidence: high
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 ---
 > **Chapter Summary:** Парадокс Agile-измерений. Как метрики, призванные увеличить гибкость, становятся лотереей — системой настолько сложной, что никто не помнит, зачем она началась. От Spotify Model до SAFe, от OKR-театра до velocity gaming — анатомия измерительного безумия.
 

@@ -8,7 +8,11 @@ weight: 100
 chapter: 9
 act: "III: Future"
 category: "decision-frameworks"
+status: "verified"
+confidence: "high"
 reading_time: "22 min"
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 tags:
   - vernor-vinge
   - singularity-indicators

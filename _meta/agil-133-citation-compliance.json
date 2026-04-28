@@ -1,0 +1,484 @@
+{
+  "generated": "2026-04-28T09:42:54.406Z",
+  "methodology": "scripts/editorial/citation-compliance.cjs",
+  "rule_source": "rules/citation-compliance.md",
+  "results": [
+    {
+      "file": "chapter-0-pilot.md",
+      "quotations_total": 17,
+      "blockquotes": 2,
+      "inline_quotations": 15,
+      "inline_without_footnote_ref": 5,
+      "inline_without_footnote_examples": [
+        {
+          "line": 16,
+          "words": 5,
+          "preview": "Я составлю детальный план маршрута"
+        },
+        {
+          "line": 16,
+          "words": 10,
+          "preview": "Мне нужна экспертная комиссия, консультанты по логистике и полгода подготовки"
+        },
+        {
+          "line": 150,
+          "words": 5,
+          "preview": "обогнуть земной шар за 80 дней"
+        }
+      ],
+      "footnotes_total": 17,
+      "footnotes_without_translator_attr": 14,
+      "detected_authors": [
+        "Verne",
+        "Shelley",
+        "Doyle"
+      ],
+      "pd_authors": [
+        "Verne",
+        "Shelley",
+        "Doyle"
+      ],
+      "copyrighted_mentions": []
+    },
+    {
+      "file": "chapter-1-jules-verne.md",
+      "quotations_total": 12,
+      "blockquotes": 1,
+      "inline_quotations": 11,
+      "inline_without_footnote_ref": 10,
+      "inline_without_footnote_examples": [
+        {
+          "line": 8,
+          "words": 5,
+          "preview": "Двадцать тысяч лье под водой"
+        },
+        {
+          "line": 18,
+          "words": 5,
+          "preview": "Работающий продукт важнее исчерпывающей документации"
+        },
+        {
+          "line": 36,
+          "words": 6,
+          "preview": "Реагирование на изменения важнее следования плану"
+        }
+      ],
+      "footnotes_total": 6,
+      "footnotes_without_translator_attr": 6,
+      "detected_authors": [
+        "Verne",
+        "Shelley"
+      ],
+      "pd_authors": [
+        "Verne",
+        "Shelley"
+      ],
+      "copyrighted_mentions": []
+    },
+    {
+      "file": "chapter-10-choice-engine.md",
+      "quotations_total": 6,
+      "blockquotes": 2,
+      "inline_quotations": 4,
+      "inline_without_footnote_ref": 2,
+      "inline_without_footnote_examples": [
+        {
+          "line": 2,
+          "words": 15,
+          "preview": "The sky above the port was the color of television, tuned to a dead channel."
+        },
+        {
+          "line": 104,
+          "words": 8,
+          "preview": "Мой промптинг улучшил ROI на 12% через оптимизацию гиперпараметров"
+        }
+      ],
+      "footnotes_total": 4,
+      "footnotes_without_translator_attr": 2,
+      "detected_authors": [
+        "Wells",
+        "Gibson"
+      ],
+      "pd_authors": [
+        "Wells"
+      ],
+      "copyrighted_mentions": [
+        "Gibson"
+      ]
+    },
+    {
+      "file": "chapter-2-frankenstein.md",
+      "quotations_total": 21,
+      "blockquotes": 2,
+      "inline_quotations": 19,
+      "inline_without_footnote_ref": 14,
+      "inline_without_footnote_examples": [
+        {
+          "line": 2,
+          "words": 5,
+          "preview": "блестящий замысел → бегство от последствий"
+        },
+        {
+          "line": 133,
+          "words": 6,
+          "preview": "Мы дали вам жизнь, дальше — сами"
+        },
+        {
+          "line": 137,
+          "words": 6,
+          "preview": "журнал задач (backlog — приоритизированный список работ)"
+        }
+      ],
+      "footnotes_total": 13,
+      "footnotes_without_translator_attr": 13,
+      "detected_authors": [
+        "Verne",
+        "Shelley",
+        "Brooks"
+      ],
+      "pd_authors": [
+        "Verne",
+        "Shelley"
+      ],
+      "copyrighted_mentions": [
+        "Brooks"
+      ]
+    },
+    {
+      "file": "chapter-3-holmes.md",
+      "quotations_total": 18,
+      "blockquotes": 2,
+      "inline_quotations": 16,
+      "inline_without_footnote_ref": 5,
+      "inline_without_footnote_examples": [
+        {
+          "line": 8,
+          "words": 5,
+          "preview": "Вы смотрите, но не наблюдаете"
+        },
+        {
+          "line": 8,
+          "words": 13,
+          "preview": "Различие очевидно. Например, вы часто видели ступеньки, ведущие из прихожей в эт"
+        },
+        {
+          "line": 54,
+          "words": 6,
+          "preview": "я дЕлаю рэп, как запрещЁнная оргАнизАция"
+        }
+      ],
+      "footnotes_total": 15,
+      "footnotes_without_translator_attr": 10,
+      "detected_authors": [
+        "Doyle",
+        "Brooks",
+        "Conway"
+      ],
+      "pd_authors": [
+        "Doyle"
+      ],
+      "copyrighted_mentions": [
+        "Brooks",
+        "Conway"
+      ]
+    },
+    {
+      "file": "chapter-4-borges.md",
+      "quotations_total": 25,
+      "blockquotes": 2,
+      "inline_quotations": 23,
+      "inline_without_footnote_ref": 12,
+      "inline_without_footnote_examples": [
+        {
+          "line": 50,
+          "words": 12,
+          "preview": "это сложнее, чем 3, но проще, чем 8, а мы не помним, что было 8"
+        },
+        {
+          "line": 66,
+          "words": 11,
+          "preview": "Spotify doesn't use 'the Spotify model' and neither should you"
+        },
+        {
+          "line": 86,
+          "words": 5,
+          "preview": "Agile at scale спасает компании"
+        }
+      ],
+      "footnotes_total": 16,
+      "footnotes_without_translator_attr": 14,
+      "detected_authors": [
+        "Borges"
+      ],
+      "pd_authors": [],
+      "copyrighted_mentions": [
+        "Borges"
+      ]
+    },
+    {
+      "file": "chapter-5-nemo.md",
+      "quotations_total": 9,
+      "blockquotes": 2,
+      "inline_quotations": 7,
+      "inline_without_footnote_ref": 4,
+      "inline_without_footnote_examples": [
+        {
+          "line": 70,
+          "words": 14,
+          "preview": "Менеджер Skunk Works должен получить практически полный контроль над своей прогр"
+        },
+        {
+          "line": 94,
+          "words": 8,
+          "preview": "а что если нагреть на двадцать градусов выше?"
+        },
+        {
+          "line": 210,
+          "words": 6,
+          "preview": "Один за всех, все за одного"
+        }
+      ],
+      "footnotes_total": 20,
+      "footnotes_without_translator_attr": 19,
+      "detected_authors": [
+        "Verne",
+        "Stevenson",
+        "Brooks",
+        "Conway"
+      ],
+      "pd_authors": [
+        "Verne",
+        "Stevenson"
+      ],
+      "copyrighted_mentions": [
+        "Brooks",
+        "Conway"
+      ]
+    },
+    {
+      "file": "chapter-6-jekyll-hyde.md",
+      "quotations_total": 19,
+      "blockquotes": 3,
+      "inline_quotations": 16,
+      "inline_without_footnote_ref": 13,
+      "inline_without_footnote_examples": [
+        {
+          "line": 16,
+          "words": 8,
+          "preview": "Henry Jekyll's Full Statement of the Case"
+        },
+        {
+          "line": 18,
+          "words": 10,
+          "preview": "Как я увеличил производительность на 200% с помощью одного weird trick"
+        },
+        {
+          "line": 22,
+          "words": 8,
+          "preview": "а как мы теперь без этого будем работать?"
+        }
+      ],
+      "footnotes_total": 1,
+      "footnotes_without_translator_attr": 1,
+      "detected_authors": [
+        "Stevenson"
+      ],
+      "pd_authors": [
+        "Stevenson"
+      ],
+      "copyrighted_mentions": []
+    },
+    {
+      "file": "chapter-7-don-quixote.md",
+      "quotations_total": 11,
+      "blockquotes": 2,
+      "inline_quotations": 9,
+      "inline_without_footnote_ref": 7,
+      "inline_without_footnote_examples": [
+        {
+          "line": 62,
+          "words": 9,
+          "preview": "Generative AI and the future of work in America"
+        },
+        {
+          "line": 64,
+          "words": 9,
+          "preview": "Generative AI and the future of work in America"
+        },
+        {
+          "line": 78,
+          "words": 11,
+          "preview": "Судьба руководит нами как нельзя лучше... перебить их всех до единого"
+        }
+      ],
+      "footnotes_total": 0,
+      "footnotes_without_translator_attr": 0,
+      "detected_authors": [
+        "Shelley",
+        "Cervantes"
+      ],
+      "pd_authors": [
+        "Shelley",
+        "Cervantes"
+      ],
+      "copyrighted_mentions": []
+    },
+    {
+      "file": "chapter-8-time-machine.md",
+      "quotations_total": 8,
+      "blockquotes": 2,
+      "inline_quotations": 6,
+      "inline_without_footnote_ref": 6,
+      "inline_without_footnote_examples": [
+        {
+          "line": 4,
+          "words": 21,
+          "preview": "Путешественник во времени... излагал нам сложную материю. Его серые глаза сияли "
+        },
+        {
+          "line": 25,
+          "words": 7,
+          "preview": "Электронная почта будет дополнять письма и факсы"
+        },
+        {
+          "line": 26,
+          "words": 5,
+          "preview": "Цифровые карты дополнят бумажные карты"
+        }
+      ],
+      "footnotes_total": 4,
+      "footnotes_without_translator_attr": 4,
+      "detected_authors": [
+        "Wells",
+        "Gibson"
+      ],
+      "pd_authors": [
+        "Wells"
+      ],
+      "copyrighted_mentions": [
+        "Gibson"
+      ]
+    },
+    {
+      "file": "chapter-9-three-scenarios.md",
+      "quotations_total": 6,
+      "blockquotes": 2,
+      "inline_quotations": 4,
+      "inline_without_footnote_ref": 4,
+      "inline_without_footnote_examples": [
+        {
+          "line": 4,
+          "words": 27,
+          "preview": "Проблема не в том, что Сингулярность означает просто уход человечества с централ"
+        },
+        {
+          "line": 33,
+          "words": 13,
+          "preview": "Система сэкономила нам $2M в этом квартале. IT-директор не знает, как именно"
+        },
+        {
+          "line": 47,
+          "words": 9,
+          "preview": "Мы сэкономили 12%, но я не смогу объяснить вам, как"
+        }
+      ],
+      "footnotes_total": 6,
+      "footnotes_without_translator_attr": 6,
+      "detected_authors": [
+        "Wells",
+        "Gibson",
+        "Vinge"
+      ],
+      "pd_authors": [
+        "Wells"
+      ],
+      "copyrighted_mentions": [
+        "Gibson",
+        "Vinge"
+      ]
+    },
+    {
+      "file": "intermezzo-1.md",
+      "quotations_total": 34,
+      "blockquotes": 1,
+      "inline_quotations": 33,
+      "inline_without_footnote_ref": 33,
+      "inline_without_footnote_examples": [
+        {
+          "line": 3,
+          "words": 9,
+          "preview": "Семеро ролей координируют работу одного человека с самим собой"
+        },
+        {
+          "line": 7,
+          "words": 7,
+          "preview": "Проходите. Мы как раз обсуждаем оптимизацию методологии"
+        },
+        {
+          "line": 11,
+          "words": 13,
+          "preview": "Бегемот наш Chief Technology Officer. Коржиков, Senior Scrum Master. А вас как з"
+        }
+      ],
+      "footnotes_total": 0,
+      "footnotes_without_translator_attr": 0,
+      "detected_authors": [],
+      "pd_authors": [],
+      "copyrighted_mentions": []
+    },
+    {
+      "file": "intermezzo-2.md",
+      "quotations_total": 9,
+      "blockquotes": 1,
+      "inline_quotations": 8,
+      "inline_without_footnote_ref": 8,
+      "inline_without_footnote_examples": [
+        {
+          "line": 23,
+          "words": 6,
+          "preview": "Мессир, девочка опять неправильные вопросы задаёт"
+        },
+        {
+          "line": 29,
+          "words": 6,
+          "preview": "Критический баг, который нужно исправить немедленно"
+        },
+        {
+          "line": 63,
+          "words": 8,
+          "preview": "Мессир, а не показать ли девочке нашу скорость?"
+        }
+      ],
+      "footnotes_total": 0,
+      "footnotes_without_translator_attr": 0,
+      "detected_authors": [],
+      "pd_authors": [],
+      "copyrighted_mentions": []
+    },
+    {
+      "file": "intermezzo-3.md",
+      "quotations_total": 2,
+      "blockquotes": 1,
+      "inline_quotations": 1,
+      "inline_without_footnote_ref": 1,
+      "inline_without_footnote_examples": [
+        {
+          "line": 171,
+          "words": 11,
+          "preview": "Любопытно, — подумала Алиса. — Интересно, они знают про скорострель и диаграммы "
+        }
+      ],
+      "footnotes_total": 0,
+      "footnotes_without_translator_attr": 0,
+      "detected_authors": [],
+      "pd_authors": [],
+      "copyrighted_mentions": []
+    }
+  ],
+  "totals": {
+    "chapters_analysed": 14,
+    "quotations_total": 197,
+    "inline_without_footnote_ref_total": 124,
+    "footnotes_total": 102
+  }
+}

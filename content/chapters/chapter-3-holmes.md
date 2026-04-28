@@ -29,6 +29,10 @@ related:
 sensitive: false
 toc: true
 draft: false
+status: verified
+confidence: high
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 ---
 > **Chapter Summary:** Дедуктивный метод в управлении проектами. Как научиться видеть невидимое: семь диагностических признаков умирающего проекта, каждый проверенный на реальных катастрофах, которые можно было предотвратить.
 

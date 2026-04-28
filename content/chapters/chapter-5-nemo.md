@@ -13,8 +13,10 @@ act_accent: "amber"
 act_plate: "agil-act-opener-II.webp"
 act_title: "Трансформация"
 category: analysis
-status: partially_verified
-confidence: medium
+status: verified
+confidence: high
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 tags:
   - cyrus-smith
   - bootstrap-leadership

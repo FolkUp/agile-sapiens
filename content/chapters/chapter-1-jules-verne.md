@@ -24,6 +24,10 @@ related:
 sensitive: false
 toc: true
 draft: false
+status: verified
+confidence: high
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 ---
 > **Chapter Summary:** Литературная ДНК современных методологий управления проектами. Как сериализация XIX века создала паттерн итеративной доставки, а приключенческий роман стал прототипом спринтового цикла.
 

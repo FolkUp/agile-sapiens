@@ -8,7 +8,11 @@ weight: 55
 chapter: "intermezzo-1"
 act: "Intermezzi"
 category: satire
+status: "verified"
+confidence: "high"
 reading_time: "4 min"
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 related:
   - "chapter-2-mary-shelley"
   - "intermezzo-2"

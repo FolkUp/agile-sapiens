@@ -2,6 +2,10 @@
 title: "ИНТЕРМЕДИЯ III — Трансформационный лифт"
 weight: 120
 category: intermezzo
+status: "verified"
+confidence: "high"
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 tags: ["intermezzo", "stylistic"]
 related: []
 date: "2026-04-17"

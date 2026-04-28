@@ -2,6 +2,10 @@
 title: "ИНТЕРМЕДИЯ II: Продакшенское подземелье"
 weight: 85
 category: intermezzo
+status: "verified"
+confidence: "high"
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 tags: ["intermezzo", "stylistic"]
 related: []
 date: "2026-04-17"

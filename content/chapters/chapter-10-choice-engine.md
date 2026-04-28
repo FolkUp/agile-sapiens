@@ -8,7 +8,11 @@ weight: 110
 chapter: 10
 act: "III: Future"
 category: "экспериентный-синтез (experiential-synthesis)"
+status: "verified"
+confidence: "high"
 reading_time: "18 min"
+reviewed_by: "Editorial Team"
+review_date: "2026-04-21"
 tags:
   - william-gibson
   - neuromancer

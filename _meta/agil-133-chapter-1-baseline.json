@@ -1,0 +1,30 @@
+{
+  "chapter": "chapter-1-jules-verne",
+  "baseline_date": "2026-04-28T13:59:46.304Z",
+  "sentences_total": 244,
+  "words_total": 3065,
+  "avg_sentence_words": 12.56,
+  "monotone_pct": 27.5,
+  "monotone_target": "20-25%",
+  "improvement_required": "2.5-7.5pp reduction",
+  "flow_disruptions": 33,
+  "distribution_pct": {
+    "short": 52.5,
+    "medium": 24.6,
+    "long": 7.8,
+    "extra": 2.9
+  },
+  "status": "completed",
+  "polish_date": "2026-04-28T14:04:59.049Z",
+  "after_polish": {
+    "sentences_total": 207,
+    "words_total": 3089,
+    "avg_sentence_words": 14.92,
+    "monotone_pct": 22.7,
+    "flow_disruptions": 38,
+    "improvement_achieved": "4.8pp reduction (27.5% → 22.7%)"
+  },
+  "techniques_applied": "13 monotone-run sites optimized, sentence consolidation, rhythm variation via em-dash/colon/semicolon compounds",
+  "quality_preserved": "literary voice, citations, frontmatter, Hugo compatibility maintained",
+  "next_step": "commit_evidence"
+}

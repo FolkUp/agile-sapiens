@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-04-28T23:14:07.864Z",
-  "errors": 0,
+  "timestamp": "2026-04-28T23:35:40.612Z",
+  "errors": 13,
   "warnings": 0,
-  "status": "PASSED",
+  "status": "FAILED",
   "gates": {
     "level1": "completed",
     "voiceGate": "completed",

@@ -1,0 +1,43 @@
+{
+  "chapter": 2,
+  "phase": "final_polish",
+  "timestamp": "2026-04-29T11:10:45.603Z",
+  "baseline": {
+    "sentences": 280,
+    "words": 3098,
+    "avgLength": 11.06,
+    "monotone": 68.6,
+    "distribution": {
+      "veryShort": 118,
+      "short": 74,
+      "medium": 55,
+      "long": 22,
+      "veryLong": 11
+    }
+  },
+  "final": {
+    "sentences": 203,
+    "words": 4067,
+    "avgLength": 20.03,
+    "monotone": 46.3,
+    "distribution": {
+      "veryShort": 48,
+      "short": 46,
+      "medium": 35,
+      "long": 30,
+      "veryLong": 44
+    }
+  },
+  "target": {
+    "monotone": "22-23%"
+  },
+  "achievement": {
+    "targetMet": false,
+    "improvement": 22.299999999999997,
+    "qualityScore": {
+      "monotoneImprovement": 22.299999999999997,
+      "avgLengthIncrease": 8.97,
+      "wordEnrichment": 31.27824402840542
+    }
+  }
+}

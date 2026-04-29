@@ -1,0 +1,22 @@
+{
+  "chapter": 2,
+  "phase": "before_polish",
+  "timestamp": "2026-04-29T11:01:35.987Z",
+  "baseline": {
+    "sentences": 280,
+    "words": 3098,
+    "avgLength": 11.06,
+    "monotone": 68.6,
+    "distribution": {
+      "veryShort": 118,
+      "short": 74,
+      "medium": 55,
+      "long": 22,
+      "veryLong": 11
+    }
+  },
+  "target": {
+    "monotone": "22-23%",
+    "improvement": "-3.5 to -4.5pp"
+  }
+}

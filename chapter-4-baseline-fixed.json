@@ -1,0 +1,23 @@
+{
+  "chapter": "Chapter 4: Борхес считает story points",
+  "timestamp": "2026-04-29T22:24:21.720Z",
+  "metrics": {
+    "totalSentences": 0,
+    "totalWords": 0,
+    "monotoneSentences": 0,
+    "monotonePercentage": null,
+    "avgSentenceLength": null,
+    "minSentenceLength": null,
+    "maxSentenceLength": null
+  },
+  "target": {
+    "monotoneTarget": 20,
+    "targetDescription": "<20% monotone (consistent with Ch3 baseline)"
+  },
+  "segmentation": {
+    "batchSize": 0,
+    "batch1": "Sentences 1-0",
+    "batch2": "Sentences 1-0",
+    "batch3": "Sentences 1-0"
+  }
+}

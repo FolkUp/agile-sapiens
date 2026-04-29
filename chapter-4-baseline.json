@@ -1,0 +1,22 @@
+{
+  "chapter": "Chapter 4: Борхес считает story points",
+  "timestamp": "2026-04-29T22:24:42.950Z",
+  "metrics": {
+    "totalSentences": 163,
+    "totalWords": 303,
+    "monotoneSentences": 157,
+    "monotonePercentage": 96.3,
+    "avgSentenceLength": 1.5,
+    "minSentenceLength": 0,
+    "maxSentenceLength": 17
+  },
+  "target": {
+    "monotoneTarget": 20,
+    "targetDescription": "<20% monotone (consistent with Ch3 baseline)"
+  },
+  "borgesQuotes": {
+    "estimatedQuoteWords": 136,
+    "legalStatus": "COMPLIANT under 300-word limit",
+    "attribution": "авторский перевод с испанского"
+  }
+}

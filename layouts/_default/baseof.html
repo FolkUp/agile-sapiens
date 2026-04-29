@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+  {{- partial "head.html" . -}}
+  <body>
+    <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">
+      {{- (T "skipToContent") | default "Skip to content" -}}
+    </a>
+    {{- partial "banner.html" . -}}
+    <header role="banner">
+      {{- partial "navbar.html" . -}}
+    </header>
+    <div class="hx:flex hx:min-h-screen">
+      {{- if and (.Site.Params.sidebar.enable | default true) (not .Params.sidebar.disable) -}}
+        <nav role="navigation" aria-label="Site navigation">
+          {{- partial "sidebar.html" (dict "context" .) -}}
+        </nav>
+      {{- end -}}
+      <main role="main" id="content" class="hx:flex-1">
+        {{- block "main" . }}{{ end -}}
+      </main>
+    </div>
+    {{- if or (eq .Site.Params.footer.enable nil) (.Site.Params.footer.enable) }}
+      <footer role="contentinfo">
+        {{ partial "footer.html" . }}
+      </footer>
+    {{ end }}
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

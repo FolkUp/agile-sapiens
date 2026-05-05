@@ -41,9 +41,9 @@ og_title: "Chapter 10: Gibson Choice Engine - Jacking Into the AI Future"
 og_description: "Final Act III chapter: Cyberpunk simulation of AI integration. How to live and work in Gibson's cyberspace made real through corporate transformation."
 twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cyberpunk DNA meets corporate reality in 2030 scenarios."
 ---
-> «The sky above the port was the color of television, tuned to a dead channel.»
+> «The future is already here — it's just not evenly distributed.»
 >
-> — William Gibson, "Neuromancer" (1984), но в 2030 мы понимаем: dead channel: это не помехи, а тишина отключённого человеческого интерфейса.
+> — William Gibson, но в 2030 мы убедились: будущее уже здесь — просто Анна получила его больше, чем Михаил.
 
 > **Chapter Summary:** Cyberpunk Simulation 2030 — три Wells-сценария через прожитый опыт интеграции ИИ в одном офисе. Анна augmented, Михаил replaced, Дмитрий — AI Tamer (профессия, которой не существовало в корпоративных штатных расписаниях ещё в 2025 году). Три человека и три параллельные реальности в одном московском офисе. HR классифицирует их как «равные карьерные возможности», но равными их делает только общий Wi-Fi. Интеграция ИИ не как технологическое событие, а как текстура повседневности — «jacking in» стало корпоративной рутиной.
 
@@ -350,9 +350,7 @@ AI-RECOMMENDATION:
 
 ## Источники и примечания
 
-¹ William Gibson. "Neuromancer" (1984). Ace Books. Chapter 1, opening line.
-
-² Там же. Chapter 1. Размышления Кейса о взаимоотношениях с киберпространством.
+² William Gibson. *Neuromancer* (1984). Ace Books. Chapter 1. Размышления Кейса о взаимоотношениях с киберпространством.
 
 ³ William Gibson. *Neuromancer* (1984). Ace Books. Chapter 3. Оригинал: «Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators…» — первое определение киберпространства в литературе (перевод автора; сокращённый вариант). Опубликованный русский перевод Немцова («Азбука») использует иную редакцию.
 

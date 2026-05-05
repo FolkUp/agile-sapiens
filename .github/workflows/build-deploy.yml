@@ -89,6 +89,25 @@ jobs:
           node scripts/validate-content.js --check=brand
           echo "✅ Brand consistency PASSED"
 
+      - name: Quality Gate 7 — Playwright E2E Tests
+        run: |
+          echo "=== QUALITY GATE 7: Playwright E2E ==="
+          npx playwright install chromium --with-deps
+          python3 -m http.server 1313 --directory ./public &
+          SERVER_PID=$!
+          for i in $(seq 1 15); do
+            curl -sf http://127.0.0.1:1313/ > /dev/null 2>&1 && break
+            sleep 1
+          done
+          PLAYWRIGHT_BASE_URL=http://127.0.0.1:1313 npx playwright test --reporter=line
+          EXIT_CODE=$?
+          kill $SERVER_PID 2>/dev/null || true
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "❌ Playwright E2E FAILED"
+            exit $EXIT_CODE
+          fi
+          echo "✅ Playwright E2E PASSED"
+
       - name: Upload Quality Gate Results
         if: always()
         uses: actions/upload-artifact@v4
@@ -97,6 +116,8 @@ jobs:
           path: |
             quality-gate-report.json
             build-log.txt
+            tests/screenshots/
+            playwright-report/
 
   # Build Job — Only after Quality Gates PASS
   build:

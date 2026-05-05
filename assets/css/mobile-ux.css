@@ -33,6 +33,40 @@
 }
 
 /* =========================================================================
+ * AGIL-122 — Chapter pagination arrow overflow (D.6)
+ * =========================================================================
+ *
+ * Root cause: Hextra's prev/next chapter nav link has hx:ltr:pl-4 (16px
+ * padding-left) + hx:max-w-[50%]. At 375px viewport the link's content area
+ * = (375px × 50%) − 16px = 171.5 − 16 = ~156px. The non-shrinking SVG icon
+ * (hx:shrink-0, 20px) + 4px gap leaves 132px for the title text. But the text
+ * is exactly 156px (Russian chapter title "Глава 6: Доктор Джекилл..."),
+ * so the SVG gets pushed 24px outside the link → body.scrollWidth = 384px.
+ *
+ * Fix: allow the chapter nav SVG icons to shrink (override hx:shrink-0) with a
+ * 16px minimum so the icon remains legible. Both prev and next link SVGs are
+ * targeted — only the one with insufficient budget will actually shrink.
+ *
+ * Specificity: id(1) + tags(5) > class(1) → wins over hx:shrink-0.
+ * Desktop: unaffected (rule scoped to ≤768px; wide viewports have ample room).
+ */
+
+@media (max-width: 768px) {
+  /* Reduce ltr:pl-4 (16px) on next-chapter link so SVG has room within viewport.
+   * 4px padding still provides visual separation from the page center. */
+  main#content > div > div > a[class*="ltr:pl"] {
+    padding-left: 4px;
+  }
+  /* Allow SVG to shrink below its default hx:shrink-0 (20px) at mobile.
+   * With text filling ~156px and padding reduced to 4px, SVG needs up to 4px
+   * shrinkage — min-width:16px keeps the chevron icon legible. */
+  main#content > div > div > a > svg {
+    flex-shrink: 1;
+    min-width: 16px;
+  }
+}
+
+/* =========================================================================
  * AGIL-123 — Mobile Touch Targets (WCAG 2.5.8 AAA + FolkUp 44×44 standard)
  * =========================================================================
  *

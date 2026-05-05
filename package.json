@@ -14,7 +14,8 @@
     "validate:brand": "node scripts/validate-content.js --check=brand",
     "deploy": "bash scripts/deploy-to-vps.sh",
     "purge-cache": "node scripts/purge-cloudflare.js",
-    "quality-gates": "npm run validate && npm run build"
+    "quality-gates": "npm run validate && npm run build",
+    "test:e2e": "playwright test"
   },
   "keywords": [
     "agile-sapiens",

@@ -35,8 +35,8 @@ AGILE SAPIENS explores how artificial intelligence is reshaping the future of wo
 ## Status
 
 ✅ **Live Production** — sapiens.folkup.life  
-✅ **v1.0.1** — AGIL-133 Phase 2 Editorial Excellence COMPLETE (2026-05-05)  
-✅ All 11 chapters Mono%≤25%, voice intact, citation compliance verified
+✅ **v1.0.0** — Development Version (2026-05-06)  
+📊 **Quality Metrics**: Chapter 4 (20.9%), Chapter 6 (22.8%*), Chapter 8 (2.9%) mono% measured (*justified by thematic duality)
 
 ---
 

@@ -16,6 +16,23 @@
  */
 
 /* =========================================================================
+ * AGIL-122 — Hextra flex layout overflow fix (D.2/D.4/D.5)
+ * =========================================================================
+ *
+ * Root cause: Hextra base layout renders .hx:flex.hx:min-h-screen > main.hx:flex-1.
+ * As a flex item, main defaults to min-width:auto, so it expands to its content's
+ * intrinsic width (547px at 320px viewport) instead of shrinking to the container.
+ * Fix: add min-width:0 so the flex item respects the viewport constraint.
+ * Scoped to ≤768px — desktop is wide enough that intrinsic sizing is harmless.
+ */
+
+@media (max-width: 768px) {
+  .hx\:min-h-screen > main {
+    min-width: 0;
+  }
+}
+
+/* =========================================================================
  * AGIL-123 — Mobile Touch Targets (WCAG 2.5.8 AAA + FolkUp 44×44 standard)
  * =========================================================================
  *
@@ -47,7 +64,7 @@
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    padding-block: 12px;
+    padding-block: var(--space-md);
     /* Preserve middle-dot separator alignment by allowing the link's
      * inline-flex box to share baseline with surrounding text. */
     vertical-align: middle;
@@ -66,13 +83,12 @@
    * `> p a` selector misses these because they're not inside paragraphs.
    * AGIL-120 Playwright E.1 still failed at 22px on `<ul><li> > a` post
    * AGIL-123 ship — list-CTA branch added here. */
-  body.home .content p a,
   main#content > .content > p a,
   main#content > .content > ul > li > a {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    padding-block: 12px;
+    padding-block: var(--space-md);
   }
 
   /* --- Heading anchor permalink (.subheading-anchor) ---
@@ -90,7 +106,10 @@
     /* Negative margin compensates added padding so the heading layout
      * does not visually shift when anchor toggles to opacity:1 on hover.
      * 44px target − ~26px native glyph width = 18px split → 9px each side.
-     * margin-inline-start: -9px keeps anchor optically aligned with heading. */
+     * margin-inline-start: -9px keeps anchor optically aligned with heading.
+     * Known: extends 44px hit zone leftward into heading text area.
+     * Acceptable — anchor is opacity:0 by default (Hextra); touch tap hits
+     * heading text, not the invisible anchor zone in practice. */
     margin-inline-start: calc(0.25rem - 9px);
   }
 }
@@ -111,11 +130,10 @@
  *    Hextra baseof.html does NOT apply body classes — bodies are bare.
  *    Instead, chapter article wraps `<main>` containing `.chapter-header`
  *    (only present in layouts/chapters/single.html). Use :has() to match
- *    that signature. Falls back to attribute-style scoping via the
- *    chapter-specific class chain `.content-enhanced.classical-typography`.
- *  - Modern :has() support: 96.7% (caniuse 2026-04). Older browsers fall
- *    back gracefully — Hextra desktop padding still applies, just no
- *    enhanced gutter; non-blocking.
+ *    that signature. No explicit fallback rule — browsers without :has()
+ *    support (Firefox <121, Safari <15.4) receive Hextra default padding,
+ *    not chapter-specific gutter. Non-blocking degradation (96.7% support).
+ *  - Modern :has() support: 96.7% (caniuse 2026-04).
  *  - Use clamp() for fluid scaling: 16px floor (320px viewport edge),
  *    24px ceiling (768px breakpoint matches Hextra default).
  *  - Applied via mobile media query only — desktop chapter-single keeps
@@ -203,7 +221,8 @@
    * Mobile override:
    *   font-size: 2.5em; left: -0.25rem; top: -0.25rem.
    * Combined with blockquote padding-left: 1.75rem above, text starts
-   * 28px from blockquote edge — clear of glyph footprint, no overlap. */
+   * 28px from blockquote edge — minimal glyph overlap (~8px residual
+   * horizontal, visually hidden by top:-0.25rem lift + opacity:0.5). */
   blockquote::before {
     font-size: 2.5em;
     left: -0.25rem;

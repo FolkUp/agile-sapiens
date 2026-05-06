@@ -93,6 +93,11 @@ jobs:
         run: |
           echo "=== QUALITY GATE 7: Playwright E2E ==="
           npx playwright install chromium --with-deps
+          # Rebuild with local baseURL so CSS/JS links resolve to local server.
+          # QG1 build uses baseURL from hugo.toml (https://sapiens.folkup.life),
+          # which makes head-end.html Permalink tags point to production — behind
+          # Basic Auth in CI → CSS fails to load → flex overflow test D.2/D.4/D.5 fail.
+          hugo --gc --minify --quiet --baseURL http://127.0.0.1:1313/
           python3 -m http.server 1313 --directory ./public &
           SERVER_PID=$!
           for i in $(seq 1 15); do

@@ -10,6 +10,11 @@
  *
  * Frontmatter is safely skipped: the first `---` at line 0 opens the block,
  * and scanning begins only after the closing `---` is found.
+ * Code fences (``` ``` ```) are tracked — `---` inside fences is not treated as HR.
+ *
+ * Usage:
+ *   node scripts/check-multi-hr.mjs [--fail-on-findings] [--help]
+ *   node scripts/check-multi-hr.mjs --fail-on-findings   # exit 1 if any findings
  */
 
 import fs from 'fs/promises';
@@ -21,30 +26,41 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
 const SHORTCODE_PATTERN = /\{\{<\s*(chapter-break|section-break)/;
-const SOURCES_HEADER_PATTERN = /^(##\s+(Sources|Источники|Примечания|Источники и примечания)|^\*\*Footnotes:\*\*)/;
+const SOURCES_HEADER_PATTERN = /^(##\s+(Sources|Bibliography|Источники|Литература|Примечания|Источники и примечания|Sources and Notes)|\*\*Footnotes:\*\*)/;
 
 async function scanFile(filePath) {
-  const text = await fs.readFile(filePath, 'utf-8');
+  let text;
+  try {
+    text = await fs.readFile(filePath, 'utf-8');
+  } catch (err) {
+    process.stderr.write(`WARN: could not read ${filePath}: ${err.message}\n`);
+    return [];
+  }
+
   const lines = text.split('\n');
   const relPath = path.relative(ROOT, filePath).replace(/\\/g, '/');
   const findings = [];
 
   // --- Frontmatter skip ---
-  // Hugo frontmatter: first line must be exactly '---', second delimiter closes it.
   let bodyStart = 0;
   if (lines[0] !== undefined && lines[0].trim() === '---') {
     for (let i = 1; i < lines.length; i++) {
       if (lines[i].trim() === '---') {
-        bodyStart = i + 1; // body starts after closing ---
+        bodyStart = i + 1;
         break;
       }
     }
   }
 
-  // Collect positions of all HR lines in body
+  // Collect positions of all HR lines in body, skipping lines inside code fences
   const hrPositions = [];
+  let inFence = false;
   for (let i = bodyStart; i < lines.length; i++) {
-    if (lines[i].trim() === '---') {
+    if (lines[i].trimStart().startsWith('```')) {
+      inFence = !inFence;
+      continue;
+    }
+    if (!inFence && lines[i].trim() === '---') {
       hrPositions.push(i);
     }
   }
@@ -54,7 +70,6 @@ async function scanFile(filePath) {
     const posA = hrPositions[k];
     const posB = hrPositions[k + 1];
 
-    // Check that all lines between posA and posB are empty
     let onlyBlanks = true;
     for (let j = posA + 1; j < posB; j++) {
       if (lines[j].trim() !== '') {
@@ -67,7 +82,7 @@ async function scanFile(filePath) {
       const context = extractContext(lines, posA, posB);
       findings.push({
         file: relPath,
-        line: posA + 1, // 1-indexed
+        line: posA + 1,
         line2: posB + 1,
         type: 'A',
         description: 'consecutive-hr (only blank lines between)',
@@ -78,7 +93,6 @@ async function scanFile(filePath) {
 
   // --- Type B: HR adjacent to chapter-break / section-break shortcode ---
   for (const hrPos of hrPositions) {
-    // Look 1-3 lines forward (skip blanks)
     let fwd = hrPos + 1;
     while (fwd < lines.length && lines[fwd].trim() === '') fwd++;
     if (fwd < lines.length && SHORTCODE_PATTERN.test(lines[fwd])) {
@@ -92,7 +106,6 @@ async function scanFile(filePath) {
       });
     }
 
-    // Look 1-3 lines backward (skip blanks)
     let bwd = hrPos - 1;
     while (bwd >= bodyStart && lines[bwd].trim() === '') bwd--;
     if (bwd >= bodyStart && SHORTCODE_PATTERN.test(lines[bwd])) {
@@ -108,18 +121,13 @@ async function scanFile(filePath) {
   }
 
   // --- Type C: HR before Sources/Footnotes AND another HR after the sources block ---
-  // Pattern: ... text ... \n---\n\n## Sources / **Footnotes:** ... footnotes ... \n---\n(EOF or next section)
   for (let k = 0; k < hrPositions.length - 1; k++) {
     const posA = hrPositions[k];
 
-    // Find first non-blank line after posA
     let nextContent = posA + 1;
     while (nextContent < lines.length && lines[nextContent].trim() === '') nextContent++;
 
     if (nextContent < lines.length && SOURCES_HEADER_PATTERN.test(lines[nextContent])) {
-      // We found an HR before a sources/footnotes block.
-      // Now find the next HR after this sources block.
-      // Look ahead through remaining hrPositions for one that comes after nextContent
       for (let m = k + 1; m < hrPositions.length; m++) {
         if (hrPositions[m] > nextContent) {
           const posB = hrPositions[m];
@@ -132,7 +140,7 @@ async function scanFile(filePath) {
             description: `hr-wrapping-sources-block (opening HR at line ${posA + 1}, closing HR at line ${posB + 1}, sources header "${lines[nextContent].trim()}" at line ${nextContent + 1})`,
             context,
           });
-          break; // only report the first closing HR per opening HR
+          break;
         }
       }
     }
@@ -151,9 +159,29 @@ function extractContext(lines, fromIdx, toIdx) {
 }
 
 async function main() {
+  const args = process.argv.slice(2);
+
+  if (args.includes('--help') || args.includes('-h')) {
+    process.stdout.write(
+      'Usage: node scripts/check-multi-hr.mjs [--fail-on-findings] [--help]\n\n' +
+      'Scans content/chapters/*.md for redundant HR patterns (Types A, B, C).\n' +
+      'Outputs JSON findings to stdout; summary to stderr.\n\n' +
+      'Options:\n' +
+      '  --fail-on-findings   Exit with code 1 if any findings are found (for CI)\n' +
+      '  --help, -h           Show this help message\n'
+    );
+    process.exit(0);
+  }
+
+  const failOnFindings = args.includes('--fail-on-findings');
+
   const pattern = path.join(ROOT, 'content/chapters/*.md').replace(/\\/g, '/');
   const files = await glob(pattern);
   files.sort();
+
+  if (files.length === 0) {
+    process.stderr.write(`WARN: no .md files found in content/chapters/ — check path: ${pattern}\n`);
+  }
 
   const allFindings = [];
 
@@ -162,10 +190,8 @@ async function main() {
     allFindings.push(...findings);
   }
 
-  // Output JSON
   process.stdout.write(JSON.stringify(allFindings, null, 2) + '\n');
 
-  // Summary to stderr so it doesn't pollute JSON stdout
   const typeA = allFindings.filter(f => f.type === 'A');
   const typeB = allFindings.filter(f => f.type === 'B');
   const typeC = allFindings.filter(f => f.type === 'C');
@@ -174,11 +200,16 @@ async function main() {
   const filesB = new Set(typeB.map(f => f.file)).size;
   const filesC = new Set(typeC.map(f => f.file)).size;
 
-  process.stderr.write(`\nSCAN COMPLETE — Total findings: ${allFindings.length}\n`);
+  process.stderr.write(`\nSCAN COMPLETE — ${files.length} file(s) scanned, ${allFindings.length} finding(s) total\n`);
   process.stderr.write(`  Type A (consecutive-hr):       ${typeA.length} instances in ${filesA} files\n`);
   process.stderr.write(`  Type B (adjacent-shortcode):   ${typeB.length} instances in ${filesB} files\n`);
   process.stderr.write(`  Type C (hr-wrapping-sources):  ${typeC.length} instances in ${filesC} files\n`);
-  process.stderr.write(`\nFrontmatter false-positives: 0 (scanner skips frontmatter block)\n`);
+  process.stderr.write(`  Frontmatter: skipped (scanner begins after closing --- of Hugo frontmatter)\n`);
+  process.stderr.write(`  Code fences: skipped (--- inside \`\`\` blocks not treated as HR)\n`);
+
+  if (failOnFindings && allFindings.length > 0) {
+    process.exit(1);
+  }
 }
 
 main().catch(err => {

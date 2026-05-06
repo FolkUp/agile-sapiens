@@ -9,6 +9,9 @@ chapter: 7
 act: "II: Archetypes"
 category: "analysis"
 status: "verified"
+sources:
+  - "Cervantes, Miguel de. *Don Quixote de La Mancha* (1605). Часть первая, глава VIII. Перевод Н. Любимова."
+  - "World Economic Forum. *The Future of Jobs Report 2023*. WEF, Geneva."
 confidence: "high"
 reading_time: "22 min"
 reviewed_by: "Editorial Team"

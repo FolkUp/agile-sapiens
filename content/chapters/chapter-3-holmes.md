@@ -30,6 +30,9 @@ sensitive: false
 toc: true
 draft: false
 status: verified
+sources:
+  - "Doyle, Arthur Conan. «A Scandal in Bohemia» (1891). *The Strand Magazine*."
+  - "Doyle, Arthur Conan. *The Sign of the Four* (1890). Spencer Blackett, London."
 confidence: high
 reviewed_by: "Editorial Team"
 review_date: "2026-04-21"

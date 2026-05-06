@@ -25,6 +25,9 @@ sensitive: false
 toc: true
 draft: false
 status: verified
+sources:
+  - "Patten, Robert L. *Charles Dickens and His Publishers* (1978). Oxford University Press."
+  - "Dickens, Charles. *The Pickwick Papers* (1836–1837). Chapman & Hall, London. Serialised publication data."
 confidence: high
 reviewed_by: "Editorial Team"
 review_date: "2026-04-21"

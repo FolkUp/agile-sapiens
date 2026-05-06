@@ -9,6 +9,9 @@ chapter: 10
 act: "III: Future"
 category: "экспериентный-синтез (experiential-synthesis)"
 status: "verified"
+sources:
+  - "Gibson, William. *Neuromancer* (1984). Ace Books. Chapter 1."
+  - "Gibson, William. *Neuromancer* (1984). Ace Books. Chapter 3. Первое определение киберпространства в литературе."
 confidence: "high"
 reading_time: "18 min"
 reviewed_by: "Editorial Team"

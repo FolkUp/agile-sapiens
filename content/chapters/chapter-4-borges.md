@@ -30,6 +30,9 @@ sensitive: false
 toc: true
 draft: false
 status: verified
+sources:
+  - "Borges, Jorge Luis. «La lotería en Babilonia» (1941). В сборнике *Ficciones* (1944). Editorial Sur, Buenos Aires."
+  - "Goodhart, Charles A.E. «Problems of Monetary Management: The U.K. Experience.» *Papers in Monetary Economics*, Reserve Bank of Australia, 1975."
 confidence: high
 reviewed_by: "Editorial Team"
 review_date: "2026-04-21"

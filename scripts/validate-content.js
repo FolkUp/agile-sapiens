@@ -171,8 +171,9 @@ function checkSourceVerification() {
     // Skip drafts and stubs
     if (['draft', 'stub'].includes(frontmatter.status)) return;
 
-    // Only chapters require sources (normalize path separators)
-    const requiresSources = file.includes('content/chapters/') || file.includes('content\\chapters\\');
+    // Only chapters require sources; intermezzos are artistic prose with no external citations
+    const requiresSources = (file.includes('content/chapters/') || file.includes('content\\chapters\\'))
+      && !basename.startsWith('intermezzo');
 
     // Check sources array (only for chapters)
     if (requiresSources && (!frontmatter.sources || !Array.isArray(frontmatter.sources))) {

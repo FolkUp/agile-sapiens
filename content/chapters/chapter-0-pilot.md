@@ -43,6 +43,9 @@ twitter_description: "Как Филеас Фогг изобрёл Agile за 129
 toc: true
 draft: false
 status: verified
+sources:
+  - "Жюль Верн. «Вокруг света за восемьдесят дней» (1872/1873). Hetzel, Париж. Public domain."
+  - "Bank of England inflation calculator / UK Inflation Calculator (officialdata.org). Данные по покупательной способности £20,000 в 1872 году."
 confidence: high
 reviewed_by: "Editorial Team"
 review_date: "2026-04-21"

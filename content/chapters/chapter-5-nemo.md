@@ -14,6 +14,9 @@ act_plate: "agil-act-opener-II.webp"
 act_title: "Трансформация"
 category: analysis
 status: verified
+sources:
+  - "Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968."
+  - "Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley."
 confidence: high
 reviewed_by: "Editorial Team"
 review_date: "2026-04-21"

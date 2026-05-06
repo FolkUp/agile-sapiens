@@ -5,7 +5,7 @@ weight: 40
 date: 2026-05-06
 date_created: 2026-05-06
 date_updated: 2026-05-06
-status: "active"
+status: "draft"
 category: "reference"
 purpose: "anglicism-cleanup"
 ---

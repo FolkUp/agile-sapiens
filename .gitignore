@@ -1,44 +1,78 @@
-# Hugo build outputs
-public/
-public-en/
-resources/
-.hugo_build.lock
+# === AGILE SAPIENS SECURITY PROTECTION ===
+# Enhanced Alice v2.0 Level 3 Constitutional Framework
+# REAL Implementation: 2026-05-06
 
-# Local development
+# === SECRETS & CREDENTIALS ===
+*.env
+*.secret
+*.key
+*.pem
+*.p12
+*.jks
+.aws/
+.cloudflare/
+.docker/credentials
+.sops.yaml
+
+# === SYSTEM & CACHE ===
+.bash_history
+.bashrc
+.bash_profile
+.zsh_history
+.cache/
+.local/
+.config/
+.dbus-keyrings/
+.gnupg/
+.ssh/
+**/node_modules/
+.npm/
+.yarn/
+
+# === CLAUDE & AI TOOLS ===
+.claude.json
+.claude.json.backup*
+.cagent/
+
+# === DEVELOPMENT ARTIFACTS ===
+*.log
+*.tmp
 .DS_Store
 Thumbs.db
-
-# Editor files
-.vscode/
+*.swp
+*.swo
+*~
+.vscode/settings.json
 .idea/
 
-# Temporary files
-*.tmp
-*.temp
-*.backup
+# === BUILD & DEPLOY ===
+dist/
+build/
+public/
+.hugo_build.lock
+resources/_gen/
+.deploy/
+*.deploy
 
-# Private session context and operational files
-.claude/
+# === BACKUP & TEMP ===
+*backup*
+*-backup-*
+*.bak
+temp/
+tmp/
+/nul
 
-# Node.js dependencies
-node_modules/
+# === PROJECT SPECIFIC ===
+# Hugo generated files
+/public/
+/resources/
+/assets/jsconfig.json
 
-# Environment variables
-.env
-.env.local
-.env.*.local
+# Editorial measurement outputs
+chapter-*-baseline*.json
+chapter-*-progress*.json
+chapter-*-final*.json
 
-# Build artifacts
-temp-build/
-temp-build-en/
-# Root level build outputs
-*.html
-!layouts/**/*.html
-
-# Scratch curl dumps from audit sessions (recreate on demand; AGIL-112)
-_meta/*.headers
-_meta/main.css
-
-# Playwright runtime artifacts (regenerated each run; baselines в tests/screenshots/ commitятся)
-test-results/
-playwright-report/
+# Scripts outputs
+measurement-*.json
+editorial-*.json

@@ -1,6 +1,6 @@
 # AGILE SAPIENS
 
-**Version:** 1.0 | **Date:** 2026-05-06 | **Enhanced Alice v2.0 Level 3**  
+**Version:** 1.0.4 | **Date:** 2026-05-06 | **Enhanced Alice v2.0 Level 3**  
 **The Future of Work in the Age of Artificial Intelligence**
 
 > **Status:** Scientific Popular Monograph — Editorial Excellence Phase Complete
@@ -36,6 +36,7 @@ AGILE SAPIENS explores how artificial intelligence is reshaping the future of wo
 ## Status
 
 ✅ **Live Production** — sapiens.folkup.life  
+✅ **v1.0.4** — Umami analytics live + CI/CD fully green + VPS ecosystem recovered (2026-05-06)  
 ✅ **v1.0.1** — AGIL-133 Phase 2 Editorial Excellence + AGIL-122 Playwright QA (2026-05-06)  
 📊 **All 11 chapters Mono%≤25%** (range: 13.9%–24.4%) — Banking-level verification | 69/69 Playwright tests pass
 

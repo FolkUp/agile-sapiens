@@ -1,18 +1,18 @@
 {
   "chapter": 2,
   "phase": "before_polish",
-  "timestamp": "2026-04-29T11:01:35.987Z",
+  "timestamp": "2026-05-06T09:34:22.649Z",
   "baseline": {
-    "sentences": 280,
-    "words": 3098,
-    "avgLength": 11.06,
-    "monotone": 68.6,
+    "sentences": 207,
+    "words": 4103,
+    "avgLength": 19.82,
+    "monotone": 46.9,
     "distribution": {
-      "veryShort": 118,
-      "short": 74,
-      "medium": 55,
-      "long": 22,
-      "veryLong": 11
+      "veryShort": 50,
+      "short": 47,
+      "medium": 35,
+      "long": 31,
+      "veryLong": 44
     }
   },
   "target": {

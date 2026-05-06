@@ -94,6 +94,11 @@ privacy_policy = "/legal/privacy/"
 cookie_policy = "/legal/cookies/"
 terms_url = "/legal/terms/"
 
+# Umami analytics (self-hosted, cookieless, GDPR-safe — no consent gate needed)
+[params.analytics.umami]
+serverURL = "https://analytics.folkup.app"
+websiteID = "3e9a50df-885e-4d33-90c3-e54a61a46572"
+
 [params.footer]
 copyright = "© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0."
 

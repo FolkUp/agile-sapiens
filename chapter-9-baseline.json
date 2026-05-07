@@ -1,13 +1,13 @@
 {
   "chapter": 9,
   "title": "Three Scenarios",
-  "date": "2026-05-03",
-  "monotone_percentage": 8.9,
-  "total_sentences": 135,
-  "word_count": 3560,
-  "bilingual_parentheticals": 31,
+  "date": "2026-05-07",
+  "monotone_percentage": 11.9,
+  "total_sentences": 176,
+  "word_count": 4375,
+  "bilingual_parentheticals": 68,
   "duplicate_patterns": 0,
-  "citation_markers": 13,
+  "citation_markers": 113,
   "measurement_type": "baseline",
   "notes": "Vinge scenario framework baseline - strategic content with bilingual parenthetical pollution identified"
 }

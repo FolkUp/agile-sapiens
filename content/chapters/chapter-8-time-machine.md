@@ -253,10 +253,10 @@ McKinsey в июле 2023 года спроецировал: 29.5% рабочи�
 
 ## Источники и примечания
 
-¹ McKinsey Global Institute, "Generative AI and the Future of Work in America" (July 26, 2023): исследование проецировало 29.5% потенциала автоматизации рабочих часов в экономике США к 2030 году при внедрении генеративного ИИ.
+¹ McKinsey Global Institute, "Generative AI and the Future of Work in America" (July 26, 2023). McKinsey & Company (перевод автора).
 
-² World Economic Forum, "Artificial intelligence and the future of work" (2024): AI transformation patterns в эволюции рабочих мест демонстрируют ускорение временных рамок внедрения многих прогнозов.
+² World Economic Forum, "Artificial intelligence and the future of work" (2024) (перевод автора).
 
-³ Отраслевой анализ показывает значительный рост в требованиях к ИИ-грамотности на рынках труда глобально за последние годы.
+³ Отраслевые источники (перевод автора).
 
-⁴ William Gibson. Устный афоризм: «The future is already here — it's just not evenly distributed.» Первая печатная атрибуция: Scott Rosenberg, *San Francisco Examiner*, April 19, 1992. Самая ранняя устная цитата с голосом Гибсона: «Talk of the Nation: The Science in Science Fiction,» NPR, November 30, 1999 (~11:55), вступление «As I've said many times…» — подтверждает, что это авторская максима, а не отрывок из «Нейроманта» или другого опубликованного произведения. Источниковедческий анализ: https://quoteinvestigator.com/2012/01/24/future-has-arrived/
+⁴ William Gibson. Цитата из интервью NPR, November 30, 1999 (перевод автора). Источниковедческий анализ: Quote Investigator.

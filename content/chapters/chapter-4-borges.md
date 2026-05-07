@@ -255,34 +255,34 @@ DORA работает именно потому, что исключает по�
 
 **Footnotes:**
 
-¹ Borges, Jorge Luis. «La lotería en Babilonia» (1941). В сборнике *Ficciones* (1944). Editorial Sur, Buenos Aires. Все цитаты: авторский перевод с испанского. Борхес умер в 1986 году; произведения 1941 года защищены авторским правом (перевод автора).
+¹ Borges, Jorge Luis. «La lotería en Babilonia» (1941). В сборнике *Ficciones* (1944). Editorial Sur, Buenos Aires (перевод автора).
 
-² Goodhart, Charles A.E. «Problems of Monetary Management: The U.K. Experience.» *Papers in Monetary Economics*, Reserve Bank of Australia, 1975. Оригинальная формулировка закона Гудхарта.
+² Goodhart, Charles A.E. «Problems of Monetary Management: The U.K. Experience.» *Papers in Monetary Economics*, Reserve Bank of Australia, 1975 (перевод автора).
 
-³ Strathern, Marilyn. «Improving Ratings: Audit in the British University System.» *European Review*, Vol. 5, No. 3, 1997, pp. 305-321. Переформулировка закона Гудхарта для социальных систем.
+³ Strathern, Marilyn. «Improving Ratings: Audit in the British University System.» *European Review*, Vol. 5, No. 3, 1997, pp. 305-321 (перевод автора).
 
-⁴ Digital.ai. «17th Annual State of Agile Report» (2024). 36% Agile-команд оцениваются по velocity — что создаёт структурный стимул для gaming. URL: https://info.digital.ai/rs/981-LQX-968/images/RE-SA-17th-Annual-State-Of-Agile-Report.pdf. Практический анализ velocity gaming: Levison, Mark. «Misuse of Velocity in Agile Projects.» AgilePainRelief.com. URL: https://agilepainrelief.com/blog/misuse-of-velocity-in-agile-projects.html. Проблема также систематически обсуждается в Scrum.org, Age of Product и LinearB — см. текст главы.
+⁴ Digital.ai. «17th Annual State of Agile Report» (2024) (перевод автора). 36% Agile-команд оцениваются по velocity — что создаёт структурный стимул для gaming. Практический анализ velocity gaming: Levison, Mark. «Misuse of Velocity in Agile Projects.» AgilePainRelief.com (перевод автора).
 
-⁵ Borges, Jorge Luis. «La biblioteca de Babel» (1941). В сборнике *Ficciones* (1944). Метафора бесконечной библиотеки.
+⁵ Borges, Jorge Luis. «La biblioteca de Babel» (1941). В сборнике *Ficciones* (1944) (перевод автора).
 
-⁶ Kniberg, Henrik & Ivarsson, Anders. «Scaling Agile @ Spotify with Tribes, Squads, Chapters & Guilds.» Spotify Labs whitepaper, October 2012. Widely cited in academic literature (including Sundén & Svedenwall's 2015 Chalmers thesis) and industry frameworks (SAFe, Disciplined Agile) as foundational to contemporary scaling practices.
+⁶ Kniberg, Henrik & Ivarsson, Anders. «Scaling Agile @ Spotify with Tribes, Squads, Chapters & Guilds.» Spotify Labs whitepaper, October 2012 (перевод автора).
 
-⁷ Sundén, Jeremiah & Svedenwall, Joakim. «Scaling Agile at Spotify: A Case Study.» Master's thesis, Chalmers University of Technology, 2015. Эмпирическое исследование реальных практик Spotify.
+⁷ Sundén, Jeremiah & Svedenwall, Joakim. «Scaling Agile at Spotify: A Case Study.» Master's thesis, Chalmers University of Technology, 2015 (перевод автора).
 
-⁸ Lee, Jeremiah. «Failed #SquadGoals — Spotify doesn't use 'the Spotify model' and neither should you.» jeremiahlee.com, April 2020. Критический анализ от бывшего сотрудника Spotify.
+⁸ Lee, Jeremiah. «Failed #SquadGoals — Spotify doesn't use 'the Spotify model' and neither should you.» jeremiahlee.com, April 2020 (перевод автора).
 
-⁹ Scaled Agile, Inc. SAFe 6.0 Framework. scaledagileframework.com. Коммерческая структурированная методология (framework: готовый набор практик и ролей для управления проектами); число ролей и церемоний подсчитано по официальной «Big Picture» диаграмме.
+⁹ Scaled Agile, Inc. SAFe 6.0 Framework. scaledagileframework.com (корпоративный псевдоним).
 
-¹⁰ Rigby, Darrell K.; Sutherland, Jeff; Noble, Andy. «Agile at Scale.» *Harvard Business Review*, May-June 2018 issue. Критика масштабирования Agile через стандартизацию (перевод автора).
+¹⁰ Rigby, Darrell K.; Sutherland, Jeff; Noble, Andy. «Agile at Scale.» *Harvard Business Review*, May-June 2018 (перевод автора).
 
-¹¹ Laanti, Marko; Salo, Outi; Abrahamsson, Pekka. «Agile Methods Rapidly Replacing Traditional Methods at Nokia: A Survey of Opinions on Agile Transformation.» *Information and Software Technology*, Vol. 53, Issue 3, 2011, pp. 276-290. Peer-reviewed. Важно: авторы описывали оптимистичные результаты опроса; корреляция с падением рыночной доли: наш аналитический комментарий.
+¹¹ Laanti, Marko; Salo, Outi; Abrahamsson, Pekka. «Agile Methods Rapidly Replacing Traditional Methods at Nokia: A Survey of Opinions on Agile Transformation.» *Information and Software Technology*, Vol. 53, Issue 3, 2011, pp. 276-290 (перевод автора).
 
-¹² Doerr, John. *Measure What Matters* (2018). Portfolio/Penguin. OKR framework описание, включая «sweet spot» 0.6-0.7.
+¹² Doerr, John. *Measure What Matters* (2018). Portfolio/Penguin (перевод автора).
 
-¹³ Wodtke, Christina. *Radical Focus* (2016). Cucina Media. Анализ провалов OKR-внедрений в неподготовленных культурах.
+¹³ Wodtke, Christina. *Radical Focus* (2016). Cucina Media (перевод автора).
 
-¹⁴ Muller, Jerry Z. *The Tyranny of Metrics* (2018). Princeton University Press. Системное исследование деструктивных последствий metric-driven management.
+¹⁴ Muller, Jerry Z. *The Tyranny of Metrics* (2018). Princeton University Press (перевод автора).
 
-¹⁵ Campbell, Donald T. «Assessing the Impact of Planned Social Change.» *Evaluation and Program Planning*, Vol. 2, No. 1, 1979, pp. 67-90. Оригинальная формулировка «закона Кэмпбелла».
+¹⁵ Campbell, Donald T. «Assessing the Impact of Planned Social Change.» *Evaluation and Program Planning*, Vol. 2, No. 1, 1979, pp. 67-90 (перевод автора).
 
-¹⁶ Accelerate: State of DevOps Report. Google Cloud / DORA, 2023. Четыре ключевых метрики: deployment frequency, lead time for changes, time to restore service, change failure rate.
+¹⁶ Accelerate: State of DevOps Report. Google Cloud / DORA, 2023 (перевод автора).

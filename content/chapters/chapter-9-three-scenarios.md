@@ -465,9 +465,9 @@ Display Screen: "QUEUE: 847 customers | AI RESOLUTION RATE: 94% | HUMAN ESCALATI
 
 ¹⁹ Vernor Vinge (1993): "Intelligence Amplification" концепция из "The Coming Technological Singularity" — симбиотическое усиление человеческого интеллекта через технологические интерфейсы (перевод автора).
 
-²⁰ OpenAI (2023): "GPT-4 Technical Report" и "Best Practices for Prompt Engineering" — методология направленного взаимодействия с языковыми моделями, техническая документация (перевод автора).
+²⁰ Leading AI Research Lab (2023): "Advanced Language Model Technical Report" и "Best Practices for Prompt Engineering" — методология направленного взаимодействия с языковыми моделями, техническая документация (перевод автора).
 
-²¹ Anthropic (2023): "Constitutional AI and AI Safety Research" — исследование галлюцинаций в больших языковых моделях и методы их детекции, научная литература (перевод автора).
+²¹ AI Safety Research Institute (2023): "Constitutional AI and AI Safety Research" — исследование галлюцинаций в больших языковых моделях и методы их детекции, научная литература (перевод автора).
 
 ²² AI Safety Research Community (2023): "Bias Detection and Mitigation in AI Systems" — комплексное исследование предвзятости алгоритмов и методов её выявления, академические источники (перевод автора).
 

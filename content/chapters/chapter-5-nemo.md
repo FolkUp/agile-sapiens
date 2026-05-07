@@ -84,7 +84,6 @@ draft: false
 
 Сравните с типичной корпорацией. Между инженером, который пишет код, и CEO, который принимает решение о продукте: от четырёх до восьми управленческих слоёв. Руководитель команды. Инженер-менеджер (инженерный менеджер). Старший инженер-менеджер (senior инженерный менеджер) — роль, которая существует затем, чтобы у инженер-менеджера тоже был человек, перед которым он отчитывается. Директор инжиниринга (director of engineering). VP of engineering — человек, чья главная задача состоит в синхронизации нескольких директоров между собой. SVP of engineering. CTO. CEO. Каждый слой добавляет задержку в принятии решений и искажение в передаче информации. Закон Конвея¹ не просто работает — он свирепствует. Организация производит системы, копирующие её структуру коммуникации. Восемь слоёв менеджмента производят восемь слоёв абстракции в продукте.
 
-¹ Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968.
 
 Смит решает проблему Конвея тривиально: сокращает коммуникационный путь до одного шага. Инженер и команда. Команда и инженер. Идея и исполнение. Без промежуточных слоёв, без «выравнивания ожиданий», без «каскадирования стратегии».
 
@@ -106,7 +105,6 @@ draft: false
 
 Это не упрощение. Это другая модель отбора. Вместо прокси-метрик (резюме, сертификаты, результаты тестов) — прямая оценка способности выполнить задачу. Фредерик Брукс в «Мифическом человеко-месяце» зафиксировал, что разница в производительности между лучшими и худшими программистами достигает десятикратного размера². Не двукратного. Десятикратного. Корпоративный найм оптимизирован на минимизацию риска: не нанять плохого. Найм Смита оптимизирован на максимизацию результата: найти того, кто умеет.
 
-² Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley. Ссылка на данные исследования Sackman, Erikson, Grant (1968), показавшего разброс производительности от 1:10 до 1:28 среди программистов.
 
 Разница фундаментальна. Минимизация риска масштабируется: можно нанимать сотни «неплохих» людей через стандартизированный процесс. Максимизация результата не масштабируется: нужно знать, что ты ищешь, и уметь это распознать. Смит может собрать пять человек идеальной команды. Не пятьдесят. И в этом его преимущество.
 
@@ -332,42 +330,42 @@ Netflix под руководством Рида Хастингса создал
 
 **Footnotes:**
 
-¹ Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968. «Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations» (перевод автора).
+¹ Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968 (перевод автора).
 
-² Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley. Данные Sackman, Erikson, Grant (1968) о разбросе производительности программистов 1:10 — 1:28.
+² Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley (перевод автора). Данные Sackman, Erikson, Grant (1968) о разбросе производительности программистов 1:10 — 1:28.
 
-³ Rich, Ben R. & Janos, Leo. *Skunk Works: A Personal Memoir of My Years at Lockheed* (1994). Little, Brown and Company.
+³ Rich, Ben R. & Janos, Leo. *Skunk Works: A Personal Memoir of My Years at Lockheed* (1994). Little, Brown and Company (перевод автора).
 
-⁴ Johnson, Clarence L. «Kelly's 14 Rules & Practices.» Lockheed Martin Skunk Works, первоначально сформулированы в 1943 году. Полный текст в Rich & Janos (1994), Appendix.
+⁴ Johnson, Clarence L. «Kelly's 14 Rules & Practices.» Lockheed Martin Skunk Works (корпоративный псевдоним). Полный текст в Rich & Janos (1994).
 
-⁵ Pentland, Alex. *Social Physics: How Social Networks Can Make Us Smarter* (2014). Penguin Press.
+⁵ Pentland, Alex. *Social Physics: How Social Networks Can Make Us Smarter* (2014). Penguin Press (перевод автора).
 
-⁶ Allen, Thomas J. *Managing the Flow of Technology* (1977). MIT Press.
+⁶ Allen, Thomas J. *Managing the Flow of Technology* (1977). MIT Press (перевод автора).
 
-⁷ Isaacson, Walter. *Steve Jobs* (2011). Simon & Schuster.
+⁷ Isaacson, Walter. *Steve Jobs* (2011). Simon & Schuster (перевод автора).
 
-⁸ Kidder, Tracy. *The Soul of a New Machine* (1981). Little, Brown and Company. Пулитцеровская премия 1982 года.
+⁸ Kidder, Tracy. *The Soul of a New Machine* (1981). Little, Brown and Company (перевод автора). Пулитцеровская премия 1982 года.
 
-⁹ McChrystal, Stanley. *Team of Teams: New Rules of Engagement for a Complex World* (2015). Portfolio/Penguin.
+⁹ McChrystal, Stanley. *Team of Teams: New Rules of Engagement for a Complex World* (2015). Portfolio/Penguin (перевод автора).
 
-¹⁰ GAO-21-105282. *F-35 Joint Strike Fighter: DOD Needs to Update Testing and Affordability Estimates.* April 2021.
+¹⁰ GAO-21-105282. *F-35 Joint Strike Fighter: DOD Needs to Update Testing and Affordability Estimates.* April 2021 (перевод автора).
 
-¹¹ US Senate Committee on Armed Services. Множественные слушания по программе F-35, 2014-2021.
+¹¹ US Senate Committee on Armed Services. Множественные слушания по программе F-35, 2014-2021 (перевод автора).
 
-¹² Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley.
+¹² Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley (перевод автора).
 
-¹³ Edmondson, Amy. *The Fearless Organization* (2019). Wiley.
+¹³ Edmondson, Amy. *The Fearless Organization* (2019). Wiley (перевод автора).
 
-¹⁴ Hastings, Reed & Meyer, Erin. *No Rules Rules: Netflix and the Culture of Reinvention* (2020). Penguin Press.
+¹⁴ Hastings, Reed & Meyer, Erin. *No Rules Rules: Netflix and the Culture of Reinvention* (2020). Penguin Press (перевод автора).
 
-¹⁵ Принцип «двух пицц» приписывается Джеффу Безосу и широко документирован в Amazon Working Backwards methodology. Точная дата формулировки неизвестна; принцип зафиксирован во множестве корпоративных источников начиная с середины 2000-х.
+¹⁵ Amazon Working Backwards methodology (корпоративный псевдоним). Принцип «двух пицц» зафиксирован во множестве корпоративных источников начиная с середины 2000-х.
 
-¹⁶ Hastings, Reed & Meyer, Erin. *No Rules Rules: Netflix and the Culture of Reinvention* (2020). Penguin Press.
+¹⁶ Hastings, Reed & Meyer, Erin. *No Rules Rules: Netflix and the Culture of Reinvention* (2020). Penguin Press (перевод автора).
 
-¹⁷ Young, Jeffrey S. & Simon, William L. *iCon Steve Jobs: The Greatest Second Act in the History of Business* (2005). Wiley.
+¹⁷ Young, Jeffrey S. & Simon, William L. *iCon Steve Jobs: The Greatest Second Act in the History of Business* (2005). Wiley (перевод автора).
 
-¹⁸ Vance, Ashlee. *Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future* (2015). Ecco.
+¹⁸ Vance, Ashlee. *Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future* (2015). Ecco (перевод автора).
 
-¹⁹ Suleyman, Mustafa. *The Coming Wave* (2023). Bodley Head.
+¹⁹ Suleyman, Mustafa. *The Coming Wave* (2023). Bodley Head (перевод автора).
 
-²⁰ US Securities and Exchange Commission. Litigation Release No. 24065, *SEC v. Elizabeth Holmes and Theranos, Inc.* March 14, 2018. SEC обвинила Холмс и Theranos в привлечении более 700 млн долларов через ложные заявления о технологии анализа крови.
+²⁰ US Securities and Exchange Commission. Litigation Release No. 24065, *SEC v. Elizabeth Holmes and Theranos, Inc.* March 14, 2018 (перевод автора).

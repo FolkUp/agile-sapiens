@@ -261,32 +261,32 @@ Nokia пала именно так. Vuori и Huy назвали это «рас�
 
 **Footnotes:**
 
-¹ Arthur Conan Doyle. «A Scandal in Bohemia» (1891). *The Strand Magazine*. Оригинал: "You see, but you do not observe" dialogue (перевод автора). Диалог о ступеньках — один из хрестоматийных примеров метода Холмса.
+¹ Arthur Conan Doyle. «A Scandal in Bohemia» (1891). *The Strand Magazine* (перевод автора). Диалог о ступеньках — один из хрестоматийных примеров метода Холмса.
 
-² Doyle, Arthur Conan. *The Sign of the Four* (1890). Оригинал: "I never guess. It is a shocking habit — destructive to the logical faculty" (перевод автора).
+² Doyle, Arthur Conan. *The Sign of the Four* (1890) (перевод автора).
 
-³ Doyle, Arthur Conan. «Silver Blaze» (1892). *The Strand Magazine*. Оригинал: "The curious incident of the dog in the night-time" (перевод автора).
+³ Doyle, Arthur Conan. «Silver Blaze» (1892). *The Strand Magazine* (перевод автора).
 
-⁴ SEC Administrative Proceeding File No. 3-15570, October 16, 2013. «In the Matter of Knight Capital Americas LLC.» Штраф $12 млн. Детали инцидента с Power Peg и отсутствие процедур контроля развёртывания задокументированы в enforcement action. (перевод автора)
+⁴ SEC Administrative Proceeding File No. 3-15570, October 16, 2013. «In the Matter of Knight Capital Americas LLC» (перевод автора). Штраф $12 млн. Детали инцидента с Power Peg и отсутствие процедур контроля развёртывания задокументированы в enforcement action.
 
-⁵ Doyle, Arthur Conan. *A Study in Scarlet* (1887). Оригинал: "It is a capital mistake to theorize before you have all the evidence" (перевод автора).
+⁵ Doyle, Arthur Conan. *A Study in Scarlet* (1887) (перевод автора).
 
-⁶ Target Corporation Annual Report 2014 и официальные пресс-релизы. The Globe and Mail, January 15, 2015. Общий объём инвестиций в канадское подразделение составил более $7 млрд USD; списание убытков (pretax losses) достигло $5.4 млрд. Вариативность в подсчётах отражает различия между общими инвестициями, операционными убытками и списаниями стоимости. (перевод автора)
+⁶ Target Corporation Annual Report 2014 и The Globe and Mail, January 15, 2015 (перевод автора). Общий объём инвестиций в канадское подразделение составил более $7 млрд USD; списание убытков (pretax losses) достигло $5.4 млрд.
 
-⁷ Canadian Press, January 15, 2015. «Target Canada closing: A timeline of the U.S. retailer's disastrous Canadian venture.» 17,600 сотрудников — данные из официального заявления Target Corporation. (перевод автора)
+⁷ Canadian Press, January 15, 2015. «Target Canada closing: A timeline of the U.S. retailer's disastrous Canadian venture» (перевод автора). 17,600 сотрудников — данные из официального заявления Target Corporation.
 
-⁸ Castaldo, Joe. «The Last Days of Target Canada.» *Canadian Business*, January 2016. Детальное расследование проблем с данными SAP-системы. (перевод автора)
+⁸ Castaldo, Joe. «The Last Days of Target Canada.» *Canadian Business*, January 2016 (перевод автора). Детальное расследование проблем с данными SAP-системы.
 
-⁹ Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968. Оригинальная формулировка закона Конвея. (перевод автора)
+⁹ Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968 (перевод автора). Оригинальная формулировка закона Конвея.
 
-¹⁰ Weinberg, Gerald. *The Psychology of Computer Programming* (1971). Van Nostrand Reinhold. Наблюдения о взаимосвязи между разработчиками и пользователями. (перевод автора)
+¹⁰ Weinberg, Gerald. *The Psychology of Computer Programming* (1971). Van Nostrand Reinhold (перевод автора). Наблюдения о взаимосвязи между разработчиками и пользователями.
 
-¹¹ Bort, Julie. «How a $1.1 billion SAP project failure made Lidl rethink its technology strategy.» *Business Insider*, July 2018. Дополнительные источники: Computer Weekly, 2018. «Lidl dumps €500m SAP project»; Handelsblatt, 2018. «Wie SAP und Lidl Hunderte Millionen Euro versenkt haben.» Сумма €500M подтверждена несколькими независимыми источниками T2. (перевод автора)
+¹¹ Bort, Julie. «How a $1.1 billion SAP project failure made Lidl rethink its technology strategy.» *Business Insider*, July 2018 (перевод автора). Дополнительные источники: Computer Weekly, 2018; Handelsblatt, 2018. Сумма €500M подтверждена несколькими независимыми источниками T2.
 
-¹² Accelerate: State of DevOps Report. Google Cloud / DORA, 2023. Классификация команд по четырём уровням: Elite, High, Medium, Low. (перевод автора)
+¹² Accelerate: State of DevOps Report. Google Cloud / DORA, 2023 (перевод автора). Классификация команд по четырём уровням: Elite, High, Medium, Low.
 
-¹³ Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley. Закон Брукса и формула каналов коммуникации n(n-1)/2. (перевод автора)
+¹³ Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley (перевод автора). Закон Брукса и формула каналов коммуникации n(n-1)/2.
 
-¹⁴ Vuori, Timo O. и Quy Nguyen Huy. «Distributed Attention and Shared Emotions in the Innovation Process.» *Administrative Science Quarterly*, Vol. 61, No. 1 (2016), pp. 9-51. Оригинал: "distributed attention" (перевод автора). Исследование распада Nokia и механизмов организационного внимания.
+¹⁴ Vuori, Timo O. и Quy Nguyen Huy. «Distributed Attention and Shared Emotions in the Innovation Process.» *Administrative Science Quarterly*, Vol. 61, No. 1 (2016), pp. 9-51 (перевод автора). Исследование распада Nokia и механизмов организационного внимания.
 
-¹⁵ Блок, Александр. «Двенадцать» (1918). Ритмический анализ дольника в поэме. Сравнение с современной рэп-поэтикой основан на просодических исследованиях М. Л. Гаспарова «Русский стих начала XX века в комментариях» (1993) и работах О. Федотова «Основы русского стихосложения» (2002). Трёхиктный дольник с переменной анакрузой — характерная черта революционной поэзии 1910-х годов.
+¹⁵ Блок, Александр. «Двенадцать» (1918) (перевод автора). Ритмический анализ дольника в поэме. Сравнение с современной рэп-поэтикой основан на просодических исследованиях М. Л. Гаспарова «Русский стих начала XX века в комментариях» (1993) и О. Федотова «Основы русского стихосложения» (2002).

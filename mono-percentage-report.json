@@ -1,0 +1,152 @@
+{
+  "timestamp": "2026-05-07T03:12:27.560Z",
+  "target": "≤25%",
+  "compliantChapters": 11,
+  "totalChapters": 11,
+  "overallCompliant": true,
+  "results": [
+    {
+      "file": "chapter-0-pilot.md",
+      "totalSentences": 454,
+      "monotoneSentences": 41,
+      "monoPercentage": 9,
+      "repeatedPatterns": [
+        "\"вокруг света з...\" x5",
+        "\"каждый из этих...\" x3",
+        "\"линия перемены...\" x3",
+        "\"двадцать тысяч...\" x2",
+        "\"железная дорога...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-1-jules-verne.md",
+      "totalSentences": 246,
+      "monotoneSentences": 22,
+      "monoPercentage": 8.9,
+      "repeatedPatterns": [
+        "\"перевод автора...\" x8",
+        "\"correspondance...\" x4",
+        "\"индустрия котор...\" x2",
+        "\"мастер ракуго р...\" x2",
+        "\"каждое выступле...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-10-choice-engine.md",
+      "totalSentences": 306,
+      "monotoneSentences": 26,
+      "monoPercentage": 8.5,
+      "repeatedPatterns": [
+        "\"перевод с корп...\" x10",
+        "\"hr классифициру...\" x2",
+        "\"вопрос гибсона...\" x2",
+        "\"текстура гибсо...\" x2",
+        "\"киберпространст...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-2-frankenstein.md",
+      "totalSentences": 295,
+      "monotoneSentences": 51,
+      "monoPercentage": 17.3,
+      "repeatedPatterns": [
+        "\"перевод автора...\" x15",
+        "\"иллюстрация ав...\" x8",
+        "\"виктор франкенш...\" x6",
+        "\"frankenstein o...\" x4",
+        "\"существо франке...\" x3"
+      ]
+    },
+    {
+      "file": "chapter-3-holmes.md",
+      "totalSentences": 256,
+      "monotoneSentences": 30,
+      "monoPercentage": 11.7,
+      "repeatedPatterns": [
+        "\"doyle arthur c...\" x4",
+        "\"the strand mag...\" x3",
+        "\"в корпоративной...\" x3",
+        "\"a scandal in b...\" x2",
+        "\"the sign of th...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-4-borges.md",
+      "totalSentences": 241,
+      "monotoneSentences": 17,
+      "monoPercentage": 7.1,
+      "repeatedPatterns": [
+        "\"в сборнике ficc...\" x3",
+        "\"la loter a en...\" x2",
+        "\"editorial sur b...\" x2",
+        "\"goodhart charl...\" x2",
+        "\"problems of mo...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-5-nemo.md",
+      "totalSentences": 470,
+      "monotoneSentences": 64,
+      "monoPercentage": 13.6,
+      "repeatedPatterns": [
+        "\"little brown an...\" x4",
+        "\"hastings reed...\" x4",
+        "\"no rules rules...\" x4",
+        "\"the mythical m...\" x3",
+        "\"penguin press п...\" x3"
+      ]
+    },
+    {
+      "file": "chapter-6-jekyll-hyde.md",
+      "totalSentences": 520,
+      "monotoneSentences": 32,
+      "monoPercentage": 6.2,
+      "repeatedPatterns": [
+        "\"в организациях...\" x3",
+        "\"algorithm avers...\" x3",
+        "\"longmans green...\" x2",
+        "\"первая трансфор...\" x2",
+        "\"если бы джекил...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-7-don-quixote.md",
+      "totalSentences": 442,
+      "monotoneSentences": 42,
+      "monoPercentage": 9.5,
+      "repeatedPatterns": [
+        "\"don quixote de...\" x4",
+        "\"world economic...\" x3",
+        "\"the future of...\" x3",
+        "\"часть первая гл...\" x2",
+        "\"в корпоративном...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-8-time-machine.md",
+      "totalSentences": 196,
+      "monotoneSentences": 10,
+      "monoPercentage": 5.1,
+      "repeatedPatterns": [
+        "\"world economic...\" x2",
+        "\"не потому что з...\" x2",
+        "\"проверка реаль...\" x2",
+        "\"ключевое понима...\" x2",
+        "\"ключевой принци...\" x2"
+      ]
+    },
+    {
+      "file": "chapter-9-three-scenarios.md",
+      "totalSentences": 236,
+      "monotoneSentences": 31,
+      "monoPercentage": 13.1,
+      "repeatedPatterns": [
+        "\"корпоративная...\" x4",
+        "\"корпоративный...\" x3",
+        "\"выбор пути вин...\" x3",
+        "\"реализация ии...\" x3",
+        "\"у нас есть 18...\" x2"
+      ]
+    }
+  ]
+}

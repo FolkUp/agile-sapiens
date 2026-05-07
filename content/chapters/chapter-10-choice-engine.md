@@ -353,8 +353,8 @@ AI-RECOMMENDATION:
 
 ## Источники и примечания
 
-² William Gibson. *Neuromancer* (1984). Ace Books. Chapter 1. Размышления Кейса о взаимоотношениях с киберпространством.
+² William Gibson. *Neuromancer* (1984). Ace Books. Chapter 1. (перевод автора). Размышления Кейса о взаимоотношениях с киберпространством.
 
-³ William Gibson. *Neuromancer* (1984). Ace Books. Chapter 3. Оригинал: «Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators…» — первое определение киберпространства в литературе (перевод автора; сокращённый вариант). Опубликованный русский перевод Немцова («Азбука») использует иную редакцию.
+³ William Gibson. *Neuromancer* (1984). Ace Books. Chapter 3. (перевод автора). Оригинал: «Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators…» — первое определение киберпространства в литературе (сокращённый вариант). Опубликованный русский перевод Немцова («Азбука») использует иную редакцию.
 
 ⁴ William Gibson. Устный афоризм: «The future is already here, it's just not evenly distributed» (перевод автора). Первая печатная атрибуция: Scott Rosenberg, *San Francisco Examiner*, April 19, 1992. Устная цитата с голосом Гибсона: «Talk of the Nation: The Science in Science Fiction,» NPR, November 30, 1999 (~11:55), вступление «As I've said many times…». Не является отрывком ни из одного опубликованного произведения — авторская максима. Источниковедческий анализ: https://quoteinvestigator.com/2012/01/24/future-has-arrived/

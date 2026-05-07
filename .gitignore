@@ -33,6 +33,7 @@
 .claude.json
 .claude.json.backup*
 .cagent/
+.claude/
 
 # === DEVELOPMENT ARTIFACTS ===
 *.log
@@ -53,6 +54,15 @@ public/
 resources/_gen/
 .deploy/
 *.deploy
+
+# Temporary build directories
+temp-build*/
+test-results/
+
+# Generated metadata (keep manual ADRs, ignore generated files)
+_meta/*.headers
+_meta/*.html
+_meta/current-metrics.json
 
 # === BACKUP & TEMP ===
 *backup*

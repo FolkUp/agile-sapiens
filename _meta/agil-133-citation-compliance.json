@@ -1,29 +1,29 @@
 {
-  "generated": "2026-04-28T09:42:54.406Z",
+  "generated": "2026-05-07T01:29:56.553Z",
   "methodology": "scripts/editorial/citation-compliance.cjs",
   "rule_source": "rules/citation-compliance.md",
   "results": [
     {
       "file": "chapter-0-pilot.md",
-      "quotations_total": 17,
+      "quotations_total": 19,
       "blockquotes": 2,
-      "inline_quotations": 15,
-      "inline_without_footnote_ref": 5,
+      "inline_quotations": 17,
+      "inline_without_footnote_ref": 7,
       "inline_without_footnote_examples": [
         {
           "line": 16,
           "words": 5,
+          "preview": "Reform Club, среда, 2 октября 1872 года"
+        },
+        {
+          "line": 28,
+          "words": 5,
           "preview": "Я составлю детальный план маршрута"
         },
         {
-          "line": 16,
-          "words": 10,
-          "preview": "Мне нужна экспертная комиссия, консультанты по логистике и полгода подготовки"
-        },
-        {
-          "line": 150,
-          "words": 5,
-          "preview": "обогнуть земной шар за 80 дней"
+          "line": 80,
+          "words": 34,
+          "preview": "Мы наняли трёх коучей гибких методов, четырёх скрам-мастеров, провели обучение 2"
         }
       ],
       "footnotes_total": 17,
@@ -84,8 +84,8 @@
       "inline_without_footnote_examples": [
         {
           "line": 2,
-          "words": 15,
-          "preview": "The sky above the port was the color of television, tuned to a dead channel."
+          "words": 11,
+          "preview": "The future is already here — it's just not evenly distributed."
         },
         {
           "line": 104,
@@ -93,8 +93,8 @@
           "preview": "Мой промптинг улучшил ROI на 12% через оптимизацию гиперпараметров"
         }
       ],
-      "footnotes_total": 4,
-      "footnotes_without_translator_attr": 2,
+      "footnotes_total": 3,
+      "footnotes_without_translator_attr": 1,
       "detected_authors": [
         "Wells",
         "Gibson"
@@ -108,9 +108,9 @@
     },
     {
       "file": "chapter-2-frankenstein.md",
-      "quotations_total": 21,
+      "quotations_total": 22,
       "blockquotes": 2,
-      "inline_quotations": 19,
+      "inline_quotations": 20,
       "inline_without_footnote_ref": 14,
       "inline_without_footnote_examples": [
         {
@@ -119,25 +119,23 @@
           "preview": "блестящий замысел → бегство от последствий"
         },
         {
-          "line": 133,
-          "words": 6,
-          "preview": "Мы дали вам жизнь, дальше — сами"
+          "line": 27,
+          "words": 5,
+          "preview": "что делать дальше с результатом"
         },
         {
-          "line": 137,
-          "words": 6,
-          "preview": "журнал задач (backlog — приоритизированный список работ)"
+          "line": 131,
+          "words": 9,
+          "preview": "Мы дали вашей компании новую жизнь, дальше развивайтесь сами"
         }
       ],
       "footnotes_total": 13,
       "footnotes_without_translator_attr": 13,
       "detected_authors": [
-        "Verne",
         "Shelley",
         "Brooks"
       ],
       "pd_authors": [
-        "Verne",
         "Shelley"
       ],
       "copyrighted_mentions": [
@@ -146,25 +144,25 @@
     },
     {
       "file": "chapter-3-holmes.md",
-      "quotations_total": 18,
+      "quotations_total": 24,
       "blockquotes": 2,
-      "inline_quotations": 16,
-      "inline_without_footnote_ref": 5,
+      "inline_quotations": 22,
+      "inline_without_footnote_ref": 11,
       "inline_without_footnote_examples": [
         {
-          "line": 8,
+          "line": 12,
+          "words": 25,
+          "preview": "Диагноз ставится на основе точного наблюдения мелких деталей. Пациент входит в к"
+        },
+        {
+          "line": 14,
           "words": 5,
           "preview": "Вы смотрите, но не наблюдаете"
         },
         {
-          "line": 8,
-          "words": 13,
-          "preview": "Различие очевидно. Например, вы часто видели ступеньки, ведущие из прихожей в эт"
-        },
-        {
-          "line": 54,
-          "words": 6,
-          "preview": "я дЕлаю рэп, как запрещЁнная оргАнизАция"
+          "line": 20,
+          "words": 5,
+          "preview": "Вы смотрите, но не наблюдаете"
         }
       ],
       "footnotes_total": 15,
@@ -184,58 +182,54 @@
     },
     {
       "file": "chapter-4-borges.md",
-      "quotations_total": 25,
+      "quotations_total": 16,
       "blockquotes": 2,
-      "inline_quotations": 23,
-      "inline_without_footnote_ref": 12,
+      "inline_quotations": 14,
+      "inline_without_footnote_ref": 4,
       "inline_without_footnote_examples": [
         {
-          "line": 50,
-          "words": 12,
-          "preview": "это сложнее, чем 3, но проще, чем 8, а мы не помним, что было 8"
+          "line": 49,
+          "words": 10,
+          "preview": "Максим, мы сравниваем Цельсий с Фаренгейтом и объявляем Америку жарче"
         },
         {
-          "line": 66,
-          "words": 11,
-          "preview": "Spotify doesn't use 'the Spotify model' and neither should you"
+          "line": 73,
+          "words": 6,
+          "preview": "зависит от того, сколько багов найдём"
         },
         {
-          "line": 86,
-          "words": 5,
-          "preview": "Agile at scale спасает компании"
+          "line": 125,
+          "words": 7,
+          "preview": "Стать лидером в сегменте fashion e-commerce"
         }
       ],
       "footnotes_total": 16,
       "footnotes_without_translator_attr": 14,
-      "detected_authors": [
-        "Borges"
-      ],
+      "detected_authors": [],
       "pd_authors": [],
-      "copyrighted_mentions": [
-        "Borges"
-      ]
+      "copyrighted_mentions": []
     },
     {
       "file": "chapter-5-nemo.md",
-      "quotations_total": 9,
+      "quotations_total": 16,
       "blockquotes": 2,
-      "inline_quotations": 7,
-      "inline_without_footnote_ref": 4,
+      "inline_quotations": 14,
+      "inline_without_footnote_ref": 11,
       "inline_without_footnote_examples": [
         {
-          "line": 70,
-          "words": 14,
-          "preview": "Менеджер Skunk Works должен получить практически полный контроль над своей прогр"
-        },
-        {
-          "line": 94,
+          "line": 10,
           "words": 8,
-          "preview": "а что если нагреть на двадцать градусов выше?"
+          "preview": "А что, если взрослые оказались в такой ситуации?"
         },
         {
-          "line": 210,
-          "words": 6,
-          "preview": "Один за всех, все за одного"
+          "line": 10,
+          "words": 16,
+          "preview": "Что если группа инженеров должна построить цивилизацию не по готовым планам, а с"
+        },
+        {
+          "line": 12,
+          "words": 24,
+          "preview": "Остров. Пять человек. Никого больше. Ни машин, ни готовой инфраструктуры, ни про"
         }
       ],
       "footnotes_total": 20,
@@ -257,25 +251,25 @@
     },
     {
       "file": "chapter-6-jekyll-hyde.md",
-      "quotations_total": 19,
+      "quotations_total": 24,
       "blockquotes": 3,
-      "inline_quotations": 16,
-      "inline_without_footnote_ref": 13,
+      "inline_quotations": 21,
+      "inline_without_footnote_ref": 18,
       "inline_without_footnote_examples": [
         {
-          "line": 16,
+          "line": 12,
+          "words": 26,
+          "preview": "Ты написал хороший хоррор, но пропустил главное. Это же не про монстра — это про"
+        },
+        {
+          "line": 28,
           "words": 8,
           "preview": "Henry Jekyll's Full Statement of the Case"
         },
         {
-          "line": 18,
+          "line": 30,
           "words": 10,
           "preview": "Как я увеличил производительность на 200% с помощью одного weird trick"
-        },
-        {
-          "line": 22,
-          "words": 8,
-          "preview": "а как мы теперь без этого будем работать?"
         }
       ],
       "footnotes_total": 1,
@@ -290,25 +284,25 @@
     },
     {
       "file": "chapter-7-don-quixote.md",
-      "quotations_total": 11,
+      "quotations_total": 14,
       "blockquotes": 2,
-      "inline_quotations": 9,
-      "inline_without_footnote_ref": 7,
+      "inline_quotations": 12,
+      "inline_without_footnote_ref": 10,
       "inline_without_footnote_examples": [
         {
-          "line": 62,
+          "line": 60,
+          "words": 12,
+          "preview": "Мне нужен банк, который понимает, что за каждой транзакцией стоит человеческая ж"
+        },
+        {
+          "line": 72,
           "words": 9,
           "preview": "Generative AI and the future of work in America"
         },
         {
-          "line": 64,
+          "line": 74,
           "words": 9,
           "preview": "Generative AI and the future of work in America"
-        },
-        {
-          "line": 78,
-          "words": 11,
-          "preview": "Судьба руководит нами как нельзя лучше... перебить их всех до единого"
         }
       ],
       "footnotes_total": 0,
@@ -325,10 +319,10 @@
     },
     {
       "file": "chapter-8-time-machine.md",
-      "quotations_total": 8,
+      "quotations_total": 15,
       "blockquotes": 2,
-      "inline_quotations": 6,
-      "inline_without_footnote_ref": 6,
+      "inline_quotations": 13,
+      "inline_without_footnote_ref": 13,
       "inline_without_footnote_examples": [
         {
           "line": 4,
@@ -336,35 +330,32 @@
           "preview": "Путешественник во времени... излагал нам сложную материю. Его серые глаза сияли "
         },
         {
-          "line": 25,
-          "words": 7,
-          "preview": "Электронная почта будет дополнять письма и факсы"
+          "line": 15,
+          "words": 10,
+          "preview": "The Time Traveller was expounding a recondite matter to us..."
         },
         {
-          "line": 26,
-          "words": 5,
-          "preview": "Цифровые карты дополнят бумажные карты"
+          "line": 33,
+          "words": 7,
+          "preview": "Электронная почта будет дополнять письма и факсы"
         }
       ],
       "footnotes_total": 4,
       "footnotes_without_translator_attr": 4,
       "detected_authors": [
-        "Wells",
-        "Gibson"
+        "Wells"
       ],
       "pd_authors": [
         "Wells"
       ],
-      "copyrighted_mentions": [
-        "Gibson"
-      ]
+      "copyrighted_mentions": []
     },
     {
       "file": "chapter-9-three-scenarios.md",
-      "quotations_total": 6,
+      "quotations_total": 24,
       "blockquotes": 2,
-      "inline_quotations": 4,
-      "inline_without_footnote_ref": 4,
+      "inline_quotations": 22,
+      "inline_without_footnote_ref": 22,
       "inline_without_footnote_examples": [
         {
           "line": 4,
@@ -374,7 +365,7 @@
         {
           "line": 33,
           "words": 13,
-          "preview": "Система сэкономила нам $2M в этом квартале. IT-директор не знает, как именно"
+          "preview": "Система сэкономила нам $2M в этом квартале. Технический директор не знает, как и"
         },
         {
           "line": 47,
@@ -382,18 +373,13 @@
           "preview": "Мы сэкономили 12%, но я не смогу объяснить вам, как"
         }
       ],
-      "footnotes_total": 6,
-      "footnotes_without_translator_attr": 6,
+      "footnotes_total": 8,
+      "footnotes_without_translator_attr": 8,
       "detected_authors": [
-        "Wells",
-        "Gibson",
         "Vinge"
       ],
-      "pd_authors": [
-        "Wells"
-      ],
+      "pd_authors": [],
       "copyrighted_mentions": [
-        "Gibson",
         "Vinge"
       ]
     },
@@ -411,13 +397,13 @@
         },
         {
           "line": 7,
-          "words": 7,
-          "preview": "Проходите. Мы как раз обсуждаем оптимизацию методологии"
+          "words": 14,
+          "preview": "Проходите. Мы как раз обсуждаем оптимизацию методологии. Кофе? У нас Illy, машин"
         },
         {
           "line": 11,
-          "words": 13,
-          "preview": "Бегемот наш Chief Technology Officer. Коржиков, Senior Scrum Master. А вас как з"
+          "words": 12,
+          "preview": "Бегемот наш технический директор. Коржиков, старший мастер скрамов. А вас как зв"
         }
       ],
       "footnotes_total": 0,
@@ -477,8 +463,8 @@
   ],
   "totals": {
     "chapters_analysed": 14,
-    "quotations_total": 197,
-    "inline_without_footnote_ref_total": 124,
-    "footnotes_total": 102
+    "quotations_total": 237,
+    "inline_without_footnote_ref_total": 164,
+    "footnotes_total": 103
   }
 }

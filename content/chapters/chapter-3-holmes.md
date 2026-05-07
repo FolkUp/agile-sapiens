@@ -267,25 +267,25 @@ Nokia пала именно так. Vuori и Huy назвали это «рас�
 
 ³ Doyle, Arthur Conan. «Silver Blaze» (1892). *The Strand Magazine*. Оригинал: "The curious incident of the dog in the night-time" (перевод автора).
 
-⁴ SEC Administrative Proceeding File No. 3-15570, October 16, 2013. «In the Matter of Knight Capital Americas LLC.» Штраф $12 млн. Детали инцидента с Power Peg и отсутствие процедур контроля развёртывания задокументированы в enforcement action.
+⁴ SEC Administrative Proceeding File No. 3-15570, October 16, 2013. «In the Matter of Knight Capital Americas LLC.» Штраф $12 млн. Детали инцидента с Power Peg и отсутствие процедур контроля развёртывания задокументированы в enforcement action. (перевод автора)
 
 ⁵ Doyle, Arthur Conan. *A Study in Scarlet* (1887). Оригинал: "It is a capital mistake to theorize before you have all the evidence" (перевод автора).
 
-⁶ Target Corporation Annual Report 2014 и официальные пресс-релизы. The Globe and Mail, January 15, 2015. Общий объём инвестиций в канадское подразделение составил более $7 млрд USD; списание убытков (pretax losses) достигло $5.4 млрд. Вариативность в подсчётах отражает различия между общими инвестициями, операционными убытками и списаниями стоимости.
+⁶ Target Corporation Annual Report 2014 и официальные пресс-релизы. The Globe and Mail, January 15, 2015. Общий объём инвестиций в канадское подразделение составил более $7 млрд USD; списание убытков (pretax losses) достигло $5.4 млрд. Вариативность в подсчётах отражает различия между общими инвестициями, операционными убытками и списаниями стоимости. (перевод автора)
 
-⁷ Canadian Press, January 15, 2015. «Target Canada closing: A timeline of the U.S. retailer's disastrous Canadian venture.» 17,600 сотрудников — данные из официального заявления Target Corporation.
+⁷ Canadian Press, January 15, 2015. «Target Canada closing: A timeline of the U.S. retailer's disastrous Canadian venture.» 17,600 сотрудников — данные из официального заявления Target Corporation. (перевод автора)
 
-⁸ Castaldo, Joe. «The Last Days of Target Canada.» *Canadian Business*, January 2016. Детальное расследование проблем с данными SAP-системы.
+⁸ Castaldo, Joe. «The Last Days of Target Canada.» *Canadian Business*, January 2016. Детальное расследование проблем с данными SAP-системы. (перевод автора)
 
-⁹ Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968. Оригинальная формулировка закона Конвея.
+⁹ Conway, Melvin. «How Do Committees Invent?» *Datamation*, April 1968. Оригинальная формулировка закона Конвея. (перевод автора)
 
-¹⁰ Weinberg, Gerald. *The Psychology of Computer Programming* (1971). Van Nostrand Reinhold. Наблюдения о взаимосвязи между разработчиками и пользователями.
+¹⁰ Weinberg, Gerald. *The Psychology of Computer Programming* (1971). Van Nostrand Reinhold. Наблюдения о взаимосвязи между разработчиками и пользователями. (перевод автора)
 
-¹¹ Bort, Julie. «How a $1.1 billion SAP project failure made Lidl rethink its technology strategy.» *Business Insider*, July 2018. Дополнительные источники: Computer Weekly, 2018. «Lidl dumps €500m SAP project»; Handelsblatt, 2018. «Wie SAP und Lidl Hunderte Millionen Euro versenkt haben.» Сумма €500M подтверждена несколькими независимыми источниками T2.
+¹¹ Bort, Julie. «How a $1.1 billion SAP project failure made Lidl rethink its technology strategy.» *Business Insider*, July 2018. Дополнительные источники: Computer Weekly, 2018. «Lidl dumps €500m SAP project»; Handelsblatt, 2018. «Wie SAP und Lidl Hunderte Millionen Euro versenkt haben.» Сумма €500M подтверждена несколькими независимыми источниками T2. (перевод автора)
 
-¹² Accelerate: State of DevOps Report. Google Cloud / DORA, 2023. Классификация команд по четырём уровням: Elite, High, Medium, Low.
+¹² Accelerate: State of DevOps Report. Google Cloud / DORA, 2023. Классификация команд по четырём уровням: Elite, High, Medium, Low. (перевод автора)
 
-¹³ Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley. Закон Брукса и формула каналов коммуникации n(n-1)/2.
+¹³ Brooks, Frederick. *The Mythical Man-Month* (1975). Addison-Wesley. Закон Брукса и формула каналов коммуникации n(n-1)/2. (перевод автора)
 
 ¹⁴ Vuori, Timo O. и Quy Nguyen Huy. «Distributed Attention and Shared Emotions in the Innovation Process.» *Administrative Science Quarterly*, Vol. 61, No. 1 (2016), pp. 9-51. Оригинал: "distributed attention" (перевод автора). Исследование распада Nokia и механизмов организационного внимания.
 

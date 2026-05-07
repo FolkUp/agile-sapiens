@@ -246,29 +246,29 @@ Nokia не пропустила смартфоновую революцию по
 
 **Footnotes:**
 
-¹ Джованни Альдини проводил публичные демонстрации гальванизма в Лондоне в 1803 году на теле казнённого Джорджа Фостера. Задокументировано в *An Account of the Late Improvements in Galvanism* (Aldini, 1804).
+¹ Джованни Альдини проводил публичные демонстрации гальванизма в Лондоне в 1803 году на теле казнённого Джорджа Фостера. Задокументировано в *An Account of the Late Improvements in Galvanism* (Aldini, 1804). (перевод автора)
 
-² Virtual Case File: GAO-05-105, «FBI Trilogy Project», February 2005. Полный бюджет VCF составил около 170 млн долларов, проект был полностью списан в апреле 2005 года.
+² Virtual Case File: GAO-05-105, «FBI Trilogy Project», February 2005. Полный бюджет VCF составил около 170 млн долларов, проект был полностью списан в апреле 2005 года. (перевод автора)
 
-³ Status of Sentinel: DOJ OIG Audit Report 10-03, October 2009. К этому моменту Sentinel потратил $405 млн из запланированных $451 млн и доставил только 2 из 4 фаз.
+³ Status of Sentinel: DOJ OIG Audit Report 10-03, October 2009. К этому моменту Sentinel потратил $405 млн из запланированных $451 млн и доставил только 2 из 4 фаз. (перевод автора)
 
-⁴ DOJ OIG Audit Report 12-08, November 2011. «The FBI's Sentinel Information Technology Project». Отчёт документирует как проблемы проекта под управлением Lockheed Martin, так и успешное завершение проекта внутренней командой ФБР с использованием Agile-подхода.
+⁴ DOJ OIG Audit Report 12-08, November 2011. «The FBI's Sentinel Information Technology Project». Отчёт документирует как проблемы проекта под управлением Lockheed Martin, так и успешное завершение проекта внутренней командой ФБР с использованием Agile-подхода. (перевод автора)
 
 ⁵ Показания перед Конгрессом, октябрь 2013. Данные о количестве успешных регистраций в первый день приводились в слушаниях Комитета по энергетике и торговле Палаты представителей.
 
-⁶ US House Committee on Energy and Commerce, Majority Staff Report, «Behind the Curtain of the Healthcare.gov Rollout», September 2016.
+⁶ US House Committee on Energy and Commerce, Majority Staff Report, «Behind the Curtain of the Healthcare.gov Rollout», September 2016. (перевод автора)
 
-⁷ GAO-15-238, «Healthcare.gov: CMS Has Taken Steps to Address Problems, but Needs to Further Implement Systems Development Best Practices», March 2015.
+⁷ GAO-15-238, «Healthcare.gov: CMS Has Taken Steps to Address Problems, but Needs to Further Implement Systems Development Best Practices», March 2015. (перевод автора)
 
-⁸ UK National Audit Office, HC 985, «The BBC's Digital Media Initiative», January 2014. Общая стоимость проекта оценена в £98.4 млн, «the BBC has not achieved value for money».
+⁸ UK National Audit Office, HC 985, «The BBC's Digital Media Initiative», January 2014. Общая стоимость проекта оценена в £98.4 млн, «the BBC has not achieved value for money». (перевод автора)
 
-⁹ UK National Audit Office, Briefing for the Public Accounts Committee, «Managing the BBC's Digital Media Initiative», Session 2013-14.
+⁹ UK National Audit Office, Briefing for the Public Accounts Committee, «Managing the BBC's Digital Media Initiative», Session 2013-14. (перевод автора)
 
 ¹⁰ Данные рыночной доли Nokia основаны на отраслевых исследованиях (IDC, Gartner, 2007-2013 гг.). Годовые отчёты Nokia Corporation подтверждают тренд снижения.
 
-¹¹ Vuori, T.O. & Huy, Q.N. «Distributed Attention and Shared Emotions in the Innovation Process: How Nokia Lost the Smartphone Battle.» *Administrative Science Quarterly*, Vol. 61, Issue 1, 2016, pp. 9-51. Исследование основано на 76 интервью с топ- и мидл-менеджерами Nokia.
+¹¹ Vuori, T.O. & Huy, Q.N. «Distributed Attention and Shared Emotions in the Innovation Process: How Nokia Lost the Smartphone Battle.» *Administrative Science Quarterly*, Vol. 61, Issue 1, 2016, pp. 9-51. Исследование основано на 76 интервью с топ- и мидл-менеджерами Nokia. (перевод автора)
 
-¹² Brooks, Frederick P. *The Mythical Man-Month: Essays on Software Engineering* (1975). Addison-Wesley. «Adding manpower to a late software project makes it later» — закон Брукса.
+¹² Brooks, Frederick P. *The Mythical Man-Month: Essays on Software Engineering* (1975). Addison-Wesley. «Adding manpower to a late software project makes it later» — закон Брукса. (перевод автора)
 
-¹³ Standish Group, CHAOS Report 2018. Decision Latency Theory: корреляция между скоростью принятия решений и успешностью проектов.
+¹³ Standish Group, CHAOS Report 2018. Decision Latency Theory: корреляция между скоростью принятия решений и успешностью проектов. (перевод автора)
 

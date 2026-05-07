@@ -305,15 +305,15 @@ Agile — не изобретение программистов. Это пер�
 
 **Footnotes:**
 
-¹ Тиражные данные «Pickwick Papers»: Robert L. Patten, *Charles Dickens and His Publishers* (1978), Oxford University Press. Первый выпуск — около 400 копий, рост до ~40 000 к 4-5 выпуску после введения Сэма Уэллера.
+¹ Тиражные данные «Pickwick Papers»: Robert L. Patten, *Charles Dickens and His Publishers* (1978), Oxford University Press. Первый выпуск — около 400 копий, рост до ~40 000 к 4-5 выпуску после введения Сэма Уэллера. (перевод автора)
 
-² Robert L. Patten. "Charles Dickens and His Publishers" (1978). Oxford University Press. Documented evidence of Dickens adapting plot based on circulation figures. Sam Weller character expansion after sales increase demonstrates adaptive publishing methodology, precursor to modern решений о продукте на основе метрик (data-driven product decisions: управления через данные).
+² Robert L. Patten. "Charles Dickens and His Publishers" (1978). Oxford University Press. Documented evidence of Dickens adapting plot based on circulation figures. Sam Weller character expansion after sales increase demonstrates adaptive publishing methodology, precursor to modern решений о продукте на основе метрик (data-driven product decisions: управления через данные). (перевод автора)
 
-³ Саймон Лейк описал влияние Верна в автобиографии *The Submarine in War and Peace* (1918). Верн лично поздравил Лейка телеграммой.
+³ Саймон Лейк описал влияние Верна в автобиографии *The Submarine in War and Peace* (1918). Верн лично поздравил Лейка телеграммой. (перевод автора)
 
 ⁴ Зейгарник Б.В. «О запоминании завершённых и незавершённых действий» (1927). *Psychologische Forschung*, 9, 1-85.
 
-⁵ Royce, W.W. «Managing the Development of Large Software Systems» (1970). IEEE WESCON. Ройс представил каскадную модель как пример того, что *не работает*, и предложил итеративный подход.
+⁵ Royce, W.W. «Managing the Development of Large Software Systems» (1970). IEEE WESCON. Ройс представил каскадную модель как пример того, что *не работает*, и предложил итеративный подход. (перевод автора)
 
-⁶ Переписка Верн — Этцель: Dumas, Olivier. *Correspondance inédite de Jules Verne et de Pierre-Jules Hetzel* (1999-2002), 3 тома, Slatkine.
+⁶ Переписка Верн — Этцель: Dumas, Olivier. *Correspondance inédite de Jules Verne et de Pierre-Jules Hetzel* (1999-2002), 3 тома, Slatkine. (перевод автора)
 

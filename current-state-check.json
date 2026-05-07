@@ -1,0 +1,432 @@
+{
+  "generated": "2026-05-07T02:01:56.354Z",
+  "methodology": "scripts/editorial/sentence-metrics.cjs",
+  "rubric_source": ".claude/EDITORIAL_RUBRIC.md",
+  "results": [
+    {
+      "file": "chapter-0-pilot.md",
+      "sentences_total": 383,
+      "words_total": 4740,
+      "avg_sentence_words": 12.38,
+      "distribution_count": {
+        "sub5": 30,
+        "short": 186,
+        "medium": 145,
+        "long": 20,
+        "extra": 2
+      },
+      "distribution_pct": {
+        "sub5": 7.8,
+        "short": 48.6,
+        "medium": 37.9,
+        "long": 5.2,
+        "extra": 0.5
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 21,
+      "monotone_sentences": 72,
+      "monotone_pct": 18.8,
+      "flow_disruptions": 37
+    },
+    {
+      "file": "chapter-1-jules-verne.md",
+      "sentences_total": 207,
+      "words_total": 2894,
+      "avg_sentence_words": 13.98,
+      "distribution_count": {
+        "sub5": 24,
+        "short": 87,
+        "medium": 63,
+        "long": 26,
+        "extra": 7
+      },
+      "distribution_pct": {
+        "sub5": 11.6,
+        "short": 42,
+        "medium": 30.4,
+        "long": 12.6,
+        "extra": 3.4
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 13,
+      "monotone_sentences": 48,
+      "monotone_pct": 23.2,
+      "flow_disruptions": 36
+    },
+    {
+      "file": "chapter-10-choice-engine.md",
+      "sentences_total": 283,
+      "words_total": 3384,
+      "avg_sentence_words": 11.96,
+      "distribution_count": {
+        "sub5": 10,
+        "short": 166,
+        "medium": 94,
+        "long": 11,
+        "extra": 2
+      },
+      "distribution_pct": {
+        "sub5": 3.5,
+        "short": 58.7,
+        "medium": 33.2,
+        "long": 3.9,
+        "extra": 0.7
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 19,
+      "monotone_sentences": 67,
+      "monotone_pct": 23.7,
+      "flow_disruptions": 19
+    },
+    {
+      "file": "chapter-2-frankenstein.md",
+      "sentences_total": 221,
+      "words_total": 3769,
+      "avg_sentence_words": 17.05,
+      "distribution_count": {
+        "sub5": 20,
+        "short": 84,
+        "medium": 57,
+        "long": 38,
+        "extra": 22
+      },
+      "distribution_pct": {
+        "sub5": 9,
+        "short": 38,
+        "medium": 25.8,
+        "long": 17.2,
+        "extra": 10
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 15,
+      "monotone_sentences": 50,
+      "monotone_pct": 22.6,
+      "flow_disruptions": 45
+    },
+    {
+      "file": "chapter-3-holmes.md",
+      "sentences_total": 199,
+      "words_total": 3099,
+      "avg_sentence_words": 15.57,
+      "distribution_count": {
+        "sub5": 11,
+        "short": 67,
+        "medium": 80,
+        "long": 38,
+        "extra": 3
+      },
+      "distribution_pct": {
+        "sub5": 5.5,
+        "short": 33.7,
+        "medium": 40.2,
+        "long": 19.1,
+        "extra": 1.5
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 7,
+      "monotone_sentences": 25,
+      "monotone_pct": 12.6,
+      "flow_disruptions": 30
+    },
+    {
+      "file": "chapter-4-borges.md",
+      "sentences_total": 171,
+      "words_total": 2187,
+      "avg_sentence_words": 12.79,
+      "distribution_count": {
+        "sub5": 24,
+        "short": 67,
+        "medium": 60,
+        "long": 15,
+        "extra": 5
+      },
+      "distribution_pct": {
+        "sub5": 14,
+        "short": 39.2,
+        "medium": 35.1,
+        "long": 8.8,
+        "extra": 2.9
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 10,
+      "monotone_sentences": 33,
+      "monotone_pct": 19.3,
+      "flow_disruptions": 25
+    },
+    {
+      "file": "chapter-5-nemo.md",
+      "sentences_total": 429,
+      "words_total": 4867,
+      "avg_sentence_words": 11.34,
+      "distribution_count": {
+        "sub5": 69,
+        "short": 197,
+        "medium": 131,
+        "long": 30,
+        "extra": 2
+      },
+      "distribution_pct": {
+        "sub5": 16.1,
+        "short": 45.9,
+        "medium": 30.5,
+        "long": 7,
+        "extra": 0.5
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 27,
+      "monotone_sentences": 96,
+      "monotone_pct": 22.4,
+      "flow_disruptions": 47
+    },
+    {
+      "file": "chapter-6-jekyll-hyde.md",
+      "sentences_total": 503,
+      "words_total": 5579,
+      "avg_sentence_words": 11.09,
+      "distribution_count": {
+        "sub5": 54,
+        "short": 276,
+        "medium": 146,
+        "long": 23,
+        "extra": 4
+      },
+      "distribution_pct": {
+        "sub5": 10.7,
+        "short": 54.9,
+        "medium": 29,
+        "long": 4.6,
+        "extra": 0.8
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 34,
+      "monotone_sentences": 113,
+      "monotone_pct": 22.5,
+      "flow_disruptions": 34
+    },
+    {
+      "file": "chapter-7-don-quixote.md",
+      "sentences_total": 425,
+      "words_total": 5138,
+      "avg_sentence_words": 12.09,
+      "distribution_count": {
+        "sub5": 49,
+        "short": 203,
+        "medium": 134,
+        "long": 37,
+        "extra": 2
+      },
+      "distribution_pct": {
+        "sub5": 11.5,
+        "short": 47.8,
+        "medium": 31.5,
+        "long": 8.7,
+        "extra": 0.5
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 25,
+      "monotone_sentences": 89,
+      "monotone_pct": 20.9,
+      "flow_disruptions": 39
+    },
+    {
+      "file": "chapter-8-time-machine.md",
+      "sentences_total": 157,
+      "words_total": 2151,
+      "avg_sentence_words": 13.7,
+      "distribution_count": {
+        "sub5": 2,
+        "short": 76,
+        "medium": 67,
+        "long": 9,
+        "extra": 3
+      },
+      "distribution_pct": {
+        "sub5": 1.3,
+        "short": 48.4,
+        "medium": 42.7,
+        "long": 5.7,
+        "extra": 1.9
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 11,
+      "monotone_sentences": 36,
+      "monotone_pct": 22.9,
+      "flow_disruptions": 13
+    },
+    {
+      "file": "chapter-9-three-scenarios.md",
+      "sentences_total": 161,
+      "words_total": 2464,
+      "avg_sentence_words": 15.3,
+      "distribution_count": {
+        "sub5": 13,
+        "short": 79,
+        "medium": 37,
+        "long": 18,
+        "extra": 14
+      },
+      "distribution_pct": {
+        "sub5": 8.1,
+        "short": 49.1,
+        "medium": 23,
+        "long": 11.2,
+        "extra": 8.7
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 9,
+      "monotone_sentences": 31,
+      "monotone_pct": 19.3,
+      "flow_disruptions": 38
+    },
+    {
+      "file": "intermezzo-1.md",
+      "sentences_total": 88,
+      "words_total": 659,
+      "avg_sentence_words": 7.49,
+      "distribution_count": {
+        "sub5": 25,
+        "short": 50,
+        "medium": 12,
+        "long": 1,
+        "extra": 0
+      },
+      "distribution_pct": {
+        "sub5": 28.4,
+        "short": 56.8,
+        "medium": 13.6,
+        "long": 1.1,
+        "extra": 0
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 8,
+      "monotone_sentences": 41,
+      "monotone_pct": 46.6,
+      "flow_disruptions": 2
+    },
+    {
+      "file": "intermezzo-2.md",
+      "sentences_total": 74,
+      "words_total": 683,
+      "avg_sentence_words": 9.23,
+      "distribution_count": {
+        "sub5": 14,
+        "short": 42,
+        "medium": 13,
+        "long": 5,
+        "extra": 0
+      },
+      "distribution_pct": {
+        "sub5": 18.9,
+        "short": 56.8,
+        "medium": 17.6,
+        "long": 6.8,
+        "extra": 0
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 5,
+      "monotone_sentences": 20,
+      "monotone_pct": 27,
+      "flow_disruptions": 8
+    },
+    {
+      "file": "intermezzo-3.md",
+      "sentences_total": 109,
+      "words_total": 964,
+      "avg_sentence_words": 8.84,
+      "distribution_count": {
+        "sub5": 18,
+        "short": 69,
+        "medium": 21,
+        "long": 0,
+        "extra": 1
+      },
+      "distribution_pct": {
+        "sub5": 16.5,
+        "short": 63.3,
+        "medium": 19.3,
+        "long": 0,
+        "extra": 0.9
+      },
+      "rubric_target_pct": {
+        "short": "30-35",
+        "medium": "40-45",
+        "long": "20-25",
+        "extra": "<5"
+      },
+      "monotone_runs": 12,
+      "monotone_sentences": 44,
+      "monotone_pct": 40.4,
+      "flow_disruptions": 2
+    }
+  ],
+  "totals": {
+    "sentences": 3410,
+    "words": 42578,
+    "avg_words_per_sentence": 12.49
+  }
+}

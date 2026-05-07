@@ -1,6 +1,6 @@
 # AGILE SAPIENS
 
-**Version:** 1.0.5 | **Date:** 2026-05-07 | **Enhanced Alice v2.0 Level 3**  
+**Version:** 1.0.6 | **Date:** 2026-05-07 | **Enhanced Alice v2.0 Level 3**  
 **The Future of Work in the Age of Artificial Intelligence**
 
 > **Status:** Scientific Popular Monograph — Editorial Excellence Phase Complete
@@ -36,6 +36,7 @@ AGILE SAPIENS explores how artificial intelligence is reshaping the future of wo
 ## Status
 
 ✅ **Live Production** — sapiens.folkup.life  
+✅ **v1.0.6** — CI/CD smoke-test optimization + git cleanup + phantom secrets removal (2026-05-07)  
 ✅ **v1.0.5** — Editorial Humanization Complete: Chapters 4,7,8 + systematic anglicism cleanup (2026-05-07)  
 ✅ **v1.0.4** — Umami analytics live + CI/CD fully green + VPS ecosystem recovered (2026-05-06)  
 ✅ **v1.0.1** — AGIL-133 Phase 2 Editorial Excellence + AGIL-122 Playwright QA (2026-05-06)  

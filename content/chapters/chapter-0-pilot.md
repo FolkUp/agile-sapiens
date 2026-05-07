@@ -36,8 +36,8 @@ act_overview: "Act I: Origins - How we got here"
 act_next: "/chapters/chapter-5-nemo"
 
 # SEO Enhancement
-keywords: ["agile methodology", "phileas fogg", "jules verne", "project management", "corporate transformation", "iterative development"]
-og_title: "Chapter 0: Филеас Фогг изобрёл Agile до Agile"
+keywords: ["agile методология", "филеас фогг", "жюль верн", "управление проектами", "корпоративная трансформация", "итеративная разработка"]
+og_title: "Глава 0: Филеас Фогг изобрёл Agile до Agile"
 og_description: "Пилотная глава: как XIX век интуитивно применил принципы будущего. От кругосветного путешествия до корпоративных спринтов."
 twitter_description: "Как Филеас Фогг изобрёл Agile за 129 лет до манифеста. Анализ интуитивной методологии vs современная коммерциализация."
 toc: true

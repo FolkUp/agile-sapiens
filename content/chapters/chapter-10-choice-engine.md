@@ -39,8 +39,8 @@ act_prev: "/chapters/chapter-7-don-quixote"
 act_conclusion: true
 
 # SEO Enhancement
-keywords: ["william gibson", "cyberpunk", "движок выбора (choice engine)", "neuromancer", "интеграция ИИ (AI integration)", "корпоративное киберпространство (corporate cyberspace)", "будущее труда (future of work)", "сценарии 2030 (2030 scenarios)"]
-og_title: "Chapter 10: Gibson Choice Engine - Jacking Into the AI Future"
+keywords: ["уильям гибсон", "киберпанк", "движок выбора", "нейромант", "интеграция ИИ", "корпоративное киберпространство", "будущее труда", "сценарии 2030"]
+og_title: "Глава 10: Движок выбора Гибсона — погружение в будущее ИИ"
 og_description: "Final Act III chapter: Cyberpunk simulation of AI integration. How to live and work in Gibson's cyberspace made real through corporate transformation."
 twitter_description: "Final chapter: Gibson's Choice Engine for AI workplace. Cyberpunk DNA meets corporate reality in 2030 scenarios."
 ---

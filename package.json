@@ -1,7 +1,7 @@
 {
   "name": "agile-sapiens",
   "version": "1.0.7",
-  "description": "The Agile Sapiens Project — A comprehensive methodology for improving human intelligence and adaptability",
+  "description": "AGILE SAPIENS — The Future of Work in the Age of Artificial Intelligence | Scientific Popular Monograph",
   "type": "module",
   "scripts": {
     "dev": "hugo server --buildDrafts --buildFuture",
@@ -19,10 +19,11 @@
   },
   "keywords": [
     "agile-sapiens",
-    "methodology",
-    "intelligence",
-    "adaptability",
-    "research",
+    "artificial-intelligence",
+    "future-of-work",
+    "scientific-popular",
+    "monograph",
+    "workplace-transformation",
     "folkup"
   ],
   "author": "FolkUp",
@@ -41,7 +42,7 @@
     "type": "git",
     "url": "https://github.com/FolkUp/agile-sapiens.git"
   },
-  "homepage": "https://agile.folkup.app",
+  "homepage": "https://sapiens.folkup.life",
   "bugs": {
     "url": "https://github.com/FolkUp/agile-sapiens/issues"
   }

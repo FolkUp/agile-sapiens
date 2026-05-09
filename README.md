@@ -23,7 +23,7 @@ AGILE SAPIENS explores how artificial intelligence is reshaping the future of wo
 - **Format:** Serialized publication (bi-weekly releases)
 - **Duration:** 12-week campaign
 - **Distribution:** Academic networks (PostNaука-style platforms, literary magazines)
-- **Target:** 75K high-engagement intellectual elite audience
+- **Target:** High-engagement intellectual elite audience (size under strategic review)
 
 ## Development
 
@@ -39,7 +39,7 @@ AGILE SAPIENS explores how artificial intelligence is reshaping the future of wo
 ✅ **Constitutional Decision** — Evidence-first validation COMPLETE (2026-05-09)  
 ✅ **Content Excellence** — "Literary Business Analysis" methodology verified across 11 chapters  
 ✅ **Banking-Level Quality** — All chapters ≤25% mono% compliance achieved  
-✅ **Strategic Excellence** — 12-week intellectual elite campaign ready for 75K high-engagement target  
+📊 **Strategic Review** — 12-week intellectual elite campaign (audience targeting under hostile verification review)  
 ✅ **Competitive Advantage** — "Living characters" methodology protected and preserved  
 📊 **Strategic Transformation Complete** — Evidence-based pivot to intellectual elite audience
 

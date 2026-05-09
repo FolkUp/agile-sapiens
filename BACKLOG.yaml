@@ -58,12 +58,12 @@ tasks:
     category: marketing
     description: >-
       Implement comprehensive marketing strategy for 12-week serialization campaign.
-      Focus on leveraging "Харари meets Dilbert" positioning for 500K+ views target.
+      Focus on Literary Business Analysis methodology for 75K intellectual elite target.
       Publication-ready v1.0.7 content requires strategic distribution excellence.
     constitutional_requirement: evidence_first_methodology
     evidence_required:
-      - Target audience analysis (business professionals + satirical literature readers)
-      - Distribution channel optimization (Medium, LinkedIn, corporate newsletters)
+      - Target audience analysis (intellectual elite + academic community)
+      - Distribution channel optimization (PostNauka-style platforms, literary magazines, academic networks)
       - Engagement strategy (weekly chapter releases with community interaction)
       - Success metrics definition (views, shares, reader retention)
     acceptance_criteria:
@@ -100,7 +100,7 @@ tasks:
 
   - id: AGIL-150
     project: AGIL
-    title: 'Brand Reinforcement — "Харари meets Dilbert" Positioning'
+    title: 'Brand Reinforcement — Literary Business Analysis Positioning'
     priority: P0
     status: ready
     category: branding
@@ -124,12 +124,12 @@ tasks:
 
   - id: AGIL-151
     project: AGIL
-    title: 'Analytics Implementation — 500K+ Views Tracking System'
+    title: 'Analytics Implementation — 75K Intellectual Elite Engagement Tracking'
     priority: P0
     status: ready
     category: analytics
     description: >-
-      Implement comprehensive analytics tracking for 500K+ views target.
+      Implement comprehensive analytics tracking for 75K intellectual elite engagement target.
       Monitor reader engagement, retention, and conversion metrics.
       Evidence-based optimization for publication excellence.
     constitutional_requirement: evidence_first_methodology

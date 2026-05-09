@@ -50,7 +50,7 @@ Chapter conclusions that tie to the overall monograph thesis...
 
 **Editorial Checklist (MANDATORY):**
 - [ ] All factual claims sourced (КиберГонзо verified)
-- [ ] Voice consistency maintained ("Harari meets Dilbert")
+- [ ] Voice consistency maintained ("Literary Business Analysis")
 - [ ] [НЕПРОВЕРЕНО] markers applied appropriately or claims removed
 - [ ] Controversy calibration appropriate (~75-80%)
 - [ ] Cross-references to other chapters added

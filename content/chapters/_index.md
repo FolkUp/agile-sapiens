@@ -5,12 +5,12 @@ weight: 10
 
 keywords: ["главы", "оглавление", "AGILE SAPIENS", "ИИ и труд", "будущее работы"]
 og_title: "AGILE SAPIENS — Главы"
-og_description: "11 глав + 3 интермедии. Литературная ДНК встречает корпоративную реальность."
+og_description: "11 глав + 3 интермедии. Литературный анализ бизнеса с академическими стандартами."
 ---
 
 Навигация по монографии: **11 глав + 3 интермедии в 3 актах** — как ИИ меняет труд и организации.
 
-**Editorial Standard:** Banking-level verification · Literary DNA methodology · «Харари встречает Дилберта»
+**Editorial Standard:** Banking-level verification · Literary Business Analysis methodology · Academic rigor with practical insights
 
 ---
 
@@ -64,7 +64,7 @@ og_description: "11 глав + 3 интермедии. Литературная 
 
 **Готово:** Акты I–III (Главы 0–10) + 3 интермедии — полный объём монографии.
 **Фаза:** production polish, готовность к публикации.
-**Голос:** консистентный «Харари встречает Дилберта» на всех главах.
+**Голос:** консистентный «Literary Business Analysis» на всех главах.
 **Качество:** banking-level editorial с OSINT-верификацией.
 
 ### Метрики качества
@@ -72,5 +72,5 @@ og_description: "11 глав + 3 интермедии. Литературная 
 - **Объём:** ~70 000 слов
 - **Источники:** 200+ верифицированных академических и индустриальных
 - **Редакционная верификация:** Alpha+Beta hostile review на каждой главе
-- **Консистентность голоса:** системная интеграция «workplace cynicism»
+- **Консистентность голоса:** системная интеграция Literary Business Analysis methodology
 - **Техническая точность:** OSINT-проверка статистики и кейсов

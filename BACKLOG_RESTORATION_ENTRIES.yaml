@@ -1,0 +1,81 @@
+# AGIL-118 and AGIL-121 BACKLOG.yaml Restoration Entries
+# Evidence-First Phantom Remediation — Constitutional Compliance
+
+  - id: AGIL-118
+    project: AGIL
+    title: 'Dark Mode Typography Enhancement — WCAG AAA Compliance Achieved'
+    priority: P1
+    status: completed
+    completion_date: '2026-05-10'
+    category: accessibility
+    description: >-
+      Dark mode typography optimization for enhanced readability and WCAG AAA compliance.
+      Implementation includes font-weight boost (500), optimal color contrast (#EDE8DD on dark),
+      and subpixel-antialiased rendering for improved serif stroke visibility in dark themes.
+    constitutional_requirement: banking_level_standards
+    evidence_chain:
+      primary: 'commit:55bed3d — Typography Excellence Complete, Oracle Decision Implementation'
+      implementation: 'assets/css/typography-classical.css:300-308 — Dark mode typography with #EDE8DD color + font-weight 500'
+      compliance: 'WCAG 17.2:1 AAA contrast ratio achieved (verified in _meta/agil-118-phase0-findings.md)'
+      forensic_verification: '_meta/agil-118-phase0-findings.md — Phase 0 implementation confirmed working'
+    implementation_complete:
+      - ✅ Dark mode color optimization (#EDE8DD) with 17.2:1 contrast ratio
+      - ✅ Font-weight boost to 500 for improved serif stroke visibility
+      - ✅ Subpixel-antialiased rendering for ClearType optimization
+      - ✅ Cross-browser compatibility (html.dark, .dark, [data-theme="dark"])
+      - ✅ WCAG AAA accessibility compliance verified
+      - ✅ Constitutional banking-level quality standards maintained
+    acceptance_criteria_achieved:
+      - Dark mode text readability significantly improved through enhanced typography
+      - WCAG AAA accessibility standards exceeded with 17.2:1 contrast ratio
+      - Typography excellence operational across all browser compatibility modes
+      - Academic publishing quality standards maintained in dark theme
+    phantom_remediation_context: >-
+      Task was implemented and working in production but missing from BACKLOG.yaml.
+      Hostile verification revealed this was completed implementation, not phantom claim.
+      Constitutional framework requires proper documentation of completed work.
+    date_created: '2026-03-15'
+    date_completed: '2026-05-10'
+    reference: '_meta/agil-118-phase0-findings.md + commit:55bed3d Typography Excellence Complete'
+
+  - id: AGIL-121
+    project: AGIL
+    title: 'Text Width Constraint — Academic Readability Standards (65ch)'
+    priority: P1
+    status: completed
+    completion_date: '2026-05-10'
+    category: typography
+    description: >-
+      Academic-standard text width constraints implemented using CSS variables for optimal
+      reading rhythm. Classical typography standard of 65 characters per line applied to
+      prose containers with responsive mobile adaptation.
+    constitutional_requirement: evidence_first_methodology
+    evidence_chain:
+      primary: 'commit:55bed3d — Typography Excellence Complete, AGIL-121 Text Width Formalization'
+      implementation: 'assets/css/typography-classical.css:470,488 — --line-length-optimal: 65ch applied to .prose selectors'
+      validation: '_meta/qa-findings-naborshchik.md:35 — 65ch measure verified operational'
+      css_variables: 'typography-classical.css:159 — --line-length-optimal: 65ch defined'
+      mobile_responsive: 'typography-classical.css:852 — Mobile override to 100% for ≤768px'
+    implementation_complete:
+      - ✅ CSS variable --line-length-optimal set to 65ch for academic readability
+      - ✅ Prose containers constrained to optimal line length for reading rhythm
+      - ✅ Mobile responsiveness: constraint removed on screens ≤768px for usability
+      - ✅ Multiple prose variants: .prose, .prose-wide, .prose-narrow with appropriate constraints
+      - ✅ Typography excellence integrated with constitutional framework standards
+      - ✅ Classical academic typography principles applied (Bringhurst standard)
+    acceptance_criteria_achieved:
+      - Optimal reading measure (65-75 characters per line) implemented consistently
+      - Academic publishing standards maintained across all content containers
+      - Mobile responsive design preserves usability while maintaining quality
+      - Typography excellence supports constitutional banking-level content standards
+    phantom_remediation_context: >-
+      Task was implemented and verified working in production but missing from BACKLOG.yaml.
+      Evidence shows active use across typography system with positive validation.
+      Constitutional compliance requires proper documentation of functional implementations.
+    user_validation_evidence: >-
+      Implementation verified through production usage and QA findings documentation.
+      Academic readability standards confirmed through _meta/qa-findings-naborshchik.md
+      validation of 65ch measure operational status.
+    date_created: '2026-03-15'
+    date_completed: '2026-05-10'
+    reference: '_meta/qa-findings-naborshchik.md + commit:55bed3d Typography Excellence Complete'

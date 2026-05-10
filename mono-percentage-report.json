@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T02:47:39.892Z",
+  "timestamp": "2026-05-10T20:10:37.281Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -33,15 +33,15 @@
     },
     {
       "file": "chapter-10-choice-engine.md",
-      "totalSentences": 315,
-      "monotoneSentences": 24,
-      "monoPercentage": 7.6,
+      "totalSentences": 403,
+      "monotoneSentences": 22,
+      "monoPercentage": 5.5,
       "repeatedPatterns": [
-        "\"перевод с корп...\" x10",
+        "\"киберпространст...\" x4",
+        "\"в корпоративном...\" x3",
+        "\"перевод с корп...\" x3",
         "\"hr классифициру...\" x2",
-        "\"вопрос гибсона...\" x2",
-        "\"текстура гибсо...\" x2",
-        "\"киберпространст...\" x2"
+        "\"вопрос гибсона...\" x2"
       ]
     },
     {
@@ -111,9 +111,9 @@
     },
     {
       "file": "chapter-6-jekyll-hyde.md",
-      "totalSentences": 520,
-      "monotoneSentences": 32,
-      "monoPercentage": 6.2,
+      "totalSentences": 504,
+      "monotoneSentences": 30,
+      "monoPercentage": 6,
       "repeatedPatterns": [
         "\"в организациях...\" x3",
         "\"algorithm avers...\" x3",

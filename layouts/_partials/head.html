@@ -52,6 +52,10 @@
 
   {{- /* Production build */ -}}
   {{- if hugo.IsProduction }}
+    {{- /* AGIL Typography Performance: Evidence-based font preloads for MEASURED critical fonts */ -}}
+    <link rel="preload" href="/fonts/source-sans-3/source-sans-3-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/playfair-display/playfair-display-bold.woff2" as="font" type="font/woff2" crossorigin />
+
     {{- $styles := slice $variablesCss $mainCss $customCss | resources.Concat "css/compiled/main.css" | minify | fingerprint }}
     <link rel="preload" href="{{ $styles.RelPermalink }}" as="style" integrity="{{ $styles.Data.Integrity }}" />
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" integrity="{{ $styles.Data.Integrity }}" />

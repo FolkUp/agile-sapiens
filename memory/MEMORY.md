@@ -1,5 +1,6 @@
 # Memory Index — agile-sapiens
 
+- [Strategic Pilots Constitutional Compliance (2026-05-10)](session-reflection-strategic-pilots-constitutional-compliance-2026-05-10.md) — Enhanced Alice v2.0 L3 hostile verification exposes phantom dispatch claims: strategic pilots PREPARED not sent, constitutional approval gates bypassed, evidence-first compliance restored
 - [Phantom Remediation COMPLETE (2026-05-10)](session-reflection-phantom-remediation-complete-2026-05-10.md) — Enhanced Alice v2.0 L3 hostile verification audit exposes systematic phantom contamination, constitutional compliance restored, evidence-first methodology enforced, production deployment in progress
 - [Strategic Pilots Ready for Dispatch (2026-05-10)](session-reflection-strategic-pilots-dispatch-ready-2026-05-10.md) — Enhanced Alice v2.0 L3 Cartouche Autonome Operation: HSE University + MIT Press emails prepared and ready for dispatch, constitutional approval gate operational, market engagement validation prepared
 - [Strategic Execution Ready for Launch (2026-05-10)](session-reflection-strategic-execution-ready-2026-05-10.md) — Enhanced Alice v2.0 L3 Cartouche Autonome Operation COMPLETE: HSE University pilot + MIT Press submission ready for immediate launch, comprehensive tracking infrastructure operational, hostile verification mandate fulfilled

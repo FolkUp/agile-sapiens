@@ -460,7 +460,45 @@ blockquote::before {
   color: var(--folkup-charcoal);
 }
 
-/* Classical paragraph styling — AGIL-121: full content area width */
+/* AGIL-121: Formalized text width constraint for academic readability
+   Classical typography standard: 65-75 characters per line (Bringhurst).
+   Applied to prose containers to ensure optimal line length.
+   NOTE: Hextra's hx:max-w-4xl (~56rem ≈ 93ch) on <main> exceeds this;
+   explicit prose-level constraints ensure proper reading rhythm. */
+
+.prose {
+  max-width: var(--line-length-optimal); /* 65ch */
+}
+
+.prose-wide {
+  max-width: var(--line-length-wide); /* 85ch — for wider layouts */
+}
+
+.prose-narrow {
+  max-width: var(--line-length-narrow); /* 45ch — for captions, sidebars */
+}
+
+.content-enhanced {
+  max-width: var(--line-length-max); /* 70ch — balanced academic standard */
+}
+
+/* Paragraph text specifically constrained */
+.prose p,
+.content-enhanced p {
+  max-width: var(--line-length-optimal);
+}
+
+/* Mobile responsiveness: remove constraint on small screens */
+@media (max-width: 768px) {
+  .prose,
+  .prose-wide,
+  .prose-narrow,
+  .content-enhanced {
+    max-width: 100%;
+  }
+}
+
+/* Classical paragraph styling — AGIL-121: text width now properly constrained */
 .prose p {
   margin-bottom: var(--space-paragraph);
   text-align: justify;

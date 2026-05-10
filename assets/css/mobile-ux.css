@@ -263,3 +263,51 @@
     top: -0.25rem;
   }
 }
+
+/* AGIL-121 Mobile Typography Excellence: Landscape Orientation Support
+   Fixes: iPhone SE landscape (568w×320h), aggressive text reflow needed */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Reduce chapter reading padding for landscape mode */
+  .chapter-article {
+    padding-inline: clamp(0.75rem, 3vw, 1.25rem); /* Reduced from 4vw to 3vw */
+  }
+
+  /* More aggressive heading size reduction for landscape */
+  :root {
+    --text-3xl: 1.5rem;   /* Reduced from 1.75rem (mobile) to 1.5rem (landscape) */
+    --text-4xl: 1.75rem;  /* Reduced from 2rem to 1.75rem */
+    --text-2xl: 1.25rem;  /* Reduced from 1.5rem to 1.25rem */
+  }
+}
+
+/* AGIL-121 Mobile Typography Excellence: Large Text Preference Support
+   Accessibility: Users with system large-text settings need adaptive typography */
+@media (prefers-large-text) {
+  :root {
+    --text-base-fluid: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem); /* Floor raised from 1rem to 1.125rem */
+    --line-height-body: 1.75; /* Increased from 1.65 for better large-text readability */
+  }
+
+  /* Touch targets scale up with text */
+  footer nav a,
+  .homepage-cta a {
+    min-height: 48px; /* Increased from 44px for large-text users */
+    padding-block: calc(var(--space-md) * 1.1);
+  }
+}
+
+/* AGIL-121 Mobile Typography Excellence: High Zoom Support
+   Ensures content remains readable at 200%+ user zoom levels */
+@supports (zoom: 2) {
+  @media (max-width: 400px) {
+    /* At 200% zoom, 320px viewport becomes 160px effective */
+    .chapter-article {
+      padding-inline: 0.5rem; /* Minimal padding for extreme zoom */
+    }
+
+    :root {
+      --text-3xl: 1.25rem;  /* Further heading reduction for zoom scenarios */
+      --text-4xl: 1.5rem;
+    }
+  }
+}

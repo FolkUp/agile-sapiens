@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-05-09T00:13:45.235Z",
+  "timestamp": "2026-05-10T02:47:39.892Z",
   "target": "≤25%",
-  "compliantChapters": 11,
-  "totalChapters": 11,
+  "compliantChapters": 12,
+  "totalChapters": 12,
   "overallCompliant": true,
   "results": [
     {
@@ -33,9 +33,9 @@
     },
     {
       "file": "chapter-10-choice-engine.md",
-      "totalSentences": 306,
-      "monotoneSentences": 26,
-      "monoPercentage": 8.5,
+      "totalSentences": 315,
+      "monotoneSentences": 24,
+      "monoPercentage": 7.6,
       "repeatedPatterns": [
         "\"перевод с корп...\" x10",
         "\"hr классифициру...\" x2",
@@ -45,10 +45,23 @@
       ]
     },
     {
+      "file": "chapter-2-frankenstein-optimized.md",
+      "totalSentences": 341,
+      "monotoneSentences": 28,
+      "monoPercentage": 8.2,
+      "repeatedPatterns": [
+        "\"виктор франкенш...\" x7",
+        "\"исключительно п...\" x3",
+        "\"существо франке...\" x3",
+        "\"зомби процессы...\" x3",
+        "\"франкенштейн пр...\" x2"
+      ]
+    },
+    {
       "file": "chapter-2-frankenstein.md",
-      "totalSentences": 295,
-      "monotoneSentences": 51,
-      "monoPercentage": 17.3,
+      "totalSentences": 308,
+      "monotoneSentences": 53,
+      "monoPercentage": 17.2,
       "repeatedPatterns": [
         "\"перевод автора...\" x15",
         "\"иллюстрация ав...\" x8",
@@ -124,9 +137,9 @@
     },
     {
       "file": "chapter-8-time-machine.md",
-      "totalSentences": 196,
+      "totalSentences": 203,
       "monotoneSentences": 10,
-      "monoPercentage": 5.1,
+      "monoPercentage": 4.9,
       "repeatedPatterns": [
         "\"world economic...\" x2",
         "\"не потому что з...\" x2",
@@ -137,9 +150,9 @@
     },
     {
       "file": "chapter-9-three-scenarios.md",
-      "totalSentences": 236,
+      "totalSentences": 238,
       "monotoneSentences": 31,
-      "monoPercentage": 13.1,
+      "monoPercentage": 13,
       "repeatedPatterns": [
         "\"корпоративная...\" x4",
         "\"корпоративный...\" x3",

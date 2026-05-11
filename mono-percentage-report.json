@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T20:10:37.281Z",
+  "timestamp": "2026-05-11T17:18:21.225Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -111,15 +111,15 @@
     },
     {
       "file": "chapter-6-jekyll-hyde.md",
-      "totalSentences": 504,
-      "monotoneSentences": 30,
-      "monoPercentage": 6,
+      "totalSentences": 261,
+      "monotoneSentences": 13,
+      "monoPercentage": 5,
       "repeatedPatterns": [
         "\"в организациях...\" x3",
-        "\"algorithm avers...\" x3",
         "\"longmans green...\" x2",
-        "\"первая трансфор...\" x2",
-        "\"если бы джекил...\" x2"
+        "\"стивенсон описа...\" x2",
+        "\"world economic...\" x2",
+        "\"algorithm avers...\" x2"
       ]
     },
     {
@@ -137,15 +137,14 @@
     },
     {
       "file": "chapter-8-time-machine.md",
-      "totalSentences": 203,
-      "monotoneSentences": 10,
-      "monoPercentage": 4.9,
+      "totalSentences": 273,
+      "monotoneSentences": 8,
+      "monoPercentage": 2.9,
       "repeatedPatterns": [
         "\"world economic...\" x2",
-        "\"не потому что з...\" x2",
-        "\"проверка реаль...\" x2",
-        "\"ключевое понима...\" x2",
-        "\"ключевой принци...\" x2"
+        "\"принцип уэллса...\" x2",
+        "\"ключевой принци...\" x2",
+        "\"финансовые конс...\" x2"
       ]
     },
     {

@@ -19,7 +19,7 @@ function measureMonotone(text) {
         .filter(s => !s.trim().startsWith('⁶'))
         .map(s => s.trim());
 
-    if (sentences.length === 0) return 0;
+    if (sentences.length === 0) return { percentage: 0, sentenceCount: 0 };
 
     // Count sentences starting with same patterns
     let monotoneCount = 0;
@@ -67,7 +67,7 @@ function measureMonotone(text) {
         });
     }
 
-    return percentage;
+    return { percentage, sentenceCount: sentences.length };
 }
 
 // Read the chapter file
@@ -75,15 +75,15 @@ const chapterPath = path.join(__dirname, '..', 'content', 'chapters', 'chapter-8
 const content = fs.readFileSync(chapterPath, 'utf-8');
 
 console.log('=== Chapter 8 Time Machine Monotone Analysis ===');
-const monotonePercentage = measureMonotone(content);
+const monotoneResult = measureMonotone(content);
 
 // Save baseline metrics
 const baselineData = {
     chapter: 8,
     title: "Time Machine",
     date: new Date().toISOString().split('T')[0],
-    monotone_percentage: parseFloat(monotonePercentage.toFixed(1)),
-    total_sentences: content.split(/[.!?]+/).filter(s => s.trim().length > 30 && !s.trim().startsWith('#') && !s.trim().startsWith('>')).length,
+    monotone_percentage: parseFloat(monotoneResult.percentage.toFixed(1)),
+    total_sentences: monotoneResult.sentenceCount,
     word_count: content.replace(/^---[\s\S]*?---/, '').split(/\s+/).filter(w => w.trim().length > 0).length,
     measurement_type: "baseline",
     notes: "Wells pastiche baseline - scientific exposition tolerance expected"

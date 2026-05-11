@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-11T17:18:21.225Z",
+  "timestamp": "2026-05-11T17:47:38.750Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -137,11 +137,11 @@
     },
     {
       "file": "chapter-8-time-machine.md",
-      "totalSentences": 273,
+      "totalSentences": 275,
       "monotoneSentences": 8,
       "monoPercentage": 2.9,
       "repeatedPatterns": [
-        "\"world economic...\" x2",
+        "\"всемирный экон...\" x2",
         "\"принцип уэллса...\" x2",
         "\"ключевой принци...\" x2",
         "\"финансовые конс...\" x2"

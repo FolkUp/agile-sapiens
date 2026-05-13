@@ -147,7 +147,79 @@ powershell.exe -ExecutionPolicy Bypass -File "scripts\constitutional-hooks-simpl
             exit 0
         }
 
-        # Check for constitutional changes
+        # STEP 1: SECRET SCANNING (Banking-Level Security)
+        Write-Host "   Secret scanning verification..." -ForegroundColor Cyan
+
+        # Get all files in commits being pushed
+        $ChangedFiles = git diff --name-only origin/main..HEAD 2>$null
+        $SecretsFound = @()
+
+        # Define secret patterns (Banking-Level Security Standards)
+        $SecretPatterns = @(
+            @{ Pattern = "(?i)(password\s*[=:]\s*)['\`"][^'\`"]{8,}['\`"]"; Description = "Password assignment" }
+            @{ Pattern = "(?i)(api[_-]?key\s*[=:]\s*)['\`"][A-Za-z0-9/+]{20,}['\`"]"; Description = "API key" }
+            @{ Pattern = "(?i)(secret[_-]?key\s*[=:]\s*)['\`"][A-Za-z0-9/+]{20,}['\`"]"; Description = "Secret key" }
+            @{ Pattern = "(?i)(token\s*[=:]\s*)['\`"][A-Za-z0-9._-]{20,}['\`"]"; Description = "Access token" }
+            @{ Pattern = "-----BEGIN [A-Z ]+-----"; Description = "Private key (PEM format)" }
+            @{ Pattern = "sk-[A-Za-z0-9]{20,}"; Description = "Anthropic API key" }
+            @{ Pattern = "xox[baprs]-[A-Za-z0-9-]+"; Description = "Slack token" }
+            @{ Pattern = "ghp_[A-Za-z0-9]{36}"; Description = "GitHub personal access token" }
+            @{ Pattern = "(?i)(database[_-]?url\s*[=:]\s*)['\`"][^'\`"]*password[^'\`"]*['\`"]"; Description = "Database connection string with password" }
+        )
+
+        foreach ($file in $ChangedFiles) {
+            if (Test-Path $file -ErrorAction SilentlyContinue) {
+                $content = Get-Content $file -Raw -ErrorAction SilentlyContinue
+                if ($content) {
+                    foreach ($secretPattern in $SecretPatterns) {
+                        if ($content -match $secretPattern.Pattern) {
+                            $SecretsFound += @{
+                                File = $file
+                                Type = $secretPattern.Description
+                                Pattern = $secretPattern.Pattern
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if ($SecretsFound.Count -gt 0) {
+            Write-Host ""
+            Write-Host "SECURITY VIOLATION: SECRETS DETECTED" -ForegroundColor Red -BackgroundColor Yellow
+            Write-Host "Banking-level security standards violated:" -ForegroundColor Red
+            foreach ($secret in $SecretsFound) {
+                Write-Host "   - $($secret.File): $($secret.Type)" -ForegroundColor Red
+            }
+            Write-Host ""
+            Write-Host "Remediation required:" -ForegroundColor Yellow
+            Write-Host "   1. Remove secrets from source files" -ForegroundColor White
+            Write-Host "   2. Move secrets to environment variables" -ForegroundColor White
+            Write-Host "   3. Add secret patterns to .gitignore" -ForegroundColor White
+            Write-Host "   4. Consider using .env files (ignored by git)" -ForegroundColor White
+            Write-Host ""
+
+            # Log security violation
+            $SecurityViolation = @{
+                Timestamp = (Get-Date).ToString()
+                Hook = "pre-push"
+                ViolationType = "SECRETS_DETECTED"
+                Secrets = $SecretsFound
+            }
+
+            if (-not (Test-Path "_meta")) {
+                New-Item -ItemType Directory "_meta" -Force | Out-Null
+            }
+
+            $ViolationFile = "_meta\security-violation-$(Get-Date -Format 'yyyyMMdd-HHmmss').json"
+            $SecurityViolation | ConvertTo-Json -Depth 3 | Out-File $ViolationFile -Encoding UTF8
+
+            exit 1
+        }
+
+        Write-Host "   Secret scanning passed - no secrets detected" -ForegroundColor Green
+
+        # STEP 2: Check for constitutional changes
         $ConstitutionalCommits = $LocalCommits | Where-Object { $_ -match "constitutional|framework|banking.*level" }
         if ($ConstitutionalCommits) {
             Write-Host "   Constitutional framework changes detected" -ForegroundColor Magenta

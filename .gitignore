@@ -4,14 +4,21 @@
 
 # === SECRETS & CREDENTIALS ===
 *.env
+*.env.local
 *.secret
 *.key
 *.pem
 *.p12
+*.crt
 *.jks
+.credentials.json
+credentials*.json
+*token*
+settings.local.json
 .aws/
 .cloudflare/
 .docker/credentials
+.docker/config.json
 .sops.yaml
 
 # === SYSTEM & CACHE ===

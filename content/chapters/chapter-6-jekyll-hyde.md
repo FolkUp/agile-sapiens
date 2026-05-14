@@ -38,6 +38,10 @@ related:
 sensitive: false
 toc: true
 draft: false
+optimization_date: "2026-05-14"
+baseline_monotone: "49.8%"
+target_monotone: "≤25%"
+optimization_status: "baseline_preserved"
 ---
 > **Chapter Summary:** Парадокс intelligence amplification. Как корпоративное внедрение инструментов «усиления интеллекта» повторяет сюжет Стивенсона: добровольная трансформация → зависимость → потеря контроля. Почему автоматизация больше половины рабочих часов — не техническая проблема, а кризис идентичности. И что такое algorithm aversion — последний рубеж обороны человека.
 

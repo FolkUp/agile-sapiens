@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-11T22:33:49.308Z",
+  "generated": "2026-05-14T18:00:02.800Z",
   "methodology": "scripts/editorial/sentence-metrics.cjs",
   "rubric_source": ".claude/EDITORIAL_RUBRIC.md",
   "results": [
@@ -65,22 +65,22 @@
     },
     {
       "file": "chapter-10-choice-engine.md",
-      "sentences_total": 383,
-      "words_total": 4511,
-      "avg_sentence_words": 11.78,
+      "sentences_total": 327,
+      "words_total": 5287,
+      "avg_sentence_words": 16.17,
       "distribution_count": {
-        "sub5": 49,
-        "short": 206,
-        "medium": 91,
-        "long": 27,
-        "extra": 10
+        "sub5": 7,
+        "short": 152,
+        "medium": 107,
+        "long": 35,
+        "extra": 26
       },
       "distribution_pct": {
-        "sub5": 12.8,
-        "short": 53.8,
-        "medium": 23.8,
-        "long": 7,
-        "extra": 2.6
+        "sub5": 2.1,
+        "short": 46.5,
+        "medium": 32.7,
+        "long": 10.7,
+        "extra": 8
       },
       "rubric_target_pct": {
         "short": "30-35",
@@ -88,29 +88,29 @@
         "long": "20-25",
         "extra": "<5"
       },
-      "monotone_runs": 30,
-      "monotone_sentences": 104,
-      "monotone_pct": 27.2,
-      "flow_disruptions": 46
+      "monotone_runs": 26,
+      "monotone_sentences": 87,
+      "monotone_pct": 26.6,
+      "flow_disruptions": 45
     },
     {
       "file": "chapter-2-frankenstein-optimized.md",
-      "sentences_total": 301,
-      "words_total": 3698,
-      "avg_sentence_words": 12.29,
+      "sentences_total": 234,
+      "words_total": 3765,
+      "avg_sentence_words": 16.09,
       "distribution_count": {
-        "sub5": 26,
-        "short": 155,
-        "medium": 91,
-        "long": 25,
-        "extra": 4
+        "sub5": 20,
+        "short": 98,
+        "medium": 62,
+        "long": 33,
+        "extra": 21
       },
       "distribution_pct": {
-        "sub5": 8.6,
-        "short": 51.5,
-        "medium": 30.2,
-        "long": 8.3,
-        "extra": 1.3
+        "sub5": 8.5,
+        "short": 41.9,
+        "medium": 26.5,
+        "long": 14.1,
+        "extra": 9
       },
       "rubric_target_pct": {
         "short": "30-35",
@@ -118,10 +118,10 @@
         "long": "20-25",
         "extra": "<5"
       },
-      "monotone_runs": 25,
-      "monotone_sentences": 88,
-      "monotone_pct": 29.2,
-      "flow_disruptions": 33
+      "monotone_runs": 19,
+      "monotone_sentences": 64,
+      "monotone_pct": 27.4,
+      "flow_disruptions": 50
     },
     {
       "file": "chapter-2-frankenstein.md",
@@ -245,22 +245,22 @@
     },
     {
       "file": "chapter-6-jekyll-hyde.md",
-      "sentences_total": 242,
-      "words_total": 5547,
-      "avg_sentence_words": 22.92,
+      "sentences_total": 625,
+      "words_total": 5319,
+      "avg_sentence_words": 8.51,
       "distribution_count": {
-        "sub5": 19,
-        "short": 83,
-        "medium": 52,
-        "long": 25,
-        "extra": 63
+        "sub5": 79,
+        "short": 470,
+        "medium": 70,
+        "long": 6,
+        "extra": 0
       },
       "distribution_pct": {
-        "sub5": 7.9,
-        "short": 34.3,
-        "medium": 21.5,
-        "long": 10.3,
-        "extra": 26
+        "sub5": 12.6,
+        "short": 75.2,
+        "medium": 11.2,
+        "long": 1,
+        "extra": 0
       },
       "rubric_target_pct": {
         "short": "30-35",
@@ -268,10 +268,10 @@
         "long": "20-25",
         "extra": "<5"
       },
-      "monotone_runs": 10,
-      "monotone_sentences": 34,
-      "monotone_pct": 14,
-      "flow_disruptions": 75
+      "monotone_runs": 80,
+      "monotone_sentences": 311,
+      "monotone_pct": 49.8,
+      "flow_disruptions": 7
     },
     {
       "file": "chapter-7-don-quixote.md",
@@ -455,8 +455,8 @@
     }
   ],
   "totals": {
-    "sentences": 3678,
-    "words": 48925,
-    "avg_words_per_sentence": 13.3
+    "sentences": 3938,
+    "words": 49540,
+    "avg_words_per_sentence": 12.58
   }
 }

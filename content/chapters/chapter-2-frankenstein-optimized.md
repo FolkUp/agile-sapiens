@@ -23,7 +23,7 @@ related:
 sensitive: false
 toc: true
 draft: false
-status: phantom-recovery-complete
+status: verified
 sources:
   - "Aldini, Giovanni. *An Account of the Late Improvements in Galvanism* (1804). London. Публичные демонстрации гальванизма 1803 года."
   - "GAO-05-105. «FBI Trilogy Project», February 2005. Government Accountability Office. Полный бюджет VCF около 170 млн долларов."

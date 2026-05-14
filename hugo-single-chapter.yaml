@@ -1,0 +1,63 @@
+# REVP-002 Single Chapter PoC Configuration
+# Hugo configuration for isolated chapter build
+
+baseURL: 'https://revp-002-poc.local'
+languageCode: 'ru-RU'
+title: 'AGILE Sapiens - Chapter 1 PoC'
+theme: 'hextra'
+
+# Single chapter content configuration
+contentDir: 'content'
+staticDir: 'static'
+publishDir: 'public-chapter1-poc'
+
+# Build parameters for PDF pipeline
+params:
+  editPage:
+    enable: false
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  page:
+    width: wide
+  theme:
+    default: light
+    displayToggle: false
+
+# Content processing
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        title: true
+        block: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+      wrapStandAloneImageWithinParagraph: false
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: github
+    tabWidth: 2
+
+# SEO and metadata
+enableRobotsTXT: false
+enableGitInfo: false
+
+# Menu configuration for single chapter
+menu:
+  main:
+    - name: "Глава 1: Жюль Верн программирует"
+      pageRef: "/chapters/chapter-1-jules-verne"
+      weight: 10
+
+# Build configuration
+build:
+  writeStats: false

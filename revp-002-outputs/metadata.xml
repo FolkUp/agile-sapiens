@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="id">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Глава 1: Жюль Верн программирует</dc:title>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">AGILE Sapiens</dc:creator>
+    <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">ru</dc:language>
+    <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">Как приключенческая литература XIX века заложила паттерны управления проектами</dc:description>
+    <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">FolkUp</dc:publisher>
+    <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2026-05-13</dc:date>
+  </metadata>
+</package>

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T20:10:37.281Z",
+  "timestamp": "2026-05-13T10:29:37.610Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -33,28 +33,28 @@
     },
     {
       "file": "chapter-10-choice-engine.md",
-      "totalSentences": 403,
-      "monotoneSentences": 22,
-      "monoPercentage": 5.5,
+      "totalSentences": 351,
+      "monotoneSentences": 17,
+      "monoPercentage": 4.8,
       "repeatedPatterns": [
-        "\"киберпространст...\" x4",
         "\"в корпоративном...\" x3",
+        "\"киберпространст...\" x3",
         "\"перевод с корп...\" x3",
-        "\"hr классифициру...\" x2",
-        "\"вопрос гибсона...\" x2"
+        "\"вопрос гибсона...\" x2",
+        "\"главное прозрен...\" x2"
       ]
     },
     {
       "file": "chapter-2-frankenstein-optimized.md",
-      "totalSentences": 341,
-      "monotoneSentences": 28,
-      "monoPercentage": 8.2,
+      "totalSentences": 301,
+      "monotoneSentences": 51,
+      "monoPercentage": 16.9,
       "repeatedPatterns": [
-        "\"виктор франкенш...\" x7",
-        "\"исключительно п...\" x3",
-        "\"существо франке...\" x3",
-        "\"зомби процессы...\" x3",
-        "\"франкенштейн пр...\" x2"
+        "\"перевод автора...\" x15",
+        "\"иллюстрация ав...\" x8",
+        "\"виктор франкенш...\" x6",
+        "\"frankenstein o...\" x4",
+        "\"существо франке...\" x3"
       ]
     },
     {
@@ -111,15 +111,15 @@
     },
     {
       "file": "chapter-6-jekyll-hyde.md",
-      "totalSentences": 504,
-      "monotoneSentences": 30,
+      "totalSentences": 636,
+      "monotoneSentences": 38,
       "monoPercentage": 6,
       "repeatedPatterns": [
+        "\"algorithm avers...\" x7",
         "\"в организациях...\" x3",
-        "\"algorithm avers...\" x3",
         "\"longmans green...\" x2",
         "\"первая трансфор...\" x2",
-        "\"если бы джекил...\" x2"
+        "\"не потому что с...\" x2"
       ]
     },
     {
@@ -137,15 +137,14 @@
     },
     {
       "file": "chapter-8-time-machine.md",
-      "totalSentences": 203,
-      "monotoneSentences": 10,
-      "monoPercentage": 4.9,
+      "totalSentences": 270,
+      "monotoneSentences": 8,
+      "monoPercentage": 3,
       "repeatedPatterns": [
         "\"world economic...\" x2",
-        "\"не потому что з...\" x2",
-        "\"проверка реаль...\" x2",
-        "\"ключевое понима...\" x2",
-        "\"ключевой принци...\" x2"
+        "\"принцип уэллса...\" x2",
+        "\"ключевой принци...\" x2",
+        "\"финансовые конс...\" x2"
       ]
     },
     {

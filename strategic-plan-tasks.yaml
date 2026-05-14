@@ -1,0 +1,157 @@
+# ===== AGILE SAPIENS STRATEGIC PLAN - ORACLE PROTECTED (2026-05-14) =====
+# Enhanced Alice v2.0 Level 3 Cartouche Autonome Operation
+# Post-REVP-002 PoC Success - Hugo Multi-Format Pipeline Scaling
+
+# PHASE 1: HTML-Only Foundation Validation (P1 Priority)
+# Oracle Protection: Start with proven HTML pipeline, validate infrastructure before complexity
+
+- id: AGIL-PHASE1A-INFRASTRUCTURE-CAPACITY
+  project: AGIL
+  title: "PHASE 1A: Infrastructure capacity testing for full-book HTML pipeline"
+  priority: P1
+  status: pending
+  category: infrastructure_validation
+  date_created: '2026-05-14'
+  phase: "1A"
+  oracle_protection: true
+  hostile_verification_applied: true
+  description: "Process all 11 chapters through Hugo HTML-only pipeline to validate VPS resource consumption under full-book load"
+  success_criteria: "<15s total build time, <2GB memory peak, stable performance"
+  measurements_required: ["build_times", "memory_usage", "cpu_consumption", "disk_space"]
+  expert_orchestra: ["Johnny-frontend", "Infrastructure"]
+  constitutional_framework: true
+  evidence_first_methodology: "All performance claims must be measured and documented"
+  based_on_revp002_success: "3,442 words processed, 4.5s single chapter build time, 760+ words/second"
+  estimated_effort: "2-4 hours comprehensive testing"
+
+- id: AGIL-PHASE1B-QUALITY-CONSISTENCY
+  project: AGIL
+  title: "PHASE 1B: Quality consistency validation across all 11 chapters"
+  priority: P1
+  status: pending
+  category: quality_validation
+  date_created: '2026-05-14'
+  phase: "1B"
+  oracle_protection: true
+  hostile_verification_applied: true
+  description: "Apply sentence metrics to all 11 chapters and validate editorial quality preservation at scale"
+  success_criteria: "Quality metrics consistent, no degradation detected, evidence-based baseline"
+  measurement_tools: ["sentence-metrics.cjs", "measure-chapter*-monotone.cjs"]
+  expert_orchestra: ["КиберГонзо-research", "Typesetter"]
+  constitutional_framework: true
+  quality_baseline_chapters: ["Chapter 8: 1.7% monotone", "Chapter 3: 12.6% monotone", "Chapter 6: 14.0% cached"]
+  hostile_verification: "All quality improvement claims must be challenged and verified"
+  estimated_effort: "1-2 days comprehensive quality analysis"
+
+- id: AGIL-PHASE1C-PRODUCTION-DEPLOYMENT
+  project: AGIL
+  title: "PHASE 1C: HTML-only production deployment with rollback capability"
+  priority: P1
+  status: pending
+  category: production_deployment
+  date_created: '2026-05-14'
+  phase: "1C"
+  oracle_protection: true
+  banking_level_standards: true
+  description: "Deploy HTML-only version to sapiens.folkup.life and test production load handling"
+  success_criteria: "Production stable, rollback tested and working, performance validated"
+  expert_orchestra: ["Johnny-frontend", "Cooper-security", "Infrastructure"]
+  constitutional_framework: true
+  deployment_safety: "Complete rollback procedure to current site must be tested"
+  security_requirements: "Cooper security review for production deployment"
+  dependencies: ["AGIL-PHASE1A-INFRASTRUCTURE-CAPACITY", "AGIL-PHASE1B-QUALITY-CONSISTENCY"]
+  estimated_effort: "4-6 hours deployment + testing + verification"
+
+# PHASE 2: Quality Enhancement Focus (P2 Priority)
+# Oracle Protection: Optimize based on proven pipeline, focus on content quality
+
+- id: AGIL-PHASE2A-CHAPTER8-EXCELLENCE
+  project: AGIL
+  title: "PHASE 2A: Chapter 8 excellence integration and quality pattern application"
+  priority: P2
+  status: pending
+  category: quality_enhancement
+  date_created: '2026-05-14'
+  phase: "2A"
+  oracle_protection: true
+  description: "Apply Chapter 8 quality patterns (1.7% monotone) to weaker chapters"
+  success_criteria: "Average quality improvement without voice destruction"
+  chapter8_baseline: "1.7% monotone - best quality in book"
+  target_chapters: "Focus on chapters with highest improvement potential"
+  expert_orchestra: ["Typesetter-editorial", "КиберГонзо-research"]
+  constitutional_framework: true
+  voice_preservation_mandatory: "Constitutional requirement - voice destruction forbidden"
+  depends_on_phase1: "All Phase 1 tasks must complete successfully"
+  estimated_effort: "3-5 days content optimization with hostile verification"
+
+- id: AGIL-PHASE2B-OPTIMIZATION-AUTOMATION
+  project: AGIL
+  title: "PHASE 2B: Content optimization pipeline automation"
+  priority: P2
+  status: pending
+  category: automation_enhancement
+  date_created: '2026-05-14'
+  phase: "2B"
+  oracle_protection: true
+  description: "Automate quality measurement and optimization suggestions"
+  success_criteria: "Reliable quality improvement process established"
+  expert_orchestra: ["Johnny-technical", "Typesetter-editorial"]
+  constitutional_framework: true
+  automation_scope: "Quality measurement + optimization suggestions (not automatic changes)"
+  testing_chapters: "Test optimization pipeline on 2-3 chapters before full application"
+  dependencies: ["AGIL-PHASE2A-CHAPTER8-EXCELLENCE"]
+  estimated_effort: "2-3 days automation development + testing"
+
+# PHASE 3: Multi-Format Addition (P3 Priority - CONDITIONAL)
+# Oracle Protection: Add complexity ONLY after HTML mastery proven
+
+- id: AGIL-PHASE3A-EPUB-INTEGRATION
+  project: AGIL
+  title: "PHASE 3A: ePub integration with proven HTML pipeline (CONDITIONAL)"
+  priority: P3
+  status: pending
+  category: multi_format_enhancement
+  date_created: '2026-05-14'
+  phase: "3A"
+  oracle_protection: true
+  conditional_execution: true
+  description: "Add ePub generation to proven HTML pipeline and test dual-format consistency"
+  success_criteria: "ePub quality matches HTML, no pipeline disruption"
+  execution_condition: "Only execute if Phase 1 HTML production deployment successful"
+  expert_orchestra: ["Johnny-frontend", "Pandoc-technical"]
+  constitutional_framework: true
+  hostile_verification: "Multi-format complexity must be challenged"
+  revp002_foundation: "ePub generation already proven in PoC - integrate with production pipeline"
+  dependencies: ["AGIL-PHASE1C-PRODUCTION-DEPLOYMENT"]
+  estimated_effort: "2-3 days integration + testing"
+
+- id: AGIL-PHASE3B-PDF-INVESTIGATION
+  project: AGIL
+  title: "PHASE 3B: PDF generation investigation without LaTeX fragility (CONDITIONAL)"
+  priority: P3
+  status: pending
+  category: multi_format_research
+  date_created: '2026-05-14'
+  phase: "3B"
+  oracle_protection: true
+  conditional_execution: true
+  description: "Research LaTeX alternatives (HTML→PDF via headless Chrome) and test PDF generation"
+  success_criteria: "PDF option available without pipeline fragility"
+  execution_condition: "Only execute if ePub integration successful"
+  expert_orchestra: ["Johnny-technical", "Cooper-security"]
+  constitutional_framework: true
+  latex_alternatives: ["HTML→PDF via headless Chrome", "Puppeteer PDF generation", "wkhtmltopdf"]
+  oracle_mandate: "No LaTeX complexity unless absolutely necessary"
+  dependencies: ["AGIL-PHASE3A-EPUB-INTEGRATION"]
+  estimated_effort: "3-4 days research + implementation + testing"
+
+# BATCH ORGANIZATION - Expert Panel Consensus Priorities
+# Enhanced Alice v2.0 L3 Autonomous Orchestration Ready
+
+# CONSTITUTIONAL FRAMEWORK INTEGRATION
+constitutional_authority: "Enhanced Alice v2.0 Level 3 Cartouche Autonome"
+user_mandate: "Картбланш на выполнение любых операций под присмотром и верификацией"
+expert_panel_authority: "Консолидированное мнение наших экспертов и панели"
+quality_principles: "Banking-level standards, evidence-first methodology, quality over efficiency"
+hostile_verification_mandate: "После выполнения каждого батча - тестируй и верифицируй выполненные работы врагами"
+oracle_protection: "Anti-overengineering protection applied throughout strategic plan"

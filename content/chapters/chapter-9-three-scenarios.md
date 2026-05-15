@@ -8,7 +8,7 @@ weight: 100
 chapter: 9
 act: "III: Future"
 category: "decision-frameworks"
-status: "constitutional_implementation_complete"
+status: "completed"
 sources:
   - "Vinge, Vernor. «The Coming Technological Singularity: How to Survive in the Post-Human Era» (1993). NASA VISION-21 Symposium."
   - "Kahneman, Daniel. *Thinking, Fast and Slow* (2011). Farrar, Straus and Giroux."

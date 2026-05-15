@@ -1,0 +1,150 @@
+/* AGILE SAPIENS — Reading Mode Implementation (AGIL-166)
+ * Author: Enhanced Alice v2.0 L3 Frontend Team · 2026-05-15
+ *
+ * Scope: Full-screen immersive reading mode with navigation hiding
+ * User request: "режим чтения" button for comfortable book navigation
+ *
+ * Implementation:
+ *  - Toggle button positioned at top-right
+ *  - .reading-mode class hides all navigation elements
+ *  - Content optimized for reading (centered, larger font)
+ *  - Responsive design for all devices
+ */
+
+/* Reading Mode Toggle Button */
+.reading-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--primary, #2563eb);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.reading-mode-toggle:hover {
+  background: var(--primary-hover, #1d4ed8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.reading-mode-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Reading Mode Styles */
+.reading-mode {
+  /* Hide all navigation elements */
+  .hextra-nav-container,
+  .hextra-sidebar,
+  .hextra-toc,
+  nav[aria-label="breadcrumb"],
+  .hextra-breadcrumb,
+  footer,
+  .apparatus-footer,
+  .chapter-support-cta {
+    display: none !important;
+  }
+
+  /* Optimize content for reading */
+  main,
+  .hextra-content,
+  article {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 2rem !important;
+  }
+
+  /* Typography optimizations for reading */
+  body {
+    font-size: 1.2rem !important;
+    line-height: 1.8 !important;
+  }
+
+  /* Enhanced paragraph spacing for reading comfort */
+  p {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Optimize headers in reading mode */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Remove unnecessary margins at the top */
+  body, html {
+    padding-top: 0 !important;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .reading-mode-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .reading-mode main,
+  .reading-mode .hextra-content,
+  .reading-mode article {
+    padding: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  .reading-mode body {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Dark mode support */
+.dark .reading-mode-toggle {
+  background: var(--primary-dark, #3b82f6);
+  color: var(--text-dark, #f9fafb);
+}
+
+.dark .reading-mode-toggle:hover {
+  background: var(--primary-dark-hover, #2563eb);
+}
+
+/* High contrast mode support (accessibility) */
+@media (prefers-contrast: high) {
+  .reading-mode-toggle {
+    border: 2px solid currentColor;
+    font-weight: 600;
+  }
+}
+
+/* Reduced motion support (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  .reading-mode-toggle {
+    transition: none;
+  }
+
+  .reading-mode-toggle:hover {
+    transform: none;
+  }
+}
+
+/* Focus styles for keyboard navigation (accessibility) */
+.reading-mode-toggle:focus {
+  outline: 2px solid var(--focus-color, #fbbf24);
+  outline-offset: 2px;
+}
+
+/* Print styles - hide toggle button when printing */
+@media print {
+  .reading-mode-toggle {
+    display: none !important;
+  }
+}

@@ -38,6 +38,10 @@
 {{ $mobileUxCSS := resources.Get "css/mobile-ux.css" | minify }}
 <link rel="stylesheet" href="{{ $mobileUxCSS.Permalink }}">
 
+{{/* AGIL-166: Reading Mode Implementation — Full-screen immersive reading */}}
+{{ $readingModeCSS := resources.Get "css/reading-mode.css" | minify }}
+<link rel="stylesheet" href="{{ $readingModeCSS.Permalink }}">
+
 {{/* Include JSON-LD structured data for SEO */}}
 {{- partial "custom/schema-jsonld.html" . }}
 
@@ -46,3 +50,7 @@
 
 {{/* Include cookie consent in head-end */}}
 {{- partial "custom/cookie-consent.html" . }}
+
+{{/* AGIL-166: Reading Mode JavaScript Implementation */}}
+{{ $readingModeJS := resources.Get "js/reading-mode.js" | minify }}
+<script src="{{ $readingModeJS.Permalink }}" defer></script>

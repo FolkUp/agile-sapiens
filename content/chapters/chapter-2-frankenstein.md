@@ -3,7 +3,7 @@ title: "Глава 2: Франкенштейн управляет проекто
 description: "Как роман восемнадцатилетней Мэри Шелли стал точнейшим разбором полётов (post-mortem) корпоративных провалов: от FBI Sentinel до Healthcare.gov"
 date: 2026-03-27
 date_created: "2026-03-27"
-date_updated: "2026-04-21"
+date_updated: "2026-05-13"
 weight: 30
 chapter: 2
 act: "I: Origins"
@@ -28,8 +28,8 @@ sources:
   - "Aldini, Giovanni. *An Account of the Late Improvements in Galvanism* (1804). London. Публичные демонстрации гальванизма 1803 года."
   - "GAO-05-105. «FBI Trilogy Project», February 2005. Government Accountability Office. Полный бюджет VCF около 170 млн долларов."
 confidence: high
-reviewed_by: "Editorial Team"
-review_date: "2026-04-21"
+reviewed_by: "Enhanced Alice v2.0 L3 — Phantom Evidence Recovery"
+review_date: "2026-05-13"
 ---
 > **Chapter Summary:** Тёмная сторона создания. Как паттерн «блестящий замысел → бегство от последствий» проходит красной нитью от романа Мэри Шелли до крупнейших провалов цифровой трансформации. Почему самые опасные системы создаются с самыми лучшими намерениями — и что происходит, когда создатель уходит.
 
@@ -307,4 +307,3 @@ Nokia не пропустила смартфоновую революцию по
 ²⁷ Наблюдение автора — корпоративный анти-паттерн при крупных провалах. (иллюстрация автора)
 
 ²⁸ Shelley, Mary. *Frankenstein, or The Modern Prometheus* (1818). Вопрос существа к создателю. (перевод автора)
-

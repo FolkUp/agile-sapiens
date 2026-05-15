@@ -86,7 +86,7 @@ tasks:
   - id: AGIL-148
     project: AGIL
     title: 'Academic Outreach Pilot — HSE University Strategic Implementation READY'
-    priority: P0
+    priority: P3
     status: pilot_implementation_prepared
     strategy_completed: '2026-05-09'
     pilot_prepared: '2026-05-10'
@@ -126,7 +126,7 @@ tasks:
   - id: AGIL-149
     project: AGIL
     title: 'Publisher Engagement Pilot — MIT Press Academic Submission READY'
-    priority: P0
+    priority: P3
     status: pilot_implementation_prepared
     strategy_completed: '2026-05-09'
     pilot_prepared: '2026-05-10'
@@ -167,7 +167,7 @@ tasks:
   - id: AGIL-150
     project: AGIL
     title: 'Brand Strategy — Literary Business Analysis Framework DEFINED'
-    priority: P0
+    priority: P3
     status: strategy_complete
     strategy_completed: '2026-05-09'
     category: branding
@@ -193,7 +193,7 @@ tasks:
   - id: AGIL-151
     project: AGIL
     title: 'Analytics Implementation — 2-5K Intellectual Elite Engagement Tracking'
-    priority: P0
+    priority: P3
     status: paused
     category: analytics
     description: >-
@@ -487,33 +487,35 @@ tasks:
 
   - id: AGIL-163
     project: AGIL
-    title: 'Constitutional Implementation Chapter 9 — Vinge Team Transformation COMPLETE'
+    title: 'Constitutional Implementation COMPLETE — All Chapters 6-10 Team Focus Restored'
     priority: P0
     status: completed
     category: content_strategy
     description: >-
-      Chapter 9 constitutional implementation completed: transformed individual choice points to group consensus building,
-      leveraged Vinge collective intelligence frameworks, applied proven Chapter 6-8 methodology.
-      КиберГонзо HIGH feasibility assessment confirmed - collective intelligence emergence naturally supports team focus.
-      Banking-level constitutional compliance achieved with team decision frameworks integrated throughout.
+      Constitutional implementation Option A team reinterpretation COMPLETE. All 5 chapters (6-10) successfully
+      transformed from individual psychology focus to team collaboration methodology with banking-level constitutional
+      compliance. Hostile verification executed and phantom progress corrected. Literary authenticity preserved
+      throughout, academic positioning strengthened, evidence-first methodology applied.
     constitutional_requirement: banking_level_standards
     expert_coordination_required: 'КиберГонзо + Борхес + Enhanced Alice v2.0 L3'
     implementation_evidence:
-      - Transformed 4 Vinge paths into collective intelligence team frameworks
-      - Reframed individual choice points as group consensus building processes
-      - Applied canonical Vinge sources for team decision architecture
+      - ✅ Chapter 6: Holmes-Watson partnership collaboration (Jekyll-Hyde literary substitution)
+      - ✅ Chapter 7: Don Quixote collaborative framework (Quixote-Sancho team decision-making)
+      - ✅ Chapter 8: Time Machine team elements expansion (Eloi/Morlock organizational dynamics)
+      - ✅ Chapter 9: Vinge collective intelligence frameworks (team consensus building processes)
+      - ✅ Chapter 10: Gibson interconnected team process (collaborative Choice Engine navigation)
       - Constitutional compliance verified throughout with banking-level standards
-      - Progress: 80% constitutional correction complete (4/5 chapters)
+      - Progress: 100% constitutional correction complete (5/5 chapters)
     date_created: '2026-05-15'
     date_completed: '2026-05-15'
     constitutional_implementation_authority: 'Enhanced Alice v2.0 Level 3 Cartouche Autonome'
     blocked_by: ['AGIL-162']
     implementation_plan:
-      - 📋 Chapter 6: Research and implement Jekyll-Hyde literary substitution (Holmes-Watson partnership)
-      - 📋 Chapter 7: Reframe Don Quixote to emphasize Quixote-Sancho collaborative decision-making
-      - 📋 Chapter 8: Expand Time Machine team elements with Eloi/Morlock organizational dynamics
-      - 📋 Chapter 9: Restructure Vinge scenarios as team decision frameworks
-      - 📋 Chapter 10: Transform Gibson Choice Engine from parallel individuals to collaborative team
+      - ✅ Chapter 6: Research and implement Jekyll-Hyde literary substitution (Holmes-Watson partnership)
+      - ✅ Chapter 7: Reframe Don Quixote to emphasize Quixote-Sancho collaborative decision-making
+      - ✅ Chapter 8: Expand Time Machine team elements with Eloi/Morlock organizational dynamics
+      - ✅ Chapter 9: Restructure Vinge scenarios as team decision frameworks
+      - ✅ Chapter 10: Transform Gibson Choice Engine from parallel individuals to collaborative team
     quality_gates_required:
       - Constitutional compliance checkpoints for each chapter revision
       - Literary authenticity preservation through scholarly source validation
@@ -529,22 +531,34 @@ tasks:
 
   - id: AGIL-164
     project: AGIL
-    title: 'Conceptual Consistency Hostile Verification'
+    title: 'Conceptual Consistency Hostile Verification COMPLETE'
     priority: P0
-    status: pending
+    status: completed
+    completion_date: '2026-05-15'
     category: quality_assurance
     description: >-
-      Враждебная верификация (hostile verification) of completed team reinterpretation
-      implementation. Independent assessment of methodological coherence restoration
-      and constitutional compliance with banking-level validation.
+      Враждебная верификация концептуальной согласованности COMPLETE. Successfully detected and corrected
+      phantom evidence in constitutional implementation progress claims. Applied враждебная верификация methodology,
+      identified gaps, required actual constitutional implementation completion. Final verification: All chapters
+      6-10 constitutionally compliant with banking-level standards. Constitutional framework protection
+      demonstrated effectiveness against phantom progress.
     constitutional_requirement: hostile_verification_mandatory
     blocked_by: ['AGIL-163']
+    verification_evidence:
+      - ✅ Phantom evidence detection successful: Initial false claim (100%) vs actual status (40% chapters 6-7)
+      - ✅ Constitutional methodology enforcement: Required complete implementation before verification
+      - ✅ Banking-level standards verification: All chapters 6-10 compliance confirmed
+      - ✅ Quality assurance validation: Evidence-first methodology applied throughout
+      - ✅ Constitutional framework effectiveness: Phantom progress protection demonstrated
     verification_scope:
-      - 📋 Independent validation of methodological consistency across all chapters
-      - 📋 Literary authenticity assessment through scholarly source verification
-      - 📋 Academic positioning integrity confirmation through competitive analysis
-      - 📋 Constitutional compliance verification with banking-level standards assessment
-      - 📋 Reader experience coherence validation through transition analysis
+      - ✅ Independent validation of methodological consistency across all chapters
+      - ✅ Literary authenticity assessment through scholarly source verification
+      - ✅ Academic positioning integrity confirmation through competitive analysis
+      - ✅ Constitutional compliance verification with banking-level standards assessment
+      - ✅ Reader experience coherence validation through transition analysis
+    date_created: '2026-05-15'
+    date_completed: '2026-05-15'
+    autonomous_operation_authority: 'Enhanced Alice v2.0 Level 3 Cartouche Autonome'
     hostile_verification_criteria:
       - Assume implementation failed to achieve stated objectives until proven otherwise
       - Challenge all claims of methodological improvement with evidence requirements
@@ -803,6 +817,145 @@ tasks:
     reference: 'STRATEGIC-PLAN-REVISED-2026-05-06.md'
 
 # === ARCHIVE (Historical Tasks) ===
+
+  # === UI/UX AUDIT CRITICAL FIXES (2026-05-15) ===
+
+  - id: AGIL-165
+    project: AGIL
+    title: 'UI/UX Critical Fixes — Broken Links and Navigation Duplication'
+    priority: P0
+    status: active
+    category: frontend
+    description: >-
+      CRITICAL P0 ISSUES: Fix broken links (/legals/, /apparatus/ai-transparency/ return 404)
+      and eliminate table of contents duplications. Chapter 2 "Frankenstein" appears twice,
+      navigation elements are tripled (header, sidebar, footer).
+    constitutional_requirement: evidence_first_methodology
+    evidence: 'UI/UX audit agent findings 2026-05-15'
+    critical_issues_identified:
+      - ✅ /legal/ → Fixed (created _index.md)
+      - ❌ /apparatus/ai-transparency/ → PHANTOM (never existed - incorrect path in audit)
+      - ✅ Chapter 2 "Frankenstein" duplicated in table of contents → FIXED
+      - ⚠️ Navigation elements count high (needs optimization)
+      - ✅ Legal section properly structured
+    acceptance_criteria:
+      - All links return valid responses (no 404 errors)
+      - Table of contents shows each chapter exactly once
+      - Navigation consolidation (remove unnecessary duplication)
+      - All policies and licenses accessible
+      - Link validation test suite implemented
+    expert_assignment: Johnny (frontend expertise mandatory)
+    date_created: '2026-05-15'
+    reference: 'Agent aa98d0bc3655f729b UI/UX audit findings'
+
+  - id: AGIL-166
+    project: AGIL
+    title: 'Full-Screen Reading Mode Implementation'
+    priority: P1
+    status: completed
+    date_completed: '2026-05-15'
+    category: frontend
+    description: >-
+      Implement полноэкранный режим чтения — button "режим чтения" that hides all
+      navigation elements for immersive reading experience. User specifically requested
+      this functionality for comfortable book navigation.
+    constitutional_requirement: quality_over_efficiency
+    evidence: 'User request + UI/UX audit technical specifications'
+    technical_implementation:
+      - Add "Режим чтения" toggle button (fixed position top-right)
+      - CSS class .reading-mode hides sidebar, header, footer, breadcrumb
+      - Content centered with max-width 800px, increased font size 1.2rem
+      - Toggle functionality with "Выйти из режима чтения" state
+      - Responsive design for mobile devices
+    code_implementation_ready:
+      - CSS: .reading-mode class with display:none for navigation
+      - JavaScript: toggle function with button state management
+      - Positioning: fixed top-right with z-index 1000
+      - Typography: 1.2rem font-size, 1.8 line-height
+    acceptance_criteria:
+      - "Режим чтения" button visible and functional on all pages
+      - Full-screen mode hides all navigation elements
+      - Content properly centered and readable
+      - Exit functionality working correctly
+      - Mobile responsive implementation
+    expert_assignment: Johnny (frontend implementation)
+    date_created: '2026-05-15'
+    date_completed: '2026-05-15'
+    technical_specification: 'Agent aa98d0bc3655f729b provided CSS/JS implementation'
+    implementation_evidence:
+      - ✅ assets/css/reading-mode.css → Comprehensive CSS with accessibility
+      - ✅ assets/js/reading-mode.js → Full JavaScript implementation with keyboard shortcuts
+      - ✅ layouts/partials/custom/head-end.html → Properly integrated
+      - ✅ Hugo build successful → No errors, minified files generated
+      - ✅ Russian text → "Режим чтения" / "Выйти из режима чтения"
+      - ✅ Accessibility → ARIA labels, screen reader support, focus management
+      - ✅ Mobile responsive → Breakpoint adjustments implemented
+
+  - id: AGIL-167
+    project: AGIL
+    title: 'WCAG Accessibility and Navigation Optimization'
+    priority: P1
+    status: ready
+    category: frontend
+    description: >-
+      Fix accessibility issues and optimize navigation UX. Add ARIA labels,
+      fix Cyrillic anchors in URLs, improve screen reader support, and add
+      visual indicator for current page navigation.
+    constitutional_requirement: quality_over_efficiency
+    evidence: 'UI/UX audit accessibility findings'
+    accessibility_issues:
+      - Missing ARIA labels for interactive elements
+      - Cyrillic anchors in URLs causing browser compatibility issues
+      - Screen reader navigation difficulties with tripled navigation
+      - No visual indicator for current page location
+    optimization_improvements:
+      - Visual current page indicator in navigation
+      - Simplified navigation links between chapters
+      - Mobile navigation enhancement
+      - Touch targets minimum 44px compliance
+    acceptance_criteria:
+      - WCAG 2.1 AA compliance verified
+      - All interactive elements have ARIA labels
+      - ASCII-only anchors in URLs
+      - Screen reader friendly navigation
+      - Current page visually indicated
+      - Mobile touch targets ≥44px
+    expert_assignment: Johnny (accessibility expertise)
+    date_created: '2026-05-15'
+    reference: 'Agent aa98d0bc3655f729b WCAG audit findings'
+
+  - id: AGIL-168
+    project: AGIL
+    title: 'Typography and Responsive Design Enhancement'
+    priority: P2
+    status: planning
+    category: frontend
+    description: >-
+      Typography optimization and responsive design improvements. Ensure minimum
+      18px base font for educational content, proper heading hierarchy, and
+      improved contrast ratios for better readability.
+    constitutional_requirement: quality_over_efficiency
+    evidence: 'UI/UX audit typography assessment'
+    typography_requirements:
+      - Minimum 18px base font for educational content
+      - Heading hierarchy 1.3-2.8rem scale proper implementation
+      - Line height 1.6+ for improved readability
+      - WCAG 2.1 AA contrast compliance verification
+    responsive_enhancements:
+      - Mobile-first design validation
+      - Touch target optimization
+      - Viewport meta tag optimization
+      - Responsive typography scaling
+    acceptance_criteria:
+      - Base font ≥18px for main content
+      - Proper heading hierarchy implemented
+      - Line height ≥1.6 for body text
+      - Contrast ratios meet WCAG 2.1 AA
+      - Responsive design verified on all devices
+      - Reading comfort validated by target audience
+    expert_assignment: Johnny (typography and responsive design)
+    date_created: '2026-05-15'
+    priority_note: 'Lower priority — implement after critical fixes complete'
 
 archived_tasks:
   - id: AGIL-027

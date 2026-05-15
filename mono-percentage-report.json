@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T10:29:37.610Z",
+  "timestamp": "2026-05-14T22:12:38.483Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -33,22 +33,22 @@
     },
     {
       "file": "chapter-10-choice-engine.md",
-      "totalSentences": 351,
-      "monotoneSentences": 17,
-      "monoPercentage": 4.8,
+      "totalSentences": 349,
+      "monotoneSentences": 16,
+      "monoPercentage": 4.6,
       "repeatedPatterns": [
-        "\"в корпоративном...\" x3",
         "\"киберпространст...\" x3",
         "\"перевод с корп...\" x3",
         "\"вопрос гибсона...\" x2",
+        "\"в корпоративном...\" x2",
         "\"главное прозрен...\" x2"
       ]
     },
     {
       "file": "chapter-2-frankenstein-optimized.md",
-      "totalSentences": 301,
-      "monotoneSentences": 51,
-      "monoPercentage": 16.9,
+      "totalSentences": 309,
+      "monotoneSentences": 53,
+      "monoPercentage": 17.2,
       "repeatedPatterns": [
         "\"перевод автора...\" x15",
         "\"иллюстрация ав...\" x8",
@@ -111,15 +111,15 @@
     },
     {
       "file": "chapter-6-jekyll-hyde.md",
-      "totalSentences": 636,
-      "monotoneSentences": 38,
-      "monoPercentage": 6,
+      "totalSentences": 397,
+      "monotoneSentences": 18,
+      "monoPercentage": 4.5,
       "repeatedPatterns": [
-        "\"algorithm avers...\" x7",
+        "\"algorithm avers...\" x5",
         "\"в организациях...\" x3",
-        "\"longmans green...\" x2",
-        "\"первая трансфор...\" x2",
-        "\"не потому что с...\" x2"
+        "\"стивенсон описа...\" x2",
+        "\"world economic...\" x2",
+        "\"не обязательно...\" x2"
       ]
     },
     {

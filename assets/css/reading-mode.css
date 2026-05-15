@@ -1,13 +1,14 @@
 /* AGILE SAPIENS — Reading Mode Implementation (AGIL-166)
  * Author: Enhanced Alice v2.0 L3 Frontend Team · 2026-05-15
  *
- * Scope: Full-screen immersive reading mode with navigation hiding
+ * Scope: Full-screen immersive reading mode with navigation + ToC hiding
  * User request: "режим чтения" button for comfortable book navigation
  *
  * Implementation:
  *  - Toggle button positioned at top-right
- *  - .reading-mode class hides all navigation elements
+ *  - .reading-mode class hides all navigation + table of contents elements
  *  - Content optimized for reading (centered, larger font)
+ *  - Normal mode: removed width constraints for full-width content
  *  - Responsive design for all devices
  */
 
@@ -40,14 +41,38 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Normal Mode Enhancement: Remove Width Constraints */
+/* Override typography-classical.css constraints to allow full-width content */
+.content-enhanced {
+  max-width: none !important; /* Remove 70ch constraint */
+}
+
+.content-enhanced p {
+  max-width: none !important; /* Remove 65ch constraint */
+}
+
+/* Preserve mobile responsiveness while removing desktop width limits */
+@media (min-width: 769px) {
+  .prose,
+  .prose-wide,
+  .prose-narrow {
+    max-width: none !important;
+  }
+}
+
 /* Reading Mode Styles */
 .reading-mode {
-  /* Hide all navigation elements */
+  /* Hide all navigation and table of contents elements */
   .hextra-nav-container,
   .hextra-sidebar,
   .hextra-toc,
   nav[aria-label="breadcrumb"],
+  nav[aria-label="Table of contents"],
   .hextra-breadcrumb,
+  .toc,
+  .table-of-contents,
+  .content-toc,
+  aside,
   footer,
   .apparatus-footer,
   .chapter-support-cta {

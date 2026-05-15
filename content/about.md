@@ -13,8 +13,8 @@ We examine how artificial intelligence is reshaping the nature of work, organiza
 ## Vision
 
 **Voice:** Literary Business Analysis: systematic workplace insights through classical literature
-**Target:** 75K intellectual elite, academic credibility and university partnerships
-**Structure:** 10 chapters, 3 acts
+**Target:** 2-5K intellectual elite, academic credibility and university partnerships
+**Structure:** 11 chapters, 3 acts
 
 ## Principles
 

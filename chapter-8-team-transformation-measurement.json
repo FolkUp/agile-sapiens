@@ -1,0 +1,34 @@
+{
+  "chapter": 8,
+  "title": "Time Machine Team Transformation",
+  "date": "2026-05-15",
+  "implementation_type": "constitutional_team_transformation",
+  "metrics": {
+    "total_sentences": 288,
+    "total_words": 3983,
+    "team_mentions": 295,
+    "individual_mentions": 8,
+    "wells_mentions": 40,
+    "transformation_examples": 23,
+    "key_transformation_phrases": 4,
+    "team_to_individual_ratio": 36.9,
+    "transformation_density_percent": 8,
+    "wells_integration_rate_percent": 13.9
+  },
+  "constitutional_compliance": {
+    "teamFocusAchieved": true,
+    "wellsFrameworkIntegrated": true,
+    "transformationExamplesPresent": true,
+    "keyPhrasesImplemented": true,
+    "hookTransformed": true,
+    "compliance_score_percent": 100
+  },
+  "quality_indicators": {
+    "hook_section_transformed": true,
+    "individual_focus_eliminated": true,
+    "team_focus_consistent": true,
+    "wells_framework_applied": true,
+    "transformation_examples_sufficient": true
+  },
+  "notes": "Constitutional implementation measuring team transformation vs individual replacement focus"
+}

@@ -850,15 +850,22 @@ tasks:
 
   - id: AGIL-166
     project: AGIL
-    title: 'Full-Screen Reading Mode Implementation'
-    priority: P1
-    status: completed
-    date_completed: '2026-05-15'
+    title: 'Full-Screen Reading Mode Implementation — Debugging Button Visibility'
+    priority: P0
+    status: active
     category: frontend
     description: >-
-      Implement полноэкранный режим чтения — button "режим чтения" that hides all
-      navigation elements for immersive reading experience. User specifically requested
-      this functionality for comfortable book navigation.
+      DEBUGGING ISSUE: Reading mode functionality implemented but button not visible.
+      Assets loading properly (reading-mode.min.css/js served with 200 OK), deployment
+      successful, but "Режим чтения" button not appearing. Created simplified version
+      with console logging and inline styles to diagnose execution issues.
+    evidence_chain:
+      assets_verified: "CSS/JS files loading with 200 status codes in CI and production"
+      deployment_verified: "All CI/CD quality gates pass, VPS deployment successful"
+      functionality_implemented: "Full reading mode CSS/JS with keyboard shortcuts, persistence"
+      current_issue: "Button creation failing silently or CSS conflict hiding button"
+      debug_approach: "Simplified JS with console logging + inline styles deployed"
+    constitutional_requirement: evidence_first_methodology
     constitutional_requirement: quality_over_efficiency
     evidence: 'User request + UI/UX audit technical specifications'
     technical_implementation:

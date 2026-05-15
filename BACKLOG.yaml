@@ -850,33 +850,36 @@ tasks:
 
   - id: AGIL-166
     project: AGIL
-    title: 'Full-Screen Reading Mode Implementation — Debugging Button Visibility'
+    title: 'Full-Screen Reading Mode Implementation — COMPLETE + Enhanced'
     priority: P0
-    status: active
+    status: verified
     category: frontend
     description: >-
-      DEBUGGING ISSUE: Reading mode functionality implemented but button not visible.
-      Assets loading properly (reading-mode.min.css/js served with 200 OK), deployment
-      successful, but "Режим чтения" button not appearing. Created simplified version
-      with console logging and inline styles to diagnose execution issues.
+      COMPLETE: Full-screen reading mode successfully implemented and enhanced.
+      User confirmed functionality working ("Button added to body successfully", "Reading mode button clicked!").
+      Additional enhancements implemented: removed width constraints in normal mode,
+      comprehensive table of contents hiding in reading mode.
     evidence_chain:
       assets_verified: "CSS/JS files loading with 200 status codes in CI and production"
       deployment_verified: "All CI/CD quality gates pass, VPS deployment successful"
-      functionality_implemented: "Full reading mode CSS/JS with keyboard shortcuts, persistence"
-      current_issue: "Button creation failing silently or CSS conflict hiding button"
-      debug_approach: "Simplified JS with console logging + inline styles deployed"
+      functionality_verified: "User console logs confirm button creation and click functionality"
+      debugging_resolved: "Button visibility issue resolved through simplified implementation"
+      user_enhancements: "Width constraints removed, ToC hiding enhanced per user request"
+      latest_deployment: "Commit e77d0fe with enhanced reading mode implementation"
     constitutional_requirement: evidence_first_methodology
     constitutional_requirement: quality_over_efficiency
     evidence: 'User request + UI/UX audit technical specifications'
     technical_implementation:
-      - Add "Режим чтения" toggle button (fixed position top-right)
-      - CSS class .reading-mode hides sidebar, header, footer, breadcrumb
-      - Content centered with max-width 800px, increased font size 1.2rem
-      - Toggle functionality with "Выйти из режима чтения" state
-      - Responsive design for mobile devices
-    code_implementation_ready:
-      - CSS: .reading-mode class with display:none for navigation
-      - JavaScript: toggle function with button state management
+      - ✅ "Режим чтения" toggle button (fixed position top-right)
+      - ✅ CSS class .reading-mode hides navigation + table of contents + aside elements
+      - ✅ Content optimized for reading (centered with max-width 800px, increased font 1.2rem)
+      - ✅ Toggle functionality with "Выйти из режима чтения" state
+      - ✅ Responsive design for mobile devices
+      - ✅ ENHANCED: Normal mode width constraints removed (.content-enhanced max-width: none)
+      - ✅ ENHANCED: Comprehensive ToC hiding (.hextra-toc, .toc, aside elements)
+    code_implementation_complete:
+      - CSS: Enhanced reading-mode.css with width constraint removal + comprehensive hiding
+      - JavaScript: Simplified reading-mode-simple.js with debugging and button functionality
       - Positioning: fixed top-right with z-index 1000
       - Typography: 1.2rem font-size, 1.8 line-height
     acceptance_criteria:

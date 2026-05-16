@@ -7,16 +7,16 @@
 
 **Domain:** sapiens.folkup.life  
 **Repository:** Hugo SSG with Hextra theme  
-**Structure:** 12 chapters (0-11) + 3 intermezzos  
+**Structure:** 11 numbered chapters (0-10, with Chapter 6 in two parts) + 3 intermezzos = 12 content units  
 **License:** CC BY 4.0 (content), MIT (code)  
 **Goal:** Best Scientific Popular Book 2026
 
 ## Constitutional Excellence Verification
 
 ### Content Quality Status
-- **ALL 12 chapters ≤25% monotone compliance achieved** ✅
+- **ALL 12 content units ≤25% monotone compliance achieved** ✅
 - **Evidence Source:** mono-percentage-report.json (2026-05-15T05:47:11.772Z)
-- **Quality Gates:** 7/7 passed (quality-gate-report.json verified)
+- **Quality Gates:** 5/5 passed (quality-gate-report.json verified)
 - **HTML Version:** Fully functional — all chapters accessible
 
 ### Chapter Performance (Evidence-Based)

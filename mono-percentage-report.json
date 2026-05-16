@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-15T05:47:11.772Z",
+  "timestamp": "2026-05-16T13:43:20.478Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -33,33 +33,20 @@
     },
     {
       "file": "chapter-10-choice-engine.md",
-      "totalSentences": 349,
-      "monotoneSentences": 16,
-      "monoPercentage": 4.6,
+      "totalSentences": 331,
+      "monotoneSentences": 33,
+      "monoPercentage": 10,
       "repeatedPatterns": [
-        "\"киберпространст...\" x3",
+        "\"collective int...\" x6",
+        "\"cyberpunk team...\" x3",
+        "\"network effect...\" x3",
         "\"перевод с корп...\" x3",
-        "\"вопрос гибсона...\" x2",
-        "\"в корпоративном...\" x2",
-        "\"главное прозрен...\" x2"
-      ]
-    },
-    {
-      "file": "chapter-2-frankenstein-optimized.md",
-      "totalSentences": 309,
-      "monotoneSentences": 53,
-      "monoPercentage": 17.2,
-      "repeatedPatterns": [
-        "\"перевод автора...\" x15",
-        "\"иллюстрация ав...\" x8",
-        "\"виктор франкенш...\" x6",
-        "\"frankenstein o...\" x4",
-        "\"существо франке...\" x3"
+        "\"team navigation...\" x2"
       ]
     },
     {
       "file": "chapter-2-frankenstein.md",
-      "totalSentences": 308,
+      "totalSentences": 309,
       "monotoneSentences": 53,
       "monoPercentage": 17.2,
       "repeatedPatterns": [
@@ -110,6 +97,19 @@
       ]
     },
     {
+      "file": "chapter-6-holmes-watson.md",
+      "totalSentences": 123,
+      "monotoneSentences": 13,
+      "monoPercentage": 10.6,
+      "repeatedPatterns": [
+        "\"constitutional...\" x3",
+        "\"doyle arthur c...\" x2",
+        "\"the strand maga...\" x2",
+        "\"holmes watson a...\" x2",
+        "\"quality assura...\" x2"
+      ]
+    },
+    {
       "file": "chapter-6-jekyll-hyde.md",
       "totalSentences": 397,
       "monotoneSentences": 18,
@@ -124,40 +124,41 @@
     },
     {
       "file": "chapter-7-don-quixote.md",
-      "totalSentences": 442,
-      "monotoneSentences": 42,
-      "monoPercentage": 9.5,
+      "totalSentences": 518,
+      "monotoneSentences": 51,
+      "monoPercentage": 9.8,
       "repeatedPatterns": [
         "\"don quixote de...\" x4",
         "\"world economic...\" x3",
         "\"the future of...\" x3",
-        "\"часть первая гл...\" x2",
-        "\"в корпоративном...\" x2"
+        "\"команда которая...\" x3",
+        "\"часть первая гл...\" x2"
       ]
     },
     {
       "file": "chapter-8-time-machine.md",
-      "totalSentences": 270,
-      "monotoneSentences": 8,
-      "monoPercentage": 3,
+      "totalSentences": 286,
+      "monotoneSentences": 12,
+      "monoPercentage": 4.2,
       "repeatedPatterns": [
+        "\"теперь команда...\" x3",
+        "\"современные ком...\" x3",
         "\"world economic...\" x2",
-        "\"принцип уэллса...\" x2",
         "\"ключевой принци...\" x2",
         "\"финансовые конс...\" x2"
       ]
     },
     {
       "file": "chapter-9-three-scenarios.md",
-      "totalSentences": 238,
-      "monotoneSentences": 31,
-      "monoPercentage": 13,
+      "totalSentences": 283,
+      "monotoneSentences": 48,
+      "monoPercentage": 17,
       "repeatedPatterns": [
-        "\"корпоративная...\" x4",
-        "\"корпоративный...\" x3",
-        "\"выбор пути вин...\" x3",
-        "\"реализация ии...\" x3",
-        "\"у нас есть 18...\" x2"
+        "\"team consensus...\" x7",
+        "\"collective inte...\" x3",
+        "\"командная адап...\" x3",
+        "\"collective int...\" x3",
+        "\"group consensu...\" x3"
       ]
     }
   ]

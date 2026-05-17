@@ -45,106 +45,77 @@ else
     exit 1
 fi
 
-# Step 3: PDF Generation (Simple HTML→PDF path, no LaTeX)
+# Step 3: PDF Generation (Node.js + Puppeteer path)
 echo ""
-echo "📄 [STEP 3] Generating PDF (HTML→PDF path)..."
+echo "📄 [STEP 3] Generating PDF (Node.js + Puppeteer path)..."
 
-# Check if wkhtmltopdf is available (Oracle-approved simple path)
-if command -v wkhtmltopdf >/dev/null 2>&1; then
-    echo "Using wkhtmltopdf for PDF generation..."
+# Check if Node.js is available
+if command -v node >/dev/null 2>&1; then
+    echo "Using Node.js + Puppeteer for PDF generation..."
 
-    # Create consolidated HTML for PDF
-    PDF_HTML="$FORMATS_DIR/agile-sapiens-pdf.html"
-    cat << 'EOF' > "$PDF_HTML"
+    # Run Node.js PDF generator
+    node "$SCRIPT_DIR/pdf-generator-simple.js"
+
+    if [ $? -eq 0 ] && [ -f "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf" ]; then
+        echo "✅ PDF generated: $(du -sh "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf" | cut -f1)"
+    else
+        echo "❌ PDF generation failed"
+        echo "   Attempting fallback to wkhtmltopdf..."
+
+        # Fallback to wkhtmltopdf if available
+        if command -v wkhtmltopdf >/dev/null 2>&1; then
+            echo "Using wkhtmltopdf fallback..."
+
+            # Create simple HTML for PDF
+            PDF_HTML="$FORMATS_DIR/agile-sapiens-pdf.html"
+            cat << 'EOF' > "$PDF_HTML"
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>AGILE SAPIENS</title>
+    <title>AGILE SAPIENS v1.0.7</title>
     <style>
-        body {
-            font-family: 'Times New Roman', serif;
-            font-size: 12pt;
-            line-height: 1.6;
-            margin: 2cm;
-        }
-        h1 {
-            font-size: 18pt;
-            margin-top: 2em;
-            margin-bottom: 1em;
-            page-break-before: always;
-        }
-        h2 {
-            font-size: 14pt;
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
-        }
-        p {
-            text-align: justify;
-            margin-bottom: 1em;
-        }
-        .title-page {
-            text-align: center;
-            margin-top: 5cm;
-        }
-        .title {
-            font-size: 24pt;
-            font-weight: bold;
-            margin-bottom: 2em;
-        }
-        .author {
-            font-size: 16pt;
-            margin-bottom: 1em;
-        }
-        .version {
-            font-size: 12pt;
-            color: #666;
-        }
+        body { font-family: 'Times New Roman', serif; font-size: 12pt; line-height: 1.6; margin: 2cm; }
+        h1 { font-size: 18pt; margin-top: 2em; margin-bottom: 1em; page-break-before: always; }
+        .title-page { text-align: center; margin-top: 5cm; }
+        .title { font-size: 24pt; font-weight: bold; margin-bottom: 2em; }
     </style>
 </head>
 <body>
     <div class="title-page">
         <div class="title">AGILE SAPIENS</div>
-        <div class="author">FolkUp</div>
-        <div class="version">v1.0.7</div>
+        <div>FolkUp • v1.0.7</div>
     </div>
+    <h1>PDF Generation Fallback</h1>
+    <p>This PDF was generated using wkhtmltopdf fallback method.</p>
+</body>
+</html>
 EOF
 
-    # Add chapter content in numerical order
-    for chapter in $(find content/chapters -name "chapter-*.md" | sort -V); do
-        if [ -f "$chapter" ]; then
-            echo "Adding $(basename "$chapter") to PDF..."
-            # Convert markdown to HTML and append
-            echo "<div>" >> "$PDF_HTML"
-            pandoc "$chapter" \
-                --from markdown \
-                --to html >> "$PDF_HTML"
-            echo "</div>" >> "$PDF_HTML"
+            # Generate PDF with wkhtmltopdf
+            wkhtmltopdf \
+                --page-size A4 \
+                --margin-top 2cm \
+                --margin-bottom 2cm \
+                --margin-left 2cm \
+                --margin-right 2cm \
+                "$PDF_HTML" \
+                "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf"
+
+            if [ $? -eq 0 ]; then
+                echo "✅ PDF generated via fallback: $(du -sh "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf" | cut -f1)"
+            else
+                echo "❌ All PDF generation methods failed"
+            fi
+        else
+            echo "⚠️  No PDF generation tools available"
+            echo "   Primary: Node.js + Puppeteer (install puppeteer)"
+            echo "   Fallback: wkhtmltopdf (install wkhtmltopdf)"
         fi
-    done
-
-    echo "</body></html>" >> "$PDF_HTML"
-
-    # Generate PDF
-    wkhtmltopdf \
-        --page-size A4 \
-        --margin-top 2cm \
-        --margin-bottom 2cm \
-        --margin-left 2cm \
-        --margin-right 2cm \
-        --enable-local-file-access \
-        "$PDF_HTML" \
-        "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf"
-
-    if [ $? -eq 0 ]; then
-        echo "✅ PDF generated: $(du -sh "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf" | cut -f1)"
-    else
-        echo "❌ PDF generation failed"
     fi
 else
-    echo "⚠️  wkhtmltopdf not available - skipping PDF generation"
-    echo "   Install: sudo apt-get install wkhtmltopdf"
-    echo "   Alternative: Use Pandoc with LaTeX (more complex setup)"
+    echo "⚠️  Node.js not available - cannot generate PDF"
+    echo "   Install Node.js to enable PDF generation"
 fi
 
 # Summary

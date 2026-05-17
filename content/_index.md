@@ -58,6 +58,27 @@ AGILE SAPIENS исследует, как ИИ меняет природу тру
 
 ---
 
+## Скачать полную версию
+
+**Доступна для чтения офлайн в удобных форматах:**
+
+<div class="hx:flex hx:gap-4 hx:my-6 hx:flex-wrap">
+  <a href="/downloads/agile-sapiens-v1.0.7.epub" 
+     class="hx:inline-flex hx:items-center hx:px-4 hx:py-2 hx:bg-blue-600 hx:text-white hx:rounded-lg hx:no-underline hover:hx:bg-blue-700 hx:transition-colors"
+     download>
+    📱 ePub (132 KB) — для устройств
+  </a>
+  <a href="/downloads/agile-sapiens-v1.0.7.pdf" 
+     class="hx:inline-flex hx:items-center hx:px-4 hx:py-2 hx:bg-red-600 hx:text-white hx:rounded-lg hx:no-underline hover:hx:bg-red-700 hx:transition-colors"
+     download>
+    📄 PDF (52 KB) — для печати
+  </a>
+</div>
+
+_Версия 1.0.7 — обновлено 2026-05-17_
+
+---
+
 ## Поддержать проект
 
 Монография распространяется свободно. Если она оказалась полезной — [поддержите работу на Ko-fi](https://ko-fi.com/folkup). Это помогает сохранять независимость анализа.

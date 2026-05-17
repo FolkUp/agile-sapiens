@@ -15,6 +15,11 @@
     "deploy": "bash scripts/deploy-to-vps.sh",
     "purge-cache": "node scripts/purge-cloudflare.js",
     "quality-gates": "npm run validate && npm run build",
+    "quality:full": "bash scripts/integrated-quality-pipeline.sh",
+    "quality:format": "node scripts/format-consistency-gates.js",
+    "quality:phantom": "node scripts/phantom-detection-gates.js",
+    "quality:check": "bash scripts/quality-check.sh",
+    "quality:status": "bash scripts/quality-check.sh status",
     "test:e2e": "playwright test"
   },
   "keywords": [

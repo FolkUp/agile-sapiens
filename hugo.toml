@@ -25,7 +25,7 @@ ignoreFiles = [
 ]
 
 [params]
-description = "A scientific popular monograph on the future of work in the AI age"
+description = "Literary Business Analysis — How Literature Predicted Modern Management"
 images = ["/assets/og-image-default.png"]
 [params.author]
 name = "FolkUp Ecosystem"
@@ -131,7 +131,7 @@ displayToggle = false
     contentDir = "content"
 
     [languages.en.params]
-    description = "A scientific popular monograph on the future of work in the AI age"
+    description = "Literary Business Analysis — How Literature Predicted Modern Management"
 
     [languages.en.menu]
       [[languages.en.menu.sidebar]]
@@ -147,7 +147,7 @@ displayToggle = false
     contentDir = "content"
 
     [languages.ru.params]
-    description = "Научно-популярная монография о будущем работы в эпоху ИИ"
+    description = "Литературный бизнес-анализ — как литература предсказала современный менеджмент"
 
     [languages.ru.menu]
       [[languages.ru.menu.sidebar]]
@@ -207,7 +207,7 @@ cover_image_height = 1800
 [params.book]
 isbn = ""  # To be assigned
 publisher = "FolkUp Ecosystem"
-genre = ["Business", "Technology", "Future of Work", "Artificial Intelligence"]
+genre = ["Business", "Literary Analysis", "Management Studies", "Business History"]
 target_audience = ["Business Leaders", "Technology Professionals", "Researchers"]
 inLanguage = ["en", "ru"]
 pages_estimate = 300

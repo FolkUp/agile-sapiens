@@ -1024,6 +1024,53 @@ tasks:
     date_created: '2026-05-15'
     priority_note: 'Lower priority — implement after critical fixes complete'
 
+  - id: AGIL-169
+    project: AGIL
+    title: 'Visual Content Completion — Chapter 5 & 8 Illustrations'
+    priority: P1
+    status: ✅ COMPLETE
+    completion_date: '2026-05-18'
+    category: visual_content_completion
+    completion_evidence: 'agil-chapter-5-plate.webp (248.6KB) + agil-chapter-8-plate.webp (440.1KB) deployed to static/images/chapters/ — Victorian engraving style achieved — Visual ecosystem 100% operational'
+    date_created: '2026-05-18'
+    description: >-
+      Complete missing illustrations for 100% publication readiness. Visual audit
+      identified missing critical plate illustrations for Chapter 5 (Nemo/Nautilus)
+      and Chapter 8 (Time Machine/temporal themes). Required for complete digital-first
+      strategy implementation with professional visual quality standards.
+    constitutional_requirement: banking_level_standards
+    evidence_first_methodology: evidence_first_methodology
+    notes: "Complete missing illustrations for 100% publication readiness"
+    expert_coordination: "Frida visual team + general-purpose agents for generation"
+    missing_illustrations:
+      - "Chapter 5 (Nemo/Nautilus theme): agil-chapter-5-plate.webp"
+      - "Chapter 8 (Time Machine/temporal theme): agil-chapter-8-plate.webp"
+    artistic_requirements: "Victorian engraving style, sepia tones, WebP optimization"
+    dependencies: "AGIL-300-CONSTITUTIONAL-EXCELLENCE-ACHIEVED"
+    success_criteria: "Two illustrations generated, integrated, deployed, production verified"
+    constitutional_compliance: "Banking-level visual standards, evidence-first methodology"
+    estimated_effort: "2-3 hours (generation + integration + deployment)"
+    acceptance_criteria:
+      - Chapter 5 illustration: Victorian nautical/underwater exploration theme (Captain Nemo)
+      - Chapter 8 illustration: Victorian temporal/time travel machinery theme (H.G. Wells)
+      - WebP format optimization with proper file sizing
+      - Hugo integration and static deployment verification
+      - Production site visual verification and quality confirmation
+      - Visual consistency with existing chapter illustrations maintained
+    technical_implementation:
+      - Generate agil-chapter-5-plate.webp (Nautilus/underwater exploration Victorian style)
+      - Generate agil-chapter-8-plate.webp (Time Machine/temporal mechanics Victorian style)
+      - Optimize file sizes for web performance while maintaining visual quality
+      - Deploy to static/agile-sapiens/chapter-images/ directory
+      - Verify Hugo build integration and production deployment
+    quality_gates:
+      - Banking-level visual quality standards compliance
+      - Victorian engraving aesthetic consistency with existing plates
+      - Technical optimization (WebP format, appropriate file sizes)
+      - Production deployment verification with visual confirmation
+    date_created: '2026-05-18'
+    reference: 'Visual audit findings — complete missing illustrations for publication readiness'
+
 archived_tasks:
   - id: AGIL-027
     title: 'Chapter 3 Architectural Revision — Alpha+Beta FAIL'

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>AGILE SAPIENS — Cover Selection Зеркальце</title>
+    <style>
+        :root {
+            --bordo: #7D4450;
+            --amber: #E8AD4A;
+            --sage: #839E75;
+            --ivory: #FEFCF6;
+            --chocolate: #2A2317;
+            --cream: #F5F1EA;
+            --cappuccino: #8B7866;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 2rem;
+            background: var(--ivory);
+            color: var(--chocolate);
+            font-family: Georgia, serif;
+            line-height: 1.6;
+        }
+        h1 {
+            color: var(--bordo);
+            font-size: 2rem;
+            margin: 0 0 0.5rem;
+            text-align: center;
+        }
+        .subtitle {
+            color: var(--cappuccino);
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .status-bar {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .status-complete {
+            color: var(--bordo);
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: rgba(245, 241, 234, 0.3);
+        }
+        .section h2 {
+            color: var(--bordo);
+            font-size: 1.4rem;
+            margin: 0 0 1rem;
+            border-bottom: 2px solid var(--cream);
+            padding-bottom: 0.5rem;
+        }
+        .new-badge {
+            background: var(--amber);
+            color: var(--chocolate);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+        .old-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .cover-option {
+            border: 2px solid var(--cream);
+            border-radius: 8px;
+            padding: 1rem;
+            background: white;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        .cover-option:hover {
+            border-color: var(--bordo);
+            box-shadow: 0 4px 12px rgba(125, 68, 80, 0.2);
+            transform: translateY(-2px);
+        }
+        .cover-option.selected {
+            border-color: var(--bordo);
+            box-shadow: 0 6px 20px rgba(125, 68, 80, 0.3);
+        }
+        .cover-option img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 4px;
+            margin: 0 auto 0.8rem;
+            display: block;
+        }
+        .cover-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--bordo);
+            margin-bottom: 0.3rem;
+        }
+        .cover-subtitle {
+            font-size: 0.9rem;
+            color: var(--cappuccino);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        .cover-meta {
+            font-size: 0.8rem;
+            color: var(--cappuccino);
+            margin-bottom: 0.5rem;
+        }
+        .theme-analysis {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .theme-correct {
+            color: var(--sage);
+            font-weight: bold;
+        }
+        .theme-incorrect {
+            color: #d63384;
+            font-weight: bold;
+        }
+        .selection-summary {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .selection-summary h3 {
+            color: var(--bordo);
+            margin: 0 0 1rem;
+        }
+        .final-action {
+            background: var(--bordo);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .final-action:hover {
+            background: #6d3c47;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--cappuccino);
+            font-style: italic;
+            border-top: 2px solid var(--cream);
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>AGILE SAPIENS — Cover Selection</h1>
+    <div class="subtitle">Literary Business Analysis vs. Artificial Intelligence Theme • Зеркальце</div>
+
+    <div class="status-bar">
+        <div class="status-complete">✅ THEME CORRECTION COMPLETE</div>
+        AI References Removed • Literary Business Analysis Established • 3 New Variants Generated
+    </div>
+
+    <div class="section">
+        <h2>📚 NEW: Literary Business Analysis Theme <span class="new-badge">CORRECTED</span></h2>
+        <div class="grid">
+            <div class="cover-option" onclick="selectCover('v1')">
+                <img src="/images/agile-sapiens-cover-literary-v1.webp" alt="Literary Theme v1">
+                <div class="cover-title">Вариант 1 — Literary Business Analysis</div>
+                <div class="cover-subtitle">Victorian Academic Style</div>
+                <div class="cover-meta">193KB WebP • Flux 1.1 Pro • Sepia Palette</div>
+                <div class="theme-analysis">
+                    <div class="theme-correct">✅ CORRECT THEME:</div>
+                    "AGILE SAPIENS" + "Литературный бизнес-анализ" + "How Literature Predicted Modern Management"
+                </div>
+            </div>
+
+            <div class="cover-option" onclick="selectCover('v2')">
+                <img src="/images/agile-sapiens-cover-literary-v2.webp" alt="Literary Theme v2">
+                <div class="cover-title">Вариант 2 — Literary Business Analysis</div>
+                <div class="cover-subtitle">Victorian Academic Style</div>
+                <div class="cover-meta">119KB WebP • Flux 1.1 Pro • Sepia Palette</div>
+                <div class="theme-analysis">
+                    <div class="theme-correct">✅ CORRECT THEME:</div>
+                    "AGILE SAPIENS" + "Литературный бизнес-анализ" + "How Literature Predicted Modern Management"
+                </div>
+            </div>
+
+            <div class="cover-option" onclick="selectCover('v3')">
+                <img src="/images/agile-sapiens-cover-literary-v3.png" alt="Literary Theme v3">
+                <div class="cover-title">Вариант 3 — Literary Business Analysis</div>
+                <div class="cover-subtitle">Victorian Academic Style</div>
+                <div class="cover-meta">2.1MB PNG • Flux 1.1 Pro • High Quality</div>
+                <div class="theme-analysis">
+                    <div class="theme-correct">✅ CORRECT THEME:</div>
+                    "AGILE SAPIENS" + "Литературный бизнес-анализ" + "How Literature Predicted Modern Management"
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🤖 OLD: Artificial Intelligence Theme <span class="old-badge">INCORRECT</span></h2>
+        <div class="grid">
+            <div class="cover-option outdated" onclick="selectCover('old')">
+                <img src="/images/cover.webp" alt="Old AI Theme">
+                <div class="cover-title">Старая обложка — AI Theme</div>
+                <div class="cover-subtitle">Incorrect Theme</div>
+                <div class="cover-meta">Classic Academic • Wrong Subtitle</div>
+                <div class="theme-analysis">
+                    <div class="theme-incorrect">❌ INCORRECT THEME:</div>
+                    "в эпоху искусственного интеллекта" — Doesn't match book content about literature predicting management
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="selection-summary">
+        <h3>Выбор финальной обложки</h3>
+        <p>Все новые варианты используют правильную тематику <strong>литературного бизнес-анализа</strong> вместо ИИ.</p>
+        <p id="selection-status">Выберите лучший вариант, кликнув на него выше.</p>
+
+        <button class="final-action" onclick="finalizeSelection()" disabled>
+            Применить выбранную обложку как cover.webp
+        </button>
+    </div>
+
+    <footer>
+        Enhanced Alice v2.0 Level 3 Cartouche Autonome Operation • Literary Theme Correction • 2026-05-18
+    </footer>
+
+    <script>
+        let selectedCover = null;
+
+        function selectCover(variant) {
+            // Remove previous selection
+            document.querySelectorAll('.cover-option').forEach(el => {
+                el.classList.remove('selected');
+            });
+
+            // Add selection to clicked cover
+            event.target.closest('.cover-option').classList.add('selected');
+            selectedCover = variant;
+
+            // Update status
+            const statusEl = document.getElementById('selection-status');
+            const buttonEl = document.querySelector('.final-action');
+
+            if (variant === 'old') {
+                statusEl.innerHTML = '⚠️ <strong>Внимание:</strong> Выбрана устаревшая обложка с неправильной тематикой ИИ';
+                statusEl.style.color = '#d63384';
+                buttonEl.disabled = true;
+                buttonEl.textContent = 'Нельзя применить устаревшую обложку';
+            } else {
+                statusEl.innerHTML = `✅ <strong>Выбран вариант ${variant.toUpperCase()}:</strong> Literary Business Analysis theme`;
+                statusEl.style.color = '#839E75';
+                buttonEl.disabled = false;
+                buttonEl.textContent = `Применить ${variant.toUpperCase()} как финальную обложку`;
+            }
+        }
+
+        function finalizeSelection() {
+            if (!selectedCover || selectedCover === 'old') {
+                alert('Пожалуйста, выберите один из новых вариантов с правильной тематикой');
+                return;
+            }
+
+            const confirmMsg = `Заменить cover.webp на вариант ${selectedCover.toUpperCase()}?\n\nЭто обновит обложку с правильной тематикой "Литературный бизнес-анализ".`;
+
+            if (confirm(confirmMsg)) {
+                alert(`✅ Выбор сохранён: ${selectedCover.toUpperCase()}\n\nСледующий шаг: Alice заменит cover.webp на выбранный вариант.`);
+            }
+        }
+
+        // Auto-select first variant as default
+        window.onload = function() {
+            setTimeout(() => {
+                document.querySelector('[onclick="selectCover(\'v1\')"]').click();
+            }, 500);
+        };
+    </script>
+</body>
+</html>

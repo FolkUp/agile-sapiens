@@ -4,341 +4,347 @@
  * AGILE SAPIENS PDF Generator
  * Enhanced Alice v2.0 L3 — Constitutional Framework
  *
- * Banking-Level Standards: Modern Node.js PDF generation
- * Using Puppeteer for reliable HTML→PDF conversion
+ * Banking-Level Standards: full-book PDF generation.
+ *
+ * Reads every content unit from content/chapters/*.md, converts markdown to
+ * HTML with pandoc (matching the proven ePub pipeline), assembles a single
+ * print-ready document with a generated table of contents, and renders it to
+ * PDF with Puppeteer.
+ *
+ * Reading order is derived from each file's frontmatter `weight` so the book
+ * is assembled exactly as the Hugo site presents it. Draft duplicates and
+ * backup files are excluded explicitly.
  */
 
 import puppeteer from 'puppeteer';
+import { execFileSync } from 'child_process';
 import fs from 'fs/promises';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.dirname(__dirname);
 const FORMATS_DIR = path.join(PROJECT_ROOT, 'formats');
-const CONTENT_DIR = path.join(PROJECT_ROOT, 'content');
+const CHAPTERS_DIR = path.join(PROJECT_ROOT, 'content', 'chapters');
+const BOOK_VERSION = 'v1.0.7';
+const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
-console.log('📄 AGILE SAPIENS PDF Generator');
-console.log('===============================');
-console.log('Enhanced Alice v2.0 L3 — Node.js + Puppeteer Pipeline');
+/*
+ * Files in content/chapters/ that must NOT be included:
+ *  - chapter-6-holmes-watson.md  → status: draft; chapter-6-jekyll-hyde is the
+ *    canonical, verified Chapter 6 (both carry weight 70).
+ * Backup / .claude directories are skipped because we only read the top level.
+ */
+const EXCLUDE_FILES = new Set(['chapter-6-holmes-watson.md']);
+
+console.log('AGILE SAPIENS PDF Generator');
+console.log('===========================');
+console.log('Enhanced Alice v2.0 L3 — full-book Node.js + pandoc + Puppeteer pipeline');
 console.log('');
 
-async function generatePDF() {
-    try {
-        // Ensure formats directory exists
-        await fs.mkdir(FORMATS_DIR, { recursive: true });
-
-        // Create HTML content for PDF
-        const htmlContent = await createPDFHTML();
-        const htmlPath = path.join(FORMATS_DIR, 'agile-sapiens-pdf.html');
-
-        await fs.writeFile(htmlPath, htmlContent, 'utf8');
-        console.log('✅ HTML template created');
-
-        // Launch Puppeteer
-        console.log('🚀 Launching Puppeteer...');
-        const browser = await puppeteer.launch({
-            headless: true,
-            args: [
-                '--no-sandbox',
-                '--disable-setuid-sandbox',
-                '--disable-dev-shm-usage',
-                '--disable-extensions',
-                '--disable-gpu'
-            ],
-            timeout: 30000
-        });
-
-        console.log('✅ Browser launched successfully');
-
-        const page = await browser.newPage();
-
-        // Load HTML file
-        const htmlUrl = `file://${htmlPath.replace(/\\/g, '/')}`;
-        console.log(`📄 Loading HTML: ${htmlUrl}`);
-        await page.goto(htmlUrl, {
-            waitUntil: 'networkidle0',
-            timeout: 20000
-        });
-
-        console.log('✅ HTML loaded successfully');
-
-        // Generate PDF
-        const pdfPath = path.join(FORMATS_DIR, 'agile-sapiens-v1.0.7.pdf');
-        console.log(`📄 Generating PDF: ${pdfPath}`);
-
-        await page.pdf({
-            path: pdfPath,
-            format: 'A4',
-            margin: {
-                top: '2cm',
-                bottom: '2cm',
-                left: '2cm',
-                right: '2cm'
-            },
-            printBackground: true,
-            displayHeaderFooter: true,
-            headerTemplate: '<div style="font-size:10px; text-align:center; width:100%;">AGILE SAPIENS v1.0.7</div>',
-            footerTemplate: '<div style="font-size:10px; text-align:center; width:100%;"><span class="pageNumber"></span> / <span class="totalPages"></span></div>'
-        });
-
-        await browser.close();
-
-        // Verify PDF was created
-        const stats = await fs.stat(pdfPath);
-        const sizeKB = Math.round(stats.size / 1024);
-
-        console.log('✅ PDF generated successfully');
-        console.log(`📊 Size: ${sizeKB} KB`);
-        console.log(`📁 Location: ${pdfPath}`);
-
-        // Clean up HTML file
-        await fs.unlink(htmlPath);
-
-        return true;
-
-    } catch (error) {
-        console.error('❌ PDF generation failed:', error.message);
-        return false;
-    }
+/** Extract a single scalar field from YAML frontmatter. */
+function frontmatterField(frontmatter, field) {
+    const re = new RegExp(`^${field}:\\s*"?([^"\\n]+)"?\\s*$`, 'm');
+    const m = frontmatter.match(re);
+    return m ? m[1].trim() : null;
 }
 
-async function createPDFHTML() {
-    const css = `
-        <style>
-            body {
-                font-family: 'Times New Roman', serif;
-                font-size: 12pt;
-                line-height: 1.6;
-                color: #333;
-                max-width: none;
-                margin: 0;
-                padding: 0;
-            }
+/** Split a markdown file into { frontmatter, body }. */
+function splitFrontmatter(raw) {
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+    if (m) return { frontmatter: m[1], body: m[2] };
+    return { frontmatter: '', body: raw };
+}
 
-            .title-page {
-                text-align: center;
-                margin-top: 8cm;
-                page-break-after: always;
-            }
+/** Convert markdown body to an HTML fragment via pandoc. */
+function markdownToHtml(markdown) {
+    return execFileSync(
+        'pandoc',
+        ['--from', 'markdown', '--to', 'html', '--wrap=preserve'],
+        { input: markdown, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }
+    );
+}
 
-            .title {
-                font-size: 28pt;
-                font-weight: bold;
-                margin-bottom: 2em;
-                color: #1a1a1a;
-            }
+/** Collect, parse and order every content unit. */
+async function collectUnits() {
+    const files = await fs.readdir(CHAPTERS_DIR);
+    const candidates = files.filter(
+        (f) =>
+            (f.startsWith('chapter-') || f.startsWith('intermezzo-')) &&
+            f.endsWith('.md') &&
+            !EXCLUDE_FILES.has(f)
+    );
 
-            .subtitle {
-                font-size: 16pt;
-                margin-bottom: 1em;
-                color: #666;
-                font-style: italic;
-            }
+    const units = [];
+    for (const filename of candidates) {
+        const raw = await fs.readFile(path.join(CHAPTERS_DIR, filename), 'utf8');
+        const { frontmatter, body } = splitFrontmatter(raw);
 
-            .author {
-                font-size: 18pt;
-                margin-bottom: 1em;
-                margin-top: 3em;
-            }
+        const title =
+            frontmatterField(frontmatter, 'title') ||
+            (body.match(/^#\s+(.+)$/m)?.[1]) ||
+            filename;
 
-            .version {
-                font-size: 14pt;
-                color: #666;
-                margin-top: 2em;
-            }
+        const weightRaw = frontmatterField(frontmatter, 'weight');
+        const weight = weightRaw ? parseInt(weightRaw, 10) : 9999;
 
-            .chapter {
-                page-break-before: always;
-                margin-bottom: 2em;
-            }
+        units.push({ filename, title, weight, body });
+    }
 
-            h1 {
-                font-size: 18pt;
-                margin-top: 0;
-                margin-bottom: 1em;
-                color: #2c3e50;
-                border-bottom: 2px solid #3498db;
-                padding-bottom: 0.5em;
-            }
+    units.sort((a, b) => a.weight - b.weight || a.filename.localeCompare(b.filename));
+    return units;
+}
 
-            h2 {
-                font-size: 14pt;
-                margin-top: 1.5em;
-                margin-bottom: 0.8em;
-                color: #34495e;
-            }
+/** Print-ready CSS — academic typography suitable for submission. */
+const CSS = `
+:root { --ink: #1a1a1a; --muted: #555; --accent: #2c3e50; }
 
-            h3 {
-                font-size: 12pt;
-                margin-top: 1.2em;
-                margin-bottom: 0.6em;
-                color: #7f8c8d;
-            }
+body {
+    font-family: 'Times New Roman', 'Liberation Serif', serif;
+    font-size: 11.5pt;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+    hyphens: auto;
+}
 
-            p {
-                text-align: justify;
-                margin-bottom: 1em;
-                text-indent: 1em;
-            }
+/* ---- Title page ---- */
+.title-page {
+    text-align: center;
+    page-break-after: always;
+    padding-top: 7cm;
+}
+.title-page .title {
+    font-size: 34pt;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6em;
+}
+.title-page .subtitle {
+    font-size: 15pt;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 0.3em;
+}
+.title-page .author {
+    font-size: 16pt;
+    margin-top: 3.5em;
+}
+.title-page .version {
+    font-size: 12pt;
+    color: var(--muted);
+    margin-top: 0.8em;
+}
 
-            blockquote {
-                margin: 1em 0;
-                padding: 0.5em 1em;
-                border-left: 4px solid #3498db;
-                background: #f8f9fa;
-                font-style: italic;
-            }
+/* ---- Table of contents ---- */
+.toc {
+    page-break-after: always;
+}
+.toc h1 {
+    text-align: center;
+    border: none;
+    font-size: 22pt;
+    margin-bottom: 1.4em;
+}
+.toc ol {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: toc;
+}
+.toc li {
+    margin-bottom: 0.55em;
+    font-size: 12pt;
+}
 
-            ul, ol {
-                margin: 1em 0;
-                padding-left: 2em;
-            }
+/* ---- Chapters ---- */
+.unit {
+    page-break-before: always;
+}
+.unit h1 {
+    font-size: 20pt;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.35em;
+    margin-top: 0;
+    margin-bottom: 1.1em;
+}
+h2 { font-size: 14.5pt; color: var(--accent); margin-top: 1.6em; margin-bottom: 0.6em; }
+h3 { font-size: 12.5pt; color: #34495e; margin-top: 1.2em; margin-bottom: 0.5em; }
+h4 { font-size: 11.5pt; font-style: italic; margin-top: 1em; margin-bottom: 0.4em; }
 
-            li {
-                margin-bottom: 0.5em;
-            }
+p {
+    text-align: justify;
+    margin: 0 0 0.7em 0;
+    text-indent: 1.4em;
+}
+/* first paragraph after a heading is not indented */
+h1 + p, h2 + p, h3 + p, h4 + p, blockquote + p { text-indent: 0; }
 
-            code {
-                font-family: 'Courier New', monospace;
-                background: #f1f1f1;
-                padding: 0.2em 0.4em;
-                border-radius: 3px;
-            }
+blockquote {
+    margin: 1em 1.4em;
+    padding: 0.4em 1em;
+    border-left: 3px solid #bbb;
+    font-style: italic;
+    color: #333;
+}
+blockquote p { text-indent: 0; }
 
-            .toc {
-                page-break-after: always;
-                margin-top: 2em;
-            }
+ul, ol { margin: 0.6em 0; padding-left: 1.9em; }
+li { margin-bottom: 0.3em; text-align: justify; }
 
-            .toc h2 {
-                text-align: center;
-                margin-bottom: 2em;
-            }
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    background: #f2f2f2;
+    padding: 0.1em 0.3em;
+    border-radius: 2px;
+}
+pre {
+    background: #f6f6f6;
+    border: 1px solid #ddd;
+    padding: 0.8em;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 0.85em;
+}
+pre code { background: none; padding: 0; }
 
-            .toc-item {
-                margin-bottom: 0.5em;
-                text-indent: 0;
-            }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    font-size: 0.9em;
+}
+th, td { border: 1px solid #ccc; padding: 0.4em 0.6em; text-align: left; }
+th { background: #f0f0f0; }
 
-            @media print {
-                .page-break { page-break-before: always; }
-            }
-        </style>
-    `;
+img { max-width: 100%; height: auto; }
+hr { border: none; border-top: 1px solid #ccc; margin: 1.4em 0; }
 
-    let html = `
-<!DOCTYPE html>
+a { color: var(--ink); text-decoration: none; }
+`;
+
+/** Build the full HTML document. */
+function buildHtml(units) {
+    const tocItems = units
+        .map((u, i) => `<li>${i + 1}. ${escapeHtml(u.title)}</li>`)
+        .join('\n');
+
+    const body = units
+        .map((u) => {
+            const inner = markdownToHtml(u.body);
+            // The frontmatter title is the authoritative heading. Strip a
+            // leading H1 from the body to avoid a duplicated chapter title.
+            const withoutLeadH1 = inner.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>/i, '');
+            return `<section class="unit">\n<h1>${escapeHtml(u.title)}</h1>\n${withoutLeadH1}\n</section>`;
+        })
+        .join('\n');
+
+    return `<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>AGILE SAPIENS v1.0.7</title>
-    ${css}
+<meta charset="UTF-8">
+<title>AGILE SAPIENS ${BOOK_VERSION}</title>
+<style>${CSS}</style>
 </head>
 <body>
-    <div class="title-page">
-        <div class="title">AGILE SAPIENS</div>
-        <div class="subtitle">The Future of Work in the Age of Artificial Intelligence</div>
-        <div class="subtitle">Будущее работы в эпоху искусственного интеллекта</div>
-        <div class="author">FolkUp</div>
-        <div class="version">Version 1.0.7</div>
-    </div>
-    `;
+<div class="title-page">
+    <div class="title">AGILE SAPIENS</div>
+    <div class="subtitle">The Future of Work in the Age of Artificial Intelligence</div>
+    <div class="subtitle">Будущее работы в эпоху искусственного интеллекта</div>
+    <div class="author">FolkUp</div>
+    <div class="version">Версия ${BOOK_VERSION}</div>
+</div>
 
-    try {
-        // Add chapters content
-        const chaptersDir = path.join(CONTENT_DIR, 'chapters');
+<nav class="toc">
+    <h1>Содержание</h1>
+    <ol>
+${tocItems}
+    </ol>
+</nav>
 
-        // Check if chapters directory exists
-        try {
-            await fs.access(chaptersDir);
-
-            const files = await fs.readdir(chaptersDir);
-            const chapterFiles = files
-                .filter(file => file.startsWith('chapter-') && file.endsWith('.md'))
-                .sort((a, b) => {
-                    // Extract chapter numbers for proper sorting
-                    const numA = parseInt(a.match(/chapter-(\d+)/)?.[1] || '0');
-                    const numB = parseInt(b.match(/chapter-(\d+)/)?.[1] || '0');
-                    return numA - numB;
-                });
-
-            console.log(`📚 Found ${chapterFiles.length} chapters`);
-
-            for (const filename of chapterFiles) {
-                const filePath = path.join(chaptersDir, filename);
-                const content = await fs.readFile(filePath, 'utf8');
-
-                // Remove frontmatter
-                const cleanContent = content.replace(/^---\n[\s\S]*?\n---\n/, '');
-
-                // Convert markdown headers to HTML
-                const htmlContent = markdownToHTML(cleanContent);
-
-                html += `<div class="chapter">${htmlContent}</div>`;
-                console.log(`✅ Added ${filename}`);
-            }
-        } catch (error) {
-            console.log('⚠️  No chapters directory found, creating sample content');
-            html += `
-                <div class="chapter">
-                    <h1>Introduction</h1>
-                    <p>This is a sample PDF generation for AGILE SAPIENS. The actual content will be loaded from the chapters directory when available.</p>
-
-                    <h2>Features</h2>
-                    <ul>
-                        <li>Professional PDF formatting</li>
-                        <li>Proper typography and spacing</li>
-                        <li>Chapter organization</li>
-                        <li>Academic-quality output</li>
-                    </ul>
-                </div>
-            `;
-        }
-
-    } catch (error) {
-        console.log('⚠️  Error reading chapters:', error.message);
-    }
-
-    html += `
+${body}
 </body>
 </html>`;
-
-    return html;
 }
 
-// Simple markdown to HTML converter for basic formatting
-function markdownToHTML(markdown) {
-    let html = markdown;
-
-    // Headers
-    html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-    html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-    html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
-
-    // Bold and italic
-    html = html.replace(/\*\*(.*)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/\*(.*)\*/g, '<em>$1</em>');
-
-    // Code
-    html = html.replace(/`([^`]*)`/g, '<code>$1</code>');
-
-    // Paragraphs
-    html = html.replace(/^\s*(.+)$/gim, '<p>$1</p>');
-
-    // Lists (basic)
-    html = html.replace(/^\s*[-*] (.+)$/gim, '<li>$1</li>');
-    html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
-
-    return html;
+function escapeHtml(s) {
+    return s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
 }
 
-// Execute if run directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-    generatePDF().then(success => {
-        process.exit(success ? 0 : 1);
+async function generatePDF() {
+    await fs.mkdir(FORMATS_DIR, { recursive: true });
+
+    const units = await collectUnits();
+    console.log(`Found ${units.length} content units (reading order by frontmatter weight):`);
+    units.forEach((u, i) =>
+        console.log(`  ${String(i + 1).padStart(2)}. [w${u.weight}] ${u.filename} — ${u.title}`)
+    );
+    console.log('');
+
+    if (units.length < 14) {
+        console.warn(
+            `WARNING: expected 14 units (11 chapters + 3 intermezzos), found ${units.length}.`
+        );
+    }
+
+    console.log('Converting markdown -> HTML via pandoc and assembling document...');
+    const html = buildHtml(units);
+    const htmlPath = path.join(FORMATS_DIR, 'agile-sapiens-pdf.html');
+    await fs.writeFile(htmlPath, html, 'utf8');
+    console.log(`Assembled HTML: ${Math.round(html.length / 1024)} KB`);
+
+    console.log('Launching Puppeteer...');
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+        timeout: 60000,
     });
+
+    try {
+        const page = await browser.newPage();
+        const htmlUrl = 'file://' + htmlPath.replace(/\\/g, '/');
+        await page.goto(htmlUrl, { waitUntil: 'networkidle0', timeout: 60000 });
+
+        console.log('Rendering PDF...');
+        await page.pdf({
+            path: OUTPUT_PDF,
+            format: 'A4',
+            margin: { top: '2cm', bottom: '2cm', left: '2.2cm', right: '2.2cm' },
+            printBackground: true,
+            displayHeaderFooter: true,
+            headerTemplate:
+                '<div style="font-size:8pt;color:#888;width:100%;text-align:center;">AGILE SAPIENS</div>',
+            footerTemplate:
+                '<div style="font-size:8pt;color:#888;width:100%;text-align:center;">' +
+                '<span class="pageNumber"></span> / <span class="totalPages"></span></div>',
+        });
+    } finally {
+        await browser.close();
+    }
+
+    await fs.unlink(htmlPath).catch(() => {});
+
+    const stats = await fs.stat(OUTPUT_PDF);
+    console.log('');
+    console.log('PDF generated successfully');
+    console.log(`  Location: ${OUTPUT_PDF}`);
+    console.log(`  Size: ${Math.round(stats.size / 1024)} KB`);
+    return true;
+}
+
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+    generatePDF()
+        .then((ok) => process.exit(ok ? 0 : 1))
+        .catch((err) => {
+            console.error('PDF generation failed:', err);
+            process.exit(1);
+        });
 }
 
 export default generatePDF;

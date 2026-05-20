@@ -106,6 +106,17 @@ tmp/
 /resources/
 /assets/jsconfig.json
 
+# Local development binaries (SEC-002)
+tools/sops.exe
+tools/*.exe
+
+# Regenerable Lighthouse audit artifacts (SEC-002)
+_meta/lighthouse/
+_meta/closeout-lighthouse/
+
+# Regenerable Hugo build artifacts (SEC-002)
+public-chapter1-poc/
+
 # Editorial measurement outputs
 chapter-*-baseline*.json
 chapter-*-progress*.json

@@ -128,8 +128,10 @@ powershell.exe -ExecutionPolicy Bypass -File "scripts\constitutional-hooks-simpl
     "pre-commit" {
         Write-Host "Pre-commit constitutional verification..." -ForegroundColor Blue
 
-        # Get staged files
-        $StagedFiles = (git diff --cached --name-only) -split "`n" | Where-Object { $_.Trim() -ne "" }
+        # Get staged files — only Added/Modified (skip Deleted) so that
+        # `git rm --cached <binary>` commits do not re-scan a working-tree
+        # file that is no longer being added to history.
+        $StagedFiles = (git diff --cached --name-only --diff-filter=AM) -split "`n" | Where-Object { $_.Trim() -ne "" }
 
         if ($StagedFiles.Count -eq 0) {
             Write-Host "   No staged files - skipping verification" -ForegroundColor Gray
@@ -227,7 +229,10 @@ powershell.exe -ExecutionPolicy Bypass -File "scripts\constitutional-hooks-simpl
         # now also runs at pre-commit time (see above).
         Write-Host "   Secret scanning verification..." -ForegroundColor Cyan
 
-        $ChangedFiles = git diff --name-only origin/main..HEAD 2>$null
+        # Only Added/Modified files — Deleted paths in the push range can
+        # still exist in the working tree (e.g. `git rm --cached <binary>`)
+        # and produce false positives when scanned as raw content.
+        $ChangedFiles = git diff --name-only --diff-filter=AM origin/main..HEAD 2>$null
         $SecretsFound = Test-SecretsInChangedFiles -ChangedFiles $ChangedFiles
 
         if ($SecretsFound.Count -gt 0) {

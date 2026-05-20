@@ -47,6 +47,51 @@ function Test-ConstitutionalCompliance {
     }
 }
 
+# Cooper P1 hardening 2026-05-20 — shared secret-scan function.
+# Previously scan lived only in the pre-push branch; now also runs pre-commit
+# so a secret cannot land in local history before being caught at push time.
+# Extended pattern set: AKIA (AWS), sk_live_/sk_test_ (Stripe), gh[ousr]_
+# variants (GitHub OAuth/server/user/refresh), AGE-SECRET-KEY-1 (age).
+function Test-SecretsInChangedFiles {
+    param([array]$ChangedFiles)
+
+    $SecretPatterns = @(
+        @{ Pattern = "(?i)(password\s*[=:]\s*)['\`"][^'\`"]{8,}['\`"]"; Description = "Password assignment" }
+        @{ Pattern = "(?i)(api[_-]?key\s*[=:]\s*)['\`"][A-Za-z0-9/+]{20,}['\`"]"; Description = "API key" }
+        @{ Pattern = "(?i)(secret[_-]?key\s*[=:]\s*)['\`"][A-Za-z0-9/+]{20,}['\`"]"; Description = "Secret key" }
+        @{ Pattern = "(?i)(token\s*[=:]\s*)['\`"][A-Za-z0-9._-]{20,}['\`"]"; Description = "Access token" }
+        @{ Pattern = "-----BEGIN [A-Z ]+-----"; Description = "Private key (PEM format)" }
+        @{ Pattern = "sk-[A-Za-z0-9]{20,}"; Description = "Anthropic API key" }
+        @{ Pattern = "xox[baprs]-[A-Za-z0-9-]+"; Description = "Slack token" }
+        @{ Pattern = "ghp_[A-Za-z0-9]{36}"; Description = "GitHub personal access token" }
+        @{ Pattern = "(?i)(database[_-]?url\s*[=:]\s*)['\`"][^'\`"]*password[^'\`"]*['\`"]"; Description = "Database connection string with password" }
+        # Added 2026-05-20 (Cooper P1 hardening)
+        @{ Pattern = "AKIA[0-9A-Z]{16}"; Description = "AWS Access Key ID" }
+        @{ Pattern = "sk_(live|test)_[A-Za-z0-9]{24,}"; Description = "Stripe API key" }
+        @{ Pattern = "gh[ousr]_[A-Za-z0-9]{36,}"; Description = "GitHub OAuth/server/user/refresh token" }
+        @{ Pattern = "AGE-SECRET-KEY-1[0-9A-Z]{55,}"; Description = "age secret key" }
+    )
+
+    $SecretsFound = @()
+    foreach ($file in $ChangedFiles) {
+        if (Test-Path $file -ErrorAction SilentlyContinue) {
+            $content = Get-Content $file -Raw -ErrorAction SilentlyContinue
+            if ($content) {
+                foreach ($sp in $SecretPatterns) {
+                    if ($content -match $sp.Pattern) {
+                        $SecretsFound += @{
+                            File = $file
+                            Type = $sp.Description
+                            Pattern = $sp.Pattern
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return $SecretsFound
+}
+
 switch ($Hook) {
     "install" {
         Write-Host "Installing constitutional enforcement hooks..." -ForegroundColor Green
@@ -90,6 +135,35 @@ powershell.exe -ExecutionPolicy Bypass -File "scripts\constitutional-hooks-simpl
             Write-Host "   No staged files - skipping verification" -ForegroundColor Gray
             exit 0
         }
+
+        # STEP 1: SECRET SCANNING (Cooper P1 hardening 2026-05-20)
+        # Catch secrets before they land in local history, not only at push.
+        Write-Host "   Secret scanning verification..." -ForegroundColor Cyan
+        $SecretsFound = Test-SecretsInChangedFiles -ChangedFiles $StagedFiles
+        if ($SecretsFound.Count -gt 0) {
+            Write-Host ""
+            Write-Host "SECURITY VIOLATION: SECRETS DETECTED (pre-commit)" -ForegroundColor Red -BackgroundColor Yellow
+            foreach ($s in $SecretsFound) {
+                Write-Host "   - $($s.File): $($s.Type)" -ForegroundColor Red
+            }
+            Write-Host ""
+            Write-Host "Remediation:" -ForegroundColor Yellow
+            Write-Host "   1. Unstage the file: git restore --staged <file>" -ForegroundColor White
+            Write-Host "   2. Remove the secret value and replace with env-var reference" -ForegroundColor White
+            Write-Host "   3. Confirm pattern is also blocked by .gitignore for future" -ForegroundColor White
+            if (-not (Test-Path "_meta")) {
+                New-Item -ItemType Directory "_meta" -Force | Out-Null
+            }
+            $sv = @{
+                Timestamp = (Get-Date).ToString()
+                Hook = "pre-commit"
+                ViolationType = "SECRETS_DETECTED"
+                Secrets = $SecretsFound
+            }
+            $sv | ConvertTo-Json | Out-File "_meta\security-violation-$(Get-Date -Format 'yyyyMMdd-HHmmss').json" -Encoding UTF8
+            exit 1
+        }
+        Write-Host "   Secret scan clean" -ForegroundColor Green
 
         # Get commit message if available
         $CommitMessage = ""
@@ -148,41 +222,13 @@ powershell.exe -ExecutionPolicy Bypass -File "scripts\constitutional-hooks-simpl
         }
 
         # STEP 1: SECRET SCANNING (Banking-Level Security)
+        # Cooper P1 hardening 2026-05-20 — uses shared Test-SecretsInChangedFiles
+        # with extended pattern set (AKIA, Stripe, gh[ousr]_, age). Same scan
+        # now also runs at pre-commit time (see above).
         Write-Host "   Secret scanning verification..." -ForegroundColor Cyan
 
-        # Get all files in commits being pushed
         $ChangedFiles = git diff --name-only origin/main..HEAD 2>$null
-        $SecretsFound = @()
-
-        # Define secret patterns (Banking-Level Security Standards)
-        $SecretPatterns = @(
-            @{ Pattern = "(?i)(password\s*[=:]\s*)['\`"][^'\`"]{8,}['\`"]"; Description = "Password assignment" }
-            @{ Pattern = "(?i)(api[_-]?key\s*[=:]\s*)['\`"][A-Za-z0-9/+]{20,}['\`"]"; Description = "API key" }
-            @{ Pattern = "(?i)(secret[_-]?key\s*[=:]\s*)['\`"][A-Za-z0-9/+]{20,}['\`"]"; Description = "Secret key" }
-            @{ Pattern = "(?i)(token\s*[=:]\s*)['\`"][A-Za-z0-9._-]{20,}['\`"]"; Description = "Access token" }
-            @{ Pattern = "-----BEGIN [A-Z ]+-----"; Description = "Private key (PEM format)" }
-            @{ Pattern = "sk-[A-Za-z0-9]{20,}"; Description = "Anthropic API key" }
-            @{ Pattern = "xox[baprs]-[A-Za-z0-9-]+"; Description = "Slack token" }
-            @{ Pattern = "ghp_[A-Za-z0-9]{36}"; Description = "GitHub personal access token" }
-            @{ Pattern = "(?i)(database[_-]?url\s*[=:]\s*)['\`"][^'\`"]*password[^'\`"]*['\`"]"; Description = "Database connection string with password" }
-        )
-
-        foreach ($file in $ChangedFiles) {
-            if (Test-Path $file -ErrorAction SilentlyContinue) {
-                $content = Get-Content $file -Raw -ErrorAction SilentlyContinue
-                if ($content) {
-                    foreach ($secretPattern in $SecretPatterns) {
-                        if ($content -match $secretPattern.Pattern) {
-                            $SecretsFound += @{
-                                File = $file
-                                Type = $secretPattern.Description
-                                Pattern = $secretPattern.Pattern
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        $SecretsFound = Test-SecretsInChangedFiles -ChangedFiles $ChangedFiles
 
         if ($SecretsFound.Count -gt 0) {
             Write-Host ""

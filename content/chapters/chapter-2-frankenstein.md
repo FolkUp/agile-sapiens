@@ -28,7 +28,7 @@ sources:
   - "Aldini, Giovanni. *An Account of the Late Improvements in Galvanism* (1804). London. Публичные демонстрации гальванизма 1803 года."
   - "GAO-05-105. «FBI Trilogy Project», February 2005. Government Accountability Office. Полный бюджет VCF около 170 млн долларов."
 confidence: high
-reviewed_by: "Enhanced Alice v2.0 L3 — Phantom Evidence Recovery"
+reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
 review_date: "2026-05-13"
 ---
 > **Chapter Summary:** Тёмная сторона создания. Как паттерн «блестящий замысел → бегство от последствий» проходит красной нитью от романа Мэри Шелли до крупнейших провалов цифровой трансформации. Почему самые опасные системы создаются с самыми лучшими намерениями — и что происходит, когда создатель уходит.

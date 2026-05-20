@@ -1,10 +1,10 @@
 # AGILE SAPIENS
 
-**Version:** 1.0.7 | **Date:** 2026-05-20 | **Enhanced Alice v2.0 Level 3**  
+**Version:** 1.0.7 | **Date:** 2026-05-21 | **Enhanced Alice v2.0 Level 3**  
 **Literary Business Analysis — How Literature Predicted Modern Management**
 
 > **Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ — Visual Content 100% — Multi-Format Pipeline Repaired
-> **Latest:** 2026-05-20/21 — Ch.6 holmes-watson FULL rewrite + EPUB re-inclusion complete (PRs #66-#74, 9 atomic batches). HOOK → CONTROVERSY → CORE (4 named laws) → RESOLUTION in Ch.5 nemo voice baseline. File compressed 514 → 208 lines (60% reduction), 0 anglicism markers. Status: draft → verified. EPUB and PDF regenerated with both Ch.6 parts labeled «часть 1: Холмс и Ватсон» / «часть 2: Доктор Джекил». Production hostile-verified: EPUB 126,059 bytes, PDF 2,639,293 bytes, web titles updated, CI deploy completed.
+> **Latest:** 2026-05-20/21 — Ch.6 holmes-watson FULL rewrite + EPUB re-inclusion complete (PRs #66–#75, 10 PRs total). HOOK → CONTROVERSY → CORE (4 named laws) → RESOLUTION in Ch.5 nemo voice baseline. File compressed 514 → 208 lines (60% reduction), 0 anglicism markers. Status: draft → verified. EPUB and PDF regenerated with both Ch.6 parts labeled «часть 1: Холмс и Ватсон» / «часть 2: Доктор Джекил». Production hostile-verified: EPUB 126,059 bytes, PDF 2,639,293 bytes, web titles updated, CI deploy completed.
 > **Earlier 2026-05-20:** Debt-elimination batches 1-3 deployed (PRs #56–#65). PDF/EPUB/baseURL fixed (batch 1), EPUB structure + SEC-001 cooper hardening + slovar Section H (batch 2), then SEC-002 cooper P2 hygiene + slovar rename to «Глоссарий замен» + Ch.11 archive verification + D-5 Ch-9 anglicism cleanup (~70% reduction) + D-7 subject index skeleton (248 entries) + phantom meta-doc removal from Ch-9 + Ch-10 tail surgical cleanup (batch 3). Hostile-verified on production.
 > **Earlier achievement:** 2026-05-19 — Phantom Evidence Prevention (Enhanced Alice v2.0 L3 self-correction)
 > **Critical Achievement:** ALL 12 content units compliant (≤25% monotone target achieved)
@@ -58,12 +58,13 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 - Mono% ≤25% achieved
 
 **All Content Units: CONSTITUTIONAL EXCELLENCE ACHIEVED** ✅ **ALL COMPLIANT**
-- Chapter 6: 4.5% monotone ✅ (EXCELLENT constitutional compliance)
+- Chapter 6 (jekyll-hyde, part 2): 4.5% monotone ✅ (EXCELLENT constitutional compliance)
+- Chapter 6 (holmes-watson, part 1): rewritten 2026-05-20/21, mono% re-measurement pending
 - Chapter 10: 4.6% monotone ✅ (EXCELLENT constitutional compliance)
 - Chapter 8: 3.0% monotone ✅ (EXCELLENT constitutional compliance)  
 - Chapter 2: 17.2% monotone ✅ (GOOD constitutional compliance)
-- ALL 12 content units: ≤25% compliance achieved — constitutional excellence operational
-- **Status:** Hostile verification eliminated phantom crisis — ALL chapters constitutionally compliant
+- All previously-measured content units: ≤25% compliance achieved — constitutional excellence operational
+- **Status:** Hostile verification eliminated phantom crisis — measured chapters constitutionally compliant
 
 ### Strategic Execution Phase
 

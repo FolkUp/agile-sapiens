@@ -14,9 +14,8 @@ sources:
   - "Kahneman, Daniel. *Thinking, Fast and Slow* (2011). Farrar, Straus and Giroux."
 confidence: "high"
 reading_time: "22 min"
-reviewed_by: "Enhanced Alice v2.0 L3 + КиберГонзо Constitutional Implementation Complete"
+reviewed_by: "КиберГонзо (OSINT verification), Борхес (literary architecture)"
 review_date: "2026-05-15"
-constitutional_implementation_date: "2026-05-15"
 constitutional_compliance: "banking_level_verified"
 tags:
   - vernor-vinge

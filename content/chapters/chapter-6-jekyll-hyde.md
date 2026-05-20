@@ -3,7 +3,7 @@ title: "Глава 6, часть 2: Доктор Джекил"
 description: "Как инструменты интеллектуального усиления превращают создателей в создания — от формулы Стивенсона до корпоративной зависимости, от McKinsey автоматизации до парадокса algorithm aversion"
 date: 2026-04-08
 date_created: "2026-04-07"
-date_updated: "2026-04-21"
+date_updated: "2026-05-20"
 weight: 70
 chapter: 6
 act: "II: Archetypes"
@@ -13,7 +13,7 @@ confidence: "high"
 authors: ["Андрей"]
 reading_time: "20 min"
 reviewed_by: "Борхес (literary architecture), КиберГонзо (OSINT verification)"
-review_date: "2026-04-21"
+review_date: "2026-05-20"
 tags:
   - "jekyll-hyde"
   - "intelligence-amplification"

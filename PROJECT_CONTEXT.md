@@ -1,7 +1,7 @@
 # AGILE SAPIENS — Project Context & Status
 
-**Version:** 1.0.7 | **Date:** 2026-05-20 | **Enhanced Alice v2.0 Level 3**
-**Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ + Debt-elimination batches 1–3 on production (PRs #56–#65) + Ch.6 holmes-watson structural rewrite + EPUB re-inclusion complete (PRs #66–#74). Closed: D-1 PDF, D-2 baseURL, D-3/D-4 EPUB structure, D-6 slovar Section H, SEC-001 cooper P1 hardening, SEC-002 cooper P2 hygiene, slovar rename to «Глоссарий замен», Ch.11 archive verification (canonical Ch.0–10), D-5 Ch-9 LOW-sensitivity sweep + phantom meta-doc removal, D-7 subject index skeleton (248 entries), D-5 Ch-10 tail surgical sweep, **D-5 Ch-6 holmes-watson full structural rewrite + EPUB re-inclusion** (HOOK → CONTROVERSY → CORE → RESOLUTION; 514 → 208 lines; status draft → verified; two-part «Глава 6» labels «часть 1: Холмс и Ватсон» / «часть 2: Доктор Джекил»; production-deployed 2026-05-20 22:09 GMT). No P0/P1 blockers open.
+**Version:** 1.0.7 | **Date:** 2026-05-21 | **Enhanced Alice v2.0 Level 3**
+**Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ + Debt-elimination batches 1–3 on production (PRs #56–#65) + Ch.6 holmes-watson structural rewrite + EPUB re-inclusion complete (PRs #66–#75, 10 PRs total). Closed: D-1 PDF, D-2 baseURL, D-3/D-4 EPUB structure, D-6 slovar Section H, SEC-001 cooper P1 hardening, SEC-002 cooper P2 hygiene, slovar rename to «Глоссарий замен», Ch.11 archive verification (canonical Ch.0–10), D-5 Ch-9 LOW-sensitivity sweep + phantom meta-doc removal, D-7 subject index skeleton (248 entries), D-5 Ch-10 tail surgical sweep, **D-5 Ch-6 holmes-watson full structural rewrite + EPUB re-inclusion** (HOOK → CONTROVERSY → CORE → RESOLUTION; 514 → 208 lines; status draft → verified; two-part «Глава 6» labels «часть 1: Холмс и Ватсон» / «часть 2: Доктор Джекил»; production-deployed 2026-05-20 22:09 GMT). No P0/P1 blockers open.
 
 ## Project Overview
 
@@ -28,7 +28,8 @@
 | 3-holmes | 256 | 11.7% | ✅ EXCELLENT |
 | 4-borges | 241 | 7.1% | ✅ EXCELLENT |
 | 5-nemo | 470 | 13.6% | ✅ GOOD |
-| 6-jekyll-hyde | 397 | 4.5% | ✅ EXCELLENT |
+| 6-holmes-watson (part 1) | 208 lines | rewritten 2026-05-20/21 — mono% pending | ⏳ NEEDS MEASUREMENT |
+| 6-jekyll-hyde (part 2) | 397 | 4.5% | ✅ EXCELLENT |
 | 7-don-quixote | 442 | 9.5% | ✅ EXCELLENT |
 | 8-time-machine | 270 | 3.0% | ✅ EXCELLENT |
 | 9-three-scenarios | 238 | 13.0% | ✅ GOOD |

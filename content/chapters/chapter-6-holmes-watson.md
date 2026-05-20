@@ -40,14 +40,9 @@ related:
 sensitive: false
 toc: true
 draft: false
-constitutional_implementation: true
-literary_substitution: "Jekyll-Hyde → Holmes-Watson partnership"
-team_focus_restoration: "Individual psychology → Collaborative methodology"
 ---
 
 > **Chapter Summary:** Архетип человеко-машинного партнёрства. Как детективная методология Холмса и Ватсона предвосхищает современные принципы collaborative intelligence — от complementary cognition до distributed decision-making. Почему ИИ-усиление команд требует сохранения человеческого партнёрства, а не его замены. И что такое partnership enhancement — эволюция коллаборации в эпоху алгоритмов.
-
-> **Constitutional Note:** Chapter 6 reinterpretation under AGIL-162 Option A decision. Team collaboration focus restored. All sources КиберГонзо-verified with banking-level editorial standards.
 
 ## HOOK: 221B Baker Street, декабрь 1881 года
 
@@ -510,5 +505,3 @@ Partnership intelligence — combining analytical precision, contextual wisdom, 
 ---
 
 ¹ᵃ-¹ˡ: Все интерпретации канонических текстов Дойла представляют авторский analysis в контексте современных исследований collective intelligence и human-AI collaboration. Литературная аутентичность preserved через точные citations; современные applications представляют reasoned extrapolation на основе established partnership principles.
-
-**Constitutional Implementation Complete**: Chapter 6 team focus restored через Holmes-Watson partnership archetypal analysis. Individual psychology framework replaced с collaborative methodology maintaining literary authenticity и academic positioning integrity.

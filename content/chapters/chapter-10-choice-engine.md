@@ -433,11 +433,11 @@ COLLECTIVE INTELLIGENCE ACTIVATION:
 
 **Заключение AGILE SAPIENS — Gibson's Cyberpunk Team Navigation Architecture:**
 
-Путешествие от Верна до Гибсона раскрыло fundamental transformation: успех в эпоху ИИ зависит не от individual technology adoption и не от organizational AI implementation, а от emergence коллективного интеллекта через cyberpunk team networks, координирующих различные подходы к технологии. Distributed cognition превосходит individual augmentation через network effects и collective choice architecture.
+Путешествие от Верна до Гибсона раскрыло fundamental transformation: успех в эпоху ИИ зависит не от individual technology adoption и не от organizational AI implementation, а от emergence коллективного интеллекта через cyberpunk team networks, координирующих различные подходы к технологии. Distributed cognition превосходит индивидуальное усиление через сетевые эффекты и collective choice architecture.
 
-**Временное измерение team coordination:** команды должны операть на multiple temporal horizons одновременно — real-time market response (Анна), structural pattern validation (Михаил), strategic cultural adaptation (Дмитрий). [Три горизонта Уэллса](/chapters/chapter-8-time-machine) реализуются не sequential planning, а через parallel distributed processing.
+**Временное измерение командной координации:** команды должны операть на многие временные горизонты одновременно — real-time market response (Анна), structural pattern validation (Михаил), strategic cultural adaptation (Дмитрий). [Три горизонта Уэллса](/chapters/chapter-8-time-machine) реализуются не sequential planning, а через parallel distributed processing.
 
-**Стратегическое измерение collective navigation:** способность coordinate между [четырьмя путями Винджа](/chapters/chapter-9-three-scenarios) через team specialization — augmentation (AI enhancement), resistance (critical validation), symbiosis (cultural coordination), network effects (collective synthesis). Navigation требует team flexibility при coordination principles.
+**Стратегическое измерение collective navigation:** способность coordinate между [четырьмя путями Винджа](/chapters/chapter-9-three-scenarios) через team specialization — augmentation (усиление ИИ), сопротивление (critical validation), симбиоз (cultural coordination), сетевые эффекты (collective synthesis). Navigation требует team flexibility при принципах координации.
 
 **Network dimension — Gibson's revelation:** киберпространство функционирует как environment для distributed team cognition, где collective intelligence emerges through coordination различий rather than individual enhancement. Team symbiosis создаёт capabilities недоступные individual nodes через cyberpunk network architecture.
 
@@ -447,7 +447,7 @@ COLLECTIVE INTELLIGENCE ACTIVATION:
 
 Но истинный маркер успеха оказывается проще и человечнее. Компании, которые преуспевают в ИИ-трансформации, измеряют прогресс не ростом метрик продуктивности, а способностью удерживать талантливых людей. Организации, понимающие эту логику, процветают. Те же, кто упорно фокусируется исключительно на оптимизации эффективности, рано или поздно обнаруживают фундаментальную истину. Людей можно оптимизировать лишь до определённого предела. После этого предела они голосуют ногами и находят места работы, где к ним относятся как к людям, а не как к переменным в уравнении производительности.
 
-**Gibson's Winning Strategy:** cyberpunk team navigation architecture, где distributed cognition координирует методологические различия для creation emergent capabilities — не individual learning использовать AI tools, а collective evolution team networks и technology systems в partnership, где strength возникает from coordination diversity approaches через network effects и collective intelligence synthesis.
+**Gibson's Winning Strategy:** cyberpunk team navigation architecture, где distributed cognition координирует методологические различия для creation emergent capabilities — не individual learning использовать AI tools, а collective evolution team networks и technology systems в partnership, где strength возникает из координации diversity approaches через сетевые эффекты и collective intelligence synthesis.
 
 **Наблюдение Гибсона:** «Будущее уже здесь — оно просто неравномерно распределено»⁴ — распределение определяет опыт больше, чем разработка определяет возможность.
 

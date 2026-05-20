@@ -1,7 +1,7 @@
 # AGILE SAPIENS — Project Context & Status
 
 **Version:** 1.0.7 | **Date:** 2026-05-20 | **Enhanced Alice v2.0 Level 3**
-**Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ + Debt-elimination batches 1–3 on production (PRs #56–#64). Closed: D-1 PDF, D-2 baseURL, D-3/D-4 EPUB structure, D-6 slovar Section H, SEC-001 cooper P1 hardening, SEC-002 cooper P2 hygiene, slovar rename to «Глоссарий замен», Ch.11 archive verification (canonical Ch.0–10), D-5 Ch-9 LOW-sensitivity sweep + phantom meta-doc removal, D-7 subject index skeleton (248 entries), D-5 Ch-10 tail surgical sweep. Open: D-5 Ch-6 holmes-watson structural rewrite (user-approved).
+**Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ + Debt-elimination batches 1–3 on production (PRs #56–#65) + Ch.6 holmes-watson structural rewrite complete (PRs #66–#71). Closed: D-1 PDF, D-2 baseURL, D-3/D-4 EPUB structure, D-6 slovar Section H, SEC-001 cooper P1 hardening, SEC-002 cooper P2 hygiene, slovar rename to «Глоссарий замен», Ch.11 archive verification (canonical Ch.0–10), D-5 Ch-9 LOW-sensitivity sweep + phantom meta-doc removal, D-7 subject index skeleton (248 entries), D-5 Ch-10 tail surgical sweep, D-5 Ch-6 holmes-watson full structural rewrite (HOOK → CONTROVERSY → CORE → RESOLUTION; 514 → 208 lines; status draft → verified). Open: C-5b EPUB re-inclusion (blocked on user title-strategy decision for two-part «Глава 6»).
 
 ## Project Overview
 

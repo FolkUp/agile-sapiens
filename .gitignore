@@ -110,6 +110,10 @@ tmp/
 tools/sops.exe
 tools/*.exe
 
+# Regenerable Lighthouse audit artifacts (SEC-002)
+_meta/lighthouse/
+_meta/closeout-lighthouse/
+
 # Editorial measurement outputs
 chapter-*-baseline*.json
 chapter-*-progress*.json

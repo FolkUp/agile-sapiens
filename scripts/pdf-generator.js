@@ -32,11 +32,12 @@ const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
 /*
  * Files in content/chapters/ that must NOT be included:
- *  - chapter-6-holmes-watson.md  → status: draft; chapter-6-jekyll-hyde is the
- *    canonical, verified Chapter 6 (both carry weight 70).
+ *  (As of AGIL-D5-CH6 2026-05-20: chapter-6-holmes-watson is now status: verified
+ *  and re-included as «Глава 6, часть 1: Холмс и Ватсон» paired with
+ *  «Глава 6, часть 2: Доктор Джекил» — no chapter currently needs exclusion.)
  * Backup / .claude directories are skipped because we only read the top level.
  */
-const EXCLUDE_FILES = new Set(['chapter-6-holmes-watson.md']);
+const EXCLUDE_FILES = new Set();
 
 console.log('AGILE SAPIENS PDF Generator');
 console.log('===========================');

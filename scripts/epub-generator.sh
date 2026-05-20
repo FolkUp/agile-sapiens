@@ -116,13 +116,24 @@ NAV_CHAPTERS=""
 chapter_count=0
 
 # Process chapters in numerical order (not alphabetical)
-for chapter_file in $(find "$CHAPTERS_DIR" -name "chapter-*.md" | sort -V); do
+# D-3 fix: exclude .backup/ directory so chapter-2-frankenstein-original.md
+# (legacy backup of the source) does not get packaged as a duplicate.
+# D-4 fix: chapter-6-holmes-watson.md is status:draft per its frontmatter;
+# chapter-6-jekyll-hyde.md is the canonical "Глава 6" (status:verified).
+# Excluding the draft prevents two "Глава 6" entries in the EPUB nav/spine.
+for chapter_file in $(find "$CHAPTERS_DIR" -maxdepth 1 -name "chapter-*.md" | sort -V); do
     if [[ -f "$chapter_file" ]]; then
         chapter_basename=$(basename "$chapter_file" .md)
 
         # Skip duplicate chapter-2 versions - prefer optimized
         if [[ "$chapter_basename" == "chapter-2-frankenstein" ]] && [[ -f "$CHAPTERS_DIR/chapter-2-frankenstein-optimized.md" ]]; then
             echo "⏭️  Skipping $chapter_basename (using optimized version)"
+            continue
+        fi
+
+        # D-4: skip draft chapter-6-holmes-watson (jekyll-hyde is canonical Глава 6)
+        if [[ "$chapter_basename" == "chapter-6-holmes-watson" ]]; then
+            echo "⏭️  Skipping $chapter_basename (status: draft; jekyll-hyde is canonical Глава 6)"
             continue
         fi
 

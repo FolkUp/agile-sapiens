@@ -4,7 +4,8 @@
 **Literary Business Analysis — How Literature Predicted Modern Management**
 
 > **Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ — Visual Content 100% — Multi-Format Pipeline Repaired
-> **Latest:** 2026-05-20 — Debt-elimination batches 1-3 deployed (PRs #56–#64). PDF/EPUB/baseURL fixed (batch 1), EPUB structure + SEC-001 cooper hardening + slovar Section H (batch 2), then SEC-002 cooper P2 hygiene + slovar rename to «Глоссарий замен» + Ch.11 archive verification + D-5 Ch-9 anglicism cleanup (~70% reduction) + D-7 subject index skeleton (248 entries) + phantom meta-doc removal from Ch-9 + Ch-10 tail surgical cleanup (batch 3). Hostile-verified on production.
+> **Latest:** 2026-05-20 PM — Ch.6 holmes-watson structural rewrite complete (PRs #66-#71, 6 atomic batches). HOOK → CONTROVERSY → CORE (4 named laws) → RESOLUTION in Ch.5 nemo voice baseline. File compressed 514 → 208 lines (60% reduction), 0 anglicism markers. Status: draft → verified. EPUB re-inclusion (C-5b) blocked on title-strategy decision for two-part «Глава 6».
+> **Earlier 2026-05-20:** Debt-elimination batches 1-3 deployed (PRs #56–#65). PDF/EPUB/baseURL fixed (batch 1), EPUB structure + SEC-001 cooper hardening + slovar Section H (batch 2), then SEC-002 cooper P2 hygiene + slovar rename to «Глоссарий замен» + Ch.11 archive verification + D-5 Ch-9 anglicism cleanup (~70% reduction) + D-7 subject index skeleton (248 entries) + phantom meta-doc removal from Ch-9 + Ch-10 tail surgical cleanup (batch 3). Hostile-verified on production.
 > **Earlier achievement:** 2026-05-19 — Phantom Evidence Prevention (Enhanced Alice v2.0 L3 self-correction)
 > **Critical Achievement:** ALL 12 content units compliant (≤25% monotone target achieved)
 > **Goal:** Best Scientific Popular Book 2026  

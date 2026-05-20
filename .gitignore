@@ -114,6 +114,9 @@ tools/*.exe
 _meta/lighthouse/
 _meta/closeout-lighthouse/
 
+# Regenerable Hugo build artifacts (SEC-002)
+public-chapter1-poc/
+
 # Editorial measurement outputs
 chapter-*-baseline*.json
 chapter-*-progress*.json

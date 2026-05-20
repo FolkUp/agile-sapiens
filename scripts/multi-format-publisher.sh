@@ -10,6 +10,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 OUTPUT_DIR="$PROJECT_ROOT/public"
 FORMATS_DIR="$PROJECT_ROOT/formats"
+PUBLISH_DIR="$PROJECT_ROOT/static/downloads"
 
 echo "🏛️  AGILE SAPIENS Multi-Format Publisher"
 echo "========================================"
@@ -70,6 +71,25 @@ else
     echo "⚠️  Node.js not available - cannot generate PDF"
     echo "   Install Node.js to enable PDF generation"
 fi
+
+# Step 4: Publish generated formats to static/downloads/
+# Hugo serves static/* as-is into public/, so this is the artifact
+# that actually gets deployed. Without this step, generator output in
+# formats/ stays disconnected from production downloads (silent skew).
+echo ""
+echo "📦 [STEP 4] Publishing formats to static/downloads/..."
+mkdir -p "$PUBLISH_DIR"
+for f in "$FORMATS_DIR"/*.epub "$FORMATS_DIR"/*.pdf; do
+    [ -f "$f" ] || continue
+    cp "$f" "$PUBLISH_DIR/"
+    echo "   $(basename "$f") -> static/downloads/ ($(du -h "$f" | cut -f1))"
+done
+
+# Step 5: Hugo rebuild so public/downloads/ picks up the fresh artifacts
+echo ""
+echo "🔁 [STEP 5] Rebuilding Hugo to include fresh downloads..."
+hugo --gc --minify --quiet
+echo "✅ Hugo rebuild complete"
 
 # Summary
 echo ""

@@ -196,144 +196,19 @@ IBM запустила Watson for Oncology в 2013 году как продук�
 
 Каждый раз, когда в современной команде Watson-роль начинает восприниматься как «junior, кого-то можно заменить алгоритмом», партнёрство уже умерло. Просто никто этого ещё не заметил.
 
-## РАЗДЕЛ IV: Organizational Applications
+## RESOLUTION: Партнёрский императив
 
-### Corporate Detective Teams: Business Intelligence Partnership
+Архетип Холмса и Ватсона — это не история про то, как один блестящий аналитик решает невозможные задачи. Это история о том, что блестящий аналитик в одиночку решает невозможные задачи плохо, и нужен второй человек с другим набором способностей, чтобы решение стало работающим.
 
-The Holmes-Watson methodology translates directly к modern business intelligence teams:
+Шестьдесят расследований Дойла, опубликованных между 1887 и 1927 годом, — это шестьдесят итераций одного и того же эксперимента: как два человека с дополняющими навыками производят результат, который ни один из них в одиночку не произведёт. Холмс наблюдает паттерны. Ватсон интерпретирует контекст. Холмс генерирует гипотезы. Ватсон задаёт четыре стандартных вопроса. Холмс делает выводы. Ватсон документирует процесс — и тем самым делает знание передаваемым.
 
-**Strategic Analysis Partnerships:**
+Современная эпоха повторяет тот же эксперимент с новым составом. Холмса теперь может играть алгоритм — быстрее, точнее, на больших данных. Ватсона не может играть никто, кроме человека: роль Ватсона требует социальной интуиции, понимания мотиваций, способности успокоить клиента достаточно, чтобы получить информацию, которой нет в данных. Каждый успешный ИИ-проект последних десяти лет — это история, где руководство поняло эту асимметрию и не попыталось заменить Ватсона алгоритмом. Каждый провал — история, где попыталось.
 
-**"Holmes" Role (Data Analytics Specialist):**
-- Pattern recognition в market data, financial trends, competitive intelligence  
-- Hypothesis generation о strategic opportunities и threats
-- Analytical modeling для scenario planning и risk assessment
-- Systematic evaluation о strategic options через quantitative analysis
+Партнёрский интеллект — сочетание аналитической точности, контекстной мудрости, систематической методики и взаимного контроля качества — остаётся оптимальной архитектурой для сложных задач в нестабильной среде. Не потому что технология недостаточно развита, чтобы заменить человека целиком. А потому что некоторые работы по своей природе требуют двух точек зрения, между которыми возможен диалог.
 
-**"Watson" Role (Business Context Specialist):**
-- Practical validation о analytical findings через industry experience
-- Stakeholder assessment и organizational dynamics understanding
-- Implementation feasibility evaluation и resource constraint analysis
-- Communication translation между analytical insights и executive decision-making
+Следующая глава исследует, что происходит, когда сама реальность становится неоднозначной — когда команды должны навигировать между идеалистическим видением и практическими ограничениями, между алгоритмическими рекомендациями и человеческим суждением, между систематическим анализом и интуитивной мудростью.
 
-**Partnership Outcome:**
-- Strategic recommendations combining data precision с practical wisdom
-- Quality assurance preventing analytical tunnel vision и context blindness
-- Enhanced decision-making через collaborative intelligence
-- Institutional memory preservation через systematic documentation
-
-### Quality Assurance Partnerships: Preventing AI-Driven Decision Errors
-
-**Software Development Teams:**
-
-**Code Review Partnerships:**
-- AI-enhanced static analysis identifies potential bugs и performance issues
-- Human reviewers provide context о business requirements и user experience
-- Partnership validates changes balancing technical optimization с practical constraints
-- Quality control prevents both algorithmic false positives И human oversight errors
-
-**Product Strategy Teams:**
-
-**Market Analysis Partnerships:**
-- AI processes customer data, identifies usage patterns, predicts trends
-- Human strategists provide competitive context, brand considerations, practical limitations
-- Partnership creates product decisions combining data insights с strategic wisdom
-- Quality assurance prevents data-driven tunnel vision И context-free planning
-
-### Knowledge Management: Collaborative Documentation Preserving Institutional Memory
-
-**Holmes-Watson Documentation Model:**
-
-**Systematic Case Documentation:**
-- Watson's narratives preserve not just facts но methodology и reasoning process
-- Holmes's analytical frameworks become reusable templates для similar problems
-- Partnership creates institutional memory combining analytical precision с practical wisdom
-- Quality control ensures documentation serves both technical accuracy И human understanding
-
-**Modern Application:**
-
-**Project Retrospectives:**
-- AI analyzes project data: timelines, resource usage, outcome metrics
-- Human team members provide context: stakeholder dynamics, decision rationale, lessons learned
-- Partnership creates documentation combining quantitative analysis с qualitative insights
-- Institutional memory serves both data-driven optimization И human wisdom preservation
-
-**Knowledge Base Development:**
-- AI processes documentation для pattern identification и content organization
-- Human experts provide context, validate accuracy, ensure practical applicability
-- Partnership creates knowledge systems balancing algorithmic efficiency с human accessibility
-- Quality assurance prevents both information overload И critical knowledge gaps
-
-### Strategic Investigation: Team-Based Analysis of Complex Organizational Challenges
-
-**Organizational Problem-Solving Teams:**
-
-**Holmes-Watson Approach to Strategic Challenges:**
-
-**Problem Definition:**
-- Analytical assessment о problem complexity, root cause identification
-- Contextual understanding о stakeholder dynamics, political considerations, practical constraints
-- Partnership creates comprehensive problem framework balancing analytical rigor с organizational reality
-
-**Investigation Process:**
-- Systematic evidence gathering combining data analysis с stakeholder interviews
-- Hypothesis testing через both quantitative modeling И practical pilot programs
-- Quality control через peer validation и assumption challenging
-
-**Solution Implementation:**
-- Strategic recommendations combining analytical optimization с practical feasibility
-- Change management incorporating both data-driven arguments И human factors
-- Partnership ensures solutions are both analytically sound И organizationally sustainable
-
-**Corporate Transformation Projects:**
-
-**Digital Transformation Teams:**
-- Technology specialists analyze systems, identify optimization opportunities, design technical solutions
-- Change management specialists assess organizational readiness, stakeholder impact, implementation challenges
-- Partnership creates transformation strategies balancing technical optimization с human factors
-- Quality assurance prevents technology-focused solutions that ignore organizational dynamics
-
-### The Institutional Learning Framework
-
-**Holmes-Watson Legacy: Methodology That Transcends Individual Cases**
-
-The lasting value Holmes-Watson partnership: они created systematic methodology that works across different problem types, complexity levels, и organizational contexts.
-
-**Key Transferable Elements:**
-
-1. **Complementary Role Architecture**: Analytical precision + contextual wisdom
-2. **Quality Assurance Through Peer Validation**: Systematic challenge of assumptions
-3. **Iterative Learning**: Each case improves methodology для future problems  
-4. **Institutional Memory**: Documentation preserving both analysis И context
-
-**Modern Organizational Implementation:**
-
-Teams adopting Holmes-Watson approach должны focus на:
-
-- **Partnership Development**: Building complementary capabilities rather than redundant skills
-- **Quality Control Integration**: Systematic peer validation preventing groupthink И bias
-- **Methodology Documentation**: Preserving both analytical frameworks И contextual insights
-- **Institutional Learning**: Using each project для improve collaborative approach
-
-**Constitutional Compliance: Team Focus Throughout AI Integration**
-
-The fundamental insight: AI tools should enhance human collaboration rather than replace it. Holmes-Watson partnership demonstrates this возможно on individual level; modern organizations must apply same principle на institutional level.
-
-Teams that maintain collaborative focus while integrating AI tools will achieve sustainable competitive advantage through enhanced collective intelligence rather than technology dependence.
-
----
-
-**Заключение: The Partnership Imperative**
-
-Архетип Холмса и Ватсона предвосхищает fundamental requirement успешной AI integration: technology должно enhance human collaboration, не replace it. Their detective methodology — systematic observation, collaborative reasoning, peer validation, institutional learning — provides template для modern human-AI teams.
-
-В эпоху где AI capabilities rapidly expand, the Holmes-Watson model offers constitutional protection против two common failure modes: technology replacement что eliminates human collaboration, и human resistance что ignores technological capabilities.
-
-Partnership intelligence — combining analytical precision, contextual wisdom, systematic methodology, и collaborative quality control — represents optimal approach для complex problem-solving в uncertain environments.
-
-Следующая глава explores как эта collaborative framework applies когда reality itself becomes uncertain — when teams must navigate между idealistic vision и practical constraints, между algorithmic recommendations и human judgment, между systematic analysis и intuitive wisdom.
-
-Дон Кихот и Санчо Панса ride again, но теперь с AI companions.
+Дон Кихот и Санчо Панса снова в дороге — теперь с ИИ-спутниками.
 
 ---
 

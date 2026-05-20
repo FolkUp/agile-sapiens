@@ -118,9 +118,12 @@ chapter_count=0
 # Process chapters in numerical order (not alphabetical)
 # D-3 fix: exclude .backup/ directory so chapter-2-frankenstein-original.md
 # (legacy backup of the source) does not get packaged as a duplicate.
-# D-4 fix: chapter-6-holmes-watson.md is status:draft per its frontmatter;
-# chapter-6-jekyll-hyde.md is the canonical "Глава 6" (status:verified).
-# Excluding the draft prevents two "Глава 6" entries in the EPUB nav/spine.
+# AGIL-D5-CH6 (2026-05-20): Chapter 6 is now a two-part chapter — both
+# chapter-6-holmes-watson.md ("Глава 6, часть 1: Холмс и Ватсон") and
+# chapter-6-jekyll-hyde.md ("Глава 6, часть 2: Доктор Джекил") are
+# status:verified and included in EPUB. The basename-skip previously
+# in place (D-4 fix) was removed when holmes-watson was rewritten in
+# Ch.5 voice baseline (PRs #66-71) and approved for re-inclusion.
 for chapter_file in $(find "$CHAPTERS_DIR" -maxdepth 1 -name "chapter-*.md" | sort -V); do
     if [[ -f "$chapter_file" ]]; then
         chapter_basename=$(basename "$chapter_file" .md)
@@ -128,12 +131,6 @@ for chapter_file in $(find "$CHAPTERS_DIR" -maxdepth 1 -name "chapter-*.md" | so
         # Skip duplicate chapter-2 versions - prefer optimized
         if [[ "$chapter_basename" == "chapter-2-frankenstein" ]] && [[ -f "$CHAPTERS_DIR/chapter-2-frankenstein-optimized.md" ]]; then
             echo "⏭️  Skipping $chapter_basename (using optimized version)"
-            continue
-        fi
-
-        # D-4: skip draft chapter-6-holmes-watson (jekyll-hyde is canonical Глава 6)
-        if [[ "$chapter_basename" == "chapter-6-holmes-watson" ]]; then
-            echo "⏭️  Skipping $chapter_basename (status: draft; jekyll-hyde is canonical Глава 6)"
             continue
         fi
 
@@ -249,7 +246,10 @@ cd "$EPUB_BUILD_DIR"
 rm -f "../agile-sapiens-v1.0.7.epub"
 
 # Use Python ZIP creation with UTF-8 preservation
-python "$SCRIPT_DIR/create-epub-zip.py" "$EPUB_BUILD_DIR" "$FORMATS_DIR/agile-sapiens-v1.0.7.epub"
+# Python binary detection: Linux typically has `python3`, Windows has `py` launcher,
+# some systems still have `python` symlink. Fall back through all three.
+PYTHON_CMD=$(command -v python3 || command -v python || command -v py || echo "python")
+"$PYTHON_CMD" "$SCRIPT_DIR/create-epub-zip.py" "$EPUB_BUILD_DIR" "$FORMATS_DIR/agile-sapiens-v1.0.7.epub"
 
 cd "$PROJECT_ROOT"
 

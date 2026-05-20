@@ -4,7 +4,7 @@
 **Literary Business Analysis — How Literature Predicted Modern Management**
 
 > **Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ — Visual Content 100% — Multi-Format Pipeline Repaired
-> **Latest:** 2026-05-20 — Debt-elimination batch 1 deployed (PR #56/#57). PDF on production restored from 52KB placeholder to full 2.5MB / 190-page book; localhost baseURL contamination cleared from sitemap. Hostile-verified independently on production.
+> **Latest:** 2026-05-20 — Debt-elimination batches 1-3 deployed (PRs #56–#64). PDF/EPUB/baseURL fixed (batch 1), EPUB structure + SEC-001 cooper hardening + slovar Section H (batch 2), then SEC-002 cooper P2 hygiene + slovar rename to «Глоссарий замен» + Ch.11 archive verification + D-5 Ch-9 anglicism cleanup (~70% reduction) + D-7 subject index skeleton (248 entries) + phantom meta-doc removal from Ch-9 + Ch-10 tail surgical cleanup (batch 3). Hostile-verified on production.
 > **Earlier achievement:** 2026-05-19 — Phantom Evidence Prevention (Enhanced Alice v2.0 L3 self-correction)
 > **Critical Achievement:** ALL 12 content units compliant (≤25% monotone target achieved)
 > **Goal:** Best Scientific Popular Book 2026  

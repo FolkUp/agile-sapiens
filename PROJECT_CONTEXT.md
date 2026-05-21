@@ -70,8 +70,9 @@
 ## Dependencies & Blockers
 
 **P0 Blockers:** none open  
-**P1 Open:** AGIL-167 WCAG/accessibility (ready) — includes nav optimization handed off from AGIL-165  
-**P2 Open:** AGIL-168 typography (planning)  
+**P1 Open:** none — AGIL-167 narrow-scope closed 2026-05-21 (PRs #78, #79)  
+**P2 Open:** AGIL-168 typography (planning), AGIL-173 touch-target audit (planning)  
+**P3 Open:** AGIL-172 URL portability — Cyrillic→ASCII anchors (planning)  
 **Dispatch-gated (user approval required):** AGIL-153 HSE, AGIL-154 MIT Press
 
 ## Evidence Chain

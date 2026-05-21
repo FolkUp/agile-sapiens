@@ -1,7 +1,7 @@
 # AGILE SAPIENS — Project Context & Status
 
-**Version:** 1.0.7 | **Date:** 2026-05-21 | **Enhanced Alice v2.0 Level 3**
-**Status:** All 12 content units ≤25% mono per fresh measurement (2026-05-21T07:36 UTC). 11 PRs of the 2026-05-20/21 batch deployed (#66–#76): Ch.6 holmes-watson full structural rewrite + EPUB re-inclusion + post-rewrite hostile-audit cleanup. Earlier 2026-05-20 batch (#56–#65) closed D-1 PDF, D-2 baseURL, D-3/D-4 EPUB structure, D-5 Ch-9/Ch-10 tail sweeps + phantom meta-doc removal, D-6 slovar Section H, D-7 subject index (248 entries), SEC-001/002 hardening, slovar rename, Ch.11 archive verification. No P0/P1 blockers open.
+**Version:** 1.0.7 | **Date:** 2026-05-21
+**Status:** All 12 content units ≤25% mono per fresh measurement (2026-05-21T07:36 UTC). Pre-publisher polish batch landed (PRs #81–#90, 10 PRs, 2026-05-21): generator templates corrected, about.md scrubbed of AI-age language, cover image in EPUB metadata + PDF first page + HTML home hero, EPUB extended to full book object (cover + 16 plates + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus pages), PDF apparatus added (199→255 pp), Ch.6 plate split (new Holmes/Watson via Replicate flux-1.1-pro, existing renamed to Jekyll), 5 orphan images removed, typography ≥18px floor, desktop landmark-nav touch targets ≥44px. Earlier 2026-05-20/21: Ch.6 rewrite + EPUB re-inclusion (PRs #66–#76); debt-elimination batches 1–3 (PRs #56–#65). No P0/P1 blockers.
 
 ## Project Overview
 
@@ -84,16 +84,20 @@
 
 ## Evidence Chain
 
-**Quality Metrics:** mono-percentage-report.json (2026-05-21T07:36:29.511Z)  
-**Quality Gates:** quality-gate-report.json (2026-05-15T20:09:17.945Z)  
-**Website Function:** Verified 2026-05-20 23:09 GMT (production fresh after PR #76)
+**Quality Metrics:** mono-percentage-report.json (2026-05-21T07:36:29 UTC)  
+**Quality Gates:** quality-gate-report.json (regenerated per validator run; 5/5 pass)  
+**Website Function:** Production fresh, last-modified 2026-05-21 16:22 GMT (after PR #90)
 
-## Visual Content Achievement ✅
+## Visual content inventory
 
-**Visual Content Completion:** COMPLETED — All illustrations operational (AGIL-169 ✅)
-- Chapter 5: agil-chapter-5-plate.webp (248.6KB) — Captain Nemo's engineering workshop ✅
-- Chapter 8: agil-chapter-8-plate.webp (440.1KB) — H.G. Wells Time Machine laboratory ✅
-- **Visual Ecosystem Status:** 100% complete — 16 illustrations deployed
+Active illustration set on production: **14 plates** in Victorian sepia engraving style.
+
+- **Act openers (3):** Act I (agil-act-opener-I.webp, used by Ch.0 pilot), Act II (II, Ch.5 nemo), Act III (III, Ch.8 time-machine)
+- **Chapter plates (9):** Ch.1 jules-verne, Ch.2 frankenstein, Ch.3 holmes, Ch.4 borges, Ch.6 part 1 holmes-watson (NEW via Replicate flux-1.1-pro 2026-05-21), Ch.6 part 2 jekyll-hyde (renamed from old shared plate), Ch.7 don-quixote, Ch.9 three-scenarios, Ch.10 choice-engine
+- **Intermezzo plates (3):** intermezzo-1, intermezzo-2, intermezzo-3
+- **Cover:** cover.webp (homepage hero + EPUB cover page + PDF page 1)
+
+Note: Ch.5 + Ch.8 standalone chapter plates were removed in AGIL-183 (PR #87) because those chapters are act-openers and `chapter-plate.html` partial defers to the act-plate. The webp files had no render path on Web or EPUB.
 
 ## Next Actions
 
@@ -108,6 +112,5 @@
 
 ---
 
-**Document Authority:** Enhanced Alice v2.0 Level 3 Cartouche Autonome Operation  
-**Last Updated:** 2026-05-21 by Alice (post Ch.6 rewrite mono re-measurement)  
-**Evidence-First Compliance:** All claims verified with primary sources
+**Last Updated:** 2026-05-21 (post pre-publisher polish batch, PRs #81–#90)  
+**Evidence basis:** all measurements / page counts / file sizes verified via direct probe of production or local build artifacts. Where the source is a per-script regenerated file (e.g., `quality-gate-report.json`), the script name is cited next to the claim.

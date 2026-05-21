@@ -1,6 +1,6 @@
 # AGILE SAPIENS
 
-**Version:** 1.0.7 | **Date:** 2026-05-21 | **Enhanced Alice v2.0 Level 3**  
+**Version:** 1.0.7 | **Date:** 2026-05-21  
 **Literary Business Analysis — How Literature Predicted Modern Management**
 
 > **Status:** Pre-publisher polish batch COMPLETE (PRs #81–#89, 9 PRs). Book now ships as a real publishable object across Web / EPUB / PDF: cover everywhere, full apparatus, all 16 illustrations in EPUB, Ch.6 plates correctly split between Holmes/Watson and Jekyll/Hyde, typography ≥18px floor, desktop touch targets ≥44px on landmark nav.
@@ -34,8 +34,7 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 
 ## Development
 
-- **Project Coordinator:** Enhanced Alice v2.0 Level 3 Cartouche Autonome Operation
-- **Editorial Team:** Борхес (literary humanization) + Наборщик (technical editorial)
+- **Editorial Team:** Борхес (literary architecture) + Наборщик (technical editorial)
 - **Research Verification:** КиберГонзо (citation integrity + source validation)
 - **Technical Implementation:** Johnny (frontend + Hugo configuration)
 
@@ -64,29 +63,21 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 
 ### Strategic Execution Phase
 
-1. **АГIL-201-PHASE1** — Chapters 10+6 editorial humanization (3-4 days)
-2. **АГИЛ-200-GATE2** — Citation integrity enhancement (parallel, КиберГонзо)
-3. **Content Freeze Authorization** — after editorial + citation completion
-4. **Multi-Format Publishing** — Hugo→PDF/ePub pipeline activation
-- **Quality Standards:** Banking-level
-- **Repository:** Hugo SSG with Hextra theme
-- **Domain:** sapiens.folkup.life
-- **License:** CC BY 4.0 (content), MIT (code)
+**Repository:** Hugo SSG with Hextra theme  
+**Domain:** sapiens.folkup.life  
+**License:** CC BY 4.0 (content), MIT (code)
 
-### Visual Content Achievement ✅ (AGIL-169 COMPLETE)
+### Visual content
 
-**All Illustrations Deployed:**
-- Chapter 5: agil-chapter-5-plate.webp (248.6KB) — Captain Nemo's engineering workshop ✅
-- Chapter 8: agil-chapter-8-plate.webp (440.1KB) — H.G. Wells Time Machine laboratory ✅  
-- **Visual Ecosystem:** 16 illustrations operational — Victorian engraving style throughout
+Book ships with 14 active illustrations across Web / EPUB / PDF: 3 act-opener plates (Acts I/II/III), 9 chapter plates (Ch.1, 2, 3, 4, 6 part 1 "Holmes/Watson", 6 part 2 "Jekyll/Hyde", 7, 9, 10), 3 intermezzo plates, plus the cover. Act-opener chapters (0, 5, 8) use the act-plate as their chapter visual. All in Victorian sepia engraving style. Ch.5 and Ch.8 standalone chapter plates removed in AGIL-183 (orphan cleanup — those chapters are act-openers and the act-plate is what renders).
 
 ## Status
 
-🏗️ **Infrastructure operational** — Hugo build + VPS deploy scripts functional  
-✅ **Build verified** — 12 content units accessible  
-📊 **Mono% verified** — fresh measurement 2026-05-21T07:36 UTC; 12/12 ≤25%  
-🎯 **Deployment operational** — production fresh after PR #76 (last-modified 2026-05-20 23:09 GMT)  
-✅ **Quality gates** — 5/5 passed (quality-gate-report.json)
+Last measurement: mono-percentage-report.json 2026-05-21T07:36 UTC — 12/12 content units ≤25% per the script's first-three-words counter (compliance gate, not a voice verdict).  
+Last production deploy: 2026-05-21 16:22 GMT (after PR #90).  
+Quality gates: 5/5 passed per quality-gate-report.json.  
+EPUB v1.0.7: 11.3 MB (cover + 16 plates + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus pages, 27 spine items).  
+PDF v1.0.7: 4.1 MB / 255 pages (cover first page + same content structure as EPUB minus chapter-body plates).
 
 ---
 

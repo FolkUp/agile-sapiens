@@ -22,6 +22,10 @@
 - id: "footer_support"
   translation: "Поддержать на Ko-fi"
 
+# Accessibility — ARIA labels (AGIL-167, 2026-05-21)
+- id: "navbarPrimary"
+  translation: "Основная навигация"
+
 # Theme toggle (AGIL-119)
 - id: "changeTheme"
   translation: "Сменить тему"

@@ -6,6 +6,15 @@
     {{ partial "toc.html" . }}
     <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
       <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+        {{/* AGIL-180: cover hero on homepage. Renders only on .IsHome to avoid
+             accidental display if this layout is reused elsewhere. Uses
+             params.cover_image from hugo.toml as canonical source. */}}
+        {{ if .IsHome }}
+          {{- $coverImage := .Site.Params.cover_image | default "/images/cover.webp" -}}
+          <figure class="home-hero">
+            <img src="{{ $coverImage }}" alt="AGILE SAPIENS — обложка книги" loading="eager" width="800" height="1200" />
+          </figure>
+        {{ end }}
         {{ if .Title }}<h1 class="hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight">{{ .Title }}</h1>{{ end }}
         <div class="content">
           {{ .Content }}

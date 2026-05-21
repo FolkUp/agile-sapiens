@@ -99,10 +99,11 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
 <body>
   <div class="title-page" style="text-align: center; margin-top: 20%;">
     <h1 style="font-size: 2.5em; margin-bottom: 1em;">AGILE SAPIENS</h1>
-    <p style="font-size: 1.2em; margin-bottom: 2em;">Популярная научная монография об Agile-методологии в корпоративной среде</p>
-    <p style="font-size: 1.1em; margin-bottom: 1em;"><strong>Автор:</strong> FolkUp</p>
+    <p style="font-size: 1.4em; margin-bottom: 0.4em; font-style: italic;">Литературный бизнес-анализ</p>
+    <p style="font-size: 1.1em; margin-bottom: 2em; color: #444;">Как литература предсказала современный менеджмент</p>
+    <p style="font-size: 1.1em; margin-bottom: 1em;"><strong>Автор:</strong> Андрей</p>
     <p style="font-size: 1em; color: #666;"><strong>Версия:</strong> v1.0.7</p>
-    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">© 2026 FolkUp. All rights reserved.</p>
+    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0.</p>
   </div>
 </body>
 </html>
@@ -218,11 +219,11 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="bookid">urn:uuid:agile-sapiens-$(date +%s)</dc:identifier>
     <dc:title>AGILE SAPIENS</dc:title>
-    <dc:creator>FolkUp</dc:creator>
+    <dc:creator>Андрей</dc:creator>
     <dc:language>ru</dc:language>
-    <dc:publisher>FolkUp</dc:publisher>
-    <dc:rights>© 2026 FolkUp. All rights reserved.</dc:rights>
-    <dc:description>Популярная научная монография об Agile-методологии в корпоративной среде. "Харари meets Dilbert" — научная глубина с сатирическим подходом.</dc:description>
+    <dc:publisher>FolkUp Ecosystem</dc:publisher>
+    <dc:rights>© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0.</dc:rights>
+    <dc:description>Литературный бизнес-анализ: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>
     <meta property="dcterms:modified">$(date -u +%Y-%m-%dT%H:%M:%SZ)</meta>
   </metadata>
   <manifest>

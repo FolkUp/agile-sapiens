@@ -253,9 +253,9 @@ function buildHtml(units) {
 <body>
 <div class="title-page">
     <div class="title">AGILE SAPIENS</div>
-    <div class="subtitle">The Future of Work in the Age of Artificial Intelligence</div>
-    <div class="subtitle">Будущее работы в эпоху искусственного интеллекта</div>
-    <div class="author">FolkUp</div>
+    <div class="subtitle">Literary Business Analysis — How Literature Predicted Modern Management</div>
+    <div class="subtitle">Литературный бизнес-анализ: как литература предсказала современный менеджмент</div>
+    <div class="author">Андрей</div>
     <div class="version">Версия ${BOOK_VERSION}</div>
 </div>
 

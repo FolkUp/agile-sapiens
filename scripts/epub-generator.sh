@@ -180,8 +180,9 @@ extract_title() {
   echo "${t:-$fallback}"
 }
 
-# Helper: derive plate filename for a unit (AGIL-176)
+# Helper: derive plate filename for a unit (AGIL-176, AGIL-182)
 # Mirrors layouts/partials/custom/chapter-plate.html logic:
+#   - plate_override frontmatter field → use as-is (highest priority, AGIL-182)
 #   - intermezzo-N → agil-intermezzo-N-plate.webp
 #   - act_opener:true chapter → frontmatter act_plate field
 #   - regular chapter-N → agil-chapter-N-plate.webp
@@ -189,6 +190,13 @@ extract_title() {
 derive_plate() {
   local f="$1"
   local bn="$2"
+  # AGIL-182: explicit override wins (used by Ch.6 holmes/jekyll split)
+  local override
+  override=$(grep -m1 '^plate_override:' "$f" 2>/dev/null | sed -E 's/^plate_override:[[:space:]]*"?([^"]*)"?[[:space:]]*$/\1/')
+  if [[ -n "$override" ]]; then
+    echo "$override"
+    return
+  fi
   if [[ "$bn" =~ ^intermezzo-([0-9]+) ]]; then
     echo "agil-intermezzo-${BASH_REMATCH[1]}-plate.webp"
     return

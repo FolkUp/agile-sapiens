@@ -2,14 +2,22 @@
      Derives filename from frontmatter + slug:
        chapter: N (non-act-opener) → /images/chapters/agil-chapter-N-plate.webp
        intermezzo slug (intermezzo-N) → /images/chapters/agil-intermezzo-N-plate.webp
-     Renders nothing if act_opener is true (act-opener handles own rendering). */}}
+     Renders nothing if act_opener is true (act-opener handles own rendering).
+
+     AGIL-182 (2026-05-21): added plate_override frontmatter field so two
+     parts of Ch.6 (holmes-watson + jekyll-hyde) — both with chapter:6 —
+     can point to distinct plates. Override takes precedence over the
+     derived filename. */}}
 
 {{ if not .Params.act_opener }}
   {{ $plate := "" }}
   {{ $alt := "" }}
 
-  {{/* Intermezzo detection via filename */}}
-  {{ if hasPrefix .File.LogicalName "intermezzo-" }}
+  {{/* Explicit override wins (AGIL-182 use case) */}}
+  {{ if .Params.plate_override }}
+    {{ $plate = .Params.plate_override }}
+    {{ $alt = printf "Гравюра: %s" .Title }}
+  {{ else if hasPrefix .File.LogicalName "intermezzo-" }}
     {{ $num := replaceRE "^intermezzo-(\\d+).*$" "$1" .File.LogicalName }}
     {{ $plate = printf "agil-intermezzo-%s-plate.webp" $num }}
     {{ $alt = printf "Сатирическая гравюра к интермедии %s: %s" $num .Title }}

@@ -38,6 +38,12 @@
 {{ $mobileUxCSS := resources.Get "css/mobile-ux.css" | minify }}
 <link rel="stylesheet" href="{{ $mobileUxCSS.Permalink }}">
 
+{{/* AGIL-167 (2026-05-21): Accessibility supplements — non-colour current-page
+     indicator (WCAG 1.4.1). Loaded after mobile-ux so its rules cascade-win
+     for sidebar active-state. */}}
+{{ $a11yCSS := resources.Get "css/accessibility.css" | minify }}
+<link rel="stylesheet" href="{{ $a11yCSS.Permalink }}">
+
 {{/* AGIL-166: Reading Mode Implementation — Full-screen immersive reading */}}
 {{ $readingModeCSS := resources.Get "css/reading-mode.css" | minify }}
 <link rel="stylesheet" href="{{ $readingModeCSS.Permalink }}">

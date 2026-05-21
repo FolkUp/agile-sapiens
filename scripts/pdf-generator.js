@@ -27,9 +27,24 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.dirname(__dirname);
 const FORMATS_DIR = path.join(PROJECT_ROOT, 'formats');
 const CHAPTERS_DIR = path.join(PROJECT_ROOT, 'content', 'chapters');
+const CONTENT_DIR = path.join(PROJECT_ROOT, 'content');
+const APPARATUS_DIR = path.join(PROJECT_ROOT, 'content', 'apparatus');
 const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
 const BOOK_VERSION = 'v1.0.7';
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
+
+// AGIL-178: apparatus reading order — overrides frontmatter weights to
+// produce a sensible back-matter sequence regardless of how individual
+// files are weighted on the Hugo site.
+const APPARATUS_ORDER = [
+    'acknowledgments',
+    'methodology',
+    'sources',
+    'slovar-terminov',
+    'predmetnyy-ukazatel',
+    'transparency',
+    'colophon',
+];
 
 /*
  * Files in content/chapters/ that must NOT be included:
@@ -68,30 +83,61 @@ function markdownToHtml(markdown) {
     );
 }
 
-/** Collect, parse and order every content unit. */
+/** Read one markdown file and produce a unit record. */
+async function loadUnit(filepath, weightOverride) {
+    const raw = await fs.readFile(filepath, 'utf8');
+    const { frontmatter, body } = splitFrontmatter(raw);
+    const filename = path.basename(filepath);
+    const title =
+        frontmatterField(frontmatter, 'title') ||
+        (body.match(/^#\s+(.+)$/m)?.[1]) ||
+        filename;
+    const weightRaw = frontmatterField(frontmatter, 'weight');
+    const fmWeight = weightRaw ? parseInt(weightRaw, 10) : 9999;
+    const weight = weightOverride !== undefined ? weightOverride : fmWeight;
+    return { filename, title, weight, body };
+}
+
+/** Collect, parse and order every content unit (AGIL-178: includes apparatus). */
 async function collectUnits() {
-    const files = await fs.readdir(CHAPTERS_DIR);
-    const candidates = files.filter(
+    const units = [];
+
+    // Chapters + intermezzi from content/chapters/ — by frontmatter weight
+    const chapterFiles = (await fs.readdir(CHAPTERS_DIR)).filter(
         (f) =>
             (f.startsWith('chapter-') || f.startsWith('intermezzo-')) &&
             f.endsWith('.md') &&
             !EXCLUDE_FILES.has(f)
     );
+    for (const filename of chapterFiles) {
+        units.push(await loadUnit(path.join(CHAPTERS_DIR, filename)));
+    }
 
-    const units = [];
-    for (const filename of candidates) {
-        const raw = await fs.readFile(path.join(CHAPTERS_DIR, filename), 'utf8');
-        const { frontmatter, body } = splitFrontmatter(raw);
+    // Preface (front matter) — uses its own frontmatter weight (~5)
+    try {
+        units.push(await loadUnit(path.join(CONTENT_DIR, 'preface.md')));
+    } catch (e) {
+        console.warn('preface.md not found — PDF will ship without preface');
+    }
 
-        const title =
-            frontmatterField(frontmatter, 'title') ||
-            (body.match(/^#\s+(.+)$/m)?.[1]) ||
-            filename;
+    // Afterword (back matter) — frontmatter weight ~1000, falls after chapters
+    try {
+        units.push(await loadUnit(path.join(CONTENT_DIR, 'afterword.md')));
+    } catch (e) {
+        console.warn('afterword.md not found — PDF will ship without afterword');
+    }
 
-        const weightRaw = frontmatterField(frontmatter, 'weight');
-        const weight = weightRaw ? parseInt(weightRaw, 10) : 9999;
-
-        units.push({ filename, title, weight, body });
+    // Apparatus — overrides per-file weights with explicit reading order.
+    // Weights 9010..9090 ensure apparatus follows afterword (1000) but
+    // respects the APPARATUS_ORDER array sequence.
+    for (let i = 0; i < APPARATUS_ORDER.length; i++) {
+        const slug = APPARATUS_ORDER[i];
+        const filepath = path.join(APPARATUS_DIR, `${slug}.md`);
+        try {
+            units.push(await loadUnit(filepath, 9000 + (i + 1) * 10));
+        } catch (e) {
+            console.warn(`apparatus/${slug}.md not found — skipping`);
+        }
     }
 
     units.sort((a, b) => a.weight - b.weight || a.filename.localeCompare(b.filename));

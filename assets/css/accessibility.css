@@ -29,3 +29,50 @@
 [data-active="true"] > a > span {
   font-weight: 600;
 }
+
+/* =========================================================================
+ * AGIL-173 (2026-05-21): Touch target enhancement (desktop ≥44px)
+ * =========================================================================
+ *
+ * WCAG 2.5.5 (Target Size) Level AA requires ≥24×24 CSS px.
+ * WCAG 2.5.8 (enhanced, AAA) requires ≥44×44 CSS px.
+ *
+ * Mobile breakpoint (≤768px) already meets the 44px enhanced threshold via
+ * assets/css/mobile-ux.css (AGIL-123/124/125 cluster). These rules extend
+ * the enhanced threshold to desktop for landmark navigation elements
+ * (sidebar / top navbar / footer), benefiting tablet + touchscreen-laptop
+ * usability without disturbing inline content link rhythm in chapter prose.
+ *
+ * Scoped to >=769px so it does not double up on the mobile rules.
+ */
+
+@media (min-width: 769px) {
+  /* Sidebar items — left-hand chapter / section navigation */
+  .hextra-sidebar-item > a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Table-of-contents links inside .hextra-toc landmark */
+  .hextra-toc a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Top navbar interactive items (excluding inline body links) */
+  .hextra-nav-container nav > a,
+  .hextra-nav-container nav > button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Footer ecosystem-nav + legal-nav links */
+  footer nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}

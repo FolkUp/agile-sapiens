@@ -135,9 +135,13 @@
   --text-3xl: 1.875rem;    /* 30px - chapter titles */
   --text-4xl: 2.25rem;     /* 36px - book title */
 
-  /* Level 1: Perfect Fourth Typography Scale Enhancement */
+  /* Level 1: Perfect Fourth Typography Scale Enhancement
+     AGIL-168 (2026-05-21): floor raised from 1rem (16px) to 1.125rem (18px)
+     to meet the ≥18px minimum for educational/long-form content per the
+     pre-publisher polish brief. Max raised proportionally to keep fluid
+     breathing room on wide viewports. */
   --text-ratio: 1.333;
-  --text-base-fluid: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-base-fluid: clamp(1.125rem, 1.075rem + 0.25vw, 1.25rem);
   --text-sm-fluid: calc(var(--text-base-fluid) / var(--text-ratio));
   --text-lg-fluid: calc(var(--text-base-fluid) * var(--text-ratio));
   --text-xl-fluid: calc(var(--text-lg-fluid) * var(--text-ratio));

@@ -70,10 +70,17 @@
 ## Dependencies & Blockers
 
 **P0 Blockers:** none open  
-**P1 Open:** none — AGIL-167 narrow-scope closed 2026-05-21 (PRs #78, #79)  
-**P2 Open:** AGIL-168 typography (planning), AGIL-173 touch-target audit (planning)  
-**P3 Open:** AGIL-172 URL portability — Cyrillic→ASCII anchors (planning)  
-**Dispatch-gated (user approval required):** AGIL-153 HSE, AGIL-154 MIT Press
+**P1 Open:** none — pre-publisher polish batch COMPLETE (PRs #81–#89 merged 2026-05-21)  
+**P2 Open:** none in active scope (AGIL-168 + AGIL-173 closed as part of pre-publisher batch)  
+**P3 Open:** AGIL-172 URL portability — Cyrillic→ASCII anchors (planning, deferred per hostile review F4: UX wart, not WCAG fail)  
+**Dispatch-ready (user approval required to send):** AGIL-153 HSE, AGIL-154 MIT Press — book object is now publisher-grade across all three formats; their `blocked_by` lists are fully cleared.
+
+## Pre-publisher polish batch summary (2026-05-21)
+
+9 PRs merged: AGIL-177 (templates), AGIL-181 (about.md), AGIL-174+179 (cover everywhere), AGIL-175+176 (EPUB full content + 16 illustrations), AGIL-178 (PDF apparatus), AGIL-180 (cover hero HTML), AGIL-183 (orphan cleanup), AGIL-168+173 (typography 18px + desktop touch targets 44px), AGIL-182 (Ch.6 plate split via Replicate). Book object state:
+- **Web:** cover hero on homepage; 12/12 chapter pages with appropriate plates; Ch.6 parts now visually distinct (Holmes 221B Baker Street + Jekyll/Hyde mirror scene); 16px→18px base font; landmark navs at 44px on desktop.
+- **EPUB v1.0.7:** 12MB; 27 spine items (cover + title + nav + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus); 17 webp images embedded.
+- **PDF v1.0.7:** 4MB; 255 pages; cover first page; full apparatus.
 
 ## Evidence Chain
 

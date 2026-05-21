@@ -1,0 +1,31 @@
+/* AGILE SAPIENS — Accessibility additions (AGIL-167 narrow scope, 2026-05-21)
+ *
+ * Scope: WCAG-driven CSS that supplements Hextra theme defaults. Kept in a
+ * dedicated file so future a11y additions have a clear home.
+ *
+ * Change discipline:
+ *  - No new design tokens; reuses existing :root --folkup-* and Hextra
+ *    --hx-color-primary-* variables.
+ *  - No layout changes; only typographic/visual emphasis additions.
+ *  - Load order: AFTER mobile-ux.css and theme-toggle.css so these rules
+ *    cascade-win for active-state styling.
+ */
+
+/* =========================================================================
+ * Current-page indicator — WCAG 1.4.1 (Use of Color)
+ * =========================================================================
+ *
+ * Hextra's compiled CSS already styles [data-active=true] descendants with
+ * `color: var(--hx-color-primary-800)` (light) / primary-600 (dark). Colour
+ * alone is insufficient per WCAG 1.4.1 — colourblind users and users with
+ * monochrome displays cannot distinguish active from inactive purely by hue.
+ *
+ * Adding font-weight: 600 provides a non-colour visual indicator. Bold is
+ * universally legible and doesn't require additional design-system
+ * coordination. Specificity uses the same `[data-active=true] *` selector
+ * pattern as Hextra's own color rule.
+ */
+[data-active="true"] > a,
+[data-active="true"] > a > span {
+  font-weight: 600;
+}

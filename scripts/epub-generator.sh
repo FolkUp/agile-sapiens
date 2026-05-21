@@ -30,6 +30,23 @@ else
   echo "⚠️  static/images/cover.webp not found — EPUB will ship without cover" >&2
 fi
 
+# AGIL-176: copy all chapter / act-opener / intermezzo plates into OEBPS/images/
+if [[ -d "$PROJECT_ROOT/static/images/chapters" ]]; then
+  cp "$PROJECT_ROOT/static/images/chapters/"*.webp "$EPUB_BUILD_DIR/OEBPS/images/" 2>/dev/null || true
+  plate_count=$(ls "$EPUB_BUILD_DIR/OEBPS/images/" | grep -c -E '^agil-' || true)
+  echo "🎨 Chapter plates copied: $plate_count files"
+fi
+
+# Build image manifest entries for every webp in OEBPS/images/ (except cover, which is registered separately)
+IMAGE_MANIFEST=""
+for img_path in "$EPUB_BUILD_DIR/OEBPS/images/"*.webp; do
+  img_fn=$(basename "$img_path")
+  [[ "$img_fn" == "cover.webp" ]] && continue
+  img_id="img-$(echo "$img_fn" | sed 's/\.webp$//')"
+  IMAGE_MANIFEST="$IMAGE_MANIFEST
+    <item id=\"$img_id\" href=\"images/$img_fn\" media-type=\"image/webp\"/>"
+done
+
 echo "🏗️  Creating ePub directory structure..."
 
 # Create mimetype (must be first, uncompressed)
@@ -92,6 +109,19 @@ blockquote {
   font-weight: bold;
   margin: 2em 0;
 }
+
+/* AGIL-176: chapter / act-opener / intermezzo plate styling */
+.chapter-plate {
+  margin: 0 auto 1.5em;
+  text-align: center;
+  page-break-after: avoid;
+}
+.chapter-plate img {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto;
+}
 EOF
 
 # AGIL-174: Generate cover page (shown before title page in spine)
@@ -136,87 +166,149 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
 </html>
 EOF
 
-echo "📖 Converting chapters to XHTML..."
+echo "📖 Converting content units to XHTML..."
 
-# Initialize chapter list for manifest
-CHAPTER_FILES=""
-NAV_CHAPTERS=""
-chapter_count=0
+# Helper: extract frontmatter title (handles quoted + unquoted)
+extract_title() {
+  local f="$1"
+  local fallback="$2"
+  local t
+  t=$(grep -m1 '^title:' "$f" 2>/dev/null | sed -E 's/^title:[[:space:]]*"?([^"]*)"?[[:space:]]*$/\1/')
+  if [[ -z "$t" ]]; then
+    t=$(grep -m1 '^# ' "$f" 2>/dev/null | sed 's/^# *//')
+  fi
+  echo "${t:-$fallback}"
+}
 
-# Process chapters in numerical order (not alphabetical)
-# D-3 fix: exclude .backup/ directory so chapter-2-frankenstein-original.md
-# (legacy backup of the source) does not get packaged as a duplicate.
-# AGIL-D5-CH6 (2026-05-20): Chapter 6 is now a two-part chapter — both
-# chapter-6-holmes-watson.md ("Глава 6, часть 1: Холмс и Ватсон") and
-# chapter-6-jekyll-hyde.md ("Глава 6, часть 2: Доктор Джекил") are
-# status:verified and included in EPUB. The basename-skip previously
-# in place (D-4 fix) was removed when holmes-watson was rewritten in
-# Ch.5 voice baseline (PRs #66-71) and approved for re-inclusion.
-for chapter_file in $(find "$CHAPTERS_DIR" -maxdepth 1 -name "chapter-*.md" | sort -V); do
-    if [[ -f "$chapter_file" ]]; then
-        chapter_basename=$(basename "$chapter_file" .md)
+# Helper: derive plate filename for a unit (AGIL-176)
+# Mirrors layouts/partials/custom/chapter-plate.html logic:
+#   - intermezzo-N → agil-intermezzo-N-plate.webp
+#   - act_opener:true chapter → frontmatter act_plate field
+#   - regular chapter-N → agil-chapter-N-plate.webp
+#   - other (preface/afterword/apparatus) → empty
+derive_plate() {
+  local f="$1"
+  local bn="$2"
+  if [[ "$bn" =~ ^intermezzo-([0-9]+) ]]; then
+    echo "agil-intermezzo-${BASH_REMATCH[1]}-plate.webp"
+    return
+  fi
+  if [[ "$bn" =~ ^chapter-([0-9]+) ]]; then
+    local chnum="${BASH_REMATCH[1]}"
+    local ao
+    ao=$(grep -m1 '^act_opener:' "$f" 2>/dev/null | awk '{print $2}')
+    if [[ "$ao" == "true" ]]; then
+      grep -m1 '^act_plate:' "$f" | sed -E 's/^act_plate:[[:space:]]*"?([^"]*)"?[[:space:]]*$/\1/'
+    else
+      echo "agil-chapter-${chnum}-plate.webp"
+    fi
+    return
+  fi
+  echo ""
+}
 
-        # Skip duplicate chapter-2 versions - prefer optimized
-        if [[ "$chapter_basename" == "chapter-2-frankenstein" ]] && [[ -f "$CHAPTERS_DIR/chapter-2-frankenstein-optimized.md" ]]; then
-            echo "⏭️  Skipping $chapter_basename (using optimized version)"
-            continue
-        fi
+# Per-unit XHTML generator (AGIL-175 + AGIL-176)
+# Args: source-md basename out-id title plate-filename
+generate_unit_xhtml() {
+  local src="$1"
+  local out_id="$2"
+  local title="$3"
+  local plate="$4"
+  local out_xhtml="$EPUB_BUILD_DIR/OEBPS/chapters/${out_id}.xhtml"
 
-        # Extract chapter number and title
-        chapter_num=$(echo "$chapter_basename" | grep -o 'chapter-[0-9]*' | grep -o '[0-9]*')
-        chapter_title=""
-
-        # Extract title from frontmatter
-        if grep -q '^title:' "$chapter_file"; then
-            chapter_title=$(grep '^title:' "$chapter_file" | sed 's/^title: *"\(.*\)"$/\1/' | sed 's/^title: *\(.*\)$/\1/')
-        else
-            # Fallback: extract from first heading
-            chapter_title=$(grep -m1 '^# ' "$chapter_file" | sed 's/^# *//' || echo "Chapter $chapter_num")
-        fi
-
-        if [[ -z "$chapter_title" ]]; then
-            chapter_title="Chapter $chapter_num"
-        fi
-
-        echo "  Processing: $chapter_basename → $chapter_title"
-
-        # Convert markdown to HTML using pandoc
-        chapter_xhtml="$EPUB_BUILD_DIR/OEBPS/chapters/${chapter_basename}.xhtml"
-
-        # Create XHTML with proper structure
-        cat << EOF > "$chapter_xhtml"
+  cat > "$out_xhtml" <<HEADER
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
   <meta charset="utf-8"/>
-  <title>$chapter_title</title>
+  <title>${title}</title>
   <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
 </head>
 <body>
-  <div class="chapter-title">
-    <h1>$chapter_title</h1>
-  </div>
-EOF
+HEADER
 
-        # Convert markdown content (remove frontmatter first)
-        sed '/^---$/,/^---$/d' "$chapter_file" | pandoc --from markdown --to html >> "$chapter_xhtml"
+  if [[ -n "$plate" ]]; then
+    cat >> "$out_xhtml" <<PLATE
+  <figure class="chapter-plate"><img src="../images/${plate}" alt="Гравюра: ${title}"/></figure>
+PLATE
+  fi
 
-        echo "</body></html>" >> "$chapter_xhtml"
+  cat >> "$out_xhtml" <<TITLE
+  <div class="chapter-title"><h1>${title}</h1></div>
+TITLE
 
-        # Add to manifest list
-        CHAPTER_FILES="$CHAPTER_FILES
-    <item id=\"${chapter_basename}\" href=\"chapters/${chapter_basename}.xhtml\" media-type=\"application/xhtml+xml\"/>"
+  # Convert markdown to HTML and strip the leading H1 (the frontmatter title is the authoritative
+  # heading, rendered in the title block above — avoid duplicate H1 like PDF generator does).
+  sed '/^---$/,/^---$/d' "$src" \
+    | pandoc --from markdown --to html \
+    | sed -E '0,/^<h1[^>]*>.*<\/h1>/{/^<h1[^>]*>.*<\/h1>/d}' \
+    >> "$out_xhtml"
+  echo "</body></html>" >> "$out_xhtml"
+}
 
-        # Add to navigation
-        NAV_CHAPTERS="$NAV_CHAPTERS
-      <li><a href=\"chapters/${chapter_basename}.xhtml\">$chapter_title</a></li>"
+# Build ordered unit list. Each line is "ORDER_KEY|src-path|out-id"
+# ORDER_KEY is a numeric weight used by sort -k1,1n for spine ordering.
+ORDER_FILE=$(mktemp)
+{
+  # Front matter
+  echo "0050|$PROJECT_ROOT/content/preface.md|preface"
 
-        chapter_count=$((chapter_count + 1))
+  # Chapters + intermezzi from content/chapters/ — order by frontmatter weight
+  for f in "$CHAPTERS_DIR/"chapter-*.md "$CHAPTERS_DIR/"intermezzo-*.md; do
+    [[ -f "$f" ]] || continue
+    bn=$(basename "$f" .md)
+    # Skip chapter-2 backup if optimized variant exists (legacy)
+    if [[ "$bn" == "chapter-2-frankenstein" ]] && [[ -f "$CHAPTERS_DIR/chapter-2-frankenstein-optimized.md" ]]; then
+      continue
     fi
-done
+    w=$(grep -m1 '^weight:' "$f" 2>/dev/null | awk '{print $2}')
+    w=${w:-9999}
+    # Pad weight to 4 digits + use basename for tiebreaker (holmes-watson < jekyll-hyde alpha)
+    printf "%04d|%s|%s\n" "$w" "$f" "$bn"
+  done | sort -t'|' -k1,1n -k3,3
 
-echo "✅ Processed $chapter_count chapters"
+  # Back matter — afterword
+  echo "8000|$PROJECT_ROOT/content/afterword.md|afterword"
+
+  # Apparatus in defined reading order (acknowledgments → methodology → sources → glossary → index → transparency → colophon)
+  printf "%s\n" \
+    "9010|$PROJECT_ROOT/content/apparatus/acknowledgments.md|apparatus-acknowledgments" \
+    "9020|$PROJECT_ROOT/content/apparatus/methodology.md|apparatus-methodology" \
+    "9030|$PROJECT_ROOT/content/apparatus/sources.md|apparatus-sources" \
+    "9040|$PROJECT_ROOT/content/apparatus/slovar-terminov.md|apparatus-slovar-terminov" \
+    "9050|$PROJECT_ROOT/content/apparatus/predmetnyy-ukazatel.md|apparatus-predmetnyy-ukazatel" \
+    "9060|$PROJECT_ROOT/content/apparatus/transparency.md|apparatus-transparency" \
+    "9090|$PROJECT_ROOT/content/apparatus/colophon.md|apparatus-colophon"
+} > "$ORDER_FILE"
+
+# Process each unit in order
+CHAPTER_FILES=""
+NAV_CHAPTERS=""
+SPINE_ITEMS=""
+unit_count=0
+
+while IFS='|' read -r order src out_id; do
+  if [[ ! -f "$src" ]]; then
+    echo "⏭️   Skipping missing: $src"
+    continue
+  fi
+  title=$(extract_title "$src" "$out_id")
+  plate=$(derive_plate "$src" "$out_id")
+  echo "  Processing: $out_id → $title${plate:+  [plate: $plate]}"
+  generate_unit_xhtml "$src" "$out_id" "$title" "$plate"
+
+  CHAPTER_FILES="$CHAPTER_FILES
+    <item id=\"${out_id}\" href=\"chapters/${out_id}.xhtml\" media-type=\"application/xhtml+xml\"/>"
+  NAV_CHAPTERS="$NAV_CHAPTERS
+      <li><a href=\"chapters/${out_id}.xhtml\">${title}</a></li>"
+  SPINE_ITEMS="$SPINE_ITEMS
+    <itemref idref=\"${out_id}\"/>"
+  unit_count=$((unit_count + 1))
+done < "$ORDER_FILE"
+
+rm -f "$ORDER_FILE"
+echo "✅ Processed $unit_count content units (chapters + intermezzi + apparatus)"
 
 # Create navigation document
 cat << EOF > "$EPUB_BUILD_DIR/OEBPS/nav.xhtml"
@@ -260,12 +352,12 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
     <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
     <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
     <item id="title" href="title.xhtml" media-type="application/xhtml+xml"/>
-    <item id="main-css" href="styles/main.css" media-type="text/css"/>$CHAPTER_FILES
+    <item id="main-css" href="styles/main.css" media-type="text/css"/>$IMAGE_MANIFEST$CHAPTER_FILES
   </manifest>
   <spine>
     <itemref idref="cover"/>
     <itemref idref="title"/>
-    <itemref idref="nav"/>$(echo "$CHAPTER_FILES" | sed 's|.*id="\([^"]*\)".*|    <itemref idref="\1"/>|')
+    <itemref idref="nav"/>$SPINE_ITEMS
   </spine>
 </package>
 EOF
@@ -290,7 +382,7 @@ cd "$PROJECT_ROOT"
 if [[ -f "$FORMATS_DIR/agile-sapiens-v1.0.7.epub" ]]; then
     epub_size=$(du -sh "$FORMATS_DIR/agile-sapiens-v1.0.7.epub" | cut -f1)
     echo "✅ ePub generated: $epub_size"
-    echo "📊 Structure: $chapter_count chapters + navigation + styles"
+    echo "📊 Structure: $unit_count content units + cover + plates + navigation + styles"
 
     # Clean up build directory
     rm -rf "$EPUB_BUILD_DIR"

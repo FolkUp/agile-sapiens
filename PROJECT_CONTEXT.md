@@ -72,7 +72,7 @@
 **P0 Blockers:** none open  
 **P1 Open:** none — pre-publisher polish batch COMPLETE (PRs #81–#89 merged 2026-05-21)  
 **P2 Open:** none in active scope (AGIL-168 + AGIL-173 closed as part of pre-publisher batch)  
-**P3 Open:** AGIL-172 URL portability — Cyrillic→ASCII anchors (planning, deferred per hostile review F4: UX wart, not WCAG fail)  
+**P4 Open:** AGIL-172 URL portability — Cyrillic→ASCII anchors (blocked_pending_evidence; hostile review RED — the naive `autoHeadingIDType` fix would DROP Cyrillic runes and collide same-prefix headings; reopen only if a messenger paste-test shows real breakage)  
 **Dispatch-ready (user approval required to send):** AGIL-153 HSE, AGIL-154 MIT Press — book object is now publisher-grade across all three formats; their `blocked_by` lists are fully cleared.
 
 ## Pre-publisher polish batch summary (2026-05-21)
@@ -86,7 +86,7 @@
 
 **Quality Metrics:** mono-percentage-report.json (2026-05-21T07:36:29 UTC)  
 **Quality Gates:** quality-gate-report.json (regenerated per validator run; 5/5 pass)  
-**Website Function:** Production fresh, last-modified 2026-05-21 16:22 GMT (after PR #90)
+**Website Function:** Production serving PR #91 content (hostile-audit YELLOW corrections — phantom-scrub + EN /about/ fix + JSON-LD description), merged 2026-05-21 16:59 UTC. Repo-doc syncs after that point change no site output.
 
 ## Visual content inventory
 
@@ -112,5 +112,5 @@ Note: Ch.5 + Ch.8 standalone chapter plates were removed in AGIL-183 (PR #87) be
 
 ---
 
-**Last Updated:** 2026-05-21 (post pre-publisher polish batch, PRs #81–#90)  
+**Last Updated:** 2026-05-22 (consistency sync — deploy refs corrected to PR #91, AGIL-172 status P3→P4 aligned with BACKLOG)  
 **Evidence basis:** all measurements / page counts / file sizes verified via direct probe of production or local build artifacts. Where the source is a per-script regenerated file (e.g., `quality-gate-report.json`), the script name is cited next to the claim.

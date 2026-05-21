@@ -20,7 +20,15 @@ echo ""
 # Clean and create build directory
 rm -rf "$EPUB_BUILD_DIR"
 mkdir -p "$FORMATS_DIR"
-mkdir -p "$EPUB_BUILD_DIR"/{META-INF,OEBPS,OEBPS/chapters,OEBPS/styles}
+mkdir -p "$EPUB_BUILD_DIR"/{META-INF,OEBPS,OEBPS/chapters,OEBPS/styles,OEBPS/images}
+
+# AGIL-174: copy book cover to EPUB images
+if [[ -f "$PROJECT_ROOT/static/images/cover.webp" ]]; then
+  cp "$PROJECT_ROOT/static/images/cover.webp" "$EPUB_BUILD_DIR/OEBPS/images/cover.webp"
+  echo "📷 Cover image copied: $(du -h "$EPUB_BUILD_DIR/OEBPS/images/cover.webp" | cut -f1)"
+else
+  echo "⚠️  static/images/cover.webp not found — EPUB will ship without cover" >&2
+fi
 
 echo "🏗️  Creating ePub directory structure..."
 
@@ -84,6 +92,25 @@ blockquote {
   font-weight: bold;
   margin: 2em 0;
 }
+EOF
+
+# AGIL-174: Generate cover page (shown before title page in spine)
+cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ru" lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <title>Обложка</title>
+  <style>
+    body { margin: 0; padding: 0; text-align: center; }
+    .cover { max-width: 100%; max-height: 100vh; }
+  </style>
+</head>
+<body epub:type="cover">
+  <img class="cover" src="images/cover.webp" alt="AGILE SAPIENS — Литературный бизнес-анализ"/>
+</body>
+</html>
 EOF
 
 # Generate title page
@@ -205,6 +232,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/nav.xhtml"
   <nav epub:type="toc" id="toc">
     <h1>Содержание</h1>
     <ol>
+      <li><a href="cover.xhtml">Обложка</a></li>
       <li><a href="title.xhtml">Титульный лист</a></li>$NAV_CHAPTERS
     </ol>
   </nav>
@@ -224,14 +252,18 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
     <dc:rights>© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0.</dc:rights>
     <dc:description>Литературный бизнес-анализ: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>
+    <meta name="cover" content="cover-img"/>
     <meta property="dcterms:modified">$(date -u +%Y-%m-%dT%H:%M:%SZ)</meta>
   </metadata>
   <manifest>
+    <item id="cover-img" href="images/cover.webp" media-type="image/webp" properties="cover-image"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
     <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
     <item id="title" href="title.xhtml" media-type="application/xhtml+xml"/>
     <item id="main-css" href="styles/main.css" media-type="text/css"/>$CHAPTER_FILES
   </manifest>
   <spine>
+    <itemref idref="cover"/>
     <itemref idref="title"/>
     <itemref idref="nav"/>$(echo "$CHAPTER_FILES" | sed 's|.*id="\([^"]*\)".*|    <itemref idref="\1"/>|')
   </spine>

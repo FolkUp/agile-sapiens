@@ -27,6 +27,7 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.dirname(__dirname);
 const FORMATS_DIR = path.join(PROJECT_ROOT, 'formats');
 const CHAPTERS_DIR = path.join(PROJECT_ROOT, 'content', 'chapters');
+const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
 const BOOK_VERSION = 'v1.0.7';
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
@@ -109,6 +110,20 @@ body {
     margin: 0;
     padding: 0;
     hyphens: auto;
+}
+
+/* ---- Cover page (AGIL-179) ---- */
+.cover-page {
+    text-align: center;
+    page-break-after: always;
+    margin: 0;
+    padding: 0;
+}
+.cover-page img {
+    display: block;
+    width: 100%;
+    max-height: 100vh;
+    margin: 0 auto;
 }
 
 /* ---- Title page ---- */
@@ -243,6 +258,7 @@ function buildHtml(units) {
         })
         .join('\n');
 
+    const coverUrl = pathToFileURL(COVER_PATH).href;
     return `<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -251,6 +267,9 @@ function buildHtml(units) {
 <style>${CSS}</style>
 </head>
 <body>
+<section class="cover-page">
+    <img src="${coverUrl}" alt="AGILE SAPIENS — Литературный бизнес-анализ"/>
+</section>
 <div class="title-page">
     <div class="title">AGILE SAPIENS</div>
     <div class="subtitle">Literary Business Analysis — How Literature Predicted Modern Management</div>

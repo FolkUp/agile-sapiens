@@ -3,11 +3,9 @@
 **Version:** 1.0.7 | **Date:** 2026-05-21 | **Enhanced Alice v2.0 Level 3**  
 **Literary Business Analysis — How Literature Predicted Modern Management**
 
-> **Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ — Visual Content 100% — Multi-Format Pipeline Repaired
-> **Latest:** 2026-05-20/21 — Ch.6 holmes-watson FULL rewrite + EPUB re-inclusion complete (PRs #66–#75, 10 PRs total). HOOK → CONTROVERSY → CORE (4 named laws) → RESOLUTION in Ch.5 nemo voice baseline. File compressed 514 → 208 lines (60% reduction), 0 anglicism markers. Status: draft → verified. EPUB and PDF regenerated with both Ch.6 parts labeled «часть 1: Холмс и Ватсон» / «часть 2: Доктор Джекил». Production hostile-verified: EPUB 126,059 bytes, PDF 2,639,293 bytes, web titles updated, CI deploy completed.
-> **Earlier 2026-05-20:** Debt-elimination batches 1-3 deployed (PRs #56–#65). PDF/EPUB/baseURL fixed (batch 1), EPUB structure + SEC-001 cooper hardening + slovar Section H (batch 2), then SEC-002 cooper P2 hygiene + slovar rename to «Глоссарий замен» + Ch.11 archive verification + D-5 Ch-9 anglicism cleanup (~70% reduction) + D-7 subject index skeleton (248 entries) + phantom meta-doc removal from Ch-9 + Ch-10 tail surgical cleanup (batch 3). Hostile-verified on production.
-> **Earlier achievement:** 2026-05-19 — Phantom Evidence Prevention (Enhanced Alice v2.0 L3 self-correction)
-> **Critical Achievement:** ALL 12 content units compliant (≤25% monotone target achieved)
+> **Status:** 12/12 content units ≤25% mono per fresh measurement (2026-05-21T07:36 UTC); visual ecosystem 100%; multi-format pipeline (Web/EPUB/PDF) operational on production.
+> **Latest:** 2026-05-20/21 — Ch.6 holmes-watson full rewrite + EPUB re-inclusion + post-rewrite hostile-audit cleanup (PRs #66–#76, 11 PRs total). HOOK → CONTROVERSY → CORE (4 named laws) → RESOLUTION in Ch.5 nemo voice baseline. File compressed 514 → 208 lines (60%). Status: draft → verified. EPUB and PDF regenerated with both Ch.6 parts labeled «часть 1: Холмс и Ватсон» / «часть 2: Доктор Джекил». Production hostile-verified: EPUB 126,059 bytes, PDF 2,639,293 bytes, deploy 23:09 GMT. Fresh mono% for Ch.6 part 1: **6.6%** (211 sentences).
+> **Earlier 2026-05-20:** Debt-elimination batches 1-3 deployed (PRs #56–#65). PDF/EPUB/baseURL fixed (batch 1), EPUB structure + SEC-001 cooper hardening + slovar Section H (batch 2), then SEC-002 cooper P2 hygiene + slovar rename to «Глоссарий замен» + Ch.11 archive verification + D-5 Ch-9 anglicism cleanup + D-7 subject index skeleton (248 entries) + phantom meta-doc removal from Ch-9 + Ch-10 tail surgical cleanup (batch 3). Hostile-verified on production.
 > **Goal:** Best Scientific Popular Book 2026  
 > **Voice:** "Literary Business Analysis" — Academic methodology with practical insights
 > **Structure:** 11 chapters (0-10, with Chapter 6 in two parts) + 3 intermezzos, 3 acts (Origins → Present → Future)
@@ -26,12 +24,11 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 
 **INFRASTRUCTURE STATUS 2026-05-15**: Hugo-based deployment operational
 
-- **BUILD STATUS:** Static build system generates 11 chapters successfully
+- **BUILD STATUS:** Static build generates 12 content units (Ch.0–10, with Ch.6 in two parts) successfully
 - **DEPLOYMENT STATUS:** VPS scripts operational
-- **QUALITY STATUS:** ALL 12 content units ≤25% monotone compliance achieved
-- **EVIDENCE:** mono-percentage-report.json (2026-05-15T05:47:11.772Z)
+- **QUALITY STATUS:** 12/12 content units ≤25% mono per fresh measurement
+- **EVIDENCE:** mono-percentage-report.json (2026-05-21T07:36:29.511Z)
 - **QUALITY GATES:** 5/5 passed (quality-gate-report.json)
-- **CONSTITUTIONAL STATUS:** Excellence verified, phantom crisis resolved
 
 ## Development
 
@@ -57,14 +54,11 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 - "Харари meets Dilbert" voice established
 - Mono% ≤25% achieved
 
-**All Content Units: CONSTITUTIONAL EXCELLENCE ACHIEVED** ✅ **ALL COMPLIANT**
-- Chapter 6 (jekyll-hyde, part 2): 4.5% monotone ✅ (EXCELLENT constitutional compliance)
-- Chapter 6 (holmes-watson, part 1): rewritten 2026-05-20/21, mono% re-measurement pending
-- Chapter 10: 4.6% monotone ✅ (EXCELLENT constitutional compliance)
-- Chapter 8: 3.0% monotone ✅ (EXCELLENT constitutional compliance)  
-- Chapter 2: 17.2% monotone ✅ (GOOD constitutional compliance)
-- All previously-measured content units: ≤25% compliance achieved — constitutional excellence operational
-- **Status:** Hostile verification eliminated phantom crisis — measured chapters constitutionally compliant
+**All Content Units (fresh 2026-05-21 measurement):** 12/12 ≤25% mono ✅
+- Best performers: Ch.8 time-machine 4.2%, Ch.6 jekyll-hyde 4.5%, Ch.6 holmes-watson 6.6%
+- Lowest performers (still compliant): Ch.2 frankenstein 16.9%, Ch.9 three-scenarios 15.7%
+- Full table in PROJECT_CONTEXT.md
+- **Caveat:** mono% counts shared sentence-starts; legitimate citation and motif repeats (`"Doyle Arthur C..."`, `"Шесть жемчужин..."`) contribute to the count. Compliance gate, not a voice verdict.
 
 ### Strategic Execution Phase
 
@@ -86,15 +80,11 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 
 ## Status
 
-🏗️ **INFRASTRUCTURE OPERATIONAL** — Static site generation + deployment scripts functional  
-✅ **BUILD VERIFIED** — Build system generates all content successfully, 12 units accessible  
-📊 **MEASUREMENT VERIFIED** — Constitutional excellence confirmed via mono-percentage-report.json  
-🎯 **DEPLOYMENT OPERATIONAL** — VPS scripts functional, development tools available  
-🔒 **CONSTITUTIONAL FRAMEWORK** — Enhanced Alice v2.0 L3 with hostile verification phantom crisis prevention  
-✅ **CONSTITUTIONAL COMPLIANCE ACHIEVED** — mono-percentage-report.json confirms ALL 12 content units ≤25% monotone  
-⚡ **HOSTILE VERIFICATION SUCCESS** — Phantom crisis eliminated, constitutional excellence revealed  
-✅ **PUBLICATION EXCELLENCE ACHIEVED** — ALL quality gates passed, constitutional compliance verified (all chapters ≤25%)  
-📊 **EVIDENCE-FIRST METHODOLOGY** — Banking-level verification standards maintained throughout
+🏗️ **Infrastructure operational** — Hugo build + VPS deploy scripts functional  
+✅ **Build verified** — 12 content units accessible  
+📊 **Mono% verified** — fresh measurement 2026-05-21T07:36 UTC; 12/12 ≤25%  
+🎯 **Deployment operational** — production fresh after PR #76 (last-modified 2026-05-20 23:09 GMT)  
+✅ **Quality gates** — 5/5 passed (quality-gate-report.json)
 
 ---
 

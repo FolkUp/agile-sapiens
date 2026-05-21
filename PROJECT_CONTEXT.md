@@ -1,7 +1,7 @@
 # AGILE SAPIENS — Project Context & Status
 
 **Version:** 1.0.7 | **Date:** 2026-05-21 | **Enhanced Alice v2.0 Level 3**
-**Status:** CONSTITUTIONAL EXCELLENCE ACHIEVED ✅ + Debt-elimination batches 1–3 on production (PRs #56–#65) + Ch.6 holmes-watson structural rewrite + EPUB re-inclusion complete (PRs #66–#75, 10 PRs total). Closed: D-1 PDF, D-2 baseURL, D-3/D-4 EPUB structure, D-6 slovar Section H, SEC-001 cooper P1 hardening, SEC-002 cooper P2 hygiene, slovar rename to «Глоссарий замен», Ch.11 archive verification (canonical Ch.0–10), D-5 Ch-9 LOW-sensitivity sweep + phantom meta-doc removal, D-7 subject index skeleton (248 entries), D-5 Ch-10 tail surgical sweep, **D-5 Ch-6 holmes-watson full structural rewrite + EPUB re-inclusion** (HOOK → CONTROVERSY → CORE → RESOLUTION; 514 → 208 lines; status draft → verified; two-part «Глава 6» labels «часть 1: Холмс и Ватсон» / «часть 2: Доктор Джекил»; production-deployed 2026-05-20 22:09 GMT). No P0/P1 blockers open.
+**Status:** All 12 content units ≤25% mono per fresh measurement (2026-05-21T07:36 UTC). 11 PRs of the 2026-05-20/21 batch deployed (#66–#76): Ch.6 holmes-watson full structural rewrite + EPUB re-inclusion + post-rewrite hostile-audit cleanup. Earlier 2026-05-20 batch (#56–#65) closed D-1 PDF, D-2 baseURL, D-3/D-4 EPUB structure, D-5 Ch-9/Ch-10 tail sweeps + phantom meta-doc removal, D-6 slovar Section H, D-7 subject index (248 entries), SEC-001/002 hardening, slovar rename, Ch.11 archive verification. No P0/P1 blockers open.
 
 ## Project Overview
 
@@ -11,32 +11,34 @@
 **License:** CC BY 4.0 (content), MIT (code)  
 **Goal:** Best Scientific Popular Book 2026
 
-## Constitutional Excellence Verification
+## Content Quality (mono% measurement)
 
-### Content Quality Status
-- **ALL 12 content units ≤25% monotone compliance achieved** ✅
-- **Evidence Source:** mono-percentage-report.json (2026-05-16T13:43:20.478Z)
-- **Quality Gates:** 5/5 passed (quality-gate-report.json verified)
-- **HTML Version:** Fully functional — all chapters accessible
+- **All 12 content units ≤25% mono per fresh measurement** ✅
+- **Evidence:** `mono-percentage-report.json` (2026-05-21T07:36:29 UTC)
+- **Quality Gates:** 5/5 passed (`quality-gate-report.json`)
+- **HTML:** all chapters HTTP 200 on production
 
-### Chapter Performance (Evidence-Based)
-| Chapter | Sentences | Monotone % | Status |
-|---------|-----------|------------|--------|
+### Chapter Performance (fresh 2026-05-21 measurement)
+
+| Chapter | Sentences | Mono % | Status |
+|---------|-----------|--------|--------|
 | 0-pilot | 454 | 9.0% | ✅ EXCELLENT |
 | 1-jules-verne | 246 | 8.9% | ✅ EXCELLENT |
-| 2-frankenstein | 308 | 17.2% | ✅ GOOD |
+| 2-frankenstein | 301 | 16.9% | ✅ GOOD |
 | 3-holmes | 256 | 11.7% | ✅ EXCELLENT |
 | 4-borges | 241 | 7.1% | ✅ EXCELLENT |
 | 5-nemo | 470 | 13.6% | ✅ GOOD |
-| 6-holmes-watson (part 1) | 208 lines | rewritten 2026-05-20/21 — mono% pending | ⏳ NEEDS MEASUREMENT |
+| 6-holmes-watson (part 1) | 211 | 6.6% | ✅ EXCELLENT |
 | 6-jekyll-hyde (part 2) | 397 | 4.5% | ✅ EXCELLENT |
-| 7-don-quixote | 442 | 9.5% | ✅ EXCELLENT |
-| 8-time-machine | 270 | 3.0% | ✅ EXCELLENT |
-| 9-three-scenarios | 238 | 13.0% | ✅ GOOD |
-| 10-choice-engine | 349 | 4.6% | ✅ EXCELLENT |
+| 7-don-quixote | 518 | 9.8% | ✅ EXCELLENT |
+| 8-time-machine | 286 | 4.2% | ✅ EXCELLENT |
+| 9-three-scenarios | 268 | 15.7% | ✅ GOOD |
+| 10-choice-engine | 324 | 9.6% | ✅ EXCELLENT |
 
-**Best Performers:** Chapter 8 (3.0%), Chapter 6 (4.5%), Chapter 10 (4.6%)  
-**Constitutional Standard:** ≤25% monotone (100% compliance achieved)
+**Best Performers:** Ch.8 time-machine (4.2%), Ch.6 jekyll-hyde (4.5%), Ch.6 holmes-watson (6.6%).  
+**Standard:** ≤25% mono (12/12 compliant).
+
+**Note on the metric:** mono% counts sentences sharing the same first ~3 words (`scripts/measure-all-chapters-mono.cjs`). Repeats from legitimate citation patterns (`"Doyle Arthur C..."`, `"The Strand Maga..."`) and motif-callbacks (`"Шесть жемчужин..."`) inflate the count without indicating stylistic monotony. The metric is a floor-compliance gate, not a voice-quality verdict.
 
 ## Technical Infrastructure
 
@@ -48,26 +50,16 @@
 
 ### Quality Verification System
 - **measure-all-chapters-mono.cjs:** Operational
-- **quality-gate-report.json:** 7/7 gates passed
-- **Constitutional Framework:** Enhanced Alice v2.0 L3 with hostile verification
-
-## Hostile Verification Success
-
-**Phantom Crisis Resolution:** Enhanced Alice v2.0 Level 3 hostile verification protocol successfully:
-- Detected and prevented phantom expert recommendations
-- Revealed constitutional excellence was already achieved
-- Prevented unnecessary optimization work
-- Validated "HTML version fully functional" claim through systematic testing
-
-**Constitutional Framework:** Operating with banking-level standards for crisis prevention
+- **quality-gate-report.json:** 5/5 gates passed
+- **Validators:** Level 1 compliance regex (`scripts/validate-content.js`); commit-msg vendor-name guard
 
 ## Strategic Options
 
-### Publication Ready Options
-1. **HSE University Partnership** — Email template ready for execution
-2. **MIT Press Submission** — Package prepared for submission
-3. **Content Freeze** — Maintain current constitutional excellence
-4. **Multi-Format Publishing** — Hugo→PDF/ePub pipeline development
+### Publication-Ready Tracks
+1. **HSE University Partnership** — outreach package ready (AGIL-153, ready_for_dispatch, awaits user approval gate)
+2. **MIT Press Submission** — submission package ready (AGIL-154, ready_for_dispatch, awaits user approval gate)
+3. **Digital Focus** — maintain Hugo-based web publication
+4. **Multi-Format Publishing** — Web/EPUB/PDF pipeline already operational
 
 ### Strategic Decision Points
 - **Academic Track:** HSE partnership for university adoption
@@ -77,17 +69,16 @@
 
 ## Dependencies & Blockers
 
-**P0 Blockers:** NONE — Constitutional excellence achieved  
-**P1 Strategic Decisions:** Publication strategy selection  
-**P1 Visual Content:** Chapter 5 & 8 illustrations completion (AGIL-169)  
-**P2 Enhancements:** Multi-format pipeline development
+**P0 Blockers:** none open  
+**P1 Open:** AGIL-167 WCAG/accessibility (ready) — includes nav optimization handed off from AGIL-165  
+**P2 Open:** AGIL-168 typography (planning)  
+**Dispatch-gated (user approval required):** AGIL-153 HSE, AGIL-154 MIT Press
 
 ## Evidence Chain
 
-**Quality Metrics:** mono-percentage-report.json (2026-05-15T05:47:11.772Z)  
+**Quality Metrics:** mono-percentage-report.json (2026-05-21T07:36:29.511Z)  
 **Quality Gates:** quality-gate-report.json (2026-05-15T20:09:17.945Z)  
-**Website Function:** Verified 2026-05-16 (all 15 pages HTTP 200)  
-**Constitutional Status:** Enhanced Alice v2.0 L3 verification complete
+**Website Function:** Verified 2026-05-20 23:09 GMT (production fresh after PR #76)
 
 ## Visual Content Achievement ✅
 
@@ -110,6 +101,5 @@
 ---
 
 **Document Authority:** Enhanced Alice v2.0 Level 3 Cartouche Autonome Operation  
-**Last Updated:** 2026-05-18 by Alice  
-**Evidence-First Compliance:** All claims verified with primary sources  
-**Constitutional Status:** OPERATIONAL — Excellence achieved, visual ecosystem 100% complete
+**Last Updated:** 2026-05-21 by Alice (post Ch.6 rewrite mono re-measurement)  
+**Evidence-First Compliance:** All claims verified with primary sources

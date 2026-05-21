@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-19T16:41:23.515Z",
+  "timestamp": "2026-05-21T07:36:29.511Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -33,22 +33,22 @@
     },
     {
       "file": "chapter-10-choice-engine.md",
-      "totalSentences": 331,
-      "monotoneSentences": 33,
-      "monoPercentage": 10,
+      "totalSentences": 324,
+      "monotoneSentences": 31,
+      "monoPercentage": 9.6,
       "repeatedPatterns": [
         "\"collective int...\" x6",
         "\"cyberpunk team...\" x3",
         "\"network effect...\" x3",
         "\"перевод с корп...\" x3",
-        "\"team navigation...\" x2"
+        "\"не три параллел...\" x2"
       ]
     },
     {
       "file": "chapter-2-frankenstein.md",
-      "totalSentences": 309,
-      "monotoneSentences": 53,
-      "monoPercentage": 17.2,
+      "totalSentences": 301,
+      "monotoneSentences": 51,
+      "monoPercentage": 16.9,
       "repeatedPatterns": [
         "\"перевод автора...\" x15",
         "\"иллюстрация ав...\" x8",
@@ -98,15 +98,15 @@
     },
     {
       "file": "chapter-6-holmes-watson.md",
-      "totalSentences": 123,
-      "monotoneSentences": 13,
-      "monoPercentage": 10.6,
+      "totalSentences": 211,
+      "monotoneSentences": 14,
+      "monoPercentage": 6.6,
       "repeatedPatterns": [
-        "\"constitutional...\" x3",
-        "\"doyle arthur c...\" x2",
+        "\"doyle arthur c...\" x4",
+        "\"шесть жемчужин...\" x2",
         "\"the strand maga...\" x2",
-        "\"holmes watson a...\" x2",
-        "\"quality assura...\" x2"
+        "\"каждый провал и...\" x2",
+        "\"заставляет пер...\" x2"
       ]
     },
     {
@@ -150,15 +150,15 @@
     },
     {
       "file": "chapter-9-three-scenarios.md",
-      "totalSentences": 283,
-      "monotoneSentences": 48,
-      "monoPercentage": 17,
+      "totalSentences": 268,
+      "monotoneSentences": 42,
+      "monoPercentage": 15.7,
       "repeatedPatterns": [
-        "\"team consensus...\" x7",
+        "\"структурирован...\" x4",
         "\"collective inte...\" x3",
         "\"командная адап...\" x3",
-        "\"collective int...\" x3",
-        "\"group consensu...\" x3"
+        "\"вопрос группов...\" x3",
+        "\"корпоративная...\" x3"
       ]
     }
   ]

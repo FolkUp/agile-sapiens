@@ -526,3 +526,30 @@ html.dark .figure--secondary,
 .figure-align--left { margin-left: 0; margin-right: auto; }
 .figure-align--center { margin-left: auto; margin-right: auto; }
 .figure-align--right { margin-left: auto; margin-right: 0; }
+/* =============================================================================
+   AGIL-180: HOMEPAGE COVER HERO (2026-05-21)
+   ============================================================================= */
+
+.home-hero {
+  margin: 0 auto 2rem;
+  max-width: 480px;
+  text-align: center;
+  page-break-after: avoid;
+}
+
+.home-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    max-width: 320px;
+    margin-bottom: 1.5rem;
+  }
+}

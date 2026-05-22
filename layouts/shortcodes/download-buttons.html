@@ -1,0 +1,34 @@
+{{- /* AGIL-186: EPUB/PDF download buttons for the homepage. File names, sizes and
+       version label are read from static/downloads at build time, so nothing here
+       goes stale when a new release is published. */ -}}
+{{- $epub := false -}}
+{{- $pdf := false -}}
+{{- range (os.ReadDir "static/downloads") -}}
+  {{- if and (not $epub) (strings.HasSuffix .Name ".epub") -}}{{- $epub = . -}}{{- end -}}
+  {{- if and (not $pdf) (strings.HasSuffix .Name ".pdf") -}}{{- $pdf = . -}}{{- end -}}
+{{- end -}}
+{{- $ru := eq site.Language.Lang "ru" -}}
+{{- $unit := cond $ru "МБ" "MB" -}}
+{{- if or $epub $pdf -}}
+<div class="download-buttons">
+  {{- with $epub -}}
+  {{- $mb := printf "%.1f" (div (float .Size) 1000000.0) -}}
+  <a class="download-btn" href="/downloads/{{ .Name }}" download aria-label="{{ cond $ru "Скачать ePub, " "Download ePub, " }}{{ $mb }} {{ $unit }}">
+    <span class="download-btn__icon" aria-hidden="true">📖</span>
+    <span class="download-btn__label">ePub</span>
+    <span class="download-btn__meta">{{ $mb }}&nbsp;{{ $unit }}</span>
+  </a>
+  {{- end -}}
+  {{- with $pdf -}}
+  {{- $mb := printf "%.1f" (div (float .Size) 1000000.0) -}}
+  <a class="download-btn" href="/downloads/{{ .Name }}" download aria-label="{{ cond $ru "Скачать PDF, " "Download PDF, " }}{{ $mb }} {{ $unit }}">
+    <span class="download-btn__icon" aria-hidden="true">📄</span>
+    <span class="download-btn__label">PDF</span>
+    <span class="download-btn__meta">{{ $mb }}&nbsp;{{ $unit }}</span>
+  </a>
+  {{- end -}}
+</div>
+{{- $verSrc := cond (ne $epub false) $epub $pdf -}}
+{{- $ver := replaceRE `^.*-v([0-9][0-9.]*)\.[a-z0-9]+$` "$1" $verSrc.Name -}}
+<p class="download-meta">{{ cond $ru "Версия" "Version" }}&nbsp;{{ $ver }}</p>
+{{- end -}}

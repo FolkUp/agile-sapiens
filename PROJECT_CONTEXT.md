@@ -70,7 +70,7 @@
 ## Dependencies & Blockers
 
 **P0 Blockers:** none open  
-**P1 Open:** none — pre-publisher polish batch COMPLETE (PRs #81–#89 merged 2026-05-21)  
+**P1 Open:** AGIL-187 full site audit — diagnostic complete (a11y / SEO / links / 2026 standards); remediation in progress — PR #95 + PR #96 merged, pending: a11y landmark refactor, SEO Book-schema, EN removal  
 **P2 Open:** none in active scope (AGIL-168 + AGIL-173 closed as part of pre-publisher batch)  
 **P4 Open:** AGIL-172 URL portability — Cyrillic→ASCII anchors (blocked_pending_evidence; hostile review RED — the naive `autoHeadingIDType` fix would DROP Cyrillic runes and collide same-prefix headings; reopen only if a messenger paste-test shows real breakage)  
 **Dispatch-ready (user approval required to send):** AGIL-153 HSE, AGIL-154 MIT Press — book object is now publisher-grade across all three formats; their `blocked_by` lists are fully cleared.
@@ -86,7 +86,7 @@
 
 **Quality Metrics:** mono-percentage-report.json (2026-05-21T07:36:29 UTC)  
 **Quality Gates:** quality-gate-report.json (regenerated per validator run; 5/5 pass)  
-**Website Function:** Production serving PR #93 content (repaired broken `_default`/`apparatus` layout templates + stripped leaked internal "Verification Note" meta-text), merged 2026-05-22. Production render verified via headless browser (Playwright) on desktop + mobile — preface/apparatus/about/legal render correctly, phantom-clean. Repo-doc syncs after that point change no site output.
+**Website Function:** Production serving PR #96 content. PR #95 added a homepage download-buttons shortcode (EPUB/PDF links — the raw HTML had been stripped by Goldmark); PR #96 repaired the broken `/apparatus/` index (`apparatus/list.html` was still on the obsolete `hx-` prefix that PR #93 missed) and fixed a download-button size-label contrast regression. Both render-verified on production via Playwright + axe-core, desktop + mobile.
 
 ## Visual content inventory
 
@@ -112,5 +112,5 @@ Note: Ch.5 + Ch.8 standalone chapter plates were removed in AGIL-183 (PR #87) be
 
 ---
 
-**Last Updated:** 2026-05-22 (post-PR-#93 sync — broken `_default`/`apparatus` layout repaired, leaked meta-text stripped, deploy refs updated to PR #93)  
+**Last Updated:** 2026-05-22 (post-PR-#96 sync — AGIL-186 download buttons (PR #95), AGIL-187 audit started + `/apparatus/` layout repaired (PR #96); deploy refs updated to PR #96)  
 **Evidence basis:** all measurements / page counts / file sizes verified via direct probe of production or local build artifacts. Where the source is a per-script regenerated file (e.g., `quality-gate-report.json`), the script name is cited next to the claim.

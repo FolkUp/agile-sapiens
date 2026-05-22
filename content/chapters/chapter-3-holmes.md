@@ -39,8 +39,6 @@ review_date: "2026-04-21"
 ---
 > **Chapter Summary:** Дедуктивный метод в управлении проектами. Как научиться видеть невидимое: семь диагностических признаков умирающего проекта, каждый проверенный на реальных катастрофах, которые можно было предотвратить.
 
-> **Verification Note:** This chapter uses exclusively T1 (SEC enforcement actions, corporate filings, government audit reports) and T2 (national media investigations, peer-reviewed academic sources, market analysis) sources. All major claims have been verified against primary sources. Banking-level editorial standards applied. Status: fully_verified pending final editorial review.
-
 ## HOOK: Эдинбург, 2 Picardy Place, зима 1886 года
 
 Артур Конан Дойл сидит в приёмной собственной медицинской практики на окраине Эдинбурга, дожидаясь пациентов, которые не приходят. Ему 27 лет, он выпускник медицинского факультета Эдинбургского университета, но за целый день к нему заглядывают максимум двое-трое больных с простудой или растяжениями. Доходы едва покрывают аренду крошечной квартиры над офисом — £40 в год против £100 расходов.

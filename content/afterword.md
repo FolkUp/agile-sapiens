@@ -28,13 +28,9 @@ sources:
   - "Kevin Kelly. «The Inevitable: Understanding the 12 Technological Forces That Will Shape Our Future» (2016). Viking Press."
   - "Shoshana Zuboff. «The Age of Surveillance Capitalism» (2019). PublicAffairs. Анализ трансформации труда в цифровую эпоху."
   - "Erik Brynjolfsson, Andrew McAfee. «The Second Machine Age» (2014). W. W. Norton & Company. Исследование влияния ИИ на экономику труда."
-reviewed_by: "Enhanced Alice v2.0 Level 3"
-review_date: "2026-05-12"
 ---
 
 > **Afterword Summary:** Синтез одиннадцатиглавного исследования о том, как классическая литература предсказала современные управленческие кризисы. Размышления о будущем труда в эпоху ИИ и о роли литературных принципов в корпоративной эволюции.
-
-> **Verification Note:** Послесловие опирается на междисциплинарные исследования будущего труда, технологической трансформации и организационной психологии. Применены банковские стандарды фактологической проверки.
 
 ---
 

@@ -39,8 +39,6 @@ review_date: "2026-04-21"
 ---
 > **Chapter Summary:** Парадокс Agile-измерений. Как метрики, призванные увеличить гибкость, становятся лотереей — системой настолько сложной, что никто не помнит, зачем она началась. От Spotify Model до SAFe, от OKR-театра до velocity gaming — анатомия измерительного безумия.
 
-> **Verification Note:** This chapter uses peer-reviewed academic sources, official corporate publications, and primary documents. All factual claims have been verified and sourced. Banking-level editorial standards applied.
-
 ## HOOK: Переговорная №7, спринт-планирование
 
 Денис Бородин, продакт-менеджер мобильного банкинга, смотрит на доску story points и понимает: система сожрала команду.

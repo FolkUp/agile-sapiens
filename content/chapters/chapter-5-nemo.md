@@ -42,8 +42,6 @@ draft: false
 ---
 > **Chapter Summary:** Bootstrap leadership как оружие против корпоративной бюрократии. Как инженерная команда «Таинственного острова» стала прототипом каждой успешной тигровой команды: от Skunk Works до первых команд Macintosh, и почему компании, которые строят «остров», обходят тех, кто строит «круизный лайнер».
 
-> **Verification Note:** This chapter uses T1 sources (government audit reports, congressional testimony) for military/aerospace cases and T2 sources (peer-reviewed publications, verified biographies) for organizational analysis. Banking-level editorial standards applied.
-
 ## HOOK: Амьен, rue Charles Dubois, 44, весна 1874 года
 
 Жюль Верн завершает «Вокруг света за 80 дней» с коммерческим триумфом — роман выходит в 18 странах одновременно, а издатель Этцель требует продолжения успеха. Но Верн устал от «планетарного туризма». Фогг обогнул земной шар по готовым маршрутам — железным дорогам и пароходным линиям, созданным другими людьми. Сыну Мишелю 13 лет, и Верн наблюдает, как подросток решает проблемы: не ищет готовых решений, а строит с нуля из подручных средств.

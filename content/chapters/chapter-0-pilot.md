@@ -52,8 +52,6 @@ review_date: "2026-04-21"
 ---
 > **Chapter Summary:** Провокативный анализ того, как вымышленный персонаж XIX века интуитивно применил принципы, которые современная индустрия гибких методов коммерциализировала и исказила. Как здравый смысл одного литературного джентльмена обнажает безумие индустрии стоимостью в десятки миллиардов долларов.
 
-> **Verification Note:** This chapter uses primary literary sources (public domain), peer-reviewed academic research, official corporate publications, and government investigation reports. Banking-level editorial standards applied.
-
 ## HOOK: Нант, улица Жан-Жака Руссо, 4, январь 1872 года
 
 Жюль Верн сидит в своём рабочем кабинете на втором этаже, окружённый географическими картами и стопками корреспонденции от издателя Пьера-Жюля Этцеля. На столе разложены расписания пароходов Peninsular and Oriental Steam Navigation Company, железнодорожные карты Британской Индии и вырезки из газеты *Le Temps* о предполагаемом завершении индийской железной дороги.

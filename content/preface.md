@@ -28,13 +28,11 @@ sources:
   - "Scott Adams. «Dilbert» comic series methodology. Satirical business analysis через повседневные корпоративные абсурды."
   - "Thomas S. Kuhn. «The Structure of Scientific Revolutions» (1962). University of Chicago Press. Концепция парадигмальных сдвигов в науке."
   - "Walter Benjamin. «The Work of Art in the Age of Mechanical Reproduction» (1935). Методология культурного анализа технологических трансформаций."
-reviewed_by: "Enhanced Alice v2.0 Level 3"
+reviewed_by: "Editorial Team"
 review_date: "2026-05-12"
 ---
 
 > **Preface Summary:** Введение в методологию Literary Business Analysis — как классические произведения литературы интуитивно описали принципы управления, которые современная индустрия коммерциализировала и исказила. О том, почему вымышленные персонажи оказались точнее сертифицированных консультантов.
-
-> **Verification Note:** Предисловие основано на междисциплинарном подходе, сочетающем литературоведение, теорию управления и социальную критику. Применены банковские стандарты редакционной проверки.
 
 ---
 

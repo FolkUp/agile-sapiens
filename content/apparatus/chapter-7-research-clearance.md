@@ -3,6 +3,7 @@ title: "Chapter 7 Research Clearance Report"
 description: "Constitutional verification and research validation for Chapter 7: Don Quixote"
 date: 2026-05-06
 status: "verified"
+draft: true
 classification: "research-clearance"
 chapter: 7
 reviewed_by: "Editorial Team"

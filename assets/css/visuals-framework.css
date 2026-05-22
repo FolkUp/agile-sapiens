@@ -553,3 +553,84 @@ html.dark .figure--secondary,
     margin-bottom: 1.5rem;
   }
 }
+
+/* =============================================================================
+   DOWNLOAD BUTTONS — homepage EPUB/PDF call-to-action (AGIL-186)
+   bordeaux + ivory tokens invert together between themes, so the same
+   declaration keeps WCAG AA contrast in both light (7.2:1) and dark (5.6:1).
+   ============================================================================= */
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  margin: var(--space-lg) auto 0;
+}
+
+.download-btn,
+.download-btn:link,
+.download-btn:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.7rem 1.4rem;
+  border: 1.5px solid var(--folkup-bordeaux);
+  border-radius: 6px;
+  background: var(--folkup-bordeaux);
+  color: var(--folkup-ivory) !important;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  text-decoration: none !important;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.download-btn:hover {
+  background: var(--folkup-bordeaux);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.download-btn:focus-visible {
+  outline: 3px solid var(--folkup-amber);
+  outline-offset: 2px;
+}
+
+.download-btn__icon {
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.download-btn__meta {
+  font-weight: 400;
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+
+.download-meta {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--folkup-text-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .download-btn { transition: none; }
+  .download-btn:hover { transform: none; }
+}
+
+@media (max-width: 768px) {
+  .download-buttons {
+    gap: var(--space-sm);
+    flex-direction: column;
+  }
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

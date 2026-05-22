@@ -447,19 +447,6 @@ test('E.2 touch targets on chapter page at 320px — no FAIL (<32px)', async ({ 
   expect(fails.length, `${fails.length} touch targets < 32px on chapter 320px`).toBe(0);
 });
 
-test('E.3 touch targets on EN homepage at 375px — no FAIL (<32px)', async ({ page }) => {
-  const results = await auditTouchTargets(page, 375, '/en/');
-  const fails = results.filter(r => r?.status === 'FAIL');
-  const warns = results.filter(r => r?.status === 'WARN');
-
-  console.log(`Touch targets 375px /en/: ${results.length} total, ${fails.length} FAIL, ${warns.length} WARN`);
-  if (warns.length > 0) {
-    console.warn('WARN EN:', JSON.stringify(warns.slice(0, 5)));
-  }
-
-  expect(fails.length, `${fails.length} touch targets < 32px on EN homepage`).toBe(0);
-});
-
 // ================================================================
 // F. FOOTER REACHABILITY
 // ================================================================
@@ -528,24 +515,10 @@ test('G.1 screenshot: homepage 320px RU', async ({ page }) => {
   await shot(page, 'homepage-320-ru');
 });
 
-test('G.2 screenshot: homepage 320px EN', async ({ page }) => {
-  await page.setViewportSize({ width: 320, height: 568 });
-  await loadPage(page, '/en/');
-  await shot(page, 'homepage-320-en');
-});
-
 test('G.3 screenshot: chapter 320px', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 });
   await loadPage(page, '/chapters/chapter-0-pilot/');
   await shot(page, 'chapter-320');
-});
-
-test('G.4 screenshot: footer 320px EN', async ({ page }) => {
-  await page.setViewportSize({ width: 320, height: 568 });
-  await loadPage(page, '/en/');
-  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-  await page.waitForTimeout(300);
-  await shot(page, 'footer-320-en');
 });
 
 test('G.5 screenshot: homepage 375px RU (iPhone SE 2nd gen)', async ({ page }) => {

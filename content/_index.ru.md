@@ -21,7 +21,7 @@ twitter_description: "Как литература предсказала сов�
 schema_type: "Book"
 author: ["Андрей"]
 publisher: "FolkUp Ecosystem"
-date_published: "2026"
+date_published: "2026-05-18"
 book_format: "EBook"
 genre: ["Бизнес-анализ", "Литературоведение", "История управления"]
 ---

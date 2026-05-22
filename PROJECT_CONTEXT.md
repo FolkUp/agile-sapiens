@@ -1,6 +1,6 @@
 # AGILE SAPIENS — Project Context & Status
 
-**Version:** 1.0.7 | **Date:** 2026-05-21
+**Version:** 1.0.7 | **Date:** 2026-05-22
 **Status:** All 12 content units ≤25% mono per fresh measurement (2026-05-21T07:36 UTC). Pre-publisher polish batch landed (PRs #81–#90, 10 PRs, 2026-05-21): generator templates corrected, about.md scrubbed of AI-age language, cover image in EPUB metadata + PDF first page + HTML home hero, EPUB extended to full book object (cover + 16 plates + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus pages), PDF apparatus added (199→255 pp), Ch.6 plate split (new Holmes/Watson via Replicate flux-1.1-pro, existing renamed to Jekyll), 5 orphan images removed, typography ≥18px floor, desktop landmark-nav touch targets ≥44px. Earlier 2026-05-20/21: Ch.6 rewrite + EPUB re-inclusion (PRs #66–#76); debt-elimination batches 1–3 (PRs #56–#65). No P0/P1 blockers.
 
 ## Project Overview
@@ -86,7 +86,7 @@
 
 **Quality Metrics:** mono-percentage-report.json (2026-05-21T07:36:29 UTC)  
 **Quality Gates:** quality-gate-report.json (regenerated per validator run; 5/5 pass)  
-**Website Function:** Production serving PR #91 content (hostile-audit YELLOW corrections — phantom-scrub + EN /about/ fix + JSON-LD description), merged 2026-05-21 16:59 UTC. Repo-doc syncs after that point change no site output.
+**Website Function:** Production serving PR #93 content (repaired broken `_default`/`apparatus` layout templates + stripped leaked internal "Verification Note" meta-text), merged 2026-05-22. Production render verified via headless browser (Playwright) on desktop + mobile — preface/apparatus/about/legal render correctly, phantom-clean. Repo-doc syncs after that point change no site output.
 
 ## Visual content inventory
 
@@ -112,5 +112,5 @@ Note: Ch.5 + Ch.8 standalone chapter plates were removed in AGIL-183 (PR #87) be
 
 ---
 
-**Last Updated:** 2026-05-22 (consistency sync — deploy refs corrected to PR #91, AGIL-172 status P3→P4 aligned with BACKLOG)  
+**Last Updated:** 2026-05-22 (post-PR-#93 sync — broken `_default`/`apparatus` layout repaired, leaked meta-text stripped, deploy refs updated to PR #93)  
 **Evidence basis:** all measurements / page counts / file sizes verified via direct probe of production or local build artifacts. Where the source is a per-script regenerated file (e.g., `quality-gate-report.json`), the script name is cited next to the claim.

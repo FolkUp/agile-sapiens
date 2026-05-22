@@ -19,15 +19,16 @@
  * AGIL-122 — Hextra flex layout overflow fix (D.2/D.4/D.5)
  * =========================================================================
  *
- * Root cause: Hextra base layout renders .hx:flex.hx:min-h-screen > main.hx:flex-1.
- * As a flex item, main defaults to min-width:auto, so it expands to its content's
+ * Root cause: the base layout renders .hx:flex.hx:min-h-screen > .hx:flex-1 (the
+ * content column — a <div> since the AGIL-187 baseof landmark fix; was <main>).
+ * As a flex item it defaults to min-width:auto, so it expands to its content's
  * intrinsic width (547px at 320px viewport) instead of shrinking to the container.
  * Fix: add min-width:0 so the flex item respects the viewport constraint.
  * Scoped to ≤768px — desktop is wide enough that intrinsic sizing is harmless.
  */
 
 @media (max-width: 768px) {
-  .hx\:min-h-screen > main {
+  .hx\:min-h-screen > .hx\:flex-1 {
     min-width: 0;
   }
 }

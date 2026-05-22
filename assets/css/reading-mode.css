@@ -18,8 +18,8 @@
   top: 20px;
   right: 20px;
   z-index: 1000;
-  background: var(--primary, #2563eb);
-  color: white;
+  background: var(--folkup-bordeaux);
+  color: var(--folkup-ivory);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -31,7 +31,7 @@
 }
 
 .reading-mode-toggle:hover {
-  background: var(--primary-hover, #1d4ed8);
+  background: var(--folkup-bordeaux);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
 }
@@ -130,16 +130,6 @@
   .reading-mode body {
     font-size: 1.1rem !important;
   }
-}
-
-/* Dark mode support */
-.dark .reading-mode-toggle {
-  background: var(--primary-dark, #3b82f6);
-  color: var(--text-dark, #f9fafb);
-}
-
-.dark .reading-mode-toggle:hover {
-  background: var(--primary-dark-hover, #2563eb);
 }
 
 /* High contrast mode support (accessibility) */

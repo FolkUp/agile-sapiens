@@ -11,18 +11,14 @@
     </header>
     <div class="hx:flex hx:min-h-screen">
       {{- if and (.Site.Params.sidebar.enable | default true) (not .Params.sidebar.disable) -}}
-        <nav role="navigation" aria-label="Site navigation">
-          {{- partial "sidebar.html" (dict "context" .) -}}
-        </nav>
+        {{- partial "sidebar.html" (dict "context" . "primary" true) -}}
       {{- end -}}
-      <main role="main" id="content" class="hx:flex-1">
+      <div class="hx:flex-1">
         {{- block "main" . }}{{ end -}}
-      </main>
+      </div>
     </div>
     {{- if or (eq .Site.Params.footer.enable nil) (.Site.Params.footer.enable) }}
-      <footer role="contentinfo">
-        {{ partial "footer.html" . }}
-      </footer>
+      {{ partial "footer.html" . }}
     {{ end }}
     {{ partial "scripts.html" . }}
   </body>

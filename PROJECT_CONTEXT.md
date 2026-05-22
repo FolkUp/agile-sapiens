@@ -1,7 +1,7 @@
 # AGILE SAPIENS — Project Context & Status
 
 **Version:** 1.0.7 | **Date:** 2026-05-22
-**Status:** All 12 content units ≤25% mono per fresh measurement (2026-05-21T07:36 UTC). Pre-publisher polish batch landed (PRs #81–#90, 10 PRs, 2026-05-21): generator templates corrected, about.md scrubbed of AI-age language, cover image in EPUB metadata + PDF first page + HTML home hero, EPUB extended to full book object (cover + 16 plates + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus pages), PDF apparatus added (199→255 pp), Ch.6 plate split (new Holmes/Watson via Replicate flux-1.1-pro, existing renamed to Jekyll), 5 orphan images removed, typography ≥18px floor, desktop landmark-nav touch targets ≥44px. Earlier 2026-05-20/21: Ch.6 rewrite + EPUB re-inclusion (PRs #66–#76); debt-elimination batches 1–3 (PRs #56–#65). No P0/P1 blockers.
+**Status:** All 12 content units ≤25% mono per measurement (2026-05-21T07:36 UTC). Pre-publisher polish batch landed (PRs #81–#90). Post-batch: AGIL-186 homepage download buttons (PR #95); AGIL-187 full site audit (4 fronts) — Batch A accessibility remediation shipped (PR #98 — landmark structure + reading-mode/cookie contrast, axe-green), Batch C English-version removal shipped (PR #99 — site is honestly RU-only). No P0 blockers; AGIL-187 is the open P1 (remediation in progress — SEO Batch B + cover AGIL-185 remain).
 
 ## Project Overview
 
@@ -70,7 +70,7 @@
 ## Dependencies & Blockers
 
 **P0 Blockers:** none open  
-**P1 Open:** AGIL-187 full site audit — diagnostic complete (a11y / SEO / links / 2026 standards); remediation in progress — PR #95 / #96 / #98 merged. **Accessibility front complete (Batch A, PR #98):** site-wide landmark structure repaired + reading-mode / cookie-banner contrast — axe-core green (all page types, desktop + mobile, light + dark). Pending: SEO Batch B (Book schema + meta hygiene), EN-removal Batch C, cover AGIL-185  
+**P1 Open:** AGIL-187 full site audit — diagnostic complete (a11y / SEO / links / 2026 standards); remediation in progress — PR #95 / #96 / #98 / #99 merged. **Batch A complete (PR #98):** site-wide landmark structure + reading-mode / cookie-banner contrast — axe-core green all page types. **Batch C complete (PR #99):** English version removed — RU-only build, no `/en/` routes / hreflang / language switcher. Pending: SEO Batch B (Book schema + meta hygiene), cover AGIL-185, link-audit finish (in-page anchors)  
 **P2 Open:** none in active scope (AGIL-168 + AGIL-173 closed as part of pre-publisher batch)  
 **P4 Open:** AGIL-172 URL portability — Cyrillic→ASCII anchors (blocked_pending_evidence; hostile review RED — the naive `autoHeadingIDType` fix would DROP Cyrillic runes and collide same-prefix headings; reopen only if a messenger paste-test shows real breakage)  
 **Dispatch-ready (user approval required to send):** AGIL-153 HSE, AGIL-154 MIT Press — book object is now publisher-grade across all three formats; their `blocked_by` lists are fully cleared.
@@ -112,5 +112,5 @@ Note: Ch.5 + Ch.8 standalone chapter plates were removed in AGIL-183 (PR #87) be
 
 ---
 
-**Last Updated:** 2026-05-22 (post-PR-#98 sync — AGIL-187 Batch A accessibility remediation: landmark structure + reading-mode/cookie-banner contrast; deploy refs updated to PR #98)  
+**Last Updated:** 2026-05-22 (post-PR-#99 sync — AGIL-187 Batch C English-version removal; site is RU-only; deploy refs updated to PR #99)  
 **Evidence basis:** all measurements / page counts / file sizes verified via direct probe of production or local build artifacts. Where the source is a per-script regenerated file (e.g., `quality-gate-report.json`), the script name is cited next to the claim.

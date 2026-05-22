@@ -12,7 +12,6 @@ const BASE = process.env.PLAYWRIGHT_BASE_URL || 'https://sapiens.folkup.life';
 
 const PAGES = [
   { name: 'homepage-ru', url: '/' },
-  { name: 'homepage-en', url: '/en/' },
   { name: 'chapter-pilot', url: '/chapters/chapter-0-pilot/' },
   { name: 'legal-privacy', url: '/legal/privacy/' },
 ];
@@ -169,7 +168,7 @@ test('C. migration: localStorage="system" → reload → becomes dark', async ({
 // ============================================================
 // D. Single toggle — no duplicates
 // ============================================================
-for (const pg of [PAGES[0], PAGES[1]]) { // homepage RU + EN
+for (const pg of [PAGES[0]]) { // homepage RU (EN removed in Batch C)
   test(`D. no duplicates on ${pg.name}`, async ({ page }) => {
     await loadPage(page, pg.url);
     const count = await page.locator(TOGGLE_SELECTOR).count();

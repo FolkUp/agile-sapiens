@@ -339,7 +339,51 @@ weight: 30
 
 *[Источники будут перенесены из frontmatter chapter-5-nemo.md в Wave 2]*
 
-## Глава 6: Джекил и Хайд интегрируют системы
+## Глава 6, часть 1: Мина Харкер собирает разведку
+
+**PRIMARY LITERARY SOURCE**
+
+1. **Stoker, Bram.** *Dracula*. London: Archibald Constable & Co., 1897.
+   [Primary literary source] Эпистолярный роман о распределённой команде из шести человек, которая координирует охоту на невидимого врага через единый машинописный отчёт (главы XVII–XVIII), асинхронные средства связи (телеграммы, фонографические цилиндры, питмановская стенография), кросс-функциональное распределение специальностей и плоскую структуру принятия решений. Архетипическая иллюстрация того, что современные методологии называют единым источником правды, async-first координацией и senior-as-enabler ролью эксперта.
+
+**LITERARY CRITICISM**
+
+2. **Craft, Christopher.** "«Kiss Me with Those Red Lips»: Gender and Inversion in Bram Stoker's *Dracula*." *Representations*, no. 8, 1984, pp. 107–133.
+   [Peer-reviewed academic source] Эссе, в котором впервые предложено обозначение «Crew of Light» («Команда Света») для шести героев Стокера, объединённых охотой на Дракулу. Стокер не использует это название в тексте; обозначение — литературоведческая конструкция, опирающаяся на сквозную светотеневую метафору романа.
+
+3. **Auerbach, Nina.** *Our Vampires, Ourselves*. University of Chicago Press, 1995.
+   [Academic source] Глава 3 анализирует коммуникационные сбои вокруг смерти Люси Вестенра как структурную ошибку Ван Хелсинга — эксперт удерживает критическое знание в одной голове, команда исполняет указания без понимания контекста. Прямой источник для тезиса главы о том, что эксперт без распределённого знания эквивалентен Ван Хелсингу в Хиллингэме.
+
+4. **Senf, Carol A.** *The Vampire in Nineteenth-Century English Literature*. Bowling Green State University Popular Press, 1988.
+   [Academic source] Анализ роли Мины Харкер как полноправного аналитика команды (а не просто секретаря), необычной для викторианского романа. Поддерживает тезис главы о плоской структуре команды.
+
+5. **Wolf, Leonard.** *The Annotated Dracula*. Clarkson N. Potter, New York, 1975.
+   [Annotated edition] Стандартная датировка событий романа — осень 1893 года — по совпадению дней недели в дневниковых записях персонажей.
+
+**MANAGEMENT & TEAM-COORDINATION LITERATURE**
+
+6. **Hutchins, Edwin.** *Cognition in the Wild*. MIT Press, Cambridge, 1995.
+   [Academic source] Понятие распределённой когниции применительно к команде, чьё знание не помещается в голову одного участника. Теоретическая рамка для архетипа Команды Света.
+
+7. **Kranz, Eugene.** *Failure Is Not an Option: Mission Control from Mercury to Apollo 13 and Beyond*. Simon & Schuster, 2000.
+   [Practitioner memoir] Канонический пример плоской кросс-функциональной команды (Mission Control «Аполлона-13») с координатором, а не командиром. Современный аналог архитектуры Команды Света.
+
+8. **Manning, Rob & Simon, William L.** *Mars Rover Curiosity: An Inside Account from Curiosity's Chief Engineer*. Smithsonian Books, 2014.
+   [Practitioner memoir] Описание команды Лаборатории реактивного движения NASA при высадке марсианского ровера Curiosity (2012) — семь специальностей в одной комнате с равными голосами.
+
+9. **Mullenweg, Matt.** "Distributed Work's Five Levels of Autonomy." ma.tt blog, 2020. URL: https://ma.tt/2020/04/five-levels-of-autonomy/
+   [Industry analysis] Структурное описание async-first организационной модели (по опыту WordPress.com / Automattic). Современный аналог режима работы Команды Света — асинхронность с синхронными ритуалами.
+
+10. **Fournier, Camille.** *The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change*. O'Reilly Media, 2017.
+    [Industry handbook] Принцип «senior as multiplier»: задача старшего инженера — развивать способность команды принимать решения, а не принимать их за команду. Современный аналог роли Ван Хелсинга как эксперта-наставника.
+
+11. **Cannon-Bowers, Janis A. & Salas, Eduardo (eds.).** *Making Decisions Under Stress: Implications for Individual and Team Training*. American Psychological Association, 1998.
+    [Academic source] Концепция «shared mental model failure» — теоретическая рамка для разбора смерти Люси Вестенра как структурного сбоя общей модели ситуации в команде.
+
+12. **Pitman, Sir Isaac.** *Stenographic Soundhand*. Bath, 1837.
+    [Historical primary source] Питмановская система стенографии, доминантная в Англии 1890-х годов, которой владели Мина и Джонатан Харкер.
+
+## Глава 6, часть 2: Джекил и Хайд интегрируют системы
 
 **PRIMARY LITERARY SOURCE**
 

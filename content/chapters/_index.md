@@ -34,8 +34,9 @@ og_description: "11 глав + 3 интермедии. Литературный 
 *Процесс: как происходит изменение*
 
 {{< cards >}}
-{{< card link="/chapters/chapter-5-nemo" title="Глава 5: Капитан Немо" icon="star" subtitle="Sabotage vs Enhancement: выбор между саботажем и симбиозом с технологиями" >}}
-{{< card link="/chapters/chapter-6-jekyll-hyde" title="Глава 6: Доктор Джекил" icon="beaker" subtitle="Intelligence amplification — как инструменты усиления превращают создателей в создания" >}}
+{{< card link="/chapters/chapter-5-nemo" title="Глава 5: Капитан Немо" icon="star" subtitle="Bootstrap leadership: малая автономная команда против корпоративной бюрократии" >}}
+{{< card link="/chapters/chapter-6-mina-harker" title="Глава 6, часть 1: Мина Харкер" icon="document-text" subtitle="Команда Света Стокера: распределённая команда викторианской эпохи и единый источник правды" >}}
+{{< card link="/chapters/chapter-6-jekyll-hyde" title="Глава 6, часть 2: Доктор Джекил" icon="beaker" subtitle="Intelligence amplification — как инструменты усиления превращают создателей в создания" >}}
 {{< card link="/chapters/chapter-7-don-quixote" title="Глава 7: Дон Кихот" icon="star" subtitle="Архетип и алгоритм — что происходит, когда ИИ видит гигантов вместо ветряных мельниц" >}}
 {{< /cards >}}
 

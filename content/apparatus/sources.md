@@ -383,28 +383,53 @@ weight: 30
 12. **Pitman, Sir Isaac.** *Stenographic Soundhand*. Bath, 1837.
     [Historical primary source] Питмановская система стенографии, доминантная в Англии 1890-х годов, которой владели Мина и Джонатан Харкер.
 
-## Глава 6, часть 2: Джекил и Хайд интегрируют системы
+## Глава 6, часть 2: Доктор Джекил
 
-**PRIMARY LITERARY SOURCE**
+**PRIMARY LITERARY SOURCES**
 
 1. **Stevenson, Robert Louis.** *Strange Case of Dr Jekyll and Mr Hyde*. London: Longmans, Green & Co., 1886.
-   [Primary literary source] Central allegory for intelligence amplification as voluntary enhancement leading to loss of control. Core narrative for examining creator-creation reversal, dual-identity crisis, and the paradox of optimization tools.
+   [Primary literary source] Архетип корпоративной двойственности. Глава 9 («Dr Lanyon's Narrative») вводит фигуру свидетеля разрыва; глава 4 («The Carew Murder Case») — сцену скоростного действия без рефлексии; глава 10 («Henry Jekyll's Full Statement of the Case») — ретроспективный документ, который описывает форму процесса, но не его причины.
 
-**INDUSTRY RESEARCH**
+2. **Ильф, Илья и Евгений Петров.** *Золотой телёнок*. Журнальная публикация в «30 днях», 1931; первое отдельное издание — 1933.
+   [Primary literary source] Александр Иванович Корейко как русский Джекил-Хайд без зелья и лаборатории: скромный делопроизводитель конторы «Геркулес» с зарплатой 46 рублей в месяц и параллельная подпольная жизнь миллионера. Глава, демонстрирующая, что дисциплинированно поддерживаемый дуализм может работать стабильно годами.
 
-2. **McKinsey Global Institute.** *Generative AI and the future of work in America*. McKinsey & Company, July 2023.
-   [Industry research] Empirical foundation for automation paradox and skill disruption claims. Data on augmented decision-making adoption rates and organizational transformation risks. Primary source for intelligence amplification statistics.
+**LITERARY-BIOGRAPHICAL SOURCE**
 
-3. **LinkedIn Economic Graph.** *Workplace Learning Report 2023: Building the Agile Future*. LinkedIn, 2023.
-   [Industry research] Evidence of corporate dependency on enhancement tools and organizational identity crisis. Documents reskilling urgency and the gap between automation speed and human adaptation capacity.
+3. **Balfour, Graham.** *The Life of Robert Louis Stevenson*. New York: Charles Scribner's Sons, 1901.
+   [Biographical source] Глава 15 содержит цитаты записей Фанни Стивенсон о шестидневной истории создания повести (сожжённый первый вариант — переписанная финальная версия) и о ключевом редакционном вмешательстве жены автора.
 
-4. **World Economic Forum.** *The Future of Jobs Report 2023*. Geneva: WEF, 2023.
-   [Industry research] Macroeconomic context for skill disruption and algorithm aversion emergence. Supports argument that enhancement tools are not optional but systemically enforced.
+**ORGANIZATIONAL LEARNING — CORE THEORY**
 
-**ACADEMIC SOURCE**
+4. **Argyris, Chris & Donald Schön.** *Theory in Practice: Increasing Professional Effectiveness*. San Francisco: Jossey-Bass, 1974.
+   [Academic source] Каноническое введение различения espoused theory / theory-in-use — то, что люди говорят, что они делают, против того, что они делают на самом деле. Концептуальная спина всей главы.
 
-5. **Burton, Jason W., et al.** "A Systematic Review of Algorithm Aversion in Augmented Decision Making." *Journal of Behavioral Decision Making*, vol. 33, no. 2, 2020, pp. 220–239. DOI: 10.1002/bdm.2155.
-   [Academic source] Theoretical framework for algorithm aversion as final human defense mechanism. Directly addresses the paradox of resistance to optimization tools despite measurable productivity gains. Core academic support for creator-creation reversal tension.
+5. **Argyris, Chris.** *Reasoning, Learning, and Action: Individual and Organizational*. San Francisco: Jossey-Bass, 1982.
+   [Academic source] Формализация концепции double-loop learning — способности организации не только корректировать действия (single-loop), но и пересматривать предпосылки. Источник четырёх стадий расхождения культуры в Core-секции главы.
+
+6. **Argyris, Chris.** *Strategy, Change, and Defensive Routines*. Boston: Pitman, 1985.
+   [Academic source] Концепция защитных рутин (defensive routines) — невидимых правил, охраняющих систему от неудобных вопросов, при сохранении формальной поддержки декларируемых ценностей.
+
+7. **Argyris, Chris.** *Overcoming Organizational Defenses: Facilitating Organizational Learning*. Boston: Allyn & Bacon, 1990.
+   [Academic source] Феномен «undiscussability of undiscussables» как операционная характеристика защитной организации. Поддерживает интерпретацию цинизма как симптома, а не патологии.
+
+8. **Argyris, Chris & Donald Schön.** *Organizational Learning II: Theory, Method, and Practice*. Reading, MA: Addison-Wesley, 1996.
+   [Academic source] Адаптация бейтсонианской концепции deutero-learning (учёбы учиться) для организационного контекста.
+
+**SOCIOLOGICAL FOUNDATION**
+
+9. **Goffman, Erving.** *The Presentation of Self in Everyday Life*. Garden City, NY: Anchor Books, 1959.
+   [Sociological source] Театральная метафора front stage / back stage как мост от индивидуального дуализма Стивенсона к групповому феномену корпоративной культуры. Глава «Performances» вводит ключевое различение.
+
+10. **Schein, Edgar H.** *Organizational Culture and Leadership*. San Francisco: Jossey-Bass, 1985.
+    [Academic source] Трёхуровневая модель организационной культуры (artifacts / espoused values / basic underlying assumptions) — вертикальное измерение, которое объясняет, почему переписывание манифеста не меняет реальную операционную культуру.
+
+11. **Westrum, Ron.** «A Typology of Organisational Cultures.» *Quality and Safety in Health Care*, vol. 13, supp. 2, December 2004, pp. ii22–ii27.
+    [Academic source] Типология generative/bureaucratic/pathological — как организации обрабатывают плохие новости. Операционная рамка для интерпретации цинизма как индикатора патологической или бюрократической стадии культуры. Та же модель позже использована в Forsgren et al. *Accelerate* (2018).
+
+**EPISTEMOLOGICAL FOUNDATION**
+
+12. **Bateson, Gregory.** *Steps to an Ecology of Mind*. San Francisco: Chandler Publishing, 1972.
+    [Academic source] Источник термина deutero-learning, который Аргирис позже адаптировал для организационного контекста.
 
 ## Глава 7: Дон Кихот масштабирует стартап
 

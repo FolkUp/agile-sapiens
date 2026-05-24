@@ -5,9 +5,13 @@
 
 **AGIL-190 Theme Correction Phase 2 kickoff (2026-05-24):** discovery — book is in a half-corrected state. The 2026-05-19 AGIL-170 "Literary Theme Correction" cleaned the SHELL (homepage `_index.ru.md`, about, cover subtitle, EPUB/PDF templates) but the chapter BODIES retained the AI overlay. Distribution of «ИИ»/AI mentions per chapter: Ch.0=2, Ch.1=1, Ch.2=0, Ch.3=2, Ch.4=0, Ch.5=1 (faithful to Literary Business Analysis frame) → Ch.6/p1=16, Ch.6/p2=42, Ch.7=41, Ch.8=63, Ch.9=125, Ch.10=79 (sharp boundary, AI-saturated tail). User-architected campaign (decisions 2026-05-24): Ch.6/p1 REPLACE archetype (Holmes-Watson → Stoker / Мина Харкер / Crew of Light — Victorian distributed-knowledge-base team, Agile-frame, no AI), Ch.6/p2 cleanup (Stevenson Jekyll-Hyde — corporate dualism without "intelligence amplification" overlay), Ch.7 cleanup (Cervantes Don Quixote — team mythmaking without algorithm overlay), Ch.8 cleanup (Wells Time Machine — labor-transformation horizons without AI overlay), Ch.9 REPLACE author (Vinge → Стругацкие «Понедельник начинается в субботу» — НИИЧАВО as ideal Agile team), Ch.10 REPLACE author (Gibson → Камю «Чума» — sustained crisis ops, доктор Рие), afterword REWRITE (synthesis "От Фогга до Рие" + 11-archetype practical toolkit, drop Enhancement/Amplification/Transformation AI taxonomy). Each chapter = separate session with hostile-review of plan + hostile-review of result. Editorial estimate ~45-60 hours over multiple sessions.
 
-**Sequencing impact:** AGIL-187 link-audit, AGIL-188 author attribution, AGIL-166 reading-mode follow-up, dead-code cleanup — all deferred behind AGIL-190 because their scope intersects (link-audit must re-run after chapter renames; author attribution must wait until final author canonical name; etc.). Only AGIL-190 Batch 0 (frame-cleanup `chapters/_index.md` description+keywords+body) shipped this session as visible campaign kickoff.
+**Sequencing impact:** AGIL-187 link-audit, AGIL-188 author attribution, AGIL-166 reading-mode follow-up, dead-code cleanup — all deferred behind AGIL-190 because their scope intersects (link-audit must re-run after chapter renames; author attribution must wait until final author canonical name; etc.).
 
-No P0 blockers; AGIL-190 is the active P1 (multi-session campaign).
+**AGIL-190 Batch 0** shipped 2026-05-24 (PR #106): frame-cleanup `chapters/_index.md` description+keywords+body de-AI'd as visible campaign kickoff.
+
+**AGIL-190 Batch 1** shipped 2026-05-24 (PR #107, prod cfc3015): Ch.6/p1 archetype replaced — Holmes-Watson partnership → Stoker / Мина Харкер / Crew of Light. New chapter `chapter-6-mina-harker.md` (203 lines), zero ИИ mentions, full Agile-frame (фонограф + питмановская стенография + Remington typewriter + телеграф as distributed-team apparatus). Slug rename + comprehensive cross-refs sweep across `chapters/_index`, Ch.4/5/7 `related:`, `preface.md` Act II, `apparatus/sources.md` (new "Глава 6, часть 1" section with 12 entries), `apparatus/predmetnyy-ukazatel.md` (Holmes/Doyle/Sherlock Holmes drop "6б"; new Мина Харкер / Стокер / Команда Света / Дракула entries), `apparatus/slovar-terminov.md`. Explicit weight `70/71` on Ch.6 parts to preserve Hugo display order (without this, alpha tie-break `jekyll < mina` would flip part 1 ↔ part 2). New Replicate plate (`agil-chapter-6-mina-plate.webp`, seed v2 of 3, 7% bottom-crop, 1152×834, 248KB). Deprecated `agil-chapter-6-holmes-plate.webp` archived externally. EPUB+PDF regenerated and synced to `static/downloads/` (11,273,801 / 3,912,886 bytes — byte-match local↔prod verified).
+
+No P0 blockers; AGIL-190 is the active P1 (multi-session campaign, 7 batches remaining).
 
 ## Project Overview
 
@@ -34,15 +38,15 @@ No P0 blockers; AGIL-190 is the active P1 (multi-session campaign).
 | 3-holmes | 256 | 11.7% | ✅ EXCELLENT |
 | 4-borges | 241 | 7.1% | ✅ EXCELLENT |
 | 5-nemo | 470 | 13.6% | ✅ GOOD |
-| 6-holmes-watson (part 1) | 211 | 6.6% | ✅ EXCELLENT |
+| 6-mina-harker (part 1) | — | — pending remeasure after AGIL-190 Batch 1 rewrite | new chapter |
 | 6-jekyll-hyde (part 2) | 397 | 4.5% | ✅ EXCELLENT |
 | 7-don-quixote | 518 | 9.8% | ✅ EXCELLENT |
 | 8-time-machine | 286 | 4.2% | ✅ EXCELLENT |
 | 9-three-scenarios | 268 | 15.7% | ✅ GOOD |
 | 10-choice-engine | 324 | 9.6% | ✅ EXCELLENT |
 
-**Best Performers:** Ch.8 time-machine (4.2%), Ch.6 jekyll-hyde (4.5%), Ch.6 holmes-watson (6.6%).  
-**Standard:** ≤25% mono (12/12 compliant).
+**Best Performers (from 2026-05-21 measurement, before AGIL-190 Batch 1):** Ch.8 time-machine (4.2%), Ch.6 jekyll-hyde (4.5%). Ch.6/p1 replaced 2026-05-24 — mono% pending fresh measurement.  
+**Standard:** ≤25% mono (11/12 compliant by current measurement; Ch.6/p1 mina-harker pending).
 
 **Note on the metric:** mono% counts sentences sharing the same first ~3 words (`scripts/measure-all-chapters-mono.cjs`). Repeats from legitimate citation patterns (`"Doyle Arthur C..."`, `"The Strand Maga..."`) and motif-callbacks (`"Шесть жемчужин..."`) inflate the count without indicating stylistic monotony. The metric is a floor-compliance gate, not a voice-quality verdict.
 

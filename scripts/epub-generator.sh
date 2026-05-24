@@ -272,7 +272,7 @@ ORDER_FILE=$(mktemp)
     fi
     w=$(grep -m1 '^weight:' "$f" 2>/dev/null | awk '{print $2}')
     w=${w:-9999}
-    # Pad weight to 4 digits + use basename for tiebreaker (holmes-watson < jekyll-hyde alpha)
+    # Pad weight to 4 digits + use basename for tiebreaker (Ch.6 parts now use explicit weights 70/71 per AGIL-190 Batch 1)
     printf "%04d|%s|%s\n" "$w" "$f" "$bn"
   done | sort -t'|' -k1,1n -k3,3
 

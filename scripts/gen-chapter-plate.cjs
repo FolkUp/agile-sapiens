@@ -81,6 +81,12 @@ const PLATES = {
     dimension: 'landscape',
     prompt: `${STYLE_PREFIX}. Victorian interior split by a tall standing mirror down the center. On the left side of the mirror: a gentleman in immaculate evening attire, composed, standing in a well-lit drawing room with fireplace and bookshelves. On the right side of the same mirror: the same figure transformed — dishevelled, hunched, in a shadowed gas-lit street with fog. Mirror as portal between two selves. Allegory of duality of nature. Engraved plate aesthetic.`,
   },
+  ch6mh: {
+    name: 'Plate 6, part 1 — Mina Harker compiles the dossier (Crew of Light)',
+    aspect: '4:3',
+    dimension: 'landscape',
+    prompt: `${STYLE_PREFIX}. Victorian study interior at night, late 19th century. Center: a woman in a dark high-necked Victorian dress seated at a heavy oak writing desk, focused expression, both hands on the keyboard of a large iron-framed Remington standard typewriter. Beside the typewriter on the desk: an Edison phonograph with a polished brass horn pointing toward her, a small open wooden case of wax cylinders, a stack of leather-bound journals, several folded telegrams and letters, an opened envelope, a notebook with shorthand markings. A green-shaded oil lamp casts a warm pool of light over the work. Wall behind: tall bookshelves with leather-bound volumes, a framed map of England-and-the-Continent partly visible (no readable place-names), a wall clock showing late hour. Tall window at right edge: London fog outside, suggestion of a gas-lamp silhouette. Composition: three-quarter view from the front-right, the woman's face in concentrated profile, ink stains on her fingers, fresh stack of typed pages at her left elbow. Allegory of one mind assembling fragmented intelligence into a single shared document. Engraved plate aesthetic, no humans face fully visible from front.`,
+  },
   ch7: {
     name: 'Plate 7 — Don Quixote (hopeful folly)',
     aspect: '4:3',

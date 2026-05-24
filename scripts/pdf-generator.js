@@ -48,9 +48,9 @@ const APPARATUS_ORDER = [
 
 /*
  * Files in content/chapters/ that must NOT be included:
- *  (As of AGIL-D5-CH6 2026-05-20: chapter-6-holmes-watson is now status: verified
- *  and re-included as «Глава 6, часть 1: Холмс и Ватсон» paired with
- *  «Глава 6, часть 2: Доктор Джекил» — no chapter currently needs exclusion.)
+ *  (As of AGIL-190 Batch 1 2026-05-24: chapter-6-mina-harker is part 1 (weight 70)
+ *  paired with chapter-6-jekyll-hyde as part 2 (weight 71). Holmes-Watson chapter
+ *  was replaced — see Batch 1 reflection. No chapter currently needs exclusion.)
  * Backup / .claude directories are skipped because we only read the top level.
  */
 const EXCLUDE_FILES = new Set();

@@ -4,7 +4,7 @@ description: "Как инструменты интеллектуального �
 date: 2026-04-08
 date_created: "2026-04-07"
 date_updated: "2026-05-20"
-weight: 70
+weight: 71
 chapter: 6
 plate_override: "agil-chapter-6-jekyll-plate.webp"
 act: "II: Archetypes"

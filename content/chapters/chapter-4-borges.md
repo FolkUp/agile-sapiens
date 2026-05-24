@@ -24,6 +24,7 @@ related:
   - "/chapters/chapter-2-frankenstein"
   - "/chapters/chapter-3-holmes"
   - "/chapters/chapter-5-nemo"
+  - "/chapters/chapter-6-mina-harker"
   - "/chapters/chapter-6-jekyll-hyde"
   - "/chapters/chapter-7-don-quixote"
 sensitive: false

@@ -553,15 +553,40 @@ weight: 30
 12. Edmondson, Amy C. *The Fearless Organization: Creating Psychological Safety in the Workplace for Learning, Innovation, and Growth.* Hoboken, NJ: Wiley, 2018. ISBN 978-1-119-47724-6. Концепция психологической безопасности — операционализация условий горизонтальной координации, описанной у Стругацких.
    [Business research — бизнес-исследование]
 
-## Chapter 10: Jacking In: День из будущего, которое мы выбираем
+## Глава 10: Чума. Как команда формируется в режиме длящегося кризиса
 
-1. Gibson, William. "Neuromancer" (1984). Ace Books. — Cyberpunk DNA для AI integration texture: jacking in metaphor, Case/Molly archetype
+1. **Camus, Albert.** *La Peste.* Paris: Gallimard, 1947.
+   [Primary literary source] Каноническая французская повесть о городе под карантином; communauté доктора Бернара Рие — литературный образец команды, формирующейся не по селекции-по-смыслу, а по селекции-по-отказу.
 
-2. Gibson, William. "Burning Chrome" (1982). — Origin of cyberspace concept: первое использование термина в литературе
+2. **Камю А.** *Чума.* Перевод Нины Жарковой. — *Иностранная литература,* 1968, №3–4. Первая публикация на русском языке. Затем: М.: Молодая Гвардия, 1969 (отдельное издание); канонический советский перевод, по которому даются все русские цитаты главы.
+   [Translation reference]
 
-3. Schwartz, Barry. "The Paradox of Choice" (2004). — Decision fatigue framework для information overload scenarios
+3. **Camus, Albert.** *Le Mythe de Sisyphe.* Paris: Gallimard, 1942.
+   [Primary philosophical source] Программный текст философии абсурда; контекст этики действия Рие, отделяющий «честную работу без надежды» от стоического героизма.
 
-4. MIT Sloan Management Review. "Want AI-Driven Productivity? Redesign Work" (2024). — AI integration methodology: verified source. https://sloanreview.mit.edu/article/want-ai-driven-productivity-redesign-work/
+4. **Camus, Albert.** Письмо Ролану Барту, 11 января 1955 года. Опубликовано в: Camus, Albert. *Théâtre, récits, nouvelles.* Édition de Roger Quilliot, Bibliothèque de la Pléiade. Paris: Gallimard, 1962, pp. 1965–1967.
+   [Author's correspondence] Авторская санкция многослойного прочтения: чума — *«не только нацизм, а вообще всё, что вынуждает к коллективному отказу»*. Опора для прочтения, выходящего за каноническое поле Сопротивления.
+
+5. **Шаламов В.Т.** *Колымские рассказы.* Цикл написан 1954–1973 годы; первое полное издание в СССР — М.: Художественная литература, 1991. Первая публикация рассказа на русском языке за рубежом — *Новый журнал* (Нью-Йорк), 1966, №82 («Сухим пайком»).
+   [Russian literary parallel — параллель из русской литературы] Сопоставление этики Рие с шаламовским опытом индивидуального удержания человеческого в условиях, систематически разрушающих коллективное действие. Полярности разные, дисциплина продолжения та же.
+
+6. **Sennett, Richard.** *Together: The Rituals, Pleasures, and Politics of Cooperation.* New Haven: Yale University Press, 2012. ISBN 978-0-300-18877-7. Современное социологическое наблюдение: устойчивая совместная работа держится не на мотивации, а на дисциплине ремесла; cooperation as craft. Эмпирическое подтверждение Закона 4 главы (дисциплина продолжения).
+   [Sociology of cooperation]
+
+7. **Weick, Karl E.; Sutcliffe, Kathleen M.** *Managing the Unexpected: Assured Performance in an Age of Complexity.* San Francisco: Jossey-Bass, 2001. ISBN 978-0-7879-5627-5. Концепция high-reliability organization: устойчивость к нерасчётным нагрузкам обеспечивается дисциплиной персонала в малом, а не выдающимися индивидуумами. Современная операционализация Закона 2 главы (общая порядочность вместо героизма).
+   [Crisis management research]
+
+8. **Judt, Tony.** *The Burden of Responsibility: Blum, Camus, Aron, and the French Twentieth Century.* Chicago: University of Chicago Press, 1998. ISBN 978-0-226-41419-4. Глава о Камю — академический якорь для прочтения Камю как этики действия (не философии созерцания); обоснование права настоящей книги читать «Чуму» в операционно-этическом ключе.
+   [Academic anchor — академический якорь]
+
+9. **Carroll, David.** *Albert Camus the Algerian: Colonialism, Terrorism, Justice.* New York: Columbia University Press, 2007. ISBN 978-0-231-14086-7. Алжирский контекст «Чумы» — связь романа с французским Сопротивлением и с колониальным фоном Орана; защита многослойного прочтения, на которое опирается глава.
+   [Academic anchor — академический якорь]
+
+10. **Достоевский Ф.М.** *Братья Карамазовы.* Книга пятая, глава IV «Бунт». 1880. Аргумент Ивана Карамазова о «слезе ребёнка» как пределе теодиции — литературный фон сцены смерти сына следователя Отона (Камю, часть IV) и реплики Рие в адрес Панлю.
+   [Literary background — литературный фон]
+
+11. **U.S. Department of Homeland Security.** *National Incident Management System: Incident Command System Resource Typing Manual.* FEMA 508-7, 2007. ICS как формализованный фреймворк координации кризисных ответов; ретроспективная аналогия к communauté Рие — органическому предшествию.
+   [Modern crisis-management reference — анахронистическая ретроспективная аналогия]
 
 ## Интермедии
 

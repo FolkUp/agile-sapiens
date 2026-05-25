@@ -32,7 +32,6 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - А-Янус (administrative модус директора НИИЧАВО) — см. «Янус Полуэктович»
 - абдукция — см. «дедуктивный метод»
 - автоматизация рутинных задач — Глава 3
-- алгоритмизация профессий — Глава 10
 - Аджемоглу, Дарон — см. раздел II «Имена и произведения»
 - Амперян, Эдик (методолог НИИЧАВО) — Глава 9
 - Аутор, Дэвид — см. раздел II «Имена и произведения»
@@ -54,7 +53,6 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - ведущий скрама (Scrum Master) — Главы 1, 2, 4
 - велосити (velocity) — см. «скорость команды»
 - велосити-гейминг (манипуляция скоростью) — Глава 4
-- верификация решений ИИ — Глава 10
 - видение продукта — Главы 5, 7
 - видение командное — Главы 5, 7
 - визионер (роль в команде, дуэт с прагматиком) — Глава 7
@@ -66,6 +64,8 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Вокруг света за 80 дней — см. раздел II «Имена и произведения»
 - владелец продукта (Product Owner) — Главы 1, 2, 4
 - выгорание команды — Главы 2, 6
+- Вейк, Карл — см. также Главу 10 (Managing the Unexpected, high-reliability organization)
+- «вторая проповедь Панлю» (отказ от теологического framing после смерти ребёнка) — Глава 10
 
 **Г**
 
@@ -80,7 +80,6 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - горизонтальная координация (самоорганизующаяся R&D-команда) — Глава 9
 - Гоулман, Дэниел — см. раздел II «Имена и произведения»
 - гибридная конструкция (антипаттерн языка) — Главы 4, 6
-- Гибсон, Уильям — см. раздел II «Имена и произведения»
 - Гудхарта, закон — см. «закон Гудхарта»
 
 **Д**
@@ -89,7 +88,6 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - дедуктивный метод — Главы 3, 10
 - декомпозиция задач — Главы 1, 2, 3
 - демонстрация инкремента (sprint review) — Главы 1, 4
-- джекинг-ин (jacking in) — см. «Jacking In»
 - Джекил/Хайд (метафора корпоративной двойственности) — Глава 6б
 - Джонсон, Саймон — см. раздел II «Имена и произведения»
 - двойное движение (Polanyi canon) — Глава 8
@@ -101,6 +99,9 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - декларируемая теория (espoused theory) — см. «Argyris»
 - деутеро-обучение (deutero-learning) — см. «Argyris», «Bateson»
 - защитные рутины (defensive routines) — см. «Argyris»
+- дисциплина продолжения (Камю, Закон 4 главы 10) — Глава 10
+- длящийся кризис (как режим работы команды) — Глава 10
+- Джадт, Тони — см. раздел II «Имена и произведения»
 
 **Е**
 
@@ -129,7 +130,6 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - инструмент превращается в цель — см. «закон Гудхарта»
 - ирония бюрократии — Главы 0, 4
 - извлечение vs распределение (режимы по Аджемоглу — Джонсону) — Глава 8
-- искусственный интеллект (ИИ) — см. также «collective intelligence» — Глава 10
 - история успеха (success story) — Главы 5, 6
 
 **К**
@@ -158,7 +158,10 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - круговорот бюрократический — см. «бюрократический круговорот»
 - культурные артефакты (Schein) — Глава 6б
 - культурный зазор (между декларацией и практикой) — Глава 6б
+- Камю, Альбер — см. раздел II «Имена и произведения»
+- Кастель, доктор (старый химик НИИ Орана, варит сыворотку локально) — Глава 10
 - Кэмпбелл, Джозеф — см. раздел II «Имена и произведения»
+- Кэрролл, Дэвид — см. раздел II «Имена и произведения»
 
 **Л**
 
@@ -177,7 +180,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - маршрут (как метафора) — Главы 0, 1, 5, 10
 - маршрут Фогга — Главы 0, 1, 10
 - мастер скрама — см. «ведущий скрама»
-- мельница как метафора (Дон Кихот) — Главы 7, 10
+- мельница как метафора (Дон Кихот) — Глава 7
 - Манн-Галч, катастрофа в (Mann Gulch disaster) — Глава 7
 - методологический театр (антипаттерн) — см. «Выбегалло»
 - миф учредительный (founding myth) — Глава 7
@@ -192,7 +195,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - минимально жизнеспособный продукт (MVP) — см. «MVP»
 - модель (как метафора) — Главы 1, 2, 8
 - модель мышления Холмса — Глава 3
-- Морлоки (метафора) — Главы 8, 10
+- Морлоки (метафора) — Глава 8
 - муда (потери, Toyota) — Главы 1, 2
 - мури (перегрузка, Toyota) — Главы 1, 2
 
@@ -200,7 +203,6 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - Наутилус (метафора закрытой системы) — Главы 1, 5
 - Невструев, Янус Полуэктович — см. «Янус Полуэктович»
-- нейроинтерфейс — см. «jacking in»
 - Немо, капитан — см. раздел II «Имена и произведения»
 - неназываемые темы (undiscussables) — см. «Argyris»
 - неоднозначность роли (антипаттерн) — Главы 1, 4
@@ -224,6 +226,10 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Отдел Универсальных Превращений (НИИЧАВО, Выбегалло — антипаттерн) — Глава 9
 - открытый институт (метафора НИИЧАВО) — Глава 9
 - отчётность как церемония — Главы 1, 4
+- общая порядочность (Камю, honnêteté; Закон 2 главы 10) — Глава 10
+- Оран (приморский город под карантином, место действия «Чумы») — Глава 10
+- отказ как обязательство (Камю, Закон 1 главы 10; selection-by-refusal) — Глава 10
+- отказ от теологического framing (вторая проповедь Панлю) — Глава 10
 
 **П**
 
@@ -253,9 +259,13 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - прокси-метрика — см. «закон Гудхарта»
 - психологическая безопасность — см. «psychological safety»
 - прямая речь персонажей (литературный приём) — все главы
+- Панлю, отец (иезуит, теолог, проповеди до и после смерти ребёнка Отона) — Глава 10
+- параллельные обязательства (Камю, Закон 3 главы 10: сходимость без иерархии) — Глава 10
+- «первая проповедь Панлю» (теологическое объяснение страданий как наказания) — Глава 10
 
 **Р**
 
+- Рамбер, Раймон (журналист «L'Echo de Paris», отказался уехать из Орана) — Глава 10
 - разработка непрерывная (continuous delivery) — Глава 3
 - регресс к среднему — Главы 4, 6
 - ретроспектива — Главы 1, 2, 4
@@ -263,6 +273,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - ритуал планирования — Главы 1, 4
 - ритуал стендапа — Главы 1, 4
 - ритуал замещает работу (антипаттерн Хайда) — Глава 6б
+- Рие, Бернар (доктор, главный герой «Чумы») — Глава 10
 - роль (Agile роли) — Главы 1, 2, 4
 - роль замещает человека (антипаттерн Хайда) — Глава 6б
 - режим извлечения / режим распределения (Acemoglu — Johnson canon) — Глава 8
@@ -272,12 +283,10 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - Сайрус Смит (метафора инженера-цивилизатора) — Глава 5
 - самоорганизующаяся R&D-команда — Глава 9
-- Санчо Панса — Главы 7, 10
+- Санчо Панса — Глава 7
 - селекция важнее обучения (закон 1 НИИЧАВО) — Глава 9
 - сенсемейкинг — см. «sensemaking»
-- симбиоз с искусственным интеллектом — Глава 10
 - смыслопроизводство организационное (sensemaking, Вейк) — Глава 7
-- сингулярность технологическая — Глава 10
 - социологический эксперимент (метод Уэллса) — Глава 8
 - Соловец (вымышленный город НИИЧАВО) — Глава 9
 - скорость команды (velocity) — Главы 1, 4
@@ -295,12 +304,20 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Стругацкие, А. и Б. — см. раздел II «Имена и произведения»
 - субботник управленческий (антипаттерн) — Главы 4, 6а
 - «Сказка о Тройке» (продолжение «Понедельника начинается в субботу») — см. раздел II «Имена и произведения»
+- санитарные бригады (formations sanitaires Тарру в «Чуме») — Глава 10
+- селекция-по-отказу (формирование команды через отказ уйти) — Главы 9, 10
+- селекция-по-привлечению (НИИЧАВО, фильтр входа по смыслу) — Глава 9
+- Сеннетт, Ричард — см. раздел II «Имена и произведения»
+- сходимость без иерархии (Камю, communauté) — Глава 10
+- сомнительный случай — см. «cas douteux»
 
 **Т**
 
 - тейлоризм — Главы 0, 2
 - технический директор (CTO) — Глава 6
 - триггерная фраза — Глава 3
+- Тарру, Жан (приезжий, организатор санитарных бригад в Оране) — Глава 10
+- теологический framing страданий как защитный механизм (антипаттерн первой проповеди Панлю) — Глава 10
 
 **У**
 
@@ -321,7 +338,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 **Х**
 
 - Хайд, мистер (метафора реальной операционной культуры компании) — Глава 6б
-- Холмс, Шерлок — Главы 3, 10
+- Холмс, Шерлок — Глава 3
 - Хоумс, Элизабет (Theranos) — Глава 7
 - Хунта, Кристобаль Хозевич (заведующий Отделом Смысла Жизни НИИЧАВО, бывший Великий Инквизитор) — Глава 9
 
@@ -332,16 +349,22 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - цивилизация Линкольнова острова — Глава 5
 - цинизм как защитный механизм — Глава 6б
 
+**Ч**
+
+- чума (как метафора длящегося кризиса) — Глава 10
+- Чума (роман А. Камю) — см. раздел II «Имена и произведения»
+
 **Ш**
 
 - Шелли, Мэри — см. раздел II «Имена и произведения»
 - шлем Мамбрина (метафора коллективной интерпретации) — Глава 7
+- Шаламов, Варлам — см. раздел II «Имена и произведения»
 
 **Э**
 
 - эволюция командных практик — Главы 1, 10
 - Эдик Амперян — см. «Амперян, Эдик»
-- Элои (метафора) — Главы 8, 10
+- Элои (метафора) — Глава 8
 - эмоциональный интеллект (Гоулман canon) — Глава 7
 - эпистемический долг — Главы 3, 4
 
@@ -361,17 +384,20 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Бейтсон, Грегори — Глава 6б
 - Бондаренко, Светлана (сост. «Стругацкие. Материалы к исследованию») — Глава 9
 - Борхес, Хорхе Луис — Главы 4, 10
-- Вейк, Карл Эдвард — Глава 7
-- Гибсон, Уильям — Главы 4, 10
+- Вейк, Карл Эдвард — Главы 7, 10
 - Гоулман, Дэниел — Глава 7
 - Гофман, Эрвинг — Глава 6б
 - Гудхарт, Чарльз — Главы 0, 4
+- Джадт, Тони (Tony Judt) — Глава 10
 - Джонсон, Саймон — Глава 8
+- Достоевский, Фёдор Михайлович (отсылка к «Бунту» Ивана Карамазова) — Глава 10
 - Дойл, Артур Конан — Главы 3, 10
 - Жюль Верн — Главы 0, 1, 5, 10
 - Ильф, Илья — Главы 6б, 7
+- Камю, Альбер (Albert Camus, 1913–1960) — Глава 10
 - Кэмпбелл, Джозеф (мономиф) — Глава 7
 - Кэмпбелл, Дональд — Глава 4
+- Кэрролл, Дэвид (David Carroll, *Albert Camus the Algerian*) — Глава 10
 - Кэрролл, Льюис — Главы 2, 3
 - Малоун, Томас — см. «Malone, Thomas»
 - Мигунов, Евгений Тихонович (иллюстратор «Понедельника начинается в субботу») — Глава 9
@@ -380,6 +406,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Поланьи, Карл — Глава 8
 - Поланьи, Майкл (брат Карла Поланьи; tacit knowledge) — см. «Polanyi, Michael»
 - Сервантес, Мигель де — Главы 7, 10
+- Сеннетт, Ричард (Richard Sennett, *Together*) — Глава 10
 - Скаландис, Ант (биограф Стругацких) — Глава 9
 - Стивенсон, Роберт Льюис — Глава 6б
 - Стокер, Брэм — Глава 6а
@@ -389,7 +416,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Уэллс, Герберт — Главы 8, 10
 - Уэструм, Рон — Глава 6б
 - Хатчинс, Эдвин — см. «Hutchins, Edwin»
-- Харари, Юваль Ной — см. «Sapiens»
+- Шаламов, Варлам Тихонович — Глава 10
 - Шейн, Эдгар — Главы 6б, 7
 - Шелли, Мэри — Главы 2, 10
 - Шён, Дональд — Главы 6б, 7
@@ -399,6 +426,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - «Алиса в Стране чудес» (Л. Кэрролл) — Главы 2, 3
 - «Алиса в Зазеркалье» (Л. Кэрролл) — Глава 3
+- «Братья Карамазовы» (Ф. Достоевский, отсылка к гл. «Бунт») — Глава 10
 - «Великая трансформация» (К. Поланьи, *The Great Transformation*) — Глава 8
 - «Власть и прогресс» (Д. Аджемоглу и С. Джонсон, *Power and Progress*) — Глава 8
 - «Вокруг света за 80 дней» (Жюль Верн) — Главы 0, 1, 10
@@ -407,19 +435,21 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - «Дон Кихот» (М. де Сервантес) — Главы 7, 10
 - «Дракула» (Брэм Стокер) — Глава 6а
 - «Золотой телёнок» (И. Ильф и Е. Петров) — Глава 6б
+- «Колымские рассказы» (В. Шаламов) — Глава 10
 - «Комментарии к пройденному» (Б. Н. Стругацкий) — Глава 9
 - «Котлован» (А. Платонов) — Глава 8
 - «Машина времени» (Г. Уэллс) — Главы 8, 10
+- «Миф о Сизифе» (А. Камю, *Le Mythe de Sisyphe*) — Глава 10
 - «Невероятная история доктора Джекила и мистера Хайда» (Р. Л. Стивенсон) — Глава 6б
-- «Нейромант» (У. Гибсон) — Глава 10
 - «Понедельник начинается в субботу» (А. и Б. Стругацкие) — Глава 9
 - «Презентация себя в повседневной жизни» (Э. Гофман) — Глава 6б
-- «Приключения Шерлока Холмса» (А. К. Дойл) — Главы 3, 10
+- «Приключения Шерлока Холмса» (А. К. Дойл) — Глава 3
 - «Сапиенс. Краткая история человечества» (Ю. Н. Харари) — см. «Sapiens»
 - «Сказка о Тройке» (А. и Б. Стругацкие) — Глава 9
 - «Таинственный остров» (Жюль Верн) — Главы 1, 5
 - «Тлён, Укбар, Орбис Терциус» (Х. Л. Борхес) — Глава 4
 - «Франкенштейн, или Современный Прометей» (М. Шелли) — Главы 2, 10
+- «Чума» (А. Камю, *La Peste* 1947) — Глава 10
 - «Эмоциональный интеллект» (Д. Гоулман) — Глава 7
 - *Apocalyptic Realism: The Science Fiction of Arkady and Boris Strugatsky* (Y. Howell) — см. «Howell, Yvonne»
 - *Dealers of Lightning* (M. Hiltzik, Xerox PARC) — см. «Hiltzik, Michael»
@@ -429,6 +459,10 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - *The Hero with a Thousand Faces* (Дж. Кэмпбелл) — Глава 7
 - *The Idea Factory: Bell Labs* (J. Gertner) — см. «Gertner, Jon»
 - *The Tacit Dimension* (M. Polanyi) — см. «Polanyi, Michael»
+- *Together: The Rituals, Pleasures, and Politics of Cooperation* (R. Sennett) — Глава 10
+- *Managing the Unexpected* (K. Weick, K. Sutcliffe) — Глава 10
+- *The Burden of Responsibility* (T. Judt, о Камю) — Глава 10
+- *Albert Camus the Algerian* (D. Carroll) — Глава 10
 
 ---
 
@@ -445,39 +479,45 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Beck, Kent (XP, Chrysler C3) — Глава 9
 - Bell Labs (Gertner canon, knowledge-worker self-organization) — Глава 9
 - Campbell, Joseph (monomyth) — Глава 7
+- Camus, Albert (*La Peste*; honnêteté; communauté) — Глава 10
+- Carroll, David (*Albert Camus the Algerian*) — Глава 10
+- cas douteux (Camus canon; сомнительный случай — диагноз отца Панлю) — Глава 10
 - CI/CD (continuous integration / continuous delivery) — Глава 3
-- collective intelligence (Malone/MIT CCI canon; см. также «коллективный интеллект») — Главы 6а, 10
+- collective intelligence (Malone/MIT CCI canon; см. также «коллективный интеллект») — Глава 6а
+- communauté (Camus canon; общность тех, кто отказался уехать) — Глава 10
 - consensus building — см. «выработка консенсуса»
-- cyberspace (Gibson canon) — Глава 10
 - data-driven — см. «данные как обоснование»
 - defensive routines (Argyris canon) — Глава 6б
 - deutero-learning (Bateson/Argyris canon) — Глава 6б
 - DevOps — Глава 3
-- distributed cognition (Hutchins canon) — Главы 6а, 10
-- distributed intelligence — Глава 10
+- distributed cognition (Hutchins canon) — Глава 6а
 - double-loop learning (Argyris & Schön canon) — Глава 6б
 - double movement (Polanyi canon) — Глава 8
 - Edmondson, Amy C. (psychological safety, *The Fearless Organization*) — Глава 9
 - emotional intelligence (Goleman canon) — Глава 7
 - espoused theory (Argyris & Schön canon) — Глава 6б
 - feedback loops — см. «обратная связь, циклы»
+- formations sanitaires (Camus canon; добровольные санитарные бригады Тарру в Оране) — Глава 10
 - founding myth (Schein/Weick canon) — Глава 7
 - front stage (Goffman canon) — Глава 6б
 - Gertner, Jon (*The Idea Factory*; Bell Labs history) — Глава 9
-- Gibson's Winning Strategy — Глава 10
 - GitHub — Главы 3, 5
 - Goffman, Erving (front stage / back stage) — Глава 6б
 - Goleman, Daniel (emotional intelligence) — Глава 7
+- high-reliability organization (Weick & Sutcliffe canon; HRO principles) — Глава 10
 - Hiltzik, Michael A. (*Dealers of Lightning*; Xerox PARC) — Глава 9
+- honnêteté (Camus canon; общая порядочность как операционка кризисной этики) — Глава 10
 - Howell, Yvonne (*Apocalyptic Realism*; Strugatsky scholarship) — Глава 9
-- Hutchins, Edwin — Главы 6а, 10
-- Jacking In (Gibson canon, заголовок главы 10) — Глава 10
+- Hutchins, Edwin — Глава 6а
+- Incident Command System (ICS; FEMA NIMS, FIRESCOPE California 1970s) — Глава 10
 - job polarization (Autor canon) — Глава 8
 - Johnson, Simon — Глава 8
+- Judt, Tony (*The Burden of Responsibility*; Camus scholarship) — Глава 10
 - Kanban — Главы 1, 2
 - KPI (key performance indicator) — Главы 0, 1, 4
+- *La Peste* (Camus 1947) — см. «Чума»
 - lean startup — см. «бережливый стартап»
-- Malone, Thomas (MIT CCI) — Главы 6а, 10
+- Malone, Thomas (MIT CCI) — Глава 6а
 - Mann Gulch disaster (Weick 1993) — Глава 7
 - monomyth (Campbell canon) — Глава 7
 - MVP (minimum viable product) — Главы 1, 2, 5
@@ -487,16 +527,18 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Polanyi, Karl (double movement, embeddedness, fictitious commodities) — Глава 8
 - Polanyi, Michael (*The Tacit Dimension*; brother of Karl Polanyi) — Глава 9
 - Product Owner — см. «владелец продукта»
-- prompt engineering — см. «инженерия запросов»
 - psychological safety (Edmondson canon) — Глава 9
 - routine tasks (Autor canon) — Глава 8
 - SAFe (Scaled Agile Framework) — Главы 1, 4
-- Sapiens (Y. N. Harari, монография) — Глава 10
 - Schein, Edgar (artifacts / espoused values / basic underlying assumptions) — Главы 6б, 7
 - Scrum — Главы 1, 2, 4
+- selection-by-attraction (Strugatsky canon; антипод к selection-by-refusal) — Глава 9
+- selection-by-refusal (Camus canon; антипод к selection-by-attraction) — Глава 10
+- Sennett, Richard (*Together*; cooperation as craft) — Глава 10
 - sensemaking (Weick canon) — Глава 7
 - Scrum Master — см. «ведущий скрама»
 - single-loop learning (Argyris canon) — Глава 6б
+- Sutcliffe, Kathleen M. (со-автор *Managing the Unexpected*) — Глава 10
 - soft skills — см. «гибкие навыки»
 - Spotify model — Главы 1, 4
 - story point — см. «стори-поинт»
@@ -507,7 +549,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - undiscussables (Argyris canon) — Глава 6б
 - velocity — см. «скорость команды»
 - Webb, Sidney & Beatrice (Fabian context for Wells) — Глава 8
-- Weick, Karl E. (sensemaking) — Глава 7
+- Weick, Karl E. (sensemaking; *Managing the Unexpected*) — Главы 7, 10
 - waterfall — см. «водопадная модель»
 - Westrum, Ron (generative / bureaucratic / pathological typology) — Глава 6б
 - Xerox PARC (Hiltzik canon, knowledge-worker self-organization) — Глава 9

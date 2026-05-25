@@ -12,6 +12,8 @@ review_date: "2026-05-06"
 
 # Chapter 7: Don Quixote Research Clearance
 
+> **⚠️ HISTORICAL RECORD (2026-05-06).** This clearance reflects the state of Ch.7 BEFORE AGIL-190 Batch 3 rewrite (2026-05-25, PR #112). The chapter was rebuilt around team mythology / Karl Weick sensemaking, dropping the algorithm-vs-team AI overlay. Anglicism mappings below (e.g. `algorithm-proof careers`) are no longer applicable — those terms no longer exist in the chapter. File preserved as audit trail of 2026-05-06 pre-rewrite state. Current Ch.7 sources verified in `content/chapters/chapter-7-don-quixote.md` frontmatter + `apparatus/sources.md` § Chapter 7.
+
 **MISSION COMPLETED:** Constitutional verification + Dictionary integration for systematic anglicism cleanup
 
 **RESEARCH STATUS:** ✅ CLEARED FOR TYPESETTER HANDOFF

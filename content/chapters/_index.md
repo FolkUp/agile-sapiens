@@ -50,7 +50,7 @@ og_description: "11 глав + 3 интермедии. Литературный 
 
 {{< cards >}}
 {{< card link="/chapters/chapter-8-time-machine" title="Глава 8: Машина времени и горизонты труда" icon="clock" subtitle="Четыре закона горизонтов труда от Уэллса до Аутора, Аджемоглу и Платонова — что нельзя изменить, что описывает рынок, что решает власть, и что чувствует труд, когда теряет адресат" >}}
-{{< card link="/chapters/chapter-9-three-scenarios" title="Глава 9: Три сценария" icon="star" subtitle="Vinge Decision Framework — как выбирать между enhancement, amplification и transformation" >}}
+{{< card link="/chapters/chapter-9-niichavo" title="Глава 9: НИИЧАВО как идеальная Agile-команда" icon="star" subtitle="Понедельник начинается в субботу — четыре закона самоорганизующейся R&D-команды от Стругацких: смысл как фильтр входа, двойственное лидерство, специалист против администратора, погружение вместо обучения" >}}
 {{< card link="/chapters/chapter-10-choice-engine" title="Глава 10: Движок выбора" icon="star" subtitle="Gibson Choice Engine — как жить и работать в эпоху киберпространства" >}}
 {{< /cards >}}
 

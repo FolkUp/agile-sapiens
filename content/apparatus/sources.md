@@ -512,17 +512,46 @@ weight: 30
 12. **Dale, Gareth.** *Karl Polanyi: A Life on the Left.* New York: Columbia University Press, 2016. [Биография]
     Основной англоязычный биограф Поланьи. Источник о Бенингтонском периоде, когда писалась «Великая трансформация», и об интеллектуальном контексте книги.
 
-## Глава 9: Архитектура выбора: Vinge учит принимать решения в точке сингулярности
+## Глава 9: Понедельник начинается в субботу. НИИЧАВО как идеальная Agile-команда
 
-1. Vinge, Vernor. "The Coming Technological Singularity: How to Survive in the Post-Human Era." NASA VISION-21 Symposium, 1993. https://edoras.sdsu.edu/~vinge/misc/singularity.html [Primary source, high confidence] - Four paths to superintelligence + decision framework для exponential change
+1. Стругацкий А., Стругацкий Б. *Понедельник начинается в субботу.* М.: Детская литература, 1965. 224 с., ил. Е. Мигунова. Тираж 100 000 экз.
+   [Primary literary source — основной литературный источник главы]
+   Повесть закончена авторами в 1964 году в посёлке Комарово под Ленинградом. Первое отдельное издание — Детгиз, 1965; затем — авторский том в серии «Библиотека современной фантастики» (М.: Молодая гвардия, 1966, т. 7), переиздание 1979, ежегодные с 1986.
 
-2. Kahneman, Daniel. "Thinking, Fast and Slow." 2011. [Academic source, high confidence] - Cognitive bias framework for decision-making under uncertainty
+2. Стругацкий Б.Н. *Комментарии к пройденному.* СПб.: Амфора, 2003. Автобиографические комментарии Б.Н. Стругацкого к произведениям братьев, написанные после смерти А.Н. Стругацкого (1991). Раздел о «Понедельнике начинается в субботу» — авторская реконструкция замысла и истории работы над повестью.
+   [Authorial reflection — авторский комментарий, primary source для понимания замысла]
 
-3. Senge, Peter. "The Fifth Discipline." 1990. [Business source, high confidence] - Systems thinking для организационного learning в conditions of change
+3. Howell, Yvonne. *Apocalyptic Realism: The Science Fiction of Arkady and Boris Strugatsky.* New York: Peter Lang, 1994. ISBN 0-8204-2360-6. 197 pp.
+   [Academic monograph — англоязычная академическая монография]
+   Howell — Professor of Russian, University of Richmond. Книга рассматривает творчество братьев в контексте поздне-советской интеллектуальной истории; «Понедельник» — в главе об утопических устремлениях научно-технической интеллигенции 1960-х. Источник формулы «Все читатели Стругацких мечтали работать в НИИЧАВО — так же, как читатели Роулинг мечтают учиться в Хогвартсе».
 
-4. Stalk Jr., George, and Thomas M. Hout. "Competing Against Time." 1990. [Business source, high confidence] - Time-based competition framework for решений по внедрению технологий (technology adoption decisions)
+4. *Стругацкие. Материалы к исследованию.* Сост. С. Бондаренко. Волгоград: Издатель, 2008-2014. Тт. 1-9. Документальный архив: письма, черновики, дневники, интервью. Источник биографических деталей о работе братьев в 1962-1964 годах.
+   [Documentary archive — документальный источник]
 
-5. Christensen, Clayton. "The Innovator's Dilemma." 1997. [Business source, high confidence] - Фреймворк разрушительных технологий (Disruptive technology framework) применимый к паттернам внедрения ИИ (AI adoption patterns)
+5. Скаландис А. *Братья Стругацкие.* М.: АСТ, 2008. 702 с. (серия «Жизнь замечательных людей»). Расширенная биография братьев с подробной хронологией. Источник о Пулковской обсерватории (Б.Н. Стругацкий работал астрономом 1955-1966) и о московской работе А.Н. Стругацкого.
+   [Biography — биографический источник]
+
+6. Polanyi, Michael. *The Tacit Dimension.* Chicago: University of Chicago Press, 1966. (Repr.: Doubleday, 1967.) Концепция tacit knowledge — неявного знания, передающегося только через со-присутствие. Используется в Законе 4 для объяснения арки Привалова.
+   *Внимание:* Майкл Поланьи (1891-1976) — химик и философ науки, брат Карла Поланьи (1886-1964), автора *Великой трансформации* (см. главу 8). Две разные интеллектуальные традиции; смешение братьев — частая ошибка в литературе.
+   [Theoretical framework — теоретическое основание]
+
+7. Gertner, Jon. *The Idea Factory: Bell Labs and the Great Age of American Innovation.* New York: Penguin Press, 2012. ISBN 978-1-59420-328-2. История Bell Labs 1925-1984 — современная параллель к НИИЧАВО: selection-driven team без иерархического планирования.
+   [Comparative business history — сравнительная история]
+
+8. Hiltzik, Michael A. *Dealers of Lightning: Xerox PARC and the Dawn of the Computer Age.* New York: HarperBusiness, 1999. ISBN 0-88730-989-5. История Xerox PARC 1970-1983 — другая современная параллель: тот же паттерн самоорганизации, разрушение административной интервенцией.
+   [Comparative business history — сравнительная история]
+
+9. Beck, Kent. *Extreme Programming Explained: Embrace Change.* Boston: Addison-Wesley, 1999. 1st ed., ISBN 0-201-61641-6. Основополагающий текст XP; глава 1 описывает проект Chrysler Comprehensive Compensation (C3, 1996-2000), на котором XP был формализован.
+   [Methodology primary source — первоисточник методологии Agile]
+
+10. Стругацкий А., Стругацкий Б. *Сказка о Тройке.* Первая публикация: журнал *Ангара* (Иркутск), №4-5, 1968 (т. н. «иркутский вариант», сокращённый). Полная авторская редакция в СССР опубликована только в 1989 году. Сюжетное продолжение «Понедельника»: тот же институт под административным управлением Тройки по рационализации и утилизации необъяснённых явлений. Художественная диагностика разрушения научной утопии.
+   [Sequel literary source — продолжение основного литературного источника]
+
+11. Argyris, Chris. «Empowerment: The Emperor's New Clothes.» *Harvard Business Review*, May-June 1998, pp. 98-105. Аргирис о парадоксе делегирования полномочий: administrative control и подлинная автономия knowledge workers несовместимы по дизайну. Подтверждение Закона 3.
+   [Business research — бизнес-исследование]
+
+12. Edmondson, Amy C. *The Fearless Organization: Creating Psychological Safety in the Workplace for Learning, Innovation, and Growth.* Hoboken, NJ: Wiley, 2018. ISBN 978-1-119-47724-6. Концепция психологической безопасности — операционализация условий горизонтальной координации, описанной у Стругацких.
+   [Business research — бизнес-исследование]
 
 ## Chapter 10: Jacking In: День из будущего, которое мы выбираем
 

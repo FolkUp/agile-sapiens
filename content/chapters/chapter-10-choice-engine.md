@@ -31,12 +31,12 @@ tags:
   - сценарии-2030 (2030-scenarios)
 related:
   - chapter-8-time-machine
-  - chapter-9-three-scenarios
+  - chapter-9-niichavo
   - chapter-0-pilot
   - _act-iii-architecture
 
 # Cross-chapter navigation
-prev_chapter: "/chapters/chapter-9-three-scenarios"
+prev_chapter: "/chapters/chapter-9-niichavo"
 next_chapter: ""
 act_overview: "Act III: Future - Where we're heading"
 act_prev: "/chapters/chapter-7-don-quixote"
@@ -78,7 +78,7 @@ twitter_description: "Final chapter: Gibson's Collective Choice Engine. Team nav
 
 **Team Navigation Framework:** Три сотрудника не просто работают параллельно — они образуют распределённую сеть принятия решений, где Анна приносит усиленную аналитику, Михаил — независимое критическое мышление, Дмитрий — культурный перевод. Коллективный интеллект через специализацию ролей.
 
-**Act III Journey Complete:** [Уэллс показал временные горизонты](/chapters/chapter-8-time-machine), [Виндж дал архитектуру выбора](/chapters/chapter-9-three-scenarios), Гибсон раскрывает прожитый опыт последствий через команду. Три перспективы одного преобразования: время, решение, воплощение в коллективе.
+**Act III Journey Complete:** [Уэллс показал временные горизонты](/chapters/chapter-8-time-machine), [Виндж дал архитектуру выбора](/chapters/chapter-9-niichavo), Гибсон раскрывает прожитый опыт последствий через команду. Три перспективы одного преобразования: время, решение, воплощение в коллективе.
 
 ## The Collective Choice Engine: Team Network in Action
 
@@ -167,7 +167,7 @@ COLLECTIVE INTELLIGENCE ACTIVATION:
 - Михаил зависит от timing координации Дмитрия для своевременности инсайтов
 - Дмитрий зависит от данных Анны и анализа Михаила для культурного контекста
 
-**Gibson's Collective Intelligence:** Команда воплощает путь, который не рассматривали ни [Уэллс](/chapters/chapter-8-time-machine), ни [Виндж](/chapters/chapter-9-three-scenarios) — не индивидуальное усиление или замещение, а коллективная эволюция человеко-ИИ систем. Сетевые эффекты создают emergent capabilities, недоступные ни чистому человеческому интеллекту, ни изолированному ИИ.
+**Gibson's Collective Intelligence:** Команда воплощает путь, который не рассматривали ни [Уэллс](/chapters/chapter-8-time-machine), ни [Виндж](/chapters/chapter-9-niichavo) — не индивидуальное усиление или замещение, а коллективная эволюция человеко-ИИ систем. Сетевые эффекты создают emergent capabilities, недоступные ни чистому человеческому интеллекту, ни изолированному ИИ.
 
 **Cyberpunk Reality:** Зависимость не от технологической инфраструктуры, а от качества межчеловеческой координации в технологически опосредованной среде. Team navigation как новая форма collective intelligence в киберпространстве Гибсона.
 
@@ -299,7 +299,7 @@ COLLECTIVE INTELLIGENCE ACTIVATION:
 
 Не усиленный человек или направляемый ИИ, а истинно совместный интеллект. Синтез больше суммы частей.
 
-Дмитрий живёт в сценарии Gamma из [Машины времени Уэллса](/chapters/chapter-8-time-machine), воплощающем настоящее партнёрство между человеческой проницательностью и машинными возможностями. Его профессия представляет [Path 3 Винджа — Intelligence Amplification](/chapters/chapter-9-three-scenarios) в самой чистой форме. Не человек, усиленный ИИ, и не ИИ под человеческим управлением, а действительно гибридный интеллект. Границы размыты не случайно, а по проекту.
+Дмитрий живёт в сценарии Gamma из [Машины времени Уэллса](/chapters/chapter-8-time-machine), воплощающем настоящее партнёрство между человеческой проницательностью и машинными возможностями. Его профессия представляет [Path 3 Винджа — Intelligence Amplification](/chapters/chapter-9-niichavo) в самой чистой форме. Не человек, усиленный ИИ, и не ИИ под человеческим управлением, а действительно гибридный интеллект. Границы размыты не случайно, а по проекту.
 
 ## 18:00 — Office lights dim, network effects clear
 
@@ -423,7 +423,7 @@ COLLECTIVE INTELLIGENCE ACTIVATION:
 
 **Урок Уэллса — Время как стратегический ресурс:** будущее не предопределено никаким графиком технологического роста. [Три горизонта](/chapters/chapter-8-time-machine) (2026-2030, 2030-2040, 2040+) показывают, что множественные сценарии сосуществуют параллельно. Именно выбор определяет, какой сценарий становится реальностью. Временные горизонты важны, краткосрочная оптимизация может конфликтовать с долгосрочной мудростью.
 
-**Урок Винджа — Решение в точке сингулярности:** экспоненциальные изменения требуют принципиально разных схем принятия решений. [Четыре пути к сверхразуму](/chapters/chapter-9-three-scenarios) (Awakening, Network, IA, Biological) представляют не просто варианты выбора, а архитектуру навигации в условиях, когда традиционное линейное планирование разваливается. Адаптация важнее оптимизации.
+**Урок Винджа — Решение в точке сингулярности:** экспоненциальные изменения требуют принципиально разных схем принятия решений. [Четыре пути к сверхразуму](/chapters/chapter-9-niichavo) (Awakening, Network, IA, Biological) представляют не просто варианты выбора, а архитектуру навигации в условиях, когда традиционное линейное планирование разваливается. Адаптация важнее оптимизации.
 
 **Урок Гибсона — Коллективная навигация в киберпространстве:** технологическое включение происходит не индивидуально, а через team networks и collective intelligence. Киберпространство стало средой для distributed cognition, где успех зависит от качества координации между различными подходами к ИИ. Граница размывается не между человеком и машиной, а между individual capabilities и collective intelligence через cyberpunk team navigation.
 
@@ -437,7 +437,7 @@ COLLECTIVE INTELLIGENCE ACTIVATION:
 
 **Временное измерение командной координации:** команды должны операть на многие временные горизонты одновременно — real-time market response (Анна), structural pattern validation (Михаил), strategic cultural adaptation (Дмитрий). [Три горизонта Уэллса](/chapters/chapter-8-time-machine) реализуются не sequential planning, а через parallel distributed processing.
 
-**Стратегическое измерение collective navigation:** способность coordinate между [четырьмя путями Винджа](/chapters/chapter-9-three-scenarios) через team specialization — augmentation (усиление ИИ), сопротивление (critical validation), симбиоз (cultural coordination), сетевые эффекты (collective synthesis). Navigation требует team flexibility при принципах координации.
+**Стратегическое измерение collective navigation:** способность coordinate между [четырьмя путями Винджа](/chapters/chapter-9-niichavo) через team specialization — augmentation (усиление ИИ), сопротивление (critical validation), симбиоз (cultural coordination), сетевые эффекты (collective synthesis). Navigation требует team flexibility при принципах координации.
 
 **Network dimension — Gibson's revelation:** киберпространство функционирует как environment для distributed team cognition, где collective intelligence emerges through coordination различий rather than individual enhancement. Team symbiosis создаёт capabilities недоступные individual nodes через cyberpunk network architecture.
 
@@ -483,7 +483,7 @@ COLLECTIVE INTELLIGENCE ACTIVATION:
 
 Матрица — не ловушка, а инструмент для тех, кто помнит, что инструменты служат людям, а не наоборот.
 
-**Лабиринт завершён, но не закрыт:** Борхес знал, что каждая завершённая карта порождает новые территории, где Act III исследовал архитектуру выбора в трёх измерениях — времени ([Wells](/chapters/chapter-8-time-machine)), стратегии ([Vinge](/chapters/chapter-9-three-scenarios)), и воплощения (Gibson). Но архитектура — не строение, а метод строительства, где каждое применение создаёт новые возможности и новые необходимости выбора.
+**Лабиринт завершён, но не закрыт:** Борхес знал, что каждая завершённая карта порождает новые территории, где Act III исследовал архитектуру выбора в трёх измерениях — времени ([Wells](/chapters/chapter-8-time-machine)), стратегии ([Vinge](/chapters/chapter-9-niichavo)), и воплощения (Gibson). Но архитектура — не строение, а метод строительства, где каждое применение создаёт новые возможности и новые необходимости выбора.
 
 Путешествие продолжается — выбирай мудро, навигируй осторожно, адаптируйся быстро.
 

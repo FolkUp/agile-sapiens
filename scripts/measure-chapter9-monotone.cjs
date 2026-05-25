@@ -91,10 +91,10 @@ function measureMonotone(text) {
 }
 
 // Read the chapter file
-const chapterPath = path.join(__dirname, '..', 'content', 'chapters', 'chapter-9-three-scenarios.md');
+const chapterPath = path.join(__dirname, '..', 'content', 'chapters', 'chapter-9-niichavo.md');
 const content = fs.readFileSync(chapterPath, 'utf-8');
 
-console.log('=== Chapter 9 Three Scenarios Analysis ===');
+console.log('=== Chapter 9 NIICHAVO Analysis ===');
 const result = measureMonotone(content);
 
 // Save baseline metrics

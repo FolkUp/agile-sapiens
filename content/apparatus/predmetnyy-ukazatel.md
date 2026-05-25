@@ -32,7 +32,9 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - абдукция — см. «дедуктивный метод»
 - автоматизация рутинных задач — Главы 3, 9
 - алгоритмическая торговля — Глава 9
-- алгоритмизация профессий — Главы 8, 9, 10
+- алгоритмизация профессий — Главы 9, 10
+- Аджемоглу, Дарон — см. раздел II «Имена и произведения»
+- Аутор, Дэвид — см. раздел II «Имена и произведения»
 - андеррайтинг страхования — Глава 9
 - антипаттерн (Agile) — Главы 0, 1, 2, 4, 6
 - артефакт (как метафора) — Главы 4, 6
@@ -60,14 +62,14 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Вейк, Карл — см. раздел II «Имена и произведения»
 - Воробьянинов, Ипполит Матвеевич (прагматик, дуэт с Бендером) — Глава 7
 - Виндж, Вернор (концепции) — см. раздел II «Имена и произведения»
-  - парадокс Винджа — Главы 8, 9, 10
-  - командный тест Винджа — Главы 8, 9
+  - парадокс Винджа — Главы 9, 10
+  - командный тест Винджа — Глава 9
   - Четыре пути Винджа (Vinge's Four Paths) — Главы 9, 10
 - внедрение гибких методов (Agile-трансформация) — Главы 1, 2, 4
 - водопадная модель (waterfall) — Главы 1, 2
 - Вокруг света за 80 дней — см. раздел II «Имена и произведения»
 - владелец продукта (Product Owner) — Главы 1, 2, 4
-- выгорание команды — Главы 2, 6, 8
+- выгорание команды — Главы 2, 6
 - выработка консенсуса (consensus building) — Главы 9, 10
 
 **Г**
@@ -75,12 +77,15 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - гемба (genchi genbutsu, японская методология) — Глава 1
 - генеративный модус командной мифологии (Patagonia, SpaceX, Toyota) — Глава 7
 - гибкая методология (Agile) — Главы 1, 2, 4
-- гибкие навыки (soft skills) — Главы 6, 8, 9
+- гибкие навыки (soft skills) — Главы 6, 9
+- горизонты труда (закон 1: усиление → реорганизация) — Глава 8
+- горизонты труда (закон 2: поляризация рынка) — Глава 8
+- горизонты труда (закон 3: распределение как политический выбор) — Глава 8
+- горизонты труда (закон 4: двойное движение Поланьи) — Глава 8
 - Гоулман, Дэниел — см. раздел II «Имена и произведения»
 - гибридная конструкция (антипаттерн языка) — Главы 4, 6
 - Гибсон, Уильям — см. раздел II «Имена и произведения»
 - Гудхарта, закон — см. «закон Гудхарта»
-- глубокое обучение (deep learning) — Глава 8
 
 **Д**
 
@@ -90,6 +95,8 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - демонстрация инкремента (sprint review) — Главы 1, 4
 - джекинг-ин (jacking in) — см. «Jacking In»
 - Джекил/Хайд (метафора корпоративной двойственности) — Глава 6б
+- Джонсон, Саймон — см. раздел II «Имена и произведения»
+- двойное движение (Polanyi canon) — Глава 8
 - директивный консенсус (антипаттерн) — Главы 4, 9
 - дисфункция командных церемоний — Главы 1, 2, 4
 - дуэт визионера и прагматика (Кихот–Санчо) — Глава 7
@@ -122,7 +129,8 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - инкремент продукта — Главы 1, 4
 - инструмент превращается в цель — см. «закон Гудхарта»
 - ирония бюрократии — Главы 0, 4
-- искусственный интеллект (ИИ) — см. также «collective intelligence», «intelligence amplification» — Главы 8, 9, 10
+- извлечение vs распределение (режимы по Аджемоглу — Джонсону) — Глава 8
+- искусственный интеллект (ИИ) — см. также «collective intelligence», «intelligence amplification» — Главы 9, 10
 - история успеха (success story) — Главы 5, 6, 9
 
 **К**
@@ -142,9 +150,11 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Команда Света (Crew of Light, Crew of Light Stoker) — Глава 6а
 - консенсус — см. «выработка консенсуса»
 - конвейер непрерывной интеграции (CI/CD) — см. «CI/CD»
+- контр-движение (Polanyi canon) — Глава 8
 - Корейко, Александр Иванович (метафора скрытой двойной жизни) — Глава 6б
 - корпоративный Agile (scaled agile) — см. также «SAFe» — Главы 1, 4
 - корпоративный дуализм (espoused vs enacted culture) — Глава 6б
+- котлован (метафора труда без адресата) — Глава 8
 - круговорот бюрократический — см. «бюрократический круговорот»
 - культурные артефакты (Schein) — Глава 6б
 - культурный зазор (между декларацией и практикой) — Глава 6б
@@ -152,13 +162,13 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 **Л**
 
-- лабиринт (как метафора) — Главы 4, 8, 10
-- лабиринт Борхеса — Главы 4, 8, 10
-- ландшафт искусственного интеллекта — Главы 8, 9, 10
+- лабиринт (как метафора) — Главы 4, 10
+- лабиринт Борхеса — Главы 4, 10
+- ландшафт искусственного интеллекта — Главы 9, 10
 - линейная разработка — см. «водопадная модель»
 - Линкольнов остров — Глава 5
 - литургия стикерная (антипаттерн) — Глава 4
-- ловушка (как метафора) — Главы 0, 4, 8
+- ловушка (как метафора) — Главы 0, 4
 - ловушка метрик — Главы 0, 4
 - Лэньон, доктор Хейсти (свидетель разрыва, архетип сгорающего сеньора) — Глава 6б
 
@@ -168,8 +178,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - маршрут (как метафора) — Главы 0, 1, 5, 10
 - маршрут Фогга — Главы 0, 1, 10
 - мастер скрама — см. «ведущий скрама»
-- математика делегирования — Главы 8, 9
-- машинное обучение (machine learning) — Глава 8
+- математика делегирования — Глава 9
 - мельница как метафора (Дон Кихот) — Главы 7, 10
 - Манн-Галч, катастрофа в (Mann Gulch disaster) — Глава 7
 - миф учредительный (founding myth) — Глава 7
@@ -191,13 +200,14 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 **Н**
 
-- надпрофессиональные навыки (meta-skills) — Главы 8, 9
+- надпрофессиональные навыки (meta-skills) — Глава 9
 - Наутилус (метафора закрытой системы) — Главы 1, 5
 - неназываемые темы (undiscussables) — см. «Argyris»
 - неоднозначность роли (антипаттерн) — Главы 1, 4
 - неудача команды — Главы 2, 6
 - Немо, капитан — см. раздел II «Имена и произведения»
 - нейроинтерфейс — см. «jacking in»
+- нерутинные задачи (Autor canon) — Глава 8
 
 **О**
 
@@ -214,14 +224,17 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - паника командная — Главы 2, 6
 - парадокс Винджа — см. «Виндж, Вернор»
-- парадокс автоматизации — Главы 8, 9
-- парадокс делегирования — Главы 8, 9
+- парадокс автоматизации — Глава 9
+- парадокс делегирования — Глава 9
 - пари (как метафора, ставка на будущее) — Главы 0, 1, 9
 - пари Фогга — Главы 0, 1, 10
 - Паспарту (роль исполнителя) — Главы 0, 1
 - планирование спринта — Главы 1, 2, 4
+- Платонов, Андрей — см. раздел II «Имена и произведения»
 - подмена цели — см. «закон Гудхарта»
 - пока-ёкэ (защита от ошибок) — Главы 1, 2
+- Поланьи, Карл — см. раздел II «Имена и произведения»
+- поляризация рынка труда (Autor canon) — Глава 8
 - пользовательский опыт (UX) — Глава 1
 - порочный круг — см. «бюрократический круговорот»
 - потери (Toyota waste) — см. «муда»
@@ -245,6 +258,8 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - ритуал замещает работу (антипаттерн Хайда) — Глава 6б
 - роль (Agile роли) — Главы 1, 2, 4
 - роль замещает человека (антипаттерн Хайда) — Глава 6б
+- режим извлечения / режим распределения (Acemoglu — Johnson canon) — Глава 8
+- рутинные задачи (Autor canon) — Глава 8
 
 **С**
 
@@ -253,13 +268,14 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - сенсемейкинг — см. «sensemaking»
 - сетевой интеллект — см. «network intelligence»
 - смыслопроизводство организационное (sensemaking, Вейк) — Глава 7
-- симбиоз с искусственным интеллектом — Главы 8, 9, 10
-- сингулярность технологическая — Главы 8, 9, 10
+- симбиоз с искусственным интеллектом — Главы 9, 10
+- сингулярность технологическая — Главы 9, 10
+- социологический эксперимент (метод Уэллса) — Глава 8
 - скорость команды (velocity) — Главы 1, 4
 - скрам (Scrum) — см. «Scrum»
 - слабый сигнал (weak signal) — Глава 3
 - сложная система (complex system) — Главы 2, 5, 9
-- собственно делегирование — Главы 8, 9
+- собственно делегирование — Глава 9
 - спринт — Главы 1, 2, 4
 - стандарт инженерный — Главы 3, 5
 - стартап как метафора — Главы 1, 2
@@ -273,10 +289,9 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - тейлоризм — Главы 0, 2
 - технический директор (CTO) — Глава 6
-- технические навыки (hard skills) — Главы 8, 9
+- технические навыки (hard skills) — Глава 9
 - технологическая сингулярность — см. «сингулярность»
 - триггерная фраза — Глава 3
-- Тьюринг — см. раздел II «Имена и произведения»
 
 **У**
 
@@ -287,7 +302,8 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 **Ф**
 
-- факторы выгорания — Главы 2, 6, 8
+- фабианский социализм (Wells context) — Глава 8
+- факторы выгорания — Главы 2, 6
 - Фогг, Филеас — Главы 0, 1, 10
 - форнит — см. сноску в Глоссарии замен (вне основного указателя)
 - Франкенштейн (метафора неуправляемого проекта) — Главы 2, 10
@@ -327,14 +343,17 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 **Авторы**
 
+- Аджемоглу, Дарон — Глава 8
 - Аргирис, Крис — Главы 6б, 7
+- Аутор, Дэвид — Глава 8
 - Бейтсон, Грегори — Глава 6б
-- Борхес, Хорхе Луис — Главы 4, 8, 10
+- Борхес, Хорхе Луис — Главы 4, 10
 - Вейк, Карл Эдвард — Глава 7
-- Гибсон, Уильям — Главы 4, 8, 10
+- Гибсон, Уильям — Главы 4, 10
 - Гоулман, Дэниел — Глава 7
 - Гофман, Эрвинг — Глава 6б
 - Гудхарт, Чарльз — Главы 0, 4
+- Джонсон, Саймон — Глава 8
 - Дойл, Артур Конан — Главы 3, 10
 - Жюль Верн — Главы 0, 1, 5, 10
 - Ильф, Илья — Главы 6б, 7
@@ -343,10 +362,12 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Кэрролл, Льюис — Главы 2, 3, 9
 - Малоун, Томас — см. «Malone, Thomas»
 - Петров, Евгений — Главы 6б, 7
+- Платонов, Андрей Платонович — Глава 8
+- Поланьи, Карл — Глава 8
 - Сервантес, Мигель де — Главы 7, 10
 - Стивенсон, Роберт Льюис — Глава 6б
 - Стокер, Брэм — Глава 6а
-- Тьюринг, Алан — Глава 8
+- Уэбб, Сидни и Беатрис (Webb) — Глава 8
 - Уэллс, Герберт — Главы 8, 10
 - Уэструм, Рон — Глава 6б
 - Хатчинс, Эдвин — см. «Hutchins, Edwin»
@@ -361,12 +382,15 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - «Алиса в Стране чудес» (Л. Кэрролл) — Главы 2, 3, 9
 - «Алиса в Зазеркалье» (Л. Кэрролл) — Глава 3
+- «Великая трансформация» (К. Поланьи, *The Great Transformation*) — Глава 8
+- «Власть и прогресс» (Д. Аджемоглу и С. Джонсон, *Power and Progress*) — Глава 8
 - «Вокруг света за 80 дней» (Жюль Верн) — Главы 0, 1, 10
-- «Двадцать тысяч лье под водой» (Жюль Верн) — Главы 1, 5, 8
+- «Двадцать тысяч лье под водой» (Жюль Верн) — Главы 1, 5
 - «Двенадцать стульев» (И. Ильф и Е. Петров) — Глава 7
 - «Дон Кихот» (М. де Сервантес) — Главы 7, 10
 - «Дракула» (Брэм Стокер) — Глава 6а
 - «Золотой телёнок» (И. Ильф и Е. Петров) — Глава 6б
+- «Котлован» (А. Платонов) — Глава 8
 - «Эмоциональный интеллект» (Д. Гоулман) — Глава 7
 - «Sensemaking in Organizations» (К. Вейк) — Глава 7
 - «The Hero with a Thousand Faces» (Дж. Кэмпбелл) — Глава 7
@@ -384,9 +408,11 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 ## III. Аббревиатуры и англоязычные термины
 
+- Acemoglu, Daron — Глава 8
 - Agile — Главы 0, 1, 2, 4
 - API — Главы 3, 5
 - Argyris, Chris (espoused theory, theory-in-use, defensive routines, double-loop learning, undiscussables) — Глава 6б
+- Autor, David H. (routine vs non-routine tasks, job polarization) — Глава 8
 - back stage (Goffman canon) — Глава 6б
 - baciyelmo (Cervantes coinage; таз-шлем) — Глава 7
 - Bateson, Gregory (deutero-learning) — Глава 6б
@@ -394,7 +420,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - CI/CD (continuous integration / continuous delivery) — Глава 3
 - collective intelligence (Malone/MIT CCI canon; см. также «коллективный интеллект») — Главы 6а, 9, 10
 - consensus building — см. «выработка консенсуса»
-- cyberspace (Gibson canon) — Главы 8, 10
+- cyberspace (Gibson canon) — Глава 10
 - data-driven — см. «данные как обоснование»
 - defensive routines (Argyris canon) — Глава 6б
 - deutero-learning (Bateson/Argyris canon) — Глава 6б
@@ -402,6 +428,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - distributed cognition (Hutchins canon) — Главы 6а, 10
 - distributed intelligence — Главы 9, 10
 - double-loop learning (Argyris & Schön canon) — Глава 6б
+- double movement (Polanyi canon) — Глава 8
 - emotional intelligence (Goleman canon) — Глава 7
 - espoused theory (Argyris & Schön canon) — Глава 6б
 - feedback loops — см. «обратная связь, циклы»
@@ -412,8 +439,10 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Goffman, Erving (front stage / back stage) — Глава 6б
 - Goleman, Daniel (emotional intelligence) — Глава 7
 - Hutchins, Edwin — Главы 6а, 10
-- intelligence amplification (Vinge canon) — Главы 8, 9, 10
+- intelligence amplification (Vinge canon) — Главы 9, 10
 - Jacking In (Gibson canon, заголовок главы 10) — Глава 10
+- job polarization (Autor canon) — Глава 8
+- Johnson, Simon — Глава 8
 - Kanban — Главы 1, 2
 - KPI (key performance indicator) — Главы 0, 1, 4
 - lean startup — см. «бережливый стартап»
@@ -422,11 +451,14 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - monomyth (Campbell canon) — Глава 7
 - MVP (minimum viable product) — Главы 1, 2, 5
 - network intelligence (Vinge canon) — Главы 9, 10
+- non-routine tasks (Autor canon) — Глава 8
 - OKR (objectives and key results) — Главы 1, 4, 5, 7
+- Polanyi, Karl (double movement, embeddedness, fictitious commodities) — Глава 8
 - Product Owner — см. «владелец продукта»
 - prompt engineering — см. «инженерия запросов»
+- routine tasks (Autor canon) — Глава 8
 - SAFe (Scaled Agile Framework) — Главы 1, 4
-- Sapiens (Y. N. Harari, монография) — Главы 8, 10
+- Sapiens (Y. N. Harari, монография) — Глава 10
 - Schein, Edgar (artifacts / espoused values / basic underlying assumptions) — Главы 6б, 7
 - Scrum — Главы 1, 2, 4
 - sensemaking (Weick canon) — Глава 7
@@ -439,7 +471,8 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - theory-in-use (Argyris & Schön canon) — Глава 6б
 - undiscussables (Argyris canon) — Глава 6б
 - velocity — см. «скорость команды»
-- Vinge, Vernor — Главы 8, 9, 10
+- Vinge, Vernor — Главы 9, 10
+- Webb, Sidney & Beatrice (Fabian context for Wells) — Глава 8
 - Weick, Karl E. (sensemaking) — Глава 7
 - Vinge's Four Paths / Four Paths Framework — Главы 9, 10
 - waterfall — см. «водопадная модель»

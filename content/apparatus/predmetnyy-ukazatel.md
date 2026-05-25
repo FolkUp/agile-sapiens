@@ -30,7 +30,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 **А**
 
 - абдукция — см. «дедуктивный метод»
-- автоматизация рутинных задач — Главы 3, 7, 9
+- автоматизация рутинных задач — Главы 3, 9
 - алгоритмическая торговля — Глава 9
 - алгоритмизация профессий — Главы 8, 9, 10
 - андеррайтинг страхования — Глава 9
@@ -43,8 +43,10 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - бережливый стартап (lean startup) — см. также «MVP» — Главы 1, 2
 - бэклог продукта — Главы 1, 2, 4
 - бюрократический круговорот — Главы 0, 4, 5
-- бюрократия как болезнь — Главы 0, 2, 4, 7
+- бюрократия как болезнь — Главы 0, 2, 4
 - бюрократия Скотланд-Ярда (метафора) — Глава 3
+- Бендер, Остап (визионер мифа, дуэт с Воробьяниновым) — Глава 7
+- baciyelmo (таз-шлем как метафора коллективной интерпретации) — Глава 7
 
 **В**
 
@@ -54,6 +56,9 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - верификация решений ИИ — Главы 9, 10
 - видение продукта — Главы 5, 7
 - видение командное — Главы 5, 7
+- визионер (роль в команде, дуэт с прагматиком) — Глава 7
+- Вейк, Карл — см. раздел II «Имена и произведения»
+- Воробьянинов, Ипполит Матвеевич (прагматик, дуэт с Бендером) — Глава 7
 - Виндж, Вернор (концепции) — см. раздел II «Имена и произведения»
   - парадокс Винджа — Главы 8, 9, 10
   - командный тест Винджа — Главы 8, 9
@@ -67,9 +72,11 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 **Г**
 
-- гемба (genchi genbutsu, японская методология) — Главы 1, 7
-- гибкая методология (Agile) — Главы 1, 2, 4, 7
+- гемба (genchi genbutsu, японская методология) — Глава 1
+- генеративный модус командной мифологии (Patagonia, SpaceX, Toyota) — Глава 7
+- гибкая методология (Agile) — Главы 1, 2, 4
 - гибкие навыки (soft skills) — Главы 6, 8, 9
+- Гоулман, Дэниел — см. раздел II «Имена и произведения»
 - гибридная конструкция (антипаттерн языка) — Главы 4, 6
 - Гибсон, Уильям — см. раздел II «Имена и произведения»
 - Гудхарта, закон — см. «закон Гудхарта»
@@ -85,6 +92,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Джекил/Хайд (метафора корпоративной двойственности) — Глава 6б
 - директивный консенсус (антипаттерн) — Главы 4, 9
 - дисфункция командных церемоний — Главы 1, 2, 4
+- дуэт визионера и прагматика (Кихот–Санчо) — Глава 7
 - двойная петля обучения (double-loop learning) — см. «Argyris»
 - декларируемая теория (espoused theory) — см. «Argyris»
 - деутеро-обучение (deutero-learning) — см. «Argyris», «Bateson»
@@ -103,12 +111,13 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - закон Гудхарта — Главы 0, 4
 - закон Кэмпбелла — Глава 4
-- заинтересованные стороны (stakeholders) — Главы 1, 5, 7
+- заинтересованные стороны (stakeholders) — Главы 1, 5
 - зеркало (как метафора) — Главы 2, 6б, 9
+- защитный модус командной мифологии (Theranos, WeWork) — Глава 7
 
 **И**
 
-- иерархия команд (метафора) — Главы 5, 6а, 7
+- иерархия команд (метафора) — Главы 5, 6а
 - индустрия гибких методов — Главы 1, 4
 - инкремент продукта — Главы 1, 4
 - инструмент превращается в цель — см. «закон Гудхарта»
@@ -118,15 +127,17 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 **К**
 
-- кайдзен (kaizen, японская методология) — Главы 1, 7
+- кайдзен (kaizen, японская методология) — Глава 1
 - канбан (Kanban) — см. «Kanban»
 - карго-культ Agile — Главы 1, 2, 4
-- карта (как метафора) — Главы 1, 5, 7, 10
+- карта (как метафора) — Главы 1, 5, 10
 - карта Линкольнова острова — Глава 5
-- картирование заинтересованных сторон — Глава 7
 - киберпространство — см. «cyberspace»
+- Кихано Добрый, Алонсо (имя Дон Кихота вне мифа) — Глава 7
+- Кихот, Дон (визионер команды) — Главы 7, 10
 - коллективная оценка делегирования — Глава 9
 - коллективный интеллект — см. «collective intelligence»
+- командная мифология (team mythology) — Глава 7
 - командный тест Винджа — см. «Виндж, Вернор»
 - Команда Света (Crew of Light, Crew of Light Stoker) — Глава 6а
 - консенсус — см. «выработка консенсуса»
@@ -137,6 +148,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - круговорот бюрократический — см. «бюрократический круговорот»
 - культурные артефакты (Schein) — Глава 6б
 - культурный зазор (между декларацией и практикой) — Глава 6б
+- Кэмпбелл, Джозеф — см. раздел II «Имена и произведения»
 
 **Л**
 
@@ -159,6 +171,11 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - математика делегирования — Главы 8, 9
 - машинное обучение (machine learning) — Глава 8
 - мельница как метафора (Дон Кихот) — Главы 7, 10
+- Манн-Галч, катастрофа в (Mann Gulch disaster) — Глава 7
+- миф учредительный (founding myth) — Глава 7
+- мифология командная (team mythology) — Глава 7
+- мономиф (Кэмпбелл) — Глава 7
+- модусы командной мифологии — см. «генеративный модус», «защитный модус», «примиряющий модус»
 - метафора как инструмент анализа — все главы
 - метод Холмса — см. «дедуктивный метод»
 - Мина Харкер (координатор распределённой команды) — Глава 6а
@@ -188,7 +205,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - ограничения автономии — Главы 2, 5, 9
 - ОКР — см. «OKR»
 - оптимизация ключевых показателей — см. «KPI»
-- организационная адаптация — Главы 1, 4, 7
+- организационная адаптация — Главы 1, 4
 - остров (как метафора) — Глава 5
 - островная самодостаточность — Глава 5
 - отчётность как церемония — Главы 1, 4
@@ -197,27 +214,29 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - паника командная — Главы 2, 6
 - парадокс Винджа — см. «Виндж, Вернор»
-- парадокс автоматизации — Главы 7, 8, 9
+- парадокс автоматизации — Главы 8, 9
 - парадокс делегирования — Главы 8, 9
 - пари (как метафора, ставка на будущее) — Главы 0, 1, 9
 - пари Фогга — Главы 0, 1, 10
 - Паспарту (роль исполнителя) — Главы 0, 1
 - планирование спринта — Главы 1, 2, 4
 - подмена цели — см. «закон Гудхарта»
-- пока-ёкэ (защита от ошибок) — Главы 1, 2, 7
-- пользовательский опыт (UX) — Главы 1, 7
+- пока-ёкэ (защита от ошибок) — Главы 1, 2
+- пользовательский опыт (UX) — Глава 1
 - порочный круг — см. «бюрократический круговорот»
 - потери (Toyota waste) — см. «муда»
-- продуктовый менеджер — Главы 1, 5, 7
+- продуктовый менеджер — Главы 1, 5
 - проектная агония — Главы 2, 4
 - прокрастинация командная — Главы 2, 4
+- прагматик (роль в команде, дуэт с визионером) — Глава 7
+- примиряющий модус командной мифологии — Глава 7
 - Прометей (метафора создателя) — Главы 2, 4
 - прокси-метрика — см. «закон Гудхарта»
 - прямая речь персонажей (литературный приём) — все главы
 
 **Р**
 
-- разработка непрерывная (continuous delivery) — Главы 3, 7
+- разработка непрерывная (continuous delivery) — Глава 3
 - регресс к среднему — Главы 4, 6
 - ретроспектива — Главы 1, 2, 4
 - ритуал командный — Главы 1, 2, 4
@@ -231,7 +250,9 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - Сайрус Смит (метафора инженера-цивилизатора) — Глава 5
 - Санчо Панса — Главы 7, 10
+- сенсемейкинг — см. «sensemaking»
 - сетевой интеллект — см. «network intelligence»
+- смыслопроизводство организационное (sensemaking, Вейк) — Глава 7
 - симбиоз с искусственным интеллектом — Главы 8, 9, 10
 - сингулярность технологическая — Главы 8, 9, 10
 - скорость команды (velocity) — Главы 1, 4
@@ -245,17 +266,16 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - стендап ежедневный — Главы 1, 4
 - стикерная литургия — см. «литургия стикерная»
 - стори-поинт (story point) — Главы 1, 4
-- структурное мышление — Главы 3, 7
+- структурное мышление — Глава 3
 - субботник управленческий (антипаттерн) — Главы 4, 6а
 
 **Т**
 
 - тейлоризм — Главы 0, 2
-- технический директор (CTO) — Главы 6, 7
+- технический директор (CTO) — Глава 6
 - технические навыки (hard skills) — Главы 8, 9
 - технологическая сингулярность — см. «сингулярность»
 - триггерная фраза — Глава 3
-- тройная связка (Vision–Strategy–Execution) — Глава 7
 - Тьюринг — см. раздел II «Имена и произведения»
 
 **У**
@@ -263,6 +283,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - управление по целям — см. «OKR»
 - усиление интеллекта — см. «intelligence amplification»
 - успех команды — Главы 2, 5, 7
+- учредительный миф — см. «миф учредительный»
 
 **Ф**
 
@@ -275,6 +296,7 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 - Хайд, мистер (метафора реальной операционной культуры компании) — Глава 6б
 - Холмс, Шерлок — Главы 3, 10
+- Хоумс, Элизабет (Theranos) — Глава 7
 
 **Ц**
 
@@ -290,11 +312,13 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 **Ш**
 
 - Шелли, Мэри — см. раздел II «Имена и произведения»
+- шлем Мамбрина (метафора коллективной интерпретации) — Глава 7
 
 **Э**
 
-- эволюция командных практик — Главы 1, 7, 10
+- эволюция командных практик — Главы 1, 10
 - Элои (метафора) — Главы 8, 10
+- эмоциональный интеллект (Гоулман canon) — Глава 7
 - эпистемический долг — Главы 3, 4
 
 ---
@@ -303,19 +327,22 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 **Авторы**
 
-- Аргирис, Крис — Глава 6б
+- Аргирис, Крис — Главы 6б, 7
 - Бейтсон, Грегори — Глава 6б
 - Борхес, Хорхе Луис — Главы 4, 8, 10
+- Вейк, Карл Эдвард — Глава 7
 - Гибсон, Уильям — Главы 4, 8, 10
+- Гоулман, Дэниел — Глава 7
 - Гофман, Эрвинг — Глава 6б
 - Гудхарт, Чарльз — Главы 0, 4
 - Дойл, Артур Конан — Главы 3, 10
 - Жюль Верн — Главы 0, 1, 5, 10
-- Ильф, Илья — Глава 6б
+- Ильф, Илья — Главы 6б, 7
+- Кэмпбелл, Джозеф (мономиф) — Глава 7
 - Кэмпбелл, Дональд — Глава 4
 - Кэрролл, Льюис — Главы 2, 3, 9
 - Малоун, Томас — см. «Malone, Thomas»
-- Петров, Евгений — Глава 6б
+- Петров, Евгений — Главы 6б, 7
 - Сервантес, Мигель де — Главы 7, 10
 - Стивенсон, Роберт Льюис — Глава 6б
 - Стокер, Брэм — Глава 6а
@@ -324,9 +351,10 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - Уэструм, Рон — Глава 6б
 - Хатчинс, Эдвин — см. «Hutchins, Edwin»
 - Харари, Юваль Ной — см. «Sapiens»
-- Шейн, Эдгар — Глава 6б
+- Шейн, Эдгар — Главы 6б, 7
 - Шелли, Мэри — Главы 2, 10
-- Шён, Дональд — Глава 6б
+- Шён, Дональд — Главы 6б, 7
+- Шуинар, Ивон (Yvon Chouinard) — Глава 7
 - Виндж, Вернор — см. «Vinge, Vernor»
 
 **Произведения**
@@ -335,9 +363,13 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - «Алиса в Зазеркалье» (Л. Кэрролл) — Глава 3
 - «Вокруг света за 80 дней» (Жюль Верн) — Главы 0, 1, 10
 - «Двадцать тысяч лье под водой» (Жюль Верн) — Главы 1, 5, 8
+- «Двенадцать стульев» (И. Ильф и Е. Петров) — Глава 7
 - «Дон Кихот» (М. де Сервантес) — Главы 7, 10
 - «Дракула» (Брэм Стокер) — Глава 6а
 - «Золотой телёнок» (И. Ильф и Е. Петров) — Глава 6б
+- «Эмоциональный интеллект» (Д. Гоулман) — Глава 7
+- «Sensemaking in Organizations» (К. Вейк) — Глава 7
+- «The Hero with a Thousand Faces» (Дж. Кэмпбелл) — Глава 7
 - «Машина времени» (Г. Уэллс) — Главы 8, 10
 - «Невероятная история доктора Джекила и мистера Хайда» (Р. Л. Стивенсон) — Глава 6б
 - «Нейромант» (У. Гибсон) — Глава 10
@@ -352,35 +384,42 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 ## III. Аббревиатуры и англоязычные термины
 
-- Agile — Главы 0, 1, 2, 4, 7
-- API — Главы 3, 5, 7
+- Agile — Главы 0, 1, 2, 4
+- API — Главы 3, 5
 - Argyris, Chris (espoused theory, theory-in-use, defensive routines, double-loop learning, undiscussables) — Глава 6б
 - back stage (Goffman canon) — Глава 6б
+- baciyelmo (Cervantes coinage; таз-шлем) — Глава 7
 - Bateson, Gregory (deutero-learning) — Глава 6б
-- CI/CD (continuous integration / continuous delivery) — Главы 3, 7
-- collective intelligence (Malone/MIT CCI canon; см. также «коллективный интеллект») — Главы 6а, 7, 9, 10
+- Campbell, Joseph (monomyth) — Глава 7
+- CI/CD (continuous integration / continuous delivery) — Глава 3
+- collective intelligence (Malone/MIT CCI canon; см. также «коллективный интеллект») — Главы 6а, 9, 10
 - consensus building — см. «выработка консенсуса»
 - cyberspace (Gibson canon) — Главы 8, 10
 - data-driven — см. «данные как обоснование»
 - defensive routines (Argyris canon) — Глава 6б
 - deutero-learning (Bateson/Argyris canon) — Глава 6б
-- DevOps — Главы 3, 7
-- distributed cognition (Hutchins canon) — Главы 6а, 7, 10
+- DevOps — Глава 3
+- distributed cognition (Hutchins canon) — Главы 6а, 10
 - distributed intelligence — Главы 9, 10
 - double-loop learning (Argyris & Schön canon) — Глава 6б
+- emotional intelligence (Goleman canon) — Глава 7
 - espoused theory (Argyris & Schön canon) — Глава 6б
 - feedback loops — см. «обратная связь, циклы»
+- founding myth (Schein/Weick canon) — Глава 7
 - front stage (Goffman canon) — Глава 6б
 - Gibson's Winning Strategy — Глава 10
 - GitHub — Главы 3, 5
 - Goffman, Erving (front stage / back stage) — Глава 6б
-- Hutchins, Edwin — Главы 6а, 7, 10
+- Goleman, Daniel (emotional intelligence) — Глава 7
+- Hutchins, Edwin — Главы 6а, 10
 - intelligence amplification (Vinge canon) — Главы 8, 9, 10
 - Jacking In (Gibson canon, заголовок главы 10) — Глава 10
 - Kanban — Главы 1, 2
 - KPI (key performance indicator) — Главы 0, 1, 4
 - lean startup — см. «бережливый стартап»
 - Malone, Thomas (MIT CCI) — Главы 6а, 9, 10
+- Mann Gulch disaster (Weick 1993) — Глава 7
+- monomyth (Campbell canon) — Глава 7
 - MVP (minimum viable product) — Главы 1, 2, 5
 - network intelligence (Vinge canon) — Главы 9, 10
 - OKR (objectives and key results) — Главы 1, 4, 5, 7
@@ -388,17 +427,20 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 - prompt engineering — см. «инженерия запросов»
 - SAFe (Scaled Agile Framework) — Главы 1, 4
 - Sapiens (Y. N. Harari, монография) — Главы 8, 10
-- Schein, Edgar (artifacts / espoused values / basic underlying assumptions) — Глава 6б
+- Schein, Edgar (artifacts / espoused values / basic underlying assumptions) — Главы 6б, 7
 - Scrum — Главы 1, 2, 4
+- sensemaking (Weick canon) — Глава 7
 - Scrum Master — см. «ведущий скрама»
 - single-loop learning (Argyris canon) — Глава 6б
 - soft skills — см. «гибкие навыки»
 - Spotify model — Главы 1, 4
 - story point — см. «стори-поинт»
+- team mythology (Weick/Schein canon, present chapter) — Глава 7
 - theory-in-use (Argyris & Schön canon) — Глава 6б
 - undiscussables (Argyris canon) — Глава 6б
 - velocity — см. «скорость команды»
 - Vinge, Vernor — Главы 8, 9, 10
+- Weick, Karl E. (sensemaking) — Глава 7
 - Vinge's Four Paths / Four Paths Framework — Главы 9, 10
 - waterfall — см. «водопадная модель»
 - Westrum, Ron (generative / bureaucratic / pathological typology) — Глава 6б

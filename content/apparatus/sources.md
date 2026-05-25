@@ -431,34 +431,46 @@ weight: 30
 12. **Bateson, Gregory.** *Steps to an Ecology of Mind*. San Francisco: Chandler Publishing, 1972.
     [Academic source] Источник термина deutero-learning, который Аргирис позже адаптировал для организационного контекста.
 
-## Глава 7: Дон Кихот масштабирует стартап
+## Глава 7: Дон Кихот и Санчо — рождение командного мифа
 
-**PRIMARY LITERARY SOURCE — CONSTITUTIONAL VERIFICATION COMPLETE**
+**PRIMARY LITERARY SOURCES**
 
 1. **Cervantes, Miguel de.** *Don Quixote de La Mancha* (1605/1615). Juan de la Cuesta, Madrid.
-   [Primary literary source] The foundational text and central archetype for Chapter 7's exploration of human perception versus algorithmic analysis. Cervantes' portrayal of Don Quixote's visionary perception of windmills as giants directly illustrates the chapter's core thesis: how human narrative thinking and meaning-making transcend algorithmic data processing.
-   
-   **CITATION VERIFICATION STATUS:** ✅ VERIFIED
-   - **Quote 1 (Chapter 7, line 46):** Part I, Chapter VIII windmill passage — verified against multiple academic sources
-   - **Quote 6 (Chapter 7, line 260):** Part II, Chapter LXXIV death scene — verified against original text
-   - **Copyright Status:** Public domain globally (Cervantes died 1616, >300 years)
-   - **Russian Translation:** Nikolai Lyubimov translation — standard scholarly edition, properly attributed
+   [Primary literary source] Базовый текст и центральный архетип главы. Используются: часть I, гл. I-II (принятие учредительного мифа Алонсо Кихано), гл. IV (освобождение Андреса), гл. VIII (ветряные мельницы), гл. XXI (шлем Мамбрина/`baciyelmo`); часть II, гл. LXXIV (отречение от рыцарства и смерть). Перевод Н. Любимова, классическая редакция. Public domain (Сервантес ум. 1616).
 
-**INDUSTRY RESEARCH & SKILLS FORECASTING**
+2. **Ильф, Илья и Евгений Петров.** «Двенадцать стульев» (1928). Первая публикация — журнал «30 дней», Москва, январь-июль 1928. Отдельное издание — «Земля и фабрика», 1928.
+   [Primary literary source] Канонический русский литературный двойник дуэта Дон Кихот–Санчо: Остап Бендер (визионер мифа о фамильных бриллиантах) и Ипполит Воробьянинов (прагматик, переводящий миф в действия), завершающийся убийством визионера прагматиком и обнаружением пустоты мифа. Часть советского литературного канона; неоднократные академические разборы (Лидия Яновская, Майя Каганская, Михаил Одесский, Давид Фельдман).
 
-2. **World Economic Forum.** *The Future of Jobs Report 2023: Shifting Skills and Workforce Transformation.* WEF, Geneva, 2023.
-   [Industry research] Provides empirical evidence for skills disruption and the emerging demand for algorithm-proof careers. Directly supports Chapter 7's argument about which human capabilities remain irreplaceable in the age of generative AI—emotional intelligence, narrative thinking, and editorial judgment.
+**ACADEMIC FOUNDATION — SENSEMAKING & TEAM MYTHOLOGY**
 
-3. **McKinsey Global Institute.** *Generative AI and the future of work in America.* McKinsey & Company, July 2023.
-   [Industry research] Grounds the chapter's discussion of human editorial function and visionary perception in market-level analysis. Demonstrates where AI augments human capability and where distinctly human judgment (narrative coherence, meaning creation, emotional resonance) remains non-automatable.
+3. **Weick, Karl E.** *Sensemaking in Organizations* (1995). Foundations for Organizational Science series, Sage Publications, Thousand Oaks, CA.
+   [Academic source — foundational] Базовый труд по теории организационного смыслопроизводства. Источник тезиса о том, что организации удерживаются не структурой, а коллективной интерпретацией двусмысленных сигналов. Семь свойств sensemaking, применённые в главе к командной мифологии: identity construction, retrospect, enactment, social, ongoing, cues, plausibility.
 
-4. **LinkedIn Economic Graph.** *Workplace Learning Report 2023: Building the Agile Future.* LinkedIn, 2023.
-   [Industry research] Empirical data on workplace skill priorities and learning trajectories. Supports the chapter's argument that emotional intelligence and narrative thinking—distinctly human capacities—are increasingly valued as algorithmic commoditization advances.
+4. **Weick, Karl E.** «The Collapse of Sensemaking in Organizations: The Mann Gulch Disaster». *Administrative Science Quarterly* 38, no. 4 (December 1993): 628–652.
+   [Academic source — peer-reviewed] Эмпирический анализ катастрофы 5 августа 1949 года, в которой погибли 13 из 15 парашютистов-пожарных в каньоне Манн-Галч (Монтана). Используется в главе для иллюстрации четвёртого закона командной мифологии — миф, не умеющий переписываться при столкновении с реальностью, убивает команду.
 
-**ACADEMIC FOUNDATION**
+5. **Campbell, Joseph.** *The Hero with a Thousand Faces* (1949). Bollingen Series XVII, Pantheon Books, New York.
+   [Academic source — foundational] Концепция мономифа — повторяющейся структуры героического пути в мировых культурах. В главе используется для обоснования третьего закона командной мифологии (приключение как нарратив): корпоративная мифология эксплуатирует мономиф как естественный формат смыслопроизводства.
 
-5. **Goleman, Daniel.** *Emotional Intelligence: Why It Matters More Than IQ.* Bantam Books, New York, 1995.
-   [Academic source] The canonical framework for emotional intelligence as a human cognitive capacity distinct from algorithmic processing. Foundational to Chapter 7's argument that meaning-making, empathy, and visionary perception are the core dimensions that differentiate human editorial function from machine correlation-detection.
+6. **Schein, Edgar H.** *Organizational Culture and Leadership* (1985). Jossey-Bass, San Francisco.
+   [Academic source — foundational] Базовый труд об уровнях организационной культуры. В главе используется для обоснования первого закона командной мифологии (учредительный миф): навязчивые идеи основателей становятся базовыми допущениями организационной культуры на десятилетия. Также цитируется в [главе 6, часть 2]({{< relref "/chapters/chapter-6-jekyll-hyde" >}}) для модели корпоративного дуализма.
+
+7. **Argyris, Chris & Donald Schön.** *Organizational Learning: A Theory of Action Perspective* (1978). Addison-Wesley, Reading, MA.
+   [Academic source — foundational] Концепция double-loop learning. В главе цитируется как ссылка на разбор в [главе 6, часть 2]({{< relref "/chapters/chapter-6-jekyll-hyde" >}}). В контексте Ch.7: четвёртый закон командной мифологии требует двойной петли — пересмотра не только тактики, но и интерпретационной рамки при столкновении мифа с реальностью.
+
+8. **Goleman, Daniel.** *Emotional Intelligence: Why It Matters More Than IQ* (1995). Bantam Books, New York.
+   [Academic source] Пять компонентов эмоционального интеллекта: самосознание, саморегуляция, мотивация, эмпатия, социальные навыки. В главе репозиционирован как инструмент примиряющего модуса командной мифологии (чтение того, что не выражено явно, для перевода мифа в действия, которые миф переживут).
+
+**CASE-STUDY REFERENCES — CORPORATE MYTHOLOGY IN PRACTICE**
+
+9. **Chouinard, Yvon.** *Let My People Go Surfing: The Education of a Reluctant Businessman* (2005). Penguin Books, New York.
+   [Founder memoir] Учредительная история Patagonia от первого лица. Используется в главе как пример генеративного модуса командной мифологии. В сентябре 2022 года Chouinard и его семья передали 100% компании в траст и некоммерческую организацию, посвящённые защите окружающей среды.
+
+10. **Carreyrou, John.** *Bad Blood: Secrets and Lies in a Silicon Valley Startup* (2018). Knopf, New York.
+    [Investigative journalism — peer-reviewed by Pulitzer board] Каноническое расследование Theranos и Элизабет Холмс на основе интервью с >150 источниками. Используется в главе как пример защитного модуса командной мифологии (миф как инструмент сокрытия реальности).
+
+11. **Wiedeman, Reeves.** *Billion Dollar Loser: The Epic Rise and Spectacular Fall of Adam Neumann and WeWork* (2020). Little, Brown and Company, New York.
+    [Investigative journalism] Журналистская реконструкция истории WeWork. Используется в главе как второй пример защитного модуса командной мифологии.
 
 ## Глава 8: Машина времени показывает три будущего
 

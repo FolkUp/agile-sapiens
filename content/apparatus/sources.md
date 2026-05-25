@@ -472,20 +472,45 @@ weight: 30
 11. **Wiedeman, Reeves.** *Billion Dollar Loser: The Epic Rise and Spectacular Fall of Adam Neumann and WeWork* (2020). Little, Brown and Company, New York.
     [Investigative journalism] Журналистская реконструкция истории WeWork. Используется в главе как второй пример защитного модуса командной мифологии.
 
-## Глава 8: Машина времени показывает три будущего
+## Глава 8: Машина времени и горизонты труда
 
-1. Wells, H.G. "The Time Machine" (1895). Literary DNA framework для temporal analysis. [Primary source]
+1. **Wells, H.G.** *The Time Machine.* London: William Heinemann, 1895. [Primary literary source]
+    Первоисточник главы. Викторианская новелла, в которой Уэллс — фабианский социалист, друг семьи Уэббов — доводит логику классового расслоения труда до биологического предела (Элои и Морлоки). Использована как литературная модель расслоения рабочей силы под давлением технологического цикла.
 
-2. McKinsey Global Institute. "Generative AI and the Future of Work in America" (July 2023). 29.5% automation potential by 2030 — baseline projection. [High confidence research]  
-   URL: https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america
+2. **Платонов, А.П.** *Котлован.* Написана декабрь 1929 — апрель 1930. Первая публикация — эмигрантские журналы *Грани* (Франкфурт-на-Майне), №70, 1969, и *Студент* (Лондон), №13-14, 1969. В СССР: *Новый мир*, №6, 1987. Академическое издание: СПб.: Наука, 2000, серия «Литературные памятники». [Primary literary source]
+    Русский голос главы. Повесть о труде, оторванном от собственного результата: рабочие копают котлован для дома, который никогда не будет построен. Используется как третья линза к экономическому описанию поляризации — диагностика того, что чувствует труд изнутри, когда смысл его уже потерян.
 
-3. World Economic Forum. "Artificial intelligence and the future of work" (2024). AI transformation patterns в workplace evolution. [High confidence research]  
-   URL: https://www.weforum.org/publications/artificial-intelligence-and-the-future-of-work/
+3. **Autor, D.H., Levy, F., Murnane, R.J.** «The Skill Content of Recent Technological Change: An Empirical Exploration.» *Quarterly Journal of Economics* 118(4), November 2003, pp. 1279-1333. Препринт: NBER Working Paper No. 8337, 2001. [Academic source, high confidence]
+    Основа второго закона главы. Авторы вводят различение «рутинных» и «нерутинных» задач и показывают, что компьютеризация заменяет первые, а вторые — дополняет. Из этого следует поляризация рынка труда (выдавливание среднего слоя), а не «массовая безработица».
 
-4. Vinge, Vernor. "The Coming Technological Singularity" (1993). Технологические горизонты prediction methodology. [High confidence academic]
+4. **Autor, D.H.** «Why Are There Still So Many Jobs? The History and Future of Workplace Automation.» *Journal of Economic Perspectives* 29(3), Summer 2015, pp. 3-30. [Academic source, high confidence]
+    Продолжение тезиса 2003 года через двенадцать лет. Аутор отвечает технопессимистам: автоматизация одной задачи увеличивает ценность связанных с ней нерутинных задач. Использовано в главе как иллюстрация того, что автоматизация — это не замещение, а перераспределение.
 
-5. Gibson, William. "The future is already here (oral aphorism)" (1992). First documented in print: Scott Rosenberg, San Francisco Examiner, April 19, 1992. Earliest oral citation: NPR «Talk of the Nation», November 30, 1999. NOT from Neuromancer. [High confidence aphorism]  
-   URL: https://quoteinvestigator.com/2012/01/24/future-has-arrived/
+5. **Acemoglu, D., Johnson, S.** *Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity.* New York: PublicAffairs, 2023. ISBN 978-1-5417-0255-4. [Academic source, high confidence]
+    Основа третьего закона. Тысячу лет европейской экономической истории авторы читают как чередование режимов «извлечения» и «распределения»: технология сама по себе не даёт общего процветания, давая или нет зависит от того, кто контролирует её развитие. Авторы — лауреаты Нобелевской премии по экономике 2024 года (совместно с Дж. Робинсоном).
+
+6. **Polanyi, K.** *The Great Transformation: The Political and Economic Origins of Our Time.* New York: Farrar & Rinehart, 1944. xiv+305 pp. Предисловие — R.M. MacIver. [Academic source, high confidence]
+    Основа четвёртого закона. Концепция «двойного движения»: каждая рыночная экспансия в защищённую от рынка сферу человеческой жизни (труд, землю, деньги) вызывает контр-движение общества (регулирование, профсоюзы, социальное государство). Без контр-движения рыночное расслоение доходит до точки социальной катастрофы.
+
+### Сопутствующие источники
+
+7. **Smith, David C.** *H.G. Wells: Desperately Mortal.* New Haven: Yale University Press, 1986. [Биография]
+    Источник биографических подробностей об Уэллсе 1894 года: жизнь на Майбери-роуд, работа над «Хроническими аргонавтами», переработка их в «Машину времени», продажа рукописи У. Хайнеману.
+
+8. **McKenzie, N., McKenzie, J.** *The Time Traveller: The Life of H.G. Wells.* London: Weidenfeld & Nicolson, 1973. [Биография]
+    Источник о фабианских связях Уэллса, его сотрудничестве с Сидни и Беатрис Уэбб и работе в *New Review* при У.Э. Хенли.
+
+9. **Wells H.G.** *The Discovery of the Future.* Лекция в Royal Institution, 24 января 1902 г.; опубликована: *Nature*, 6 February 1902. [Первоисточник, авторский метод]
+    Уэллс сам называет свои романы «социологическими экспериментами»: моделями того, как существующие тенденции выглядят, доведённые до логического предела. Опровергает позднейшую критическую традицию читать «Машину времени» только как роман о биологической деградации.
+
+10. **Cortada, James W.** *The Digital Hand,* vol. 2: *How Computers Changed the Work of American Financial, Telecommunications, Media, and Entertainment Industries.* Oxford: Oxford University Press, 2006. [Историческое исследование]
+    Документированная история реорганизации корпоративных секретарских пулов под давлением электронной почты в 1995-2005 годах. Использовано как анкер для первого закона главы (усиление превращается в реорганизацию).
+
+11. **Goos, M., Manning, A.** «Lousy and Lovely Jobs: The Rising Polarization of Work in Britain.» *Review of Economics and Statistics* 89(1), 2007, pp. 118-133. **Goos, M., Manning, A., Salomons, A.** «Explaining Job Polarization: Routine-Biased Technological Change and Offshoring.» *American Economic Review* 104(8), 2014, pp. 2509-2526. [Эмпирическое подтверждение]
+    Эмпирические подтверждения тезиса Аутора о поляризации труда — на материале Великобритании (Goos, Manning 2007) и шестнадцати стран ЕС (Goos, Manning, Salomons 2014).
+
+12. **Dale, Gareth.** *Karl Polanyi: A Life on the Left.* New York: Columbia University Press, 2016. [Биография]
+    Основной англоязычный биограф Поланьи. Источник о Бенингтонском периоде, когда писалась «Великая трансформация», и об интеллектуальном контексте книги.
 
 ## Глава 9: Архитектура выбора: Vinge учит принимать решения в точке сингулярности
 

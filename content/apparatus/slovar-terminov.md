@@ -199,12 +199,13 @@ purpose: "anglicism-cleanup"
     - `chapter-6-mina-harker` — ожидает измерения после AGIL-190 Batch 1
     - `chapter-6-jekyll-hyde` — ожидает измерения после AGIL-190 Batch 2
     - `chapter-7-don-quixote` — ожидает измерения после AGIL-190 Batch 3
+    - `chapter-8-time-machine` — ожидает измерения после AGIL-190 Batch 4
     - `chapter-9-three-scenarios` — **~132 гибридные строки** (измерение 2026-05-19, до Batch 5)
     - `chapter-10-choice-engine` — умеренный хвост (до Batch 6)
-- **Приоритет очистки:** главы 8, 9, 10 — оставшиеся в скоупе кампании
-  AGIL-190 Theme Correction Phase 2 после Batch 1 (Mina), Batch 2 (Jekyll)
-  и Batch 3 (Don Quixote). Глава 9 имеет наибольшую плотность гибридных
-  оборотов из необработанного хвоста.
+- **Приоритет очистки:** главы 9, 10 — оставшиеся в скоупе кампании
+  AGIL-190 Theme Correction Phase 2 после Batch 1 (Mina), Batch 2 (Jekyll),
+  Batch 3 (Don Quixote) и Batch 4 (Time Machine). Глава 9 имеет наибольшую
+  плотность гибридных оборотов из необработанного хвоста.
 
 ### Что трогать, а что нет
 

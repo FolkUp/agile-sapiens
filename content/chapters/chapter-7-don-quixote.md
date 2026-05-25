@@ -18,6 +18,7 @@ sources:
   - "Ильф, Илья и Евгений Петров. «Двенадцать стульев» (1928). Журнал «30 дней», Москва."
 confidence: "high"
 reading_time: "18 min"
+reviewed_by: "Editorial Team"
 review_date: "2026-05-25"
 tags:
   - "don-quixote"

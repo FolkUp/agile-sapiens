@@ -37,7 +37,7 @@ og_description: "11 глав + 3 интермедии. Литературный 
 {{< card link="/chapters/chapter-5-nemo" title="Глава 5: Капитан Немо" icon="star" subtitle="Bootstrap leadership: малая автономная команда против корпоративной бюрократии" >}}
 {{< card link="/chapters/chapter-6-mina-harker" title="Глава 6, часть 1: Мина Харкер" icon="document-text" subtitle="Команда Света Стокера: распределённая команда викторианской эпохи и единый источник правды" >}}
 {{< card link="/chapters/chapter-6-jekyll-hyde" title="Глава 6, часть 2: Доктор Джекил" icon="beaker" subtitle="Корпоративный дуализм: фасад декларируемых ценностей и подвал реальной культуры — от Стивенсона до Аргириса" >}}
-{{< card link="/chapters/chapter-7-don-quixote" title="Глава 7: Дон Кихот" icon="star" subtitle="Архетип и алгоритм — что происходит, когда ИИ видит гигантов вместо ветряных мельниц" >}}
+{{< card link="/chapters/chapter-7-don-quixote" title="Глава 7: Дон Кихот и Санчо" icon="star" subtitle="Рождение командного мифа: четыре закона мифологии команды от Сервантеса до Карла Вейка — и две смерти, когда миф рушится" >}}
 {{< /cards >}}
 
 ## Интермедия II

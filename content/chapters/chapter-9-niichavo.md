@@ -34,7 +34,7 @@ aliases:
   - /chapters/chapter-9-three-scenarios/
 related:
   - chapter-8-time-machine
-  - chapter-10-choice-engine
+  - chapter-10-chuma
   - chapter-0-pilot
   - _act-iii-architecture
 keywords: ["Стругацкие", "Понедельник начинается в субботу", "НИИЧАВО", "самоорганизация команды", "R&D-команда", "Хунта", "Камноедов", "Привалов", "осмысленный труд"]

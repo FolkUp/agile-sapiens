@@ -71,8 +71,8 @@ function measureMonotone(text) {
 }
 
 // Read the chapter file
-const chapterPath = path.join(__dirname, '..', 'content', 'chapters', 'chapter-10-choice-engine.md');
+const chapterPath = path.join(__dirname, '..', 'content', 'chapters', 'chapter-10-chuma.md');
 const content = fs.readFileSync(chapterPath, 'utf-8');
 
-console.log('=== Chapter 10 Choice Engine Monotone Analysis ===');
+console.log('=== Chapter 10 Chuma (Camus) Monotone Analysis ===');
 const monotonePercentage = measureMonotone(content);

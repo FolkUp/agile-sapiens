@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Chapter 10 Choice Engine Sentence Distribution Analysis
+ * Chapter 10 Chuma (Camus) Sentence Distribution Analysis
  *
  * Measures sentence distribution to verify optimization progress
  * Target: Short 53.8%→30-35%, Medium 23.8%→40-45%
@@ -67,7 +67,7 @@ function analyzeSentenceDistribution(content) {
 }
 
 // Main execution
-const chapterPath = path.join(process.cwd(), 'content', 'chapters', 'chapter-10-choice-engine.md');
+const chapterPath = path.join(process.cwd(), 'content', 'chapters', 'chapter-10-chuma.md');
 
 if (!fs.existsSync(chapterPath)) {
   console.error('Chapter 10 file not found:', chapterPath);
@@ -77,7 +77,7 @@ if (!fs.existsSync(chapterPath)) {
 const content = fs.readFileSync(chapterPath, 'utf8');
 const analysis = analyzeSentenceDistribution(content);
 
-console.log('=== Chapter 10 Choice Engine - Sentence Distribution Analysis ===');
+console.log('=== Chapter 10 Chuma (Camus) - Sentence Distribution Analysis ===');
 console.log(`Total sentences: ${analysis.totalSentences}`);
 console.log(`Total words: ${analysis.totalWords}`);
 console.log(`Average words per sentence: ${analysis.avgWordsPerSentence}`);

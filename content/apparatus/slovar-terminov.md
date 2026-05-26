@@ -202,10 +202,11 @@ purpose: "anglicism-cleanup"
     - `chapter-8-time-machine` — ожидает измерения после AGIL-190 Batch 4
     - `chapter-9-niichavo` — ожидает измерения после AGIL-190 Batch 5
     - `chapter-10-chuma` — ожидает измерения после AGIL-190 Batch 6
-- **Приоритет очистки:** послесловие (`afterword.md`) — единственный оставшийся
-  AI-overlay-saturated файл в книге; запланирован к переписыванию в AGIL-190
-  Batch 7 после Batch 1 (Mina), Batch 2 (Jekyll), Batch 3 (Don Quixote),
-  Batch 4 (Time Machine), Batch 5 (НИИЧАВО) и Batch 6 (Чума).
+- **Приоритет очистки:** послесловие (`afterword.md`) — переписано в AGIL-190
+  Batch 7 как «Послесловие. Одиннадцать линз»: drop Gibson/Vinge/AI-overlay,
+  rebuild как практический набор диагностических линз (одиннадцать вопросов
+  из одиннадцати глав). 0 ИИ-упоминаний, ~135 строк, без новых первичных
+  источников (afterword отсылает к собственным главам).
 
 ### Что трогать, а что нет
 

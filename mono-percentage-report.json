@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-21T07:36:29.511Z",
+  "timestamp": "2026-05-26T09:16:30.288Z",
   "target": "≤25%",
   "compliantChapters": 12,
   "totalChapters": 12,
@@ -7,11 +7,11 @@
   "results": [
     {
       "file": "chapter-0-pilot.md",
-      "totalSentences": 454,
-      "monotoneSentences": 41,
+      "totalSentences": 443,
+      "monotoneSentences": 40,
       "monoPercentage": 9,
       "repeatedPatterns": [
-        "\"вокруг света з...\" x5",
+        "\"вокруг света з...\" x4",
         "\"каждый из этих...\" x3",
         "\"линия перемены...\" x3",
         "\"двадцать тысяч...\" x2",
@@ -32,16 +32,16 @@
       ]
     },
     {
-      "file": "chapter-10-choice-engine.md",
-      "totalSentences": 324,
-      "monotoneSentences": 31,
-      "monoPercentage": 9.6,
+      "file": "chapter-10-chuma.md",
+      "totalSentences": 349,
+      "monotoneSentences": 28,
+      "monoPercentage": 8,
       "repeatedPatterns": [
-        "\"collective int...\" x6",
-        "\"cyberpunk team...\" x3",
-        "\"network effect...\" x3",
-        "\"перевод с корп...\" x3",
-        "\"не три параллел...\" x2"
+        "\"camus la peste...\" x4",
+        "\"это вопрос поря...\" x2",
+        "\"возможно это по...\" x2",
+        "\"не потому что п...\" x2",
+        "\"стругацкие пока...\" x2"
       ]
     },
     {
@@ -59,35 +59,33 @@
     },
     {
       "file": "chapter-3-holmes.md",
-      "totalSentences": 256,
-      "monotoneSentences": 30,
-      "monoPercentage": 11.7,
+      "totalSentences": 246,
+      "monotoneSentences": 24,
+      "monoPercentage": 9.8,
       "repeatedPatterns": [
-        "\"doyle arthur c...\" x4",
-        "\"the strand mag...\" x3",
         "\"в корпоративной...\" x3",
-        "\"a scandal in b...\" x2",
-        "\"the sign of th...\" x2"
+        "\"doyle arthur c...\" x3",
+        "\"knight capital...\" x2",
+        "\"target canada...\" x2",
+        "\"17 600 сотрудни...\" x2"
       ]
     },
     {
       "file": "chapter-4-borges.md",
-      "totalSentences": 241,
-      "monotoneSentences": 17,
-      "monoPercentage": 7.1,
+      "totalSentences": 231,
+      "monotoneSentences": 6,
+      "monoPercentage": 2.6,
       "repeatedPatterns": [
-        "\"в сборнике ficc...\" x3",
-        "\"la loter a en...\" x2",
-        "\"editorial sur b...\" x2",
-        "\"goodhart charl...\" x2",
-        "\"problems of mo...\" x2"
+        "\"спрашивает нов...\" x2",
+        "\"в сборнике ficc...\" x2",
+        "\"scaling agile...\" x2"
       ]
     },
     {
       "file": "chapter-5-nemo.md",
-      "totalSentences": 470,
+      "totalSentences": 468,
       "monotoneSentences": 64,
-      "monoPercentage": 13.6,
+      "monoPercentage": 13.7,
       "repeatedPatterns": [
         "\"little brown an...\" x4",
         "\"hastings reed...\" x4",
@@ -97,68 +95,67 @@
       ]
     },
     {
-      "file": "chapter-6-holmes-watson.md",
-      "totalSentences": 211,
-      "monotoneSentences": 14,
-      "monoPercentage": 6.6,
+      "file": "chapter-6-jekyll-hyde.md",
+      "totalSentences": 349,
+      "monotoneSentences": 34,
+      "monoPercentage": 9.7,
       "repeatedPatterns": [
-        "\"doyle arthur c...\" x4",
-        "\"шесть жемчужин...\" x2",
-        "\"the strand maga...\" x2",
-        "\"каждый провал и...\" x2",
-        "\"заставляет пер...\" x2"
+        "\"стивенсон да т...\" x3",
+        "\"лэньон умирает...\" x3",
+        "\"jossey bass san...\" x3",
+        "\"это как правило...\" x3",
+        "\"доктор джекил э...\" x2"
       ]
     },
     {
-      "file": "chapter-6-jekyll-hyde.md",
-      "totalSentences": 397,
-      "monotoneSentences": 18,
-      "monoPercentage": 4.5,
+      "file": "chapter-6-mina-harker.md",
+      "totalSentences": 237,
+      "monotoneSentences": 17,
+      "monoPercentage": 7.2,
       "repeatedPatterns": [
-        "\"algorithm avers...\" x5",
-        "\"в организациях...\" x3",
-        "\"стивенсон описа...\" x2",
-        "\"world economic...\" x2",
-        "\"не обязательно...\" x2"
+        "\"современный ана...\" x3",
+        "\"каждый фрагмент...\" x2",
+        "\"прислуга снимае...\" x2",
+        "\"our vampires o...\" x2",
+        "\"university of c...\" x2"
       ]
     },
     {
       "file": "chapter-7-don-quixote.md",
-      "totalSentences": 518,
-      "monotoneSentences": 51,
-      "monoPercentage": 9.8,
+      "totalSentences": 318,
+      "monotoneSentences": 25,
+      "monoPercentage": 7.9,
       "repeatedPatterns": [
-        "\"don quixote de...\" x4",
-        "\"world economic...\" x3",
-        "\"the future of...\" x3",
-        "\"команда которая...\" x3",
-        "\"часть первая гл...\" x2"
+        "\"учредительный м...\" x4",
+        "\"команда которая...\" x4",
+        "\"cervantes don...\" x3",
+        "\"команда из двух...\" x2",
+        "\"сервантес показ...\" x2"
       ]
     },
     {
       "file": "chapter-8-time-machine.md",
-      "totalSentences": 286,
-      "monotoneSentences": 12,
-      "monoPercentage": 4.2,
+      "totalSentences": 225,
+      "monotoneSentences": 17,
+      "monoPercentage": 7.6,
       "repeatedPatterns": [
-        "\"теперь команда...\" x3",
-        "\"современные ком...\" x3",
-        "\"world economic...\" x2",
-        "\"ключевой принци...\" x2",
-        "\"финансовые конс...\" x2"
+        "\"элои и морлоки...\" x3",
+        "\"the time trave...\" x2",
+        "\"класс который ж...\" x2",
+        "\"путешественник...\" x2",
+        "\"машина времени...\" x2"
       ]
     },
     {
-      "file": "chapter-9-three-scenarios.md",
-      "totalSentences": 268,
-      "monotoneSentences": 42,
-      "monoPercentage": 15.7,
+      "file": "chapter-9-niichavo.md",
+      "totalSentences": 202,
+      "monotoneSentences": 9,
+      "monoPercentage": 4.5,
       "repeatedPatterns": [
-        "\"структурирован...\" x4",
-        "\"collective inte...\" x3",
-        "\"командная адап...\" x3",
-        "\"вопрос группов...\" x3",
-        "\"корпоративная...\" x3"
+        "\"стругацкие пока...\" x3",
+        "\"понедельник на...\" x2",
+        "\"отдел техничес...\" x2",
+        "\"boston addison...\" x2"
       ]
     }
   ]

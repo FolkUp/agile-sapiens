@@ -50,31 +50,26 @@ link = "/"
 primary = "#2563eb"
 secondary = "#64748b"
 
-# Main navigation - will be inherited by languages
+# Main navigation - RU-only site (defaultContentLanguage = "ru")
 [[menu.main]]
-name = "Home"
+name = "Главная"
 pageRef = "/"
 weight = 10
 
 [[menu.main]]
-name = "Chapters"
+name = "Главы"
 pageRef = "/chapters"
 weight = 20
 
 [[menu.main]]
-name = "Archive"
-pageRef = "/archive"
+name = "О книге"
+pageRef = "/about"
 weight = 30
 
 [[menu.main]]
-name = "About"
-pageRef = "/about"
-weight = 40
-
-[[menu.main]]
-name = "Legal"
+name = "Правовая информация"
 pageRef = "/legal"
-weight = 50
+weight = 40
 
 # GDPR compliance settings
 [params.gdpr]

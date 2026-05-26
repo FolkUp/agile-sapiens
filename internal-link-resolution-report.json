@@ -1,0 +1,59 @@
+{
+  "date": "2026-05-26T21:27:55.124Z",
+  "canonicals": [
+    "/",
+    "/about/",
+    "/afterword/",
+    "/apparatus/",
+    "/apparatus/acknowledgments/",
+    "/apparatus/chapter-7-research-clearance/",
+    "/apparatus/colophon/",
+    "/apparatus/methodology/",
+    "/apparatus/predmetnyy-ukazatel/",
+    "/apparatus/slovar-terminov/",
+    "/apparatus/sources/",
+    "/apparatus/transparency/",
+    "/chapters/",
+    "/chapters/.backup/chapter-2-frankenstein-original/",
+    "/chapters/.claude/PHASE_A_STEP1_FILE_INVENTORY/",
+    "/chapters/.claude/SESSION_CONTEXT/",
+    "/chapters/chapter-0-pilot/",
+    "/chapters/chapter-1-jules-verne/",
+    "/chapters/chapter-10-chuma/",
+    "/chapters/chapter-2-frankenstein/",
+    "/chapters/chapter-3-holmes/",
+    "/chapters/chapter-4-borges/",
+    "/chapters/chapter-5-nemo/",
+    "/chapters/chapter-6-jekyll-hyde/",
+    "/chapters/chapter-6-mina-harker/",
+    "/chapters/chapter-7-don-quixote/",
+    "/chapters/chapter-8-time-machine/",
+    "/chapters/chapter-9-niichavo/",
+    "/chapters/intermezzo-1/",
+    "/chapters/intermezzo-2/",
+    "/chapters/intermezzo-3/",
+    "/legal/",
+    "/legal/ai-transparency/",
+    "/legal/cookies/",
+    "/legal/editorial-workflow/",
+    "/legal/privacy/",
+    "/legal/terms/",
+    "/legal/ugc-moderation/",
+    "/preface/"
+  ],
+  "aliases": [
+    {
+      "alias": "/chapters/chapter-10-choice-engine/",
+      "target": "/chapters/chapter-10-chuma/"
+    },
+    {
+      "alias": "/chapters/chapter-6-holmes-watson/",
+      "target": "/chapters/chapter-6-mina-harker/"
+    },
+    {
+      "alias": "/chapters/chapter-9-three-scenarios/",
+      "target": "/chapters/chapter-9-niichavo/"
+    }
+  ],
+  "findings": []
+}

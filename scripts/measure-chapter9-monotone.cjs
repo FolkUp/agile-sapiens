@@ -109,7 +109,7 @@ const baselineData = {
     duplicate_patterns: result.metrics.duplicatePatterns,
     citation_markers: result.metrics.citationMarkers,
     measurement_type: "baseline",
-    notes: "Vinge scenario framework baseline - strategic content with bilingual parenthetical pollution identified"
+    notes: "Strugatsky НИИЧАВО self-organizing R&D team baseline (post AGIL-190 Batch 5, chapter-9-niichavo.md)"
 };
 
 const baselinePath = path.join(__dirname, '..', 'chapter-9-baseline.json');

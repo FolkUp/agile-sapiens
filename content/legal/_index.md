@@ -1,33 +1,33 @@
 ---
-title: "Legal Information"
-description: "Legal policies and terms for AGILE SAPIENS monograph"
+title: "Правовая информация"
+description: "Юридические условия и политики монографии AGILE SAPIENS"
 date: 2026-05-15
 weight: 10
 toc: true
 ---
 
-# Legal Information
+# Правовая информация
 
-This section contains important legal information, terms, and policies for the AGILE SAPIENS monograph and website.
+Этот раздел содержит юридическую информацию, условия и политики, относящиеся к монографии AGILE SAPIENS и её сайту.
 
-## Policy Documents
+## Документы
 
-### Terms and Privacy
-- **[Terms of Use](/legal/terms/)** — Terms and conditions for using this website
-- **[Privacy Policy](/legal/privacy/)** — How we collect and protect your personal information
-- **[Cookie Policy](/legal/cookies/)** — Information about cookies and tracking technologies
+### Условия и конфиденциальность
+- **[Условия использования](/legal/terms/)** — правила использования сайта
+- **[Политика конфиденциальности](/legal/privacy/)** — как мы собираем и защищаем персональные данные
+- **[Политика cookies](/legal/cookies/)** — информация о cookies и технологиях отслеживания
 
-### Editorial and Content
-- **[Editorial Workflow](/legal/editorial-workflow/)** — Our editorial standards and review process
-- **[AI Transparency](/legal/ai-transparency/)** — Information about AI usage in content creation
-- **[UGC Moderation](/legal/ugc-moderation/)** — User-generated content moderation policies
+### Редакционные процессы и контент
+- **[Редакционный процесс](/legal/editorial-workflow/)** — наши редакционные стандарты и процесс рецензирования
+- **[Прозрачность использования автоматизированных инструментов](/legal/ai-transparency/)** — раскрытие применения автоматизации в подготовке контента
+- **[Модерация пользовательского контента](/legal/ugc-moderation/)** — политики модерации UGC
 
-## Contact Information
+## Контакты
 
-**Legal Inquiries:** legal@folkup.app  
-**General Questions:** info@folkup.app
+**Юридические вопросы:** legal@folkup.app  
+**Общие вопросы:** info@folkup.app
 
 ---
 
-**Last Updated:** May 15, 2026  
-**FolkUp Ecosystem** — Content licensed under CC BY 4.0
+**Последнее обновление:** 15 мая 2026 г.  
+**FolkUp Ecosystem** — контент под лицензией CC BY 4.0

@@ -10,21 +10,21 @@ weight: 10
 
 **Название:** AGILE SAPIENS — Литературный бизнес-анализ. Как литература предсказала современный менеджмент  
 **Автор:** Андрей Клеменчёнок · Команданте FolkUp  
-**Язык издания:** Русский, английский  
-**Первая публикация:** 2026  
-**Текущая версия:** Development Edition  
+**Псевдоним:** «Команданте FolkUp» — литературный псевдоним; юридическое имя автора — Андрей Клеменчёнок.  
+**Язык издания:** Русский  
+**Текущая версия:** 1.0.7  
 
 ## Техническая информация
 
 **Платформа:** Hugo Static Site Generator + Hextra Theme  
 **Хостинг:** Cloudflare Pages  
-**Домен:** [agile-sapiens.folkup.life](https://agile-sapiens.folkup.life)  
+**Домен:** [sapiens.folkup.life](https://sapiens.folkup.life)  
 **Лицензия контента:** CC BY 4.0  
-**Исходный код:** [GitHub](https://github.com/anklemqq/agile-sapiens)
+**Исходный код:** [GitHub](https://github.com/FolkUp/agile-sapiens)
 
 ## Издательство
 
-**FolkUp Publishing**  
+**FolkUp Ecosystem**  
 Цифровое издательство специализированного контента  
 Website: [folkup.app](https://folkup.app)  
 Email: editor@folkup.app
@@ -40,8 +40,8 @@ Email: editor@folkup.app
 ## Даты издания
 
 **Начало работы:** Март 2026  
-**Первая публикация:** [Ожидается]  
-**Последнее обновление:** 2026-04-27
+**Первая публикация:** 2026-05-26  
+**Последнее обновление:** 2026-05-27
 
 ---
 

@@ -31,7 +31,7 @@
     "workplace-transformation",
     "folkup"
   ],
-  "author": "FolkUp",
+  "author": "Андрей Клеменчёнок",
   "license": "MIT",
   "dependencies": {
     "glob": "^10.3.0",

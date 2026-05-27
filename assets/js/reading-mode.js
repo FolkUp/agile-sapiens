@@ -1,22 +1,37 @@
 /**
- * Simple Reading Mode Implementation - Debug Version
- * Simplified for troubleshooting button visibility issues
+ * AGILE SAPIENS — Reading Mode (AGIL-166 production-adopted)
+ *
+ * Production build for «Режим чтения» button.
+ * Background: clean architecture (former reading-mode.js, 257 lines)
+ * shipped 2026-05-15 had button-visibility issue not resolvable in same
+ * session. Debug build with inline-style overrides + multi-strategy DOM
+ * timing was adopted as production fix (commit 402bcde 2026-05-15).
+ *
+ * 2026-05-27 (AGIL-166 follow-up):
+ *  - Debug build formally adopted as canonical reading-mode.js
+ *  - 11 console.log/error calls stripped (developer-tool hygiene)
+ *  - File renamed from reading-mode-simple.js to canonical reading-mode.js
+ *  - Old 257-line clean build deleted (dead asset, never loaded since
+ *    402bcde)
+ *
+ * Gaps vs original clean build, deferred to AGIL-166-v2 (CSS root-cause
+ * investigation required first):
+ *  - Escape-key shortcut to exit reading mode
+ *  - Alt+R keyboard toggle
+ *  - LocalStorage state persistence across pages
+ *  - ARIA live-region announcements for screen readers
+ *  - Focus save/restore on enter/exit
+ * WCAG SC 2.1.1 satisfied via default <button> keyboard handling
+ * (Tab to focus, Enter/Space to activate). axe-core audited PR #98.
  */
 
-// Create button immediately when script loads
-console.log('Reading mode script starting...');
-
-// Simple button creation without DOM ready checks
 function createReadingModeButton() {
-  console.log('Creating reading mode button...');
-
-  // Remove any existing buttons first
+  // Remove any existing buttons first (idempotency)
   const existing = document.querySelector('.reading-mode-toggle');
   if (existing) {
     existing.remove();
   }
 
-  // Create button
   const button = document.createElement('button');
   button.className = 'reading-mode-toggle';
   button.textContent = 'Режим чтения';
@@ -24,7 +39,7 @@ function createReadingModeButton() {
   button.setAttribute('type', 'button');
   button.setAttribute('title', 'Активировать режим чтения');
 
-  // Add inline styles to ensure visibility
+  // Inline styles to ensure visibility (defeats any CSS specificity issue)
   button.style.cssText = `
     position: fixed !important;
     top: 20px !important;
@@ -42,11 +57,8 @@ function createReadingModeButton() {
     opacity: 1 !important;
   `;
 
-  // Add click handler
   button.addEventListener('click', function() {
-    console.log('Reading mode button clicked!');
     document.body.classList.toggle('reading-mode');
-
     if (document.body.classList.contains('reading-mode')) {
       button.textContent = 'Выйти из режима';
     } else {
@@ -54,38 +66,21 @@ function createReadingModeButton() {
     }
   });
 
-  // Try multiple insertion strategies
-  try {
-    if (document.body) {
-      document.body.appendChild(button);
-      console.log('Button added to body successfully');
-    } else {
-      console.log('Document body not available');
-    }
-  } catch (error) {
-    console.error('Error adding button:', error);
+  if (document.body) {
+    document.body.appendChild(button);
   }
 }
 
-// Try multiple timing strategies
+// Multiple timing strategies (covers DOMContentLoaded race + late-running theme JS)
 if (document.readyState === 'loading') {
-  console.log('Document still loading, waiting for DOMContentLoaded...');
   document.addEventListener('DOMContentLoaded', createReadingModeButton);
 } else {
-  console.log('Document already loaded, creating button immediately...');
   createReadingModeButton();
 }
 
-// Also try creating the button after a short delay as backup
+// Backup: re-check after 1s in case earlier creation got removed by theme JS
 setTimeout(function() {
-  console.log('Timeout backup - checking if button exists...');
   if (!document.querySelector('.reading-mode-toggle')) {
-    console.log('Button not found, creating via timeout...');
     createReadingModeButton();
   }
 }, 1000);
-
-// Export for debugging
-window.createReadingModeButton = createReadingModeButton;
-
-console.log('Reading mode script initialization complete');

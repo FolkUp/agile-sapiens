@@ -15,7 +15,7 @@
   "genre": {{ .Site.Params.book.genre }},
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "author": {
-    "@type": "Organization",
+    "@type": "Person",
     "name": {{ .Site.Params.author.name }}
   },
   "publisher": {
@@ -53,9 +53,8 @@
   "datePublished": {{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }},
   "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
   "author": {
-    "@type": "Organization",
-    "name": "FolkUp Ecosystem",
-    "url": "https://sapiens.folkup.life"
+    "@type": "Person",
+    "name": {{ .Site.Params.author.name }}
   },
   "publisher": {
     "@type": "Organization",

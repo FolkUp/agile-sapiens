@@ -19,7 +19,7 @@ twitter_description: "Как литература предсказала сов�
 
 # Schema.org Book
 schema_type: "Book"
-author: ["Андрей"]
+author: ["Андрей Клеменчёнок"]
 publisher: "FolkUp Ecosystem"
 date_published: "2026-05-18"
 book_format: "EBook"

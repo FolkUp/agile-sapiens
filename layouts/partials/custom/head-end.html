@@ -54,6 +54,6 @@
 {{/* Include cookie consent in head-end */}}
 {{- partial "custom/cookie-consent.html" . }}
 
-{{/* AGIL-166: Reading Mode JavaScript Implementation - Simple Debug Version */}}
-{{ $readingModeJS := resources.Get "js/reading-mode-simple.js" | minify }}
+{{/* AGIL-166: Reading Mode JavaScript Implementation (production-adopted 2026-05-27) */}}
+{{ $readingModeJS := resources.Get "js/reading-mode.js" | minify }}
 <script src="{{ $readingModeJS.Permalink }}" defer></script>

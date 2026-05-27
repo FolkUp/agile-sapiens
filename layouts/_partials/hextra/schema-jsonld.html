@@ -10,8 +10,8 @@
   "logo": "https://sapiens.folkup.life/assets/folkup-logo.svg",
   "description": "A scientific popular monograph on the future of work in the AI age",
   "author": {
-    "@type": "Organization",
-    "name": "FolkUp Ecosystem"
+    "@type": "Person",
+    "name": {{ .Site.Params.author.name | jsonify }}
   },
   "publisher": {
     "@type": "Organization",
@@ -45,9 +45,8 @@
   "datePublished": {{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
   "dateModified": {{ .LastMod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
   "author": {
-    "@type": "Organization",
-    "name": "FolkUp Ecosystem",
-    "url": "https://sapiens.folkup.life"
+    "@type": "Person",
+    "name": {{ .Site.Params.author.name | jsonify }}
   },
   "publisher": {
     "@type": "Organization",

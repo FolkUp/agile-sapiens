@@ -28,8 +28,8 @@ ignoreFiles = [
 description = "Literary Business Analysis — How Literature Predicted Modern Management"
 images = ["/assets/og-image-default.png"]
 [params.author]
-name = "FolkUp Ecosystem"
-email = "info@folkup.app"
+name = "Андрей Клеменчёнок"
+email = "anklem@folkup.app"
 
 # FolkUp branding (legacy params — retained for backward compat)
 logo = "/assets/folkup-logo.svg"

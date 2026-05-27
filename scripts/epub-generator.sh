@@ -158,7 +158,7 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
     <h1 style="font-size: 2.5em; margin-bottom: 1em;">AGILE SAPIENS</h1>
     <p style="font-size: 1.4em; margin-bottom: 0.4em; font-style: italic;">Литературный бизнес-анализ</p>
     <p style="font-size: 1.1em; margin-bottom: 2em; color: #444;">Как литература предсказала современный менеджмент</p>
-    <p style="font-size: 1.1em; margin-bottom: 1em;"><strong>Автор:</strong> Андрей</p>
+    <p style="font-size: 1.1em; margin-bottom: 1em;"><strong>Автор:</strong> Андрей Клеменчёнок · Команданте FolkUp</p>
     <p style="font-size: 1em; color: #666;"><strong>Версия:</strong> v1.0.7</p>
     <p style="font-size: 0.9em; color: #666; margin-top: 3em;">© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0.</p>
   </div>
@@ -347,7 +347,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="bookid">urn:uuid:agile-sapiens-$(date +%s)</dc:identifier>
     <dc:title>AGILE SAPIENS</dc:title>
-    <dc:creator>Андрей</dc:creator>
+    <dc:creator>Андрей Клеменчёнок</dc:creator>
     <dc:language>ru</dc:language>
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
     <dc:rights>© 2026 FolkUp Ecosystem. Content licensed under CC BY 4.0.</dc:rights>

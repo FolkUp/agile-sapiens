@@ -121,7 +121,7 @@ This is not a "150 hybrid terms" cleanup. It is **two chapters (6-holmes-watson,
 
 `format-consistency-report.json` claims for PDF — `pdf_valid: true`, `content_present: true`, `pdf_size_realistic: true`, `actual_content_present: true` — are **all phantom**. A 52KB file was rubber-stamped as a valid book.
 
-`PDF-GENERATION-DEPENDENCY-RESOLUTION-COMPLETE-2026-05-17.md` claims success but only proves that *a* PDF can be produced — not that it contains the book.
+A prior dependency-resolution report claimed PDF success but only proved that *a* PDF can be produced — not that it contains the book.
 
 **Verdict: P0 BLOCKING.** No PDF generator in the repo ingests chapter content. The whole PDF pipeline must be rebuilt to read `content/chapters/*.md` (or the Hugo-built HTML) before any PDF can be claimed valid.
 

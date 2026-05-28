@@ -154,10 +154,10 @@ Literary Business Analysis имеет очевидные ограничения,
 
 **Примечания**
 
-1. John Forster. "The Life of Charles Dickens" (1872-1874). Chapman & Hall. Описание адаптивной публикации "Pickwick Papers" в зависимости от реакции читателей.
+¹ John Forster. "The Life of Charles Dickens" (1872-1874). Chapman & Hall. Описание адаптивной публикации "Pickwick Papers" в зависимости от реакции читателей.
 
-2. Allied Market Research. "Agile Development Services Market Size, Share, Competitive Landscape and Trend Analysis Report" (2024). Оценка глобального рынка agile-трансформаций.
+² Allied Market Research. "Agile Development Services Market Size, Share, Competitive Landscape and Trend Analysis Report" (2024). Оценка глобального рынка agile-трансформаций.
 
-3. IDC. "Worldwide Digital Transformation Spending Guide" (2024). Оценка корпоративных трат на цифровую трансформацию.
+³ IDC. "Worldwide Digital Transformation Spending Guide" (2024). Оценка корпоративных трат на цифровую трансформацию.
 
-4. McKinsey & Company. "Losing from day one: Why even successful transformations fall short" (2021). Статистика неуспешных корпоративных трансформаций.
+⁴ McKinsey & Company. "Losing from day one: Why even successful transformations fall short" (2021). Статистика неуспешных корпоративных трансформаций.

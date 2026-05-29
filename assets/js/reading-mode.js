@@ -9,8 +9,9 @@
  *  - Screen-reader announcements via polite aria-live region (300ms throttled)
  *
  * Implementation notes:
- *  - Button injected via JS into `.hextra-nav-container nav` before `.hextra-theme-toggle`.
- *    Avoids forking the theme `navbar.html` partial (no version pin to theme).
+ *  - Button injected via JS into `.hextra-nav-container nav` before `.folkup-theme-toggle`
+ *    (project's custom theme-toggle override; see `layouts/_partials/theme-toggle.html`).
+ *    A `.hextra-hamburger-menu` fallback handles unexpected navbar shapes.
  *  - WAI-ARIA APG "Button (toggle)" pattern: aria-pressed reflects state.
  *  - All DOM lookups via querySelector inside handlers (no stale closure on button ref).
  *  - setTimeout(1000) backup re-injects if theme JS has removed the button post-mount.
@@ -35,7 +36,7 @@
   var STORAGE_KEY = 'agile-sapiens-reading-mode';
   var BODY_CLASS = 'reading-mode';
   var BUTTON_SELECTOR = '.hextra-reading-mode-toggle';
-  var ANCHOR_SELECTOR = '.hextra-theme-toggle';
+  var ANCHOR_SELECTOR = '.folkup-theme-toggle';
   var NAVBAR_SELECTOR = '.hextra-nav-container nav';
   var ANNOUNCER_ID = 'reading-mode-announcer';
   var TOGGLE_THROTTLE_MS = 300;

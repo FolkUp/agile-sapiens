@@ -152,7 +152,9 @@ test('B.3 hamburger click opens sidebar drawer', async ({ page }) => {
 
   // Hextra: clicking the menu button shows the sidebar (adds class or makes sidebar visible)
   // Try clicking whatever qualifies as hamburger
-  const hamburgerBtn = page.locator('nav button:not(.folkup-theme-toggle button), header button').first();
+  // Exclude folkup-theme-toggle inner buttons and the AGIL-166-v2 reading-mode toggle —
+  // both are first-in-DOM controls that would shadow the hamburger if .first() picked them.
+  const hamburgerBtn = page.locator('nav button:not(.folkup-theme-toggle button):not(.hextra-reading-mode-toggle), header button').first();
   await hamburgerBtn.click({ timeout: 5000 });
   await page.waitForTimeout(400);
 

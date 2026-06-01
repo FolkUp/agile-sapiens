@@ -112,5 +112,5 @@ PDF v1.0.7: 3.45 MB (3,447,851 bytes; same content structure as EPUB minus chapt
 
 ---
 
-**© 2026 FolkUp Ecosystem**
+**© 2026 Андрей Клеменчёнок** · Издатель: FolkUp Ecosystem
 Scientific Popular Monograph Project

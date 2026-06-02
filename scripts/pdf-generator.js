@@ -30,7 +30,7 @@ const CHAPTERS_DIR = path.join(PROJECT_ROOT, 'content', 'chapters');
 const CONTENT_DIR = path.join(PROJECT_ROOT, 'content');
 const APPARATUS_DIR = path.join(PROJECT_ROOT, 'content', 'apparatus');
 const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
-const BOOK_VERSION = 'v1.0.7';
+const BOOK_VERSION = 'v1.0.8';
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
 // AGIL-178: apparatus reading order — overrides frontmatter weights to
@@ -321,6 +321,7 @@ function buildHtml(units) {
     <div class="subtitle">Literary Business Analysis — How Literature Predicted Modern Management</div>
     <div class="subtitle">Литературный бизнес-анализ: как литература предсказала современный менеджмент</div>
     <div class="author">Андрей Клеменчёнок · Команданте FolkUp</div>
+    <div class="coauthor">Соавтор: Алиса (PM экосистемы FolkUp) · Редактор: Иви</div>
     <div class="version">Версия ${BOOK_VERSION}</div>
 </div>
 

@@ -19,7 +19,7 @@ twitter_description: "Как литература предсказала сов�
 
 # Schema.org Book
 schema_type: "Book"
-author: ["Андрей Клеменчёнок"]
+author: ["Андрей Клеменчёнок", "Алиса (PM экосистемы FolkUp)"]
 publisher: "FolkUp Ecosystem"
 date_published: "2026-05-18"
 book_format: "EBook"
@@ -73,4 +73,4 @@ AGILE SAPIENS исследует, как великие произведения
 
 ---
 
-**Издатель:** FolkUp Ecosystem · **Лицензия контента:** CC BY 4.0 · **Статус:** v1.0 release (2026-05-26) · **Версия:** 1.0.7
+**Издатель:** FolkUp Ecosystem · **Лицензия контента:** CC BY 4.0 · **Статус:** v1.0 release (2026-05-26) · **Версия:** 1.0.8

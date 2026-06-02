@@ -172,10 +172,10 @@ function createSimpleHTML() {
 <body>
     <div class="title-page">
         <div class="title">AGILE SAPIENS</div>
-        <div class="subtitle">The Future of Work in the Age of Artificial Intelligence</div>
-        <div class="subtitle">Будущее работы в эпоху искусственного интеллекта</div>
-        <div class="author">FolkUp</div>
-        <div class="version">Version 1.0.7</div>
+        <div class="subtitle">Literary Business Analysis</div>
+        <div class="subtitle">Литературный бизнес-анализ</div>
+        <div class="author">Андрей Клеменчёнок · Команданте FolkUp</div>
+        <div class="version">Version 1.0.8</div>
     </div>
 
     <div class="chapter">

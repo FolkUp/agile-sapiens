@@ -1,0 +1,113 @@
+# CF Pages backup deploy — independent workflow (per Враг C2: separate file,
+# не edit build-deploy.yml). Independent green/red signals в GitHub UI.
+#
+# Trade-off acknowledged: rebuilds Hugo от scratch on every push (no artifact share
+# с build-deploy.yml). +2-3 min per CI run, но critical для failure isolation —
+# when VPS down, build-deploy.yml deploy-vps job fails → весь workflow RED;
+# отдельный deploy-cf-backup.yml independent.
+#
+# Quality gates skipped в backup workflow (QG1-7 в build-deploy.yml — they
+# block VPS deploy; CF Pages backup intentionally less gated to ensure
+# always-available emergency replica). Critical content validation остаётся
+# responsibility of main build-deploy.yml workflow.
+#
+# Pilot scope: CF-BACKUP plan zany-snuggling-garden.md Phase 1
+# Owner: Кочегар (DevOps) | Security review: Купер | Plan author: Алиса
+
+name: Deploy to CF Pages (backup)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: cf-backup-${{ github.repository }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  ACTIONS_STEP_DEBUG: "false"
+  HUGO_VERSION: "0.155.2"   # Match build-deploy.yml line 29 (single source of truth)
+
+jobs:
+  build-and-deploy-cf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          submodules: recursive
+
+      - name: Setup Node.js (npm scripts for validation tooling)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Setup Hugo (extended ${{ env.HUGO_VERSION }})
+        run: |
+          wget -O "${RUNNER_TEMP}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+          hugo version
+
+      - name: Quality Gate 1 — Hugo Build (kept; identical к build-deploy.yml QG1)
+        run: |
+          echo "=== CF Backup Quality Gate 1: Hugo Build ==="
+          hugo --gc --minify --quiet
+          echo "✅ Hugo build PASSED"
+
+      - name: Build Production Site (HUGO_ENVIRONMENT=production)
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo --gc --minify
+
+      - name: Generate _redirects + _headers for CF Pages
+        run: |
+          cat > public/_headers <<'EOF'
+          /*
+            Strict-Transport-Security: max-age=31536000; includeSubDomains
+            X-Content-Type-Options: nosniff
+            Referrer-Policy: strict-origin-when-cross-origin
+
+          /assets/*
+            Cache-Control: public, max-age=31536000, immutable
+          EOF
+
+          # Basic Auth note: sapiens.folkup.life uses Basic Auth on VPS (per
+          # build-deploy.yml line 204). CF Pages free tier cannot enforce
+          # Basic Auth. Posture change at failover documented в
+          # EMERGENCY_PROCEDURES.md. Pilot scope accepts это как known limitation.
+          cat > public/_redirects <<'EOF'
+          EOF
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3.14.1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=sapiens-backup --branch=main
+
+      # precommit:allow-secrets — step below intentionally contains secret-format
+      # regex patterns for §4 self-verify. These are detection patterns, not values.
+      - name: Post-deploy secret scan (agent-secret-hygiene §4)
+        if: always()
+        run: |
+          if [ -n "${GITHUB_STEP_SUMMARY:-}" ] && [ -f "${GITHUB_STEP_SUMMARY}" ]; then
+            PATTERNS='(ghp_|github_pat_|xoxb-|sk_live_|r8_|AKIA[0-9A-Z]{16}|AGE-SECRET-KEY-1|-----BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY-----|[0-9]{8,10}:[A-Za-z0-9_-]{35})'
+            if grep -qE "$PATTERNS" "${GITHUB_STEP_SUMMARY}" 2>/dev/null; then
+              echo "::error::Potential secret detected в step summary — investigate"
+              exit 1
+            fi
+          fi
+          echo "::notice::Step-summary secret scan complete (full run-log scan deferred to Phase 7 — ACTIONS_STEP_DEBUG=false is primary G1 mitigation)"

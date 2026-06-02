@@ -1,7 +1,7 @@
 {
   "name": "agile-sapiens",
-  "version": "1.0.7",
-  "description": "AGILE SAPIENS — The Future of Work in the Age of Artificial Intelligence | Scientific Popular Monograph",
+  "version": "1.0.8",
+  "description": "AGILE SAPIENS — Literary Business Analysis. How Classical Literature Predicted Modern Management",
   "type": "module",
   "scripts": {
     "dev": "hugo server --buildDrafts --buildFuture",
@@ -24,11 +24,11 @@
   },
   "keywords": [
     "agile-sapiens",
-    "artificial-intelligence",
-    "future-of-work",
-    "scientific-popular",
+    "literary-analysis",
+    "business-analysis",
+    "classical-literature",
+    "management-history",
     "monograph",
-    "workplace-transformation",
     "folkup"
   ],
   "author": "Андрей Клеменчёнок",

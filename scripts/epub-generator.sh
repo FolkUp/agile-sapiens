@@ -347,7 +347,12 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="bookid">urn:uuid:agile-sapiens-$(date +%s)</dc:identifier>
     <dc:title>AGILE SAPIENS</dc:title>
-    <dc:creator>Андрей Клеменчёнок</dc:creator>
+    <dc:creator id="author">Андрей Клеменчёнок</dc:creator>
+    <meta refines="#author" property="role" scheme="marc:relators">aut</meta>
+    <dc:creator id="coauthor">Алиса</dc:creator>
+    <meta refines="#coauthor" property="role" scheme="marc:relators">aut</meta>
+    <dc:contributor id="editor">Иви</dc:contributor>
+    <meta refines="#editor" property="role" scheme="marc:relators">edt</meta>
     <dc:language>ru</dc:language>
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
     <dc:rights>© 2026 Андрей Клеменчёнок. Контент под лицензией CC BY 4.0. Издатель: FolkUp Ecosystem.</dc:rights>

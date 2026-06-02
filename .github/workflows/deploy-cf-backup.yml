@@ -96,7 +96,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=sapiens-backup --branch=main
+          command: pages deploy public --project-name=sapiens-backup --branch=main --commit-message="agile-sapiens auto-deploy"
 
       # precommit:allow-secrets — step below intentionally contains secret-format
       # regex patterns for §4 self-verify. These are detection patterns, not values.

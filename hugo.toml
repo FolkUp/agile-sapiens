@@ -132,7 +132,7 @@ endLevel = 3
 
 # SEO Configuration
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "llms"]
 section = ["HTML", "RSS"]
 page = ["HTML"]
 taxonomy = ["HTML", "RSS"]

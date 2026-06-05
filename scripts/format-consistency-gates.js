@@ -27,6 +27,11 @@ class FormatConsistencyGates {
         this.contentDir = path.join(this.projectRoot, 'content');
         this.publicDir = path.join(this.projectRoot, 'public');
 
+        // AGS-02 fix (С23 Иви audit): read target version dynamically from package.json
+        // Replaces 11+ hardcoded 'v1.0.7' sites that drifted when package.json went to v1.0.8.
+        const pkg = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+        this.targetVersion = `v${pkg.version}`;
+
         this.results = {
             timestamp: new Date().toISOString(),
             status: 'RUNNING',
@@ -90,8 +95,8 @@ class FormatConsistencyGates {
         console.log('📁 [GATE 1] Format Existence Verification...');
 
         const expectedFormats = [
-            'agile-sapiens-v1.0.7.epub',
-            'agile-sapiens-v1.0.7.pdf'
+            `agile-sapiens-${this.targetVersion}.epub`,
+            `agile-sapiens-${this.targetVersion}.pdf`
         ];
 
         const formatStatus = {
@@ -240,7 +245,7 @@ class FormatConsistencyGates {
     async checkEpubQuality() {
         console.log('  📖 ePub Quality Checks...');
 
-        const epubPath = path.join(this.formatsDir, 'agile-sapiens-v1.0.7.epub');
+        const epubPath = path.join(this.formatsDir, `agile-sapiens-${this.targetVersion}.epub`);
         const checks = {
             file_exists: fs.existsSync(epubPath),
             size_valid: false,
@@ -272,7 +277,7 @@ class FormatConsistencyGates {
     async checkPdfQuality() {
         console.log('  📄 PDF Quality Checks...');
 
-        const pdfPath = path.join(this.formatsDir, 'agile-sapiens-v1.0.7.pdf');
+        const pdfPath = path.join(this.formatsDir, `agile-sapiens-${this.targetVersion}.pdf`);
         const checks = {
             file_exists: fs.existsSync(pdfPath),
             size_valid: false,
@@ -320,7 +325,7 @@ class FormatConsistencyGates {
     checkVersionConsistency() {
         console.log('  🔢 Version Consistency Check...');
 
-        const targetVersion = 'v1.0.7';
+        const targetVersion = this.targetVersion;
         const checks = {
             epub_version: false,
             pdf_version: false,
@@ -528,13 +533,13 @@ class FormatConsistencyGates {
             verification.web_independently_verified = indexContent.length > 1000; // Substantial content
         }
 
-        const epubPath = path.join(this.formatsDir, 'agile-sapiens-v1.0.7.epub');
+        const epubPath = path.join(this.formatsDir, `agile-sapiens-${this.targetVersion}.epub`);
         if (fs.existsSync(epubPath)) {
             const stats = fs.statSync(epubPath);
             verification.epub_independently_verified = stats.size > 100000; // >100KB
         }
 
-        const pdfPath = path.join(this.formatsDir, 'agile-sapiens-v1.0.7.pdf');
+        const pdfPath = path.join(this.formatsDir, `agile-sapiens-${this.targetVersion}.pdf`);
         if (fs.existsSync(pdfPath)) {
             const stats = fs.statSync(pdfPath);
             verification.pdf_independently_verified = stats.size > 50000; // >50KB
@@ -689,7 +694,7 @@ class FormatConsistencyGates {
     }
 
     validateEpubStructure() {
-        const epubPath = path.join(this.formatsDir, 'agile-sapiens-v1.0.7.epub');
+        const epubPath = path.join(this.formatsDir, `agile-sapiens-${this.targetVersion}.epub`);
         if (!fs.existsSync(epubPath)) return false;
 
         const stats = fs.statSync(epubPath);
@@ -697,7 +702,7 @@ class FormatConsistencyGates {
     }
 
     validatePdfStructure() {
-        const pdfPath = path.join(this.formatsDir, 'agile-sapiens-v1.0.7.pdf');
+        const pdfPath = path.join(this.formatsDir, `agile-sapiens-${this.targetVersion}.pdf`);
         if (!fs.existsSync(pdfPath)) return false;
 
         const stats = fs.statSync(pdfPath);

@@ -26,7 +26,7 @@ async function shot(page: Page, name: string) {
 }
 
 async function loadPage(page: Page, url: string) {
-  await page.goto(BASE + url, { waitUntil: 'networkidle', timeout: 30000 });
+  await page.goto(BASE + url, { waitUntil: 'domcontentloaded', timeout: 30000 });
 }
 
 // ================================================================
@@ -218,7 +218,7 @@ test.fixme('B.3 hamburger click opens sidebar drawer', async ({ page }) => {
 
 test('C.1 chapter page loads without 404', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 });
-  const response = await page.goto(BASE + '/chapters/chapter-0-pilot/', { waitUntil: 'networkidle' });
+  const response = await page.goto(BASE + '/chapters/chapter-0-pilot/', { waitUntil: 'domcontentloaded' });
   expect(response?.status(), 'Chapter page returned non-200').toBe(200);
 });
 

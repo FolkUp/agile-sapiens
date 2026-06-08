@@ -14,7 +14,7 @@ status: ACTIVE
 
 Per Иви insight (02-МОСТ-консоль-Claude-Design-С26.md): API/MCP мост строить не нужно — у Claude Design нет публичного API. **Bridge = git** (DESIGN.md в репо + cross-references). Этот folder — практическая реализация.
 
-**Repo `FolkUp/agile-sapiens` — PUBLIC** (per Иви KANON-SERII §6 «6 публичных репо организации»), поэтому Иви читает через GitHub web без auth.
+**Repo `FolkUp/agile-sapiens` — PRIVATE** (Lesson #42 phantom-corrected 2026-06-08 — Ивин «6 публичных репо» referred к LICENSE BY 4.0/MIT, не GitHub visibility). Тестирование raw.githubusercontent.com подтвердило HTTP 404 anonymous. Bridge работает только если **Иви имеет GitHub auth** к agile-sapiens (через Андрей's claude.ai web GitHub connector OR direct GitHub access). **⚠️ Verification pending** — Андрей должен confirm Иви фактически читает private FolkUp репозитории. Из тестируемых FolkUp репозиториев только **`lucerna`** verified PUBLIC anonymous (HTTP 200).
 
 ## Структура
 
@@ -74,20 +74,31 @@ sync-alisa-ivi/
 - Cross-link к vault: `vault/memory/PATH.md` (path string — Иви не имеет vault access, см. отдельно)
 - Cross-link к public FolkUp repos: full URL `github.com/FolkUp/<repo>/...`
 
-## Что Иви имеет access к (через GitHub web public read)
+## Что доступно anonymous (verified raw.githubusercontent.com 2026-06-08)
 
-| Repo | URL | Status |
-|------|-----|--------|
-| FolkUp/agile-sapiens | github.com/FolkUp/agile-sapiens | ✅ PUBLIC |
-| FolkUp/brand | github.com/FolkUp/brand | (Иви INSTRUKCIYA references — assumed public) |
-| FolkUp/folkup-quest | github.com/FolkUp/folkup-quest | ✅ PUBLIC |
-| FolkUp/folkup-landing | github.com/FolkUp/folkup-landing | ✅ PUBLIC |
-| FolkUp/lucerna | github.com/FolkUp/lucerna | ✅ PUBLIC |
-| FolkUp/orga | github.com/FolkUp/orga | ✅ PUBLIC |
-| FolkUp/vault | github.com/FolkUp/vault | 🔴 **PRIVATE** — Иви НЕ имеет access |
-| FolkUp/folkup-infra | github.com/FolkUp/folkup-infra | 🔴 **PRIVATE** |
+| Repo | Anonymous read | Notes |
+|------|----------------|-------|
+| FolkUp/lucerna | ✅ HTTP 200 | Единственный verified public |
+| FolkUp/agile-sapiens | 🔴 HTTP 404 | PRIVATE — нужна GitHub auth для read |
+| FolkUp/folkup-quest | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/folkup-landing | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/orga | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/brand | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/setubal-encyclopedia | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/tarot-hub | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/aquarium-encyclopedia | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/portugal-mushrooms | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/folkup-padel | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/folkup-docs | 🔴 HTTP 404 | PRIVATE |
+| FolkUp/vault | 🔴 PRIVATE | (предполагаемо, не testable отдельно) |
+| FolkUp/folkup-infra | 🔴 PRIVATE | (предполагаемо) |
 
-**Implication:** если sync references vault content — копируем content в sync folder (как сделано с P-batch additions 10-12).
+**Implication для bridge mechanics:**
+- **Сценарий A — Иви имеет GitHub auth (через claude.ai connector OR direct):** sync bridge работает as designed. Иви reads agile-sapiens private repo как authenticated user.
+- **Сценарий B — Иви НЕ имеет auth:** sync bridge **не работает для неё anonymous**. Fallback к zip courier OR move bridge к **lucerna** (только actually-public repo) — но scope lucerna = OSINT, не fit для bridge.
+- **Сценарий C — Андрей confirms agile-sapiens должен быть PUBLIC:** изменить visibility на GitHub, тогда bridge работает.
+
+⚠️ **Pending Андрей verification — какой сценарий actual.** До тех пор — **continue zip courier as primary**, git bridge = supplementary.
 
 ## История exchanges
 

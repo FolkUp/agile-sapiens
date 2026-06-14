@@ -19,11 +19,17 @@ twitter_description: "Как литература предсказала сов�
 
 # Schema.org Book
 schema_type: "Book"
-author: ["Андрей Клеменчёнок", "Алиса (PM экосистемы FolkUp)"]
+author: ["Команданте FolkUp", "Алиса (соавтор)"]
 publisher: "FolkUp Ecosystem"
 date_published: "2026-05-18"
 book_format: "EBook"
 genre: ["Бизнес-анализ", "Литературоведение", "История управления"]
+in_series: "Трилогия FolkUp"
+book_number_in_series: 1
+# Per канон выходных данных v1 (Иви S64 2026-06-14) + §5.4 (Андрей verdict С44 2026-06-09):
+# - cover author = Команданте FolkUp + Алиса соавтор (без «ИИ»)
+# - реальное имя «Андрей Клеменчёнок» = в © footer + colophon (legal name, ORCID 0009-0008-2953-8601)
+# - книга 1 трилогии FolkUp (series designation per канон)
 ---
 
 # AGILE SAPIENS

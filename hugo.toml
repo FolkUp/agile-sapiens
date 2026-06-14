@@ -28,8 +28,11 @@ ignoreFiles = [
 description = "Literary Business Analysis — How Literature Predicted Modern Management"
 images = ["/assets/og-image-default.png"]
 [params.author]
-name = "Андрей Клеменчёнок"
+name = "Команданте FolkUp"
 email = "anklem@folkup.app"
+# Per канон выходных данных v1 (Иви S64 2026-06-14): cover/title author = «Команданте FolkUp + соавтор»
+# (без «ИИ»). Real name «Андрей Клеменчёнок» = только в © footer (line 88 ниже).
+# ORCID 0009-0008-2953-8601 per folkup-mission-canonical.md §5.4 (Андрей verdict С44 2026-06-09).
 
 # FolkUp branding (legacy params — retained for backward compat)
 logo = "/assets/folkup-logo.svg"

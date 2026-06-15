@@ -1,7 +1,7 @@
 <!-- precommit:allow-ai-mentions -->
 # AGILE SAPIENS
 
-**Version:** 1.0.8 | **Date:** 2026-06-04  
+**Version:** 1.0.9 | **Date:** 2026-06-15  
 **Literary Business Analysis — How Literature Predicted Modern Management**
 
 > **AGIL-190 Theme Correction Phase 2 CLOSED 2026-05-26** (kickoff 2026-05-24): the 2026-05-19 "Literary Theme Correction" (AGIL-170) cleaned the book frame (homepage, about, cover, EPUB/PDF templates) but the chapter bodies 6-10 + afterword retained the AI overlay (16-125 ИИ mentions per chapter; Ch.0-5 were always Agile-faithful). Multi-session campaign. **All 8 batches (0-7 content + Batch 8 close-out) SHIPPED**:

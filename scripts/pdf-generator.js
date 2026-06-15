@@ -30,7 +30,7 @@ const CHAPTERS_DIR = path.join(PROJECT_ROOT, 'content', 'chapters');
 const CONTENT_DIR = path.join(PROJECT_ROOT, 'content');
 const APPARATUS_DIR = path.join(PROJECT_ROOT, 'content', 'apparatus');
 const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
-const BOOK_VERSION = 'v1.0.8';
+const BOOK_VERSION = 'v1.0.9';
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
 // AGIL-178: apparatus reading order — overrides frontmatter weights to

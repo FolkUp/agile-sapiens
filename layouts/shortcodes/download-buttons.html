@@ -1,11 +1,14 @@
 {{- /* AGIL-186: EPUB/PDF download buttons for the homepage. File names, sizes and
        version label are read from static/downloads at build time, so nothing here
-       goes stale when a new release is published. */ -}}
+       goes stale when a new release is published.
+       Drift-fix v1.0.9: pick LAST matching file (highest version) instead of FIRST,
+       so legacy v1.0.x files can sit parallel for external link preservation while
+       homepage still surfaces the current release. */ -}}
 {{- $epub := false -}}
 {{- $pdf := false -}}
 {{- range (os.ReadDir "static/downloads") -}}
-  {{- if and (not $epub) (strings.HasSuffix .Name ".epub") -}}{{- $epub = . -}}{{- end -}}
-  {{- if and (not $pdf) (strings.HasSuffix .Name ".pdf") -}}{{- $pdf = . -}}{{- end -}}
+  {{- if strings.HasSuffix .Name ".epub" -}}{{- $epub = . -}}{{- end -}}
+  {{- if strings.HasSuffix .Name ".pdf" -}}{{- $pdf = . -}}{{- end -}}
 {{- end -}}
 {{- $ru := eq site.Language.Lang "ru" -}}
 {{- $unit := cond $ru "МБ" "MB" -}}

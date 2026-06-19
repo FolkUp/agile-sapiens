@@ -12,6 +12,11 @@ FORMATS_DIR="$PROJECT_ROOT/formats"
 EPUB_BUILD_DIR="$FORMATS_DIR/epub-build"
 CHAPTERS_DIR="$PROJECT_ROOT/content/chapters"
 
+# Single source of truth for version: package.json (closes drift documented по
+# cont S24 + Враг pre-plan A для v1.0.9 deploy). Bash + sed for portability
+# (node not safe across Windows path quirks via Git Bash on Windows).
+BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*/\1/p' "${PROJECT_ROOT}/package.json" | head -1)"
+
 echo "📚 AGILE SAPIENS Proper ePub Generator"
 echo "====================================="
 echo "Enhanced Alice v2.0 L3 Multi-Chapter Structure"
@@ -378,19 +383,19 @@ echo "📦 Creating ePub package..."
 cd "$EPUB_BUILD_DIR"
 
 # Remove existing ePub file if exists
-rm -f "../agile-sapiens-v1.0.7.epub"
+rm -f "../agile-sapiens-${BOOK_VERSION}.epub"
 
 # Use Python ZIP creation with UTF-8 preservation
 # Python binary detection: Linux typically has `python3`, Windows has `py` launcher,
 # some systems still have `python` symlink. Fall back through all three.
 PYTHON_CMD=$(command -v python3 || command -v python || command -v py || echo "python")
-"$PYTHON_CMD" "$SCRIPT_DIR/create-epub-zip.py" "$EPUB_BUILD_DIR" "$FORMATS_DIR/agile-sapiens-v1.0.7.epub"
+"$PYTHON_CMD" "$SCRIPT_DIR/create-epub-zip.py" "$EPUB_BUILD_DIR" "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.epub"
 
 cd "$PROJECT_ROOT"
 
 # Validate ePub size and structure
-if [[ -f "$FORMATS_DIR/agile-sapiens-v1.0.7.epub" ]]; then
-    epub_size=$(du -sh "$FORMATS_DIR/agile-sapiens-v1.0.7.epub" | cut -f1)
+if [[ -f "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.epub" ]]; then
+    epub_size=$(du -sh "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.epub" | cut -f1)
     echo "✅ ePub generated: $epub_size"
     echo "📊 Structure: $unit_count content units + cover + plates + navigation + styles"
 

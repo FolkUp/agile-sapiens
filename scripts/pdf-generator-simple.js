@@ -7,6 +7,7 @@
 
 import puppeteer from 'puppeteer';
 import fs from 'fs/promises';
+import { readFileSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -14,6 +15,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.dirname(__dirname);
 const FORMATS_DIR = path.join(PROJECT_ROOT, 'formats');
+
+// AGS-02 follow-up (cont #29 B2): derive version from package.json (single source of truth).
+const PKG = JSON.parse(readFileSync(path.join(PROJECT_ROOT, 'package.json'), 'utf8'));
+const BOOK_VERSION = `v${PKG.version}`;
 
 console.log('📄 AGILE SAPIENS PDF Generator (Simplified)');
 console.log('============================================');
@@ -48,7 +53,7 @@ async function generatePDF() {
         });
 
         // Generate PDF
-        const pdfPath = path.join(FORMATS_DIR, 'agile-sapiens-v1.0.7.pdf');
+        const pdfPath = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
         console.log(`📄 Generating PDF: ${pdfPath}`);
 
         await page.pdf({
@@ -62,7 +67,7 @@ async function generatePDF() {
             },
             printBackground: true,
             displayHeaderFooter: true,
-            headerTemplate: '<div style="font-size:10px; text-align:center; width:100%; margin-top:1cm;">AGILE SAPIENS v1.0.7</div>',
+            headerTemplate: `<div style="font-size:10px; text-align:center; width:100%; margin-top:1cm;">AGILE SAPIENS ${BOOK_VERSION}</div>`,
             footerTemplate: '<div style="font-size:10px; text-align:center; width:100%; margin-bottom:1cm;"><span class="pageNumber"></span> / <span class="totalPages"></span></div>'
         });
 
@@ -90,7 +95,7 @@ function createSimpleHTML() {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>AGILE SAPIENS v1.0.7</title>
+    <title>AGILE SAPIENS ${BOOK_VERSION}</title>
     <style>
         body {
             font-family: 'Times New Roman', serif;

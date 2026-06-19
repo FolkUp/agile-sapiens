@@ -8,6 +8,9 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+# AGS-02 follow-up (cont #29 B2): derive version from package.json (single source of truth).
+BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*//p' "${PROJECT_ROOT}/package.json" | head -1)"
+
 FORMATS_DIR="$PROJECT_ROOT/formats"
 
 echo "📄 AGILE SAPIENS Simple PDF Generator"
@@ -38,7 +41,7 @@ cat << 'EOF' > "$PDF_HTML"
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>AGILE SAPIENS v1.0.7</title>
+    <title>AGILE SAPIENS ${BOOK_VERSION}</title>
     <style>
         body {
             font-family: 'Times New Roman', serif;
@@ -252,12 +255,12 @@ wkhtmltopdf \
     --enable-local-file-access \
     --print-media-type \
     "$PDF_HTML" \
-    "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf"
+    "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.pdf"
 
 if [ $? -eq 0 ]; then
-    PDF_SIZE=$(du -sh "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf" | cut -f1)
+    PDF_SIZE=$(du -sh "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.pdf" | cut -f1)
     echo "✅ PDF generated successfully: $PDF_SIZE"
-    echo "📁 Location: $FORMATS_DIR/agile-sapiens-v1.0.7.pdf"
+    echo "📁 Location: $FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.pdf"
 
     # Clean up HTML file
     rm -f "$PDF_HTML"
@@ -271,7 +274,7 @@ if [ $? -eq 0 ]; then
     echo "✅ Quality Standards: BANKING-LEVEL MAINTAINED"
     echo "✅ Constitutional Framework: COMPLIANCE ACHIEVED"
     echo ""
-    echo "📊 Final PDF: $PDF_SIZE at $FORMATS_DIR/agile-sapiens-v1.0.7.pdf"
+    echo "📊 Final PDF: $PDF_SIZE at $FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.pdf"
 else
     echo "❌ PDF generation failed"
     exit 1

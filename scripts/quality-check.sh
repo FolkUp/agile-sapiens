@@ -7,6 +7,9 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+# AGS-02 follow-up (cont #29 B2): derive version from package.json (single source of truth).
+BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*//p' "${PROJECT_ROOT}/package.json" | head -1)"
+
 
 # Colors
 GREEN='\033[0;32m'
@@ -47,8 +50,8 @@ show_status() {
     # Check format files
     echo "📦 Format Files:"
     [ -d "$PROJECT_ROOT/public" ] && echo "  ✅ Web: $(du -sh "$PROJECT_ROOT/public" | cut -f1)" || echo "  ❌ Web: Missing"
-    [ -f "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.epub" ] && echo "  ✅ ePub: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.epub" | cut -f1)" || echo "  ❌ ePub: Missing"
-    [ -f "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.pdf" ] && echo "  ✅ PDF: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.pdf" | cut -f1)" || echo "  ❌ PDF: Missing"
+    [ -f "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.epub" ] && echo "  ✅ ePub: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.epub" | cut -f1)" || echo "  ❌ ePub: Missing"
+    [ -f "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.pdf" ] && echo "  ✅ PDF: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.pdf" | cut -f1)" || echo "  ❌ PDF: Missing"
 
     echo ""
     echo "📋 Quality Reports:"

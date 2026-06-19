@@ -8,6 +8,9 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+# AGS-02 follow-up (cont #29 B2): derive version from package.json (single source of truth).
+BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*//p' "${PROJECT_ROOT}/package.json" | head -1)"
+
 
 echo "🏛️  AGILE SAPIENS FORMAT CONSISTENCY QUALITY GATES"
 echo "=================================================="
@@ -43,7 +46,7 @@ ensure_formats_built() {
     fi
 
     # Check ePub format
-    if [ -f "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.epub" ]; then
+    if [ -f "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.epub" ]; then
         epub_exists=true
         echo "  ✅ ePub format exists"
     else
@@ -51,7 +54,7 @@ ensure_formats_built() {
     fi
 
     # Check PDF format
-    if [ -f "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.pdf" ]; then
+    if [ -f "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.pdf" ]; then
         pdf_exists=true
         echo "  ✅ PDF format exists"
     else
@@ -140,11 +143,11 @@ generate_summary() {
         if [ -d "$PROJECT_ROOT/public" ]; then
             echo "  🌐 Web: $(du -sh "$PROJECT_ROOT/public" | cut -f1)"
         fi
-        if [ -f "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.epub" ]; then
-            echo "  📖 ePub: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.epub" | cut -f1)"
+        if [ -f "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.epub" ]; then
+            echo "  📖 ePub: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.epub" | cut -f1)"
         fi
-        if [ -f "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.pdf" ]; then
-            echo "  📄 PDF: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-v1.0.7.pdf" | cut -f1)"
+        if [ -f "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.pdf" ]; then
+            echo "  📄 PDF: $(du -sh "$PROJECT_ROOT/formats/agile-sapiens-${BOOK_VERSION}.pdf" | cut -f1)"
         fi
 
         echo ""

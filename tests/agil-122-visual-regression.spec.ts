@@ -22,7 +22,7 @@ async function shot(page: Page, name: string) {
 }
 
 async function loadPage(page: Page, url: string) {
-  await page.goto(BASE + url, { waitUntil: 'networkidle', timeout: 30000 });
+  await page.goto(BASE + url, { waitUntil: 'domcontentloaded', timeout: 30000 });
 }
 
 // ================================================================

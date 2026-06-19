@@ -29,7 +29,7 @@ const DARK_BTN = '[data-folkup-theme="dark"]';
 
 // Helper: wait for page to settle after navigation
 async function loadPage(page: Page, url: string) {
-  await page.goto(BASE + url, { waitUntil: 'networkidle' });
+  await page.goto(BASE + url, { waitUntil: 'domcontentloaded' });
 }
 
 // Helper: get toggle inside nav (excludes any accidental duplicates outside nav)
@@ -129,7 +129,7 @@ test('C. persistence: light → reload → still light', async ({ page }) => {
   await toggle.locator(LIGHT_BTN).click();
   await page.waitForTimeout(200);
 
-  await page.reload({ waitUntil: 'networkidle' });
+  await page.reload({ waitUntil: 'domcontentloaded' });
 
   const hasDark = await page.evaluate(() => document.documentElement.classList.contains('dark'));
   const hasLight = await page.evaluate(() => document.documentElement.classList.contains('light'));
@@ -144,7 +144,7 @@ test.skip('C. persistence: dark → reload → still dark', async ({ page }) => 
   await toggle.locator(DARK_BTN).click();
   await page.waitForTimeout(200);
 
-  await page.reload({ waitUntil: 'networkidle' });
+  await page.reload({ waitUntil: 'domcontentloaded' });
 
   const hasDark = await page.evaluate(() => document.documentElement.classList.contains('dark'));
   expect(hasDark).toBe(true);
@@ -155,7 +155,7 @@ test('C. migration: localStorage="system" → reload → becomes dark', async ({
   await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
   await page.evaluate(() => localStorage.setItem('color-theme', 'system'));
 
-  await page.reload({ waitUntil: 'networkidle' });
+  await page.reload({ waitUntil: 'domcontentloaded' });
 
   const stored = await page.evaluate(() => localStorage.getItem('color-theme'));
   const hasDark = await page.evaluate(() => document.documentElement.classList.contains('dark'));

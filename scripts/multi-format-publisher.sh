@@ -8,6 +8,9 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+# AGS-02 follow-up (cont #29 B2): derive version from package.json (single source of truth).
+BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*//p' "${PROJECT_ROOT}/package.json" | head -1)"
+
 OUTPUT_DIR="$PROJECT_ROOT/public"
 FORMATS_DIR="$PROJECT_ROOT/formats"
 PUBLISH_DIR="$PROJECT_ROOT/static/downloads"
@@ -39,7 +42,7 @@ echo "📖 [STEP 2] Generating ePub..."
 # Use dedicated proper ePub generator
 "$SCRIPT_DIR/epub-generator.sh"
 
-if [ $? -eq 0 ] && [ -f "$FORMATS_DIR/agile-sapiens-v1.0.7.epub" ]; then
+if [ $? -eq 0 ] && [ -f "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.epub" ]; then
     echo "✅ ePub generated with proper multi-chapter structure"
 else
     echo "❌ ePub generation failed"
@@ -57,8 +60,8 @@ if command -v node >/dev/null 2>&1; then
     # Run Node.js PDF generator (full-book: reads content/chapters/, pandoc + Puppeteer)
     node "$SCRIPT_DIR/pdf-generator.js"
 
-    if [ $? -eq 0 ] && [ -f "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf" ]; then
-        echo "✅ PDF generated: $(du -sh "$FORMATS_DIR/agile-sapiens-v1.0.7.pdf" | cut -f1)"
+    if [ $? -eq 0 ] && [ -f "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.pdf" ]; then
+        echo "✅ PDF generated: $(du -sh "$FORMATS_DIR/agile-sapiens-${BOOK_VERSION}.pdf" | cut -f1)"
     else
         # No placeholder fallback: a fake PDF (pipeline-description page) is
         # worse than no PDF — it silently breaks academic submission. Fail loud.

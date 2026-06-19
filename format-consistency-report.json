@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-17T08:09:22.662Z",
-  "status": "PARTIAL",
+  "timestamp": "2026-06-19T03:46:37.482Z",
+  "status": "FAILED",
   "gates": {
     "format_existence": {
       "status": "PASSED",
@@ -11,17 +11,17 @@
     "content_consistency": {
       "status": "PASSED",
       "source_chapters": 15,
-      "web_chapters": 16,
+      "web_chapters": 18,
       "epub_valid": true,
       "pdf_valid": true
     },
     "format_specific": {
-      "status": "PARTIAL",
+      "status": "PASSED",
       "web": {
-        "status": "FAILED",
+        "status": "PASSED",
         "checks": {
-          "html_validation": false,
-          "utf8_encoding": false,
+          "html_validation": true,
+          "utf8_encoding": true,
           "responsive_design": true,
           "accessibility": true
         }
@@ -49,7 +49,7 @@
       "status": "PASSED",
       "version_consistency": {
         "status": "PASSED",
-        "target_version": "v1.0.7",
+        "target_version": "v1.0.9",
         "checks": {
           "epub_version": true,
           "pdf_version": true,
@@ -80,7 +80,7 @@
         "status": "PASSED",
         "standards": {
           "multiple_format_outputs": true,
-          "quality_validation": false,
+          "quality_validation": true,
           "audit_trail": true,
           "error_handling": true
         }
@@ -88,7 +88,7 @@
       "evidence_first_methodology": {
         "status": "PASSED",
         "evidence": {
-          "measurable_metrics": 50.8,
+          "measurable_metrics": 3382.9,
           "source_verification": true,
           "quality_documentation": true,
           "build_artifacts": true
@@ -105,7 +105,7 @@
       }
     },
     "hostile_verification": {
-      "status": "PASSED",
+      "status": "FAILED",
       "format_claims_verified": {
         "status": "PASSED",
         "verification": {
@@ -115,10 +115,10 @@
         }
       },
       "size_claims_verified": {
-        "status": "PASSED",
+        "status": "FAILED",
         "verification": {
           "web_size_realistic": true,
-          "epub_size_realistic": true,
+          "epub_size_realistic": false,
           "pdf_size_realistic": true
         }
       },
@@ -142,27 +142,27 @@
     }
   },
   "metrics": {
-    "web_size_mb": 24.1,
-    "epub_size_kb": 131.8,
-    "pdf_size_kb": 50.8,
+    "web_size_mb": 51.1,
+    "epub_size_kb": 11315.3,
+    "pdf_size_kb": 3382.9,
     "source_chapters": 15,
-    "web_chapters": 16
+    "web_chapters": 18
   },
   "errors": [],
   "warnings": [
-    "Chapter count mismatch: source(15) vs web(16)"
+    "Chapter count mismatch: source(15) vs web(18)"
   ],
   "constitutional": {
     "banking_level_standards": true,
     "evidence_first_methodology": true,
     "quality_over_efficiency": true,
-    "hostile_verification": true
+    "hostile_verification": false
   },
   "summary": {
     "total_gates": 6,
     "passed_gates": 5,
-    "failed_gates": 0,
-    "partial_gates": 1,
-    "constitutional_compliance": 1
+    "failed_gates": 1,
+    "partial_gates": 0,
+    "constitutional_compliance": 0.75
   }
 }

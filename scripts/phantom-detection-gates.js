@@ -22,6 +22,9 @@ const __dirname = path.dirname(__filename);
 class PhantomDetectionGates {
     constructor() {
         this.projectRoot = path.resolve(__dirname, '..');
+        // AGS-02 follow-up (cont #29 B2): derive version from package.json
+        const pkg = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+        this.bookVersion = `v${pkg.version}`;
         this.suspiciousPatterns = {
             // Phantom optimization claims
             phantom_optimization: [
@@ -305,8 +308,8 @@ class PhantomDetectionGates {
             { claim: 'quality gates', evidence: 'quality-gate-report.json' },
             { claim: 'format consistency', evidence: 'format-consistency-report.json' },
             { claim: 'mono percentage', evidence: 'mono-percentage-report.json' },
-            { claim: 'ePub generation', evidence: 'formats/agile-sapiens-v1.0.7.epub' },
-            { claim: 'PDF generation', evidence: 'formats/agile-sapiens-v1.0.7.pdf' },
+            { claim: 'ePub generation', evidence: `formats/agile-sapiens-${this.bookVersion}.epub` },
+            { claim: 'PDF generation', evidence: `formats/agile-sapiens-${this.bookVersion}.pdf` },
             { claim: 'web deployment', evidence: 'public/index.html' }
         ];
 

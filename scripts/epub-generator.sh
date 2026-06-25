@@ -167,7 +167,7 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
     <p style="font-size: 1em; margin-bottom: 0.3em;"><strong>Соавтор:</strong> Алиса (PM экосистемы FolkUp)</p>
     <p style="font-size: 1em; margin-bottom: 1em;"><strong>Редактор:</strong> Иви</p>
     <p style="font-size: 1em; color: #666;"><strong>Версия:</strong> v1.0.9</p>
-    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">© 2026 Андрей Клеменчёнок · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY 4.0.</p>
+    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">© 2026 Андрей Клеменчёнок · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0.</p>
   </div>
 </body>
 </html>
@@ -357,7 +357,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
     <dc:creator>Андрей Клеменчёнок</dc:creator>
     <dc:language>ru</dc:language>
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
-    <dc:rights>© 2026 Андрей Клеменчёнок. Контент под лицензией CC BY 4.0. Издатель: FolkUp Ecosystem.</dc:rights>
+    <dc:rights>© 2026 Андрей Клеменчёнок. Контент под лицензией CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Издатель: FolkUp Ecosystem.</dc:rights>
     <dc:description>Литературный бизнес-анализ: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>
     <meta name="cover" content="cover-img"/>
     <meta property="dcterms:modified">$(date -u +%Y-%m-%dT%H:%M:%SZ)</meta>

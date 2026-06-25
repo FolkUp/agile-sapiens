@@ -96,7 +96,7 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 
 **Repository:** Hugo SSG with Hextra theme  
 **Domain:** sapiens.folkup.life  
-**License:** CC BY 4.0 (content), MIT (code)
+**License:** CC BY-SA 4.0 (content) — relicensed from CC BY 4.0 on 2026-06-25 per S100 canon (вся серия FolkUp под единым стандартом BY-SA); MIT (code). Prior recipients of v1.0.9 (LIVE since 2026-06-22) retain CC BY 4.0 rights per CC license irrevocability (creativecommons.org/faq).
 
 ### Visual content
 

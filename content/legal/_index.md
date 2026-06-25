@@ -30,4 +30,4 @@ toc: true
 ---
 
 **Последнее обновление:** 15 мая 2026 г.  
-**FolkUp Ecosystem** — контент под лицензией CC BY 4.0
+**FolkUp Ecosystem** — контент под лицензией [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

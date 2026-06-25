@@ -33,7 +33,7 @@ No P0 blockers; **AGIL-190 campaign CLOSED 2026-05-26** (8 batches: 0 frame + 1-
 **Domain:** sapiens.folkup.life  
 **Repository:** Hugo SSG with Hextra theme  
 **Structure:** 11 numbered chapters (0-10, with Chapter 6 in two parts) + 3 intermezzos = 12 content units  
-**License:** CC BY 4.0 (content), MIT (code)  
+**License:** CC BY-SA 4.0 (content) — relicensed from CC BY 4.0 on 2026-06-25 per S100 canon; MIT (code)  
 **Goal:** Best Scientific Popular Book 2026
 
 ## Content Quality (mono% measurement)

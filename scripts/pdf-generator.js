@@ -19,6 +19,7 @@
 import puppeteer from 'puppeteer';
 import { execFileSync } from 'child_process';
 import fs from 'fs/promises';
+import { readFileSync } from 'fs';
 import path from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 
@@ -30,7 +31,11 @@ const CHAPTERS_DIR = path.join(PROJECT_ROOT, 'content', 'chapters');
 const CONTENT_DIR = path.join(PROJECT_ROOT, 'content');
 const APPARATUS_DIR = path.join(PROJECT_ROOT, 'content', 'apparatus');
 const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
-const BOOK_VERSION = 'v1.0.9';
+// Single source of truth for version: package.json (closes drift from cont S24
+// — EPUB script был fixed к dynamic, PDF script остался hardcoded. Этот patch
+// синхронизирует к тому же pattern.)
+const PKG = JSON.parse(readFileSync(path.join(PROJECT_ROOT, 'package.json'), 'utf-8'));
+const BOOK_VERSION = `v${PKG.version}`;
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
 // AGIL-178: apparatus reading order — overrides frontmatter weights to

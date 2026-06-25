@@ -106,8 +106,8 @@ No P0 blockers; **AGIL-190 campaign CLOSED 2026-05-26** (8 batches: 0 frame + 1-
 
 9 PRs merged: AGIL-177 (templates), AGIL-181 (about.md), AGIL-174+179 (cover everywhere), AGIL-175+176 (EPUB full content + 16 illustrations), AGIL-178 (PDF apparatus), AGIL-180 (cover hero HTML), AGIL-183 (orphan cleanup), AGIL-168+173 (typography 18px + desktop touch targets 44px), AGIL-182 (Ch.6 plate split via Replicate). Book object state:
 - **Web:** cover hero on homepage; 12/12 chapter pages with appropriate plates; Ch.6 parts now visually distinct (Holmes 221B Baker Street + Jekyll/Hyde mirror scene); 16px→18px base font; landmark navs at 44px on desktop.
-- **EPUB v1.0.9:** 11.6 MB (11,586,903 bytes); 27 spine items (cover + title + nav + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus); 17 webp images embedded. Regenerated 2026-06-19 (PR #169 cont #29 publication drift closure) с Art. 50 EU AI Act disclosure block per PR #168.
-- **PDF v1.0.9:** 3.5 MB (3,464,058 bytes); 255 pages; cover first page; full apparatus. Regenerated 2026-06-19.
+- **EPUB v1.0.10:** 11.6 MB (11,587,300 bytes); 27 spine items (cover + title + nav + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus); 17 webp images embedded. Regenerated 2026-06-25 (PR #172 cont #34 X-FINAL license canon BY-SA atomic A1 bundle); dc:rights BY-SA 4.0 verified. v1.0.9 (BY 4.0) preserved для backward compat per CC irrevocability.
+- **PDF v1.0.10:** 3.5 MB (3,467,588 bytes); 255 pages; cover first page; full apparatus + BY-SA license metadata. Regenerated 2026-06-25 (PR #172).
 
 ## Evidence Chain
 

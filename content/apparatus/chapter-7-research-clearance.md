@@ -107,9 +107,9 @@ review_date: "2026-05-06"
 
 ---
 
-## D. CONSTITUTIONAL FRAMEWORK COMPLIANCE
+## D. РЕДАКЦИОННЫЙ AUDIT
 
-### Banking-Level Standards Applied
+### Стандарты применены
 
 **EVIDENCE REQUIREMENTS:** ✅ MET
 - Primary sources documented with full bibliographic data

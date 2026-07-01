@@ -1,11 +1,11 @@
 ---
-title: "Глава 9: Понедельник начинается в субботу. НИИЧАВО как идеальная Agile-команда"
+title: "Глава 10: Понедельник начинается в субботу. НИИЧАВО как идеальная Agile-команда"
 description: "Четыре закона самоорганизующейся R&D-команды от Стругацких: смысл как фильтр входа, двойственное лидерство, специалист против администратора, погружение вместо обучения. НИИЧАВО как утопия осмысленного труда и диагноз бюрократии в команде."
 date: 2026-05-25
 date_created: "2026-04-08"
 date_updated: "2026-05-25"
 weight: 100
-chapter: 9
+chapter: 10
 act: "III: Горизонты"
 category: "team-self-organization"
 status: "verified"
@@ -20,7 +20,6 @@ confidence: "high"
 reading_time: "20 min"
 reviewed_by: "Editorial Team"
 review_date: "2026-05-25"
-constitutional_compliance: "banking_level_verified"
 tags:
   - strugatsky-brothers
   - niichavo

@@ -1,14 +1,18 @@
-{{- /* AGIL-186: EPUB/PDF download buttons for the homepage. File names, sizes and
-       version label are read from static/downloads at build time, so nothing here
-       goes stale when a new release is published.
-       Drift-fix v1.0.9: pick LAST matching file (highest version) instead of FIRST,
-       so legacy v1.0.x files can sit parallel for external link preservation while
-       homepage still surfaces the current release. */ -}}
+{{- /* AGIL-186: EPUB/PDF download buttons for the homepage.
+       Version source: data/release.yaml (single source of truth).
+       Prior version files (v1.0.9, ...) preserved in static/downloads/ per CC BY 4.0
+       irrevocability, but homepage shows only current release.
+       Fix 2026-06-30: earlier `os.ReadDir + LAST` picked lex-last (v1.0.9 > v1.0.10
+       lexicographically → wrong version served). Data-driven match is unambiguous. */ -}}
+{{- $version := site.Data.release.current_version -}}
+{{- $needle := printf "-v%s." $version -}}
 {{- $epub := false -}}
 {{- $pdf := false -}}
 {{- range (os.ReadDir "static/downloads") -}}
-  {{- if strings.HasSuffix .Name ".epub" -}}{{- $epub = . -}}{{- end -}}
-  {{- if strings.HasSuffix .Name ".pdf" -}}{{- $pdf = . -}}{{- end -}}
+  {{- if strings.Contains .Name $needle -}}
+    {{- if strings.HasSuffix .Name ".epub" -}}{{- $epub = . -}}{{- end -}}
+    {{- if strings.HasSuffix .Name ".pdf" -}}{{- $pdf = . -}}{{- end -}}
+  {{- end -}}
 {{- end -}}
 {{- $ru := eq site.Language.Lang "ru" -}}
 {{- $unit := cond $ru "МБ" "MB" -}}
@@ -31,7 +35,5 @@
   </a>
   {{- end -}}
 </div>
-{{- $verSrc := cond (ne $epub false) $epub $pdf -}}
-{{- $ver := replaceRE `^.*-v([0-9][0-9.]*)\.[a-z0-9]+$` "$1" $verSrc.Name -}}
-<p class="download-meta">{{ cond $ru "Версия" "Version" }}&nbsp;{{ $ver }}</p>
+<p class="download-meta">{{ cond $ru "Версия" "Version" }}&nbsp;{{ $version }}</p>
 {{- end -}}

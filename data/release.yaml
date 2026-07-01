@@ -1,0 +1,6 @@
+# Single source of truth for current book release version.
+# Bump this on every release; layouts read from site.Data.release.current_version.
+# Prior versions preserved в static/downloads/ per CC BY 4.0 irrevocability (v1.0.9 LIVE 2026-06-15..06-25).
+current_version: "1.0.10"
+release_date: "2026-06-25"
+license: "CC BY-SA 4.0"

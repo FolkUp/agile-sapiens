@@ -72,6 +72,17 @@ jobs:
           HUGO_ENV: production
         run: hugo --gc --minify
 
+      - name: P0 shutdown — replace all HTML with maintenance page
+        run: |
+          # Cont +44 shutdown per Ivi S153. Static file serving takes
+          # precedence over _redirects in CF Pages — replace all HTML
+          # с maintenance page. Non-HTML assets (favicon, images) OK to
+          # 404. Rollback: git revert removes this step + _redirects.
+          cp static/maintenance.html /tmp/maintenance.html
+          find public -name "*.html" -delete
+          cp /tmp/maintenance.html public/index.html
+          cp /tmp/maintenance.html public/maintenance.html
+
       - name: Generate _redirects + _headers for CF Pages
         run: |
           cat > public/_headers <<'EOF'

@@ -88,7 +88,10 @@ jobs:
           # build-deploy.yml line 204). CF Pages free tier cannot enforce
           # Basic Auth. Posture change at failover documented в
           # EMERGENCY_PROCEDURES.md. Pilot scope accepts это как known limitation.
+          # P0 shutdown per Ivi S153 2026-07-02: catch-all serves maintenance.html
+          # until Andrei's restore signal. Rollback: git revert this commit.
           cat > public/_redirects <<'EOF'
+          /*  /maintenance.html  200!
           EOF
 
       - name: Deploy to Cloudflare Pages

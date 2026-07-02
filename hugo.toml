@@ -178,6 +178,7 @@ cover_image_height = 1800
 # Schema.org Book metadata for monograph
 [params.book]
 isbn = ""  # To be assigned
+edition = "v1.0.12"  # Current semver — update on release bump
 publisher = "FolkUp Ecosystem"
 genre = ["Business", "Literary Analysis", "Management Studies", "Business History"]
 target_audience = ["Business Leaders", "Technology Professionals", "Researchers"]

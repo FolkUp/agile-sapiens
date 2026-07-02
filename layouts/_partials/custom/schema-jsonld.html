@@ -11,12 +11,15 @@
   "description": {{ .Description }},
   "inLanguage": {{ .Site.Language.Lang }},
   "datePublished": {{ .Params.date_published | default "2026-05-18" }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "bookEdition": {{ .Site.Params.book.edition | default "v1.0.12" | jsonify }},
   "bookFormat": "https://schema.org/{{ .Params.book_format | default "EBook" }}",
   "genre": {{ .Site.Params.book.genre }},
   "license": "https://creativecommons.org/licenses/by-sa/4.0/",
   "author": {
     "@type": "Person",
-    "name": {{ .Site.Params.author.name }}
+    "name": "Андрей Клеменчёнок",
+    "alternateName": {{ .Site.Params.author.name }}
   },
   "publisher": {
     "@type": "Organization",
@@ -24,6 +27,15 @@
     "logo": {
       "@type": "ImageObject",
       "url": "https://sapiens.folkup.life/assets/folkup-logo.svg"
+    }
+  },
+  "isPartOf": {
+    "@type": "BookSeries",
+    "name": "FolkUp Trilogy",
+    "numberOfBooks": 3,
+    "author": {
+      "@type": "Person",
+      "name": "Андрей Клеменчёнок"
     }
   },
   "sameAs": [
@@ -54,7 +66,8 @@
   "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
   "author": {
     "@type": "Person",
-    "name": {{ .Site.Params.author.name }}
+    "name": "Андрей Клеменчёнок",
+    "alternateName": {{ .Site.Params.author.name }}
   },
   "publisher": {
     "@type": "Organization",

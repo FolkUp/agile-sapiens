@@ -1,0 +1,26 @@
+# FolkUp hybrid AI bot policy per Q11 canonical decision
+# Trusted AI crawlers (constructive relationship): allow
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Untrusted AI training crawlers (commercial LLM w/o attribution): block
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+# Standard search engines: allow
+User-agent: *
+Allow: /
+
+Sitemap: https://sapiens.folkup.life/sitemap.xml

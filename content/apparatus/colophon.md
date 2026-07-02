@@ -20,7 +20,7 @@ weight: 10
 **Юридический правообладатель (©):** Андрей Клеменчёнок (ORCID: [0009-0008-2953-8601](https://orcid.org/0009-0008-2953-8601))  
 **Псевдоним:** «Команданте FolkUp» — литературный псевдоним; юридическое имя автора в © и контрактах — Андрей Клеменчёнок (модель Бэнкси: лицо скрыто, имя для юр.нужд).  
 **Язык издания:** Русский  
-**Текущая версия:** 1.0.11  
+**Текущая версия:** 1.0.12  
 
 ## Техническая информация
 
@@ -55,8 +55,9 @@ Email: editor@folkup.app
 
 **Начало работы:** Март 2026  
 **Первая публикация:** 2026-05-26  
-**Последнее обновление:** 2026-07-02 (v1.0.11 — ЩИТ v5.0 apply S149: 21 патч хвоста + 9 патчей головы + 1 phantom Блок Wikisource-verified; 4 phantoms устранены (Хогвартс CRITICAL Howell 1994vs1997 / Сервантес MAJOR фейк-атрибуция / Вейк MAJOR composite quote / Блок MAJOR wrong «Двенадцать» line); B1-канон labels apparatus; regenerate EPUB + PDF с обновлёнными metadata)  
-**Предыдущее обновление:** 2026-06-25 (v1.0.10 — перелицензирование с CC BY 4.0 на CC BY-SA 4.0 по канону серии S100; regenerate EPUB + PDF с обновлёнными metadata)
+**Последнее обновление:** 2026-07-02 (v1.0.12 — cont +13 phantom-scan Ch1-appendix expanded + Дьюи SEO cascade: 2 MAJOR phantoms устранены (Doyle Portsmouth NOT Edinburgh 1886 / Wells съёмная комната generic NOT Maybury Rd Oct 1894), 3 MODERATE (Nokia 49→51% Q4 2007 / Knight Capital 460→440M pre-tax / Stoker Dracula 7→«нескольких лет с 1890-м»); Schema.org Book + author dual identity + BookSeries + dateModified + bookEdition; robots.txt hybrid AI policy (ClaudeBot/PerplexityBot allow; GPTBot/CCBot/Google-Extended/cohere-ai block); IndexNow key file added; regenerate EPUB + PDF с обновлёнными metadata)  
+**Предыдущее обновление:** 2026-07-02 (v1.0.11 — ЩИТ v5.0 apply S149 + голова phantom-scan: 30 patches Ивин + 6 phantoms head устранены Wikisource-verified per Lesson #42 (Verne адреса Нант/rue Charles Dubois→Амьен · Reform Club whist роли inverted · Poe date 1845→апрель 1846 Graham's · Frankenstein «It's alive!»→primary source Ch.5 dull yellow eye · Target Canada 124→133 stores); B1-канон labels apparatus)  
+**Ещё раньше:** 2026-06-25 (v1.0.10 — перелицензирование с CC BY 4.0 на CC BY-SA 4.0 по канону серии S100)
 
 ---
 

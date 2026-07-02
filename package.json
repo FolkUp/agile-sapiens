@@ -20,7 +20,9 @@
     "quality:phantom": "node scripts/phantom-detection-gates.js",
     "quality:check": "bash scripts/quality-check.sh",
     "quality:status": "bash scripts/quality-check.sh status",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test agil-a11y-axe",
+    "test:links": "node scripts/internal-link-resolver.cjs"
   },
   "keywords": [
     "agile-sapiens",
@@ -40,6 +42,7 @@
     "puppeteer": "^24.43.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@playwright/test": "^1.59.1"
   },
   "engines": {

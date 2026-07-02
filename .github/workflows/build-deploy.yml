@@ -89,6 +89,12 @@ jobs:
           node scripts/validate-content.js --check=brand
           echo "✅ Brand consistency PASSED"
 
+      - name: Quality Gate 7a — Internal Link Resolution (cont +13)
+        run: |
+          echo "=== QUALITY GATE 7a: Internal Link Resolution ==="
+          node scripts/internal-link-resolver.cjs
+          echo "✅ Internal link resolution PASSED"
+
       - name: Quality Gate 7 — Playwright E2E Tests
         run: |
           echo "=== QUALITY GATE 7: Playwright E2E ==="

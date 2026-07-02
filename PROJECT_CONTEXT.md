@@ -106,8 +106,8 @@ No P0 blockers; **AGIL-190 campaign CLOSED 2026-05-26** (8 batches: 0 frame + 1-
 
 9 PRs merged: AGIL-177 (templates), AGIL-181 (about.md), AGIL-174+179 (cover everywhere), AGIL-175+176 (EPUB full content + 16 illustrations), AGIL-178 (PDF apparatus), AGIL-180 (cover hero HTML), AGIL-183 (orphan cleanup), AGIL-168+173 (typography 18px + desktop touch targets 44px), AGIL-182 (Ch.6 plate split via Replicate). Book object state:
 - **Web:** cover hero on homepage; 12/12 chapter pages with appropriate plates; Ch.6 parts now visually distinct (Holmes 221B Baker Street + Jekyll/Hyde mirror scene); 16px→18px base font; landmark navs at 44px on desktop.
-- **EPUB v1.0.10:** 11.6 MB (11,587,300 bytes); 27 spine items (cover + title + nav + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus); 17 webp images embedded. Regenerated 2026-06-25 (PR #172 cont #34 X-FINAL license canon BY-SA atomic A1 bundle); dc:rights BY-SA 4.0 verified. v1.0.9 (BY 4.0) preserved для backward compat per CC irrevocability.
-- **PDF v1.0.10:** 3.5 MB (3,467,588 bytes); 255 pages; cover first page; full apparatus + BY-SA license metadata. Regenerated 2026-06-25 (PR #172).
+- **EPUB v1.0.11:** 11.6 MB (11,587,541 bytes); 27 spine items (cover + title + nav + preface + 12 chapters + 3 intermezzi + afterword + 7 apparatus); 17 webp images embedded. Regenerated 2026-07-02 (cont +11/+12 kn.1 ЩИТ v5 S149 apply + голова phantom-scan fixes: 30 patches Иви + 5 phantoms + Verne addresses corrected + Poe date + Frankenstein primary source + Target Canada store count); dc:rights BY-SA 4.0 verified. SHA256 `84e2e1d74f2fb4f8e9003970c70679852bc8aa9b16f2e53efd927c8ef404d046`. v1.0.9 (BY 4.0) + v1.0.10 (BY-SA) preserved для backward compat per CC irrevocability.
+- **PDF v1.0.11:** 3.5 MB (3,461,680 bytes); ~255 pages; cover first page; full apparatus + BY-SA license metadata. Regenerated 2026-07-02. SHA256 `8533d183b64b6394d0b32061ab2ec64d45d8619e72d8931cbf264b40698e5b61`.
 
 ## Evidence Chain
 

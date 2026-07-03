@@ -1,0 +1,77 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":gitSignOff",
+    "helpers:pinGitHubActionDigests",
+    "schedule:earlyMondays"
+  ],
+  "timezone": "Europe/Berlin",
+  "labels": ["renovate", "dependencies"],
+  "assignees": ["anklemPT"],
+  "prHourlyLimit": 3,
+  "prConcurrentLimit": 3,
+  "rangeStrategy": "bump",
+  "rebaseWhen": "conflicted",
+  "commitMessagePrefix": "chore(deps):",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on monday"],
+    "automerge": true
+  },
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security", "renovate", "priority-high"],
+    "schedule": ["at any time"],
+    "prPriority": 10,
+    "automerge": false
+  },
+  "packageRules": [
+    {
+      "description": "Auto-merge patch updates if CI green",
+      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "platformAutomerge": true
+    },
+    {
+      "description": "Auto-merge minor after 3-day quarantine",
+      "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "platformAutomerge": true,
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "description": "Major updates — manual review",
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "labels": ["renovate", "major-update", "review-required"]
+    },
+    {
+      "description": "Playwright + a11y — grouped",
+      "matchPackagePatterns": ["^@playwright/", "^playwright", "^@axe-core/"],
+      "groupName": "E2E + a11y"
+    },
+    {
+      "description": "Validation tooling — grouped (glob/js-yaml/node-fetch)",
+      "matchPackageNames": ["glob", "js-yaml", "node-fetch"],
+      "groupName": "Validation tooling"
+    },
+    {
+      "description": "Puppeteer — solo (heavy, breaking risk)",
+      "matchPackageNames": ["puppeteer"],
+      "groupName": "Puppeteer"
+    },
+    {
+      "description": "GitHub Actions — grouped + auto-merge с задержкой",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "automerge": true,
+      "minimumReleaseAge": "3 days"
+    }
+  ],
+  "ignoreDeps": []
+}

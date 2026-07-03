@@ -72,16 +72,16 @@ jobs:
           HUGO_ENV: production
         run: hugo --gc --minify
 
-      - name: P0 shutdown — replace all HTML with maintenance page
+      - name: Migration to books.folkup.life — remove Hugo HTML (redirect precedence)
         run: |
-          # Cont +44 shutdown per Ivi S153. Static file serving takes
-          # precedence over _redirects in CF Pages — replace all HTML
-          # с maintenance page. Non-HTML assets (favicon, images) OK to
-          # 404. Rollback: git revert removes this step + _redirects.
-          cp static/maintenance.html /tmp/maintenance.html
+          # Cont +40 Андрей mandate: «все книги публикуем только на новом
+          # портале» + «на старый домен возвращать не будем». sapiens.folkup.life
+          # dead → 301 redirect ко books.folkup.life/kn1/.
+          # CF Pages: static HTML takes precedence over _redirects — поэтому
+          # delete all Hugo-built HTML. Оставляем только maintenance.html
+          # как fallback если redirect broken.
           find public -name "*.html" -delete
-          cp /tmp/maintenance.html public/index.html
-          cp /tmp/maintenance.html public/maintenance.html
+          cp static/maintenance.html public/maintenance.html
 
       - name: Generate _redirects + _headers for CF Pages
         run: |
@@ -90,19 +90,38 @@ jobs:
             Strict-Transport-Security: max-age=31536000; includeSubDomains
             X-Content-Type-Options: nosniff
             Referrer-Policy: strict-origin-when-cross-origin
+            X-Robots-Tag: noindex
 
           /assets/*
             Cache-Control: public, max-age=31536000, immutable
           EOF
 
-          # Basic Auth note: sapiens.folkup.life uses Basic Auth on VPS (per
-          # build-deploy.yml line 204). CF Pages free tier cannot enforce
-          # Basic Auth. Posture change at failover documented в
-          # EMERGENCY_PROCEDURES.md. Pilot scope accepts это как known limitation.
-          # P0 shutdown per Ivi S153 2026-07-02: catch-all serves maintenance.html
-          # until Andrei's restore signal. Rollback: git revert this commit.
+          # 301 permanent redirect всех URL ко новому порталу.
+          # Deep URLs (chapters/*, downloads/*.epub) → /kn1/* соответствие
+          # (portal имеет такую же routing schema для кн.1).
+          # Fallback: root → /kn1/ (main book page).
+          # maintenance.html доступен через /maintenance.html если portal down.
           cat > public/_redirects <<'EOF'
-          /*  /maintenance.html  200!
+          # 301 permanent redirect sapiens.folkup.life → books.folkup.life/kn1/
+          # per Андрей cont +40 mandate 2026-07-03 «все книги только на новом портале».
+
+          # Downloads preserve path — новые downloads тоже на portal
+          /downloads/*  https://books.folkup.life/kn1/downloads/:splat  301!
+
+          # Chapter URLs preserve slug structure
+          /chapters/*  https://books.folkup.life/kn1/chapters/:splat  301!
+
+          # Apparatus (примечания, cross-refs, etc)
+          /apparatus/*  https://books.folkup.life/kn1/apparatus/:splat  301!
+
+          # Afterword
+          /afterword/*  https://books.folkup.life/kn1/afterword/:splat  301!
+
+          # About / colophon
+          /about/*  https://books.folkup.life/kn1/about/:splat  301!
+
+          # Root + everything else → book main page
+          /*  https://books.folkup.life/kn1/  301!
           EOF
 
       - name: Deploy to Cloudflare Pages

@@ -106,22 +106,22 @@ jobs:
           # per Андрей cont +40 mandate 2026-07-03 «все книги только на новом портале».
 
           # Downloads preserve path — новые downloads тоже на portal
-          /downloads/*  https://books.folkup.life/kn1/downloads/:splat  301!
+          /downloads/*  https://books.folkup.life/kn1/downloads/:splat  301
 
           # Chapter URLs preserve slug structure
-          /chapters/*  https://books.folkup.life/kn1/chapters/:splat  301!
+          /chapters/*  https://books.folkup.life/kn1/chapters/:splat  301
 
           # Apparatus (примечания, cross-refs, etc)
-          /apparatus/*  https://books.folkup.life/kn1/apparatus/:splat  301!
+          /apparatus/*  https://books.folkup.life/kn1/apparatus/:splat  301
 
           # Afterword
-          /afterword/*  https://books.folkup.life/kn1/afterword/:splat  301!
+          /afterword/*  https://books.folkup.life/kn1/afterword/:splat  301
 
           # About / colophon
-          /about/*  https://books.folkup.life/kn1/about/:splat  301!
+          /about/*  https://books.folkup.life/kn1/about/:splat  301
 
           # Root + everything else → book main page
-          /*  https://books.folkup.life/kn1/  301!
+          /*  https://books.folkup.life/kn1/  301
           EOF
 
       - name: Deploy to Cloudflare Pages

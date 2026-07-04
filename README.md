@@ -1,6 +1,11 @@
 <!-- precommit:allow-ai-mentions -->
 # AGILE SAPIENS
 
+> **📚 Site migrated 2026-07-03 → [books.folkup.life/kn1/](https://books.folkup.life/kn1/)**  
+> This repo и `sapiens.folkup.life` domain остались как historical archive.  
+> Canonical publishing home для всей серии книг: **[books.folkup.life](https://books.folkup.life)**  
+> Deep URLs preserved via 301 redirect (chapters / apparatus / afterword / downloads).
+
 **Version:** 1.0.11 | **Date:** 2026-07-02  
 **Literary Business Analysis — How Literature Predicted Modern Management**
 
@@ -94,8 +99,8 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 
 ### Strategic Execution Phase
 
-**Repository:** Hugo SSG with Hextra theme  
-**Domain:** sapiens.folkup.life  
+**Repository:** Hugo SSG with Hextra theme (historical — see migration banner top)  
+**Domain:** `books.folkup.life/kn1/` (canonical, migrated 2026-07-03 cont +40) · `sapiens.folkup.life` → 301 redirect  
 **License:** CC BY-SA 4.0 (content) — relicensed from CC BY 4.0 on 2026-06-25 per S100 canon (вся серия FolkUp под единым стандартом BY-SA); MIT (code). Prior recipients of v1.0.9 (LIVE since 2026-06-22) retain CC BY 4.0 rights per CC license irrevocability (creativecommons.org/faq).
 
 ### Visual content

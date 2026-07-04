@@ -1,6 +1,11 @@
 <!-- precommit:allow-ai-mentions -->
 # AGILE SAPIENS — Project Context & Status
 
+> **📚 Migrated 2026-07-03 → [books.folkup.life/kn1/](https://books.folkup.life/kn1/)**  
+> This repo и `sapiens.folkup.life` domain — historical archive.  
+> Canonical publishing home для всей серии: **[books.folkup.life](https://books.folkup.life)**  
+> Deep URLs preserved via 301 (chapters / apparatus / afterword / downloads).
+
 **Version:** 1.0.9 | **Date:** 2026-06-15
 **Status:** AGIL-190 Theme Correction Phase 2 **CLOSED 2026-05-26** — all 8 batches shipped (PR #107 Mina 2026-05-24 + PR #110 Jekyll corporate-dualism 2026-05-24 + PR #112 Don Quixote team-mythology 2026-05-25 + PR #114 Wells *Time Machine* labor-horizons 2026-05-25 + PR #115 Strugatsky НИИЧАВО self-organizing R&D 2026-05-25 + PR #118 Camus *La Peste* sustained-crisis communauté 2026-05-25 + PR #120 afterword «Одиннадцать линз» toolkit 2026-05-26 + PRs #123-129 Batch 8 close-out: mono% remeasure, whole-book hostile read-through, 6 findings addressed + Ch.8 BRIDGE post-deploy phantom fix (PR #126), apparatus К/О/П/Р alphabetical cleanup, downloads regen + sync 2026-05-26). **AGIL-187 link-audit Batch 1 SHIPPED 2026-05-26** (PR #130) + **AGIL-187 Batch 4 dead-code cleanup SHIPPED 2026-05-27** (PR #132 + PR #133 footer hotfix + PR #134 docs sync): 21 files / 3328 deletions across 4 groups (7 EN dead-shadow content + 8 legacy cover/setup scripts + 4 misc dead artifacts + 2 stray hugo configs); post-deploy verification caught EN footer labels (Privacy Policy/Terms/Cookies/AI Transparency) — fixed in same session via PR #133 RU translation. **AGIL-188 author attribution propagation SHIPPED 2026-05-27** (PR #135 admin-merge): canonical «Андрей Клеменчёнок» (legal, dc:creator+SEO) + «Андрей Клеменчёнок · Команданте FolkUp» (visual title pages dual); 19 edits / 9 files (content frontmatter ×3, signatures ×2, colophon ×3 incl L11 subtitle refresh, EPUB+PDF pipeline ×3, hugo.toml ×2, JSON-LD ×6 with @type Org→Person + consume site param); EPUB+PDF regenerated (11,585,688 bytes SHA `0f7e7c6d...3aa4a` + 3,447,624 bytes SHA `1482409f...89d4b7`) + synced to static/downloads; hostile pre-review caught 5 BLOCKER (JSON-LD schema type mismatch, RSS email pairing, colophon stale subtitle, BACKLOG conflate risk, SHA-order); hostile post-review caught 1 MUST-FIX (CRLF/LF on _partials/hextra/schema-jsonld.html, 120 CR bytes removed); 5 WARN deferred to AGIL-189 colophon-refresh batch + future enhancements; prod-verified all surfaces — homepage+chapter JSON-LD `author:{@type:Person,name:Андрей Клеменчёнок}`, RSS managingEditor = `anklem@folkup.app (Андрей Клеменчёнок)`, EPUB dc:creator legal + title.xhtml dual + PDF page 2 dual + colophon subtitle refreshed «Литературный бизнес-анализ. Как литература предсказала современный менеджмент». Ch.6/p1 holmes-watson missing alias fixed (prod 404 for 2 days), Ch.1 + Ch.10 footnote parity defects fixed, `/archive/` + `/docs/` EN-content phantoms removed, menu translated EN→RU, legal/_index.md translated EN→RU, new UTF-8-safe audit tooling shipped. Campaign complete: 0 AI framing anywhere (web + EPUB + PDF + Terms), 0 phantom citations, apparatus alphabetically clean, 12/12+afterword mono% compliant, SHA byte-match local↔prod verified. **Closed 2026-05-27**: AGIL-189 colophon refresh (PR #137) / AGIL-166 reading-mode adopt (PR #138) / AGIL-187 Batch 5a dead-code consolidated (PR #139, 29 deletions / 6,956 lines) / docs sync PR #140. **Closed 2026-05-28**: Trilogy Series Work KICKOFF (PR #141 + #142, 4-batch package для Иви в `tmp/for-ivi/2026-05-28/` 17 files). **Closed 2026-05-29 (compaction)**: MCP Bridge Research (PR #143 docs sync — outbound package для Иви в `tmp/for-ivi/2026-05-29/`). D6+D9 закрыты Иви session v21 автономно. **Closed 2026-05-28 (post-compact Cartouche L3 session, 6 batches)**: B0 phantom-fix (PR #144 docs Q14→Q15) + B1 AGIL-187 Batch 5b deploy/ orphans (PR #145, 13 files / 1854 lines) + B2 AGIL-187 Batch 5c top-level historical reports (PR #146, 38 files / 6131 lines) + B6 bridge Q1-Q5 courier-card staged in `tmp/for-ivi/2026-05-29/` + B4 PREP series template inventory in `tmp/prep/` + B5 PREP Agile design snapshot in `tmp/prep/`. Враг pre+post hostile review each batch. Production correction: site is on VPS via `scripts/deploy-to-vps.sh` (verified `server: nginx`), Cloudflare = CDN purge only. Top-level `.md` inventory 43→5 files (canonical only). Pending Андрей (unchanged): 15 MCP open questions (5 blocking MVP + 10 operational incl. Q15 delete-vs-archive — now packaged as mobile-friendly card) + 7 series decision-gates (D1/D2/D3/D4/D5/D7/D8). Pre-publisher polish batch landed (PRs #81–#90). Post-batch: AGIL-186 homepage download buttons (PR #95); AGIL-187 full site audit (4 fronts) — Batch A accessibility (PR #98), Batch C EN-removal (PR #99), Batch B SEO meta/schema (PR #101); AGIL-185 new Victorian SVG/CSS cover (PR #103 + PR #104 hotfix).
 
@@ -30,8 +35,8 @@ No P0 blockers; **AGIL-190 campaign CLOSED 2026-05-26** (8 batches: 0 frame + 1-
 
 ## Project Overview
 
-**Domain:** sapiens.folkup.life  
-**Repository:** Hugo SSG with Hextra theme  
+**Domain:** `books.folkup.life/kn1/` (canonical, migrated 2026-07-03 cont +40) · `sapiens.folkup.life` → 301 redirect  
+**Repository:** Hugo SSG with Hextra theme (historical — see migration banner top)  
 **Structure:** 11 numbered chapters (0-10, with Chapter 6 in two parts) + 3 intermezzos = 12 content units  
 **License:** CC BY-SA 4.0 (content) — relicensed from CC BY 4.0 on 2026-06-25 per S100 canon; MIT (code)  
 **Goal:** Best Scientific Popular Book 2026
@@ -71,7 +76,7 @@ No P0 blockers; **AGIL-190 campaign CLOSED 2026-05-26** (8 batches: 0 frame + 1-
 
 ### Deployment Status
 - **Hugo Build:** v0.155.2 builds 12 chapters successfully
-- **Website:** sapiens.folkup.life (HTTP 200, all pages accessible)
+- **Website:** `books.folkup.life/kn1/` (HTTP 200 verified 2026-07-04 cont +41) · `sapiens.folkup.life` → 301 redirect
 - **VPS Scripts:** Operational with atomic switching capability
 - **Development Tools:** Quality measurement tools operational
 

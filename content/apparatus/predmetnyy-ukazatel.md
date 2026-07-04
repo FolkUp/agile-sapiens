@@ -558,4 +558,4 @@ note: "Skeleton with chapter-level locators only. Page references will be added 
 
 ---
 
-*[← Назад к аппарату](/apparatus/) • [К глоссарию замен ↗](/apparatus/slovar-terminov/)*
+*[← Назад к аппарату](/apparatus/)*

@@ -105,6 +105,12 @@ jobs:
           # 301 permanent redirect sapiens.folkup.life → books.folkup.life/kn1/
           # per Андрей cont +40 mandate 2026-07-03 «все книги только на новом портале».
 
+          # SEO discovery files — preserve semantic file type (не HTML page)
+          # Portal имеет собственный robots/llms/sitemap на root
+          /robots.txt   https://books.folkup.life/robots.txt   301
+          /llms.txt     https://books.folkup.life/llms.txt     301
+          /sitemap.xml  https://books.folkup.life/sitemap.xml  301
+
           # Downloads preserve path — новые downloads тоже на portal
           /downloads/*  https://books.folkup.life/kn1/downloads/:splat  301
 

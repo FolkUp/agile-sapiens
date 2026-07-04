@@ -1,11 +1,15 @@
 # AGIL-073: Uptime Canary — zero-vendor monitoring
 #
-# Runs every 10 minutes against https://sapiens.folkup.life/.
-# Checks: HTTP status (Basic Auth honored), TLS cert validity + days-to-expiry, response time.
+# Runs every 10 minutes against https://books.folkup.life/ (Books Portal — canonical
+# home всей серии Agile Sapiens post cont +40 migration 2026-07-03).
+# Checks: HTTP status (200), TLS cert validity + days-to-expiry, response time.
 # On failure → POST to Telegram supergroup Deploy Reports, topic "AGILE SAPIENS".
 #
+# Retargeted 2026-07-04 cont +41: was sapiens.folkup.life (decommissioned → 301
+# redirect к portal). Sapiens 301 monitoring — separate concern, tracked
+# как AGIL-CANARY-SAPIENS-301-MONITOR если priority raises.
+#
 # Required GitHub Secrets:
-#   PREVIEW_USER, PREVIEW_PASS  — Basic Auth (already set for build-deploy)
 #   TELEGRAM_BOT_TOKEN          — @folkup_updates_bot token
 #   TELEGRAM_AGILE_TOPIC        — Topic ID (message_thread_id) for "AGILE SAPIENS" topic
 # Static (in workflow):
@@ -32,24 +36,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     env:
-      DOMAIN: sapiens.folkup.life
+      DOMAIN: books.folkup.life
       TG_CHAT_ID: '-1003596453051'
       CERT_WARN_DAYS: 14
     steps:
-      - name: HTTP probe (Basic Auth)
+      - name: HTTP probe
         id: http
         run: |
           set +e
-          # Use Basic Auth if configured, fall back to unauth (expect 401)
-          if [ -n "${{ secrets.PREVIEW_USER }}" ] && [ -n "${{ secrets.PREVIEW_PASS }}" ]; then
-            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 10 \
-              -u "${{ secrets.PREVIEW_USER }}:${{ secrets.PREVIEW_PASS }}" \
-              "https://${DOMAIN}/")
-            EXPECTED=200
-          else
-            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 10 "https://${DOMAIN}/")
-            EXPECTED=401
-          fi
+          # Books portal = public (no Basic Auth), expect 200 always.
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 10 "https://${DOMAIN}/")
+          EXPECTED=200
           RESP_TIME=$(curl -s -o /dev/null -w "%{time_total}" -m 10 "https://${DOMAIN}/")
           echo "http_code=$HTTP_CODE" >> "$GITHUB_OUTPUT"
           echo "expected=$EXPECTED" >> "$GITHUB_OUTPUT"
@@ -118,7 +115,7 @@ jobs:
       - name: Summary
         if: always()
         run: |
-          echo "## Uptime Canary — sapiens.folkup.life" >> $GITHUB_STEP_SUMMARY
+          echo "## Uptime Canary — books.folkup.life (Books Portal)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Check | Status | Detail |" >> $GITHUB_STEP_SUMMARY
           echo "|-------|--------|--------|" >> $GITHUB_STEP_SUMMARY

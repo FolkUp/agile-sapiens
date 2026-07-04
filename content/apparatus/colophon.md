@@ -26,7 +26,7 @@ weight: 10
 
 **Платформа:** Hugo Static Site Generator + Hextra Theme  
 **Хостинг:** VPS (nginx) · CDN-кэш: Cloudflare  
-**Домен:** [sapiens.folkup.life](https://sapiens.folkup.life)  
+**Домен:** [books.folkup.life/kn1/](https://books.folkup.life/kn1/)  
 **Лицензия контента:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (Attribution-ShareAlike)  
 **Исходный код:** [GitHub](https://github.com/FolkUp/agile-sapiens)
 

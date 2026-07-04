@@ -17,6 +17,8 @@ weight: 10
 
 **Раскрытие об иллюстрациях:** Иллюстрации книги сгенерированы с использованием инструмента искусственного интеллекта (Replicate Flux 1.1 Pro / Flux 2) под художественным руководством Фриды (FolkUp illustrator). Художественная ответственность, отбор и финальное решение о каждой иллюстрации остаются за редакционной командой FolkUp. *(Раскрытие соответствует требованиям Регламента EU 2024/1689, статья 50, параграф 4 — «Закон ЕС об искусственном интеллекте».)*
 
+**Раскрытие о современных примерах:** Примеры из современной практики (компании, кризисы, диалоги руководителей) — собирательные иллюстрации архетипов и паттернов, разбираемых в книге. Имена, реплики и детали не отсылают к конкретным реальным лицам за пределами явно поименованных исторических персонажей и общедоступных фактов о них.
+
 **Юридический правообладатель (©):** Андрей Клеменчёнок (ORCID: [0009-0008-2953-8601](https://orcid.org/0009-0008-2953-8601))  
 **Псевдоним:** «Команданте FolkUp» — литературный псевдоним; юридическое имя автора в © и контрактах — Андрей Клеменчёнок (модель Бэнкси: лицо скрыто, имя для юр.нужд).  
 **Язык издания:** Русский  
@@ -55,7 +57,7 @@ Email: editor@folkup.app
 
 **Начало работы:** Март 2026  
 **Первая публикация:** 2026-05-26  
-**Последнее обновление:** 2026-07-02 (v1.0.12 — cont +13 phantom-scan Ch1-appendix expanded + Дьюи SEO cascade: 2 MAJOR phantoms устранены (Doyle Portsmouth NOT Edinburgh 1886 / Wells съёмная комната generic NOT Maybury Rd Oct 1894), 3 MODERATE (Nokia 49→51% Q4 2007 / Knight Capital 460→440M pre-tax / Stoker Dracula 7→«нескольких лет с 1890-м»); Schema.org Book + author dual identity + BookSeries + dateModified + bookEdition; robots.txt hybrid AI policy (ClaudeBot/PerplexityBot allow; GPTBot/CCBot/Google-Extended/cohere-ai block); IndexNow key file added; regenerate EPUB + PDF с обновлёнными metadata)  
+**Последнее обновление:** 2026-07-02 (v1.0.12 — cont +13 phantom-scan Ch1-appendix expanded + Дьюи SEO cascade: 2 MAJOR phantoms устранены (Doyle Portsmouth NOT Edinburgh 1886 / Wells съёмная комната generic NOT Maybury Rd Oct 1894), 3 MODERATE (Nokia 49→51% Q4 2007 / Knight Capital 460→440M pre-tax / Stoker Dracula 7→«нескольких лет с 1890-м»); Schema.org Book + author dual identity + BookSeries + dateModified + bookEdition; robots.txt GEO A1 policy (вердикт Андрея S156, 2026-07-03: public контур allow-all robots включая training-краулеров, internal контур deny — расширение Декларации неогороженного знания + CC BY-SA 4.0); IndexNow key file added; regenerate EPUB + PDF с обновлёнными metadata)  
 **Предыдущее обновление:** 2026-07-02 (v1.0.11 — ЩИТ v5.0 apply S149 + голова phantom-scan: 30 patches Ивин + 6 phantoms head устранены Wikisource-verified per Lesson #42 (Verne адреса Нант/rue Charles Dubois→Амьен · Reform Club whist роли inverted · Poe date 1845→апрель 1846 Graham's · Frankenstein «It's alive!»→primary source Ch.5 dull yellow eye · Target Canada 124→133 stores); B1-канон labels apparatus)  
 **Ещё раньше:** 2026-06-25 (v1.0.10 — перелицензирование с CC BY 4.0 на CC BY-SA 4.0 по канону серии S100)
 

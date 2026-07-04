@@ -1,26 +1,21 @@
-# FolkUp hybrid AI bot policy per Q11 canonical decision
-# Trusted AI crawlers (constructive relationship): allow
-User-agent: ClaudeBot
-Allow: /
+# FolkUp GEO A1 policy — Андрей verdict S156 (2026-07-03, via Иви маяк 16WM9QJMgjXeAfC0uod0OP3VDqMuhQhwz)
+#
+# Public контур: allow all robots (including AI training crawlers).
+# Extends Декларация неогороженного знания + CC BY-SA 4.0 licensing.
+# Supersedes prior Q11 hybrid policy (which blocked GPTBot/CCBot/Google-Extended/cohere-ai).
+#
+# Internal контур: deny all (admin, API, staging, internal-only paths).
+# Defence in depth even if these paths do not currently exist in this Hugo site.
 
-User-agent: PerplexityBot
-Allow: /
-
-# Untrusted AI training crawlers (commercial LLM w/o attribution): block
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: cohere-ai
-Disallow: /
-
-# Standard search engines: allow
+# All robots welcome on public content
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_meta/
+Disallow: /_internal/
+Disallow: /staging/
+Disallow: /vault/
 
-Sitemap: https://sapiens.folkup.life/sitemap.xml
+# Sitemap now on canonical books portal (per migration cont +40, sapiens.folkup.life → books.folkup.life/kn1/)
+Sitemap: https://books.folkup.life/kn1/sitemap.xml

@@ -26,9 +26,9 @@ check() {
 
 echo "=== B2 фантомы S133 v2 + Ф8 ==="
 
-# 10 фантом-персон вне chapter-4-borges (виньетка гл.4 остаётся)
-ACTUAL=$(grep -rE "(Соколова|Волков|Воронина|Каримов|Лебедева|Борисов|Кравцов|Зубова|Петрова|Соловьёв)" content/chapters/ 2>/dev/null | grep -v "chapter-4-borges" | wc -l)
-check "10 фантомов вне гл.4 = 0" "0" "$ACTUAL"
+# 10 фантом-персон + гл.4 де-фактоизация 30.05 канон (S160) — исключение гл.4 снято cont +22
+ACTUAL=$(grep -rE "(Соколова|Волков|Воронина|Каримов|Лебедева|Борисов|Кравцов|Зубова|Петрова|Соловьёв|Бородин)" content/chapters/ 2>/dev/null | wc -l)
+check "10 фантомов + Бородин (все главы) = 0" "0" "$ACTUAL"
 
 # Литзамены должны присутствовать
 check "Гоголь Мёртвые души в гл.3" "1" "$(grep -c 'Мёртвых душ' content/chapters/chapter-3-holmes.md)"
@@ -91,6 +91,72 @@ check "Colophon STALE sapiens = 0" "0" "$(grep -c 'sapiens.folkup.life' content/
 check "_meta slovar-terminov" "1" "$(ls content/apparatus/_meta/slovar-terminov.md 2>/dev/null | wc -l)"
 check "_meta chapter-7-research-clearance" "1" "$(ls content/apparatus/_meta/chapter-7-research-clearance.md 2>/dev/null | wc -l)"
 check "apparatus/_index nav Предметный указатель" "1" "$(grep -c 'Предметный указатель' content/apparatus/_index.md)"
+
+echo ""
+echo "=== B7 cont +22 Ивин S160 БАТЧ 3 гл.3 Ф14-Ф23 + Р1-3 ==="
+
+check "Ф14 весна 1886 (не зима)" "1" "$(grep -c 'весна 1886 года' content/chapters/chapter-3-holmes.md)"
+check "Ф14 £154 первый год" "1" "$(grep -c 'Доход первого года — £154' content/chapters/chapter-3-holmes.md)"
+check "Ф14 £25 за все права" "1" "$(grep -c '£25 — за все права' content/chapters/chapter-3-holmes.md)"
+check "STALE зима 1886 = 0" "0" "$(grep -c 'зима 1886' content/chapters/chapter-3-holmes.md)"
+check "STALE £40 в год = 0" "0" "$(grep -c '£40 в год' content/chapters/chapter-3-holmes.md)"
+check "Ф15 фраза родится позже 1891" "1" "$(grep -c 'скажет Шерлок Холмс доктору Ватсону в «Скандале в Богемии» пять лет спустя' content/chapters/chapter-3-holmes.md)"
+check "Р1-3 письмо Дойла Беллу (body+footnote)" "2" "$(grep -c 'Именно вам я обязан Шерлоком Холмсом' content/chapters/chapter-3-holmes.md)"
+check "STALE Диагноз ставится Белл fabric = 0" "0" "$(grep -c 'Диагноз ставится на основе точного наблюдения мелких деталей' content/chapters/chapter-3-holmes.md)"
+check "Ф17 Гаспаров 2001 refined" "1" "$(grep -c 'издание 2001 года' content/chapters/chapter-3-holmes.md)"
+check "Ф18 девять лет Power Peg" "1" "$(grep -c 'не использовавшийся девять лет' content/chapters/chapter-3-holmes.md)"
+check "STALE семь лет Power Peg = 0" "0" "$(grep -c 'не использовался семь лет' content/chapters/chapter-3-holmes.md)"
+check "Ф19 наличность 365 млн" "1" "$(grep -cF '$365 млн на счетах накануне' content/chapters/chapter-3-holmes.md)"
+check "STALE стоившая 365 млн капитализация = 0" "0" "$(grep -c 'накануне стоившая 365 миллионов' content/chapters/chapter-3-holmes.md)"
+check "Ф20 lead time от коммита" "1" "$(grep -c 'от коммита до продакшена' content/chapters/chapter-3-holmes.md)"
+check "STALE меньше часа DORA = 0" "0" "$(grep -c 'от идеи до продакшена меньше часа' content/chapters/chapter-3-holmes.md)"
+check "Ф21 совокупные потери USD" "1" "$(grep -c 'Совокупные потери канадской авантюры' content/chapters/chapter-3-holmes.md)"
+check "STALE 7 млрд канадских = 0" "0" "$(grep -c '7 миллиардов канадских' content/chapters/chapter-3-holmes.md)"
+check "Ф22 Handelsblatt Lidl" "1" "$(grep -c 'по данным \*Handelsblatt\*' content/chapters/chapter-3-holmes.md)"
+check "STALE Business Insider Lidl = 0" "0" "$(grep -c 'по данным \*Business Insider\*' content/chapters/chapter-3-holmes.md)"
+check "Ф23 sноска5 Scandal in Bohemia" "1" "$(grep -c 'Точный источник цитаты о теориях без данных' content/chapters/chapter-3-holmes.md)"
+check "PREVIEW гл.3→4 Борхес" "1" "$(grep -c 'библиотекарь из Буэнос-Айреса' content/chapters/chapter-3-holmes.md)"
+check "П19 Мелвин Конвей unified" "0" "$(grep -c 'Мельвин Конвей' content/chapters/chapter-3-holmes.md)"
+
+echo ""
+echo "=== B8 cont +22 Ивин S160 БАТЧ 4 гл.4 де-фактоизация + Ф24-Ф29 ==="
+
+check "Де-факт Продакт-менеджер (не Денис)" "1" "$(grep -c 'Продакт-менеджер мобильного банкинга' content/chapters/chapter-4-borges.md)"
+check "Де-факт Тимлид (не Лена)" "1" "$(grep -c 'Тимлид финтех-стартапа' content/chapters/chapter-4-borges.md)"
+check "Де-факт HR-директор (не Марта)" "1" "$(grep -c 'HR-директор крупного банка' content/chapters/chapter-4-borges.md)"
+check "Де-факт CPO (не Александр)" "1" "$(grep -c 'CPO e-commerce-компании' content/chapters/chapter-4-borges.md)"
+check "Де-факт Скрам-мастер (не Анастасия)" "1" "$(grep -c 'Скрам-мастер геймдев-студии' content/chapters/chapter-4-borges.md)"
+check "STALE Денис Бородин = 0" "0" "$(grep -c 'Денис Бородин' content/chapters/chapter-4-borges.md)"
+check "STALE Лена Орлова = 0" "0" "$(grep -c 'Лена Орлова' content/chapters/chapter-4-borges.md)"
+check "STALE Марта Соколова = 0" "0" "$(grep -c 'Марта Соколова' content/chapters/chapter-4-borges.md)"
+check "STALE Александр Кравцов = 0" "0" "$(grep -c 'Александр Кравцов' content/chapters/chapter-4-borges.md)"
+check "STALE Анастасия Волкова = 0" "0" "$(grep -c 'Анастасия Волкова' content/chapters/chapter-4-borges.md)"
+check "STALE €47,000 = 0" "0" "$(grep -c '€47,000' content/chapters/chapter-4-borges.md)"
+check "STALE Белорусская = 0" "0" "$(grep -c 'офис на «Белорусской»' content/chapters/chapter-4-borges.md)"
+check "Марио переговорная беречь (стилевая деталь)" "1" "$(grep -c 'переговорная «Марио»' content/chapters/chapter-4-borges.md)"
+check "Ф25 Стрэтерн отчеканила формулу" "1" "$(grep -c 'Стрэтерн отчеканила ту же мысль в короткую формулу' content/chapters/chapter-4-borges.md)"
+check "Ф26 Ли jeremiahlee (не Sundén)" "1" "$(grep -c 'jeremiahlee.com, April 2020' content/chapters/chapter-4-borges.md)"
+check "STALE Sundén Sведенвал Chalmers = 0" "0" "$(grep -c 'Sundén, Jeremiah & Svedenwall' content/chapters/chapter-4-borges.md)"
+check "Ф27 семьдесят лет до SAFe" "1" "$(grep -c 'За семьдесят лет до появления SAFe' content/chapters/chapter-4-borges.md)"
+check "STALE шестьдесят до SAFe = 0" "0" "$(grep -c 'За шестьдесят лет до появления SAFe' content/chapters/chapter-4-borges.md)"
+check "Ф28 SAFe 4 конфигурации" "1" "$(grep -c 'четыре конфигурации (Essential, Large Solution, Portfolio, Full)' content/chapters/chapter-4-borges.md)"
+check "STALE SAFe семь уровней = 0" "0" "$(grep -c 'семь уровней, четыре конфигурации' content/chapters/chapter-4-borges.md)"
+check "Ф29 Nokia Laanti восприятие" "1" "$(grep -c 'Laanti, Salo, Abrahamsson (2011) описывают восприятие' content/chapters/chapter-4-borges.md)"
+check "Ф24 фантом-цитата 1 удалена" "0" "$(grep -c 'Я не знаю, сколько этажей у лотереи' content/chapters/chapter-4-borges.md)"
+check "Ф24 фантом-цитата 2 удалена" "0" "$(grep -c 'Та лотерея отличалась тем, что не была последней' content/chapters/chapter-4-borges.md)"
+check "Ф24 фантом-цитата 3 удалена" "0" "$(grep -c 'Эта функционирующая лотерея есть часть реальности' content/chapters/chapter-4-borges.md)"
+check "Р1-4 тираж за обедом косвенно" "1" "$(grep -c 'знали как разговор о тираже за обедом' content/chapters/chapter-4-borges.md)"
+check "П24 Вот вавилонская лотерея" "1" "$(grep -c 'Вот вавилонская лотерея в действии' content/chapters/chapter-4-borges.md)"
+check "STALE Здесь наблюдается вавилонская = 0" "0" "$(grep -c 'Здесь наблюдается вавилонская лотерея в действии' content/chapters/chapter-4-borges.md)"
+check "Книберг verbatim цитата" "1" "$(grep -c 'Эта статья — лишь снимок нашего текущего способа работы' content/chapters/chapter-4-borges.md)"
+check "PREVIEW гл.4→5 Наутилус" "1" "$(grep -c 'капитан, не проведший ни одного собеседования по регламенту' content/chapters/chapter-4-borges.md)"
+
+echo ""
+echo "=== B9 cont +22 гл.5 S134 T3 F-35 GAO 2024 ==="
+
+check "F-35 >2 трлн GAO 2024" "1" "$(grep -c 'общая стоимость программы за жизненный цикл превысит 2 триллиона' content/chapters/chapter-5-nemo.md)"
+check "F-35 GAO-24 sноска (body+footnote)" "2" "$(grep -c 'GAO-24-106909' content/chapters/chapter-5-nemo.md)"
+check "STALE 1.1-1.7 триллионов = 0" "0" "$(grep -c 'от 1.1 до 1.7 триллионов долларов на протяжении жизненного цикла' content/chapters/chapter-5-nemo.md)"
 
 echo ""
 echo "=== SUMMARY ==="

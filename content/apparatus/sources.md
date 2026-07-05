@@ -252,14 +252,6 @@ weight: 30
 14. **Accelerate: State of DevOps Report (DORA).** Google Cloud, 2023.  
     [Industry report] Contemporary DevOps performance metrics framework providing systematic measurement methodology for system health diagnosis and operational effectiveness analysis.
 
-**LITERARY-METHODOLOGICAL INTEGRATION**
-
-15. **Блок, Александр.** "Двенадцать" (1918). Скифы. СПб, 1918.  
-    [Primary source] Dolnik verse analysis providing prosodic framework for systematic pattern recognition in complex textual structures, supporting methodological parallels to system log analysis techniques.
-
-16. **Оксимирон.** "Город под подошвой." Альбом: Горгород (2015). Vajra Music.  
-    [Primary source] Modern dolnik verse example demonstrating contemporary application of systematic pattern analysis methodology in cultural-linguistic contexts, supporting diagnostic technique transferability across domains.
-
 ## Глава 4: Борхес строит архитектуру
 
 **PRIMARY LITERARY SOURCES — Borges Canon**

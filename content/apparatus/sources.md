@@ -611,7 +611,7 @@ weight: 30
 **ORGANIZATIONAL THEORY & MANAGEMENT FOUNDATIONS**
 
 3. **Rich, Ben R. & Janos, Leo.** *Skunk Works: A Personal Memoir of My Years at Lockheed* (1994). Little, Brown and Company.  
-   [Corporate memoir] Definitive account of autonomous engineering team methodology, establishing practical framework for isolated innovation teams and rapid prototype development under competent leadership.
+   [Corporate memoir] Definitive account of autonomous engineering team methodology, establishing practical framework for isolated innovation teams and rapid prototype development under competent leadership. XP-80 timeline per источнику: заказ 180 дней, сдан на «more than a month ahead». Официальная страница Lockheed Martin даёт 150 дней (сдан на 7 раньше) — глава кн.1 использует мемуарную цифру 180/37 в согласии с цитируемым источником.
 
 4. **Johnson, Clarence L.** "Kelly's 14 Rules & Practices." Lockheed Martin Skunk Works, originally formulated 1943.  
    [Corporate document] Foundational principles of autonomous engineering teams, providing systematic framework for small-team innovation methodology and bureaucracy isolation strategies.

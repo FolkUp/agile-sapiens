@@ -224,6 +224,17 @@ check "STALE эпистемический прорыв = 0" "0" "$(grep -c 'эп
 check "П41 асинхронность по умолчанию" "1" "$(grep -c 'асинхронность по умолчанию (async-first)' content/chapters/chapter-6-mina-harker.md)"
 
 echo ""
+echo "=== B12 cont +25 EXT развилка 2 «пять стадий» Кюблер-Росс курсив (chapter-2-frankenstein.md) ==="
+
+check "Развилка 2 Отрицание курсив (не кавычки)" "1" "$(grep -c '\*Система работает идеально' content/chapters/chapter-2-frankenstein.md)"
+check "Развилка 2 Гнев курсив" "1" "$(grep -c '\*Виноват подрядчик / вендор / предыдущая команда\*' content/chapters/chapter-2-frankenstein.md)"
+check "Развилка 2 Торг курсив" "1" "$(grep -c '\*Если мы просто добавим ещё 200 миллионов' content/chapters/chapter-2-frankenstein.md)"
+check "Развилка 2 Депрессия курсив" "1" "$(grep -c '\*Проект мёртв, деньги потрачены, ничего не работает\*' content/chapters/chapter-2-frankenstein.md)"
+check "Развилка 2 Принятие курсив" "1" "$(grep -c '\*Мы создали не то, что планировали. Теперь надо работать с тем, что есть\*' content/chapters/chapter-2-frankenstein.md)"
+check "STALE Отрицание кавычки = 0" "0" "$(grep -c '«Система работает идеально, пользователи просто недостаточно обучены' content/chapters/chapter-2-frankenstein.md)"
+check "STALE Гнев кавычки = 0" "0" "$(grep -c '«Виноват подрядчик / вендор / предыдущая команда»' content/chapters/chapter-2-frankenstein.md)"
+
+echo ""
 echo "=== SUMMARY ==="
 TOTAL=$((PASS + FAIL))
 echo "  Total tests: $TOTAL"

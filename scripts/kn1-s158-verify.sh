@@ -27,7 +27,8 @@ check() {
 echo "=== B2 фантомы S133 v2 + Ф8 ==="
 
 # 10 фантом-персон + гл.4 де-фактоизация 30.05 канон (S160) — исключение гл.4 снято cont +22
-ACTUAL=$(grep -rE "(Соколова|Волков|Воронина|Каримов|Лебедева|Борисов|Кравцов|Зубова|Петрова|Соловьёв|Бородин)" content/chapters/ 2>/dev/null | wc -l)
+# NOTE: «Петрова» excluded — cont +26 B4 Ф43 apply canonizes reference «Ильфа и Петрова» (авторы), не фантом
+ACTUAL=$(grep -rE "(Соколова|Волков|Воронина|Каримов|Лебедева|Борисов|Кравцов|Зубова|Соловьёв|Бородин)" content/chapters/ 2>/dev/null | wc -l)
 check "10 фантомов + Бородин (все главы) = 0" "0" "$ACTUAL"
 
 # Литзамены должны присутствовать
@@ -58,30 +59,34 @@ check "STALE 4 принципа 12 ценностей = 0" "0" "$(grep -c 'че�
 echo ""
 echo "=== B4 Дополнение №2 (интермедии) ==="
 
-check "И2 В1 прямая речь 237 задач" "1" "$(grep -c 'У нас двести тридцать семь задач висит в продакшене, — ответила Маргарита' content/chapters/intermezzo-2.md)"
+check "И2 В1 прямая речь 237 задач (cont+26 B3 П66 обновлён)" "1" "$(grep -c 'У нас двести тридцать семь задач висит в продакшене' content/chapters/intermezzo-2.md)"
 check "И2 В6 прямая речь спринт" "1" "$(grep -c 'Следующий спринт, — кивнула Маргарита' content/chapters/intermezzo-2.md)"
-check "И2-П5 Алиса спросила" "1" "$(grep -c 'Алиса спросила, почему максимальную' content/chapters/intermezzo-2.md)"
+check "И2-П5 (cont+26 B3 П66) Почему максимальную реплика" "1" "$(grep -c 'Почему максимальную?' content/chapters/intermezzo-2.md)"
+check "И2 cont+26 B3 Легаси-код нельзя сопровождать (Бегемот)" "1" "$(grep -c 'Легаси-код нельзя сопровождать' content/chapters/intermezzo-2.md)"
+check "И2 cont+26 B3 бордо благороднее (финал)" "1" "$(grep -c 'бордо' content/chapters/intermezzo-2.md)"
 check "И3-Р1 маскарад строка" "1" "$(grep -c 'имена свиты тут разбирают, как бейджи на конференции' content/chapters/intermezzo-3.md)"
 
 echo ""
 echo "=== B5 Дополнение №3 (каркас + фельетон) ==="
 
 # All каркас должны быть сняты
-ACTUAL=$(grep -E "^## (HOOK|CONTROVERSY|CORE|BRIDGE|PREVIEW):" content/chapters/*.md 2>/dev/null | wc -l)
-check "Каркас-заголовки во всех главах = 0" "0" "$ACTUAL"
+# NOTE: chapter-6-jekyll-hyde исключён — cont +26 B4 Ф42 apply canonizes «## HOOK: Борнмут, Skerryvore Villa, осень 1885 года» (авторский текст)
+ACTUAL=$(grep -E "^## (HOOK|CONTROVERSY|CORE|BRIDGE|PREVIEW):" content/chapters/*.md 2>/dev/null | grep -v "chapter-6-jekyll-hyde" | wc -l)
+check "Каркас-заголовки во всех главах = 0 (без гл.7 Ф42)" "0" "$ACTUAL"
 
 # Гл.0 фельетон Верна
 check "Гл.0 эталон Верн Le Temps" "1" "$(grep -c 'газета \*Le Temps\* печатает главы кругосветки' content/chapters/chapter-0-pilot.md)"
 
 echo ""
-echo "=== B6 свод S157 (Двенадцать вопросов) ==="
+echo "=== B6 свод S157 + cont+26 B2 (Одиннадцать вопросов) ==="
 
-check "Afterword title Двенадцать вопросов" "1" "$(grep -c 'title: \"Послесловие. Двенадцать вопросов\"' content/afterword.md)"
+check "Afterword title Одиннадцать вопросов" "1" "$(grep -c 'title: \"Послесловие. Одиннадцать вопросов\"' content/afterword.md)"
 check "Afterword линз = 0" "0" "$(grep -c 'линз' content/afterword.md)"
-check "Afterword секция 1 Фогг" "1" "$(grep -c '### 1. Фогг. Карта и территория' content/afterword.md)"
-check "Afterword секция 12 Чума" "1" "$(grep -c '### 12. Чума. Длящийся кризис' content/afterword.md)"
+check "Afterword Рамка Фогг" "1" "$(grep -c '### Рамка. Фогг. Карта и территория' content/afterword.md)"
+check "Afterword секция 11 Чума (renumber 12→11)" "1" "$(grep -c '### 11. Чума. Длящийся кризис' content/afterword.md)"
+check "Afterword секция 1 Верн (renumber 2→1)" "1" "$(grep -c '### 1. Верн. Итерация' content/afterword.md)"
 check "Preface F1 IDC 4 триллиона" "1" "$(grep -c 'к 2027 году они приблизятся к четырём триллионам' content/preface.md)"
-check "Preface F2 180 лет" "1" "$(grep -c 'Спустя 180 лет' content/preface.md)"
+check "Preface F2 сто восемьдесят лет (Ф101 пост-B1a)" "1" "$(grep -c 'Спустя сто восемьдесят лет' content/preface.md)"
 check "Preface П1 не продаёт" "1" "$(grep -c 'не продаёт решения' content/preface.md)"
 check "Preface STALE 179 лет = 0" "0" "$(grep -c '179 лет' content/preface.md)"
 check "Указатель добавлен вопрос" "1" "$(grep -c 'вопрос, диагностический' content/apparatus/predmetnyy-ukazatel.md)"

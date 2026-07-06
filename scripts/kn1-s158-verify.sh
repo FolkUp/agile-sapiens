@@ -70,9 +70,9 @@ echo ""
 echo "=== B5 Дополнение №3 (каркас + фельетон) ==="
 
 # All каркас должны быть сняты
-# NOTE: chapter-6-jekyll-hyde исключён — cont +26 B4 Ф42 apply canonizes «## HOOK: Борнмут, Skerryvore Villa, осень 1885 года» (авторский текст)
-ACTUAL=$(grep -E "^## (HOOK|CONTROVERSY|CORE|BRIDGE|PREVIEW):" content/chapters/*.md 2>/dev/null | grep -v "chapter-6-jekyll-hyde" | wc -l)
-check "Каркас-заголовки во всех главах = 0 (без гл.7 Ф42)" "0" "$ACTUAL"
+# NOTE: exclude — cont +26 B4/B7 Ф42/Ф67 apply canonizes «## HOOK: Борнмут» + «## HOOK: Ленинград — Москва» (авторские тексты)
+ACTUAL=$(grep -E "^## (HOOK|CONTROVERSY|CORE|BRIDGE|PREVIEW):" content/chapters/*.md 2>/dev/null | grep -vE "chapter-6-jekyll-hyde|chapter-9-niichavo" | wc -l)
+check "Каркас-заголовки во всех главах = 0 (без гл.7 Ф42 + гл.10 Ф67)" "0" "$ACTUAL"
 
 # Гл.0 фельетон Верна
 check "Гл.0 эталон Верн Le Temps" "1" "$(grep -c 'газета \*Le Temps\* печатает главы кругосветки' content/chapters/chapter-0-pilot.md)"

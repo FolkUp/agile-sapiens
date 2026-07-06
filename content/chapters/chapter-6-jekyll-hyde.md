@@ -7,7 +7,7 @@ date_updated: "2026-05-24"
 weight: 75
 chapter: 7
 plate_override: "agil-chapter-6-jekyll-plate.webp"
-act: "II: Archetypes"
+act: "II: Трансформация"
 category: "analysis"
 status: "verified"
 confidence: "high"

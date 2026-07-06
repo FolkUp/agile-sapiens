@@ -6,7 +6,7 @@ date_created: "2026-03-25"
 date_updated: "2026-04-21"
 weight: 10
 chapter: 0
-act: "I: Origins"
+act: "I: Истоки"
 act_opener: true
 act_label: "I"
 act_accent: "bordo"

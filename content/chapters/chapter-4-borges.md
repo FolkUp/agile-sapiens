@@ -6,7 +6,7 @@ date_created: "2026-03-28"
 date_updated: "2026-04-29"
 weight: 50
 chapter: 4
-act: "I"
+act: "I: Истоки"
 category: "analysis"
 tags:
   - "borges"

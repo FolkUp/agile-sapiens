@@ -6,7 +6,7 @@ date_created: "2026-04-08"
 date_updated: "2026-05-25"
 weight: 90
 chapter: 9
-act: "III: Future"
+act: "III: Горизонты"
 act_opener: true
 act_label: "III"
 act_accent: "sage"

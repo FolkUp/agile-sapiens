@@ -6,7 +6,7 @@ date_created: "2026-04-07"
 date_updated: "2026-05-25"
 weight: 80
 chapter: 8
-act: "II: Archetypes"
+act: "II: Трансформация"
 category: "analysis"
 status: "verified"
 sources:

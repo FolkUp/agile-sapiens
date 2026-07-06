@@ -6,7 +6,7 @@ date_created: "2026-03-26"
 date_updated: "2026-04-21"
 weight: 20
 chapter: 1
-act: "I: Origins"
+act: "I: Истоки"
 category: analysis
 reading_time: "22 min"
 tags:

@@ -7,7 +7,7 @@ date_updated: "2026-05-24"
 weight: 70
 chapter: 6
 plate_override: "agil-chapter-6-mina-plate.webp"
-act: "II: Archetypes"
+act: "II: Трансформация"
 category: "analysis"
 status: "verified"
 confidence: "high"

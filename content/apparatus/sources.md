@@ -252,14 +252,6 @@ weight: 30
 14. **Accelerate: State of DevOps Report (DORA).** Google Cloud, 2023.  
     [Industry report] Contemporary DevOps performance metrics framework providing systematic measurement methodology for system health diagnosis and operational effectiveness analysis.
 
-**LITERARY-METHODOLOGICAL INTEGRATION**
-
-15. **Блок, Александр.** "Двенадцать" (1918). Скифы. СПб, 1918.  
-    [Primary source] Dolnik verse analysis providing prosodic framework for systematic pattern recognition in complex textual structures, supporting methodological parallels to system log analysis techniques.
-
-16. **Оксимирон.** "Город под подошвой." Альбом: Горгород (2015). Vajra Music.  
-    [Primary source] Modern dolnik verse example demonstrating contemporary application of systematic pattern analysis methodology in cultural-linguistic contexts, supporting diagnostic technique transferability across domains.
-
 ## Глава 4: Борхес строит архитектуру
 
 **PRIMARY LITERARY SOURCES — Borges Canon**
@@ -619,7 +611,7 @@ weight: 30
 **ORGANIZATIONAL THEORY & MANAGEMENT FOUNDATIONS**
 
 3. **Rich, Ben R. & Janos, Leo.** *Skunk Works: A Personal Memoir of My Years at Lockheed* (1994). Little, Brown and Company.  
-   [Corporate memoir] Definitive account of autonomous engineering team methodology, establishing practical framework for isolated innovation teams and rapid prototype development under competent leadership.
+   [Corporate memoir] Definitive account of autonomous engineering team methodology, establishing practical framework for isolated innovation teams and rapid prototype development under competent leadership. XP-80 timeline per источнику: заказ 180 дней, сдан на «more than a month ahead». Официальная страница Lockheed Martin даёт 150 дней (сдан на 7 раньше) — глава кн.1 использует мемуарную цифру 180/37 в согласии с цитируемым источником.
 
 4. **Johnson, Clarence L.** "Kelly's 14 Rules & Practices." Lockheed Martin Skunk Works, originally formulated 1943.  
    [Corporate document] Foundational principles of autonomous engineering teams, providing systematic framework for small-team innovation methodology and bureaucracy isolation strategies.

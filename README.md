@@ -6,8 +6,10 @@
 > Canonical publishing home для всей серии книг: **[books.folkup.life](https://books.folkup.life)**  
 > Deep URLs preserved via 301 redirect (chapters / apparatus / afterword / downloads).
 
-**Version:** 1.0.11 | **Date:** 2026-07-02  
+**Version:** 1.0.12 | **Date:** 2026-07-07  
 **Literary Business Analysis — How Literature Predicted Modern Management**
+
+> **v1.0.12 (2026-07-07):** Свод-закрытие конвейера кн.1 Иве S162 (13/13 батчей). ПРОГОНы 7-11 apply (гл.7 Джекил / гл.8 Дон Кихот / гл.9 Машина времени / гл.10 НИИЧАВО / гл.11 Чума) — 50+ Ф + 5 Р + 22 П правки. Ф98 подпись «Команданте FolkUp» БЛОКЕР публикации закрыт. Ф99 «без линз» радикально: «Двенадцать вопросов» → «Одиннадцать вопросов» + Фогг = «Рамка». Интермедии I/II/III apply. Ф103 «монография» → «книга». П73 акты русские. Регрессия 160/160 PASS. Andrey GO S168: «Да мержем и запускаем».
 
 > **AGIL-190 Theme Correction Phase 2 CLOSED 2026-05-26** (kickoff 2026-05-24): the 2026-05-19 "Literary Theme Correction" (AGIL-170) cleaned the book frame (homepage, about, cover, EPUB/PDF templates) but the chapter bodies 6-10 + afterword retained the AI overlay (16-125 ИИ mentions per chapter; Ch.0-5 were always Agile-faithful). Multi-session campaign. **All 8 batches (0-7 content + Batch 8 close-out) SHIPPED**:
 > - **Batch 1** (PR #107, prod cfc3015, 2026-05-24): Ch.6/p1 REPLACED — Holmes-Watson archetype → Stoker / Мина Харкер / Crew of Light (Victorian distributed-knowledge-base team in pure Agile-frame: фонограф, питмановская стенография, Remington typewriter, телеграф; new chapter 203 lines; new Replicate plate; 0 ИИ mentions; HOOK→CONTROVERSY→CORE 4-laws→Тёмная сторона→RESOLUTION); slug rename + cross-refs swept; explicit weight fix `70/71` to keep Hugo display order.

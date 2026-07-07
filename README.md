@@ -6,8 +6,10 @@
 > Canonical publishing home для всей серии книг: **[books.folkup.life](https://books.folkup.life)**  
 > Deep URLs preserved via 301 redirect (chapters / apparatus / afterword / downloads).
 
-**Version:** 1.0.12 | **Date:** 2026-07-07  
+**Version:** 1.0.13 | **Date:** 2026-07-07  
 **Literary Business Analysis — How Literature Predicted Modern Management**
+
+> **v1.0.13 (2026-07-07):** FACT hotfix per Иве S168 REESTR FACT-хвостов кн.1 v1.1. 3 фактические правки из 9-пунктной регистры: (1) chapter-6-jekyll-hyde.md sноска⁹ deutero-learning: Бейтсон 1972 (Steps) → 1942 (статья «Social Planning and the Concept of Deutero-Learning», Conference on Science, Philosophy and Religion, Second Symposium; перепечатана в Steps 1972 pp.159-176) — термин введён в 1942, не в 1972; (2) chapter-7-don-quixote.md WeWork/Нойман: «после увольнения» → «после отстранения» (Нойман ушёл с поста CEO 24.09.2019 под давлением совета, не был уволен — консистентность тело↔сноска¹¹); (3) chapter-8-time-machine.md секретарские пулы: «К 2005 году в крупных компаниях исчезли секретарские пулы как самостоятельные подразделения» → «К середине 2000-х секретарские пулы в крупных компаниях практически исчезли как самостоятельные подразделения» (Cortada Digital Hand vol.2 реорганизация 1995-2005 — точнее). Semver patch (только фактические правки, no scope change).
 
 > **v1.0.12 (2026-07-07):** Свод-закрытие конвейера кн.1 Иве S162 (13/13 батчей). ПРОГОНы 7-11 apply (гл.7 Джекил / гл.8 Дон Кихот / гл.9 Машина времени / гл.10 НИИЧАВО / гл.11 Чума) — 50+ Ф + 5 Р + 22 П правки. Ф98 подпись «Команданте FolkUp» БЛОКЕР публикации закрыт. Ф99 «без линз» радикально: «Двенадцать вопросов» → «Одиннадцать вопросов» + Фогг = «Рамка». Интермедии I/II/III apply. Ф103 «монография» → «книга». П73 акты русские. Регрессия 160/160 PASS. Andrey GO S168: «Да мержем и запускаем».
 

@@ -11,7 +11,7 @@ category: "этика-кризиса"
 status: "verified"
 sources:
   - "Camus, Albert. *La Peste.* Paris: Gallimard, 1947."
-  - "Камю А. *Чума.* Перевод Н. Жарковой. — *Иностранная литература,* 1968, №3–4."
+  - "Камю А. *Чума.* Перевод Н. Жарковой. Первая публикация: Камю А. *Избранное.* М.: Прогресс, 1969, с. 133–378."
   - "Camus, Albert. *Le Mythe de Sisyphe.* Paris: Gallimard, 1942."
   - "Шаламов В.Т. *Колымские рассказы.* Цикл написан 1954–1973; первое полное издание в СССР — М.: Художественная литература, 1991."
   - "Judt, Tony. *The Burden of Responsibility: Blum, Camus, Aron, and the French Twentieth Century.* Chicago: University of Chicago Press, 1998."
@@ -246,7 +246,7 @@ Communauté Риэ категорически не является команд
 
 ## Источники и примечания
 
-¹ Camus, Albert. *La Peste.* Paris: Gallimard, 1947, partie II. Разговор Риэ с Рамбером, при котором присутствует Тарру. В оригинале: *«la seule façon de lutter contre la peste, c'est l'honnêteté»* — *«être honnête, c'est faire son métier»*. В каноническом переводе Н. Жарковой (*Иностранная литература,* 1968, №3–4; первая публикация на русском языке) *honnêteté* переведено как «честность» — эту дословную форму мы даём в цитатах. Одновременно эта глава удерживает слово «порядочность» в концептуальной рамке (заголовок закона 2, финальный тезис), подчёркивая родство с англоязычной традицией *common decency* Оруэлла: это осознанный авторский выбор перевода, не подмена канонической цитаты.
+¹ Camus, Albert. *La Peste.* Paris: Gallimard, 1947, partie II. Разговор Риэ с Рамбером, при котором присутствует Тарру. В оригинале: *«la seule façon de lutter contre la peste, c'est l'honnêteté»* — *«être honnête, c'est faire son métier»*. В каноническом переводе Н. Жарковой (первая публикация — Камю А. *Избранное.* М.: Прогресс, 1969, с. 133–378) *honnêteté* переведено как «честность» — эту дословную форму мы даём в цитатах. Одновременно эта глава удерживает слово «порядочность» в концептуальной рамке (заголовок закона 2, финальный тезис), подчёркивая родство с англоязычной традицией *common decency* Оруэлла: это осознанный авторский выбор перевода, не подмена канонической цитаты.
 
 ² Camus, Albert. Письмо Ролану Барту, 11 января 1955 года. Ответ Камю на рецензию Барта в *Club, le journal du meilleur livre* (январь 1955), где Барт прочёл «Чуму» как «антиисторическую» аллегорию. Камю в письме настаивает, что чума — не только нацизм; роман говорит о сопротивлении любой тирании, любому террору [FACT-хвост: точная формула по Pléiade]. Письмо опубликовано в: Camus, Albert. *Théâtre, récits, nouvelles.* Édition de Roger Quilliot, Bibliothèque de la Pléiade. Paris: Gallimard, 1962, pp. 1965–1967.
 
@@ -254,13 +254,13 @@ Communauté Риэ категорически не является команд
 
 ⁴ Концепция Incident Command System возникла в Калифорнии в 1970–1972 годах в рамках программы FIRESCOPE (FIrefighting RESources of Southern California Organized for Potential Emergencies), которая разрабатывалась после серии разрушительных лесных пожаров 1970 года. Формализована в качестве национального стандарта США в составе National Incident Management System (NIMS) согласно Homeland Security Presidential Directive 5 от 28 февраля 2003 года. Применение ICS как ретроспективной аналогии к Орану 1947 года — анахронизм; communauté Риэ — органическое предшествие, не реализация шаблона.
 
-⁵ Camus, *La Peste,* partie V, заключительный абзац романа. В оригинале: *«Car il savait ce que cette foule en joie ignorait, et qu'on peut lire dans les livres, que le bacille de la peste ne meurt ni ne disparaît jamais, qu'il peut rester pendant des dizaines d'années endormi dans les meubles et le linge, qu'il attend patiemment dans les chambres, les caves, les malles, les mouchoirs et les paperasses, et que, peut-être, le jour viendrait où, pour le malheur et l'enseignement des hommes, la peste réveillerait ses rats et les enverrait mourir dans une cité heureuse.»* Перевод — по Жарковой 1968.
+⁵ Camus, *La Peste,* partie V, заключительный абзац романа. В оригинале: *«Car il savait ce que cette foule en joie ignorait, et qu'on peut lire dans les livres, que le bacille de la peste ne meurt ni ne disparaît jamais, qu'il peut rester pendant des dizaines d'années endormi dans les meubles et le linge, qu'il attend patiemment dans les chambres, les caves, les malles, les mouchoirs et les paperasses, et que, peut-être, le jour viendrait où, pour le malheur et l'enseignement des hommes, la peste réveillerait ses rats et les enverrait mourir dans une cité heureuse.»* Перевод — по Жарковой (М.: Прогресс, 1969).
 
 ⁶ Шаламов В.Т. *Колымские рассказы.* Цикл писался с 1954 по 1973 годы; первая публикация на русском языке — *Новый журнал* (Нью-Йорк), 1966, №82 (рассказ «Сухим пайком»); полная самиздатская циркуляция в СССР с конца 1960-х; первое полное издание в СССР — М.: Художественная литература, 1991. Для сопоставления с этикой Риэ см. в первую очередь рассказы «По лендлизу», «Сухим пайком», «На представку», в которых формулируется операционная этика индивидуального удержания человеческого в условиях, систематически разрушающих коллективное действие.
 
 ⁷ Sennett, Richard. *Together: The Rituals, Pleasures, and Politics of Cooperation.* New Haven: Yale UP, 2012. Главы 1, 4, 7. Тезис Сеннетта: cooperation — не природная склонность, а ремесло, требующее тренировки; устойчивая совместная работа держится не на мотивации (которая всегда конечна), а на дисциплине, которая может пережить любую мотивацию. Книга — итог многолетнего полевого исследования рабочих коллективов от чикагских социологов 1930-х до банковских команд 2008 года.
 
-⁸ Camus, *La Peste,* partie II, проповедь Панлю в кафедральном соборе Орана. В оригинале: *«Mes frères, vous êtes dans le malheur, mes frères, vous l'avez mérité.»* Перевод — по Жарковой 1968.
+⁸ Camus, *La Peste,* partie II, проповедь Панлю в кафедральном соборе Орана. В оригинале: *«Mes frères, vous êtes dans le malheur, mes frères, vous l'avez mérité.»* Перевод — по Жарковой (М.: Прогресс, 1969).
 
 ⁹ Camus, *La Peste,* partie IV, вторая проповедь Панлю в той же церкви через несколько дней после смерти сына Отона. Полная фраза в контексте: Панлю предупреждает прихожан, что *«ce que je dois dire ne suffit pas à éclairer mon esprit»* — то, что он должен сказать, не достаточно для того, чтобы прояснить его собственный разум; и продолжает проповедью, в которой теологическая рамка наказания заменена утверждением, что страдания невинных не объяснимы и не должны быть оправданы. Через короткое время Панлю умирает; Риэ записывает диагноз *«cas douteux»* (часть IV, заключительная глава), потому что симптомы не соответствуют классической клинике чумы, и Камю намеренно оставляет причину открытой.
 

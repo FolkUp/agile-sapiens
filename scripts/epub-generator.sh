@@ -150,8 +150,8 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
 </html>
 EOF
 
-# Generate title page
-cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
+# Generate title page (heredoc без single-quote чтобы ${BOOK_VERSION} substituted per Iskra §E-3 colophon requirement)
+cat << EOF > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">

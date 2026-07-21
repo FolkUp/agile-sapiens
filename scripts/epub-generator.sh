@@ -54,8 +54,10 @@ done
 
 echo "🏗️  Creating ePub directory structure..."
 
-# Create mimetype (must be first, uncompressed)
-echo "application/epub+zip" > "$EPUB_BUILD_DIR/mimetype"
+# Create mimetype (must be first, uncompressed, NO trailing newline per PKG-007)
+# BKPO-EPUB-STRUCTURAL-21-ERRORS cont+11 fix 2026-07-20: printf вместо echo — bash `echo`
+# adds \n which epubcheck rejects (21 bytes vs canonical 20 «application/epub+zip»)
+printf 'application/epub+zip' > "$EPUB_BUILD_DIR/mimetype"
 
 # Create META-INF/container.xml
 cat << 'EOF' > "$EPUB_BUILD_DIR/META-INF/container.xml"
@@ -148,8 +150,8 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
 </html>
 EOF
 
-# Generate title page
-cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
+# Generate title page (heredoc без single-quote чтобы ${BOOK_VERSION} substituted per Iskra §E-3 colophon requirement)
+cat << EOF > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
@@ -255,9 +257,14 @@ TITLE
 
   # Convert markdown to HTML and strip the leading H1 (the frontmatter title is the authoritative
   # heading, rendered in the title block above — avoid duplicate H1 like PDF generator does).
+  # AGIL post-process EPUB structural fix (BKPO-EPUB-STRUCTURAL-21-ERRORS cont+11 2026-07-20):
+  # Strip absolute-URL anchor tags (<a href="/...">Text</a> → Text) — Hugo web-navigation
+  # permalinks vs EPUB container-relative URLs. epubcheck rejects RSC-026 URL leaks +
+  # RSC-007 broken refs (target chapters may not exist в EPUB inclusion list).
   sed '/^---$/,/^---$/d' "$src" \
     | pandoc --from markdown --to html \
     | sed -E '0,/^<h1[^>]*>.*<\/h1>/{/^<h1[^>]*>.*<\/h1>/d}' \
+    | perl -0777 -pe 's|\s+href="/[^"]*"||g' \
     >> "$out_xhtml"
   echo "</body></html>" >> "$out_xhtml"
 }
@@ -352,7 +359,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:identifier id="bookid">urn:uuid:agile-sapiens-$(date +%s)</dc:identifier>
+    <dc:identifier id="bookid">urn:uuid:$(python -c "import uuid; print(uuid.uuid4())")</dc:identifier>
     <dc:title>AGILE SAPIENS</dc:title>
     <dc:creator>Андрей Клеменчёнок</dc:creator>
     <dc:language>ru</dc:language>

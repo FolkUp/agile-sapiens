@@ -1,0 +1,159 @@
+# EPUB structural validation — independent quality gate workflow.
+# BKPO-EPUB-STRUCTURAL-21-ERRORS-CONT11 root cause fix landed cont+11 EXT Track D (2026-07-20).
+# CI blocking gate reduces future regressions в EPUB structural conformance.
+#
+# Trade-off: separate workflow file per Кочегар «independent green/red signals» pattern
+# (see deploy-cf-backup.yml precedent). EPUB validation failure не blocks web deploy
+# (structural EPUB errors are packaging-side, not content — separate concern).
+#
+# Owner: Кочегар (DevOps) | Detection tool author: Alice PM cont+11 | Fix author: Alice cont+11 EXT Track D
+# Cross-refs:
+#   - vault/scripts/publishing-validation/test-epub-conformance.sh (fallback path detection)
+#   - vault/tools/epubcheck-*/epubcheck.jar (bundled locally, downloaded in CI)
+#   - TESTS-PUBLISHING-VALIDATION-CI-DEPLOY-001-2026-07-20 (parent BACKLOG ticket)
+#   - BKPO-EPUB-STRUCTURAL-FIXED-CONT11-EXT-TRACK-D-2026-07-20 (root cause fix)
+
+name: EPUB Structural Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/epub-generator.sh'
+      - 'scripts/create-epub-zip.py'
+      - 'content/**'
+      - 'static/downloads/*.epub'
+  push:
+    branches: [main]
+    paths:
+      - 'static/downloads/*.epub'
+      - 'formats/*.epub'
+  workflow_dispatch:
+
+concurrency:
+  group: epub-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  epubcheck:
+    name: epubcheck v5.2.1 structural conformance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21 (required for epubcheck)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Cache epubcheck
+        id: cache-epubcheck
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/epubcheck-5.2.1
+          key: epubcheck-5.2.1
+
+      - name: Download epubcheck v5.2.1
+        if: steps.cache-epubcheck.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/.local
+          cd ~/.local
+          curl -sSL -o epubcheck.zip \
+            "https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip"
+          unzip -q epubcheck.zip
+          rm epubcheck.zip
+          echo "epubcheck ready at ~/.local/epubcheck-5.2.1/epubcheck.jar"
+
+      - name: Detect EPUBs to validate
+        id: detect
+        run: |
+          EPUBS=""
+          # Prefer newly-built formats/ over shipped static/downloads/
+          if [ -d formats ] && ls formats/*.epub >/dev/null 2>&1; then
+            EPUBS="formats/*.epub"
+          elif [ -d static/downloads ] && ls static/downloads/*.epub >/dev/null 2>&1; then
+            EPUBS="static/downloads/*.epub"
+          fi
+
+          if [ -z "$EPUBS" ]; then
+            echo "no_epubs=true" >> "$GITHUB_OUTPUT"
+            echo "⏭️  No EPUB files found — skipping validation"
+          else
+            echo "no_epubs=false" >> "$GITHUB_OUTPUT"
+            echo "epubs_glob=$EPUBS" >> "$GITHUB_OUTPUT"
+            echo "📚 EPUBs found via glob: $EPUBS"
+          fi
+
+      - name: Run epubcheck on all EPUBs
+        if: steps.detect.outputs.no_epubs != 'true'
+        run: |
+          set -uo pipefail
+          FAIL_COUNT=0
+          TOTAL=0
+          EPUBCHECK="java -jar $HOME/.local/epubcheck-5.2.1/epubcheck.jar"
+
+          for epub in ${{ steps.detect.outputs.epubs_glob }}; do
+            [ -f "$epub" ] || continue
+            TOTAL=$((TOTAL + 1))
+            fname=$(basename "$epub")
+            echo ""
+            echo "═══════════════════════════════════════════════════════"
+            echo "  Validating: $fname"
+            echo "═══════════════════════════════════════════════════════"
+
+            if $EPUBCHECK "$epub" > "/tmp/epubcheck-${fname}.log" 2>&1; then
+              echo "✅ PASS: $fname"
+              tail -3 "/tmp/epubcheck-${fname}.log"
+            else
+              echo "❌ FAIL: $fname"
+              cat "/tmp/epubcheck-${fname}.log" | tail -30
+              FAIL_COUNT=$((FAIL_COUNT + 1))
+            fi
+          done
+
+          echo ""
+          echo "═══════════════════════════════════════════════════════"
+          echo "  SUMMARY: $((TOTAL - FAIL_COUNT))/$TOTAL EPUBs conformant"
+          echo "═══════════════════════════════════════════════════════"
+
+          if [ "$FAIL_COUNT" -gt 0 ]; then
+            echo "::error::EPUB structural violations detected in $FAIL_COUNT/$TOTAL files. Blocking merge/release per BKPO-EPUB-STRUCTURAL-* discipline."
+            exit 1
+          fi
+
+          if [ "$TOTAL" -eq 0 ]; then
+            echo "⏭️  No EPUBs to validate (paths trigger fired но directories empty)"
+          fi
+
+      - name: Upload epubcheck logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: epubcheck-logs
+          path: /tmp/epubcheck-*.log
+          retention-days: 14
+
+  reference:
+    name: Fix reference (informational)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Post fix reference comment
+        run: |
+          cat <<'DOC'
+          If EPUB validation fails с RSC-026 (URL leaks) OR RSC-007 (broken refs):
+            → check scripts/epub-generator.sh perl slurp mode strip (added cont+11 EXT Track D 6866d66)
+          If PKG-007 (mimetype compressed):
+            → verify scripts/epub-generator.sh uses `printf` (no newline) для mimetype
+          If OPF-085 (invalid UUID):
+            → verify UUIDv4 generation в content.opf template
+          Full fix documentation: BKPO-EPUB-STRUCTURAL-FIXED-CONT11-EXT-TRACK-D-2026-07-20 ticket
+          Detection tool source: vault/scripts/publishing-validation/test-epub-conformance.sh
+          DOC

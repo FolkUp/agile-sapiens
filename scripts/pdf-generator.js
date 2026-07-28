@@ -325,7 +325,7 @@ function buildHtml(units) {
     <div class="title">AGILE SAPIENS</div>
     <div class="subtitle">Literary Business Analysis — How Literature Predicted Modern Management</div>
     <div class="subtitle">Литературный бизнес-анализ: как литература предсказала современный менеджмент</div>
-    <div class="author">Андрей Клеменчёнок · Команданте FolkUp</div>
+    <div class="author">Команданте FolkUp</div>
     <div class="coauthor">Соавтор: Алиса (PM экосистемы FolkUp) · Редактор: Иви</div>
     <div class="version">Версия ${BOOK_VERSION}</div>
 </div>

@@ -153,7 +153,7 @@ cat << 'EOF' > "$PDF_HTML"
         <div class="title">AGILE SAPIENS</div>
         <div class="subtitle">Literary Business Analysis</div>
         <div class="subtitle">Литературный бизнес-анализ</div>
-        <div class="author">Андрей Клеменчёнок · Команданте FolkUp</div>
+        <div class="author">Команданте FolkUp</div>
         <div class="version">Version ${BOOK_VERSION#v}</div>
     </div>
 

@@ -107,7 +107,41 @@ AGILE SAPIENS explores how classical literature intuitively described principles
 
 **Repository:** Hugo SSG with Hextra theme (historical — see migration banner top)  
 **Domain:** `books.folkup.life/kn1/` (canonical, migrated 2026-07-03 cont +40) · `sapiens.folkup.life` → 301 redirect  
-**License:** CC BY-SA 4.0 (content) — relicensed from CC BY 4.0 on 2026-06-25 per S100 canon (вся серия FolkUp под единым стандартом BY-SA); MIT (code). Prior recipients of v1.0.9 (LIVE since 2026-06-22) retain CC BY 4.0 rights per CC license irrevocability (creativecommons.org/faq).
+**License:** Dual — MIT (code) + CC BY-SA 4.0 (content). Full text: [`LICENSE`](LICENSE) (MIT) + [`LICENSE-CONTENT`](LICENSE-CONTENT) (CC BY-SA 4.0). Directory-to-license mapping under `## Licensing` section below. Copyright infringement reporting: [`DMCA.md`](DMCA.md).
+
+Content license history: relicensed CC BY 4.0 → CC BY-SA 4.0 on 2026-06-25 per S100 canon (вся серия FolkUp под единым стандартом BY-SA copyleft). Prior recipients of v1.0.9 (LIVE since 2026-06-22) retain CC BY 4.0 rights per CC license irrevocability (creativecommons.org/faq). LICENSE file retro-fix aligned with README on 2026-07-28 (cont+23, Iskra svod post-Andrey ratify).
+
+## Licensing
+
+Materials are dual-licensed by class:
+
+**MIT License (`LICENSE`) — code + technical infrastructure:**
+
+- `scripts/**` — build scripts, generators, deployment tooling
+- `layouts/**` — Hugo Hextra theme customizations
+- `.github/**` — CI/CD workflows
+- `hugo.toml`, `package.json`, `renovate.json`, `.gitleaks.toml`, config files
+- `*.sh`, `*.mjs`, `*.cjs`, `*.ps1` — automation scripts
+
+**Creative Commons Attribution-ShareAlike 4.0 International (`LICENSE-CONTENT`) — content:**
+
+- `content/**` — monograph chapters, apparatus (bibliography, glossary, subject index, colophon, acknowledgments), preface, afterword, intermezzi
+- `formats/**` — EPUB, PDF compiled formats
+- `static/downloads/**` — historical EPUB/PDF versions
+- `assets/images/**` — chapter plates, cover art
+- `translations/**` — translated versions (attribution shared with translators as FolkUp entities)
+
+**Third-party dependencies** — retain original licenses. See `go.mod` and `package.json`.
+
+**Attribution format:**
+
+> «Chapter/Article Title» by Команданте FolkUp, licensed under CC BY-SA 4.0.
+> Source: https://github.com/FolkUp/agile-sapiens/blob/main/content/<path>
+> Modifications: [describe if any].
+
+**Contributions:** Signed-off-by DCO required (see `CONTRIBUTING.md` if present or open an issue).
+
+**Copyright infringement reporting:** see [`DMCA.md`](DMCA.md).
 
 ### Visual content
 

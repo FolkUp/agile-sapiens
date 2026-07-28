@@ -29,10 +29,10 @@ description = "Literary Business Analysis — How Literature Predicted Modern Ma
 images = ["/assets/og-image-default.png"]
 [params.author]
 name = "Команданте FolkUp"
-email = "anklem@folkup.app"
-# Per канон выходных данных v1 (Иви S64 2026-06-14): cover/title author = «Команданте FolkUp + соавтор»
-# (без «ИИ»). Real name «Андрей Клеменчёнок» = только в © footer (line 88 ниже).
-# ORCID 0009-0008-2953-8601 per folkup-mission-canonical.md §5.4 (Андрей verdict С44 2026-06-09).
+email = "info@folkup.app"
+# Per канон выходных данных v1 (Iskra S64 2026-06-14) + SOVET-REPO opening 2026-07-28:
+# author везде = «Команданте FolkUp» (литературный псевдоним).
+# Legal name для © и AI Act ст.50(4)(b) editorial responsibility — canonical surface /ai-disclosure.
 
 # FolkUp branding (legacy params — retained for backward compat)
 logo = "/assets/folkup-logo.svg"
@@ -88,7 +88,7 @@ serverURL = "https://analytics.folkup.app"
 websiteID = "3e9a50df-885e-4d33-90c3-e54a61a46572"
 
 [params.footer]
-copyright = "© 2026 Андрей Клеменчёнок · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0."
+copyright = "© 2026 Команданте FolkUp · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0."
 
 # Ko-fi support integration (FolkUp standard)
 [params.kofi]

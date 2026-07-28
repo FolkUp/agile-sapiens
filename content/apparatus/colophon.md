@@ -20,7 +20,7 @@ weight: 10
 **Юридический правообладатель (©):** Андрей Клеменчёнок (ORCID: [0009-0008-2953-8601](https://orcid.org/0009-0008-2953-8601))  
 **Псевдоним:** «Команданте FolkUp» — литературный псевдоним; юридическое имя автора в © и контрактах — Андрей Клеменчёнок (модель Бэнкси: лицо скрыто, имя для юр.нужд).  
 **Язык издания:** Русский  
-**Текущая версия:** 1.0.14  
+**Текущая версия:** 1.0.15  
 
 ## Техническая информация
 
@@ -55,7 +55,8 @@ Email: editor@folkup.app
 
 **Начало работы:** Март 2026  
 **Первая публикация:** 2026-05-26  
-**Последнее обновление:** 2026-07-20 (v1.0.14 — FACT-хвосты Иве S169 REESTR v1.2: Жаркова MAJOR перевод «Чумы» / Любимов MINOR формулировка / Платонов MINOR ЛП unverified; structural EPUB fix S3SCOOP cont+11 EXT: 21 epubcheck-ошибка → 0/0/0/0 clean (3 патча: printf mimetype / UUIDv4 / perl slurp URL strip); CI blocking gate `epub-validation.yml` landed)  
+**Последнее обновление:** 2026-07-28 (v1.0.15 — EPUB pipeline fix S3SCOOP cont+27: awk state machine вместо sed range для strip frontmatter — восстанавливает body content глав 2-6 (Iskra S223 P1 разоблачение битого EPUB v1.0.14: главы 2-6 усечены до 10-25% content). Все главы возвращены к full length. Якорь «кардиограмма покойника» гл.3 присутствует.)  
+**Предыдущее обновление:** 2026-07-20 (v1.0.14 — FACT-хвосты Иве S169 REESTR v1.2: Жаркова MAJOR перевод «Чумы» / Любимов MINOR формулировка / Платонов MINOR ЛП unverified; structural EPUB fix S3SCOOP cont+11 EXT: 21 epubcheck-ошибка → 0/0/0/0 clean (3 патча: printf mimetype / UUIDv4 / perl slurp URL strip); CI blocking gate `epub-validation.yml` landed)  
 **Предыдущее обновление:** 2026-07-07 (v1.0.13 — FACT-хвосты Иве S168 REESTR v1.1) / 2026-07-02 (v1.0.11 — ЩИТ v5.0 apply S149: 21 патч хвоста + 9 патчей головы + 1 phantom Блок Wikisource-verified; 4 phantoms устранены; regenerate EPUB + PDF)  
 **Предыдущее обновление:** 2026-06-25 (v1.0.10 — перелицензирование с CC BY 4.0 на CC BY-SA 4.0 по канону серии S100)
 

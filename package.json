@@ -33,7 +33,7 @@
     "monograph",
     "folkup"
   ],
-  "author": "Андрей Клеменчёнок",
+  "author": "Команданте FolkUp",
   "license": "MIT",
   "dependencies": {
     "glob": "^10.3.0",

@@ -261,7 +261,12 @@ TITLE
   # Strip absolute-URL anchor tags (<a href="/...">Text</a> → Text) — Hugo web-navigation
   # permalinks vs EPUB container-relative URLs. epubcheck rejects RSC-026 URL leaks +
   # RSC-007 broken refs (target chapters may not exist в EPUB inclusion list).
-  sed '/^---$/,/^---$/d' "$src" \
+  # S3SCOOP cont+27 2026-07-28 fix: awk state machine вместо sed range.
+  # Прошлый sed '/^---$/,/^---$/d' итерирует по ВСЕМ парам --- в файле → режет
+  # body content на chapters с horizontal rules `---` (Iskra S223 P1 битый EPUB
+  # v1.0.14 разоблачение: главы 2-6 усечены до 10-25%). Awk strips ONLY leading
+  # YAML frontmatter (--- на NR==1 до следующего ---), body --- сохраняются.
+  awk 'NR==1 && /^---$/ {inFM=1; next} inFM && /^---$/ {inFM=0; next} !inFM {print}' "$src" \
     | pandoc --from markdown --to html \
     | sed -E '0,/^<h1[^>]*>.*<\/h1>/{/^<h1[^>]*>.*<\/h1>/d}' \
     | perl -0777 -pe 's|\s+href="/[^"]*"||g' \

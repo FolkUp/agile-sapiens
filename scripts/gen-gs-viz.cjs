@@ -21,7 +21,7 @@
  *     # → just g1 × 4 seeds ≈ $0.16
  *
  * Output: C:\Transit\gs-viz-cycle0\<slot>-v{1..N}.webp
- * After Andrei picks variants — manual copy to tmp/for-ivi/2026-05-30-gs-viz/images/
+ * After owner picks variants — manual copy to tmp/for-ivi/2026-05-30-gs-viz/images/
  */
 
 const https = require('https');
@@ -71,7 +71,7 @@ const SLOTS = {
     aspect: '4:3',
     register: 'B',
     placement: 'ch.6 после фразы «В этой картине аптека победила город.» (line 2563)',
-    binding: 'Andrei pick 2026-05-30: option B from {A line 2559 круг переносимости / B line 2563 аптека победила город / C line 2868 одна структура}',
+    binding: 'Owner pick 2026-05-30: option B from {A line 2559 круг переносимости / B line 2563 аптека победила город / C line 2868 одна структура}',
     prompt: `Synthetic visualization of a city defeated by its pharmacy, collective architectural form dissolving into a constellation of individual pharmacological capsules, urban fabric replaced by personal chemical dots scattered across cold space, machine-rendered, deliberate algorithmic gloss, cold pastel pharmacy palette of mint and capsule white and blister-pack pink, the image rhymes with the Г5 pair but inverts it: Г5 shows utopia-as-synthetic-promise, Г6 shows defeat-of-collective-by-individual, both share visible machine origin.`,
     negative_extras: NEGATIVE_REGISTER_B,
   },

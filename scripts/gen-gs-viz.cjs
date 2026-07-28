@@ -9,7 +9,7 @@
  *
  * Лев Q1 verified: prompts concept-level only (idea-anchors not expression-quotes from text).
  * Лев Q3: ALL 3 require AI-disclosure per EU AI Act Art. 50 (captions handled in book, not here).
- * Andrei (2026-05-30) confirmed Г6 anchor = (B) line 2563 «аптека победила город».
+ * Owner (2026-05-30) confirmed Г6 anchor = (B) line 2563 «аптека победила город».
  *
  * Usage (same pattern as gen-chapter-plate.cjs — Андрей knows):
  *   TOKEN=$(sops -d --extract '["replicate"]["api_token"]' vault/secrets/replicate.enc.yaml)

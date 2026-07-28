@@ -6,8 +6,10 @@
 > Canonical publishing home для всей серии книг: **[books.folkup.life](https://books.folkup.life)**  
 > Deep URLs preserved via 301 redirect (chapters / apparatus / afterword / downloads).
 
-**Version:** 1.0.14 | **Date:** 2026-07-07  
+**Version:** 1.0.15 | **Date:** 2026-07-28  
 **Literary Business Analysis — How Literature Predicted Modern Management**
+
+> **v1.0.15 (2026-07-28):** EPUB pipeline fix S3SCOOP cont+27 (Iskra S223 P1 маяк) — `scripts/epub-generator.sh:264` sed frontmatter strip range итерировал по всем `---` парам, режая body content глав с horizontal rules (главы 2-6 усечены до 10-25%). Fix: awk state machine strips ONLY leading YAML frontmatter, body `---` сохраняются. Все главы восстановлены к full length. Якорь «кардиограмма покойника» гл.3 присутствует. Companion: PDF title page byline sanitized («Андрей Клеменчёнок · Команданте FolkUp» → «Команданте FolkUp» per F2 canon; colophon legal © reference preserved per PT Decreto-Lei 7/2004 + EU AI Act Art. 50(4)). Both formats v1.0.15 LIVE на books.folkup.life/kn1/downloads/.
 
 > **v1.0.14 (2026-07-07):** FACT hotfix per Иве S169 REESTR FACT-хвостов кн.1 v1.2. 3 фактические правки: (1) **Жаркова MAJOR** — chapter-10-chuma.md sources+сноска¹+⁵: «Иностранная литература, 1968, №3–4 (первая публикация)» → «первая публикация: Камю А. Избранное. М.: Прогресс, 1969, с. 133–378». Верификация Иве S169 через Polka.academy + Наша Газета + LiveLib: в 1968 в «Иностр. лит.» выходил «Посторонний» (пер. Норы Галь); «Чума» в переводе Н. Жарковой впервые опубликована в сборнике «Избранное» 1969, издательство «Прогресс». Вероятный механизм ошибки — контаминация с «Посторонним». (2) **Любимов минорная** — chapter-7-don-quixote.md сноска¹+¹⁴ + apparatus/sources.md: «Перевод Н. Любимова, классическая редакция» → «По переводу Н. Любимова, классическая редакция» (при сжатой цитате — формула честна при любом исходе сверки с печатным изданием). (3) **Платонов минорная** — chapter-8-time-machine.md сноска¹³ + apparatus/sources.md: убрано упоминание серии «Литературные памятники» (принадлежность издания «Котлован» СПб.: Наука, 2000 первичным источником не подтверждена). Semver patch (только фактические правки, no scope change).
 

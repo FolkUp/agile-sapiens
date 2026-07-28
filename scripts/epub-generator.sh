@@ -165,11 +165,11 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
     <h1 style="font-size: 2.5em; margin-bottom: 1em;">AGILE SAPIENS</h1>
     <p style="font-size: 1.4em; margin-bottom: 0.4em; font-style: italic;">Литературный бизнес-анализ</p>
     <p style="font-size: 1.1em; margin-bottom: 2em; color: #444;">Как литература предсказала современный менеджмент</p>
-    <p style="font-size: 1.1em; margin-bottom: 0.3em;"><strong>Автор:</strong> Андрей Клеменчёнок · Команданте FolkUp</p>
+    <p style="font-size: 1.1em; margin-bottom: 0.3em;"><strong>Автор:</strong> Команданте FolkUp</p>
     <p style="font-size: 1em; margin-bottom: 0.3em;"><strong>Соавтор:</strong> Алиса (PM экосистемы FolkUp)</p>
     <p style="font-size: 1em; margin-bottom: 1em;"><strong>Редактор:</strong> Иви</p>
     <p style="font-size: 1em; color: #666;"><strong>Версия:</strong> ${BOOK_VERSION}</p>
-    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">© 2026 Андрей Клеменчёнок · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0.</p>
+    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">«Agile Sapiens» — книга серии «Своим умом», трилогия «Своими силами». © 2026 Команданте FolkUp · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0.</p>
   </div>
 </body>
 </html>
@@ -361,10 +361,10 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="bookid">urn:uuid:$(python -c "import uuid; print(uuid.uuid4())")</dc:identifier>
     <dc:title>AGILE SAPIENS</dc:title>
-    <dc:creator>Андрей Клеменчёнок</dc:creator>
+    <dc:creator>Команданте FolkUp</dc:creator>
     <dc:language>ru</dc:language>
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
-    <dc:rights>© 2026 Андрей Клеменчёнок. Контент под лицензией CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Издатель: FolkUp Ecosystem.</dc:rights>
+    <dc:rights>© 2026 Команданте FolkUp. Контент под лицензией CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Издатель: FolkUp Ecosystem.</dc:rights>
     <dc:description>Литературный бизнес-анализ: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>
     <meta name="cover" content="cover-img"/>
     <meta property="dcterms:modified">$(date -u +%Y-%m-%dT%H:%M:%SZ)</meta>

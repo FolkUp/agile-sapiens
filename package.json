@@ -42,8 +42,8 @@
     "puppeteer": "^24.43.1"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.2",
-    "@playwright/test": "^1.59.1"
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.62.0"
   },
   "engines": {
     "node": ">=18.0.0"

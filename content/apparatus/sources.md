@@ -321,7 +321,7 @@ weight: 30
 17. **Rigby, Darrell; Sutherland, Jeff; Noble, Andy.** "Agile at Scale." *Harvard Business Review*, May-June 2018.  
     [Management literature] Critical analysis of enterprise agile scaling approaches providing systematic evaluation of architectural pattern effectiveness and common implementation failures.
 
-18. **Digital.ai.** "17th Annual State of Agile Report." Digital.ai, 2024. 36% of teams measured by velocity. URL: https://info.digital.ai/rs/981-LQX-968/images/RE-SA-17th-Annual-State-Of-Agile-Report.pdf  
+18. **Digital.ai.** "17th Annual State of Agile Report." Digital.ai, 2023. 36% of teams measured by velocity. URL: https://info.digital.ai/rs/981-LQX-968/images/RE-SA-17th-Annual-State-Of-Agile-Report.pdf  
     [Industry report] Empirical data on velocity gaming statistics providing quantitative foundation for Goodhart's Law application in agile metrics architecture.
 
 19. **Levison, Mark.** "Misuse of Velocity in Agile Projects." AgilePainRelief.com. URL: https://agilepainrelief.com/blog/misuse-of-velocity-in-agile-projects.html  

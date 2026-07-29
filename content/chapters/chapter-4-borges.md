@@ -264,7 +264,7 @@ DORA работает именно потому, что исключает по�
 
 ³ Strathern, Marilyn. «Improving Ratings: Audit in the British University System.» *European Review*, Vol. 5, No. 3, 1997, pp. 305-321 (перевод автора).
 
-⁴ Digital.ai. «17th Annual State of Agile Report» (2024) (перевод автора). 36% Agile-команд оцениваются по velocity — что создаёт структурный стимул для gaming. Практический анализ velocity gaming: Levison, Mark. «Misuse of Velocity in Agile Projects.» AgilePainRelief.com (перевод автора).
+⁴ Digital.ai. «17th Annual State of Agile Report» (2023) (перевод автора). 36% Agile-команд оцениваются по velocity — что создаёт структурный стимул для gaming. Практический анализ velocity gaming: Levison, Mark. «Misuse of Velocity in Agile Projects.» AgilePainRelief.com (перевод автора).
 
 ⁵ Borges, Jorge Luis. «La biblioteca de Babel» (1941). В сборнике *Ficciones* (1944) (перевод автора).
 

@@ -11,6 +11,8 @@ act_opener: true
 act_label: "II"
 act_accent: "amber"
 act_plate: "agil-act-opener-II.webp"
+# Iskra S233 p6 v1.0.18 — dedicated plate вместо act-opener-II shared
+plate_override: "agil-chapter-5-plate.webp"
 act_title: "Трансформация"
 category: analysis
 status: verified

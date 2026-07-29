@@ -6,16 +6,16 @@ weight: 30
 
 # Источники
 
-*Полная библиография всех источников, использованных в книге, с сохранением группировки по главам для обеспечения citation traceability в соответствии с rules/citation-compliance.md*
+*Полная библиография всех источников, использованных в книге, с группировкой по главам.*
 
-## Пилотная глава
+## Пролог
 
-**PRIMARY LITERARY SOURCE**
+**Основной литературный источник**
 
 1. **Verne, Jules.** *Around the World in Eighty Days* (1872/1873). Le Temps serialization, then Hetzel edition. Public domain.  
    [Primary source] Core literary text establishing iterative journey structure and time-boxed completion constraints as narrative framework for agile methodology parallels.
 
-**FINANCIAL AND ECONOMIC CONTEXT**
+**Финансово-экономический контекст**
 
 2. **Bank of England.** Historical Exchange Rates.  
    [Government report] Inflation calculation baseline for Victorian-era financial comparisons with modern project costs.
@@ -34,7 +34,7 @@ weight: 30
 6. **Allied Market Research.** Enterprise Agile Transformation Services Market.  
    [Market research] Market sizing and growth projection data supporting transformation industry scale arguments.
 
-**CORPORATE TRANSFORMATION STUDIES**
+**Исследования корпоративной трансформации**
 
 7. **McKinsey & Company.** "Losing from day one: Why even successful transformations fall short." December 2021.  
    [Corporate document] Transformation statistics providing empirical weight to failure rate analysis and post-implementation sustainability challenges.
@@ -42,7 +42,7 @@ weight: 30
 8. **Nadella, Satya.** *Hit Refresh: The Quest to Rediscover Microsoft's Soul and Imagine a Better Future for Everyone* (2017). Harper Business.  
    [Corporate memoir] Transformation case study demonstrating large-scale organizational change methodology and leadership decision-making frameworks.
 
-**LEAN METHODOLOGY FOUNDATIONS**
+**Основы бережливой методологии**
 
 9. **Toyota Production System** historical documentation.  
    [Corporate document] Foundational lean methodology principles providing theoretical basis for iterative improvement and waste elimination concepts.
@@ -78,14 +78,14 @@ weight: 30
 18. **National Transportation Safety Board.** Accident Reports: Lion Air 610, Ethiopian Airlines 302 (2019).  
     [Government report] Post-incident analysis methodology and technical failure documentation supporting systematic approach to complex system failure investigation.
 
-**INNOVATION CASE STUDIES**
+**Кейсы инноваций**
 
 19. **SpaceX** Falcon 1 launch history (2006-2008) and NASA Commercial Orbital Transportation Services (COTS) program documentation.  
     [Government report] Innovation example demonstrating iterative development approach, failure tolerance, and systematic improvement methodology in high-stakes technical development.
 
 ## Глава 1: Жюль Верн программирует
 
-**PRIMARY LITERARY SOURCES**
+**Основные литературные источники**
 
 1. **Verne, Jules.** *Twenty Thousand Leagues Under the Seas* (1870). Hetzel, Paris.
    [Primary literary source] Serialized novel demonstrating iterative narrative structure with cliffhangers designed for subscription retention and reader feedback cycles.
@@ -198,7 +198,7 @@ weight: 30
 
 ## Глава 3: Шерлок Холмс ставит диагноз
 
-**PRIMARY LITERARY SOURCES — Holmes Canon**
+**Основные литературные источники — Канон Холмса**
 
 1. **Doyle, Arthur Conan.** *A Study in Scarlet* (1887). Ward, Lock & Co.  
    [Primary source] First Holmes novel establishing foundational deductive methodology, systematic observation techniques, and evidence-based reasoning framework directly applicable to system diagnosis protocols.
@@ -236,7 +236,7 @@ weight: 30
 10. **Standish Group.** *CHAOS Report 2020: Beyond Infinity.*  
     [Industry report] Comprehensive project failure statistics providing empirical foundation for systematic failure pattern analysis and diagnostic methodology validation across multiple industry sectors.
 
-**FOUNDATIONAL COMPUTER SCIENCE THEORY**
+**Фундаментальная теория информатики**
 
 11. **Brooks, Frederick.** *The Mythical Man-Month* (1975). Addison-Wesley.  
     [Academic source] Seminal analysis of team scaling problems and communication failure modes providing theoretical framework for systematic diagnosis of organizational and technical system failures.
@@ -254,7 +254,7 @@ weight: 30
 
 ## Глава 4: Борхес строит архитектуру
 
-**PRIMARY LITERARY SOURCES — Borges Canon**
+**Основные литературные источники — Канон Борхеса**
 
 1. **Borges, Jorge Luis.** "The Lottery in Babylon" (1941). In *Ficciones* (1944). Editorial Sur, Buenos Aires.  
    [Primary source] Central metaphor for organizational complexity and systematic chance as architectural principle, providing theoretical framework for understanding emergent system behavior and scaled decision-making processes.
@@ -273,7 +273,7 @@ weight: 30
 5. **Lee, Jeremiah.** "Failed #SquadGoals — Spotify doesn't use 'the Spotify model' and neither should you." jeremiahlee.com, April 2020.  
    [Corporate document] Critical analysis of Spotify Model mythology providing systematic deconstruction of architectural pattern adoption and implementation reality gaps.
 
-**ENTERPRISE SCALING FRAMEWORKS**
+**Фреймворки масштабирования предприятий**
 
 6. **Scaled Agile, Inc.** SAFe 6.0 Framework. scaledagileframework.com (accessed March 2026).  
    [Corporate document] Comprehensive enterprise agile framework documentation providing systematic methodology for large-scale organizational architecture and coordination mechanisms.
@@ -303,12 +303,12 @@ weight: 30
 13. **Campbell, Donald T.** "Assessing the Impact of Planned Social Change." *Evaluation and Program Planning*, 2(1), 1979, pp. 67-90.  
     [Academic source] Campbell's Law formulation providing complementary theoretical framework to Goodhart's Law for understanding systematic distortions in measurement-based organizational systems.
 
-**CONTEMPORARY METRICS FRAMEWORKS**
+**Современные фреймворки метрик**
 
 14. **Accelerate: State of DevOps Report (DORA).** Google Cloud, 2023.  
     [Industry report] Modern DORA metrics framework providing systematic methodology for organizational performance measurement while addressing Goodhart's Law implications in practical implementation.
 
-**FOUNDATIONAL SYSTEM DESIGN THEORY**
+**Фундаментальная теория проектирования систем**
 
 15. **Brooks, Frederick.** *The Mythical Man-Month* (1975). Addison-Wesley.  
     [Management literature] Fundamental team scaling principles providing theoretical foundation for understanding architectural constraints in human system organization.
@@ -316,7 +316,7 @@ weight: 30
 16. **Conway, Melvin.** "How Do Committees Invent?" *Datamation*, April 1968.  
     [Academic source] Conway's Law reference establishing systematic relationship between organizational architecture and technical system architecture, forming basis for holistic system design methodology.
 
-**CONTEMPORARY SCALING ANALYSIS**
+**Современный анализ масштабирования**
 
 17. **Rigby, Darrell; Sutherland, Jeff; Noble, Andy.** "Agile at Scale." *Harvard Business Review*, May-June 2018.  
     [Management literature] Critical analysis of enterprise agile scaling approaches providing systematic evaluation of architectural pattern effectiveness and common implementation failures.
@@ -333,12 +333,12 @@ weight: 30
 
 ## Глава 6: Мина Харкер собирает разведку
 
-**PRIMARY LITERARY SOURCE**
+**Основной литературный источник**
 
 1. **Stoker, Bram.** *Dracula*. London: Archibald Constable & Co., 1897.
    [Primary literary source] Эпистолярный роман о распределённой команде из шести человек, которая координирует охоту на невидимого врага через единый машинописный отчёт (главы XVII–XVIII), асинхронные средства связи (телеграммы, фонографические цилиндры, питмановская стенография), кросс-функциональное распределение специальностей и плоскую структуру принятия решений. Архетипическая иллюстрация того, что современные методологии называют единым источником правды, async-first координацией и senior-as-enabler ролью эксперта.
 
-**LITERARY CRITICISM**
+**Литературная критика**
 
 2. **Craft, Christopher.** "«Kiss Me with Those Red Lips»: Gender and Inversion in Bram Stoker's *Dracula*." *Representations*, no. 8, 1984, pp. 107–133.
    [Peer-reviewed academic source] Эссе, в котором впервые предложено обозначение «Crew of Light» («Команда Света») для шести героев Стокера, объединённых охотой на Дракулу. Стокер не использует это название в тексте; обозначение — литературоведческая конструкция, опирающаяся на сквозную светотеневую метафору романа.
@@ -377,7 +377,7 @@ weight: 30
 
 ## Глава 7: Доктор Джекил
 
-**PRIMARY LITERARY SOURCES**
+**Основные литературные источники**
 
 1. **Stevenson, Robert Louis.** *Strange Case of Dr Jekyll and Mr Hyde*. London: Longmans, Green & Co., 1886.
    [Primary literary source] Архетип корпоративной двойственности. Глава 9 («Dr Lanyon's Narrative») вводит фигуру свидетеля разрыва; глава 4 («The Carew Murder Case») — сцену скоростного действия без рефлексии; глава 10 («Henry Jekyll's Full Statement of the Case») — ретроспективный документ, который описывает форму процесса, но не его причины.
@@ -407,7 +407,7 @@ weight: 30
 8. **Argyris, Chris & Donald Schön.** *Organizational Learning II: Theory, Method, and Practice*. Reading, MA: Addison-Wesley, 1996.
    [Academic source] Адаптация бейтсонианской концепции deutero-learning (учёбы учиться) для организационного контекста.
 
-**SOCIOLOGICAL FOUNDATION**
+**Социологическое основание**
 
 9. **Goffman, Erving.** *The Presentation of Self in Everyday Life*. Garden City, NY: Anchor Books, 1959.
    [Sociological source] Театральная метафора front stage / back stage как мост от индивидуального дуализма Стивенсона к групповому феномену корпоративной культуры. Глава «Performances» вводит ключевое различение.
@@ -418,14 +418,14 @@ weight: 30
 11. **Westrum, Ron.** «A Typology of Organisational Cultures.» *Quality and Safety in Health Care*, vol. 13, supp. 2, December 2004, pp. ii22–ii27.
     [Academic source] Типология generative/bureaucratic/pathological — как организации обрабатывают плохие новости. Операционная рамка для интерпретации цинизма как индикатора патологической или бюрократической стадии культуры. Та же модель позже использована в Forsgren et al. *Accelerate* (2018).
 
-**EPISTEMOLOGICAL FOUNDATION**
+**Эпистемологическое основание**
 
 12. **Bateson, Gregory.** *Steps to an Ecology of Mind*. San Francisco: Chandler Publishing, 1972.
     [Academic source] Источник термина deutero-learning, который Аргирис позже адаптировал для организационного контекста.
 
 ## Глава 8: Дон Кихот и Санчо — рождение командного мифа
 
-**PRIMARY LITERARY SOURCES**
+**Основные литературные источники**
 
 1. **Cervantes, Miguel de.** *Don Quixote de La Mancha* (1605/1615). Juan de la Cuesta, Madrid.
    [Primary literary source] Базовый текст и центральный архетип главы. Используются: часть I, гл. I-II (принятие учредительного мифа Алонсо Кихано), гл. IV (освобождение Андреса), гл. VIII (ветряные мельницы), гл. XXI (шлем Мамбрина/`baciyelmo`); часть II, гл. LXXIV (отречение от рыцарства и смерть). По переводу Н. Любимова, классическая редакция. Public domain (Сервантес ум. 1616).
@@ -600,7 +600,7 @@ weight: 30
 
 ## Глава 5: Сайрус Смит строит цивилизацию
 
-**PRIMARY LITERARY SOURCES**
+**Основные литературные источники**
 
 1. **Verne, Jules.** *The Mysterious Island* (1875). Hetzel, Paris.  
    [Primary literary source] Foundational text establishing bootstrap leadership principles through Cyrus Smith's autonomous island team. Core narrative framework for engineering leadership, crisis management, and competency-based organization structures.
@@ -671,7 +671,7 @@ weight: 30
 19. **US Securities and Exchange Commission.** Litigation Release No. 24065, SEC v. Elizabeth Holmes and Theranos, Inc. March 14, 2018.  
     [Government report] Regulatory analysis of autonomous team methodology without competent leadership, demonstrating failure modes when bootstrap principles are applied without genuine technical expertise.
 
-**BUSINESS METHODOLOGY SOURCES**
+**Источники бизнес-методологии**
 
 20. **Amazon Working Backwards methodology documentation.** Various corporate sources.  
     [Corporate document] "Two pizza rule" and related small team principles, demonstrating systematic approach to team size optimization and autonomous decision-making in large organizations.

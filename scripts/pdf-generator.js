@@ -319,12 +319,12 @@ function buildHtml(units) {
 </head>
 <body>
 <section class="cover-page">
-    <img src="${coverUrl}" alt="AGILE SAPIENS — Литературный бизнес-анализ"/>
+    <img src="${coverUrl}" alt="AGILE SAPIENS — Литературный анализ бизнеса"/>
 </section>
 <div class="title-page">
     <div class="title">AGILE SAPIENS</div>
     <div class="subtitle">Literary Business Analysis — How Literature Predicted Modern Management</div>
-    <div class="subtitle">Литературный бизнес-анализ: как литература предсказала современный менеджмент</div>
+    <div class="subtitle">Литературный анализ бизнеса: как литература предсказала современный менеджмент</div>
     <div class="author">Команданте FolkUp</div>
     <div class="coauthor">Соавтор: Алиса (PM экосистемы FolkUp) · Редактор: Иви</div>
     <div class="version">Версия ${BOOK_VERSION}</div>

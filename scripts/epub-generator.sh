@@ -145,7 +145,7 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
   </style>
 </head>
 <body epub:type="cover">
-  <img class="cover" src="images/cover.webp" alt="AGILE SAPIENS — Литературный бизнес-анализ"/>
+  <img class="cover" src="images/cover.webp" alt="AGILE SAPIENS — Литературный анализ бизнеса"/>
 </body>
 </html>
 EOF
@@ -163,7 +163,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
 <body>
   <div class="title-page" style="text-align: center; margin-top: 20%;">
     <h1 style="font-size: 2.5em; margin-bottom: 1em;">AGILE SAPIENS</h1>
-    <p style="font-size: 1.4em; margin-bottom: 0.4em; font-style: italic;">Литературный бизнес-анализ</p>
+    <p style="font-size: 1.4em; margin-bottom: 0.4em; font-style: italic;">Литературный анализ бизнеса</p>
     <p style="font-size: 1.1em; margin-bottom: 2em; color: #444;">Как литература предсказала современный менеджмент</p>
     <p style="font-size: 1.1em; margin-bottom: 0.3em;"><strong>Автор:</strong> Команданте FolkUp</p>
     <p style="font-size: 1em; margin-bottom: 0.3em;"><strong>Соавтор:</strong> Алиса (PM экосистемы FolkUp)</p>
@@ -370,7 +370,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
     <dc:language>ru</dc:language>
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
     <dc:rights>© 2026 Команданте FolkUp. Контент под лицензией CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Издатель: FolkUp Ecosystem.</dc:rights>
-    <dc:description>Литературный бизнес-анализ: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>
+    <dc:description>Литературный анализ бизнеса: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>
     <meta name="cover" content="cover-img"/>
     <meta property="dcterms:modified">$(date -u +%Y-%m-%dT%H:%M:%SZ)</meta>
   </metadata>

@@ -119,7 +119,7 @@ displayToggle = false
     contentDir = "content"
 
     [languages.ru.params]
-    description = "Литературный бизнес-анализ — как литература предсказала современный менеджмент"
+    description = "Литературный анализ бизнеса — как литература предсказала современный менеджмент"
 
     [languages.ru.menu]
       [[languages.ru.menu.sidebar]]

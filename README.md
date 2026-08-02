@@ -1,4 +1,4 @@
-# Agile Sapiens · Литературный бизнес-анализ
+# Agile Sapiens · Литературный анализ бизнеса
 
 [![License MIT (code)](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![License CC BY-SA 4.0 (content)](https://img.shields.io/badge/content-CC%20BY--SA%204.0-green.svg)](LICENSE-CONTENT)

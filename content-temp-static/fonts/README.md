@@ -91,7 +91,7 @@ Use typography classes in your content:
 ```html
 <h1 class="chapter-title">Chapter 1: Introduction</h1>
 <p class="lead">Leading paragraph with enhanced typography</p>
-<div class="book-meta">AGILE SAPIENS — Scientific Popular Book 2026</div>
+<div class="book-meta">AGILE SAPIENS — Literary Analysis of Business</div>
 ```
 
 ## GDPR Compliance

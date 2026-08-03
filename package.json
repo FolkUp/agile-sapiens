@@ -1,7 +1,7 @@
 {
   "name": "agile-sapiens",
-  "version": "1.0.19",
-  "description": "AGILE SAPIENS — Literary Business Analysis. How Classical Literature Predicted Modern Management",
+  "version": "1.0.20",
+  "description": "AGILE SAPIENS — Literary Analysis of Business. How Classical Literature Predicted Modern Management",
   "type": "module",
   "scripts": {
     "dev": "hugo server --buildDrafts --buildFuture",

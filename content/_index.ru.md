@@ -26,7 +26,7 @@ book_format: "EBook"
 genre: ["Бизнес-анализ", "Литературоведение", "История управления"]
 in_series: "Трилогия FolkUp"
 book_number_in_series: 1
-# Per канон выходных данных v1 (Иви S64 2026-06-14) + §5.4 (Андрей verdict С44 2026-06-09):
+# Per канон выходных данных v1 (Iskra S64 2026-06-14) + §5.4 (Андрей verdict С44 2026-06-09):
 # - cover author = Команданте FolkUp + Алиса соавтор (без «ИИ»)
 # - реальное имя «Андрей Клеменчёнок» = в © footer + colophon (legal name, ORCID 0009-0008-2953-8601)
 # - книга 1 трилогии FolkUp (series designation per канон)
@@ -79,4 +79,4 @@ book_number_in_series: 1
 
 ---
 
-**Издатель:** FolkUp Ecosystem · **Лицензия контента:** CC BY-SA 4.0 · **Статус:** v1.0 release (2026-05-26) · **Версия:** 1.0.11
+**Издатель:** FolkUp Ecosystem · **Лицензия контента:** CC BY-SA 4.0 · **Статус:** v1.0 release (2026-05-26) · **Версия:** 1.0.20

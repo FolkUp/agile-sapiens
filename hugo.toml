@@ -25,7 +25,7 @@ ignoreFiles = [
 ]
 
 [params]
-description = "Literary Business Analysis — How Literature Predicted Modern Management"
+description = "Literary Analysis of Business — How Literature Predicted Modern Management"
 images = ["/assets/og-image-default.png"]
 [params.author]
 name = "Команданте FolkUp"

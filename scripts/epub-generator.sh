@@ -167,7 +167,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
     <p style="font-size: 1.1em; margin-bottom: 2em; color: #444;">Как литература предсказала современный менеджмент</p>
     <p style="font-size: 1.1em; margin-bottom: 0.3em;"><strong>Автор:</strong> Команданте FolkUp</p>
     <p style="font-size: 1em; margin-bottom: 0.3em;"><strong>Соавтор:</strong> Алиса (PM экосистемы FolkUp)</p>
-    <p style="font-size: 1em; margin-bottom: 1em;"><strong>Редактор:</strong> Иви</p>
+    <p style="font-size: 1em; margin-bottom: 1em;"><strong>Редактор:</strong> Искра</p>
     <p style="font-size: 1em; color: #666;"><strong>Версия:</strong> ${BOOK_VERSION}</p>
     <p style="font-size: 0.9em; color: #666; margin-top: 3em;">«Agile Sapiens» — книга серии «Своим умом», трилогия «Своими силами». © 2026 Команданте FolkUp · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0.</p>
   </div>

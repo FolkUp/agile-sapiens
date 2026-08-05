@@ -11,6 +11,8 @@ act_opener: true
 act_label: "III"
 act_accent: "sage"
 act_plate: "agil-act-opener-III.webp"
+# Iskra S262 GAP-1 recovered — chapter-8-plate.webp Wells «H.G. Wells Time Machine laboratory» (Canva AI 18.05.2026, git blob 041a5e7^, 450 KB WebP)
+plate_override: "agil-chapter-8-plate.webp"
 act_title: "Горизонты"
 category: "labor-horizons"
 status: "verified"

@@ -3,7 +3,7 @@ title: "Chapter 0 — EN skeleton placeholder"
 description: "Placeholder chapter для T4 multi-lang pipeline dry-run test — proves BOOK_LANG=en pipeline path works. Not real content."
 weight: 10
 chapter: 0
-status: placeholder
+status: stub
 ---
 
 ## Placeholder chapter for T4 dry-run

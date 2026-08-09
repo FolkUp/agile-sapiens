@@ -2,7 +2,7 @@
 title: "Colophon (EN skeleton)"
 description: "Placeholder colophon для T4 dry-run"
 weight: 9090
-status: placeholder
+status: stub
 ---
 
 # Colophon (EN placeholder)

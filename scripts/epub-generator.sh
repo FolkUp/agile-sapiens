@@ -10,12 +10,33 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 FORMATS_DIR="$PROJECT_ROOT/formats"
 EPUB_BUILD_DIR="$FORMATS_DIR/epub-build"
-CHAPTERS_DIR="$PROJECT_ROOT/content/chapters"
+
+# T4 multi-lang parametrization (Iskra S263 ZADANIE Этап 2 pipeline prep):
+# BOOK_LANG env var — default "ru" (backward compat, no content path change).
+# For non-ru: expects content/${BOOK_LANG}/chapters/ + content/${BOOK_LANG}/apparatus/
+# structure. Output file suffix -${LANG} (e.g., agile-sapiens-v1.0.22-en.epub).
+BOOK_LANG="${BOOK_LANG:-ru}"
+if [[ "$BOOK_LANG" == "ru" ]]; then
+  CHAPTERS_DIR="$PROJECT_ROOT/content/chapters"
+  CONTENT_LANG_ROOT="$PROJECT_ROOT/content"
+  LANG_SUFFIX=""
+else
+  CHAPTERS_DIR="$PROJECT_ROOT/content/${BOOK_LANG}/chapters"
+  CONTENT_LANG_ROOT="$PROJECT_ROOT/content/${BOOK_LANG}"
+  LANG_SUFFIX="-${BOOK_LANG}"
+  if [[ ! -d "$CHAPTERS_DIR" ]]; then
+    echo "❌ ERROR: BOOK_LANG=${BOOK_LANG} but content/${BOOK_LANG}/chapters/ does not exist."
+    echo "   Expected structure: content/${BOOK_LANG}/chapters/*.md + content/${BOOK_LANG}/apparatus/*.md"
+    echo "   Populate directory with target-language content, then rerun."
+    exit 1
+  fi
+  echo "🌍 Multi-lang mode: BOOK_LANG=${BOOK_LANG}, CHAPTERS_DIR=${CHAPTERS_DIR}"
+fi
 
 # Single source of truth for version: package.json (closes drift documented по
 # cont S24 + Враг pre-plan A для v1.0.9 deploy). Bash + sed for portability
 # (node not safe across Windows path quirks via Git Bash on Windows).
-BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*/\1/p' "${PROJECT_ROOT}/package.json" | head -1)"
+BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*/\1/p' "${PROJECT_ROOT}/package.json" | head -1)${LANG_SUFFIX}"
 
 echo "📚 AGILE SAPIENS Proper ePub Generator"
 echo "====================================="
@@ -278,10 +299,10 @@ TITLE
 # ORDER_KEY is a numeric weight used by sort -k1,1n for spine ordering.
 ORDER_FILE=$(mktemp)
 {
-  # Front matter
-  echo "0050|$PROJECT_ROOT/content/preface.md|preface"
+  # Front matter (T4 param: preface from CONTENT_LANG_ROOT)
+  [[ -f "$CONTENT_LANG_ROOT/preface.md" ]] && echo "0050|$CONTENT_LANG_ROOT/preface.md|preface"
 
-  # Chapters + intermezzi from content/chapters/ — order by frontmatter weight
+  # Chapters + intermezzi from CHAPTERS_DIR — order by frontmatter weight
   for f in "$CHAPTERS_DIR/"chapter-*.md "$CHAPTERS_DIR/"intermezzo-*.md; do
     [[ -f "$f" ]] || continue
     bn=$(basename "$f" .md)
@@ -295,18 +316,24 @@ ORDER_FILE=$(mktemp)
     printf "%04d|%s|%s\n" "$w" "$f" "$bn"
   done | sort -t'|' -k1,1n -k3,3
 
-  # Back matter — afterword
-  echo "8000|$PROJECT_ROOT/content/afterword.md|afterword"
+  # Back matter — afterword (T4 param)
+  [[ -f "$CONTENT_LANG_ROOT/afterword.md" ]] && echo "8000|$CONTENT_LANG_ROOT/afterword.md|afterword"
 
-  # Apparatus in defined reading order (acknowledgments → methodology → sources → glossary → index → transparency → colophon)
-  printf "%s\n" \
-    "9010|$PROJECT_ROOT/content/apparatus/acknowledgments.md|apparatus-acknowledgments" \
-    "9020|$PROJECT_ROOT/content/apparatus/methodology.md|apparatus-methodology" \
-    "9030|$PROJECT_ROOT/content/apparatus/sources.md|apparatus-sources" \
-    "9040|$PROJECT_ROOT/content/apparatus/slovar-terminov.md|apparatus-slovar-terminov" \
-    "9050|$PROJECT_ROOT/content/apparatus/predmetnyy-ukazatel.md|apparatus-predmetnyy-ukazatel" \
-    "9060|$PROJECT_ROOT/content/apparatus/transparency.md|apparatus-transparency" \
-    "9090|$PROJECT_ROOT/content/apparatus/colophon.md|apparatus-colophon"
+  # Apparatus in defined reading order (T4 param — from CONTENT_LANG_ROOT/apparatus/)
+  # Skip missing files gracefully (target lang may lack some apparatus files early on)
+  for apparatus_file in acknowledgments methodology sources slovar-terminov predmetnyy-ukazatel transparency colophon; do
+    apparatus_weight=$(case "$apparatus_file" in
+      acknowledgments) echo "9010" ;;
+      methodology) echo "9020" ;;
+      sources) echo "9030" ;;
+      slovar-terminov) echo "9040" ;;
+      predmetnyy-ukazatel) echo "9050" ;;
+      transparency) echo "9060" ;;
+      colophon) echo "9090" ;;
+    esac)
+    apparatus_path="$CONTENT_LANG_ROOT/apparatus/${apparatus_file}.md"
+    [[ -f "$apparatus_path" ]] && echo "${apparatus_weight}|${apparatus_path}|apparatus-${apparatus_file}"
+  done
 } > "$ORDER_FILE"
 
 # Process each unit in order

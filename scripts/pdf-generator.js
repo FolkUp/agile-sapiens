@@ -27,16 +27,40 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.dirname(__dirname);
 const FORMATS_DIR = path.join(PROJECT_ROOT, 'formats');
-const CHAPTERS_DIR = path.join(PROJECT_ROOT, 'content', 'chapters');
-const CONTENT_DIR = path.join(PROJECT_ROOT, 'content');
-const APPARATUS_DIR = path.join(PROJECT_ROOT, 'content', 'apparatus');
+// T4 multi-lang parametrization (Iskra S263 ZADANIE Этап 2 pipeline prep):
+// BOOK_LANG env var — default "ru" (backward compat, no path change).
+// For non-ru: expects content/${BOOK_LANG}/{chapters,apparatus}/ + preface/afterword.
+const BOOK_LANG = process.env.BOOK_LANG || 'ru';
+const LANG_SUFFIX = BOOK_LANG === 'ru' ? '' : `-${BOOK_LANG}`;
+const CONTENT_DIR = BOOK_LANG === 'ru'
+    ? path.join(PROJECT_ROOT, 'content')
+    : path.join(PROJECT_ROOT, 'content', BOOK_LANG);
+const CHAPTERS_DIR = path.join(CONTENT_DIR, 'chapters');
+const APPARATUS_DIR = path.join(CONTENT_DIR, 'apparatus');
 const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
 // Single source of truth for version: package.json (closes drift from cont S24
 // — EPUB script был fixed к dynamic, PDF script остался hardcoded. Этот patch
 // синхронизирует к тому же pattern.)
 const PKG = JSON.parse(readFileSync(path.join(PROJECT_ROOT, 'package.json'), 'utf-8'));
-const BOOK_VERSION = `v${PKG.version}`;
+const BOOK_VERSION = `v${PKG.version}${LANG_SUFFIX}`;
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
+
+if (BOOK_LANG !== 'ru') {
+    console.log(`🌍 Multi-lang mode: BOOK_LANG=${BOOK_LANG}, CONTENT_DIR=${CONTENT_DIR}`);
+    // Existence check — fail early if content/${BOOK_LANG}/chapters/ missing
+    try {
+        readFileSync(path.join(CHAPTERS_DIR, '.'));
+    } catch (e) {
+        // Directory access via readFileSync throws EISDIR on dir, ENOENT on missing
+        if (e && e.code === 'ENOENT') {
+            console.error(`❌ ERROR: BOOK_LANG=${BOOK_LANG} but ${CHAPTERS_DIR} does not exist.`);
+            console.error(`   Expected structure: content/${BOOK_LANG}/chapters/*.md + content/${BOOK_LANG}/apparatus/*.md`);
+            console.error(`   Populate directory with target-language content, then rerun.`);
+            process.exit(1);
+        }
+        // EISDIR = OK (dir exists)
+    }
+}
 
 // AGIL-178: apparatus reading order — overrides frontmatter weights to
 // produce a sensible back-matter sequence regardless of how individual

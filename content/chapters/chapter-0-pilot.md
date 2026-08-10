@@ -202,7 +202,7 @@ General Motors 1980-х, напротив, была организацией, к�
 
 Фогг останавливается.
 
-«У меня ещё есть двенадцать часов в запасе, я могу посвятить шесть из них этому делу»¹⁴.
+«У меня в запасе ещё двенадцать часов. Я могу ими пожертвовать»¹⁴.
 
 Здесь Верн совершает переключение нарратива, которое редко замечают читатели приключенческого романа, но которое определяет всю управленческую философию «Вокруг света за 80 дней». Фогг перестаёт быть машиной. Впервые в романе его решение продиктовано не расписанием, не оптимизацией маршрута, не расчётом, а ценностью, которую невозможно выразить в фунтах и минутах. Область охвата проекта (scope) меняется. Не потому, что изменились внешние условия, а потому, что Фогг изменил определение успеха.
 
@@ -294,7 +294,7 @@ SpaceX проиллюстрировал этот же принцип с инже
 
 ¹³ U.S. House Committee on Transportation and Infrastructure. "Final Committee Report: The Design, Development & Certification of the Boeing 737 MAX." September 2020. 238 pages. Conclusion: "The crashes of Lion Air Flight 610 and Ethiopian Airlines Flight 302 were the horrific culmination of a series of faulty technical assumptions by Boeing's engineers, a lack of transparency on the part of Boeing's management, and grossly insufficient oversight by the FAA." T1 source: congressional investigation with subpoena authority. See also: National Transportation Safety Board (NTSB) accident investigation reports for Lion Air Flight 610 (2019) and Ethiopian Airlines Flight 302 (2019).
 
-¹⁴ Жюль Верн. «Вокруг света за восемьдесят дней» (1872/1873). Hetzel, Париж. Public domain. Главы XII–XIII: спасение Ауды из обряда сати. Цитата — авторский перевод. Оригинал: «J'ai douze heures d'avance; je puis en consacrer six à cela.» Глава XII.
+¹⁴ Жюль Верн. «Вокруг света за восемьдесят дней» (1872/1873). Hetzel, Париж. Public domain. Главы XII–XIII: спасение Ауды из обряда сати. Цитата — классический русский перевод Габинского. Оригинал: «J'ai douze heures d'avance; je puis en consacrer six à cela.» Глава XII. В классическом русском переводе Фогг щедрее автора: он жертвует всеми двенадцатью часами — у Верна лишь шестью из них.
 
 ¹⁵ Nadella, Satya. *Hit Refresh: The Quest to Rediscover Microsoft's Soul and Imagine a Better Future for Everyone.* Harper Business, 2017. Stack ranking elimination, culture shift from «know-it-all» to «learn-it-all». Microsoft market capitalization: ~$300 billion (January 2014) to $3+ trillion (2024). T2 source: CEO autobiography with verifiable market data.
 

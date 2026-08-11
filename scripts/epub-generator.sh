@@ -411,7 +411,7 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
   <spine>
     <itemref idref="cover"/>
     <itemref idref="title"/>
-    <itemref idref="nav"/>$SPINE_ITEMS
+    <itemref idref="nav" linear="no"/>$SPINE_ITEMS
   </spine>
 </package>
 EOF

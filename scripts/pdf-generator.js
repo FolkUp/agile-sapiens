@@ -124,7 +124,31 @@ async function loadUnit(filepath, weightOverride) {
     const weightRaw = frontmatterField(frontmatter, 'weight');
     const fmWeight = weightRaw ? parseInt(weightRaw, 10) : 9999;
     const weight = weightOverride !== undefined ? weightOverride : fmWeight;
-    return { filename, title, weight, body };
+    // v1.0.24 Д-4-final fix (Iskra GLAZA-VERDIKTY «PDF нет иллюстраций»):
+    // derive plate filename mirroring EPUB generator logic (AGIL-176 + AGIL-182).
+    // Priority: explicit plate_override > intermezzo-N > act_opener chapter > regular chapter-N.
+    const plate = derivePlate(filename, frontmatter);
+    return { filename, title, weight, body, plate };
+}
+
+/** Derive plate filename for a unit — mirrors EPUB generator derive_plate() bash helper. */
+function derivePlate(filename, frontmatter) {
+    const basename = filename.replace(/\.md$/, '');
+    const override = frontmatterField(frontmatter, 'plate_override');
+    if (override) return override;
+    const intermezzo = basename.match(/^intermezzo-(\d+)/);
+    if (intermezzo) return `agil-intermezzo-${intermezzo[1]}-plate.webp`;
+    const chapter = basename.match(/^chapter-(\d+)/);
+    if (chapter) {
+        const chnum = chapter[1];
+        const actOpener = frontmatterField(frontmatter, 'act_opener');
+        if (actOpener === 'true') {
+            const actPlate = frontmatterField(frontmatter, 'act_plate');
+            if (actPlate) return actPlate;
+        }
+        return `agil-chapter-${chnum}-plate.webp`;
+    }
+    return null;
 }
 
 /** Collect, parse and order every content unit (AGIL-178: includes apparatus). */
@@ -312,6 +336,23 @@ th, td { border: 1px solid #ccc; padding: 0.4em 0.6em; text-align: left; }
 th { background: #f0f0f0; }
 
 img { max-width: 100%; height: auto; }
+
+/* v1.0.24 Д-4-final: chapter plate figure constraints — prevent oversized rendering.
+   Puppeteer default DPR blows up webp images without max-height cap.
+   Mirrors EPUB CSS constraint (main.css .chapter-plate rule). */
+.chapter-plate {
+    margin: 1.5em auto;
+    text-align: center;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+}
+.chapter-plate img {
+    display: block;
+    margin: 0 auto;
+    max-width: 75%;
+    max-height: 55vh;
+    height: auto;
+}
 hr { border: none; border-top: 1px solid #ccc; margin: 1.4em 0; }
 
 a { color: var(--ink); text-decoration: none; }
@@ -329,7 +370,17 @@ function buildHtml(units) {
             // The frontmatter title is the authoritative heading. Strip a
             // leading H1 from the body to avoid a duplicated chapter title.
             const withoutLeadH1 = inner.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>/i, '');
-            return `<section class="unit">\n<h1>${escapeHtml(u.title)}</h1>\n${withoutLeadH1}\n</section>`;
+            // v1.0.24 Д-4-final fix: insert plate figure after title (mirrors EPUB generator).
+            // Plates converted webp→jpg pre-build (Chrome PDF export не сохраняет webp compression,
+            // JPG native PDF format preserves compression — 100 MB → ~15 MB reduction).
+            let plateHtml = '';
+            if (u.plate) {
+                const jpgFilename = u.plate.replace(/\.webp$/, '.jpg');
+                const jpgPath = path.join(FORMATS_DIR, 'pdf-plates-jpg', jpgFilename);
+                const jpgUrl = pathToFileURL(jpgPath).href;
+                plateHtml = `<figure class="chapter-plate"><img src="${jpgUrl}" alt="Гравюра: ${escapeHtml(u.title)}"/></figure>\n`;
+            }
+            return `<section class="unit">\n<h1>${escapeHtml(u.title)}</h1>\n${plateHtml}${withoutLeadH1}\n</section>`;
         })
         .join('\n');
 
@@ -372,6 +423,30 @@ function escapeHtml(s) {
         .replace(/>/g, '&gt;');
 }
 
+/** v1.0.24 Д-4-final: convert webp plates to jpg for PDF embedding.
+ * Chrome PDF export re-encodes webp as uncompressed PNG in PDF stream (100 MB bloat).
+ * Pre-converting к JPG (native PDF format, ~85% quality) preserves compression.
+ */
+async function prepareJpgPlates(units) {
+    const jpgDir = path.join(FORMATS_DIR, 'pdf-plates-jpg');
+    await fs.mkdir(jpgDir, { recursive: true });
+    const chaptersDir = path.join(PROJECT_ROOT, 'static', 'images', 'chapters');
+    for (const u of units) {
+        if (!u.plate) continue;
+        const webpPath = path.join(chaptersDir, u.plate);
+        const jpgFilename = u.plate.replace(/\.webp$/, '.jpg');
+        const jpgPath = path.join(jpgDir, jpgFilename);
+        try {
+            execFileSync('magick', [webpPath, '-quality', '85', jpgPath], { stdio: 'pipe' });
+        } catch (e) {
+            console.warn(`⚠️  plate conversion failed для ${u.plate}: ${e.message}`);
+        }
+    }
+    const converted = (await fs.readdir(jpgDir)).filter(f => f.endsWith('.jpg'));
+    console.log(`🎨 Plates converted webp→jpg: ${converted.length}`);
+    return jpgDir;
+}
+
 async function generatePDF() {
     await fs.mkdir(FORMATS_DIR, { recursive: true });
 
@@ -388,6 +463,9 @@ async function generatePDF() {
         );
     }
 
+    // v1.0.24 Д-4-final: prepare jpg plate versions (webp→jpg for PDF size reduction)
+    const jpgDir = await prepareJpgPlates(units);
+
     console.log('Converting markdown -> HTML via pandoc and assembling document...');
     const html = buildHtml(units);
     const htmlPath = path.join(FORMATS_DIR, 'agile-sapiens-pdf.html');
@@ -403,6 +481,13 @@ async function generatePDF() {
 
     try {
         const page = await browser.newPage();
+        // v1.0.24 fix: constrain viewport DPR to 1 — prevent Chrome PDF export
+        // re-encoding embedded webp plates at 2x resolution (100MB bloat root cause).
+        await page.setViewport({
+            width: 794,   // A4 width at 96 DPI
+            height: 1123, // A4 height at 96 DPI
+            deviceScaleFactor: 1,
+        });
         const htmlUrl = 'file://' + htmlPath.replace(/\\/g, '/');
         await page.goto(htmlUrl, { waitUntil: 'networkidle0', timeout: 60000 });
 
@@ -412,18 +497,18 @@ async function generatePDF() {
             format: 'A4',
             margin: { top: '2cm', bottom: '2cm', left: '2.2cm', right: '2.2cm' },
             printBackground: true,
-            displayHeaderFooter: true,
-            headerTemplate:
-                '<div style="font-size:8pt;color:#888;width:100%;text-align:center;">AGILE SAPIENS</div>',
-            footerTemplate:
-                '<div style="font-size:8pt;color:#888;width:100%;text-align:center;">' +
-                '<span class="pageNumber"></span> / <span class="totalPages"></span></div>',
+            // v1.0.24 Д-4-Chrome-headers fix (Iskra GLAZA-VERDIKTY):
+            // отключить Chrome print headers/footers («AGILE SAPIENS» + «N/216»)
+            // — они мешают титульной странице и не нужны для чистого PDF.
+            displayHeaderFooter: false,
         });
     } finally {
         await browser.close();
     }
 
     await fs.unlink(htmlPath).catch(() => {});
+    // v1.0.24 Д-4-final: cleanup pdf-plates-jpg temp directory
+    await fs.rm(jpgDir, { recursive: true, force: true }).catch(() => {});
 
     const stats = await fs.stat(OUTPUT_PDF);
     console.log('');

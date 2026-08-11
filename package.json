@@ -22,7 +22,8 @@
     "quality:status": "bash scripts/quality-check.sh status",
     "test:e2e": "playwright test",
     "test:a11y": "playwright test agil-a11y-axe",
-    "test:links": "node scripts/internal-link-resolver.cjs"
+    "test:links": "node scripts/internal-link-resolver.cjs",
+    "validate:release": "bash scripts/validate-canonical-cover-hash.sh && bash scripts/validate-pdf-image-count.sh && bash scripts/validate-nav-uniqueness.sh"
   },
   "keywords": [
     "agile-sapiens",

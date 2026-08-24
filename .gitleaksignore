@@ -1,0 +1,16 @@
+# Gitleaks ignore — all false positives per Kochegar S1KOCHEGAR cont+2 triage 2026-08-24
+# Custom rule folkup-hetzner-api-token / folkup-cloudflare-api-token matches SHA256 checksums (EPUB/PDF hashes) and prose text
+# README.md + PROJECT_CONTEXT.md contain no real Hetzner/Cloudflare tokens — verified via primary-source Read
+# scripts/chapter-plates-postprocess.sh:170 — generic-api-key false positive (verify если возвращается)
+# Reference: POMETKA-Kochegar-S1KOCHEGAR-cont2-03 + cont2-04 (bridge Drive) — full evidence chain
+# Rule tuning recommended: add allowlist в .gitleaks.toml для SHA256 patterns (64 hex chars) и prose strings
+
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:PROJECT_CONTEXT.md:folkup-cloudflare-api-token:15
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:PROJECT_CONTEXT.md:folkup-cloudflare-api-token:17
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:README.md:folkup-hetzner-api-token:13
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:README.md:folkup-hetzner-api-token:15
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:README.md:folkup-hetzner-api-token:17
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:README.md:folkup-hetzner-api-token:108
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:README.md:folkup-hetzner-api-token:110
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:README.md:folkup-hetzner-api-token:111
+072d9e51f0e8b55a9f6b17f5cfc13f6f53cd901c:scripts/chapter-plates-postprocess.sh:generic-api-key:170

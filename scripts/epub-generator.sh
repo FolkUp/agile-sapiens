@@ -153,10 +153,12 @@ blockquote {
 EOF
 
 # AGIL-174: Generate cover page (shown before title page in spine)
-cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
+# Iskra VIER-AUGEN-S305-03 §3 fix: unquote EOF label so ${BOOK_LANG} substitutes
+# (был 'EOF' single-quoted — no substitution; body has no $ vars, safe unquote).
+cat << EOF > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ru" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="${BOOK_LANG}" lang="${BOOK_LANG}">
 <head>
   <meta charset="utf-8"/>
   <title>Обложка</title>
@@ -172,10 +174,11 @@ cat << 'EOF' > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
 EOF
 
 # Generate title page (heredoc без single-quote чтобы ${BOOK_VERSION} substituted per Iskra §E-3 colophon requirement)
+# Iskra VIER-AUGEN-S305-03 §3 fix: parametrize xml:lang for EN edition.
 cat << EOF > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="${BOOK_LANG}" lang="${BOOK_LANG}">
 <head>
   <meta charset="utf-8"/>
   <title>AGILE SAPIENS</title>
@@ -255,10 +258,11 @@ generate_unit_xhtml() {
   local plate="$4"
   local out_xhtml="$EPUB_BUILD_DIR/OEBPS/chapters/${out_id}.xhtml"
 
+  # Iskra VIER-AUGEN-S305-03 §3 fix: parametrize xml:lang for EN edition.
   cat > "$out_xhtml" <<HEADER
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="${BOOK_LANG}" lang="${BOOK_LANG}">
 <head>
   <meta charset="utf-8"/>
   <title>${title}</title>
@@ -366,10 +370,11 @@ rm -f "$ORDER_FILE"
 echo "✅ Processed $unit_count content units (chapters + intermezzi + apparatus)"
 
 # Create navigation document
+# Iskra VIER-AUGEN-S305-03 §3 fix: parametrize xml:lang for EN edition.
 cat << EOF > "$EPUB_BUILD_DIR/OEBPS/nav.xhtml"
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ru" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="${BOOK_LANG}" lang="${BOOK_LANG}">
 <head>
   <meta charset="utf-8"/>
   <title>Содержание</title>
@@ -393,9 +398,9 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="bookid">urn:uuid:$(python -c "import uuid; print(uuid.uuid4())")</dc:identifier>
-    <dc:title>AGILE SAPIENS</dc:title>
+    <dc:title>AGILE SAPIENS ${BOOK_VERSION}</dc:title>
     <dc:creator>Команданте FolkUp</dc:creator>
-    <dc:language>ru</dc:language>
+    <dc:language>${BOOK_LANG}</dc:language>
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
     <dc:rights>© 2026 Команданте FolkUp. Контент под лицензией CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Издатель: FolkUp Ecosystem.</dc:rights>
     <dc:description>Литературный анализ бизнеса: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>

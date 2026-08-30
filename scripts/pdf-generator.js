@@ -385,8 +385,10 @@ function buildHtml(units) {
         .join('\n');
 
     const coverUrl = pathToFileURL(COVER_PATH).href;
+    // Iskra VIER-AUGEN-S305-03 §3 fix: parametrize html lang for EN edition.
+    // WeasyPrint reads <html lang="X"> to set PDF catalog /Lang metadata.
     return `<!DOCTYPE html>
-<html lang="ru">
+<html lang="${BOOK_LANG}">
 <head>
 <meta charset="UTF-8">
 <title>AGILE SAPIENS ${BOOK_VERSION}</title>

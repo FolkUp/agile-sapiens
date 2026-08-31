@@ -42,7 +42,9 @@ const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
 // — EPUB script был fixed к dynamic, PDF script остался hardcoded. Этот patch
 // синхронизирует к тому же pattern.)
 const PKG = JSON.parse(readFileSync(path.join(PROJECT_ROOT, 'package.json'), 'utf-8'));
-const BOOK_VERSION = `v${PKG.version}${LANG_SUFFIX}`;
+// Wave C EN parametrization (Iskra TIKET S308-03 §2 п.3): per-locale version override —
+// EN edition = independent v1.0.0-en release cycle (не наследует v1.0.24 RU cycle).
+const BOOK_VERSION = BOOK_LANG === 'en' ? 'v1.0.0-en' : `v${PKG.version}${LANG_SUFFIX}`;
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
 if (BOOK_LANG !== 'ru') {
@@ -65,15 +67,52 @@ if (BOOK_LANG !== 'ru') {
 // AGIL-178: apparatus reading order — overrides frontmatter weights to
 // produce a sensible back-matter sequence regardless of how individual
 // files are weighted on the Hugo site.
-const APPARATUS_ORDER = [
-    'acknowledgments',
-    'methodology',
-    'sources',
-    'slovar-terminov',
-    'predmetnyy-ukazatel',
-    'transparency',
-    'colophon',
-];
+// Wave C EN parametrization (Iskra TIKET S308-03 §2 п.2): per-locale APPARATUS_ORDER.
+// RU: 7 files с slovar-terminov + predmetnyy-ukazatel
+// EN: 6 files с subject-index (заменяет предметный указатель, glossary отсутствует)
+const APPARATUS_ORDER_PER_LOCALE = {
+    ru: [
+        'acknowledgments',
+        'methodology',
+        'sources',
+        'slovar-terminov',
+        'predmetnyy-ukazatel',
+        'transparency',
+        'colophon',
+    ],
+    en: [
+        'acknowledgments',
+        'methodology',
+        'sources',
+        'subject-index',
+        'transparency',
+        'colophon',
+    ],
+};
+const APPARATUS_ORDER = APPARATUS_ORDER_PER_LOCALE[BOOK_LANG] || APPARATUS_ORDER_PER_LOCALE.ru;
+
+// Wave C EN parametrization: UI strings + metadata per locale (mirrors epub-generator.sh case block).
+const UI_STRINGS_PER_LOCALE = {
+    ru: {
+        subtitle: 'Литературный анализ бизнеса: как литература предсказала современный менеджмент',
+        author: 'Команданте FolkUp',
+        coauthor_line: 'Соавтор: Алиса (PM экосистемы FolkUp) · Редактор: Искра',
+        version_label: 'Версия',
+        toc_heading: 'Содержание',
+        cover_alt: 'AGILE SAPIENS — Литературный анализ бизнеса',
+        engraving: 'Гравюра:',
+    },
+    en: {
+        subtitle: 'A Literary Analysis of Business: how literature foretold modern management',
+        author: 'Comandante FolkUp',
+        coauthor_line: 'Co-author: Alisa (PM of the FolkUp ecosystem) · Editor: Iskra',
+        version_label: 'Version',
+        toc_heading: 'Contents',
+        cover_alt: 'AGILE SAPIENS — A Literary Analysis of Business',
+        engraving: 'Engraving:',
+    },
+};
+const UI = UI_STRINGS_PER_LOCALE[BOOK_LANG] || UI_STRINGS_PER_LOCALE.ru;
 
 /*
  * Files in content/chapters/ that must NOT be included:
@@ -378,7 +417,7 @@ function buildHtml(units) {
                 const jpgFilename = u.plate.replace(/\.webp$/, '.jpg');
                 const jpgPath = path.join(FORMATS_DIR, 'pdf-plates-jpg', jpgFilename);
                 const jpgUrl = pathToFileURL(jpgPath).href;
-                plateHtml = `<figure class="chapter-plate"><img src="${jpgUrl}" alt="Гравюра: ${escapeHtml(u.title)}"/></figure>\n`;
+                plateHtml = `<figure class="chapter-plate"><img src="${jpgUrl}" alt="${UI.engraving} ${escapeHtml(u.title)}"/></figure>\n`;
             }
             return `<section class="unit">\n<h1>${escapeHtml(u.title)}</h1>\n${plateHtml}${withoutLeadH1}\n</section>`;
         })
@@ -396,18 +435,18 @@ function buildHtml(units) {
 </head>
 <body>
 <section class="cover-page">
-    <img src="${coverUrl}" alt="AGILE SAPIENS — Литературный анализ бизнеса"/>
+    <img src="${coverUrl}" alt="${UI.cover_alt}"/>
 </section>
 <div class="title-page">
     <div class="title">AGILE SAPIENS</div>
-    <div class="subtitle">Литературный анализ бизнеса: как литература предсказала современный менеджмент</div>
-    <div class="author">Команданте FolkUp</div>
-    <div class="coauthor">Соавтор: Алиса (PM экосистемы FolkUp) · Редактор: Искра</div>
-    <div class="version">Версия ${BOOK_VERSION}</div>
+    <div class="subtitle">${UI.subtitle}</div>
+    <div class="author">${UI.author}</div>
+    <div class="coauthor">${UI.coauthor_line}</div>
+    <div class="version">${UI.version_label} ${BOOK_VERSION}</div>
 </div>
 
 <nav class="toc">
-    <h1>Содержание</h1>
+    <h1>${UI.toc_heading}</h1>
     <ol>
 ${tocItems}
     </ol>

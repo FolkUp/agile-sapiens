@@ -33,10 +33,65 @@ else
   echo "🌍 Multi-lang mode: BOOK_LANG=${BOOK_LANG}, CHAPTERS_DIR=${CHAPTERS_DIR}"
 fi
 
+# Iskra TIKET S308-03 §2 full-shell parametrization (Wave C EN artifacts):
+# UI strings + dc:* metadata per BOOK_LANG. Extends PR #243 partial fix (xml:lang + dc:language only)
+# к full shell: cover alt, nav labels, title page UI, dc:creator/rights/description, apparatus order.
+case "$BOOK_LANG" in
+  en)
+    UI_COVER_TITLE="Cover"
+    UI_TITLE_PAGE="Title Page"
+    UI_CONTENTS="Contents"
+    UI_TOC_LINK="Table of Contents"
+    UI_AUTHOR_LABEL="Author:"
+    UI_COAUTHOR_LABEL="Co-author:"
+    UI_EDITOR_LABEL="Editor:"
+    UI_VERSION_LABEL="Version:"
+    UI_ENGRAVING="Engraving:"
+    UI_CREATOR="Comandante FolkUp"
+    UI_COAUTHOR_NAME="Alisa (PM of the FolkUp ecosystem)"
+    UI_EDITOR_NAME="Iskra"
+    UI_COVER_ALT="AGILE SAPIENS — A Literary Analysis of Business"
+    UI_SUBTITLE="A Literary Analysis of Business"
+    UI_TAGLINE="How literature foretold modern management"
+    UI_LEGAL_STRING='"Agile Sapiens" is part of the "On Our Own" book series, "By Our Own Means" trilogy. © 2026 Comandante FolkUp · Publisher: FolkUp Ecosystem. Content licensed under CC BY-SA 4.0.'
+    UI_DC_RIGHTS="© 2026 Comandante FolkUp. Content licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Publisher: FolkUp Ecosystem."
+    UI_DC_DESCRIPTION="A Literary Analysis of Business: how literature foretold modern management. A nonfiction monograph on how classic works intuitively described principles that management later commercialized as revolutionary methodologies."
+    APPARATUS_ORDER_LIST=(acknowledgments methodology sources subject-index transparency colophon)
+    ;;
+  *)
+    UI_COVER_TITLE="Обложка"
+    UI_TITLE_PAGE="Титульный лист"
+    UI_CONTENTS="Содержание"
+    UI_TOC_LINK="Оглавление"
+    UI_AUTHOR_LABEL="Автор:"
+    UI_COAUTHOR_LABEL="Соавтор:"
+    UI_EDITOR_LABEL="Редактор:"
+    UI_VERSION_LABEL="Версия:"
+    UI_ENGRAVING="Гравюра:"
+    UI_CREATOR="Команданте FolkUp"
+    UI_COAUTHOR_NAME="Алиса (PM экосистемы FolkUp)"
+    UI_EDITOR_NAME="Искра"
+    UI_COVER_ALT="AGILE SAPIENS — Литературный анализ бизнеса"
+    UI_SUBTITLE="Литературный анализ бизнеса"
+    UI_TAGLINE="Как литература предсказала современный менеджмент"
+    UI_LEGAL_STRING='«Agile Sapiens» — книга серии «Своим умом», трилогия «Своими силами». © 2026 Команданте FolkUp · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0.'
+    UI_DC_RIGHTS="© 2026 Команданте FolkUp. Контент под лицензией CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Издатель: FolkUp Ecosystem."
+    UI_DC_DESCRIPTION="Литературный анализ бизнеса: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии."
+    APPARATUS_ORDER_LIST=(acknowledgments methodology sources slovar-terminov predmetnyy-ukazatel transparency colophon)
+    ;;
+esac
+
 # Single source of truth for version: package.json (closes drift documented по
 # cont S24 + Враг pre-plan A для v1.0.9 deploy). Bash + sed for portability
 # (node not safe across Windows path quirks via Git Bash on Windows).
-BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*/\1/p' "${PROJECT_ROOT}/package.json" | head -1)${LANG_SUFFIX}"
+# Wave C EN parametrization (Iskra TIKET S308-03 §2 п.3): per-locale version override —
+# EN edition = independent v1.0.0-en release cycle (не наследует v1.0.24 RU cycle).
+# RU/other: pull from package.json как раньше.
+if [[ "$BOOK_LANG" == "en" ]]; then
+  BOOK_VERSION="v1.0.0-en"
+else
+  BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*/\1/p' "${PROJECT_ROOT}/package.json" | head -1)${LANG_SUFFIX}"
+fi
 
 echo "📚 AGILE SAPIENS Proper ePub Generator"
 echo "====================================="
@@ -161,14 +216,14 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/cover.xhtml"
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="${BOOK_LANG}" lang="${BOOK_LANG}">
 <head>
   <meta charset="utf-8"/>
-  <title>Обложка</title>
+  <title>${UI_COVER_TITLE}</title>
   <style>
     body { margin: 0; padding: 0; text-align: center; }
     .cover { max-width: 100%; max-height: 100vh; }
   </style>
 </head>
 <body epub:type="cover">
-  <img class="cover" src="images/cover.webp" alt="AGILE SAPIENS — Литературный анализ бизнеса"/>
+  <img class="cover" src="images/cover.webp" alt="${UI_COVER_ALT}"/>
 </body>
 </html>
 EOF
@@ -187,14 +242,14 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/title.xhtml"
 <body>
   <div class="title-page" style="text-align: center; margin-top: 20%;">
     <h1 style="font-size: 2.5em; margin-bottom: 1em;">AGILE SAPIENS</h1>
-    <p style="font-size: 1.4em; margin-bottom: 0.4em; font-style: italic;">Литературный анализ бизнеса</p>
-    <p style="font-size: 1.1em; margin-bottom: 2em; color: #444;">Как литература предсказала современный менеджмент</p>
-    <p style="font-size: 1.1em; margin-bottom: 0.3em;"><strong>Автор:</strong> Команданте FolkUp</p>
-    <p style="font-size: 1em; margin-bottom: 0.3em;"><strong>Соавтор:</strong> Алиса (PM экосистемы FolkUp)</p>
-    <p style="font-size: 1em; margin-bottom: 1em;"><strong>Редактор:</strong> Искра</p>
-    <p style="font-size: 1em; color: #666;"><strong>Версия:</strong> ${BOOK_VERSION}</p>
-    <p style="font-size: 1em; margin-top: 2em;"><a href="nav.xhtml">Оглавление</a></p>
-    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">«Agile Sapiens» — книга серии «Своим умом», трилогия «Своими силами». © 2026 Команданте FolkUp · Издатель: FolkUp Ecosystem. Контент под лицензией CC BY-SA 4.0.</p>
+    <p style="font-size: 1.4em; margin-bottom: 0.4em; font-style: italic;">${UI_SUBTITLE}</p>
+    <p style="font-size: 1.1em; margin-bottom: 2em; color: #444;">${UI_TAGLINE}</p>
+    <p style="font-size: 1.1em; margin-bottom: 0.3em;"><strong>${UI_AUTHOR_LABEL}</strong> ${UI_CREATOR}</p>
+    <p style="font-size: 1em; margin-bottom: 0.3em;"><strong>${UI_COAUTHOR_LABEL}</strong> ${UI_COAUTHOR_NAME}</p>
+    <p style="font-size: 1em; margin-bottom: 1em;"><strong>${UI_EDITOR_LABEL}</strong> ${UI_EDITOR_NAME}</p>
+    <p style="font-size: 1em; color: #666;"><strong>${UI_VERSION_LABEL}</strong> ${BOOK_VERSION}</p>
+    <p style="font-size: 1em; margin-top: 2em;"><a href="nav.xhtml">${UI_TOC_LINK}</a></p>
+    <p style="font-size: 0.9em; color: #666; margin-top: 3em;">${UI_LEGAL_STRING}</p>
   </div>
 </body>
 </html>
@@ -273,7 +328,7 @@ HEADER
 
   if [[ -n "$plate" ]]; then
     cat >> "$out_xhtml" <<PLATE
-  <figure class="chapter-plate"><img src="../images/${plate}" alt="Гравюра: ${title}"/></figure>
+  <figure class="chapter-plate"><img src="../images/${plate}" alt="${UI_ENGRAVING} ${title}"/></figure>
 PLATE
   fi
 
@@ -325,14 +380,18 @@ ORDER_FILE=$(mktemp)
   [[ -f "$CONTENT_LANG_ROOT/afterword.md" ]] && echo "8000|$CONTENT_LANG_ROOT/afterword.md|afterword"
 
   # Apparatus in defined reading order (T4 param — from CONTENT_LANG_ROOT/apparatus/)
-  # Skip missing files gracefully (target lang may lack some apparatus files early on)
-  for apparatus_file in acknowledgments methodology sources slovar-terminov predmetnyy-ukazatel transparency colophon; do
+  # Wave C EN parametrization: APPARATUS_ORDER_LIST per-locale array (set at top).
+  # RU: acknowledgments/methodology/sources/slovar-terminov/predmetnyy-ukazatel/transparency/colophon
+  # EN: acknowledgments/methodology/sources/subject-index/transparency/colophon (6/6 per Iskra spec)
+  # Skip missing files gracefully.
+  for apparatus_file in "${APPARATUS_ORDER_LIST[@]}"; do
     apparatus_weight=$(case "$apparatus_file" in
       acknowledgments) echo "9010" ;;
       methodology) echo "9020" ;;
       sources) echo "9030" ;;
       slovar-terminov) echo "9040" ;;
       predmetnyy-ukazatel) echo "9050" ;;
+      subject-index) echo "9050" ;;
       transparency) echo "9060" ;;
       colophon) echo "9090" ;;
     esac)
@@ -377,15 +436,15 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/nav.xhtml"
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="${BOOK_LANG}" lang="${BOOK_LANG}">
 <head>
   <meta charset="utf-8"/>
-  <title>Содержание</title>
+  <title>${UI_CONTENTS}</title>
   <link rel="stylesheet" type="text/css" href="styles/main.css"/>
 </head>
 <body>
   <nav epub:type="toc" id="toc">
-    <h1>Содержание</h1>
+    <h1>${UI_CONTENTS}</h1>
     <ol>
-      <li><a href="cover.xhtml">Обложка</a></li>
-      <li><a href="title.xhtml">Титульный лист</a></li>$NAV_CHAPTERS
+      <li><a href="cover.xhtml">${UI_COVER_TITLE}</a></li>
+      <li><a href="title.xhtml">${UI_TITLE_PAGE}</a></li>$NAV_CHAPTERS
     </ol>
   </nav>
 </body>
@@ -399,11 +458,11 @@ cat << EOF > "$EPUB_BUILD_DIR/OEBPS/content.opf"
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="bookid">urn:uuid:$(python -c "import uuid; print(uuid.uuid4())")</dc:identifier>
     <dc:title>AGILE SAPIENS ${BOOK_VERSION}</dc:title>
-    <dc:creator>Команданте FolkUp</dc:creator>
+    <dc:creator>${UI_CREATOR}</dc:creator>
     <dc:language>${BOOK_LANG}</dc:language>
     <dc:publisher>FolkUp Ecosystem</dc:publisher>
-    <dc:rights>© 2026 Команданте FolkUp. Контент под лицензией CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Издатель: FolkUp Ecosystem.</dc:rights>
-    <dc:description>Литературный анализ бизнеса: как литература предсказала современный менеджмент. Научно-популярная монография о том, как классические произведения интуитивно описали принципы, которые менеджмент позднее коммерциализировал как революционные методологии.</dc:description>
+    <dc:rights>${UI_DC_RIGHTS}</dc:rights>
+    <dc:description>${UI_DC_DESCRIPTION}</dc:description>
     <meta name="cover" content="cover-img"/>
     <meta property="dcterms:modified">$(date -u +%Y-%m-%dT%H:%M:%SZ)</meta>
   </metadata>

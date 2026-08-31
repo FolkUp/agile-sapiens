@@ -265,7 +265,7 @@ The exit exists — teams that measure without submitting to measurement. That a
 
 ³ Strathern, Marilyn. "'Improving Ratings': Audit in the British University System." *European Review*, Vol. 5, No. 3 (1997), pp. 305–321. Canonical English text used directly: "When a measure becomes a target, it ceases to be a good measure."
 
-⁴ Digital.ai. "17th Annual State of Agile Report" (2023). Canonical English text used directly. 36 percent of Agile teams are evaluated by velocity — a structural incentive for gaming. Practical analysis of velocity gaming: Levison, Mark. "Misuse of Velocity in Agile Projects." AgilePainRelief.com. Note: EN v0.4 fixes RU-master year discrepancy (v1.0.15 had "(2024)"; 17th report was published 2023) per Iskra DOPFIX-3 pt 5 (C19 карт-бланш).
+⁴ Digital.ai. "17th Annual State of Agile Report" (2023). Canonical English text used directly. 36 percent of Agile teams are evaluated by velocity — a structural incentive for gaming. Practical analysis of velocity gaming: Levison, Mark. "Misuse of Velocity in Agile Projects." AgilePainRelief.com. The 17th report was published in 2023.
 
 ⁵ Borges, Jorge Luis. "La biblioteca de Babel" (1941). In *Ficciones* (1944). English tradition knows the title as "The Library of Babel." Per series-wide Borges rule (see fn.¹), citation only; no canonical restore.
 

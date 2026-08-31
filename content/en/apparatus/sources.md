@@ -8,9 +8,7 @@ weight: 20
 
 *Full bibliography of all sources used in this book, grouped by chapter.*
 
-> **Editorial note (draft):** This sources file will be finalized after Iskra Vier-Augen 13/13 completes for the English edition. Sources are being consolidated from all chapters' footnotes (which are canonical English texts used directly per LOC-EN-1 principle). Full bibliography publication targeted for kn.1 EN v1.0.0 LIVE release (~19-25.08.2026).
->
-> For the current sources by chapter, please refer to the footnotes at the end of each chapter, which contain canonical English source references.
+*This bibliography is being consolidated. Until then, each chapter lists its sources in the footnotes at the end of the chapter.*
 
 ## Structure (to be finalized)
 

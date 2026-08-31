@@ -44,7 +44,7 @@ const COVER_PATH = path.join(PROJECT_ROOT, 'static', 'images', 'cover.webp');
 const PKG = JSON.parse(readFileSync(path.join(PROJECT_ROOT, 'package.json'), 'utf-8'));
 // Wave C EN parametrization (Iskra TIKET S308-03 §2 п.3): per-locale version override —
 // EN edition = independent v1.0.0-en release cycle (не наследует v1.0.24 RU cycle).
-const BOOK_VERSION = BOOK_LANG === 'en' ? 'v1.0.0-en' : `v${PKG.version}${LANG_SUFFIX}`;
+const BOOK_VERSION = BOOK_LANG === 'en' ? 'v1.0.1-en' : `v${PKG.version}${LANG_SUFFIX}`;
 const OUTPUT_PDF = path.join(FORMATS_DIR, `agile-sapiens-${BOOK_VERSION}.pdf`);
 
 if (BOOK_LANG !== 'ru') {

@@ -191,7 +191,7 @@ The third act waits.
 
 **Footnotes:**
 
-¹ Cervantes, Miguel de. *Don Quixote de La Mancha* (1605). Part I, chapter VIII (windmills episode) and chapter XXI (Helmet of Mambrino). English quoted per John Ormsby's canonical 1885 translation (public domain, Project Gutenberg #996), which the Iskra editorial norm — following the Andrey «gemeinfrei» ruling of 2026-07-30 — accepts as the canonical English source for Cervantes in this edition, with attribution. Contemporary English translations under active copyright (Edith Grossman 2003; John Rutherford 2000) are not quoted, per the series rule established in chapter 4 note 1.
+¹ Cervantes, Miguel de. *Don Quixote de La Mancha* (1605). Part I, chapter VIII (windmills episode) and chapter XXI (Helmet of Mambrino). English quoted per John Ormsby's canonical 1885 translation (public domain, Project Gutenberg #996), which this edition uses as its English source for Cervantes, with attribution. Contemporary English translations under active copyright (Edith Grossman 2003; John Rutherford 2000) are not quoted, per the series rule established in chapter 4 note 1.
 
 ² Weick, Karl E. *Sensemaking in Organizations* (1995). Foundations for Organizational Science series, Sage Publications, Thousand Oaks, CA. Foundational work on the theory of organizational sensemaking. See also Weick, Karl E. & Karlene H. Roberts, «Collective Mind in Organizations: Heedful Interrelating on Flight Decks,» *Administrative Science Quarterly* 38, no. 3 (1993): 357–381 — an analysis of aircraft carrier flight-deck teams as an example of collective mind in organizations with a high cost of error.
 

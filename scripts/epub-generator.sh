@@ -88,7 +88,7 @@ esac
 # EN edition = independent v1.0.0-en release cycle (не наследует v1.0.24 RU cycle).
 # RU/other: pull from package.json как раньше.
 if [[ "$BOOK_LANG" == "en" ]]; then
-  BOOK_VERSION="v1.0.0-en"
+  BOOK_VERSION="v1.0.1-en"
 else
   BOOK_VERSION="v$(sed -nE 's/.*"version":\s*"([^"]+)".*/\1/p' "${PROJECT_ROOT}/package.json" | head -1)${LANG_SUFFIX}"
 fi

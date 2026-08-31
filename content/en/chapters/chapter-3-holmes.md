@@ -239,7 +239,7 @@ The next act asks a different question: not "how did we get here," but "how do w
 
 **Footnotes:**
 
-¹ Arthur Conan Doyle. "A Scandal in Bohemia" (1891). *The Strand Magazine*. Canonical English text used directly (the dialogue on the seventeen steps is one of the classic examples of Holmes's method). RU master (v1.0.15) renders these lines from a Russian translation; EN restores the canonical English source.
+¹ Arthur Conan Doyle. "A Scandal in Bohemia" (1891). *The Strand Magazine*. Canonical English text used directly (the dialogue on the seventeen steps is one of the classic examples of Holmes's method). The Russian edition quotes these lines in Russian translation; the English edition restores Conan Doyle's original.
 
 ¹ᵃ Doyle, Arthur Conan. Letter to Joseph Bell, May 1892. Verbatim from the original English (attested via ACD encyclopedia and University of Edinburgh archive references). Full quotation: "It is most certainly to you that I owe Sherlock Holmes… round the centre of deduction and inference and observation which I have heard you inculcate I have tried to build up a man."
 
